@@ -1,0 +1,133 @@
+# [Info]
+site_name: 生物信息云笔记 # 左上角标题
+site_url: https://bioinfocloud.io
+site_author: DoubleHelix
+site_description: 生物信息云笔记
+
+# [UI]
+## [top]
+theme:
+  name: material
+  palette: 
+    - scheme: default # 日间模式
+      primary: indigo # 上方的
+      accent: orange # 链接等可交互元件的高亮色
+      toggle:
+        icon: material/weather-night # 图标
+        name: 切换至夜间模式 # 鼠标悬浮提示
+    - scheme: slate # 夜间模式
+      primary: indigo
+      accent: orange
+      toggle:
+        icon: material/weather-sunny
+        name: 切换至日间模式
+  features:
+    - navigation.tabs # 使用Tab来进行分类
+    - navigation.top # 返回顶部的按钮 在上滑时出现
+    - navigation.indexes # Tab会有一个index.md 而不是在打开Tab时打开第一篇文章
+    - navigation.expand # 打开Tab时左侧目录全部展开
+    - search.suggest # 搜索输入一些字母时推荐补全整个单词
+    - search.highlight # 搜索出的文章关键词加入高亮
+  language: zh # 一些提示性的文字会变成中文
+  icon:
+    repo: fontawesome/brands/github
+edit_uri: edit/main/docs # 编辑按钮跳转的链接
+## [top-right corner]
+repo_url: https://bioinfocloud.github.io/note # 右上角点击跳转的链接
+repo_name: BioInfoCloud # 右上角的名字
+## [bottom-left corner]
+copyright: Copyright &copy; 2022 DoubleHelix # 左下角的版权声明
+## [bottom-right corner]
+extra:
+  social: # icons
+    - icon: fontawesome/brands/bilibili
+      link: https://space.bilibili.com/434318322
+      name: Bilibili | BioInfoCloud # 鼠标悬浮提示
+    - icon: fontawesome/brands/github
+      link: https://github.com/BioInfoCloud
+      name: GitHub | BioInfoCloud
+
+# [Navigtion]
+nav:
+  - 编程: 
+    - Programming/index.md 
+    - Linux: 
+      - Linux讲座: Programming/Linux/linux.md
+      - 命令行入门精简版: Programming/Linux/commands-concise.md
+      - vim: Programming/Linux/vim.md
+      - tmux: Programming/Linux/tmux.md
+      - UNIX: Programming/Linux/unix.md
+      - 内核编译: Programming/Linux/kernel-compile.md
+    - Markdown: 
+      - Markdown讲座: Programming/Markdown/markdown.md
+      - VSCode及插件安装: Programming/vscode-python/vscode-python.md
+      - Markdown语法: Programming/Markdown/grammars.md
+    - Git: 
+      - Git: Programming/Git/git.md
+      - Git例子: Programming/Git/git-demos.md
+      - Git合作: Programming/Git/git-teamwork.md
+      - Windows安装Git: Programming/Git/windows-install.md
+    - R: 
+      - R语法: Programming/R/Grammar.md
+      - 可视化: Programming/R/ggplot2.md
+      - R包开发:
+        - 软件安装: Programming/R/01-software.md
+        - 快速手册: Programming/R/02-DevelopmentManual.md
+  - 生信基础:
+    - Programming/index.md
+    - 生信基础:
+      - 生信引言: BioInfo/BioInfoBasics/Introduction.md
+      - 基础应用: BioInfo/BioInfoBasics/01.md
+      - 生信名词: BioInfo/BioInfoBasics/02_noun.md
+      - 测序技术原理: BioInfo/BioInfoBasics/03_sequence.md
+      - 数据文件格式: BioInfo/BioInfoBasics/04_format.md
+      - biomaRt包: BioInfo/BioInfoBasics/biomaRt.md
+      - RNASeq表达定量: BioInfo/BioInfoBasics/counts_RPM_RPKM_FPKM_1.md
+      - RNASeq表达定量转换: BioInfo/BioInfoBasics/counts_RPM_RPKM_FPKM_2.md
+      - RNASeq差异表达分析原理: BioInfo/BioInfoBasics/DESeq2_edgeR_limma.md
+      - 什么是GO: BioInfo/BioInfoBasics/GO.md
+      - 富集分析理论基础: BioInfo/BioInfoBasics/KEGG_GO_GSEA_what.md
+      - 人鼠基因比较: BioInfo/BioInfoBasics/hsa2mus.md
+      - 同源基因转换: BioInfo/BioInfoBasics/hsa2mus_2.md
+      - 各种ID转换: BioInfo/BioInfoBasics/IDtrans.md
+      - miRNA的ID转换: BioInfo/BioInfoBasics/miRNA_ID.md
+  - 文献:
+    - RNASeq综述-01: Literature/RNAseq_review1.md
+    - RNASeq综述-02: Literature/RNAseq_review1.md
+  - 关于:
+    - ABOUT/weChat.md # 使用两个index 这样子左上角第一次打开会是所有Tab 而不是ABOUT
+    - 微信公众号: ABOUT/weChat.md
+    - B站: ABOUT/weChat.md
+    - 微博: ABOUT/weChat.md
+    - gitHub: ABOUT/weChat.md
+    - 学习群: ABOUT/weChat.md
+
+# [Extensions]
+plugins:
+  - search: # 现在还不支持中文搜索 支持之后可以设置语言
+    # insider已经支持中文的分词搜索了 https://squidfunk.github.io/mkdocs-material/blog/2022/chinese-search-support/
+      lang:
+        - en
+        - ja
+  - tags # 给单篇文章添加标签 https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/?h=tags
+markdown_extensions:
+  - pymdownx.arithmatex: # latex支持
+      generic: true
+  - attr_list # 给图片后面添加{width="300"}设置大小
+  - toc:
+      permalink: true # 固定标题位置为当前位置
+  - pymdownx.highlight: # 代码块高亮
+      # linenums: true # 显示行号
+      # auto_title: true # 显示编程语言名称
+  - pymdownx.superfences # 代码块高亮插件
+  - meta # 支持Markdown文件上方自定义标题标签等
+extra_javascript:
+  # latex支持
+  # check https://squidfunk.github.io/mkdocs-material/reference/mathjax/?h=math for more information
+  # notice `curl https://polyfill.io/v3/polyfill.min.js?features=es6 > docs/mkdocs/javascripts/polyfill.min.js && curl https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js > docs/mkdocs/javascripts/tex-mml-chtml.js` not works... because there are other resources that need to load
+  - mkdocs/javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js # https://cdn.bytedance.com/?query=mathjax&version=3.2.0
+extra_css:
+  - mkdocs/css/no-footer.css # 不使用底部的翻页
+  - mkdocs/css/unordered-list-symbols.css # multiplt unordered list symbols
