@@ -74,7 +74,7 @@ nav:
         - 软件安装: Programming/R/01-software.md
         - 快速手册: Programming/R/02-DevelopmentManual.md
   - 生信基础:
-    - Programming/index.md
+    - BioInfo/index.md
     - 生信基础:
       - 生信引言: BioInfo/BioInfoBasics/Introduction.md
       - 基础应用: BioInfo/BioInfoBasics/01.md

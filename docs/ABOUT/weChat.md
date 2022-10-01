@@ -1,6 +1,6 @@
 
 
-![ERC](image\ERC.png)
+![ERC](./image/ERC.png)
 
 
 
