@@ -9,11 +9,11 @@ title: Git实例
 ### 初始化仓库
 
 ```
-$ cd ~/Desktop
+$ cd ./github
 $ mkdir notes
 $ cd notes
 $ git init
-Initialized empty Git repository in /Users/yangxijie/Desktop/notes/.git/
+Initialized empty Git repository in ./.git/
 ```
 
 ### 添加一个文件

@@ -8,18 +8,40 @@ site_description: 生物信息云笔记
 ## [top]
 theme:
   name: material
+  logo: assets/logo.png
+  plugins:
+  - social: 
+      cards_font: Roboto
   palette: 
     - scheme: default # 日间模式
-      primary: indigo # 上方的
-      accent: orange # 链接等可交互元件的高亮色
+      primary: white # 上方的
+      accent: light blue # 链接等可交互元件的高亮色
       toggle:
-        icon: material/weather-night # 图标
-        name: 切换至夜间模式 # 鼠标悬浮提示
+        icon: material/brightness-percent # 图标
+        name: 切换风格 # 鼠标悬浮提示
     - scheme: slate # 夜间模式
-      primary: indigo
+      primary: black
       accent: orange
       toggle:
         icon: material/weather-sunny
+        name: 切换风格
+    - scheme: slate # 夜间模式
+      primary: black
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: 切换风格
+    - scheme: purple # 
+      primary: black
+      accent: pink
+      toggle:
+        icon: material/brightness-4
+        name: 切换风格
+    - scheme: light green # light green
+      primary: black
+      accent:  light blue
+      toggle:
+        icon: material/brightness-3
         name: 切换至日间模式
   features:
     - navigation.tabs # 使用Tab来进行分类
@@ -91,16 +113,21 @@ nav:
       - 同源基因转换: BioInfo/BioInfoBasics/hsa2mus_2.md
       - 各种ID转换: BioInfo/BioInfoBasics/IDtrans.md
       - miRNA的ID转换: BioInfo/BioInfoBasics/miRNA_ID.md
+  - 专题:
+    - 单细胞专题: 
+        - 单细胞上游分析: BioInfo/scRNAseq/scRNASeq_UP.md
+        - 单细胞下游分析: BioInfo/scRNAseq/scRNASeq_down.md
+        - 常规分析案例一: BioInfo/scRNAseq/GSE130001.md
+    - RNAseq专题: 
+        - Bulk RNAseq上游分析: BioInfo/RNAseq/pipeline_1.md
+    - TCGA-GEO专题: 
+      - TCGA-GEO: BioInfo/TCGA/index.md
   - 文献:
     - RNASeq综述-01: Literature/RNAseq_review1.md
     - RNASeq综述-02: Literature/RNAseq_review1.md
   - 关于:
-    - ABOUT/weChat.md # 使用两个index 这样子左上角第一次打开会是所有Tab 而不是ABOUT
-    - 微信公众号: ABOUT/weChat.md
-    - B站: ABOUT/weChat.md
-    - 微博: ABOUT/weChat.md
-    - gitHub: ABOUT/weChat.md
-    - 学习群: ABOUT/weChat.md
+    - ABOUT/index.md # 使用两个index 这样子左上角第一次打开会是所有Tab 而不是ABOUT
+    - 学生群: ABOUT/studentsGroup.md
 
 # [Extensions]
 plugins:

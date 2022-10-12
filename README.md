@@ -1,6 +1,6 @@
 # DoubleHelix的个人网站
 
-<https://bioinfocloud.github.io>
+<bioinfocloud.github.io/note/>
 
-- 生成 [MkDocs](https://www.mkdocs.org) 
+- 生成 [MkDocs](https://bioinfocloud.github.io/note/) 
 - 主题 [Material](https://github.com/squidfunk/mkdocs-material)

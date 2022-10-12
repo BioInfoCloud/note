@@ -1,4 +1,4 @@
-# 一.R绘图系统
+## 一.R绘图系统
 在 R 里，主要有两大底层图形系统，一是 base 图形系统，二是 grid 图形系统。 lattice 包与 ggplot2包正是基于 grid 图形系统构建的，它们都有自己独特的图形语法。 
 ```
 install.packages("shiny")

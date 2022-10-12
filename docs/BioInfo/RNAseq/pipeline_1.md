@@ -1,11 +1,4 @@
-![](https://cdn.nlark.com/yuque/0/2021/gif/1234840/1612930518200-fb210b93-bc6a-4709-991d-4fd422de47f8.gif#align=left&display=inline&height=76&margin=%5Bobject%20Object%5D&originHeight=76&originWidth=640&size=0&status=done&style=none&width=640)
-[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**| **[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
-[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | 服务器与**[**Linux**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1410264757734817793&__biz=MzA4NDAzODkzMA==#wechat_redirect)
-![](https://cdn.nlark.com/yuque/0/2021/jpeg/1234840/1612930518303-965dbae3-be6c-457f-b55d-29bdef8b8b07.jpeg#align=left&display=inline&height=150&margin=%5Bobject%20Object%5D&originHeight=150&originWidth=600&size=0&status=done&style=none&width=600)
-
----
-
-# 使用fastqc质控
+## 使用fastqc质控
 做转录组测序，通常公司是不给分析的，分析也要自己多花钱，当然不同公司收费不一样，有的可能带有简单的分析。之前测序的第一家公司给了简单的分析，后面换了一家测序公司，不给分析。所以我得自己分析啦，在分析的时候顺便写一下教程。分享给大家，要分析转录组数据，首先得知道测序原理【参考文章：[illumina、Sanger、第三代和第四代测序技术原理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272832&idx=1&sn=7d208df1a65e3696c41c666ef78f5881&chksm=841ed2fdb3695bebedbbc733b0bca112421a91647d2038266d0a24b8ce46ee19503a801fdd2b&scene=21#wechat_redirect)】，还有就是了解生信分析中一些文件格式【参考文章：[生信中常见的数据文件格式](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272899&idx=1&sn=6779b2bd21f3b607a08227d31c7212c6&chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&scene=21#wechat_redirect)】，当然，还有其他一些生物背景知识，除此以外，还需要会Linux，这个是一个漫长的学习过程。本文就介绍转录组数据分析的第一步分析：质控，主要就是fastqc这个软件的使用和结果解读。
 ## 一.fastqc介绍
 拿到原始数据后我们首先采用fastqc程序进行质控，看原始数据质量情况，fastqc会生成一个html结果报告，根据图形化界面，我们可以判断下机数据情况是否符合分析要求。我们测序得到的是带有质量值的碱基序列fastq格式。所以这里你需要先了解[生信中常见的数据文件格式 。](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272899&idx=1&sn=6779b2bd21f3b607a08227d31c7212c6&scene=21#wechat_redirect)
@@ -13,8 +6,9 @@ FastQC的官网：[http://www.bioinformatics.babraham.ac.uk/projects/fastqc/](ht
 FastQC的下载地址：[http://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc](http://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc)
 但在Linux中，通常我们是搭建环境安装分析流程相关的软件的，具体参考文章：[Linux系统下Anaconda的安装和使用教程](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273219&idx=1&sn=44ad6dfa492aa50f8360ab2bb161b28c&chksm=841edc7eb36955685650eaf067fbded8d3b1d427c1f5e52caf2aa5a25fb9a57250ea12a217a4&scene=21#wechat_redirect)。
 将测序的数据上传到自己的服务器或者虚拟机中，我这里上传数据到目录：/data/RNAseq下。总共12个文件，27G。
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612930518357-aade66e9-6b4c-472b-971d-95b1a807d76a.png#align=left&display=inline&height=284&margin=%5Bobject%20Object%5D&originHeight=284&originWidth=793&size=0&status=done&style=none&width=793)
+![](pipeline_1\001.png)
 首先，我介绍一下fastqc的用法：
+
 ```
    fastqc seqfile1 seqfile2 .. seqfileN
    fastqc [-o output dir] [--(no)extract] [-f fastq|bam|sam]
@@ -40,7 +34,7 @@ FastQC读取一组序列文件，并从每个文件生成质量控制报告，�
    --nofilter ：如果运行-casava，那么在执行QC分析时，不要删除由casava标记的不良质量。
     --extract ：如果设置，则压缩后的输出文件将在创建后在同一目录中解压。默认情况下，fastqc在非交互模式下运行时将设置此选项。
  -j --java：提供要用于启动fastqc的java二进制文件的完整路径。如果没有提供，则假定java在您的路径中。
-    --noextract：创建输出文件后，不要解压缩它。如果在非交互模式下运行时不希望解压缩输出，则应该设置此选项。  
+    --noextract：创建输出文件后，不要解压缩它。如果在非交互模式下运行时不希望解压缩输出，则应该设置此选项。  
     --min_length：为报告中显示的序列长度设置一个人为的下限。只要您将其设置为大于或等于最长读取长度的值，那么这将是用于创建读取组的序列长度。这对于从读取长度可变的数据集中生成可直接分解的统计信息非常有用。
 -f --format：绕过正常序列文件格式检测，并强制程序使用指定的格式。有效的格式是bam、sam、bam_mapped、sam_mapped和fastq。
 -t --threads：指定可同时处理的文件数目。每个线程将被分配250MB的内存，所以您不应该运行超过可用内存应付的线程，并且在32位机器上不应该超过6个线程
@@ -49,19 +43,22 @@ FastQC读取一组序列文件，并从每个文件生成质量控制报告，�
 -d --dir：选择要用于生成报表映像时写入的临时文件的目录。如果未指定，默认为系统临时目录。
 **二.fastqc质控**
 我这里将路径已经切换到了数据所在文件路径：data/RNAseq，数据在当前环境目录下，我打算输出结果路径：/root/HGJ_RNAseq/ ，你可以自定义，事先先创建好文件夹。质控只需要一行命令就搞定，注意，星号前面有一个空格，前面是定义的输出路径，后面是分析的文件名称。
+
 ```
 fastqc -o /root/HGJ_RNAseq/ *.fq.gz
 ```
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612930518378-10585079-a9e7-4073-9516-a93217985449.png#align=left&display=inline&height=482&margin=%5Bobject%20Object%5D&originHeight=482&originWidth=797&size=0&status=done&style=none&width=797)
+![](pipeline_1\002.png)
 然后就开始一个文件一个文件处理，时间长短和文件大小、个数以及计算机配制有关，我这里的数据30分钟左右。
 处理结束后，查看输出路径下的文件信息。
+
 ```
 ll -h /root/HGJ_RNAseq/
 ```
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612930518288-d9694b1a-d4bb-4dd2-92bb-5c4ba817cdc8.png#align=left&display=inline&height=524&margin=%5Bobject%20Object%5D&originHeight=524&originWidth=886&size=0&status=done&style=none&width=886)
+![](pipeline_1\003.png)
 我们可以看到，一个数据文件处理后会得到2个文件，一个html格式文件和一个zip的压缩文件，zip解压后和html格式文件内容是一样的，只需要下载html格式文件到本地，用浏览器打开查看。
 **三.结果解读**
 FastqC有3种结果：绿色代表PASS；黄色代表WARN；红色代表FAIL。当出现黄色时说明需要查看结果。当然，我这里没有黄色的结果。
+
 ### **1.Basic Statistics**
 Basic statistics是该fastq一些基本信息，主要有
 Filename:文件名
@@ -70,44 +67,49 @@ Encoding：测序平台的版本和相应的编码版本号，用于计算Phred�
 Total Sequences: 输入文本的reads的数量
 Sequence length: 测序长度
 %GC: GC含量，表示整体序列的GC含量，由于二代测序GC偏好性高，且深度越高，GC含量会越高。
-           ![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612930518252-8f547197-34cb-4b0d-b761-f29adb05c340.png#align=left&display=inline&height=506&margin=%5Bobject%20Object%5D&originHeight=427&originWidth=1080&size=0&status=done&style=none&width=1280)             
+           ![](F:\gitHub\note\docs\BioInfo\RNAseq\pipeline_1\004.png)             
+
 ### **2.Per base sequence quality**
 横轴为read长度，纵轴为质量得分，Q = -10*log10（error P）。关于错误率计算，可参考文章【[生信中常见的数据文件格式](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272899&idx=1&sn=6779b2bd21f3b607a08227d31c7212c6&chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&scene=21#wechat_redirect)】。柱状表示该位置所有序列的测序质量的统计，柱状是25%~75%区间质量分布，error bar是10%~90%区间质量分布，蓝线表示平均数。一般要求所有位置的10%分位数大于20，即大于最多允许该位置10%的序列低于Q20。当任何碱基质量低于10，或者任何中位数低于25报WARN,需注意；当任何碱基质量低于5或者任何中位数低于20报FAIL。
-           ![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612930518381-a36a82ac-5534-4758-b9e4-c0856050d0c5.png#align=left&display=inline&height=734&margin=%5Bobject%20Object%5D&originHeight=734&originWidth=967&size=0&status=done&style=none&width=967)             
+           ![](pipeline_1\005.png)             
+
 ### **3.Per tile sequence quality**
 每个tail测序情况，横轴表示碱基位置，纵轴表示tail的index编号，这个图主要是为了防止在测序过程中某些tail受到不可控因素的影响而出现测序质量偏低，蓝色表示测序质量很高，暖色表示测序质量不高。当某些tail出现暖色，在后续的分析种把该tail测序结果全部去除。我这里的样本测序质量还是不错的。
-           ![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612930518312-6a8196fb-5be6-4100-b610-a8596124ef75.png#align=left&display=inline&height=745&margin=%5Bobject%20Object%5D&originHeight=745&originWidth=996&size=0&status=done&style=none&width=996)             
+           ![](F:\gitHub\note\docs\BioInfo\RNAseq\pipeline_1\006.png)             
+
 ### **4.Per sequence quality scores**
 横轴表示Q值，纵轴表示每个值对应的read数目，当测序结果主要集中在高分中，证明测序质量良好。
-           ![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612930518264-b83b8170-0710-4805-85d5-a8a3d90c7d35.png#align=left&display=inline&height=738&margin=%5Bobject%20Object%5D&originHeight=738&originWidth=981&size=0&status=done&style=none&width=981)             
+           ![](F:\gitHub\note\docs\BioInfo\RNAseq\pipeline_1\007.png)             
+
 ### **5.Per base sequence content**
 统计在序列中的每一个位置，四种不同碱基占总碱基数的比例，检测有无AT、GC分离的现象。横轴为位置，纵轴为百分比。正常情况下四种碱基出现的频率应是接近的，且没有位置差异，因此好的样品中四条线应该是平行且接近的，由于刚开始测序仪状态不稳定，造成前几个碱基有波动。在 reads 开头出现碱基组成偏离往往是我们的建库操作造成的，比如建 GBS 文库时在 reads 开头加了 barcode；barcode 的碱基组成不是均一的，酶切位点的碱基组成是固定不变的，这样会造成明显的碱基组成偏离；在 reads 结尾出现的碱基组成偏离，往往是测序接头的污染造成的。当所有位置的碱基比例一致现出偏差时，即四条线平行且分开，代表文库有偏差，或测序中的系统误差；当部分位置碱基的比例出现偏差时，即四条线在某些位置纷乱交织，则有overrepresented sequence的污染。当任一位置的A/T比例与G/C比例相差超过10%，报"WARN"；当任一位置的A/T比例与G/C比例相差超过20%，报"FAIL"。
-           ![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612930518262-d74fef7b-be6b-45ba-8703-5be4257baf1e.png#align=left&display=inline&height=742&margin=%5Bobject%20Object%5D&originHeight=742&originWidth=983&size=0&status=done&style=none&width=983)             
+           ![](F:\gitHub\note\docs\BioInfo\RNAseq\pipeline_1\008.png)             
+
 ### **6.Per sequence GC content**
 横轴表示GC含量，纵轴表示不同GC含量对应的read数，蓝线是理论分布（正态分布，通过从所测数据计算并构建理论分布），红色是实际情况，两个比较接近判为好的。曲线形状的偏差往往是由于文库的污染或是部分reads构成的子集有偏差（overrepresented reads）；形状接近正态分布但偏离理论分布的情况提示我们可能有系统偏差；如果出现两个或多个峰值，表明测序数据里可能有其他来源的DNA序列污染，或者有接头序列的二聚体污染。偏离理论分布的reads超过15%时，报"WARN"；偏离理论分布的reads超过30%时，报"FAIL"。
-           ![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612930518273-298f8f2f-48c4-4feb-95ab-c60847a2a4a0.png#align=left&display=inline&height=743&margin=%5Bobject%20Object%5D&originHeight=743&originWidth=974&size=0&status=done&style=none&width=974)             
+           ![](F:\gitHub\note\docs\BioInfo\RNAseq\pipeline_1\009.png)             
+
 ### **7.Per base N content**
 当出现测序仪不能分辨的碱基时会产生N，横轴为碱基分布，纵轴为N比率，当任一位置N的比率超过5%报WARN，超过20%报FAIL。我这里几乎没有。
-           ![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612930518295-f04438b2-3320-468b-98d1-86df0ccfd7c9.png#align=left&display=inline&height=729&margin=%5Bobject%20Object%5D&originHeight=729&originWidth=966&size=0&status=done&style=none&width=966)             
+           ![](F:\gitHub\note\docs\BioInfo\RNAseq\pipeline_1\010.png)             
+
 ### **8.Sequence Length Distribution**
 理论上每次测序仪测出的read长度是一致的，但是由于建库等因素通常会导致一些小片段，如果报FAIL，表明此次测序过程中产生的数据不可信。
-           ![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612930518279-d2004595-c154-4d0a-953a-0f8575b7d3a4.png#align=left&display=inline&height=713&margin=%5Bobject%20Object%5D&originHeight=747&originWidth=980&size=0&status=done&style=none&width=936)             
+           ![](F:\gitHub\note\docs\BioInfo\RNAseq\pipeline_1\011.png)             
+
 ### **9.Sequence Duplication Levels**
-统计序列完全一致的reads的频率，横轴表示重复的次数，纵轴表示重复的reads的数目。一般测序深度越高，越容易产生一定程度的重复序列。           ![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612930518298-d81d2509-319b-4f75-a335-d267d45b4069.png#align=left&display=inline&height=715&margin=%5Bobject%20Object%5D&originHeight=741&originWidth=970&size=0&status=done&style=none&width=936)             
+统计序列完全一致的reads的频率，横轴表示重复的次数，纵轴表示重复的reads的数目。一般测序深度越高，越容易产生一定程度的重复序列。           ![](F:\gitHub\note\docs\BioInfo\RNAseq\pipeline_1\012.png)             
 ### **10.Overrepresented sequences**
 当有某个序列大量出现时，超过总reads数的0.1%时报WARN，超过1%时报FAIL。
-           ![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612930518404-1370c822-9b09-4675-8ef3-14413db603fc.png#align=left&display=inline&height=178&margin=%5Bobject%20Object%5D&originHeight=178&originWidth=703&size=0&status=done&style=none&width=703)             
+           ![](F:\gitHub\note\docs\BioInfo\RNAseq\pipeline_1\013.png)             
+
 ### **11.Adapter Content**
 横轴表示碱基位置，纵轴表示百分比。当fastqc分析时没有选择参数-a adapter list时，默认使用图例中的4种通用adapter序列进行统计。若有adapter残留，后续必须去接头。
-           ![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612930518533-0c60a932-fc72-4e56-92b5-86fe56e5c35b.png#align=left&display=inline&height=519&margin=%5Bobject%20Object%5D&originHeight=599&originWidth=1080&size=0&status=done&style=none&width=936)             
+           ![](F:\gitHub\note\docs\BioInfo\RNAseq\pipeline_1\014.png)             
 以上就是一个完整的fastqC结果报告的简单说明，更多信息可参考：[http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/)
 结果解读部分来自文章：[https://blog.csdn.net/gateswell/article/details/78858579](https://blog.csdn.net/gateswell/article/details/78858579)  ，对此感谢原作者。
 
 # 使用trim-galore去除低质量的reads和adaptor
-![](https://cdn.nlark.com/yuque/0/2021/gif/1234840/1612930686925-5e3f5773-3e78-4d6d-80a3-d059cbf03942.gif#align=left&display=inline&height=76&margin=%5Bobject%20Object%5D&originHeight=76&originWidth=640&size=0&status=done&style=none&width=640)
-[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**| **[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
-[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | 服务器与**[**Linux**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1410264757734817793&__biz=MzA4NDAzODkzMA==#wechat_redirect)
-![](https://cdn.nlark.com/yuque/0/2021/jpeg/1234840/1612930686809-6c6e41d3-beab-4d13-b3a8-d6e87c80330a.jpeg#align=left&display=inline&height=150&margin=%5Bobject%20Object%5D&originHeight=150&originWidth=600&size=0&status=done&style=none&width=600)
 我前面已经介绍了转录组分析中利用fastqc这个软件来查看测序质量【文章：[转录组分析 | fastqc进行质控与结果解读](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273374&idx=1&sn=dfac9e82a09fbb18cd8b2c8179afcad8&chksm=841edce3b36955f5ef17ae96b03c11b9d0052cd3490f1d6b91e3600a5d2eafa77ad79d4a40ff&scene=21#wechat_redirect)】，通过分析结果报告，我测序的数据还是可以的，但不管怎样，还是要清除一些不好的reads。这里我用trim-galore去除低质量的reads和adaptor。
 ## 一.Trim Galore介绍
 Trim Galore是对FastQC和Cutadapt的包装。适用于所有高通量测序，包括RRBS(Reduced Representation Bisulfite-Seq ), Illumina、Nextera 和smallRNA测序平台的双端和单端数据。主要功能包括两步：
@@ -122,16 +124,17 @@ Trim Galore是对FastQC和Cutadapt的包装。适用于所有高通量测序，�
 接下来我们看软件参数：
 --quality：设定Phred quality score阈值，默认为20。我后面分析改成25，稍微严格一些。
 --phred33：：选择-phred33或者-phred64，表示测序平台使用的Phred quality score。具体怎么选择，看你用什么测序平台，这个在上一篇文章中的报告中就有【[转录组分析 | fastqc进行质控与结果解读](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273374&idx=1&sn=dfac9e82a09fbb18cd8b2c8179afcad8&chksm=841edce3b36955f5ef17ae96b03c11b9d0052cd3490f1d6b91e3600a5d2eafa77ad79d4a40ff&scene=21#wechat_redirect)】。
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612930686850-e05fffda-6558-4546-86d6-8e0798e53309.png#align=left&display=inline&height=385&margin=%5Bobject%20Object%5D&originHeight=385&originWidth=637&size=0&status=done&style=none&width=637)
+![](pipeline_1\015.png)
 具体是-phred33还是-phred64我在文章【[生信中常见的数据文件格式](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272899&idx=1&sn=6779b2bd21f3b607a08227d31c7212c6&chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&scene=21#wechat_redirect)】中有提到。
 --adapter：输入adapter序列。也可以不输入，Trim Galore!会自动寻找可能性最高的平台对应的adapter。自动搜选的平台三个，也直接显式输入这三种平台，即--illumina、--nextera和--small_rna。
---stringency：设定可以忍受的前后adapter重叠的碱基数，默认为1（非常苛刻）。可以适度放宽，因为后一个adapter几乎不可能被测序仪读到。
+--stringency：设定可以忍受的前后adapter重叠的碱基数，默认为1（非常苛刻)。可以适度放宽，因为后一个adapter几乎不可能被测序仪读到。
 --length：设定输出reads长度阈值，小于设定值会被抛弃。
 --paired：对于双端测序结果，一对reads中，如果有一个被剔除，那么另一个会被同样抛弃，而不管是否达到标准。
 --retain_unpaired：对于双端测序结果，一对reads中，如果一个read达到标准，但是对应的另一个要被抛弃，达到标准的read会被单独保存为一个文件。
 --gzip和--dont_gzip：清洗后的数据zip打包或者不打包。
 --output_dir：输入目录。需要提前建立目录，否则运行会报错。
 -- trim-n : 移除read一端的reads
+
 ## 二.使用trim-galore去除低质量的reads和adaptor
 首先，创建保存输出数据的文件夹。
 ```
@@ -142,8 +145,11 @@ mkdir cleandata mkdir ./cleandata/trim_galoredata
 trim_galore -q 25 --phred33 --stringency 3 --length 36  --paired CK-4_1.fq.gz CK-4_2.fq.gz --gzip -o ./cleandata/trim_galoredata/
 ```
 参数解释前面已经介绍，这里提一下，我的测序是双端测序，我们前面12个文件对应6个样本，都是成对的。CK-4_1.fq.gz CK-4_2.fq.gz是一对，处理数据的时候就是一起处理。
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612930686831-bb2286a1-9a03-4990-9eeb-c642c13f576e.png#align=left&display=inline&height=307&margin=%5Bobject%20Object%5D&originHeight=307&originWidth=640&size=0&status=done&style=none&width=640)  但是我们有6个样本的数据，就需要写6个命令，好像有点不高效，所以我们可以写一个脚本，执行一次就行。
+![](pipeline_1\016.png)  
+
+但是我们有6个样本的数据，就需要写6个命令，好像有点不高效，所以我们可以写一个脚本，执行一次就行。
 在当前路径下创建一个脚本文件trim_galore_batch.sh
+
 ```
 vim trim_galore_batch.sh
 ```
@@ -157,7 +163,8 @@ do
 done
 ```
 其实就是一个for循环：CK-4 CK-7 CK-8 HGJ-10 HGJ-6 HGJ-9是文件名称的前部分，也就是样本名称，测序数据文件命名都是有规律的，认真看一下，就知道上面内容是什么意思。
-         ![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612930686994-870f6538-76be-41cd-8fcd-4e59550b9548.png#align=left&display=inline&height=103&margin=%5Bobject%20Object%5D&originHeight=119&originWidth=1080&size=0&status=done&style=none&width=936) 保存脚本，然后执行脚本。
+         ![](pipeline_1\017.png) 保存脚本，然后执行脚本。
+
 ```
 bash trim_galore_batch.sh
 ```
@@ -204,16 +211,18 @@ Writing final adapter and quality trimmed output to CK-4_1_trimmed.fq.gz
 
   >>> Now performing quality (cutoff '-q 25') and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file /data/RNAseq/CK-4_1.fq.gz <<<
 ```
- 
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612930686982-6cb57aa2-b0d8-4be4-958b-adf393353620.png#align=left&display=inline&height=541&margin=%5Bobject%20Object%5D&originHeight=541&originWidth=890&size=0&status=done&style=none&width=890)
+
+![](pipeline_1\018.png)
 这个时间很长很长。一个文件1个小时左右。慢慢等..................
 运行结束后查看文件：
+
 ```
 ll -h /data/RNAseq/cleandata/trim_galoredata
 ```
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612930687024-d6bc12b2-d31e-4425-aee0-281bf3abd20f.png#align=left&display=inline&height=549&margin=%5Bobject%20Object%5D&originHeight=549&originWidth=841&size=0&status=done&style=none&width=841)
+![](pipeline_1\019.png)
 fq.gz格式文件是处理后得到的数据，如果还记得的话，前面我们的数据是27G，现在质控后只有22G的数据。txt格式文件是样品处理的结果报告，也包括软件运行的参数信息。下面是其中一个的结果。
-```
+
+```shell
 SUMMARISING RUN PARAMETERS
 ==========================
 Input filename: /data/RNAseq/CK-4_1.fq.gz
@@ -422,24 +431,28 @@ RUN STATISTICS FOR INPUT FILE: /data/RNAseq/CK-4_1.fq.gz
 [**转录组分析 | fastqc进行质控与结果解读**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273374&idx=1&sn=dfac9e82a09fbb18cd8b2c8179afcad8&chksm=841edce3b36955f5ef17ae96b03c11b9d0052cd3490f1d6b91e3600a5d2eafa77ad79d4a40ff&scene=21#wechat_redirect)
 [**转录组分析 | 使用trim-galore去除低质量的reads和adaptor**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273401&idx=1&sn=ff9e3478309d805950c40d0ebae74296&chksm=841edcc4b36955d2a5bf8c85429114b5b83ec4e5afe869378b42ec4f659d4953d5f6c8e9e379&scene=21#wechat_redirect)
 接下来我们进行序列比对，利用的软件是Hisat2。
+
 ## 一.index文件下载
 index文件直接去官网下载
 ([http://daehwankimlab.github.io/hisat2/download/](http://daehwankimlab.github.io/hisat2/download/))，我测序的组织来自小鼠，所以我这里下载的是小鼠的。
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932193936-1f3d7dab-999d-4af7-84dc-7ba1b91fdfd2.png#align=left&display=inline&height=447&margin=%5Bobject%20Object%5D&originHeight=447&originWidth=900&size=0&status=done&style=none&width=900)
+![](F:\gitHub\note\docs\BioInfo\RNAseq\pipeline_1\020.png)
 下载完后上传到Linux服务器，解压后就可以直接用了。
 我上传到了： /data/mouse_genome/  ，就是mm10_genome.tar.gz这个文件。
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932193893-b5dcba84-2ad9-4f1f-ac86-d14ef7c3397f.png#align=left&display=inline&height=83&margin=%5Bobject%20Object%5D&originHeight=83&originWidth=1032&size=0&status=done&style=none&width=1032)
+![](pipeline_1\021.png)
 解压文件，解压过程中会在当前文件夹下创建mm10文件，解压后的文件就在mm10文件夹中。
+
 ```
 tar -zxvf /data/mouse_genome/mm10_genome_tar.gz
 ```
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932193822-3036dc39-de1c-40c3-a93d-a986f482b691.png#align=left&display=inline&height=244&margin=%5Bobject%20Object%5D&originHeight=244&originWidth=827&size=0&status=done&style=none&width=827)
+![](pipeline_1\022.png)
 查看解压后的文件。
+
 ```
 ll -h ./mm10
 ```
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932193888-827fcfaa-a61c-4589-ba61-1a16f699bb29.png#align=left&display=inline&height=244&margin=%5Bobject%20Object%5D&originHeight=244&originWidth=838&size=0&status=done&style=none&width=838)
+![](pipeline_1\023.png)
 总共8个ht2格式文件，一个sh格式文件。
+
 ## 二.hisat2介绍
 Hisat是一种高效的RNA-seq实验比对工具。它使用了基于BWT和Ferragina-manzini (Fm) index 两种算法的索引框架。使用了两类索引去比对，一类是全基因组范围的FM索引来锚定每一个比对，另一类是大量的局部索引对这些比对做快速的扩展。比对原理可阅读文献原文：HISAT: a fast spliced aligner with low memory requirements.
 ### （一）背景
@@ -706,10 +719,11 @@ option for alignment, or your results will suffer.】后续再介绍。-S后面c
 Time loading forward index: 00:02:51
 Time loading reference: 00:00:16
 ```
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932193827-19e3d8f3-335d-4bb9-b470-f71fb41924af.png#align=left&display=inline&height=412&margin=%5Bobject%20Object%5D&originHeight=412&originWidth=1080&size=0&status=done&style=none&width=1080)
+![](pipeline_1\024.png)
 我这里，一个样本43分钟。
 计算机内存足够大的话，我们可以像前文【[**转录组分析 | 使用trim-galore去除低质量的reads和adaptor**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273401&idx=1&sn=ff9e3478309d805950c40d0ebae74296&chksm=841edcc4b36955d2a5bf8c85429114b5b83ec4e5afe869378b42ec4f659d4953d5f6c8e9e379&scene=21#wechat_redirect)】一样，通过一个脚本一次执行。
 创建脚本文件：hisat2_mm10_batch.sh
+
 ```
 vim hisat2_mm10_batch.sh
 ```
@@ -749,6 +763,7 @@ ll -h ./cleandata/hisat2_mm10data/
 【1】[https://www.jianshu.com/p/ce3f4afb9b60](https://www.jianshu.com/p/ce3f4afb9b60)。
 【2】[https://github.com/ricket-sjtu/bioinformatics/wiki/HiSat2%E5%BA%94%E7%94%A8%E4%BB%8B%E7%BB%8D](https://github.com/ricket-sjtu/bioinformatics/wiki/HiSat2%25E5%25BA%2594%25E7%2594%25A8%25E4%25BB%258B%25E7%25BB%258D)
 对原作者表示感谢！
+
 # [使用SAMtools将SAM文件转换为BAM文件、排序、建立索引](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273488&idx=1&sn=f5ed53f20164b19720d31f0a2cfcd268&chksm=841edd6db369547bc04ae15a2a8a7661fefa1193cabbe05d7e2f9e2fa986211603537cf8fbd0&token=108642787&lang=zh_CN#rd)
 我们前面经过质控，比对得到sam文件：
 [**转录组分析 | fastqc进行质控与结果解读**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273374&idx=1&sn=dfac9e82a09fbb18cd8b2c8179afcad8&chksm=841edce3b36955f5ef17ae96b03c11b9d0052cd3490f1d6b91e3600a5d2eafa77ad79d4a40ff&scene=21#wechat_redirect)
@@ -848,8 +863,9 @@ samtools flagstat in.sam|in.bam|in.cram
 ```
 ll -h ./cleandata/hisat2_mm10data/
 ```
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932524647-2e6c89b4-7770-4a4e-be51-2ddd36f1f97f.png#align=left&display=inline&height=187&margin=%5Bobject%20Object%5D&originHeight=187&originWidth=816&size=0&status=done&style=none&width=816)
+![](pipeline_1\026.png)
 先建立一个输出数据的文件夹。
+
 ```
 mkdir ./cleandata/samtools_bam
 ```
@@ -869,8 +885,9 @@ do
   samtools view -S ./cleandata/hisat2_mm10data/${i}.sam -b -o ./cleandata/samtools_bam/${i}.bam
 done
 ```
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932524550-e7ef5e63-cb62-4ca0-ab6b-9a302c0db3a5.png#align=left&display=inline&height=132&margin=%5Bobject%20Object%5D&originHeight=132&originWidth=967&size=0&status=done&style=none&width=967)
+![](pipeline_1\027.png)
 保存，然后执行脚本。
+
 ```
 bash samtools_view_batch.sh
 ```
@@ -878,10 +895,11 @@ bash samtools_view_batch.sh
 ```
 ll -h ./cleandata/samtools_bam/
 ```
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932524555-a056ddd8-36d5-4dff-861d-5336df9df285.png#align=left&display=inline&height=194&margin=%5Bobject%20Object%5D&originHeight=194&originWidth=769&size=0&status=done&style=none&width=769)
+![](pipeline_1\028.png)
 我们可以看到，转换后的数据只有32G，原来可是155G。相差5倍左右。
 **2 排序(samtools sort)**
 单个排序:
+
 ```
 samtools sort -l 4 -o ./cleandata/samtools_bam/CK-4_sort.bam ./cleandata/samtools_bam/CK4.bam
 ```
@@ -898,8 +916,9 @@ do
 samtools sort -l 4 -o ./cleandata/samtools_bam/${i}_sort.bam ./cleandata/samtools_bam/${i}.bam
 done
 ```
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932524600-c10bdf87-203a-42f0-9c12-bddc30260b8c.png#align=left&display=inline&height=151&margin=%5Bobject%20Object%5D&originHeight=151&originWidth=946&size=0&status=done&style=none&width=946)
+![](pipeline_1\029.png)
 保存并执行脚本。
+
 ```
 bash samtools_sort.sh
 ```
@@ -907,11 +926,12 @@ bash samtools_sort.sh
 ```
 ll -h cleandata/samtools_bam/*sort.bam
 ```
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932524617-df293494-9f86-4543-bc3a-db8b23a404a2.png#align=left&display=inline&height=163&margin=%5Bobject%20Object%5D&originHeight=163&originWidth=812&size=0&status=done&style=none&width=812)
+![](pipeline_1\030.png)
 sort后文件几乎小了2倍。
 **3. 建立索引(samtools index)**
 samtools sort命令时，按默认染色体位置排序，顺利建立Index，如果前面排序有出入，可能不能正确建立索引。
 这里我就一次建立索引了。
+
 ```
 for i in CK-4 CK-7 CK-8 HGJ-10 HGJ-6 HGJ-9;do samtools index ./cleandata/samtools_bam/${i}_sort.bam ./cleandata/samtools_bam/${i}_sort.bam.bai;done
 ```
@@ -919,7 +939,7 @@ for i in CK-4 CK-7 CK-8 HGJ-10 HGJ-6 HGJ-9;do samtools index ./cleandata/samtool
 ```
 samtools flagstat cleandata/samtools_bam/CK-4_sort.bam
 ```
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932524603-343acf9d-70eb-4a58-b186-eb2caa82b52f.png#align=left&display=inline&height=325&margin=%5Bobject%20Object%5D&originHeight=325&originWidth=907&size=0&status=done&style=none&width=907)
+![](pipeline_1\031.png)
 ```
 (RNAseq1) [root@localhost RNAseq]# samtools flagstat cleandata/samtools_bam/CK-4_sort.bam
 51977802 + 0 in total (QC-passed reads + QC-failed reads)
@@ -974,26 +994,28 @@ RSeQC接受4种文件格式:
 
 ## 二. 使用bam_stat.py命令查看比对的总体情况
 用 bam_stat.py来统计总比对记录, PCR重复数, Non Primary Hits表示多匹配位点, 不匹配的reads数, 比对到+链的reads, 比对到-链的reads, 有剪切位点的reads等。
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932844663-3fe73cc3-950b-425c-80eb-b4243a1830c0.png#align=left&display=inline&height=219&margin=%5Bobject%20Object%5D&originHeight=219&originWidth=939&size=0&status=done&style=none&width=939)
+![](pipeline_1\032.png)
 我们查看前面产生的文件CK-4_sort.bam【文章:[转录组分析 | 使用SAMtools将SAM文件转换为BAM文件、排序、建立索引](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273488&idx=1&sn=f5ed53f20164b19720d31f0a2cfcd268&chksm=841edd6db369547bc04ae15a2a8a7661fefa1193cabbe05d7e2f9e2fa986211603537cf8fbd0&scene=21#wechat_redirect)】。
+
 ```
 bam_stat.py -i cleandata/samtools_bam/CK-4_sort.bam
 ```
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932844687-a4c1301d-eebf-4ffa-929e-089d7076173c.png#align=left&display=inline&height=485&margin=%5Bobject%20Object%5D&originHeight=485&originWidth=768&size=0&status=done&style=none&width=768)
+![](pipeline_1\033.png)
 **三.使用read_distribution.py命令查看基因组覆盖率**
 该命令需要输入两个文件， -i为BAM或SAM文件；-r为参考的bed文件。
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932844707-bb084cbf-7205-472b-9409-3b4c0dd2fe7d.png#align=left&display=inline&height=222&margin=%5Bobject%20Object%5D&originHeight=222&originWidth=808&size=0&status=done&style=none&width=808)
+![](pipeline_1\034.png)
 bed文件参考文章：[生信中常见的数据文件格式](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272899&idx=1&sn=6779b2bd21f3b607a08227d31c7212c6&chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&scene=21#wechat_redirect)。bed文件下载地址RSeQC官网：[https://sourceforge.net/projects/rseqc/files/BED/](https://sourceforge.net/projects/rseqc/files/BED/)，我这里下载的是小鼠的：[https://sourceforge.net/projects/rseqc/files/BED/Mouse_Mus_musculus/](https://sourceforge.net/projects/rseqc/files/BED/Mouse_Mus_musculus/)
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932844722-33d023b1-68f7-4d07-8d06-5e6934e9c901.png#align=left&display=inline&height=599&margin=%5Bobject%20Object%5D&originHeight=599&originWidth=1080&size=0&status=done&style=none&width=1080)
+![](pipeline_1\035.png)
 下载后解压上传到Linux服务器中，我的bed文件在 /data/mouse_RefSeq/  这个目录下。
+
 ```
 ll -h /data/mouse_RefSeq/
 ```
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932844767-7ff3b211-6ccf-4f29-b87c-f861380f8d0a.png#align=left&display=inline&height=123&margin=%5Bobject%20Object%5D&originHeight=123&originWidth=546&size=0&status=done&style=none&width=546)
+![](pipeline_1\036.png)
 ```
 read_distribution.py -i cleandata/samtools_bam/CK-4_sort.bam -r /data/mouse_RefSeq/mm10_RefSeq.bed
 ```
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932844852-59da39e0-679c-48fd-b88f-4004e602e4f0.png#align=left&display=inline&height=344&margin=%5Bobject%20Object%5D&originHeight=344&originWidth=684&size=0&status=done&style=none&width=684)
+![](pipeline_1\037.png)
 组学分析流程的每一个步骤都很重要，实验设计，质控，read比对，表达定量，可视化，差异表达，识别可变剪切，功能注释，融合基因检测，eQTL定位等都需要考虑。我们后面介绍：使用Stringtie对数据进行下游处理。
 为了快速查看本公众号文章，可阅读文章：[公众号文章目录](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273306&idx=1&sn=d92056ee1fde1ff12b1506e02f8eb56f&chksm=841edc27b36955310bac7e1b4e5e4ab7e26e669c192926dbee3efc4f6d185cf3509a8fc87696&scene=21#wechat_redirect)
 
@@ -1020,7 +1042,8 @@ StringTie 是用于 RNA-seq 的转录本组装和定量软件，StringTie 可以
 8、与其它组装软件相比，stringtie具有很高的准确性和新型isoform的发现能力，其优势在于使用了网络流算法，同时stringtie也支持将read从头组装成更长的片段，这进一步提高了其组装的正确性。
 9、其另一个优势在于它的最优化策略，它平衡了每次组装中每条转录本的覆盖度，这样可以对组装算法产生一定的限制，因为在组装基因组时，覆盖度是很重要的一个参数因为它需要被用来限制算法，否则组装器可能将重复的片段错误地堆叠到一起，相似地转录组装也是如此，在isoform中的每一个外显子需要有相似的覆盖度，如果忽略这个参数可能会产生一些保守但是错误的转录本，其中含有大量剪切位点的基因组装起来尤其困难。
 常用的参数及描述：
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932994104-77f16bf7-f4dc-4db5-a40d-83f26010e900.png#align=left&display=inline&height=747&margin=%5Bobject%20Object%5D&originHeight=747&originWidth=1080&size=0&status=done&style=none&width=1080)
+![](pipeline_1\038.png)
+
 ```
 -o [<path/>]<out.gtf>  #设置StringTie组装转录本的输出GTF文件的路径和文件名。此处可指定完整路径，在这种情况下，将根据需要创建目录。默认情况下，StringTie将GTF写入标准输出。
 -p <int>               #指定组装转录本的线程数（CPU）。默认值是1
@@ -1048,8 +1071,9 @@ StringTie 是用于 RNA-seq 的转录本组装和定量软件，StringTie 可以
 gtf注释文件可以去genecode下载你需要的gtf文件，我这里下载的是小鼠的。
 genecode官网：[https://www.gencodegenes.org/](https://www.gencodegenes.org/)
 我的gtf文件在/data/mouse_annotation/ 目录下：
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932994068-8361e677-becc-4c5f-9116-5881d583e6d1.png#align=left&display=inline&height=112&margin=%5Bobject%20Object%5D&originHeight=112&originWidth=639&size=0&status=done&style=none&width=639)
+![](pipeline_1\039.png)
 单样本组装：
+
 ```
 stringtie -p 8 -G /data/mouse_annotation/gencode.mouse.annotation.gtf -o cleandata/stringtiedata/CK-4.gtf cleandata/samtools_bam/CK-4_sort.bam
 ```
@@ -1061,10 +1085,11 @@ for i in CK-7 CK-8 HGJ-10 HGJ-6 HGJ-9;do stringtie -p 8 -G /data/mouse_annotatio
 ```
 ll -h cleandata/stringtiedata/
 ```
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932993957-a1aae046-774a-43ce-877c-a1442635b273.png#align=left&display=inline&height=168&margin=%5Bobject%20Object%5D&originHeight=168&originWidth=710&size=0&status=done&style=none&width=710)
+![](pipeline_1\040.png)
 **2.多样本转录本整合**
 stringtie --merge [options] gtf.list :转录组merge模式，在该模式下，Stringtie可以利用输入的一个gtf list并将他们中的转录本进行非冗余的整理。可以在处理多个RNA-seq样本的时候，由于转录组存在时空特异性，可以将每个样本各自的转录组进行非冗余的整合，如果-G提供了参考gtf文件，可以将其一起整合到一个文件中,最终输出成一个完整的gtf文件。
 将文件名的完整路径输入到一个文件中：
+
 ```
 find /data/RNAseq/cleandata/stringtiedata/ -name *.gtf > /data/RNAseq/cleandata/stringtiedata/merglist.txt
 ```
@@ -1072,13 +1097,14 @@ find /data/RNAseq/cleandata/stringtiedata/ -name *.gtf > /data/RNAseq/cleandata/
 ```
 cat /data/RNAseq/cleandata/stringtiedata/merglist.txt
 ```
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932993931-8455eb1a-8a98-414e-bf73-64fe7d3bebfa.png#align=left&display=inline&height=151&margin=%5Bobject%20Object%5D&originHeight=151&originWidth=798&size=0&status=done&style=none&width=798)
+![](pipeline_1\041.png)
 ```
 stringtie --merge -p 8 -G /data/mouse_annotation/gencode.mouse.annotation.gtf -o cleandata/stringtiedata/stringtie_merged.gtf cleandata/stringtiedata/merglist.txt
 ```
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932993969-b68a62f2-a519-46cd-95df-09e831335e30.png#align=left&display=inline&height=265&margin=%5Bobject%20Object%5D&originHeight=265&originWidth=887&size=0&status=done&style=none&width=887)
+![](pipeline_1\042.png)
 **3. 使用gffcompare检验数据比对到基因组上的情况(可选)**
 程序gffcompare可用于比较、合并、注释和估计一个或多个GFF文件(“查询”文件)的准确性。
+
 ```
 gffcompare [options]* {-i <input_gtf_list> | <input1.gtf> [<input2.gtf> .. <inputN.gtf>]}
 ```
@@ -1112,12 +1138,13 @@ gffcompare [options]* {-i <input_gtf_list> | <input1.gtf> [<input2.gtf> .. <inpu
 gffcompare -r /data/mouse_annotation/gencode.mouse.annotation.gtf -G cleandata/stringtiedata/stringtie_merged.gtf
 ```
 会在输入的文件所在文件夹下产生几个文件：
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932994004-16dc4229-ce36-464f-8edf-06b5e1cb19d3.png#align=left&display=inline&height=393&margin=%5Bobject%20Object%5D&originHeight=393&originWidth=999&size=0&status=done&style=none&width=999)
+![](pipeline_1\043.png)
 其中gffcompare.annotated.gtf存储的是StringTie组装的转录本与注释文件内的转录本的差别信息，通过class_code来表示：
+
 ```
 head cleandata/stringtiedata/gffcompare.annotated.gtf |grep  class_code | cut -d ";" -f 5-8
 ```
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932994081-c68570d2-ab37-45da-9931-7983a84255fa.png#align=left&display=inline&height=93&margin=%5Bobject%20Object%5D&originHeight=93&originWidth=1080&size=0&status=done&style=none&width=1080)
+![](pipeline_1\044.png)
 ```
 (RNAseq1) [root@localhost RNAseq]# head cleandata/stringtiedata/gffcompare.annotated.gtf |grep  class_code | cut -d ";" -f 5-8
  ref_gene_id "ENSMUSG00000116111.1"; cmp_ref "ENSMUST00000229069.1"; class_code "="; tss_id "TSS1"
@@ -1125,12 +1152,13 @@ head cleandata/stringtiedata/gffcompare.annotated.gtf |grep  class_code | cut -d
  ref_gene_id "ENSMUSG00000116214.1"; contained_in "ENSMUST00000229087.1"; cmp_ref "ENSMUST00000229989.1"; class_code "="
 ```
 对照表如下：
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932993997-a712ca03-c81c-4e50-99a6-43ed13b37af4.png#align=left&display=inline&height=551&margin=%5Bobject%20Object%5D&originHeight=551&originWidth=1080&size=0&status=done&style=none&width=1080)
+![](pipeline_1\045.png)
 gffcmp.stats文件存储比对结果的准确性和预测率。
+
 ```
 cat cleandata/stringtiedata/gffcompare.stats
 ```
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932994102-208a787c-7d10-44d9-84c5-ebef498363b2.png#align=left&display=inline&height=471&margin=%5Bobject%20Object%5D&originHeight=471&originWidth=1080&size=0&status=done&style=none&width=1080)
+![](pipeline_1\046.png)
 ```
 # gffcompare v0.11.2 | Command line was:
 #gffcompare -r /data/mouse_annotation/gencode.mouse.annotation.gtf -G cleandata/stringtiedata/stringtie_merged.gtf -o cleandata/stringtiedata/gffcompare
@@ -1170,17 +1198,19 @@ mkdir cleandata/ballgown
 for i in CK-4 CK-7 CK-8 HGJ-10 HGJ-6 HGJ-9; do stringtie -e -B -p 8 -G cleandata/stringtiedata/stringtie_merged.gtf  -o cleandata/ballgown/${i}/${i}.gtf cleandata/samtools_bam/${i}_sort.bam; done
 ```
 查看ballgown目录下生成的文件:
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932993990-460d4364-10ff-470b-9425-aa802e9b38e5.png#align=left&display=inline&height=208&margin=%5Bobject%20Object%5D&originHeight=208&originWidth=817&size=0&status=done&style=none&width=817)
+![](pipeline_1\047.png)
 每一个样本对应一个文件夹。
 查看其中一个：
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932993992-1ff7c56f-6be3-458c-aa80-76c06f08b527.png#align=left&display=inline&height=209&margin=%5Bobject%20Object%5D&originHeight=209&originWidth=847&size=0&status=done&style=none&width=847)
+![](pipeline_1\048.png)
 **5.read count数据输出**
 这里需要prepDE.py这个脚本。
+
 ```
 prepDE.py -i cleandata/ballgown/
 ```
 会在当前文件夹下产生2个csv文件。
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932994786-26aa167c-ab0a-41f8-ba3c-301ebb14bb60.png#align=left&display=inline&height=279&margin=%5Bobject%20Object%5D&originHeight=279&originWidth=1023&size=0&status=done&style=none&width=1023)
+![](pipeline_1\049.png)
 分别查看一下：
-![](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612932994643-650f8d54-1117-4d2e-b4e3-9b78ed1b3bd4.png#align=left&display=inline&height=529&margin=%5Bobject%20Object%5D&originHeight=529&originWidth=776&size=0&status=done&style=none&width=776)
+![](pipeline_1\050.png)
 基础的转录组分析大概流程就是这样，当然，分析流程很多，我这里只是其中一个分析流程，可以参考文献，这里面涉及的软件也要不断应用，才知道那里出问题怎么解决，后续的分析算是下游分析，比如利用edgR包或DESeq2进行差异表达分析，这里得到的gene_count_matrix.csv数据就可以用于后续的下游分析了，比如差异表达分析，可参考TCGA序列的文章【[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)】，本公众号文章目录可通过文章浏览：[**公众号文章目录**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273306&idx=1&sn=d92056ee1fde1ff12b1506e02f8eb56f&chksm=841edc27b36955310bac7e1b4e5e4ab7e26e669c192926dbee3efc4f6d185cf3509a8fc87696&scene=21#wechat_redirect)。
+

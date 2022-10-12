@@ -210,6 +210,7 @@ alias pip='pip3'
 }
 ```
 
+
 `name`可以改，会在左侧显示。`type`、`request`不动。`program`就是你写的脚本的路径（按⌘I查看其他的可用的配置文件变量）。`console`也可以通过⌘I选取喜欢的终端（`integrated terminal`指`VS Code`下方的集成终端（推荐），`external terminal`指系统自带的终端，另一个貌似是只读的，不推荐）。按⌘I查看其他的选项。
 
 尝试使用断点阻碍代码运行。如果是外置终端，左右分屏。如果是集成终端，注意输出不会自动翻页。

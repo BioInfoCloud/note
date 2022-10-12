@@ -4,9 +4,7 @@ title: Git讲座
 
 # Git讲座
 
-> `v1.0` 210523 更新视频教程
-
-> [Bilibili视频教程](https://www.bilibili.com/video/BV1eh411v7gt)
+> [Bilibili推荐视频教程](https://www.bilibili.com/video/BV1do4y1S7mr/?spm_id_from=333.999.0.0&vd_source=ad7486d1c0a79f7459d20781ce805fbc)
 > 
 > [Git实例](./git-demos.md)
 
