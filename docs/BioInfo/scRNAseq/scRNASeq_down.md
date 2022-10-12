@@ -78,7 +78,7 @@ main_tiss_filtered
 
 这三个文件指的是：barcodes.tsv, features.tsv, matrix.mtx。这个情况就比较好处理了，barcodes.tsv就是 cell id，features.tsv就是 gene id，matrix.mtx就是计数 counts 矩阵。
 
-![image.png](Figure\scRNASeq_Down_001.jpg)
+![image.png](Figure/scRNASeq_Down_001.jpg)
 
 例如:
 
@@ -146,7 +146,7 @@ save(sce_big,file = 'sce_big.Rdata') # 保存的数据
 
 在如：
 
-![image.png](Figure\scRNASeq_Down_002.jpg)
+![image.png](Figure/scRNASeq_Down_002.jpg)
 
 ```R
 ###### step1:导入数据 ###### 
@@ -366,7 +366,7 @@ A cell cycle is a series of events that takes place in a cell as it grows and di
 - G2(gap2)：Cell grows more，organelles and proteins develop in preparation for cell division，为分裂做准备
 - M(mitosis)：'Old' cell partitions the two copies of the genetic material into the two daughter cells. And the cell cycle can begin again.
 
-![](Figure\scRNASeq_Down_003.jpg)
+![](Figure/scRNASeq_Down_003.jpg)
 在分析单细胞数据时，同一类型的细胞往往来自于不同的细胞周期阶段，这可能对下游聚类分析，细胞类型注释产生混淆；由于细胞周期也是通过cell cycle related protein 调控，即每个阶段有显著的marker基因；通过分析细胞周期有关基因的表达情况，可以对细胞所处周期阶段进行注释；
 在单细胞周期分析时，通常只考虑三个阶段：G1、S、G2M。(即把G2和M当做一个phase)
 主要学习两种来自scran与Seurat包鉴定细胞周期的方法介绍与演示。
@@ -380,13 +380,13 @@ library(Seurat)
 str(cc.genes)
 ```
 
-![image.png](Figure\scRNASeq_Down_004.jpg)
+![image.png](Figure/scRNASeq_Down_004.jpg)
 如上是Seurat包提供的人的细胞中分别与S期、G2M期直接相关的marker基因。
 CellCycleScoring即根据此，对每个细胞的S期、G2M期可能性进行打分；具体如何计算的，暂时在Seurat官方文档中没有提及。在satijalab的github([https://github.com/satijalab/seurat/issues/728)](https://github.com/satijalab/seurat/issues/728))中，作者这样回复类似的提问：
 As we say in the vignette, the scores are computed using an algorithm developed by Itay Tirosh, when he was a postdoc in the Regev Lab (Science et al., 2016). The gene sets are also taken from his work.
 You can read the methods section of [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4944528/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4944528/) to see how the scoring works, but essentially the method scores cells based on the expression of each gene in a signature set - after controlling for the expected expression of genes with similar abundance. 
 结合一些中文教程（https://www.jianshu.com/p/e4a5b5c67de1)的介绍，认为就是根据每个细胞的S期(或者G2/M期)基因集是否显著高表达，对应的score就是表示在该细胞中，S期(或者G2/M期)基因集高表达的程度(如果是负数，就认为不属于该phase)。
-![](E:\PersonalNotes\note\docs\BioInfo\scRNAseq\Figure\scRNASeq_Down_005.jpg)
+![](E:\PersonalNotes\note\docs\BioInfo\scRNAseq\Figure/scRNASeq_Down_005.jpg)
 区别于scran包的另外重要的一点就是Seurat包仅提供了人类细胞有关的cell cycle related gene，没有小鼠的。对此，作者这样回复：`Thanks. We don't provide different capitalizations because this gene list was developed on a human dataset, and we don't want to create ambiguity by suggesting its created from a mouse reference dataset. **In practice however, we've found it works quite well for mouse also, and recommend the solution above.**`
 简言之，作者认为可以将对应人的cc.gene转换为鼠对应的基因名，当做后者的cell cycle related gene（因为鼠和人类基因的高度相似性)。提到的solution就是采用biomaRt包转换一下。这在我之前的教程中有介绍。
 
@@ -436,7 +436,7 @@ legend("topleft",inset=.05,
        c("G1","S","G2M"), pch = c(1),col=c("black","green","red"))
 ```
 
-![image.png](Figure\scRNASeq_Down_006.jpg)
+![image.png](Figure/scRNASeq_Down_006.jpg)
 
 ### (2).scran包
 
@@ -454,7 +454,7 @@ str(mm.pairs)
 head(mm.pairs$G1)
 ```
 
-![image.png](Figure\scRNASeq_Down_007.jpg)
+![image.png](Figure/scRNASeq_Down_007.jpg)
 如上图，具体来说，即比较某个细胞的ENSMUSG00000000001基因表达值是否大于ENSMUSG00000001785基因表达值。
 如果对于所有G1期marker基因对，某个细胞的“first”列基因表达量大于对应的“second”基因的情况越多，则越有把握认为该细胞就是处于G1期（因为越符合训练集特征)。
 而cyclone则是通过计算score，即对于某个细胞，符合上述比较关系的marker基因对数占全部marker基因对数的比值。
@@ -536,7 +536,7 @@ assigned <- cyclone(sce.all.filt@assays[["RNA"]]@data, pairs=trs)
 head(assigned$scores)
 ```
 
-![image.png](Figure\scRNASeq_Down_008.jpg)
+![image.png](Figure/scRNASeq_Down_008.jpg)
 根据每一个细胞对于三个周期阶段的scores，可进行判断；具体规则为 **G1或G2M评分高于0.5的细胞分别被分配到G1期或G2M期**。若G1 or G2M phases均小于0.5，则可判断为S期(虽然可以直接看S期的score)；若G1 or G2M phases均大于0.5，则 the higher score is used for assignment。
 
 ## 5.检测doublets 
@@ -628,7 +628,7 @@ colnames(sce.all@meta.data)
 ```
 
 整合前后：
-![image.png](Figure\scRNASeq_Down_009.jpg)
+![image.png](Figure/scRNASeq_Down_009.jpg)
 
 ## 7.聚类
 
@@ -654,7 +654,7 @@ ggsave(plot=p1_dim, filename="Dimplot_diff_resolution_low.pdf",width = 14)
 
 ```
 
-![image.png](Figure\scRNASeq_Down_010.jpg)
+![image.png](Figure/scRNASeq_Down_010.jpg)
 
 ```r
 p1_dim=plot_grid(ncol = 3, DimPlot(sce.all, reduction = "umap", group.by = "CCA_snn_res.0.8") + 
@@ -665,7 +665,7 @@ ggsave(plot=p1_dim, filename="Dimplot_diff_resolution_high.pdf",width = 18)
 
 ```
 
-![image.png](Figure\scRNASeq_Down_011.jpg)
+![image.png](Figure/scRNASeq_Down_011.jpg)
 
 ```r
 p2_tree=clustree(sce.all@meta.data, prefix = "CCA_snn_res.")
@@ -673,7 +673,7 @@ ggsave(plot=p2_tree, filename="Tree_diff_resolution.pdf")
 
 ```
 
-![image.png](Figure\scRNASeq_Down_012.jpg)
+![image.png](Figure/scRNASeq_Down_012.jpg)
 
 ```r
 #接下来分析，按照分辨率为0.8进行 
@@ -698,7 +698,7 @@ DimPlot(sce.all, reduction = "umap", group.by = "CCA_snn_res.0.8",label = T)
 ggsave('umap_by_CCA_snn_res.0.8.pdf')
 ```
 
-![image.png](Figure\scRNASeq_Down_013.jpg)
+![image.png](Figure/scRNASeq_Down_013.jpg)
 
 ```r
 # T Cells (CD3D, CD3E, CD8A), 
@@ -735,7 +735,7 @@ p_all_markers
 ggsave(plot=p_all_markers, filename="check_all_marker_by_seurat_cluster.pdf")
 ```
 
-![image.png](Figure\scRNASeq_Down_014.jpg)
+![image.png](Figure/scRNASeq_Down_014.jpg)
 
 ```r
 genes_to_check = c('PTPRC', 'CD3D', 'CD3E', 'CD4','CD8A',
@@ -753,7 +753,7 @@ p
 ggsave(plot=p, filename="check_Tcells_marker_by_seurat_cluster.pdf")
 ```
 
-![image.png](Figure\scRNASeq_Down_015.jpg)
+![image.png](Figure/scRNASeq_Down_015.jpg)
 
 ```r
 # mast cells, TPSAB1 and TPSB2 
@@ -775,7 +775,7 @@ p
 ggsave(plot=p, filename="check_Bcells_marker_by_seurat_cluster.pdf")
 ```
 
-![image.png](Figure\scRNASeq_Down_016.jpg)
+![image.png](Figure/scRNASeq_Down_016.jpg)
 
 ```r
 genes_to_check = c('CD68', 'CD163', 'CD14',  'CD86','C1QA',  'C1QB',  # mac
@@ -795,7 +795,7 @@ p
 ggsave(plot=p, filename="check_Myeloid_marker_by_seurat_cluster.pdf")
 ```
 
-![image.png](Figure\scRNASeq_Down_017.jpg)
+![image.png](Figure/scRNASeq_Down_017.jpg)
 
 ```r
 # epi or tumor (EPCAM, KRT19, PROM1, ALDH1A1, CD24).
@@ -820,7 +820,7 @@ ggsave(plot=p, filename="check_epi_marker_by_seurat_cluster.pdf")
 
 ```
 
-![image.png](Figure\scRNASeq_Down_018.jpg)
+![image.png](Figure/scRNASeq_Down_018.jpg)
 
 ```r
 genes_to_check = c('TEK',"PTPRC","EPCAM","PDPN","PECAM1",'PDGFRB',
@@ -836,7 +836,7 @@ p
 ggsave(plot=p, filename="check_stromal_marker_by_seurat_cluster.pdf")
 ```
 
-![image.png](Figure\scRNASeq_Down_019.jpg)
+![image.png](Figure/scRNASeq_Down_019.jpg)
 
 ```r
 p_all_markers
@@ -846,7 +846,7 @@ p_all_markers+p_umap
 ggsave('markers_umap.pdf',width = 22)
 ```
 
-![image.png](Figure\scRNASeq_Down_020.jpg)
+![image.png](Figure/scRNASeq_Down_020.jpg)
 
 ```r
 sce=sce.all
@@ -861,7 +861,7 @@ top10 <- sce.markers %>% group_by(cluster) %>% top_n(10, avg_log2FC)
 DoHeatmap(sce,top10$gene,size=3)
 ```
 
-![image.png](Figure\scRNASeq_Down_021.jpg)
+![image.png](Figure/scRNASeq_Down_021.jpg)
 
 ```r
 p <- DotPlot(sce, features = unique(top10$gene),
@@ -871,7 +871,7 @@ p
 ggsave(paste0(pro,'DotPlot_check_top10_markers_by_clusters.pdf'),height = 11)
 ```
 
-![image.png](Figure\scRNASeq_Down_022.jpg)
+![image.png](Figure/scRNASeq_Down_022.jpg)
 
 ```r
 library(dplyr) 
@@ -886,7 +886,7 @@ ggsave(paste0(pro,'DotPlot_check_top3_markers_by_clusters.pdf'),height = 11)
 save(sce.markers,file = paste0(pro,'sce.markers.Rdata'))
 ```
 
-![image.png](Figure\scRNASeq_Down_023.jpg)
+![image.png](Figure/scRNASeq_Down_023.jpg)
 
 ---
 
@@ -942,7 +942,7 @@ ggsave(plot=p_all_markers, filename="check_all_marker_by_CCA_snn_res.0.8.pdf")
 colnames(sce.all@meta.data)
 ```
 
-![image.png](Figure\scRNASeq_Down_024.jpg)
+![image.png](Figure/scRNASeq_Down_024.jpg)
 
 ```r
 p_umap=DimPlot(sce.all, reduction = "umap",
@@ -951,7 +951,7 @@ p_umap
 ggsave('umap_by_CCA_snn_res.0.8.pdf',width = 15)
 ```
 
-![image.png](Figure\scRNASeq_Down_026.jpg)
+![image.png](Figure/scRNASeq_Down_026.jpg)
 
 ```r
 library(patchwork)
@@ -962,7 +962,7 @@ ggsave('umap_and_all_markers_by_CCA_snn_res.0.8.pdf',width = 15)
 #  NME1 (activation marker), PRF1 (cytotoxic marker), 
 ```
 
-![image.png](Figure\scRNASeq_Down_027.jpg)
+![image.png](Figure/scRNASeq_Down_027.jpg)
 
 ```r
 celltype=data.frame(ClusterID=0:8,
@@ -981,7 +981,7 @@ DimPlot(sce.all, reduction = "umap", group.by = "celltype",label = T)
 ggsave('umap_by_celltype.pdf')
 ```
 
-![image.png](Figure\scRNASeq_Down_028.jpg)
+![image.png](Figure/scRNASeq_Down_028.jpg)
 
 ```r
 tab.1=table(sce.all@meta.data$celltype,sce.all@meta.data$CCA_snn_res.0.8) 
@@ -994,7 +994,7 @@ balloonplot(tab.1, main =" celltype VS  res.0.8 ", xlab ="", ylab="",
 dev.off()
 ```
 
-![image.png](Figure\scRNASeq_Down_029.jpg)
+![image.png](Figure/scRNASeq_Down_029.jpg)
 
 ```r
 library(patchwork)
@@ -1007,7 +1007,7 @@ p_all_markers+p_umap
 ggsave('markers_umap_by_celltype.pdf',width = 13)
 ```
 
-![image.png](Figure\scRNASeq_Down_030.jpg)
+![image.png](Figure/scRNASeq_Down_030.jpg)
 
 ```r
 sce=sce.all 
@@ -1023,7 +1023,7 @@ top10 <- sce.markers %>% group_by(cluster) %>% top_n(10, avg_log2FC)
 DoHeatmap(sce,top10$gene,size=3)
 ```
 
-![image.png](Figure\scRNASeq_Down_031.jpg)
+![image.png](Figure/scRNASeq_Down_031.jpg)
 
 ```r
 p <- DotPlot(sce, features = unique(top10$gene),
@@ -1033,7 +1033,7 @@ p
 ggsave(paste0(pro,'DotPlot_check_top10_markers_by_clusters.pdf'),height = 11)
 ```
 
-![image.png](Figure\scRNASeq_Down_032.jpg)
+![image.png](Figure/scRNASeq_Down_032.jpg)
 
 ```r
 library(dplyr) 
@@ -1042,7 +1042,7 @@ DoHeatmap(sce,top3$gene,size=3)
 ggsave(paste0(pro,'DoHeatmap_check_top3_markers_by_clusters.pdf'))
 ```
 
-![image.png](Figure\scRNASeq_Down_033.jpg)
+![image.png](Figure/scRNASeq_Down_033.jpg)
 
 ```r
 p <- DotPlot(sce, features = unique(top3$gene),
@@ -1054,4 +1054,4 @@ save(sce.markers,file = paste0(pro,'sce.markers.Rdata'))
 
 ```
 
-![image.png](Figure\scRNASeq_Down_034.jpg)
+![image.png](Figure/scRNASeq_Down_034.jpg)
