@@ -1,6 +1,6 @@
 # 你好
 
-这里是微信公众号：生物信息云的索引网站 <https://bioinfocloud.github.io>
+这里是微信公众号：生物信息云的索引网站 <https://bioinfocloud.github.io/note/>
 
 - 通过主题和目录以打开文章
     - PC端 在上方标签栏选择主题 在左侧目录选择文章
