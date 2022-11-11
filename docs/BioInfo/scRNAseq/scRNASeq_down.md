@@ -726,7 +726,7 @@ genes_to_check = c('PTPRC', 'CD3D', 'CD3E', 'CD4','CD8A','CD19', 'CD79A', 'MS4A1
                    'EPCAM' , 'KRT19', 'PROM1', 'ALDH1A1',
                    'MKI67' ,'TOP2A' )
 library(stringr)  
-genes_to_check=str_to_title(unique(genes_to_check))
+genes_to_check = str_to_title(unique(genes_to_check))
 genes_to_check
 p_all_markers <- DotPlot(sce.all, features = genes_to_check,
              assay='RNA'  )  + coord_flip()
