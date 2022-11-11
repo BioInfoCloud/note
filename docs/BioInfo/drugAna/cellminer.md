@@ -10,3 +10,15 @@
 
 ## 1.数据下载
 
+
+
+
+
+## 2.读入药物数据
+
+```R
+
+library(readxl)
+rt1 <- read_excel(path = "DTP_NCI60_ZSCORE.xls", skip = 7)
+```
+
