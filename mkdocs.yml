@@ -126,6 +126,8 @@ nav:
         - Bulk RNAseq上游分析: BioInfo/RNAseq/pipeline_1.md
     - TCGA-GEO专题: 
       - TCGA-GEO: BioInfo/TCGA/index.md
+    - 药物分析: 
+        - CellMiner数据库: BioInfo/drugAna/cellminer.md
   - 文献:
     - RNASeq综述-01: Literature/RNAseq_review1.md
     - RNASeq综述-02: Literature/RNAseq_review1.md
