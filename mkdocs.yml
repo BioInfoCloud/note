@@ -128,6 +128,8 @@ nav:
       - TCGA-GEO: BioInfo/TCGA/index.md
     - 药物分析: 
         - CellMiner数据库: BioInfo/drugAna/cellminer.md
+    - 数据库工具: 
+        - CoMutDB数据库: BioInfo/database/CoMutDB.md
   - 文献:
     - RNASeq综述-01: Literature/RNAseq_review1.md
     - RNASeq综述-02: Literature/RNAseq_review1.md

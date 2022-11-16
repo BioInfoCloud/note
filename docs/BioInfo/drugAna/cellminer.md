@@ -170,7 +170,6 @@ library(RColorBrewer)
 load("output/fitercor.Rdata")
 names(fitercor)
 
-
 ifelse(dir.exists("opFig"),FALSE,dir.create("opFig"))
 g <- names(fitercor)[1]
 lapply(names(fitercor), function(g){
@@ -209,7 +208,6 @@ lapply(names(fitercor), function(g){
              width = 3,height = 4)
     }
   }
-
 })
 
 ```
