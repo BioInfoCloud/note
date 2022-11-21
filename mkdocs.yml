@@ -130,6 +130,7 @@ nav:
         - CellMiner数据库: BioInfo/drugAna/cellminer.md
     - 数据库工具: 
         - CoMutDB数据库: BioInfo/database/CoMutDB.md
+        - CysModDB数据库: BioInfo/database/CysModDB.md
   - 文献:
     - RNASeq综述-01: Literature/RNAseq_review1.md
     - RNASeq综述-02: Literature/RNAseq_review1.md
