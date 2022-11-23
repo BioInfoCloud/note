@@ -115,6 +115,8 @@ nav:
       - 同源基因转换: BioInfo/BioInfoBasics/hsa2mus_2.md
       - 各种ID转换: BioInfo/BioInfoBasics/IDtrans.md
       - miRNA的ID转换: BioInfo/BioInfoBasics/miRNA_ID.md
+  - 大数据:
+    - 学习计划: bigdata/index.md
   - 专题:
     - 单细胞专题: 
         - 单细胞上游分析: BioInfo/scRNAseq/scRNASeq_UP.md
