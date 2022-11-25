@@ -1,0 +1,2109 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="生物信息云笔记">
+      
+      
+        <meta name="author" content="DoubleHelix">
+      
+      
+        <link rel="canonical" href="https://bioinfocloud.io/">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>生物信息云笔记</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.472b142f.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.08040f6c.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="mkdocs/css/no-footer.css">
+    
+      <link rel="stylesheet" href="mkdocs/css/unordered-list-symbols.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="light-blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="." title="生物信息云笔记" class="md-header__button md-logo" aria-label="生物信息云笔记" data-md-component="logo">
+      
+  <img src="assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            生物信息云笔记
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="light-blue"  aria-label="切换风格"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="切换风格" for="__palette_5" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.04 8.71V4h-4.7L12 .69 8.71 4H4v4.71L.69 12 4 15.34v4.7h4.71L12 23.35l3.34-3.31h4.7v-4.7L23.35 12l-3.31-3.29M8.83 7.05c.98 0 1.77.79 1.77 1.78a1.77 1.77 0 0 1-1.77 1.77c-.99 0-1.78-.79-1.78-1.77 0-.99.79-1.78 1.78-1.78M15.22 17c-.98 0-1.77-.8-1.77-1.78a1.77 1.77 0 0 1 1.77-1.77c.98 0 1.78.79 1.78 1.77A1.78 1.78 0 0 1 15.22 17m-6.72.03L7 15.53 15.53 7l1.5 1.5-8.53 8.53Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="orange"  aria-label="切换风格"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="切换风格" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-purple"  aria-label="切换风格"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="切换风格" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="purple" data-md-color-primary="black" data-md-color-accent="pink"  aria-label="切换风格"  type="radio" name="__palette" id="__palette_4">
+          
+            <label class="md-header__button md-icon" title="切换风格" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="light-green" data-md-color-primary="black" data-md-color-accent="light-blue"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_5">
+          
+            <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_4" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.04 7 9.54 0 4.5-2.94 8.27-7 9.54.95.3 1.95.46 3 .46a10 10 0 0 0 10-10A10 10 0 0 0 9 2Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://bioinfocloud.github.io/note" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    BioInfoCloud
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="Programming/" class="md-tabs__link">
+        编程
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="BioInfo/" class="md-tabs__link">
+        生信基础
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="BioInfo/Biopython/01_install/" class="md-tabs__link">
+        Biopython
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="bigdata/" class="md-tabs__link">
+        大数据
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="BioInfo/scRNAseq/scRNASeq_UP/" class="md-tabs__link">
+        专题
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="Literature/RNAseq_review1/" class="md-tabs__link">
+        文献
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="ABOUT/" class="md-tabs__link">
+        关于
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="生物信息云笔记" class="md-nav__button md-logo" aria-label="生物信息云笔记" data-md-component="logo">
+      
+  <img src="assets/logo.png" alt="logo">
+
+    </a>
+    生物信息云笔记
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://bioinfocloud.github.io/note" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    BioInfoCloud
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="Programming/">编程</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="编程" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          编程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_2">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Programming/Linux/linux/" class="md-nav__link">
+        Linux讲座
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Programming/Linux/commands-concise/" class="md-nav__link">
+        命令行入门精简版
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Programming/Linux/vim/" class="md-nav__link">
+        vim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Programming/Linux/tmux/" class="md-nav__link">
+        tmux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Programming/Linux/unix/" class="md-nav__link">
+        UNIX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Programming/Linux/kernel-compile/" class="md-nav__link">
+        内核编译
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_3" type="checkbox" id="__nav_1_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_3">
+          Markdown
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Markdown" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Markdown
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Programming/Markdown/markdown/" class="md-nav__link">
+        Markdown讲座
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Programming/vscode-python/vscode-python/" class="md-nav__link">
+        VSCode及插件安装
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Programming/Markdown/grammars/" class="md-nav__link">
+        Markdown语法
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_4" type="checkbox" id="__nav_1_4" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_4">
+          Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Git" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Programming/Git/git/" class="md-nav__link">
+        Git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Programming/Git/git-demos/" class="md-nav__link">
+        Git例子
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Programming/Git/git-teamwork/" class="md-nav__link">
+        Git合作
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Programming/Git/windows-install/" class="md-nav__link">
+        Windows安装Git
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_5" type="checkbox" id="__nav_1_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_5">
+          R
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="R" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          R
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Programming/R/Grammar/" class="md-nav__link">
+        R语法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Programming/R/ggplot2/" class="md-nav__link">
+        可视化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_5_3" type="checkbox" id="__nav_1_5_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_5_3">
+          R包开发
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="R包开发" data-md-level="3">
+        <label class="md-nav__title" for="__nav_1_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          R包开发
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Programming/R/01-software/" class="md-nav__link">
+        软件安装
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Programming/R/02-DevelopmentManual/" class="md-nav__link">
+        快速手册
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_6" type="checkbox" id="__nav_1_6" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_6">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Programming/python/links/" class="md-nav__link">
+        语法基础
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="BioInfo/">生信基础</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="生信基础" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          生信基础
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          生信基础
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="生信基础" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          生信基础
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BioInfo/BioInfoBasics/Introduction/" class="md-nav__link">
+        生信引言
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BioInfo/BioInfoBasics/01/" class="md-nav__link">
+        基础应用
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BioInfo/BioInfoBasics/02_noun/" class="md-nav__link">
+        生信名词
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BioInfo/BioInfoBasics/03_sequence/" class="md-nav__link">
+        测序技术原理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BioInfo/BioInfoBasics/04_format/" class="md-nav__link">
+        数据文件格式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BioInfo/BioInfoBasics/biomaRt/" class="md-nav__link">
+        biomaRt包
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BioInfo/BioInfoBasics/counts_RPM_RPKM_FPKM_1/" class="md-nav__link">
+        RNASeq表达定量
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BioInfo/BioInfoBasics/counts_RPM_RPKM_FPKM_2/" class="md-nav__link">
+        RNASeq表达定量转换
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BioInfo/BioInfoBasics/DESeq2_edgeR_limma/" class="md-nav__link">
+        RNASeq差异表达分析原理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BioInfo/BioInfoBasics/GO/" class="md-nav__link">
+        什么是GO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BioInfo/BioInfoBasics/KEGG_GO_GSEA_what/" class="md-nav__link">
+        富集分析理论基础
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BioInfo/BioInfoBasics/hsa2mus/" class="md-nav__link">
+        人鼠基因比较
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BioInfo/BioInfoBasics/hsa2mus_2/" class="md-nav__link">
+        同源基因转换
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BioInfo/BioInfoBasics/IDtrans/" class="md-nav__link">
+        各种ID转换
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BioInfo/BioInfoBasics/miRNA_ID/" class="md-nav__link">
+        miRNA的ID转换
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Biopython
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Biopython" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Biopython
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BioInfo/Biopython/01_install/" class="md-nav__link">
+        安装
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="bigdata/">大数据</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="大数据" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          大数据
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          专题
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="专题" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          专题
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_1">
+          单细胞专题
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="单细胞专题" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          单细胞专题
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BioInfo/scRNAseq/scRNASeq_UP/" class="md-nav__link">
+        单细胞上游分析
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BioInfo/scRNAseq/SeuratObj/" class="md-nav__link">
+        了解Seurat对象
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BioInfo/scRNAseq/scRNASeq_down/" class="md-nav__link">
+        单细胞下游分析
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BioInfo/scRNAseq/GSE130001/" class="md-nav__link">
+        常规分析案例一
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BioInfo/scRNAseq/SingleR/" class="md-nav__link">
+        细胞注释-SingleR
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          RNAseq专题
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="RNAseq专题" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          RNAseq专题
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BioInfo/RNAseq/pipeline_1/" class="md-nav__link">
+        Bulk RNAseq上游分析
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="BioInfo/TCGA/">TCGA-GEO专题</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="TCGA-GEO专题" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          TCGA-GEO专题
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          药物分析
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="药物分析" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          药物分析
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BioInfo/drugAna/cellminer/" class="md-nav__link">
+        CellMiner数据库
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_5">
+          数据库工具
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据库工具" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          数据库工具
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BioInfo/database/CoMutDB/" class="md-nav__link">
+        CoMutDB数据库
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BioInfo/database/CysModDB/" class="md-nav__link">
+        CysModDB数据库
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          文献
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="文献" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          文献
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Literature/RNAseq_review1/" class="md-nav__link">
+        RNASeq综述-01
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Literature/RNAseq_review1/" class="md-nav__link">
+        RNASeq综述-02
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="ABOUT/">关于</a>
+          
+            <label for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="关于" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          关于
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ABOUT/studentsGroup/" class="md-nav__link">
+        学生群
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    你好
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    入门学习历程
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  <a href="https://bioinfocloud.github.io/note/edit/main/docs/index.md" title="编辑此页" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+  <h1>Home</h1>
+
+<h2 id="_1">你好<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>这里是<strong>微信公众号：生物信息云</strong>的索引网站： <a href="https://bioinfocloud.github.io/note/">https://bioinfocloud.github.io/note/</a></p>
+<ul>
+<li>通过主题和目录以打开文章</li>
+<li>PC端 在上方标签栏选择主题 在左侧目录选择文章</li>
+<li>移动端 点击左上角图标选择主题和文章</li>
+<li>搜索关键词以打开文章</li>
+</ul>
+<hr />
+<h2 id="_2"><strong>入门学习历程</strong><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><strong>2~3周时间熟悉R语言语法，教程如下：</strong></p>
+<ul>
+<li>B站：<a href="https://www.bilibili.com/video/BV1MS4y1i7yU?spm_id_from=333.999.0.0&amp;vd_source=ad7486d1c0a79f7459d20781ce805fbc">R语法视频</a></li>
+</ul>
+<p><strong>3~5天快速了解ggplot2绘图思想，不需要精通。</strong></p>
+<ul>
+<li>
+<p><a href="https://www.bilibili.com/video/BV1aT411V73F?spm_id_from=333.999.0.0">R语言数据可视化【视频】——解读ggplot2绘图思想视频教程</a>【B站视频：<a href="https://www.bilibili.com/video/BV1aT411V73F?vd_source=ad7486d1c0a79f7459d20781ce805fbc">ggplot2绘图思想</a>】</p>
+</li>
+<li>
+<p>为什么不需要精通？参考文章：<a href="https://mp.weixin.qq.com/s/9OEoqaNAeC0OrkU75QHhEw">我有必要花大量时间去学习R语言绘图吗？？</a></p>
+</li>
+</ul>
+<p><strong>1~2周学习数据的基础分析</strong></p>
+<ul>
+<li>B站：<a href="https://www.bilibili.com/video/BV13a411P7Yk/?spm_id_from=333.788&amp;vd_source=ad7486d1c0a79f7459d20781ce805fbc">R语言数据分析基础</a></li>
+</ul>
+<p>其他的学习资源（后期需要再学习）：
+<a href="https://github.com/XSLiuLab/Workshop">https://github.com/XSLiuLab/Workshop</a>
+<a href="https://xsliulab.github.io/Workshop/">https://xsliulab.github.io/Workshop/</a></p>
+<p>接下来，就是了解转录组测序的基本原理，其中涉及到的一些文件格式，这些文件格式主要是上游数据分析中会涉及的，只是你需要知道这些。【关于各种测序原理，你可以在B站或者微信搜索：陈巍学基因，有好多视频，也不需要掌握所有，普通转录组(bulk-RNASeq)先掌握，其他的结合自己需要了解，原理上很多是相通的】,<strong>后面了解单细胞测序技术和空间转录组技术</strong>。</p>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264680&amp;idx=2&amp;sn=363f93cbf9659d0e6d2817d3b9946dff&amp;scene=21#wechat_redirect">生物信息学入门必须了解的名词</a></li>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651272832&amp;idx=1&amp;sn=7d208df1a65e3696c41c666ef78f5881&amp;scene=21#wechat_redirect">illumina、Sanger、第三代和第四代测序技术原理</a></li>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651272899&amp;idx=1&amp;sn=6779b2bd21f3b607a08227d31c7212c6&amp;scene=21#wechat_redirect">生信中常见的数据文件格式</a></li>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651265423&amp;idx=2&amp;sn=288f3c8acaad8670d35a031cd9794d58&amp;scene=21#wechat_redirect">常用生物信息 ID的介绍</a></li>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651265466&amp;idx=1&amp;sn=021a10503d338e09abe07b578e734566&amp;scene=21#wechat_redirect">生信中各种ID转换</a></li>
+</ul>
+<p>至于转录组测序的原理了解后，基础的分析你不需要知道上游怎么分析的，我用一句话解释：送出去测序的样本，提取总RNA，定量，使得每个样本中的RNA总量一样，打断后进行PCR扩增，然后测序，测序得到很多序列，如果基因表达量越高，测序得到的序列就越多【当然过程没有这么简单，比如还有去除核糖体RNA等】，怎么去量化这个表达量？这时候你就需要了解<a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264575&amp;idx=2&amp;sn=69b45012dbfe61d7574446de00ec9a7b&amp;scene=21#wechat_redirect">RNA-seq的counts,RPM, RPKM, FPK值到底有什么区别？</a>。至于counts,RPM, RPKM, FPK怎么得到的中间过程，属于上游分析，你能理解这些counts,RPM, RPKM, FPK就是用来量化基因表达量之间的关系就行。上游的分析，需要基于Linux系统。
+<strong>【-------------------------下面这部分跳过-------------------</strong>
+后续感兴趣的话，可参考： <a href="https://www.yuque.com/docs/share/e9dbfaba-752e-4f89-a072-e95dc4fed0ef?#">《转录组基础知识》</a>（密码：um4i）；
+分析流程：
+<a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273374&amp;idx=1&amp;sn=dfac9e82a09fbb18cd8b2c8179afcad8&amp;scene=21#wechat_redirect">转录组分析 | fastqc进行质控与结果解读</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273401&amp;idx=1&amp;sn=ff9e3478309d805950c40d0ebae74296&amp;chksm=841edcc4b36955d2a5bf8c85429114b5b83ec4e5afe869378b42ec4f659d4953d5f6c8e9e379&amp;token=151105890&amp;lang=zh_CN&amp;scene=21#wechat_redirect">转录组分析 | 使用trim-galore去除低质量的reads和adaptor</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273450&amp;idx=1&amp;sn=efab631b255e12cf5ffd259dd53fb2b3&amp;chksm=841edc97b3695581de924856b0e6901c67b87648f85bd491729eaa2ee0592271d84042b9eb76&amp;token=108642787&amp;lang=zh_CN&amp;scene=21#wechat_redirect">转录组分析 | 使用Hisat2进行序列比对</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273488&amp;idx=1&amp;sn=f5ed53f20164b19720d31f0a2cfcd268&amp;chksm=841edd6db369547bc04ae15a2a8a7661fefa1193cabbe05d7e2f9e2fa986211603537cf8fbd0&amp;token=108642787&amp;lang=zh_CN&amp;scene=21#wechat_redirect">转录组分析 | 使用SAMtools将SAM文件转换为BAM文件、排序、建立索引</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273531&amp;idx=1&amp;sn=8a9b12fe030f6c0f8bb1d6c8abbf622d&amp;chksm=841edd46b36954501a57801f8149301d1bbb7b2d62a6f0d73b8a4795071e2aace94e02c2f392&amp;token=108642787&amp;lang=zh_CN&amp;scene=21#wechat_redirect">转录组分析 | 使用RSeQC软件对生成的BAM文件进行质控</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273566&amp;idx=1&amp;sn=947e61eb19a63943f8c56bfcad81cc82&amp;chksm=841edd23b36954359fe559dc4a832ffd66a0792868d2d2ea65123765cc0b7dc4424ca4344549&amp;scene=21#wechat_redirect">转录组分析 | 使用Stringtie对数据进行下游处理</a></p>
+<p>曾健明老师的教程链接：<a href="https://share.weiyun.com/1R1Oar3m">https://share.weiyun.com/1R1Oar3m</a> 密码：y6a5ce
+<strong>-------------------------上面这部分跳过-------------------】</strong>
+普通的分析的话我们都是从counts/FPKM/TPM开始的。得到的数据，基础的分析都差不多。
+对于癌症方向，TCGA数据库是最好的数据资源，我们可以从TCGA中下载各种数据进行分析。
+要分析数据就先了解TCGA数据库。
+ <a href="https://www.yuque.com/docs/share/912e43c5-2b9d-4a31-982c-30d419bd1473?#">TCGA数据库介绍</a> （密码：vtdx）；可看视频【<a href="https://mp.weixin.qq.com/s/i5hLNXQiXoeqF-ogOxm8Uw">TCGA数据库介绍</a>】
+注意：网上搜索的教程，注意发布时间在2022年4月份之前的，很多数据处理教程不在适用，因为TCGA发生了重大更新。这里有一些更新后的数据整理教程。
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651278938&amp;idx=1&amp;sn=a3e6481c663e712feeb2ed95f42a0334&amp;chksm=841eaa27b369233120f5ba00c5f17adece9cc387f9785609ad73909c3faad6a031b2d4f0d95f#rd">2022-TCGA数据库重大更新后临床数据的下载与整理</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651277704&amp;idx=1&amp;sn=20856680efc8ed317657632392fd3743&amp;chksm=841eadf5b36924e3521dcb0a3f2cbabf909147841041bfb7a26a84901dbde3b66eec6481d3c3#rd">2022-TCGA数据库重大更新后miRNA-Seq数据的下载与整理。</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651277334&amp;idx=1&amp;sn=cbe005d417cd196470574001324b5168&amp;chksm=841eac6bb369257d153199ffe3ae7cee580e5205f8122a7b34c8d4601ed80ef84f9e0ceda079#rd">2022-TCGA数据库重大更新后3行代码提取simple nucleotide variation的数据</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651277277&amp;idx=1&amp;sn=ecdbe046e1e3b5550b8195eddbe6fd84&amp;chksm=841ea3a0b3692ab65657827edf7865d901d9d546ebd3db270eaa1b6f56fe12de6bfa8630a8b3#rd">2022-TCGA数据库重大更新后RNASeq的STAR-Counts数据的下载与整理</a></p>
+<p>counts数和TPM以及FPKM之间是可以转换的。得到的数据以后，可以尝试转换他们，count数没有考虑基因长度。FPKM已经考虑了基因长度。counts转换为其他类型的的数据需要知道基因长度，FPKM转化为其他的就不需要。<a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651272981&amp;idx=1&amp;sn=d5ef893cb6a61210ae765ae2cf0f93c4&amp;scene=21#wechat_redirect">RNA-Seq的Counts和FPKM数据如何转换成TPM？</a>【<a href="https://mp.weixin.qq.com/s/WXQ0iSfAQwLqq2ost2hHbghttps://mp.weixin.qq.com/s/WXQ0iSfAQwLqq2ost2hHbg">视频：TCGA-RNASeq数据转换</a>】，这里提取的数据基因名称需要转换成symbol，可以<a href="https://mp.weixin.qq.com/s/jh2xPRi97teeGIPPfU2PiQ">了解gtf文件信息提取</a>。当然这在文章：<a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651265466&amp;idx=1&amp;sn=021a10503d338e09abe07b578e734566&amp;scene=21#wechat_redirect">生信中各种ID转换</a>中已经有介绍。</p>
+<p>如果处理的miRNA的数据，需要注释miRNA，<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651275464&amp;idx=1&amp;sn=ec20ca96dcaf40f7380253fa038bb696&amp;chksm=841ea4b5b3692da363095e21fbd2daa962af0568fe8f13ca46b6aff632c0facc85b1634bbbf6&amp;scene=21#wechat_redirect">miRNA注释包:miRBaseVersions.db</a>，具体在文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651275466&amp;idx=1&amp;sn=9c2a028400fe8ee89e942f3e7c4cd3e1&amp;chksm=841ea4b7b3692da1e8848068dceb31eef0d381286dd2d16dc7686f1d266aab7ac51e26a41897&amp;scene=21#wechat_redirect">TCGA数据库：miRNA数据下载与整理(2)</a> 中有。</p>
+<p>自己能够造轮子后可以学习TCGAbiolinks包，他会给你带来很大遍历，里面的参数就容易知道是怎么回事了。
+关于TCGAbiolinks包，阅读： <a href="https://www.yuque.com/docs/share/68f92c42-ee96-4e0f-9f9d-1e58df4dd87d?#">《TCGAbiolinks包》</a>（密码：ga41）<strong>【数据库更新后已经不可用】</strong></p>
+<p>TCGA数据库中有些癌症类型是没有正常样本的，或者正常样本数太少，有时候分析就不是很好，如果需要正常样本，可以下载GTEx数据库中的正常样本，但是，这是不同的数据来源，不能简单的使用，需要归一化。当然，你也不需要做这一步，UCSC中有标准化好的数据，直接下载使用就行了，可参考文章：<a href="https://mp.weixin.qq.com/s/hi-Jy57tN15-o7VRjESDFg">我要研究的癌症在TCGA数据库没有正常样本或正常样本数少怎么办？</a>这里，我需要提一下，TCGA的数据都能在UCSC上直接下载的，但我自己不是很推荐这种方式，因为数据不是最新的，特别是临床数据，没有正常样本的数据才选择这种方式，当然下载使用也是没有问题的。可参考文章：<a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273247&amp;idx=1&amp;sn=008928dbfc6c6976d53369cd20c26f87&amp;scene=21#wechat_redirect">UCSC数据库下载TCGA数据需要注意的细节</a>。如果你只是单一的看几个基因在正常和肿瘤组织之间的表达高低话，在线工具GEPIA就可以了。</p>
+<p>得到这些数据以后我们就要进行数据的分析了。<strong>常见的就是差异表达分析</strong>。DESeq2和edgeR包
+<a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651267481&amp;idx=1&amp;sn=40a8715a333ff47f6e96c37b4182d1b1&amp;scene=21#wechat_redirect">超详细的DESeq2和edgeR包的基本原理和实战案例</a>。
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263344&amp;idx=1&amp;sn=add608d265600768d3f25ee30dc4365a&amp;chksm=841ef50db3697c1b1752d19a2a875aed07c9c19b388a8f1b4da4f05e938de0ef9487fb868f09&amp;scene=21#wechat_redirect">TCGAbiolinks包下载TCGA数据进行表达差异分析-乳腺癌案例</a>
+<a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264898&amp;idx=1&amp;sn=f6287d98fe0b0fb48a96d2905ca0bb4f&amp;scene=21#wechat_redirect">一文就会TCGA数据库基因表达差异分析</a>
+<a href="">RNASeq-miRNA差异表达分析</a></p>
+<p>如果只是分析TCGA数据库中RNA的数据，还可以了解GDCRNATools包，参考文章：<a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651265127&amp;idx=2&amp;sn=8c866e064995e6feb251a5db00282fd2&amp;scene=21#wechat_redirect">GDCRNATools包下载数据、处理数据以及差异分析</a></p>
+<p>得到的差异表达基因可视化，火山图，这在<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273946&amp;idx=1&amp;sn=9fe780c87675cfae7b69f62516105ce7&amp;chksm=841edea7b36957b1b7b5c794333e6d6b438f80351a54d4d962b2df1cba6ba1e2188687d3a2a2&amp;scene=21#wechat_redirect">R语言数据可视化【视频】——解读ggplot2绘图思想视频教程</a>有介绍，你可以在搜狗微信栏搜索，模仿绘制，保存自己的代码，以后就不需要再写，改改参数就行。</p>
+<p>对于数据来源GEO，因为GEO数据比较复杂，特别是芯片数据，公司不一样，芯片不一样，会有区别的。这部分
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263385&amp;idx=1&amp;sn=63528ffd7901f36387cd4f484c99e188&amp;chksm=841ef5e4b3697cf28e4590d3509be675bc5d44fe1a1cb6f54fe6ad5cc419139c8720a5fb299d&amp;token=1937927307&amp;lang=zh_CN&amp;scene=21#wechat_redirect">基因芯片数据挖掘分析表达差异基因</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263601&amp;idx=1&amp;sn=443d0dddebb12f21cfd976d50473856b&amp;chksm=841ef60cb3697f1aecc6c310ee3a77e6182a728d5b6711a5cc8f49f0739feaba904f565ce176&amp;scene=21#wechat_redirect">GEO数据库使用教程及在线数据分析工具</a>
+【视频】<a href="https://mp.weixin.qq.com/s/Bb0r6s8HMT2hSZFrt7Rt0A">-GEO数据库使用教程</a>
+<a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651266556&amp;idx=1&amp;sn=05fe660c9241f3a850584d73b5e8e665&amp;scene=21#wechat_redirect">Bioconductor：GEOquery包</a>
+<a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651266701&amp;idx=1&amp;sn=23f3e83000c659abdbe045b9c18d3269&amp;scene=21#wechat_redirect">GEO数据库表达数据的提取以及limma包进行差异分析</a>
+关于GEO数据库分析的详细教程阅读文章： <a href="https://www.yuque.com/docs/share/437c2f29-e88e-4c34-aed4-f14aebd330c6?#">《基因芯片与GEOquery包》</a>（密码：wbso）
+<strong>GEO芯片数据的万能代码，问我要！</strong></p>
+<p>如果你自己测序的数据，测序公司会给你数据，应该都会有count/FPKM的数据。差异分析都一样。
+如果数据是小鼠的，得到的差异基因有时候需要转换成人的同源基因。因为很多分析工具或数据集都是基于人的。参考文章：
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273598&amp;idx=1&amp;sn=391ef32ddddbf123624b04c08d1d4939&amp;chksm=841edd03b3695415dfcf9304e3eda459c484e85b423f0f3b5ab54ac996d4ed6d275b24339655&amp;scene=21#wechat_redirect">biomaRt包实现不同物种之间同源基因转换</a>。
+<a href="生信基础 | 人-小鼠同源基因之间的转换">生信基础 | 人-小鼠同源基因之间的转换</a>
+<a href="https://mp.weixin.qq.com/s/TupjY-l0Bux_uP_c5ZzOzQ">生信基础 | 人-小鼠基因之间的比较</a></p>
+<p>接下来的下游数据分析都差不多。
+富集分析，具体：<a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651266484&amp;idx=1&amp;sn=b3fdeca6d8df8b6f4b2baae83b5dcd3c&amp;scene=21#wechat_redirect">clusterProfiler包进行KEGG,GO,GSEA富集分析</a>【视频：<a href="https://mp.weixin.qq.com/s/6aL_tZh9okGGlE6mM4o7KQ">基于R语言的GO-KEGG富集分析</a>】，当然，也有一些在线工具，比如：<a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651265340&amp;idx=1&amp;sn=5c3608661698d2332b992269a8721833&amp;scene=21#wechat_redirect">FunRich数据库：一个主要用于基因和蛋白质的功能富集以及相互作用网络分析的独立的软件工具</a>。但是，既然都学习了R了，还是用<a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651266484&amp;idx=1&amp;sn=b3fdeca6d8df8b6f4b2baae83b5dcd3c&amp;scene=21#wechat_redirect">clusterProfiler包</a>吧！！！【相关文章问我要】</p>
+<p>差异分析后的结果，不筛选，根据差异倍数从大到小排序基因，进行GSEA分析。用到的也是<a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651266484&amp;idx=1&amp;sn=b3fdeca6d8df8b6f4b2baae83b5dcd3c&amp;scene=21#wechat_redirect">clusterProfiler包</a>。这里有GSEA分析【<a href="https://mp.weixin.qq.com/s/2F_pyBeHiO_4YWMMYOcd3A">GSEA分析【视频】</a>】，具体区别：<a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651265618&amp;idx=1&amp;sn=3c5365ed2c437d3b7b034431ab4ac934&amp;scene=21#wechat_redirect">为什么选择GSEA分析？和KEGG和GO分析有什么区别？</a>。虽然数据库给了好多基因集，但是，基因集我们是可以自定义的，可参考：<a href="https://mp.weixin.qq.com/s/kTanWDxtvbhujC-yZmGEow">生信笔记 | 自定义GSEA分析中的gmt格式文件</a>。</p>
+<p>得到的差异基因，也可以做蛋白互作分析【<a href="https://mp.weixin.qq.com/s/IlboWwtNB8jbc8G_lawQIg">视频STRING数据库</a>】</p>
+<p>如果你做湿实验，得到的差异基因，也可以做一下转录因子富集分析：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651275223&amp;idx=1&amp;sn=00c88ae70cfe9676e56d1b51abc6b175&amp;chksm=841edbaab36952bc5fad7b37251b695c88b3b6bc74dc7db6f7057330c847ef5d0cc908cb0b67&amp;scene=21#wechat_redirect">教你如何预测参与调节差异基因的转录因子</a>。这是做机制的一个思路。</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 DoubleHelix
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://space.bilibili.com/434318322" target="_blank" rel="noopener" title="Bilibili | BioInfoCloud" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://github.com/BioInfoCloud" target="_blank" rel="noopener" title="GitHub | BioInfoCloud" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight"], "search": "assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+        <script src="mkdocs/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

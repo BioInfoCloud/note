@@ -1,0 +1,2082 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="生物信息云笔记">
+      
+      
+        <meta name="author" content="DoubleHelix">
+      
+      
+        <link rel="canonical" href="https://bioinfocloud.io/Programming/R/catalogue/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Catalogue - 生物信息云笔记</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.472b142f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.08040f6c.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/no-footer.css">
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="light-blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="生物信息云笔记" class="md-header__button md-logo" aria-label="生物信息云笔记" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            生物信息云笔记
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Catalogue
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="light-blue"  aria-label="切换风格"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="切换风格" for="__palette_5" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.04 8.71V4h-4.7L12 .69 8.71 4H4v4.71L.69 12 4 15.34v4.7h4.71L12 23.35l3.34-3.31h4.7v-4.7L23.35 12l-3.31-3.29M8.83 7.05c.98 0 1.77.79 1.77 1.78a1.77 1.77 0 0 1-1.77 1.77c-.99 0-1.78-.79-1.78-1.77 0-.99.79-1.78 1.78-1.78M15.22 17c-.98 0-1.77-.8-1.77-1.78a1.77 1.77 0 0 1 1.77-1.77c.98 0 1.78.79 1.78 1.77A1.78 1.78 0 0 1 15.22 17m-6.72.03L7 15.53 15.53 7l1.5 1.5-8.53 8.53Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="orange"  aria-label="切换风格"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="切换风格" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-purple"  aria-label="切换风格"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="切换风格" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="purple" data-md-color-primary="black" data-md-color-accent="pink"  aria-label="切换风格"  type="radio" name="__palette" id="__palette_4">
+          
+            <label class="md-header__button md-icon" title="切换风格" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="light-green" data-md-color-primary="black" data-md-color-accent="light-blue"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_5">
+          
+            <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_4" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.04 7 9.54 0 4.5-2.94 8.27-7 9.54.95.3 1.95.46 3 .46a10 10 0 0 0 10-10A10 10 0 0 0 9 2Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://bioinfocloud.github.io/note" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    BioInfoCloud
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        编程
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../BioInfo/" class="md-tabs__link">
+        生信基础
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../BioInfo/Biopython/01_install/" class="md-tabs__link">
+        Biopython
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../bigdata/" class="md-tabs__link">
+        大数据
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../BioInfo/scRNAseq/scRNASeq_UP/" class="md-tabs__link">
+        专题
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Literature/RNAseq_review1/" class="md-tabs__link">
+        文献
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ABOUT/" class="md-tabs__link">
+        关于
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="生物信息云笔记" class="md-nav__button md-logo" aria-label="生物信息云笔记" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    生物信息云笔记
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://bioinfocloud.github.io/note" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    BioInfoCloud
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">编程</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="编程" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          编程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_2">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/linux/" class="md-nav__link">
+        Linux讲座
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/commands-concise/" class="md-nav__link">
+        命令行入门精简版
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/vim/" class="md-nav__link">
+        vim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/tmux/" class="md-nav__link">
+        tmux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/unix/" class="md-nav__link">
+        UNIX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/kernel-compile/" class="md-nav__link">
+        内核编译
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_3" type="checkbox" id="__nav_1_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_3">
+          Markdown
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Markdown" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Markdown
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Markdown/markdown/" class="md-nav__link">
+        Markdown讲座
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vscode-python/vscode-python/" class="md-nav__link">
+        VSCode及插件安装
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Markdown/grammars/" class="md-nav__link">
+        Markdown语法
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_4" type="checkbox" id="__nav_1_4" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_4">
+          Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Git" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/git/" class="md-nav__link">
+        Git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/git-demos/" class="md-nav__link">
+        Git例子
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/git-teamwork/" class="md-nav__link">
+        Git合作
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/windows-install/" class="md-nav__link">
+        Windows安装Git
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_5" type="checkbox" id="__nav_1_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_5">
+          R
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="R" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          R
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Grammar/" class="md-nav__link">
+        R语法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ggplot2/" class="md-nav__link">
+        可视化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_5_3" type="checkbox" id="__nav_1_5_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_5_3">
+          R包开发
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="R包开发" data-md-level="3">
+        <label class="md-nav__title" for="__nav_1_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          R包开发
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-software/" class="md-nav__link">
+        软件安装
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-DevelopmentManual/" class="md-nav__link">
+        快速手册
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_6" type="checkbox" id="__nav_1_6" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_6">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/links/" class="md-nav__link">
+        语法基础
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../BioInfo/">生信基础</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="生信基础" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          生信基础
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          生信基础
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="生信基础" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          生信基础
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/Introduction/" class="md-nav__link">
+        生信引言
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/01/" class="md-nav__link">
+        基础应用
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/02_noun/" class="md-nav__link">
+        生信名词
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/03_sequence/" class="md-nav__link">
+        测序技术原理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/04_format/" class="md-nav__link">
+        数据文件格式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/biomaRt/" class="md-nav__link">
+        biomaRt包
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/counts_RPM_RPKM_FPKM_1/" class="md-nav__link">
+        RNASeq表达定量
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/counts_RPM_RPKM_FPKM_2/" class="md-nav__link">
+        RNASeq表达定量转换
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/DESeq2_edgeR_limma/" class="md-nav__link">
+        RNASeq差异表达分析原理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/GO/" class="md-nav__link">
+        什么是GO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/KEGG_GO_GSEA_what/" class="md-nav__link">
+        富集分析理论基础
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/hsa2mus/" class="md-nav__link">
+        人鼠基因比较
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/hsa2mus_2/" class="md-nav__link">
+        同源基因转换
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/IDtrans/" class="md-nav__link">
+        各种ID转换
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/miRNA_ID/" class="md-nav__link">
+        miRNA的ID转换
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Biopython
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Biopython" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Biopython
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/Biopython/01_install/" class="md-nav__link">
+        安装
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../bigdata/">大数据</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="大数据" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          大数据
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          专题
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="专题" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          专题
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_1">
+          单细胞专题
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="单细胞专题" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          单细胞专题
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/scRNAseq/scRNASeq_UP/" class="md-nav__link">
+        单细胞上游分析
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/scRNAseq/SeuratObj/" class="md-nav__link">
+        了解Seurat对象
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/scRNAseq/scRNASeq_down/" class="md-nav__link">
+        单细胞下游分析
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/scRNAseq/GSE130001/" class="md-nav__link">
+        常规分析案例一
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/scRNAseq/SingleR/" class="md-nav__link">
+        细胞注释-SingleR
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          RNAseq专题
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="RNAseq专题" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          RNAseq专题
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/RNAseq/pipeline_1/" class="md-nav__link">
+        Bulk RNAseq上游分析
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../BioInfo/TCGA/">TCGA-GEO专题</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="TCGA-GEO专题" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          TCGA-GEO专题
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          药物分析
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="药物分析" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          药物分析
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/drugAna/cellminer/" class="md-nav__link">
+        CellMiner数据库
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_5">
+          数据库工具
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据库工具" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          数据库工具
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/database/CoMutDB/" class="md-nav__link">
+        CoMutDB数据库
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/database/CysModDB/" class="md-nav__link">
+        CysModDB数据库
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          文献
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="文献" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          文献
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Literature/RNAseq_review1/" class="md-nav__link">
+        RNASeq综述-01
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Literature/RNAseq_review1/" class="md-nav__link">
+        RNASeq综述-02
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../ABOUT/">关于</a>
+          
+            <label for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="关于" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          关于
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ABOUT/studentsGroup/" class="md-nav__link">
+        学生群
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  <a href="https://bioinfocloud.github.io/note/edit/main/docs/Programming/R/catalogue.md" title="编辑此页" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+  <h1>Catalogue</h1>
+
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2020/gif/1234840/1598497127493-033512d5-1bfa-4192-a0c0-28ed036a850f.gif#align=left&amp;display=inline&amp;height=76&amp;margin=%5Bobject%20Object%5D&amp;originHeight=76&amp;originWidth=640&amp;size=0&amp;status=done&amp;style=none&amp;width=640" />
+这个视频分了2个阶段录制的，第1阶段有10章的内容，在文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264971&amp;idx=1&amp;sn=3f97d49331809b1799a5d4a5019d94d0&amp;chksm=841ef3b6b3697aa016626af76c3d7e80ceb269864362e1a59f2e927d2276a614d1693e00a1d6&amp;scene=21#wechat_redirect">生物专业学生0基础入门R语言语法视频教程</a>，千聊平台【<a href="https://m.qlchat.com/api/gos?target=%2Fwechat%2Fpage%2Fchannel-intro%3FchannelId%3D2000011348597177%26ch_r%3DshareR2%26shareKey%3D940722fc193f3543649b46189b61078f%26sourceNo%3Dlink&amp;pre=%2Fwechat%2Fpage%2Flive%2F2000006988381669%3FisBackFromShare%3DY%26wcl%3Dmiddlepage"><strong>整套视频教程</strong></a>】，下面是目录：
+<strong><img alt="" src="https://cdn.nlark.com/yuque/0/2020/gif/1234840/1598497127585-e0bc8c41-5afd-4094-86cd-9365bbafe2db.gif#align=left&amp;display=inline&amp;height=53&amp;margin=%5Bobject%20Object%5D&amp;originHeight=78&amp;originWidth=500&amp;size=0&amp;status=done&amp;style=none&amp;width=338" /></strong>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264631&amp;idx=1&amp;sn=3e9ae6a00de284931c810ea38c04b35e&amp;chksm=841ef20ab3697b1c6b56b1d1edc21511182647dd89e13179ecea9f36d662262197fe2fcecf57&amp;scene=21#wechat_redirect">第01章：R语言简介（免费）</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264668&amp;idx=1&amp;sn=63a21e78df6648d0be643bdf5410ca2e&amp;chksm=841ef2e1b3697bf7f804cb9c12c7605e566c0bb3d0a136e99c1eec3a0a640aa6b38b8abd8b65&amp;scene=21#wechat_redirect">第02章：R语言安装和下载</a>（免费）
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264671&amp;idx=1&amp;sn=ee9442f59e42690acc7fd6d00177c819&amp;chksm=841ef2e2b3697bf4c9659fd307052db150f979440b26d803075d58f99e1d46236bec7b0ccdfa&amp;scene=21#wechat_redirect">第02章：RStudio的使用教程（免费）</a>
+第03章：R中的数据(总共¥1元*7）
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264680&amp;idx=1&amp;sn=379d3a9ecd2e47e39d768551cd841d2e&amp;chksm=841ef2d5b3697bc3d2826b02afac5094c7acd01c564c8ecbf702689a1723bc4197e82d83a32d&amp;scene=21#wechat_redirect">（1）：从存储角度划分</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264694&amp;idx=1&amp;sn=fbac1b2fab222b06e1bf8cf4f7e84914&amp;chksm=841ef2cbb3697bdd074855389f370de68bb99764cdc15c63b163f8f1aabe75a12421a37d9a9d&amp;scene=21#wechat_redirect">（2）：从结构角度划分(向量）</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264694&amp;idx=1&amp;sn=fbac1b2fab222b06e1bf8cf4f7e84914&amp;chksm=841ef2cbb3697bdd074855389f370de68bb99764cdc15c63b163f8f1aabe75a12421a37d9a9d&amp;scene=21#wechat_redirect">（3）：从结构角度划分(矩阵）</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264716&amp;idx=2&amp;sn=db9c36327c6498c1a3929a22f6e384a2&amp;chksm=841ef2b1b3697ba7beee3584826f722d9e478f319a59e9d74ff2cb817d1dfa986bf47ba56997&amp;scene=21#wechat_redirect">（4）：从结构角度划分(数组）（免费）</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264724&amp;idx=1&amp;sn=657985dcd108604808b7e746d0d6421f&amp;chksm=841ef2a9b3697bbf5872af922ca231c89c90d8f7912ccdecab7cc6990a37839ff2aae37f3c4a&amp;scene=21#wechat_redirect">（5）：从结构角度划分(数据框）</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264744&amp;idx=2&amp;sn=0ecf58e7c6d1f75545846e92140b7724&amp;chksm=841ef295b3697b834b86c2cc92c6dd93f20057dffc114014c47abfa2cee9eb4f61db065881db&amp;scene=21#wechat_redirect">（6）：从结构角度划分(列表）</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264751&amp;idx=1&amp;sn=33fcf0c99e38b20e4e4e9c515bad1b7b&amp;chksm=841ef292b3697b84e18b0908f3dcae719ab5677f535637c2bc5354cab0cfaa38ae5b95f7b1a8&amp;scene=21#wechat_redirect">（7）：从结构角度划分(因子）</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264754&amp;idx=1&amp;sn=777ab72194f243f493fb9f55682c02d7&amp;chksm=841ef28fb3697b990303bc48ed67635da3ec8c8c3fe632dc5089891d98ff99ae3e38c0fe29cb&amp;scene=21#wechat_redirect">（8）：数据之间的转换</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264780&amp;idx=1&amp;sn=1278f0978e54133cd8edf6d016ed54cc&amp;chksm=841ef371b3697a679f77b87c95303a3810459b39ddad293c469d2d2b5e17581c06409b29cc07&amp;scene=21#wechat_redirect">第04章：字符串操作与正则表达式(¥6元）</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264837&amp;idx=2&amp;sn=fed138bc0e40525eafcdb1113f928e56&amp;chksm=841ef338b3697a2e4507de4e01f755353e46c59992d63de055f03273f5e8559af79f3b8135b8&amp;scene=21#wechat_redirect">第05章：判断语句(¥3元）</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264856&amp;idx=2&amp;sn=5eb4c2bb6ae7e5ad7c490ad60b5dc129&amp;chksm=841ef325b3697a3385dbcaa066938b8d9451f59c91edd139538ececf1f8a697099fdba36865c&amp;scene=21#wechat_redirect">第06章：循环语句(¥3元）</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264861&amp;idx=2&amp;sn=6ab86f8c02e5dfa263cbc78d6f48673c&amp;chksm=841ef320b3697a362e31ec580a39e107429daa256af3928a04a309a81cdef089d0637cf0144c&amp;scene=21#wechat_redirect">第07章：操作系统文件(¥6元）</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264871&amp;idx=2&amp;sn=cc0a19fcb368296a1509774ffce8d428&amp;chksm=841ef31ab3697a0c4f7b74403207f116b55e36a17b23fc1d1ed3a9fcde1bf325f9d7c51e317f&amp;scene=21#wechat_redirect">第08章：数据的输入与输出(¥6元）</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264875&amp;idx=1&amp;sn=fefc4e633c3dd46d492b309819989188&amp;chksm=841ef316b3697a009e7a5efc165ee2a225a552dae0b81f890f5cfb45f0e8eb08eecbf20ae553&amp;scene=21#wechat_redirect">第09章：数据的预处理与重构(1)(¥6元）</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264879&amp;idx=1&amp;sn=88276afebeab0018f7b5f854d354ded7&amp;chksm=841ef312b3697a040307e6db4e5cce265f689b5beae8e76d101e7026d53f2b438931f7b024db&amp;scene=21#wechat_redirect">       数据的预处理与重构(2)</a><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264875&amp;idx=1&amp;sn=fefc4e633c3dd46d492b309819989188&amp;chksm=841ef316b3697a009e7a5efc165ee2a225a552dae0b81f890f5cfb45f0e8eb08eecbf20ae553&amp;scene=21#wechat_redirect">(¥3元）</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264884&amp;idx=1&amp;sn=0db9a87cbd4e969bdbf660da99f6a694&amp;chksm=841ef309b3697a1f97d994a93c2bdf085686f384e70d11b9be8eff6662a15aa6c0624a733705&amp;scene=21#wechat_redirect">       数据的预处理与重构(3)</a><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264875&amp;idx=1&amp;sn=fefc4e633c3dd46d492b309819989188&amp;chksm=841ef316b3697a009e7a5efc165ee2a225a552dae0b81f890f5cfb45f0e8eb08eecbf20ae553&amp;scene=21#wechat_redirect">(¥6元）</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264956&amp;idx=1&amp;sn=d69630a1effd984832cfbd25ba78d9dd&amp;chksm=841ef3c1b3697ad7920837d2d36d1b83270eb183eb13a767da0fb4eaa6d090bbb3e0d594043b&amp;scene=21#wechat_redirect">第10章：函数</a><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264875&amp;idx=1&amp;sn=fefc4e633c3dd46d492b309819989188&amp;chksm=841ef316b3697a009e7a5efc165ee2a225a552dae0b81f890f5cfb45f0e8eb08eecbf20ae553&amp;scene=21#wechat_redirect">(¥8元）</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651265514&amp;idx=1&amp;sn=fb509ef8eda60192bc6a9e4172575046&amp;chksm=841efd97b36974812f00d16fa715612afeee9d75888b34017bc41f1df8a36e00a3ea39db5587&amp;scene=21#wechat_redirect">第11章：R中的网络爬虫</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651265522&amp;idx=1&amp;sn=5a2f96f988ccb31b027b8346dc10a8b4&amp;chksm=841efd8fb36974993816dcf119dc450c99dfef2e50e2fa9ea7ebaca46fbd7d1b137e4f51ebe3&amp;scene=21#wechat_redirect">第12章：面向对象编程(S3类与S4类）</a></p>
+<hr />
+<p>关于部分文章设置收费，在第一阶段的文章中就有说明：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264971&amp;idx=1&amp;sn=3f97d49331809b1799a5d4a5019d94d0&amp;chksm=841ef3b6b3697aa016626af76c3d7e80ceb269864362e1a59f2e927d2276a614d1693e00a1d6&amp;scene=21#wechat_redirect">生物专业学生0基础入门R语言语法视频教程</a>
+<strong>文字版在很久前就有，目录如下：</strong>
+<strong><img alt="" src="https://cdn.nlark.com/yuque/0/2020/gif/1234840/1598497127498-32e609d1-47c7-4982-9524-46dee331eb1e.gif#align=left&amp;display=inline&amp;height=53&amp;margin=%5Bobject%20Object%5D&amp;originHeight=78&amp;originWidth=500&amp;size=0&amp;status=done&amp;style=none&amp;width=338" /></strong>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263627&amp;idx=1&amp;sn=c9547e3feee7a938c384f1d962b4169c&amp;chksm=841ef6f6b3697fe0528b59a44c31d01c832fc93e8f8fc45cfc8130ded5560e990d1231db3781&amp;scene=21#wechat_redirect">第1章：初识R</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263627&amp;idx=2&amp;sn=532f59d00175148e87f273c09cab9963&amp;chksm=841ef6f6b3697fe057547460977e7f89798135c61ad68bd9f251a299abd21f515d7c079b1772&amp;scene=21#wechat_redirect">第2章：R下载安装和环境搭建</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263627&amp;idx=3&amp;sn=0c29da8e47943fb65eb6bf30ab36b0a8&amp;chksm=841ef6f6b3697fe027d6c630b8b5ee814aad9456e02d16d6e221e24f6fd315a07e78da1d8e81&amp;scene=21#wechat_redirect">第3章：RStudio的使用教程</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263668&amp;idx=1&amp;sn=879cecbb60a399ddfcb9329dd54f1c91&amp;chksm=841ef6c9b3697fdf1955c64a02818fda7be681db94447ddeceeffc8e9d467bf089ff1dd9a308&amp;scene=21#wechat_redirect">第3章：数据结构——向量</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263668&amp;idx=2&amp;sn=7c39826f8fb73f95ca92efd0a7045ce5&amp;chksm=841ef6c9b3697fdfa5b302de3608d348ce71417b254a1e6d87d202e851942da4bffbd8b9383d&amp;scene=21#wechat_redirect">第3章：数据结构——矩阵</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263668&amp;idx=3&amp;sn=5b6bda79fef6d79e218215051718098e&amp;chksm=841ef6c9b3697fdf8c1add179b42100526a313552f2e836bb3d061e3034398f9b7883618a862&amp;scene=21#wechat_redirect">第3章：数据结构——数组</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263668&amp;idx=4&amp;sn=65134fbeb720c368a09dc9efce4e0c93&amp;chksm=841ef6c9b3697fdf7e015bb0a9a0a4fa2c619ac74fe041067cca16affd8cefe99c50615f02cb&amp;scene=21#wechat_redirect">第3章：数据结构——数据框</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263697&amp;idx=1&amp;sn=7b5b515b7808c6e52fee35246525bfba&amp;chksm=841ef6acb3697fbab68e5c784d4a1f22ee4c469cc756431b0ba70d48776303e2271ffc28301d&amp;scene=21#wechat_redirect">第3章：数据结构——列表</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263679&amp;idx=2&amp;sn=cccd3eb7cecaaa9488313374d9ddce1e&amp;chksm=841ef6c2b3697fd4d4b8cc1cf0712773a812c00b6551cf4e61dbd9606f5cbc08c3a437958a70&amp;scene=21#wechat_redirect">第3章：数据结构——因子</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263697&amp;idx=2&amp;sn=0af0c0ec25a48ebc4c13a9295b04904d&amp;chksm=841ef6acb3697fba512d21d2a7d2096bb2be94efe3562d8a9eeba8a098f475010319221e73b7&amp;scene=21#wechat_redirect">第3章：数据结构综合运用</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263715&amp;idx=1&amp;sn=05ee447647ff850f79a8ba0174906c33&amp;chksm=841ef69eb3697f8848623ce8d1a1350efe0b6d219c2830d86143bdebf8794b256559be6208e2&amp;scene=21#wechat_redirect">第4章：if语句</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263715&amp;idx=2&amp;sn=a4bff42d3e82dfdd94863a73b47d26db&amp;chksm=841ef69eb3697f88ac50a1d8eddc7bc220c33531b91cada977fbcbade6e6d7e34b0c2c4c5c9e&amp;scene=21#wechat_redirect">第5章：循环结构</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263720&amp;idx=1&amp;sn=c6cb548182b86c148fd579dc0f1e0972&amp;chksm=841ef695b3697f837a51f4eadd6e0411b838317d9c7c1d53915bf6694acb5d3c65d6f8307ec6&amp;scene=21#wechat_redirect">第6章：函数</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263740&amp;idx=2&amp;sn=9c9d2318dd66ecccd246c41a02dd0d95&amp;chksm=841ef681b3697f97653a3e0ea06371b66365fd9cd1e13f44283422d3851414364b62b09e231e&amp;scene=21#wechat_redirect">第7章：面向对象编程（S3类）</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263740&amp;idx=3&amp;sn=46b973710c4c77c17c982f14d91552fa&amp;chksm=841ef681b3697f97821e8f6f904b31595dda22694641d1983e7d005b3c9485eb14f45539fea2&amp;scene=21#wechat_redirect">第7章：面向对象编程（S4类）</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263754&amp;idx=1&amp;sn=2ee999a79c4ed413a63df22bc74f02c8&amp;chksm=841ef777b3697e61824f2fbe053d5d2d427d8881f3e126155a8ac1bba92fff915e5387aadbd9&amp;scene=21#wechat_redirect">第8章：文件的输入与输出</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263762&amp;idx=1&amp;sn=f8c2418dbfd0a78da628640f9397eafc&amp;chksm=841ef76fb3697e7996c6ffd4a47d7a855db799c29818290d9b7dbbf93e965d86dec3bdb256b6&amp;scene=21#wechat_redirect">第9章：字符串操作</a></p>
+<hr />
+<p><strong>文字笔记和视频教程内容还是有很多区别的，视频增加了部分内容，举例也是偏生物学方向的案例。</strong></p>
+<hr />
+<p><strong><img alt="" src="https://cdn.nlark.com/yuque/0/2020/gif/1234840/1598497127481-e8aaa8ff-68b7-4652-b1e8-7d6cb1ba99f8.gif#align=left&amp;display=inline&amp;height=53&amp;margin=%5Bobject%20Object%5D&amp;originHeight=78&amp;originWidth=500&amp;size=0&amp;status=done&amp;style=none&amp;width=338" /></strong>
+<strong>R基础绘图的文章笔记</strong>
+<a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263791&amp;idx=1&amp;sn=2123299fd669fb396ab04953193b2517&amp;chksm=841ef752b3697e444d1c9230590e4324a9903a936313b1d342a579ef069324fbc97e9eac58f7&amp;token=1909966566&amp;lang=zh_CN&amp;scene=21#wechat_redirect">第1章：R语言常用的绘图系统</a>
+<a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263777&amp;idx=2&amp;sn=8d610c3340a0b5cfd1088cfe7f9f39cc&amp;chksm=841ef75cb3697e4a13f750ca3ac2076528685f03524c6b7c054bca556634e15f34873063bfe3&amp;token=1909966566&amp;lang=zh_CN&amp;scene=21#wechat_redirect">第2章：散点图</a>
+<a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263791&amp;idx=1&amp;sn=2123299fd669fb396ab04953193b2517&amp;chksm=841ef752b3697e444d1c9230590e4324a9903a936313b1d342a579ef069324fbc97e9eac58f7&amp;token=1909966566&amp;lang=zh_CN&amp;scene=21#wechat_redirect">第3章：折线图和带状图</a>
+<a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263818&amp;idx=1&amp;sn=88b135ed1345668df3243118a19659d6&amp;chksm=841ef737b3697e219af5a687902deb8b87020f913bebf75630eac025589f1e89b1a01fab9bae&amp;token=1909966566&amp;lang=zh_CN&amp;scene=21#wechat_redirect">第4章：面积图和饼图</a>
+<a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263859&amp;idx=1&amp;sn=eccf1fd5400dcd9d035d12a1ecca909c&amp;chksm=841ef70eb3697e185bcf72ebf97cae4f205877aa7c2acc274fde0e90c4dda057c11eff6abb67&amp;token=1909966566&amp;lang=zh_CN&amp;scene=21#wechat_redirect">第5章：直方图和柱状图</a>
+<a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263859&amp;idx=2&amp;sn=1ce07f07776e8ad778f2371df78bc795&amp;chksm=841ef70eb3697e183307750d75dd8f62ee45483b2a369d47700a318c1b341ffc6d0557b0ae36&amp;token=1909966566&amp;lang=zh_CN&amp;scene=21#wechat_redirect">第6章：箱形图和韦恩图</a>
+<a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263859&amp;idx=3&amp;sn=13a9efbdd0d6c3c6aa6d7ffa683c88df&amp;chksm=841ef70eb3697e18ddbb348e9a75ec66a209cb66c2d2e441a1aa79c964ba179ec1e30ee221a7&amp;token=1909966566&amp;lang=zh_CN&amp;scene=21#wechat_redirect">第7章：小提琴图</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263882&amp;idx=1&amp;sn=803e28176bed31e948a3915eabcfb5ec&amp;chksm=841ef7f7b3697ee1155c0d91c1e6415b36758b52ceaee9eea33eab7c59d54dbac302f826daf0&amp;scene=21#wechat_redirect">第8章：3维散点图</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263882&amp;idx=2&amp;sn=357e88f04d83901dd15fc64c91e2a272&amp;chksm=841ef7f7b3697ee1b578fbd2407632b6225a20a69adc60b7866a8b8ad96a0fe80a27f957b1c0&amp;scene=21#wechat_redirect">第9章火山图和QQ图</a></p>
+<hr />
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2020/gif/1234840/1598497127470-128749dc-dbf7-4ed5-8ce0-e3eda529e26f.gif#align=left&amp;display=inline&amp;height=53&amp;margin=%5Bobject%20Object%5D&amp;originHeight=78&amp;originWidth=500&amp;size=0&amp;status=done&amp;style=none&amp;width=338" />
+<strong>R语言数据分析与挖掘文章目录</strong>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264104&amp;idx=1&amp;sn=0bd5d5748287cb949da2b491f07f864c&amp;chksm=841ef015b3697903ac1e2d44df9330b95eef9445e245aac79a5377b4bc5c6e31e53c197b0a7b&amp;scene=21#wechat_redirect">第1章:数据预处理(1)——缺失值处理</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264111&amp;idx=1&amp;sn=cd51f351add24830eb5e8327e82832c2&amp;chksm=841ef012b369790428730e7b13e2407e62f518c649ee45f86e1d6d5bac1632c4933cc078b0e5&amp;scene=21#wechat_redirect">第1章:数据预处理(2)——缺失值常用的处理方法</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264114&amp;idx=1&amp;sn=b789cb720387b785c308f954447d392a&amp;chksm=841ef00fb3697919d10c168f182dddb2a3c22415c1fb076c8689920ca6c51d326f04b26cf4fe&amp;scene=21#wechat_redirect">第1章:数据预处理(3)——数据整理</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264122&amp;idx=1&amp;sn=7df3049a3285c074d6dad0da92f56b93&amp;chksm=841ef007b369791124d93edaf6dba21828b702d7f02fb966070d7d48a06db74608d40a494cf8&amp;scene=21#wechat_redirect">第2章:统计学基础(视频)</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264122&amp;idx=2&amp;sn=ef84d13dcde93480989a82203b913e44&amp;chksm=841ef007b3697911e0421c22784757b62c9bf96be859b9df59e6e565132c510e3718ae41ee29&amp;scene=21#wechat_redirect">第3章:R语言绘图基础</a>(看上一部分文章)
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264127&amp;idx=1&amp;sn=5003f841025391ea6726c7b90b17734d&amp;chksm=841ef002b3697914acdc56b20da97e5c6c72a263534e41d2cea6310e090d54296cca187e467c&amp;scene=21#wechat_redirect">第4章:回归分析(1)——一元回归分析</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264139&amp;idx=1&amp;sn=01fe3a5826daf1955692637042cfec0d&amp;chksm=841ef0f6b36979e06c85ad96ecdd5297a42ce62ac492628d845d31d4ff1d5efd2b053b087398&amp;scene=21#wechat_redirect">第4章:回归分析(2)——多元线性回归</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264150&amp;idx=1&amp;sn=ba1346620ca86957ec8091e92accc9d2&amp;chksm=841ef0ebb36979fdea6e98cdc03671514f9837230fccc2e99d3651f98621de86e75ec0da8798&amp;scene=21#wechat_redirect">第4章:回归分析(3)——变量的选择</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264157&amp;idx=1&amp;sn=c3bdeeada958392b1b605a4da348c3a6&amp;chksm=841ef0e0b36979f6874a0b51e29a33a24ff9ecb2c68aaaff11aa382241c2650502f4e48cf843&amp;scene=21#wechat_redirect">第4章:回归分析(4)——logistic回归</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264172&amp;idx=1&amp;sn=f104ecd373d29fd55ce52e68c2a7d943&amp;chksm=841ef0d1b36979c7cb2ff9fa30a083e78d9cba5971fd1cc5914c0f3eb221672246f44b778f25&amp;scene=21#wechat_redirect">第5章:方差分析(1)——单因素方差分析</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264197&amp;idx=1&amp;sn=29025fd78b1a4e0c1362c1119c5b466e&amp;chksm=841ef0b8b36979aea2f19d2128721d94301a0885e75550396e2e0ef108f17d853df78f695736&amp;scene=21#wechat_redirect">第5章:方差分析(2)——多因素方差分析</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264197&amp;idx=2&amp;sn=b4f87b546904a9317b3e28217726cd3e&amp;chksm=841ef0b8b36979ae7a9af2e3eee8d1b35730e345b9d2bfba3ed363ad263a343a3de4c55e3b9d&amp;scene=21#wechat_redirect">第5章:方差分析(3)——协方差分析</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264206&amp;idx=1&amp;sn=e06dee4c5015e982919c54d4aa87c3ef&amp;chksm=841ef0b3b36979a58c0c05f4398511412c319c94007a386160225dd583e02d6d51d41a60b1e1&amp;scene=21#wechat_redirect">第6章:主成分分析(1)——主成分分析概论</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264231&amp;idx=2&amp;sn=73c9b46dc5cadc40e37b42acaab9f436&amp;chksm=841ef09ab369798c3abf547d46b55cf7fd3278c0026ef77c403934a44a77deba60d2022f0d49&amp;scene=21#wechat_redirect">第6章:主成分分析(2)——案例讲解</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264251&amp;idx=1&amp;sn=f86aec1dfadd0d0cdce3b4a62abf7ed9&amp;chksm=841ef086b36979906635f3de5ac0d26b85ceab20f13a87c0bbc4d62650fd9aff7f4e4f213128&amp;scene=21#wechat_redirect">第7章:因子分析</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264255&amp;idx=1&amp;sn=e8a6ac96de31d4b6f7485066cf031857&amp;chksm=841ef082b369799459f1e3f25504498e29d6992637d558063d3ea291a8f2760724d6d8c997c7&amp;scene=21#wechat_redirect">第8章:判别分析(1)——距离判别法</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264260&amp;idx=1&amp;sn=ff3d3130a1ff6ce11ab38062c08e6eac&amp;chksm=841ef179b369786f13f343ba6817ee0ee139f73e720898691f91204671b76dd71e24c5ccf052&amp;scene=21#wechat_redirect">第8章:判别分析(2)——贝叶斯(Bayes)判别分析</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264265&amp;idx=1&amp;sn=d5d7d8efa348c488be0e14178d43889f&amp;chksm=841ef174b3697862e65ee95859b6e5776e246359adbb9b75ca2d202a9b64776f7690a0d023aa&amp;scene=21#wechat_redirect">第8章:判别分析(3)——费歇尔(Fisher)判别分析</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264339&amp;idx=2&amp;sn=b687c0710c2a346b23ef401f62e91aeb&amp;chksm=841ef12eb369783815194342a145fc6c5370dca66beff6597d9808e367ed0eb4231c70e7fe59&amp;scene=21#wechat_redirect">第9章:聚类分析(1)——动态聚类</a>
+<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264443&amp;idx=1&amp;sn=253b0c55e5d4e984837db58368421a14&amp;chksm=841ef1c6b36978d05b0b59e1e1ffd1b6b0e8f18006c4acb2a6918a0e5ccacc61c10aebff5242&amp;scene=21#wechat_redirect">第9章:聚类分析(2)——层次聚类</a>
+要想真正的学好R，还是要多看一些R语言的书籍。给大家推荐一些书，很多人推荐<strong>R语言实战</strong>，这里我也推荐给大家。
+但我不建议初学者一开始就看<strong>R语言实战</strong>，我觉得语法部分说的很简单，所以我建议初学者看<strong>R语言编程艺术</strong>这本书。然后在看<strong>R语言实战</strong>。
+当R语法掌握到一定程度以后，可以看看一些高效编程的书，推荐：<strong>高效R语言编程</strong>。
+如果还需要学习绘图话，还有一本书：<strong>R语言数据可视化之美</strong>。
+当学到一定程度，具体学什么，你自己应该很清楚了，反正就是不断学习。</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 DoubleHelix
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://space.bilibili.com/434318322" target="_blank" rel="noopener" title="Bilibili | BioInfoCloud" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://github.com/BioInfoCloud" target="_blank" rel="noopener" title="GitHub | BioInfoCloud" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+        <script src="../../../mkdocs/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
