@@ -41,7 +41,7 @@ Biopython只需很少的代码，并具有以下优点 -
 - 通过提供将生物信息学文件解析为特定格式的记录对象或序列加特征的通用类的模块，来支持解析器开发。
 - 清除基于食谱样式的文档。
 
-### (4).. 样本案例研究
+### (4). 样本案例研究
 
 让我们来看看一些用例(种群遗传学，RNA结构等)，并尝试了解Biopython在该领域如何发挥重要作用：
 
@@ -54,8 +54,6 @@ Biopython提供了用于种群遗传学的`Bio.PopGen`模块。该模块包含�
 DNA，RNA和蛋白质是我们生活中必不可少的三个主要生物大分子。蛋白质是细胞的主力军，并作为酶发挥重要作用。DNA(脱氧核糖核酸)被认为是细胞的“蓝图”。它携带了细胞生长，吸收营养和繁殖所需的所有遗传信息。RNA(核糖核酸)在细胞中充当“ DNA影印件”。
 
 Biopython提供了`Bio.Sequence`对象，这些对象代表核苷酸，DNA和RNA的构建基块。
-
-//更多请阅读：https://www.yiibai.com/biopython/biopython_introduction.html 
 
 ## 2.安装
 
@@ -138,4 +136,9 @@ PACKAGE CONTENTS
 ```python
 pip install biopython –-upgrade
 ```
+## 6.完整版
+[点击下载](BioInfo/Biopython/biopython_cn_release.pdf)
 
+来源:[https://github.com/bigwiv/Biopython-cn](https://github.com/bigwiv/Biopython-cn)
+
+在线阅读:[https://biopython-cn.readthedocs.io/zh_CN/latest/index.html](https://biopython-cn.readthedocs.io/zh_CN/latest/index.html)

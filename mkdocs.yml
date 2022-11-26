@@ -71,7 +71,7 @@ extra:
 
 # [Navigtion]
 nav:
-  - 编程: 
+  - 生信编程: 
     - Programming/index.md 
     - Linux: 
       - Linux讲座: Programming/Linux/linux.md
@@ -97,6 +97,7 @@ nav:
         - 快速手册: Programming/R/02-DevelopmentManual.md
     - Python: 
       - 语法基础: Programming/python/links.md
+      - Biopython: BioInfo/Biopython/01_install.md
   - 生信基础:
     - BioInfo/index.md
     - 生信基础:
@@ -115,8 +116,6 @@ nav:
       - 同源基因转换: BioInfo/BioInfoBasics/hsa2mus_2.md
       - 各种ID转换: BioInfo/BioInfoBasics/IDtrans.md
       - miRNA的ID转换: BioInfo/BioInfoBasics/miRNA_ID.md
-  - Biopython:
-    - 安装: BioInfo/Biopython/01_install.md
   - 大数据:
     - 学习计划: bigdata/index.md
   - 专题:
