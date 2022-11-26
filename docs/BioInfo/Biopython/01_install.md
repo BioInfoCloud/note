@@ -137,7 +137,7 @@ PACKAGE CONTENTS
 pip install biopython –-upgrade
 ```
 ## 6.完整版
-[点击下载](BioInfo/Biopython/biopython_cn_release.pdf)
+[点击下载](https://github.com/BioInfoCloud/FileBank/raw/master/BioInfo/biopython_cn_release.pdf)
 
 来源:[https://github.com/bigwiv/Biopython-cn](https://github.com/bigwiv/Biopython-cn)
 
