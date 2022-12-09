@@ -147,3 +147,7 @@ Python中的Biopython，R中的Bioconductor
 
 ### （3）开发
 
+## 9.在线电子图书
+
+[liveBook · Manning](https://livebook.manning.com/)
+

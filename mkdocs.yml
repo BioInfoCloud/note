@@ -118,6 +118,8 @@ nav:
       - miRNA的ID转换: BioInfo/BioInfoBasics/miRNA_ID.md
   - 大数据:
     - 学习计划: bigdata/index.md
+  - 机器学习:
+    - kNN: bigdata/ML/kNN.md
   - 专题:
     - 单细胞专题: 
         - 单细胞上游分析: BioInfo/scRNAseq/scRNASeq_UP.md
@@ -131,6 +133,8 @@ nav:
       - TCGA-GEO: BioInfo/TCGA/index.md
     - 药物分析: 
         - CellMiner数据库: BioInfo/drugAna/cellminer.md
+    - 免疫浸润: 
+        - EaSIeR: BioInfo/immune/EaSIeR.md       
     - 数据库工具: 
         - CoMutDB数据库: BioInfo/database/CoMutDB.md
         - CysModDB数据库: BioInfo/database/CysModDB.md
