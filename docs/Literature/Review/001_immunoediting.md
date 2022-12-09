@@ -37,12 +37,18 @@ EI作用于一个新形成的肿瘤细胞亚群，其可能表现出广泛的免
 ## 参考文献
 
 **1.** Benci, J.L. Xu, B., Qiu, Y., Wu, T.J., Dada, H., Twyman-Saint Victor, C., Cucolo, L., Lee, D.S.M., Pauken, K.E., Huang, A.C., et al. (2016). Tumor Interferon Signaling Regulates a Mul-tigenic Resistance Program to Immune Checkpoint Blockade. Cell 167, 1540–1554.e12.
-**2.**Chen, D.S., and Mellman, I. (2017). Elements of cancer immunity and the cancer-immune set point. Nature 541, 321–330.
+
+**2.** Chen, D.S., and Mellman, I. (2017). Elements of cancer immunity and the cancer-immune set point. Nature 541, 321–330.
 Dunn, G.P., Old, L.J., and Schreiber, R.D. (2004). The three Es of cancer imunoediting. Annu Rev Immunol 22, 329–360.
-Harel, M., Ortenberg, R., Varanasi, S.K., Mangalhara, K.C., Mardamshina, M., Markovits, E., Baruch, E.N., Tripple, V., Arama-**3.**Chayoth, M., Greenberg, E., et al. (2019). Proteomics of Melanoma Response to Immunotherapy Reveals Mitochondrial Dependence. Cell 179, 236–250.e18.
-**4.**Kalbasi, A., and Ribas, A. (2020). Tumour-intrinsic resistance to immune checkpoint blockade. Nat Rev Immunol 20, 25–39.
+
+**3.** Harel, M., Ortenberg, R., Varanasi, S.K., Mangalhara, K.C., Mardamshina, M., Markovits, E., Baruch, E.N., Tripple, V., Arama-Chayoth, M., Greenberg, E., et al. (2019). Proteomics of Melanoma Response to Immunotherapy Reveals Mitochondrial Dependence. Cell 179, 236–250.e18. 
+
+**4.** Kalbasi, A., and Ribas, A. (2020). Tumour-intrinsic resistance to immune checkpoint blockade. Nat Rev Immunol 20, 25–39.
 O’Donnell, J.S., Teng, M.W.L., and Smyth, M.J. (2019). Cancer immunoediting and resistance to T cell-based immunotherapy. Nat Rev Clin Oncol 16, 151–167.
-**5.**Schreiber, R.D., Old, L.J., and Smyth, M.J. (2011). Cancer immunoediting: integrating immunity’s roles in cancer suppression and promotion. Science 331, 1565–1570.
-**6.**Shankaran, V., Ikeda, H., Bruce, A.T., White, J.M., Swanson, P.E., Old, L.J., and Schreiber, R.D. (2001). IFNgamma and lymphocytes prevent primary tumour development and shape tumour immunogenicity. Nature 410, 1107–1111.
-**7.**Wang, L., Qu, J., Zhou, N., Hou, H., Jiang, M., and Zhang, X. (2020). Effect and biomarker of immune checkpoint blockade therapy for ARID1A deficiency cancers. Biomed Pharma-cother 130, 110626.
-**8.**Wang, Y., Wang, Y., Ren, Y., Zhang, Q., Yi, P., and Cheng, C. (2022). Metabolic modulation of immune checkpoints and novel therapeutic strategies in cancer. Semin Cancer Biol. Published online February 10, 2022. 10.1016/j.semcancer.2022.02.010.
+
+**5. **Schreiber, R.D., Old, L.J., and Smyth, M.J. (2011). Cancer immunoediting: integrating immunity’s roles in cancer suppression and promotion. Science 331, 1565–1570.
+
+**6.** Shankaran, V., Ikeda, H., Bruce, A.T., White, J.M., Swanson, P.E., Old, L.J., and Schreiber, R.D. (2001). IFNgamma and lymphocytes prevent primary tumour development and shape tumour immunogenicity. Nature 410, 1107–1111.
+**7. **Wang, L., Qu, J., Zhou, N., Hou, H., Jiang, M., and Zhang, X. (2020). Effect and biomarker of immune checkpoint blockade therapy for ARID1A deficiency cancers. Biomed Pharma-cother 130, 110626.
+
+**8. **Wang, Y., Wang, Y., Ren, Y., Zhang, Q., Yi, P., and Cheng, C. (2022). Metabolic modulation of immune checkpoints and novel therapeutic strategies in cancer. Semin Cancer Biol. Published online February 10, 2022. 10.1016/j.semcancer.2022.02.010.
