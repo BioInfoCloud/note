@@ -151,3 +151,4 @@ Python中的Biopython，R中的Bioconductor
 
 [liveBook · Manning](https://livebook.manning.com/)
 
+[Machine Learning with R, the tidyverse, and mlr ](https://livebook.manning.com/book/machine-learning-with-r-the-tidyverse-and-mlr/list-of-figures/)

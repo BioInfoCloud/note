@@ -1,6 +1,6 @@
 ## 1.什么是kNN算法？
 
-KNN是英文k-nearest neighbor的缩写。是一个基本的分类和回归的算法，它是属于**监督学习**中分类方法的一种。事实上，kNN可以说是最简单的机器学习算法。尽管kNN很简单，但它可以提供令人惊讶的良好分类性能，并且其简单性使其易于解释。
+KNN是英文k-nearest neighbor（K最近邻）的缩写。是一个基本的分类和回归的算法，它是属于**监督学习**中分类方法的一种。事实上，kNN可以说是最简单的机器学习算法。尽管kNN很简单，但它可以提供令人惊讶的良好分类性能，并且其简单性使其易于解释。。所谓K最近邻，就是k个最近的邻居的意思，说的是每个样本都可以用它最接近的k个邻居来代表。平常生活中我们都会下意识的运用到我们的判断中，比如富人区和穷人区，判断一个人是富人还是穷人根据他的朋友的判断，就是运用了kNN的思想。
 
 我们可以用两个阶段来描述 kNN 算法（和其他机器学习算法）：
 
@@ -10,8 +10,6 @@ KNN是英文k-nearest neighbor的缩写。是一个基本的分类和回归的�
 kNN 算法的训练阶段仅包括存储数据。
 
 在预测阶段，kNN 算法计算每个新的、未标记的事例与所有标记事例之间的*距离*。当我说“距离”时，我指的是它们在攻击性和体长变量方面的接近程度，而不是你在树林里发现它们有多远！这个距离度量通常被称为*欧几里得*距离，在二维甚至三维中很容易在你的脑海中可视化为图上两点之间的直线距离。这是在数据中存在的维度中计算的。
-
-
 
 ## 2.R语言实现
 
@@ -396,5 +394,235 @@ kFoldCV <- resample(learner = knn, task = diabetesTask,
 MedBioInfoCloud: kFoldCV$aggr
 mmce.test.mean  acc.test.mean 
      0.1045667      0.8954333 
+```
+
+我们通常只对平均性能度量感兴趣，但您可以通过运行 来访问每次迭代的性能度量。
+
+```R
+kFoldCV$measures.test
+
+
+```
+
+交叉验证模型时的目标是尽可能准确和稳定地估计模型性能。从广义上讲，您可以做的重复次数越多，这些估计就会变得越准确和稳定。但是，在某些时候，重复次数越多，性能估算的准确性或稳定性也不会提高。
+
+那么，您如何决定要执行多少次重复呢？一种合理的方法是选择计算合理的重复次数，运行该过程几次，然后查看平均性能估计值是否变化很大。如果没有，那就太好了。如果它确实变化很大，您应该增加重复次数。
+
+**计算混淆矩阵：**
+
+```R
+calculateConfusionMatrix(kFoldCV$pred, relative = TRUE)
+```
+
+```r
+MedBioInfoCloud: calculateConfusionMatrix(kFoldCV$pred, relative = TRUE)
+Relative confusion matrix (normalized by row/column):
+          predicted
+true       Chemical  Normal    Overt     -err.-   
+  Chemical 0.81/0.79 0.09/0.04 0.09/0.11 0.19     
+  Normal   0.04/0.07 0.96/0.96 0.00/0.00 0.04     
+  Overt    0.16/0.14 0.00/0.00 0.84/0.89 0.16     
+  -err.-        0.21      0.04      0.11 0.10     
+
+
+Absolute confusion matrix:
+          predicted
+true       Chemical Normal Overt -err.-
+  Chemical     1464    169   167    336
+  Normal        135   3665     0    135
+  Overt         260      0  1390    260
+  -err.-        395    169   167    731
+```
+
+##### 留一法交叉验证
+
+留一法交叉验证可以被认为是 K -折法交叉验证 的极端：我们不是将数据分解成折叠，而是保留单个观察作为测试用例，在其余数据的整体上训练模型，然后通过测试用例传递它并记录相关的性能指标。接下来，我们做同样的事情，但选择不同的观察作为测试用例。我们继续这样做，直到每个观察都被用作测试用例一次，我们取性能指标的平均值。
+
+<img src="https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202212162059395.png" style="zoom:67%;" />
+
+由于测试集只是一个观测值，因此留一法交叉验证倾向于给出模型性能的相当可变的估计值（因为每次迭代的性能估计值取决于正确标记该单个测试用例）。但是，当您的数据集较小时，它可以提供比 k 折法更少的模型性能估计值。当你有一个小数据集时，将其拆分成k个折叠将给你留下一个非常小的训练集。在小型数据集上训练的模型的方差往往更高，因为它会受到采样错误/异常情况的影响更大。因此，留一法交叉验证对于将其拆分为k个折叠会给出可变结果的小型数据集很有用。它在计算上也比重复的 k 折法交叉成本低。
+
+未经交叉验证的监督学习模型实际上是无用的，因为您不知道它对新数据所做的预测是否准确。
+
+**进行重采样描述**，方法LOO，因为测试集只是一个案例，所以不能对留一法交叉验证进行分层采样。此外，由于每个事例用作测试集一次，所有其他数据用作训练集，因此无需重复该过程。
+
+```R
+# PERFORMING LEAVE-ONE-OUT CROSS-VALIDATION ----
+LOO <- makeResampleDesc(method = "LOO")
+```
+
+执行交叉验证，得到平均性能的测量值。
+
+```R
+LOOCV <- resample(learner = knn, task = diabetesTask, resampling = LOO,
+                  measures = list(mmce, acc))
+
+LOOCV$aggr
+```
+
+```R
+MedBioInfoCloud: LOOCV$aggr
+mmce.test.mean  acc.test.mean 
+    0.07586207     0.92413793
+```
+
+计算混淆矩阵
+
+```R
+calculateConfusionMatrix(LOOCV$pred, relative = TRUE)
+```
+
+```R
+MedBioInfoCloud: calculateConfusionMatrix(LOOCV$pred, relative = TRUE)
+Relative confusion matrix (normalized by row/column):
+          predicted
+true       Chemical  Normal    Overt     -err.-   
+  Chemical 0.92/0.80 0.08/0.04 0.00/0.00 0.08     
+  Normal   0.04/0.07 0.96/0.96 0.00/0.00 0.04     
+  Overt    0.15/0.12 0.00/0.00 0.85/1.00 0.15     
+  -err.-        0.20      0.04      0.00 0.08     
+
+
+Absolute confusion matrix:
+          predicted
+true       Chemical Normal Overt -err.-
+  Chemical       33      3     0      3
+  Normal          3     73     0      3
+  Overt           5      0    28      5
+  -err.-          8      3     0     11
+```
+
+### 2.4 如何选择k?
+
+机器学习模型通常具有与之关联的*参数*。参数是根据数据估计得到的变量或值，位于模型内部，用于控制它如何对新数据进行预测。模型参数的一个示例是回归线的斜率。
+
+在 kNN 算法中，*k* 不是一个参数，因为算法不会从数据中估计它（事实上，kNN 算法实际上并没有学习任何参数）。相反，*k* 是所谓的*超参数*：控制模型预测的变量或选项，但超参数不是通过对数据进行估计获得的。我们不必为模型提供参数，我们只是提供数据，算法自己学习参数。但是，我们确实需要提供算法学习时所需的任何超参数。不同的算法需要并使用不同的超参数来控制它们如何学习模型。
+
+k是kNN算法的一个超参数，所以算法本身无法估计，由我们来选择一个值。我们如何决定？
+
+有三种方法可以选择 *k* 或其他任何超参数：
+
+- **选择一个以前处理过类似问题的“合理的”值或默认值**。 此选项是个坏主意。你无法知道你选择的*k*的值是否是最好的。仅仅因为某个值在其他数据集上起作用并不意味着它会在此数据集上表现良好。
+- **手动尝试几个不同的值，看看哪一个能提供最佳性能**。此选项更好一些。这里的想法是，你选择几个合理的*k*值，用它们中的每一个构建一个模型，看看哪个模型表现最好。这样更好，因为您更有可能找到*表现最佳的 k* 值；但是您仍然不能保证找到它，并且手动执行此操作可能既乏味又缓慢。这是数据科学家的选择，他们关心但并不真正知道他们在做什么。
+- **使用称为超参数优化的过程自动执行选择过程**。 这个解决方案是最好的。它最大限度地提高了您找到 *k* 的最佳性能值的可能性，同时还为您自动化了该过程。
+
+#### （1）调整 k 以改进模型
+
+我们需要做的第一件事是定义一个值范围，在调整 k 时，mlr 将尝试这些值：
+
+```R
+# HYPERPARAMETER TUNING OF K ----
+knnParamSpace <- makeParamSet(makeDiscreteParam("k", values = 1:10))
+```
+
+接下来，定义 mlr 搜索参数空间的方式，可供选择的方法有几种，这里使用网格搜索方法。这可能是最简单的方法：在查找性能最佳的值时，它会尝试参数空间中的每个值。对于调整连续超参数，或者当我们一次调整多个超参数时，网格搜索计算代价大。可以选择其他方法，比如随机搜索法。
+
+```R
+gridSearch <- makeTuneControlGrid()
+```
+
+接下来，定义如何交叉验证调优过程。这里使用k-折法交叉验证
+
+```R
+cvForTuning <- makeResampleDesc("RepCV", folds = 10, reps = 20)
+```
+
+调用函数来执行调优：
+
+```R
+tunedK <- tuneParams("classif.knn", task = diabetesTask, 
+                     resampling = cvForTuning, 
+                     par.set = knnParamSpace, 
+                     control = gridSearch)
+```
+
+第一个和第二个参数分别是我们应用的算法和任务的名称。我们将 交叉验证策略作为参数resampling，将超参数空间定义为par.set参数，并将搜索过程提供给control参数。
+
+以通过选择组件直接访问 *k* 的最佳性能值。
+
+```R
+tunedK
+tunedK$x
+```
+
+```R
+MedBioInfoCloud: tunedK
+Tune result:
+Op. pars: k=7
+mmce.test.mean=0.0799524
+MedBioInfoCloud: tunedK$x
+$k
+[1] 7
+```
+
+可视化选择。
+
+```R
+knnTuningData <- generateHyperParsEffectData(tunedK)
+
+plotHyperParsEffect(knnTuningData, x = "k", y = "mmce.test.mean",
+                    plot.type = "line") +
+                    theme_bw()
+```
+
+![](https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202212162152446.png)
+
+
+
+现在使用最优的 *k*训练最终模型：
+
+```R
+# TRAINING FINAL MODEL WITH TUNED K ----
+tunedKnn <- setHyperPars(makeLearner("classif.knn"), par.vals = tunedK$x)
+
+tunedKnnModel <- train(tunedKnn, diabetesTask)
+```
+
+#### （2）在交叉验证中调整超参数
+
+现在，当我们对数据或模型执行某种预处理时，例如调整超参数，重要的是将此预处理包含在我们的交叉验证中，以便我们交叉验证整个模型训练过程。这采用嵌套交叉验证 的形式，其中内部循环交叉验证超参数的不同值（就像我们之前所做的那样），然后将获胜的超参数值传递给外部交叉验证循环。在外部交叉验证循环中，获胜的超参数用于每个折叠。
+
+嵌套式交叉验证是这样进行的：
+
+- 将数据拆分为训练集和测试集（这可以使用留出法、k 折法或留一法）。这种划分称为*外循环*。
+
+- 训练集用于交叉验证超参数搜索空间的每个值（使用我们决定的任何方法）。这称为*内部循环*。
+
+- 从每个内部循环提供最佳交叉验证性能的超参数将传递到外部循环。
+
+- 模型在外循环的每个训练集上使用其内循环中的最佳超参数进行训练。这些模型用于对其测试集进行预测。
+
+- 然后，这些模型在外部循环中的平均性能指标将报告为模型在未见过的数据上的表现的估计值。
+
+  <img src="https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202212162202903.png" style="zoom:50%;" />
+
+```R
+# INCLUDING HYPERPARAMETER TUNING INSIDE NESTED CROSS-VALIDATION ----
+inner <- makeResampleDesc("CV")
+
+outer <- makeResampleDesc("RepCV", folds = 10, reps = 5)
+
+knnWrapper <- makeTuneWrapper("classif.knn", resampling = inner, 
+                              par.set = knnParamSpace, 
+                              control = gridSearch) 
+
+cvWithTuning <- resample(knnWrapper, diabetesTask, resampling = outer)
+```
+
+### 2.5 使用模型进行预测
+
+我们可以自由地使用它来对新患者进行分类！让我们想象一下，一些新患者来到诊所：
+
+```R
+# USING THE MODEL TO MAKE PREDICTIONS ----
+newDiabetesPatients <- tibble(glucose = c(82, 108, 300), 
+                              insulin = c(361, 288, 1052),
+                              sspg = c(200, 186, 135))
+
+newDiabetesPatients
+
+newPatientsPred <- predict(tunedKnnModel, newdata = newDiabetesPatients)
+
+getPredictionResponse(newPatientsPred)
 ```
 
