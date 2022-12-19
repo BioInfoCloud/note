@@ -119,7 +119,7 @@ nav:
   - 大数据:
     - 学习计划: bigdata/index.md
   - 机器学习:
-    - kNN: bigdata/ML/kNN.md
+    - kNN: ML/kNN.md
   - 专题:
     - 单细胞专题: 
         - 单细胞上游分析: BioInfo/scRNAseq/scRNASeq_UP.md
