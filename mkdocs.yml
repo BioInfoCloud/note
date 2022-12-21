@@ -116,6 +116,9 @@ nav:
       - 同源基因转换: BioInfo/BioInfoBasics/hsa2mus_2.md
       - 各种ID转换: BioInfo/BioInfoBasics/IDtrans.md
       - miRNA的ID转换: BioInfo/BioInfoBasics/miRNA_ID.md
+  - 可视化:
+    - 综合教程: Programming/R/ggplot2.md
+    - 烟花状散点图: visualization/FireworksClusterScatterPlot.md
   - 大数据:
     - 学习计划: bigdata/index.md
   - 机器学习:
