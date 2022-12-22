@@ -142,8 +142,9 @@ nav:
         - CoMutDB数据库: BioInfo/database/CoMutDB.md
         - CysModDB数据库: BioInfo/database/CysModDB.md
   - 文献:
-    - RNASeq综述-01: Literature/RNAseq_review1.md
+    - RNASeq综述: Literature/RNAseq_review1.md
     - 癌症免疫编辑: Literature/Review/001_immunoediting.md
+    - 癌症免疫治疗: Literature/Review/003_2021_immunotherapy.md
     - 药物靶点预测: Literature/Review/002_DTIS.md
   - 关于:
     - ABOUT/index.md # 使用两个index 这样子左上角第一次打开会是所有Tab 而不是ABOUT
