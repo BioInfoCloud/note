@@ -2,7 +2,7 @@
 
 # 迈向癌症免疫治疗时代
 
-> 文章地址：[https://doi.org/10.1002/cac2.12178]( https://doi.org/10.1002/cac2.12178[)
+> 文章地址：[https://doi.org/10.1002/cac2.12178]( https://doi.org/10.1002/cac2.12178)
 >
 > 
 

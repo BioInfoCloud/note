@@ -148,7 +148,7 @@ Hao等人 [232]回顾、比较和重新实现了五种最先进的方法(BLM[101
 
 DTI数据库是为了收集DTI和其他相关信息而建立的。 本文列出了11个数据库，其中有些不是直接提出的DTI数据库，但所包含的数据可用于DTI研究。 例如，KEGG是一个广泛的数据库，涵盖了从基因/蛋白质到生物途径和人类疾病的许多类型的生物数据。 在KEGG[234]中，两个子数据库KeggDructure[235]和KeggBrite[236]包含可用于DTI预测的数据。 Chembl[237-239]也不是一个专门的“药物靶点”数据库，它是基于收集生物活性化合物而建立的。 然而，结合靶点和其他相关生物信息，该数据库也可用于药物靶点的重新定位和再用途。 与Chembl[237-239]类似，Intact[240]是一个包含分子相互作用的数据库，可用于药物研究。 LINCS不同于前面提到的两个数据库。 此数据门户包含生物化学数据，旨在了解由不同干扰剂引起的基因表达和细胞过程的变化。 LINCS中使用的干扰剂很多是药物，因此这也是DTI研究的一个很好的数据源。 其他数据库包括SuperTarget[241]、Guide to Pharmacology[240]、DrugBank[242-246]、TTD[247]、Stitch[248-252]、Chemprot3.0[253]和DGIDB3.0[254]。 表8概述了这些数据库的一般信息。 
 
-![image-20221217154049631](C:\Users\chens\AppData\Roaming\Typora\typora-user-images\image-20221217154049631.png)
+![](https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202212231005991.png)
 
 #### （1）ChEMBL
 

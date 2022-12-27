@@ -1,6 +1,7 @@
 文献阅读与翻译 - Gaining comprehensive biological insight into the transcriptome by performing a broad-spectrum RNA-seq analysis (Nature Communications DOI: 10.1038/s41467-017-00050-4)——来自网络
 ## 摘要
 `RNA-sequencing` (`RNA-seq`)是转录组研究的重要技术。自从`RNA-seq`技术问世以来，已经开发了大量的分析工具。虽然有一些研究尝试评估最新的分析工具，但是还没有综合评价分析流程评估单个或组合分析工具的优劣。在这篇文章中，研究人员深入探索了大量的`RNA-seq`分析流程。这些流程不仅包括表达分析技术，也包含了RNA variant-calling、RNA编辑和RNA融合检测技术。具体来说，研究人员检查了短读长和长读长的`RNA-seq`技术，包括了39个分析工具的120种组合，15个样品的490种分析，样品包括生殖细胞、癌细胞和干细胞数据集，最后报道了分析工具的性能，提出了一个综合`RNA-seq`分析手册：`RNACocktail`。这个手册包含获得高准确性的分析流程。通过与实时定量`PCR`数据的比较验证，表明作者提出的流程可以帮助研究者获得更多准确的生物相关的研究信息。
+
 ## 简介
 高通量二代测序(`NGS`)`RNA-seq`将转录组分析引入一个新的时代。`RNA-seq`需要各种分析流程以满足测序技术、样品类型、基因组获取以及计算机资源的需求。**不同的分析流程具有显著不同的分析准确度、速度和代价**。因此，在受到代价和性能限制的条件下研究`RNA-seq`分析每一步使用哪个或哪些分析工具获得最高的准确性显得尤为重要。通常，整体最佳的流程用于特定样品分析可能是次优的，找出最优的分析流程更具挑战性，这需要分析大量不同的数据集。
 有很多研究比较了不同`RNA-seq`分析工具的性能。但是，这些研究主要关注`RNA-seq`分析的某一步，或者局限于比对和定量。因此，综合系统分析有助于最大化了解`RNA-seq`数据。为了解决以前研究的限制，研究人员深入调查了`RNA-seq`分析的所有主要步骤，评价了不同步骤下分析工具组合的准确性、效率和一致性，提出了一个综合的`RNA-seq`分析流程手册。他们认为`RNACocktail`分析流程可以获得高准确性。`RNACocktail`分析流程在检测不同样品生物相关的差异表达基因和临床重要的转录本得到了进一步的验证。`RNACocktail`分析流程是开源的并且可以在网站[http://bioinform.github.io/rnacocktail/](http://bioinform.github.io/rnacocktail/)免费下载使用。
@@ -18,7 +19,7 @@
 `RNA-seq` `reads`拼接比对到参考基因组要根据外显子-内含子边界拼接`reads`。下面研究人员使用短读长的`Illumina` hESC、NA12878、SEQC、100 bp和300 bp长的MCF7数据集评价了`TopHat`、`STAR`和`HISAT2`的性能，如图所示。
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/1234840/1609120616543-d9b725f6-9229-482a-9351-a5ba60ae4208.png#align=left&display=inline&height=956&margin=%5Bobject%20Object%5D&name=image.png&originHeight=956&originWidth=1048&size=254645&status=done&style=none&width=1048)
 不同比对方案的性能比较。a.不同方案检测到的拼接位点之间的overlap以及与dbEST数据库可靠的拼接点相比的验证率。可靠的EST拼接点至少包括两个EST支持的拼接点。圆的大小反映了每个方案检测到的拼接点数量。图中展示了每个工具检测到的拼接点数量和验证率(位于小括号中)。b.read比对分析。左图展示测序片段比对状态的分布(展示了NA12878、MCF7和SEQC样品的双端reads比对状态，对于hESC样品，展示了单端reads的比对状态，蓝色表示独一无二比对到基因组，橙色表示基因组上有多个比对位置，红色表示没有比对到基因组上)。中图展示了比对回基因组的片段上碱基被软件去除 (`soft-clip`)的数量分布。右图展示了比对回基因组的片段错配碱基的数量分布。
-[R语言学习 - 韦恩图](http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&mid=2247484076&idx=1&sn=fa5af19a2a4db4b0c5c7f145bf93ca57&chksm=ec0dc726db7a4e30fe7a0492ed9ea8eb5fa1c34641b1442a2da003efde0546b30c48fde3f118&scene=21#wechat_redirect)   [轻松绘制各种Venn图](http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&mid=2247484076&idx=2&sn=839b4819d7d142c08c900a355c4bb1b7&chksm=ec0dc726db7a4e301fd4694305c684ef0dd244186974745adcb024654c677a022ce37cf075ad&scene=21#wechat_redirect)
+[R语言学习 - 韦恩图](http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&mid=2247484076&idx=1&sn=fa5af19a2a4db4b0c5c7f145bf93ca57&chksm=ec0dc726db7a4e30fe7a0492ed9ea8eb5fa1c34641b1442a2da003efde0546b30c48fde3f118&scene=21#wechat_redirect)   [轻松绘制各种Venn图](http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&mid=2247484076&idx=2&sn=839b4819d7d142c08c900a355c4bb1b7&chksm=ec0dc726db7a4e301fd4694305c684ef0dd244186974745adcb024654c677a022ce37cf075ad&scene=21#wechat_redirect)
 `HISAT2`在所有样品中拥有最高的拼接点验证率，但是其预测的拼接点数量小于`TopHat`和`STAR`，如图a所示。`STAR`具有最高比例的独一无二比对到基因组上的reads，尤其是300读长的MCF7样品(b)。与`TopHat`和`HISAT2`不同，`STAR`会把双端reads比对到基因组，否则移除双端reads，以避免单端reads的比对。另一方面，STAR获得了较低质量的比对，具有更多的`soft-clipped`比对和错配碱基(b)。`TopHat`禁止截断reads(`b`)。对长读长样品MCF7-300和单端read样品hESC的分析结果表明，与TopHat和`HISAT2`相比，`STAR`具有更高的容忍性，接受碱基错配和`soft-clipping`以将更多的reads比对回参考基因组。在比对速度方面，`HISAT2`比`STAR`快2.5倍，比`TopHat`快大约100倍。
 #### 基于比对的转录组组装
 拼接比对之后，表达的转录本集合通过转录组组装来识别。下面研究人员关注两个广泛使用的基于比对的转录组发掘工具`Cufflinks`和`StringTie`。作为这两个组装工具的输入，我们使用了上述讨论的三个比对工具。我们以`Ensembl`参考转录组注释为指导。
@@ -35,8 +36,10 @@
 **不同的工具预测`Ensembl`没有注释但`GENCODE` v19注释的3681个新的转录本，结果表明`StringTie`预测到了最多的转录本，比`Cufflinks`多2.5倍，比`IDP`多6.5倍(图)**。
 不同转录组重构算法预测新的转录本性能比较。新的转录本是`GENCODE` (v19)注释的但在`Ensembl`中没有注释的多外显子转录本。标签标明了组装工具、长读段比对工具(`IDP`)、短读段比对工具，之间用”-“分开。使用短读长和长读长转录本预测的组合方法(用”+”标记)稍微提升了短读长转录本预测方案的性能。
 ![](https://cdn.nlark.com/yuque/0/2020/jpeg/1234840/1609119507120-8675d37b-4bbd-4ce3-bcc1-46e7831214d1.jpeg#align=left&display=inline&height=394&margin=%5Bobject%20Object%5D&originHeight=394&originWidth=640&size=0&status=done&style=none&width=640)
+
 **`StringTie`是运行最快的工具，完成组装比`Cufflinks`快约60倍，比`IDP`快约50倍**(默认输入是错误校正过的数据和比对后的数据)，如下表所示。
 ![](https://cdn.nlark.com/yuque/0/2020/jpeg/1234840/1609119507133-34d89dca-29e3-4c2a-908d-59e75e9ba985.jpeg#align=left&display=inline&height=292&margin=%5Bobject%20Object%5D&originHeight=292&originWidth=640&size=0&status=done&style=none&width=640)
+
 ### 转录本定量
 #### 基于比对的转录本定量
 经典的比对分析是将reads比对回参考基因组或者参考转录组，之后估计转录本丰度。**如果研究目的是测量已知的和新的转录本丰度，比对回参考基因组后使用`Cufflinks`和`StringTie`进行组装和丰度估计。如果使用参考转录组是发现不了新的转录本的，reads可以直接比对到转录组之后使用`RSEM`和`eXpress`进行丰度估计**。
@@ -66,5 +69,4 @@
 ### 讨论
 通过综合分析`RNA-seq`分析流程中不同步骤的工具性能发现不同的分析工具和方法对分析结果的准确度和分析时间影响巨大。`HISAT2`表现出最快的速度和最准确的拼接比对，但是没有`STAR`的敏感度高。`StringTie`在速度和准确度上都优于`Cufflinks`。长读段方法如`IDP`和`Iso-Seq`会识别许多短读段技术没有识别到的多外显子转录本，但是会丢失一些单外显子转录本。通常，在从头组装工具中，`Oases`表现最佳。不经过比对的工具如`Salmon-SMEM`和`kallisto`获得了最好的一致性和最高准确度，因此，如果目标不是发现新的转录本，如`Salmon-SMEM`和`kallisto`可以作为准确而快速的解决方案。`DESeq2`和`edgeR`与不经过比对的工具联用可以获得高准确度的差异表达分析结果。`GATK`是一个准确的变异位点检测工具，可以与不同的比对工具联用。当与`HISAT2`或者`STAR`比对工具联用时，`GIREMI`可以不依赖基因组准确预测`RNA`编辑位点。长读段方法如`IDP-fusion`可以准确预测`RNA`融合，而短读段方法如`FusionCatcher`或者`SOAPfuse`具有更高的灵敏度。通常情况下，整体最好的分析流程对于特定的数据集特定的研究目的来说可能是次优的。比如，对于比对和转录组构建，`HISAT2``-StringTie`组合具有更高的准确度和更快的速度。但是对于`MCF`7-300样品来讲，`STAR`- `StringTie`组合具有更高的灵敏度(图`a`)。
 对hESC和MCF7样品中高表达基因的详细分析表明新开发的工具表现比标准的`Tuxedo`手册好。比如，六个人类胚胎干细胞中常见的上调基因集中的89个基因列表中，`StringTie-HISAT2`和`Salmon-SMEM`分别预测了位于89个基因列表中的10个基因的6个和4个，而`Cufflinks-TopHat`预测的基因都不在上述基因列表中。 `StringTie-HISAT2`发现的6个高表达基因是_TDGF1、CRABP1、SFRP2、GJA1、GAL、LIN28A_，这些基因在胚胎发育过程中发挥重要作用。
-#### 
 
