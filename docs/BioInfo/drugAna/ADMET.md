@@ -8,7 +8,7 @@ ADMETlab用于系统评价ADMET的性质，随着功能模块、预测模型、�
 https://admetmesh.scbdd.com/docs/#/
 ```
 
-![图片](image/640)
+![图片](docs/BioInfo/drugAna/image/640)
 
 ```
 
@@ -22,7 +22,7 @@ SwissAMDE是使用最为广泛的药代动力学属性预测工具，它允许�
 http://www.swissadme.ch/
 ```
 
-![图片](image/641)
+![图片](docs/BioInfo/drugAna/image/641)
 
 
 
@@ -34,7 +34,7 @@ XenoSite Web提供小分子生物化学预测Web服务。XenoSite Web可以被�
 https://swami.wustl.edu/xenosite
 ```
 
-![图片](image/642)
+![图片](docs/BioInfo/drugAna/image/642)
 
 
 
@@ -46,7 +46,7 @@ VNN-ADMET网络服务器是一个公开的在线平台，用于预测ADMET特性
 https://vnnadmet.bhsai.org/vnnadmet/login.xhtml
 ```
 
-![图片](image/643)
+![图片](docs/BioInfo/drugAna/image/643)
 
 **5. Pred-Skin**
 
@@ -56,7 +56,7 @@ Pred-Skin是一个能够预测化学诱导皮肤致敏的Web应用程序，是�
 http://predskin.labmol.com.br/
 ```
 
-![图片](image/644)
+![图片](docs/BioInfo/drugAna/image/644)
 
 **6 PkCSM**
 
@@ -66,7 +66,7 @@ PkCSM是一个可自由访问的基于图形的ADMET属性预测工具。该集�
 https://biosig.lab.uq.edu.au/pkcsm/
 ```
 
-![图片](image/645)
+![图片](docs/BioInfo/drugAna/image/645)
 
 
 
@@ -78,7 +78,7 @@ Hit Dexter基于机器学习方法，采集了实验确定的至少250，000种�
 https://nerdd.univie.ac.at/
 ```
 
-![图片](image/646)
+![图片](docs/BioInfo/drugAna/image/646)
 
 
 
@@ -90,7 +90,7 @@ FAF-Drugs是一个基于Frowns (化学信息学工具包) 的在线服务工具�
 https://fafdrugs4.rpbs.univ-paris-diderot.fr/
 ```
 
-![图片](image/647)
+![图片](docs/BioInfo/drugAna/image/647)
 
 
 
@@ -102,7 +102,7 @@ DrugMint是为预测化合物的药物可能性而开发的Web服务器。所有
 http://crdd.osdd.net/oscadd/drugmint/
 ```
 
-![图片](image/648)
+![图片](docs/BioInfo/drugAna/image/648)
 
 
 
@@ -114,4 +114,4 @@ CypRules 预测CYP450 (细胞色素P450)代谢抑制，包括CYP1A2、CYP2C19、
 https://cyprules.cmdm.tw/
 ```
 
-![图片](image/649)
+![图片](docs/BioInfo/drugAna/image/649)
