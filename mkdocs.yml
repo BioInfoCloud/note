@@ -138,6 +138,7 @@ nav:
       - TCGA-GEO: BioInfo/TCGA/index.md
     - 药物分析: 
         - CellMiner数据库: BioInfo/drugAna/cellminer.md
+        - ADMET计算: BioInfo/drugAna/ADMET.md
     - 免疫浸润: 
         - EaSIeR: BioInfo/immune/EaSIeR.md       
     - 数据库工具: 
