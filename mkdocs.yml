@@ -121,6 +121,7 @@ nav:
   - 可视化:
     - 综合教程: Programming/R/ggplot2.md
     - 烟花状散点图: visualization/FireworksClusterScatterPlot.md
+    - 多重火山图: visualization/mult_volcano.md
   - 大数据:
     - 学习计划: bigdata/index.md
   - 机器学习:
@@ -132,6 +133,7 @@ nav:
         - 单细胞下游分析: BioInfo/scRNAseq/scRNASeq_down.md
         - 常规分析案例一: BioInfo/scRNAseq/GSE130001.md
         - 细胞注释-SingleR: BioInfo/scRNAseq/SingleR.md
+        - 表型关联分析: BioInfo/scRNAseq/Scissor.md
     - RNAseq专题: 
         - Bulk RNAseq上游分析: BioInfo/RNAseq/pipeline_1.md
     - TCGA-GEO专题: 
