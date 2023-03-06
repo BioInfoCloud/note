@@ -95,8 +95,10 @@ nav:
       - R包开发:
         - 软件安装: Programming/R/01-software.md
         - 快速手册: Programming/R/02-DevelopmentManual.md
+      - Shiny: Programming/R/shiny.md
     - Python: 
       - 语法基础: Programming/python/links.md
+      - Numpy: Programming/python/numpy.md
       - Biopython: BioInfo/Biopython/01_install.md
   - 生信基础:
     - BioInfo/index.md
