@@ -136,6 +136,7 @@ nav:
         - 常规分析案例一: BioInfo/scRNAseq/GSE130001.md
         - 细胞注释-SingleR: BioInfo/scRNAseq/SingleR.md
         - 表型关联分析: BioInfo/scRNAseq/Scissor.md
+        - cellChat: BioInfo/scRNAseq/CellChat.md
     - RNAseq专题: 
         - Bulk RNAseq上游分析: BioInfo/RNAseq/pipeline_1.md
     - TCGA-GEO专题: 
