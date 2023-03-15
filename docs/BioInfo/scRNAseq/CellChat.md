@@ -9,7 +9,6 @@ CellChat 需要两个输入：一个是细胞的基因表达数据，另一个�
 **对于基因表达数据矩阵**，要求基因为行名，细胞为列名。需要将标准化数据作为 CellChat 分析的输入。如果用户提供count数据，我们提供一个函数normalizeData来计算文库大小，然后进行log转换。**对于分组信息**，需要使用带有行名的数据作为CellChat 的输入:
 
 ```R
-
 library(Seurat)
 library(CellChat) 
 load("GSE130001/sce_opt_anno_GSE130001.Rdata")
