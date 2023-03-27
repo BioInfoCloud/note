@@ -23,7 +23,11 @@ Linux操作系统【包括shell语言】
 
 ## 3.编程语言
 
-### （1）[C语言程序设计](https://www.bilibili.com/video/BV17s411N78s/?share_source=copy_web&vd_source=2b738df486d06ffc21c02a261821943e)
+### （1）C语言程序设计
+
+[小甲鱼的教程[基于Linux]](https://www.bilibili.com/video/BV17s411N78s/?share_source=copy_web&vd_source=2b738df486d06ffc21c02a261821943e)
+
+[郝斌C语言自学教程（180集全）哔哩哔哩_bilibili](https://www.bilibili.com/video/BV16W4y1n7ea/?spm_id_from=333.337.search-card.all.click&vd_source=ad7486d1c0a79f7459d20781ce805fbc)
 
 ### （2）Java语言程序设计
 
