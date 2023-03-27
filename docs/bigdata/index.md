@@ -1,6 +1,6 @@
 > 数据科学与大数据技术学习计划表【优化中】
 > 
-> 时间：2022年11月26日
+> 时间：2023年3月26日
 ## 1.数学基础
 
 高等数学
@@ -37,7 +37,7 @@ Linux操作系统【包括shell语言】
 
 【[视频教程](https://pan.baidu.com/s/1vb2Kw9oZ9rhOGlVcO8PZig)】
 
-【[前端开发]( https://pan.baidu.com/s/1rt95OvpsfkjtrdvoYkvB8g )】
+【[前端开发]( https://pan.baidu.com/s/1rt95OvpsfkjtrdvoYkvB8g )】
 
 ### （4）R语言语言程序设计
 
