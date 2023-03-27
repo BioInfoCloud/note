@@ -9,6 +9,8 @@
 
 概率论与数理统计
 
+工具书：【[人工智能数学基础](https://u.jd.com/uuweeyB)】
+
 ## 2.计算机基础
 
 计算机基础与组成原理
@@ -17,15 +19,25 @@
 
 Linux操作系统【包括shell语言】
 
-## 3.编程基础
+参考书：[鸟哥的linux私房菜](https://u.jd.com/uuwmz0S)
 
-### （1）C语言程序设计【开发方向】
+## 3.编程语言
 
-### （2）Java语言程序设计【开发方向】
+### （1）[C语言程序设计](https://www.bilibili.com/video/BV17s411N78s/?share_source=copy_web&vd_source=2b738df486d06ffc21c02a261821943e)
+
+### （2）Java语言程序设计
+
+[程序员小姐姐: 分享Java学习经验和Java教程, 解密初学Java的常见误区 | 编程入门](https://www.bilibili.com/video/BV1c54y1U7pp/?vd_source=ad7486d1c0a79f7459d20781ce805fbc)
+
+毕向东Java教程：[B站](https://www.bilibili.com/video/BV1hE41167D5/?spm_id_from=333.337.search-card.all.click&vd_source=ad7486d1c0a79f7459d20781ce805fbc)；[百度网盘](https://pan.baidu.com/s/1rt95OvpsfkjtrdvoYkvB8g?pwd=DATA )
 
 ### （3）Python语言程序设计
 
 【大数据分析和开发方向必须精通】
+
+【[视频教程](https://pan.baidu.com/s/1vb2Kw9oZ9rhOGlVcO8PZig)】
+
+【[前端开发]( https://pan.baidu.com/s/1rt95OvpsfkjtrdvoYkvB8g )】
 
 ### （4）R语言语言程序设计
 
@@ -33,7 +45,7 @@ Linux操作系统【包括shell语言】
 
 相关在线电子书籍【英文版】：[Bookdown](https://bookdown.org/)：https://bookdown.org
 
-
+[**R语言视频教程**](https://pan.baidu.com/s/1vWlxnznil5bdYSqI6YPPfQ)
 
 ## 4.专业基础课程
 
@@ -52,6 +64,14 @@ Linux操作系统【包括shell语言】
 大数据处理技术  
 
 大数据可视化
+
+---
+
+相关视频教程：
+
+[**MySQL编码问题**](https://pan.baidu.com/s/1M6f4k8edLiNDyzv56mvmCA)，[**MySQL安装**](https://pan.baidu.com/s/1BB0hvlqCUhFUpN5RRWnd-w)，[**MySQL高级教程**](https://pan.baidu.com/s/1M6f4k8edLiNDyzv56mvmCA) 
+
+---
 
 ## 5.大数据开发方向
 
@@ -146,6 +166,8 @@ Python中的Biopython，R中的Bioconductor
 生物大数据分析
 
 ### （3）开发
+
+数据库、分析软件，R包、Python模块
 
 ## 9.在线电子图书
 
