@@ -47,6 +47,8 @@ Linux操作系统【包括shell语言】
 
 【大数据分析和可视化方向掌握】
 
+[基础语法](https://www.bilibili.com/video/BV1MS4y1i7yU/?spm_id_from=333.999.0.0)
+
 相关在线电子书籍【英文版】：[Bookdown](https://bookdown.org/)：https://bookdown.org
 
 [**R语言视频教程**](https://pan.baidu.com/s/1vWlxnznil5bdYSqI6YPPfQ)
