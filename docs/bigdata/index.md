@@ -33,7 +33,7 @@ Linux操作系统【包括shell语言】
 
 [程序员小姐姐: 分享Java学习经验和Java教程, 解密初学Java的常见误区 | 编程入门](https://www.bilibili.com/video/BV1c54y1U7pp/?vd_source=ad7486d1c0a79f7459d20781ce805fbc)
 
-毕向东Java教程：[B站](https://www.bilibili.com/video/BV1hE41167D5/?spm_id_from=333.337.search-card.all.click&vd_source=ad7486d1c0a79f7459d20781ce805fbc)；[百度网盘](https://pan.baidu.com/s/1rt95OvpsfkjtrdvoYkvB8g?pwd=DATA )
+毕向东Java教程：[B站](https://www.bilibili.com/video/BV1hE41167D5/?spm_id_from=333.337.search-card.all.click&vd_source=ad7486d1c0a79f7459d20781ce805fbc)；[百度网盘](https://pan.baidu.com/s/1rt95OvpsfkjtrdvoYkvB8g)
 
 ### （3）Python语言程序设计
 
