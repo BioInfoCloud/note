@@ -127,7 +127,7 @@ nav:
   - 大数据:
     - 学习计划: bigdata/index.md
   - 机器学习:
-    - kNN: ML/kNN.md
+    - kNN: ML/knn/kNN.md
   - 专题:
     - 单细胞专题: 
         - 单细胞上游分析: BioInfo/scRNAseq/scRNASeq_UP.md
@@ -137,6 +137,7 @@ nav:
         - 细胞注释-SingleR: BioInfo/scRNAseq/SingleR.md
         - 表型关联分析: BioInfo/scRNAseq/Scissor.md
         - cellChat: BioInfo/scRNAseq/CellChat.md
+        - scscMetabolism: BioInfo/scRNAseq/scMetabolism.md
     - RNAseq专题: 
         - Bulk RNAseq上游分析: BioInfo/RNAseq/pipeline_1.md
     - TCGA-GEO专题: 

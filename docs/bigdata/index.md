@@ -13,7 +13,7 @@
 
 ## 2.计算机基础
 
-计算机基础与组成原理
+计算机基础与组成原理【快速扫盲：[教程1](https://www.bilibili.com/video/BV1uz411v75t/?p=2&spm_id_from=pageDriver&vd_source=ad7486d1c0a79f7459d20781ce805fbc)；[教程2](https://www.bilibili.com/video/BV1P54y1S7He/?spm_id_from=333.337.search-card.all.click&vd_source=ad7486d1c0a79f7459d20781ce805fbc)】
 
 计算机网络
 
