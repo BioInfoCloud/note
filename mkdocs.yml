@@ -127,7 +127,8 @@ nav:
   - 大数据:
     - 学习计划: bigdata/index.md
   - 机器学习:
-    - kNN: ML/knn/kNN.md
+    - 1.kNN算法理论: ML/knn/kNN.md
+    - 2.kNN实践案例: ML/knn/knn_py/knn_py.md
   - 专题:
     - 单细胞专题: 
         - 单细胞上游分析: BioInfo/scRNAseq/scRNASeq_UP.md

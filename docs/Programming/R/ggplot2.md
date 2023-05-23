@@ -469,7 +469,17 @@ library(gridExtra)
 grid.arrange(fig1,fig2,fig5, ncol = 2, nrow =2,layout_matrix=matrix(c(1,2,3,3),ncol = 2,byrow = T))
 ```
 
+绘图经典案例:[ggplot2 - Essentials - Easy Guides - Wiki - STHDA](http://www.sthda.com/english/wiki/ggplot2-essentials)
+
+最后一个是 https://stackoverflow.com/
+
+你会发现，你想实现的各种稀奇古怪的绘图需求，只需要你能使用英文描述出来，就是能找到答案的！
+
+- 用谷歌搜索来使用ggplot2做可视化（上）：https://mp.weixin.qq.com/s/WN4TSMNjH4b6vZgYVjaRvQ
+- 用谷歌搜索来使用ggplot2做可视化（下）：https://mp.weixin.qq.com/s/_Q16zDZgCr3XoO0r3wqRkw
+
 # **三.散点图**
+
 ## **1.利用plot()绘制散点图**
 R语言中plot()函数的基本格式如下：
 ```
@@ -478,6 +488,7 @@ plot(x,y,...)
 
 plot函数中，x和y分别表示所绘图形的横坐标和纵坐标；函数中的...为附加的参数。
 plot函数默认的使用格式如下：
+
 ```
 plot(x, y = NULL, type = "p", xlim = NULL, ylim = NULL, log = "", main = NULL, sub = NULL, xlab = NULL, ylab = NULL, ann = par("ann"), axes = TRUE, frame.plot = axes, panel.first = NULL, panel.last = NULL, asp = NA, ...)
 ```
