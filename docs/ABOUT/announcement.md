@@ -18,7 +18,7 @@
 
 语雀：https://www.yuque.com/dashboard
 
-**Typora**：官网：https://www.typora.io/ ，[免费下载地址]( https://pan.baidu.com/s/1bD0S-IRYfqa0CE2MxY0jbg) 。Typora加上mpic是一个不错选择 mpic：http://mpic.lzhaofu.cn/ ，mpic是一款支持多种上传方式且自动生成MarkDown链接的图床工具。可在B站搜索github搭建图床的教程。
+**Typora**官网：https://www.typora.io/ ，[免费下载地址]( https://pan.baidu.com/s/1bD0S-IRYfqa0CE2MxY0jbg) 。Typora加上mpic是一个不错选择 mpic：http://mpic.lzhaofu.cn/ ，mpic是一款支持多种上传方式且自动生成MarkDown链接的图床工具。可在B站搜索github搭建图床的教程。
 
 **3.文本软件**
 
