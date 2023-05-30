@@ -9,12 +9,13 @@
 
 ---
 
+
+
 ## **入门学习历程**
 
 **2~3周时间熟悉R语言语法，教程如下：**
 
 - B站：[R语法视频](https://www.bilibili.com/video/BV1MS4y1i7yU?spm_id_from=333.999.0.0&vd_source=ad7486d1c0a79f7459d20781ce805fbc)
-
 
 **3~5天快速了解ggplot2绘图思想，不需要精通。**
 
@@ -39,44 +40,41 @@
 - [生信中各种ID转换](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265466&idx=1&sn=021a10503d338e09abe07b578e734566&scene=21#wechat_redirect)
 
 至于转录组测序的原理了解后，基础的分析你不需要知道上游怎么分析的，我用一句话解释：送出去测序的样本，提取总RNA，定量，使得每个样本中的RNA总量一样，打断后进行PCR扩增，然后测序，测序得到很多序列，如果基因表达量越高，测序得到的序列就越多【当然过程没有这么简单，比如还有去除核糖体RNA等】，怎么去量化这个表达量？这时候你就需要了解[RNA-seq的counts,RPM, RPKM, FPK值到底有什么区别？](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264575&idx=2&sn=69b45012dbfe61d7574446de00ec9a7b&scene=21#wechat_redirect)。至于counts,RPM, RPKM, FPK怎么得到的中间过程，属于上游分析，你能理解这些counts,RPM, RPKM, FPK就是用来量化基因表达量之间的关系就行。上游的分析，需要基于Linux系统。
+
 **【-------------------------下面这部分跳过-------------------**
+
 后续感兴趣的话，可参考： [《转录组基础知识》](https://www.yuque.com/docs/share/e9dbfaba-752e-4f89-a072-e95dc4fed0ef?#)（密码：um4i）；
+
 分析流程：
+
 [转录组分析 | fastqc进行质控与结果解读](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273374&idx=1&sn=dfac9e82a09fbb18cd8b2c8179afcad8&scene=21#wechat_redirect)
+
 [转录组分析 | 使用trim-galore去除低质量的reads和adaptor](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273401&idx=1&sn=ff9e3478309d805950c40d0ebae74296&chksm=841edcc4b36955d2a5bf8c85429114b5b83ec4e5afe869378b42ec4f659d4953d5f6c8e9e379&token=151105890&lang=zh_CN&scene=21#wechat_redirect)
+
 [转录组分析 | 使用Hisat2进行序列比对](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273450&idx=1&sn=efab631b255e12cf5ffd259dd53fb2b3&chksm=841edc97b3695581de924856b0e6901c67b87648f85bd491729eaa2ee0592271d84042b9eb76&token=108642787&lang=zh_CN&scene=21#wechat_redirect)
+
 [转录组分析 | 使用SAMtools将SAM文件转换为BAM文件、排序、建立索引](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273488&idx=1&sn=f5ed53f20164b19720d31f0a2cfcd268&chksm=841edd6db369547bc04ae15a2a8a7661fefa1193cabbe05d7e2f9e2fa986211603537cf8fbd0&token=108642787&lang=zh_CN&scene=21#wechat_redirect)
+
 [转录组分析 | 使用RSeQC软件对生成的BAM文件进行质控](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273531&idx=1&sn=8a9b12fe030f6c0f8bb1d6c8abbf622d&chksm=841edd46b36954501a57801f8149301d1bbb7b2d62a6f0d73b8a4795071e2aace94e02c2f392&token=108642787&lang=zh_CN&scene=21#wechat_redirect)
+
 [转录组分析 | 使用Stringtie对数据进行下游处理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273566&idx=1&sn=947e61eb19a63943f8c56bfcad81cc82&chksm=841edd23b36954359fe559dc4a832ffd66a0792868d2d2ea65123765cc0b7dc4424ca4344549&scene=21#wechat_redirect)
 
 曾健明老师的教程链接：[https://share.weiyun.com/1R1Oar3m](https://share.weiyun.com/1R1Oar3m) 密码：y6a5ce
+
 **-------------------------上面这部分跳过-------------------】**
+
 普通的分析的话我们都是从counts/FPKM/TPM开始的。得到的数据，基础的分析都差不多。
 对于癌症方向，TCGA数据库是最好的数据资源，我们可以从TCGA中下载各种数据进行分析。
 要分析数据就先了解TCGA数据库。
  [TCGA数据库介绍](https://www.yuque.com/docs/share/912e43c5-2b9d-4a31-982c-30d419bd1473?#) （密码：vtdx）；可看视频【[TCGA数据库介绍](https://mp.weixin.qq.com/s/i5hLNXQiXoeqF-ogOxm8Uw)】
-注意：网上搜索的教程，注意发布时间在2022年4月份之前的，很多数据处理教程不在适用，因为TCGA发生了重大更新。这里有一些更新后的数据整理教程。
-[2022-TCGA数据库重大更新后临床数据的下载与整理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651278938&idx=1&sn=a3e6481c663e712feeb2ed95f42a0334&chksm=841eaa27b369233120f5ba00c5f17adece9cc387f9785609ad73909c3faad6a031b2d4f0d95f#rd)
-[2022-TCGA数据库重大更新后miRNA-Seq数据的下载与整理。](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651277704&idx=1&sn=20856680efc8ed317657632392fd3743&chksm=841eadf5b36924e3521dcb0a3f2cbabf909147841041bfb7a26a84901dbde3b66eec6481d3c3#rd)
-[2022-TCGA数据库重大更新后3行代码提取simple nucleotide variation的数据](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651277334&idx=1&sn=cbe005d417cd196470574001324b5168&chksm=841eac6bb369257d153199ffe3ae7cee580e5205f8122a7b34c8d4601ed80ef84f9e0ceda079#rd)
-[2022-TCGA数据库重大更新后RNASeq的STAR-Counts数据的下载与整理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651277277&idx=1&sn=ecdbe046e1e3b5550b8195eddbe6fd84&chksm=841ea3a0b3692ab65657827edf7865d901d9d546ebd3db270eaa1b6f56fe12de6bfa8630a8b3#rd)
+注意：网上搜索的教程，注意发布时间在2022年4月份之前的，很多数据处理教程不在适用，因为TCGA发生了重大更新。这里有一些更新后的教程【[点击查看](https://mp.weixin.qq.com/s/urGDqQh1L-FK8olpW20_iw)】。TCGA数据库中有些癌症类型是没有正常样本的，或者正常样本数太少，有时候分析就不是很好，如果需要正常样本，可以下载GTEx数据库中的正常样本，但是，这是不同的数据来源，不能简单的使用，需要归一化。当然，你也不需要做这一步，UCSC中有标准化好的数据，直接下载使用就行了，可参考文章：[我要研究的癌症在TCGA数据库没有正常样本或正常样本数少怎么办？](https://mp.weixin.qq.com/s/hi-Jy57tN15-o7VRjESDFg)这里，我需要提一下，TCGA的数据都能在UCSC上直接下载的，但我自己不是很推荐这种方式，因为数据不是最新的，特别是临床数据，没有正常样本的数据才选择这种方式，当然下载使用也是没有问题的。可参考文章：[UCSC数据库下载TCGA数据需要注意的细节](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273247&idx=1&sn=008928dbfc6c6976d53369cd20c26f87&scene=21#wechat_redirect)。如果你只是单一的看几个基因在正常和肿瘤组织之间的表达高低话，在线工具GEPIA就可以了。
 
 counts数和TPM以及FPKM之间是可以转换的。得到的数据以后，可以尝试转换他们，count数没有考虑基因长度。FPKM已经考虑了基因长度。counts转换为其他类型的的数据需要知道基因长度，FPKM转化为其他的就不需要。[RNA-Seq的Counts和FPKM数据如何转换成TPM？](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272981&idx=1&sn=d5ef893cb6a61210ae765ae2cf0f93c4&scene=21#wechat_redirect)【[视频：TCGA-RNASeq数据转换](https://mp.weixin.qq.com/s/WXQ0iSfAQwLqq2ost2hHbghttps://mp.weixin.qq.com/s/WXQ0iSfAQwLqq2ost2hHbg)】，这里提取的数据基因名称需要转换成symbol，可以[了解gtf文件信息提取](https://mp.weixin.qq.com/s/jh2xPRi97teeGIPPfU2PiQ)。当然这在文章：[生信中各种ID转换](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265466&idx=1&sn=021a10503d338e09abe07b578e734566&scene=21#wechat_redirect)中已经有介绍。
 
-如果处理的miRNA的数据，需要注释miRNA，[miRNA注释包:miRBaseVersions.db](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651275464&idx=1&sn=ec20ca96dcaf40f7380253fa038bb696&chksm=841ea4b5b3692da363095e21fbd2daa962af0568fe8f13ca46b6aff632c0facc85b1634bbbf6&scene=21#wechat_redirect)，具体在文章：[TCGA数据库：miRNA数据下载与整理(2)](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651275466&idx=1&sn=9c2a028400fe8ee89e942f3e7c4cd3e1&chksm=841ea4b7b3692da1e8848068dceb31eef0d381286dd2d16dc7686f1d266aab7ac51e26a41897&scene=21#wechat_redirect) 中有。
-
-自己能够造轮子后可以学习TCGAbiolinks包，他会给你带来很大遍历，里面的参数就容易知道是怎么回事了。
-关于TCGAbiolinks包，阅读： [《TCGAbiolinks包》](https://www.yuque.com/docs/share/68f92c42-ee96-4e0f-9f9d-1e58df4dd87d?#)（密码：ga41）**【数据库更新后已经不可用】**
-
-TCGA数据库中有些癌症类型是没有正常样本的，或者正常样本数太少，有时候分析就不是很好，如果需要正常样本，可以下载GTEx数据库中的正常样本，但是，这是不同的数据来源，不能简单的使用，需要归一化。当然，你也不需要做这一步，UCSC中有标准化好的数据，直接下载使用就行了，可参考文章：[我要研究的癌症在TCGA数据库没有正常样本或正常样本数少怎么办？](https://mp.weixin.qq.com/s/hi-Jy57tN15-o7VRjESDFg)这里，我需要提一下，TCGA的数据都能在UCSC上直接下载的，但我自己不是很推荐这种方式，因为数据不是最新的，特别是临床数据，没有正常样本的数据才选择这种方式，当然下载使用也是没有问题的。可参考文章：[UCSC数据库下载TCGA数据需要注意的细节](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273247&idx=1&sn=008928dbfc6c6976d53369cd20c26f87&scene=21#wechat_redirect)。如果你只是单一的看几个基因在正常和肿瘤组织之间的表达高低话，在线工具GEPIA就可以了。
-
 得到这些数据以后我们就要进行数据的分析了。**常见的就是差异表达分析**。DESeq2和edgeR包
 [超详细的DESeq2和edgeR包的基本原理和实战案例](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651267481&idx=1&sn=40a8715a333ff47f6e96c37b4182d1b1&scene=21#wechat_redirect)。
-[TCGAbiolinks包下载TCGA数据进行表达差异分析-乳腺癌案例](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263344&idx=1&sn=add608d265600768d3f25ee30dc4365a&chksm=841ef50db3697c1b1752d19a2a875aed07c9c19b388a8f1b4da4f05e938de0ef9487fb868f09&scene=21#wechat_redirect)
-[一文就会TCGA数据库基因表达差异分析](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264898&idx=1&sn=f6287d98fe0b0fb48a96d2905ca0bb4f&scene=21#wechat_redirect)
-[RNASeq-miRNA差异表达分析]()
 
-如果只是分析TCGA数据库中RNA的数据，还可以了解GDCRNATools包，参考文章：[GDCRNATools包下载数据、处理数据以及差异分析](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265127&idx=2&sn=8c866e064995e6feb251a5db00282fd2&scene=21#wechat_redirect)
+如果只是分析TCGA数据库中RNA的数据，还可以了解GDCRNATools包，参考文章：[GDCRNATools包下载数据、处理数据以及差异分析](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265127&idx=2&sn=8c866e064995e6feb251a5db00282fd2&scene=21#wechat_redirect)【不确定现在是否可用】
 
 得到的差异表达基因可视化，火山图，这在[R语言数据可视化【视频】——解读ggplot2绘图思想视频教程](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273946&idx=1&sn=9fe780c87675cfae7b69f62516105ce7&chksm=841edea7b36957b1b7b5c794333e6d6b438f80351a54d4d962b2df1cba6ba1e2188687d3a2a2&scene=21#wechat_redirect)有介绍，你可以在搜狗微信栏搜索，模仿绘制，保存自己的代码，以后就不需要再写，改改参数就行。
 
@@ -91,8 +89,11 @@ TCGA数据库中有些癌症类型是没有正常样本的，或者正常样本�
 
 如果你自己测序的数据，测序公司会给你数据，应该都会有count/FPKM的数据。差异分析都一样。
 如果数据是小鼠的，得到的差异基因有时候需要转换成人的同源基因。因为很多分析工具或数据集都是基于人的。参考文章：
+
 [biomaRt包实现不同物种之间同源基因转换](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273598&idx=1&sn=391ef32ddddbf123624b04c08d1d4939&chksm=841edd03b3695415dfcf9304e3eda459c484e85b423f0f3b5ab54ac996d4ed6d275b24339655&scene=21#wechat_redirect)。
+
 [生信基础 | 人-小鼠同源基因之间的转换](生信基础 | 人-小鼠同源基因之间的转换)
+
 [生信基础 | 人-小鼠基因之间的比较](https://mp.weixin.qq.com/s/TupjY-l0Bux_uP_c5ZzOzQ)
 
 接下来的下游数据分析都差不多。

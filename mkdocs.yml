@@ -160,7 +160,8 @@ nav:
     - 2023_HNSCC: Literature/scRNAseq/2023_NC_HNSCC.md
   - 关于:
     - ABOUT/index.md # 使用两个index 这样子左上角第一次打开会是所有Tab 而不是ABOUT
-    - 学生群: ABOUT/studentsGroup.md
+    - 粉丝群: ABOUT/studentsGroup.md
+    - 工具: ABOUT/announcement.md
 
 # [Extensions]
 plugins:
