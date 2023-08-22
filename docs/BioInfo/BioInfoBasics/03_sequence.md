@@ -3,6 +3,7 @@
 ---
 
 **一. Sanger测序**
+
 1953年4月，Watson和Crick关于DNA双螺旋结构的文章发表于Nature，成为生物学研究的里程碑。此后，生命科学进入了DNA解密的时代。道德经所言“道生一，一生二，二生三，三生万物”，这“三生万物”需要的竟然仅仅是四种碱基的排列组合。生命的秘密藏在DNA序列中，首要任务，便是测出这序列内容。1970年，吴瑞先生建立了位置特异性引物延伸的测序方法，开了DNA测序技术的先河。随后在1975年，Sanger建立了自己的测序方法。1977年Gilbert等人建立了化学降解法，同年，Sanger改进了之前的方法，确立了日后第一代测序的主流方法：Sanger测序法。
 Sanger测序加快了对于微生物和单个基因研究的脚步，然而面对真核生物复杂而庞大的基因组，早期测序方法低通量、高成本、强劳动的弊端是开展组学研究的主要障碍。新一代测序技术呼之欲出，2003完成的人类基因组计划更是为大规模组学数据时代的开启敲响了钟声。
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/1234840/1612422458524-c0b0dd8f-c095-48ff-922d-60462d4c95fe.png#align=left&display=inline&height=426&margin=%5Bobject%20Object%5D&name=image.png&originHeight=433&originWidth=352&size=250276&status=done&style=none&width=346)
