@@ -99,6 +99,8 @@ nav:
     - Python: 
       - 语法基础: Programming/python/links.md
       - Numpy: Programming/python/numpy.md
+      - Pandas: Programming/python/Pandas.md
+      - Matplotlib: Programming/python/Matplotlib_visualization/Matplotlib_visualization.md
       - Biopython: BioInfo/Biopython/01_install.md
   - 生信基础:
     - BioInfo/index.md
