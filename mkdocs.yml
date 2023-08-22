@@ -1,8 +1,8 @@
 # [Info]
-site_name: 生物信息云笔记 # 左上角标题
+site_name: 生物信息云 # 左上角标题
 site_url: https://bioinfocloud.io
 site_author: DoubleHelix
-site_description: 生物信息云笔记
+site_description: 生物信息云
 
 # [UI]
 ## [top]
