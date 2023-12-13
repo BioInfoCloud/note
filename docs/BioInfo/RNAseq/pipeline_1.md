@@ -1213,7 +1213,11 @@ stringtie -p 8 -G /data/mouse_annotation/gencode.mouse.annotation.gtf -o cleanda
 ```
 批量处理：
 ```
-for i in CK-7 CK-8 HGJ-10 HGJ-6 HGJ-9;do stringtie -p 8 -G /data/mouse_annotation/gencode.mouse.annotation.gtf -o cleandata/stringtiedata/${i}.gtf cleandata/samtools_bam/${i}_sort.bam;done
+for i in CK-7 CK-8 HGJ-10 HGJ-6 HGJ-9
+do stringtie -p 8 \
+   -G /data/mouse_annotation/gencode.mouse.annotation.gtf \
+   -o cleandata/stringtiedata/${i}.gtf cleandata/samtools_bam/${i}_sort.bam
+done
 ```
 查看输出结果：
 ```
