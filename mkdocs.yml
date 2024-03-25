@@ -160,9 +160,11 @@ nav:
     - 药物靶点预测: Literature/Review/002_DTIS.md
     - ICB治疗: Literature/Review/004_2021_ICB.md
     - 2023_HNSCC: Literature/scRNAseq/2023_NC_HNSCC.md
+  - 微信:
+    - WeChatOfficialAccount/HOME.md # 使用两个index 这样子左上角第一次打开会是所有Tab 而不是ABOUT
+    - 粉丝群: ABOUT/studentsGroup.md
   - 关于:
     - ABOUT/index.md # 使用两个index 这样子左上角第一次打开会是所有Tab 而不是ABOUT
-    - 粉丝群: ABOUT/studentsGroup.md
     - 工具: ABOUT/announcement.md
 
 # [Extensions]
