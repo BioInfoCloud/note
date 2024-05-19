@@ -113,7 +113,7 @@ cellchat <- filterCommunication(cellchat, min.cells = 10)
 
 提供一个函数`subsetCommunication`，以轻松访问推断感兴趣的细胞-细胞通信。例如:
 
-- `df.net <- subsetCommunication(cellchat)`返回一个数据框架，该数据框架由配体/受体级别的所有推断细胞通信组成。设置slot.name = "netP"可以在信号通路级别访问推断的通信
+- xxxxxxxxxx # T Cells (CD3D, CD3E, CD8A), # B cells (CD19, CD79A, MS4A1 [CD20]), # Plasma cells (IGHG1, MZB1, SDC1, CD79A), # Monocytes and macrophages (CD68, CD163, CD14),# NK Cells (FGFBP2, FCG3RA, CX3CR1),  # Photoreceptor cells (RCVRN), # Fibroblasts (FGF7, MME), # Endothelial cells (PECAM1, VWF). # epi or tumor (EPCAM, KRT19, PROM1, ALDH1A1, CD24).#   immune (CD45+,PTPRC), epithelial/cancer (EpCAM+,EPCAM), # stromal (CD10+,MME,fibo or CD31+,PECAM1,endo) R
 - `df.net <- subsetCommunication(cellchat, sources.use = c(1,2), targets.use = c(4,5))`将推断的细胞-细胞通信从细胞组1和2发送到细胞组4和5。
 - `df.net <- subsetCommunication(cellchat, signaling = c("CXCL", "ANGPTL"))`通过向CXCL和ANGPTL发出信号来调节推断的细胞通信。
 
