@@ -130,10 +130,10 @@ norexp <- splitTCGAmatrix(data = expr[,-c(1:3)],sample = "Normal")
 
 ### 10. 删除重复病人样本
 
-del_dup_sample()函数可以将列为barcode的数据，去除有重复的数据，TCGA数据库的病人有的可能做了几个重复。可以只需要一个。
+delTCGA_dup_sample()函数可以将列为barcode的数据，去除有重复的数据，TCGA数据库的病人有的可能做了几个重复。可以只需要一个。有正常样本和肿瘤样本同时在一个表达矩阵中时，禁用，可以先用splitTCGAmatrix()函数分割正常和肿瘤样本的数据后使用。
 
 ```R
-expr <- del_dup_sample(expr = pc.expr,col_rename = TRUE)
+expr <- delTCGA_dup_sample(expr = pc.expr,col_rename = TRUE)
 ```
 
 ### 11. 数据打包下载
@@ -218,7 +218,7 @@ gsdf <- tidy.gmt(filepath
 )
 ```
 
-## 3.整理Reactome数据框下载的通路信息文件
+### 3.整理Reactome数据框下载的通路信息文件
 
 tidyGene.fromeReactome()与tidy.gmt()类似。Source默认为"Reactome"；需要注意的是，下载的数据文件名以通路名称[通路ID]的形式命名，文件格式为tsv。fun的值是"stat" 时返回数据比tidy.gmt()多了PathwayID列；fun = "merge"时，2者输出一样。
 
@@ -236,9 +236,42 @@ df <- tidyGene.fromeReactome(filepath = filepath
                              ,filename = "geneset")
 ```
 
+### 4.从基因组文件gtf中提取基因相关信息
 
+gtf参数是一个gtf文件路径。
 
-### 4.融合生存数据与特征数据
+#### （1）提取基因长度信息
+
+```R
+gtf_file <- "path/to/your/file.gtf"  # 替换为实际的GTF文件路径
+gene_lengths <- getGeneLenFromeGTF(gtf_file)
+```
+
+#### （2）提取基因类型信息
+
+```R
+genetype <- getGeneTypeInfoFromeGTF(gtf_file)
+```
+
+#### （3）提取基因的基础信息（长度 + 类型）
+
+```R
+geneinfo <- getGeneBaseInfo(gtf)
+```
+
+### 5.RNAseq数据转换
+
+参考：[RNAseq数据分析中count、FPKM和TPM之间的转换 (qq.com)](https://mp.weixin.qq.com/s/dwbpJ0nhzyIp9fDv7fEWEQ)
+
+data是RNAseq数据，行为基因（symbol），列为样本；`type` must be one of "Counts2TPM", "Counts2FPKM", or "FPKM2TPM".
+
+species的值可以是 "homo"、"mus"，或者是NULL。如果你的数据是人或者小鼠，只需要指定为 "homo"或"mus"，如果不是，species设置为NULL，同时提供gtf格式的参考基因组文件。
+
+```R
+data <- RNAseqDataConversion(data,type,species = "homo",gtf = NULL)
+```
+
+### 6.融合生存数据与特征数据
 
 ```R
 se <- mergeSurExp(expr
@@ -253,7 +286,7 @@ se <- mergeSurExp(expr
 )
 ```
 
-如果不是TCGA数据库的数据，只需要关注参数expr，survival，save，folder，Timeunit，其他参数不需要考虑，并且，expr行为特征（一般为基因），列为样本；Timeunit的值表示生存时间进行何种转换，Timeunit=1表示不进行任何转换，如果你的生存数据的时间是天，可设置Timeunit=365，转换为年；feature是一个特征子集向量，可以不指定，默认expr的所有行。如果处理TCGA的数据，TCGA应该指定为TRUE，expr应该是getTCGA_RNAseqData()返回结果中的表达数据，如下图：
+该函数主要用于整合TCGA的数据，如果不是TCGA数据库的数据，只需要关注参数expr，survival，save，folder，Timeunit，其他参数不需要考虑，并且，expr行为特征（一般为基因），列为样本；Timeunit的值表示生存时间进行何种转换，Timeunit=1表示不进行任何转换，如果你的生存数据的时间是天，可设置Timeunit=365，转换为年；feature是一个特征子集向量，可以不指定，默认expr的所有行。如果处理TCGA的数据，TCGA应该指定为TRUE，expr应该是getTCGA_RNAseqData()返回结果中的表达数据，如下图：
 
 ![](https://raw.githubusercontent.com/BioInfoCloud/ImageGo/main/20240525165216.png)
 
