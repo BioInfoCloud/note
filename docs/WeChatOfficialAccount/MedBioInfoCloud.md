@@ -11,10 +11,11 @@ BiocManager::install(DependencyPackage)
 devtools::install_github("BioInfoCloud/MedBioInfoCloud")
 ```
 
-本包中所有函数的参数共性：
+The common parameters for all functions in this package are:
 
-save：TRUE或FALSE，表示是否保存数据，
-folder：是一个文件夹路径，当save = TRUE时，数据的输出目录，如果指定目录不存在，会自动创建，文件夹路径末尾不要添加"/"。
+**save** - A boolean value that determines whether the data should be preserved. If `save` is set to `TRUE`, the data will be securely stored. Conversely, if it's set to `FALSE`, the data will remain unsaved.
+
+**folder** - A string that designates the destination directory for the saved data. This parameter is applicable only when `save` is set to `TRUE`. If the specified directory does not exist, it will be automatically created. Kindly note that the folder path should not terminate with a slash ("/").
 
 ## 二. TCGA数据库数据挖掘相关函数
 
