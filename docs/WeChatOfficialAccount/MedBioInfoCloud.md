@@ -2,6 +2,8 @@ Functions and data relevant to the tutorials published on the WeChat official ac
 
 ## 一. Install package
 
+This R package has dependencies on several other packages in order to function properly. If you encounter errors during the installation process, it is typically because the required dependencies have not been properly installed. Please install the dependencies individually before proceeding with the installation of the R package.
+
 ```R
 if (!require("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
@@ -11,7 +13,7 @@ BiocManager::install(DependencyPackage)
 devtools::install_github("BioInfoCloud/MedBioInfoCloud")
 ```
 
-The common parameters for all functions in this package are:
+Some functions with the same parameters are uniformly explained as follows:
 
 **save** - A boolean value that determines whether the data should be preserved. If `save` is set to `TRUE`, the data will be securely stored. Conversely, if it's set to `FALSE`, the data will remain unsaved.
 
