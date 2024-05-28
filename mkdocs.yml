@@ -163,10 +163,11 @@ nav:
   - 微信:
     - WeChatOfficialAccount/HOME.md # 使用两个index 这样子左上角第一次打开会是所有Tab 而不是ABOUT
     - 文章索引: WeChatOfficialAccount/articleIndex.md
-    - 微信群: ABOUT/studentsGroup.md
+    - MedBioInfoCloud: WeChatOfficialAccount/MedBioInfoCloud.md
   - 关于:
     - ABOUT/index.md # 使用两个index 这样子左上角第一次打开会是所有Tab 而不是ABOUT
     - 工具: ABOUT/announcement.md
+    - 微信群: ABOUT/studentsGroup.md
 
 # [Extensions]
 plugins:
