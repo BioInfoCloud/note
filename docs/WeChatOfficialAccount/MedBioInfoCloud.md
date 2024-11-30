@@ -114,11 +114,26 @@ cldat <- getTCGA_ClinicalData(project = "TCGA-LUAD",save = FALSE,folder = ".",tr
 
 filterGeneTypeExpr()根据某列里面是数据进行过滤，保留filter值的数据。该函数仅适用于getTCGA_RNAseqData获取的count,tpm和fpkm 3个数据框。
 
+expr：表达数据，如：
+![](https://raw.githubusercontent.com/BioInfoCloud/ImageGo/main/20240909180107.png)
+
+fil_col：根据那一列进行过滤数据，值为该列的列名。
+
+filter：可选值有"rRNA","misc_RNA","protein_coding","lncRNA","sRNA","snoRNA","miRNA","snRNA","scaRNA","Mt_rRNA"等，具体来说，值应该在所给数据中fil_col列的值中能找到。
+
+rownname：需要作为行名的列，该列的值会去重。
+
+delcol：需要删除的列，为非数值的列的index，默认删除前3列。
+
 ```R
 STARdata <- getTCGA_RNAseqData("TCGA-LUAD")
 expr <- STARdata[["count"]]
 table(expr$gene_type)
-pc.expr <- filterGeneTypeExpr(expr = expr,fil_col = "gene_type",filter = "protein_coding")
+pc.expr <- filterGeneTypeExpr(expr = expr,
+                            rownname  = "gene_name",
+                            fil_col = "gene_type",
+                            filter = FALSE,
+                            delcol = c(1:3))
 ```
 
 ### 9.分割数据
@@ -202,6 +217,76 @@ getInfiltDataOfTCGAsample(expr,idtype = "patient",datatype = "tumor",TIMER2,meth
 **idtype**："patient" 或 "barcode"中的一个，为"patient" 时会去除重复的样本，并且以病人短id的方式更新数据列名；因为TIMER2下载数据库的id为"TCGA-E7-A6MF-01"这种样式，字符长度为15，如果expr的id长度小于15（通常为"TCGA-E7-A6MF"样式），设置idtype为"barcode"，也会被强制使用"patient" 参数；如果expr的id的字符长度大于15（因为[TIMER2](http://timer.cistrome.org/)数据库下载的数据id均为"TCGA-E7-A6MF-01"这种样式），可设置idtype为"barcode"，并且数据不会去掉重复病人的数据。
 
 **datatype**："tumor"或"normal"中的一个，这取决于expr数据的样本类型，默认为"tumor"，有时候我们拿到的expr包含正常样本和肿瘤样本，所以可通过该参数仅匹配肿瘤样本（尽管TIMER2下载的数据包括正常样本，但个人觉得没有太大意义），如果想要正常样本的数据可将该参数设置为"normal"。
+
+### 15. 融合生存数据与特征数据
+
+```R
+se <- mergeSurExp(expr
+                  ,survival
+                  ,survivalFrome = NULL
+                  ,Timeunit=1
+                  ,TCGA = FALSE
+                  ,TCGAfrome = "MedBioInfoCloud"
+                  ,feature = NULL
+                  ,save = FALSE
+                  ,folder = "."
+)
+```
+
+该函数主要用于整合TCGA的数据，如果不是TCGA数据库的数据，只需要关注参数expr，survival，save，folder，Timeunit，其他参数不需要考虑，并且，expr行为特征（一般为基因），列为样本；Timeunit的值表示生存时间进行何种转换，Timeunit=1表示不进行任何转换，如果你的生存数据的时间是天，可设置Timeunit=365，转换为年；feature是一个特征子集向量，可以不指定，默认expr的所有行。如果处理TCGA的数据，TCGA应该指定为TRUE，expr应该是getTCGA_RNAseqData()返回结果中的表达数据，如下图：
+
+![](https://raw.githubusercontent.com/BioInfoCloud/ImageGo/main/20240525165216.png)
+
+这时，如果生存数据是自己整理的，行名应该和expr的样本一致，或者有交集，如果数据是来自Survival和Phenotype数据（fromUCSC）：[微信公众号生物信息云提供的链接](https://pan.baidu.com/s/1_VmOO_yyjiaEkLWlHxRYWg?pwd=04au)，可以直接指定survivalFrome = "UCSC2022"，数据样式如下：
+
+![](https://raw.githubusercontent.com/BioInfoCloud/ImageGo/main/20240525171631.png)
+
+ 如果从这里下载临床数据：[微信公众号生物信息云提供的链接](https://pan.baidu.com/s/1KDO2gx-lnejeuInVZSEPFQ?pwd=0k83)，或是通过本包getClinicalData()函数【trim = TRUE】获取的数据，可以直接指定survivalFrome = "GDCquery_clinic"，数据样式如下（至少包含"submitter_id","vitalStat","surTime")：
+
+![](https://raw.githubusercontent.com/BioInfoCloud/ImageGo/main/20240525171820.png)
+
+如果指定save = TRUE，会在指定的folder文件夹下保存csv和Rdata的格式文件。
+
+```R
+STARdata <- getTCGA_RNAseqData("TCGA-LUAD")
+cldat <- getClinicalData(project = "TCGA-LUAD",save = FALSE,folder = ".",trim = TRUE)
+se <- mergeSurExp(expr = STARdata[["tpm"]],
+                  survival = cldat,
+                  survivalFrome = "GDCquery_clinic",
+                  TCGA = TRUE)
+```
+
+### 16.融合表达数据与临床数据
+
+mergeClinExp函数与mergeSurExp类似，clinical参数同survival，不过，survivalFrome参数要么为NULL，要么是"UCSC2022"的生存数据（不是表型数据）。其他参数相同。**对于TCGA数据来说，mergeSurExp和mergeClinExp都会过滤掉正常样本**。
+
+```R
+mergeClinExp(expr
+             ,clinical
+             ,survivalFrome = NULL
+             ,TCGA = FALSE
+             ,TCGAfrome = "MedBioInfoCloud"
+             ,feature = NULL
+             ,save = FALSE
+             ,folder = "."
+)
+```
+
+### 17.基因在不同临床分期中的表达分析
+
+```R
+TCGA_Clin_Analysis(data,clin_feature,feature,title="",width = 5,height = 5, save = TRUE,folder = ".")
+```
+
+data是mergeClinExp函数处理后的的数据，clin_feature为临床特征所在的列的列名。如：ajcc_t","ajcc_n","ajcc_m","ajcc_stage"。
+
+feature：要分析的基因，如："ATG7"。
+
+title：图片标题。
+
+width,height：图片的宽和高。
+
+
 
 
 
@@ -297,13 +382,29 @@ geneinfo <- getGeneBaseInfo(gtf)
 
 参考：[RNAseq数据分析中count、FPKM和TPM之间的转换 (qq.com)](https://mp.weixin.qq.com/s/dwbpJ0nhzyIp9fDv7fEWEQ)
 
-data是RNAseq数据，行为基因（symbol），列为样本；`type` must be one of "Counts2TPM", "Counts2FPKM", or "FPKM2TPM".
+函数**RNAseqDataTrans()**：
 
-species的值可以是 "homo"、"mus"，或者是NULL。如果你的数据是人或者小鼠，只需要指定为 "homo"或"mus"，如果不是，species设置为NULL，同时提供gtf格式的参考基因组文件。
+```R
+RNAseqDataTrans(data,tfun,species,gtype)
+```
+
+`data`是RNAseq数据，行可以是 'Ensemble' or 'Symbol'类型，列为样本；
+
+`tfun` must be one of "Counts2TPM", "Counts2FPKM", or "FPKM2TPM"；
+
+`species`的值可以是 "hsa"、"mus"；
+
+`gtype` must be one of 'Ensemble' or 'Symbol'.
+
+**类似的函数RNAseqDataConversion**
 
 ```R
 data <- RNAseqDataConversion(data,type,species = "homo",gtf = NULL)
 ```
+
+data是RNAseq数据，行为基因（symbol），列为样本；`type` must be one of "Counts2TPM", "Counts2FPKM", or "FPKM2TPM".
+
+species的值可以是 "homo"、"mus"，或者是NULL。如果你的数据是人或者小鼠，只需要指定为 "homo"或"mus"，如果不是，species设置为NULL，同时提供gtf格式的参考基因组文件。
 
 ### 7.基因集对象转换
 
@@ -319,55 +420,31 @@ GeneSetCollection.to.df()函数相反，将GeneSetCollection对象转换为一�
 gsdf <- GeneSetCollection.to.df(GeneSetCollection)
 ```
 
-### 7.融合生存数据与特征数据
-
-```R
-se <- mergeSurExp(expr
-                  ,survival
-                  ,survivalFrome = NULL
-                  ,Timeunit=1
-                  ,TCGA = FALSE
-                  ,TCGAfrome = "MedBioInfoCloud"
-                  ,feature = NULL
-                  ,save = FALSE
-                  ,folder = "."
-)
-```
-
-该函数主要用于整合TCGA的数据，如果不是TCGA数据库的数据，只需要关注参数expr，survival，save，folder，Timeunit，其他参数不需要考虑，并且，expr行为特征（一般为基因），列为样本；Timeunit的值表示生存时间进行何种转换，Timeunit=1表示不进行任何转换，如果你的生存数据的时间是天，可设置Timeunit=365，转换为年；feature是一个特征子集向量，可以不指定，默认expr的所有行。如果处理TCGA的数据，TCGA应该指定为TRUE，expr应该是getTCGA_RNAseqData()返回结果中的表达数据，如下图：
-
-![](https://raw.githubusercontent.com/BioInfoCloud/ImageGo/main/20240525165216.png)
-
-这时，如果生存数据是自己整理的，行名应该和expr的样本一致，或者有交集，如果数据是来自Survival和Phenotype数据（fromUCSC）：[微信公众号生物信息云提供的链接](https://pan.baidu.com/s/1_VmOO_yyjiaEkLWlHxRYWg?pwd=04au)，可以直接指定survivalFrome = "UCSC2022"，数据样式如下：
-
-![](https://raw.githubusercontent.com/BioInfoCloud/ImageGo/main/20240525171631.png)
-
- 如果从这里下载临床数据：[微信公众号生物信息云提供的链接](https://pan.baidu.com/s/1KDO2gx-lnejeuInVZSEPFQ?pwd=0k83)，或是通过本包getClinicalData()函数【trim = TRUE】获取的数据，可以直接指定survivalFrome = "GDCquery_clinic"，数据样式如下（至少包含"submitter_id","vitalStat","surTime")：
-
-![](https://raw.githubusercontent.com/BioInfoCloud/ImageGo/main/20240525171820.png)
-
-如果指定save = TRUE，会在指定的folder文件夹下保存csv和Rdata的格式文件。
-
-```R
-STARdata <- getTCGA_RNAseqData("TCGA-LUAD")
-cldat <- getClinicalData(project = "TCGA-LUAD",save = FALSE,folder = ".",trim = TRUE)
-se <- mergeSurExp(expr = STARdata[["tpm"]],
-                  survival = cldat,
-                  survivalFrome = "GDCquery_clinic",
-                  TCGA = TRUE)
-```
-
-
-
 ## 四.基础分析相关函数的使用
 
 ### 1.差异表达分析
 
-data为表达数据，行为基因名称，列为样本名称，group是一个数据框，只有一列为group的值，其值是二分类的字符串标签（如：Tumor，Normal），行名为样本名称，其顺序与data的列名一致。comparison是一个由group中的二分类标签值用-链接，如"Tumor-Normal"，表示Tumor组与Normal进行差异表达分析。method是DESeq2, edgeR和 limma中的一种，RNAseq数据建议使用DESeq2或edgeR，芯片数据使用limma。filter是否过滤数据，默认为TRUE。
+data为表达数据，行为基因名称，列为样本名称，group是一个数据框，只有一列为group的值，其值是二分类的字符串标签（如：Tumor，Normal），行名为样本名称，其顺序与data的列名一致。comparison是一个由group中的二分类标签值用-链接，如"Tumor-Normal"，表示Tumor组与Normal进行差异表达分析。method是DESeq2, edgeR和 limma中的一种，RNAseq数据建议使用DESeq2或edgeR，芯片数据使用limma。filter是否过滤数据，默认为TRUE。**注意：该函数值适合count数据**。cutFC和 cutFDR是筛选差异表达基因的条件。
 
 ```R
-DEG <- geneDEAnalysis(data, group, comparison,method = "DESeq2", filter = TRUE)
+DEG <- geneDEAnalysis(data, group, comparison,method = "DESeq2", cutFC = 2,cutFDR = 0.05,filter = TRUE)
 ```
+
+**标准化后的芯片数据可用arrayDataDEA_limma函数**：
+
+ group是一个长度和data列数一样的向量，其中每一个元素值应该对应样本的分组，且唯一值只有2种，comparison同上。
+
+```R
+comparison = "Liver_Metastasis-Primary" # 必须在函数外定义
+DEG = arrayDataDEA_limma(data = Liver_M_vs_Primary,
+                         group = rep(c("Liver_Metastasis","Primary"),
+                                     times = c(length(LiverID),length(PrimaryID))),
+                         comparison = comparison,
+                         cutFC = 2,cutFDR = 0.05
+                         )
+```
+
+
 
 ### 2. 火山图可视化
 
