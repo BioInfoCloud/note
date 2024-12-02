@@ -124,7 +124,7 @@ nav:
       - Hisat2: BioInfo/RNAseq/hisat2.md
   - 可视化:
     - 综合教程: Programming/R/ggplot2.md
-    - 烟花状散点图: visualization/FireworksClusterScatterPlot.md
+    - 烟花状散点图: visualization/ScatterPlot.md
     - 多重火山图: visualization/mult_volcano.md
   - 大数据:
     - 学习计划: bigdata/index.md
