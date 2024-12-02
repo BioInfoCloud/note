@@ -1,4 +1,4 @@
-文章：[https://mp.weixin.qq.com/s/OL6HU2RigA4CDZqD0YgUEw](https://mp.weixin.qq.com/s/OL6HU2RigA4CDZqD0YgUEw)
+原文：[https://mp.weixin.qq.com/s/jvkvL8rii1Lz-5VO9B74tQ](https://mp.weixin.qq.com/s/jvkvL8rii1Lz-5VO9B74tQ)
 
 ## 1.普通散点图
 
@@ -18,7 +18,7 @@ ggplot(data = diabetes, aes(x = glucose, y = insulin)) + #数据映射
           legend.margin = margin(t = 0, r = 0, b = 0, l = 0, unit = "pt"))
 ```
 
-![](https://raw.githubusercontent.com/BioInfoCloud/ImageGo/main/markdown/20241202090647.png)
+![](https://raw.githubusercontent.com/BioInfoCloud/ImageGo/main/markdown/20241202093639.png)
 
 ## 2.添加拟合曲线的散点图
 
@@ -40,6 +40,29 @@ ggplot(data = diabetes, aes(x = glucose, y = insulin)) + #数据映射
 ```
 
 ![](https://raw.githubusercontent.com/BioInfoCloud/ImageGo/main/markdown/20241202090849.png)
+
+```R
+R = cor(diabetes$glucose,diabetes$insulin)
+p.value = cor.test(diabetes$glucose,diabetes$insulin) # <0.01
+lable = paste0("R = ",round(R,2),"\np.value < 0.01")
+ggplot(data = diabetes, aes(x = glucose, y = insulin)) + #数据映射
+  geom_point(alpha = 0.8,shape = 19,size=3,color="#DC143C") +#散点图，alpha就是点的透明度
+  # theme_bw() +#设定主题
+  labs(title = "This is a titile")+
+  geom_smooth(method = lm, aes(colour = "lm"), linewidth = 1.2,se = T)+
+  scale_color_manual(values = c("#808080")) + #手动调颜色c("#DC143C","#00008B", "#808080")
+  theme(axis.title=element_text(size=15,face="plain",color="black"),
+        axis.text = element_text(size=12,face="plain",color="black"),
+        legend.position =  "none",
+        panel.background = element_rect(fill = "transparent",colour = "black"),
+        plot.background = element_blank(),
+        plot.title = element_text(size=15, lineheight=.8,hjust=0.5, face="plain"),
+        legend.margin = margin(t = 0, r = 0, b = 0, l = 0, unit = "pt"))+ 
+  annotate('text', x= 250,y= 200,label = lable ,size = 4)
+
+```
+
+![](https://raw.githubusercontent.com/BioInfoCloud/ImageGo/main/markdown/20241202184008.png)
 
 ## 3.带分组标签的散点图
 
@@ -64,6 +87,10 @@ ggplot(data = diabetes, aes(x = glucose, y = sspg, fill = class,shape = class)) 
 ![](https://raw.githubusercontent.com/BioInfoCloud/ImageGo/main/markdown/20241202091003.png)
 
 ## 4.火山图
+
+数据样式：
+
+![](https://raw.githubusercontent.com/BioInfoCloud/ImageGo/main/markdown/20241202200932.png)
 
 ```R
 load("DESeq2-filtered-pcDEG.Rdata") # pcDEG
@@ -210,3 +237,43 @@ ggplot(data = data, aes(x = PC1, y = PC2))+
 ```
 
 ![](https://raw.githubusercontent.com/BioInfoCloud/ImageGo/main/markdown/20241202092227.png)
+
+## 6.配对样本散点图连线图
+
+```R
+library(ggplot2)
+set.seed(123)# 设置随机种子以便结果可重复
+# 生成模拟数据
+paried.data <- data.frame(
+  exp = c(rnorm(n_samples, mean = 8, sd = 1),rnorm(n_samples, mean = 13, sd = 1.2)),  # 正常组织数据
+  Type = rep(c("Normal", "Tumor"), each = 10),
+  Sample = rep(paste0("Sample",1:10),2)
+)
+dat1_paried <- reshape2::dcast(paried.data, Type~Sample) #为了防止配对样本信息错乱，构造配对样本的数据集
+# 配对 t 检验，双侧检验
+p.value <- t.test(paried.data$exp[paried.data$Type == "Normal"], 
+                  paried.data$exp[paried.data$Type == "Tumor"], 
+                  paired = TRUE, alternative = 'two.sided', conf.level = 0.95)
+pv <- p.value[["p.value"]]
+stasig <- ifelse(pv >= 0.001, paste0('p value = ', round(pv, 3)), "p value < 0.01")
+
+# 绘图
+ggplot(paried.data, aes(x = Type, y = exp,colour = Type)) +
+  geom_point(size = 3) +  #绘制散点表示单个样本的基因表达信息
+  geom_line(aes(group = Sample), color = 'black', lwd = 0.05) +  
+  scale_colour_manual(values = c('#FE7280', '#AC88FF')) + 
+  theme_classic()+ 
+  labs(y= paste0("The expression of ***\nlog2(TPM + 1)"),title= "title")+
+  theme(panel.background=element_rect(fill="white",colour="black",size=0.25),
+        plot.title = element_text(hjust = 0.5),
+        axis.line=element_line(colour="black",size=0.25),
+        axis.title.x = element_blank(),
+        axis.text.x = element_text(face = "plain",colour = "black"),
+        axis.text = element_text(size=12,face="plain",color="black"),
+        legend.position="none"
+  )+ annotate('text', x= 2,y= 5,label = stasig ,size = 4)
+```
+
+![](https://raw.githubusercontent.com/BioInfoCloud/ImageGo/main/markdown/20241202175946.png)
+
+参考：[https://mp.weixin.qq.com/s/OL6HU2RigA4CDZqD0YgUEw](https://mp.weixin.qq.com/s/OL6HU2RigA4CDZqD0YgUEw)
