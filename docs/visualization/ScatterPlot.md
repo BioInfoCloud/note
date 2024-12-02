@@ -8,7 +8,7 @@ data(diabetes, package = "mclust")
 ggplot(data = diabetes, aes(x = glucose, y = insulin)) + #数据映射
     geom_point(alpha = 0.8,shape = 19,size=3,color="#DC143C") +#散点图，alpha就是点的透明度
     # theme_bw() +#设定主题
-    labs(title = "This is a titile")+
+    labs(title = "This is a title")+
     theme(axis.title=element_text(size=15,face="plain",color="black"),
           axis.text = element_text(size=12,face="plain",color="black"),
           legend.position =  "none",
@@ -27,7 +27,7 @@ ggplot(data = diabetes, aes(x = glucose, y = insulin)) + #数据映射
 ggplot(data = diabetes, aes(x = glucose, y = insulin)) + #数据映射
   geom_point(alpha = 0.8,shape = 19,size=3,color="#DC143C") +#散点图，alpha就是点的透明度
   # theme_bw() +#设定主题
-  labs(title = "This is a titile")+
+  labs(title = "This is a title")+
   geom_smooth(method = lm, aes(colour = "lm"), linewidth = 1.2,se = T)+
   scale_color_manual(values = c("#808080")) + #手动调颜色c("#DC143C","#00008B", "#808080")
   theme(axis.title=element_text(size=15,face="plain",color="black"),
@@ -48,7 +48,7 @@ lable = paste0("R = ",round(R,2),"\np.value < 0.01")
 ggplot(data = diabetes, aes(x = glucose, y = insulin)) + #数据映射
   geom_point(alpha = 0.8,shape = 19,size=3,color="#DC143C") +#散点图，alpha就是点的透明度
   # theme_bw() +#设定主题
-  labs(title = "This is a titile")+
+  labs(title = "This is a title")+
   geom_smooth(method = lm, aes(colour = "lm"), linewidth = 1.2,se = T)+
   scale_color_manual(values = c("#808080")) + #手动调颜色c("#DC143C","#00008B", "#808080")
   theme(axis.title=element_text(size=15,face="plain",color="black"),
@@ -74,7 +74,7 @@ ggplot(data = diabetes, aes(x = glucose, y = sspg, fill = class,shape = class)) 
              stroke=0.25)+
   scale_fill_manual(values=c("#36BED9","#FF0000","#FBAD01"))+
   # theme_bw() +#设定主题
-  labs(title = "This is a titile",
+  labs(title = "This is a title",
        fill = "Legend Title")+
   theme(axis.title=element_text(size=15,face="plain",color="black"),
         axis.text = element_text(size=12,face="plain",color="black"),
