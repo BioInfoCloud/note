@@ -169,7 +169,7 @@ Survival和Phenotype数据（fromUCSC）：[微信公众号生物信息云提供
 
 ### 12 . 获取某个基因在泛癌中的表达数据
 
-geneSymbol是要分析的基因名称的向量；dataType是tpm,fpkm和count中的一种；datafolder来自 getTCGA_RNAseqData()函数下载数据，并存放在某个文件夹中，或者从这里下载（RNAseq：[微信公众号生物信息云提供的链接](https://pan.baidu.com/s/1VWz8bIlgKaUKR0ncughBhg?pwd=e6wz )），但这里下载的数据没有fpkm；geneType参照函数filterGeneTypeExpr()中的fil_col，pattern正则表达式匹配datafolder中的数据文件；paired指定是否只获取配对样本的数据；nnorm表示至少包含几个正常样本；得到的数据进行了log2转换。
+geneSymbol是要分析的基因名称的向量；dataType是tpm,fpkm和count中的一种；datafolder来自 getTCGA_RNAseqData()函数下载数据，并存放在某个文件夹中，或者从这里下载（RNAseq：[微信公众号生物信息云提供的链接](https://pan.baidu.com/s/1VWz8bIlgKaUKR0ncughBhg?pwd=e6wz )），但这里下载的数据没有fpkm；geneType参照函数filterGeneTypeExpr()中的fil_col，pattern正则表达式匹配datafolder中的数据文件；paired指定是否只获取配对样本的数据；nnorm表示至少包含几个正常样本；得到的数据进行了log2转换。还可以指定projects来选择特定的癌症类型，默认是All,表示获取所有癌症类型的数据，如果想获取其中的几种，其是一个向量，如c("TCGA-LUAD","TCGA-LUSC")
 
 ```R
 geneSymbol = c("ATG7","ATG12")
@@ -179,6 +179,7 @@ df = getGeneExpData.pancancer(datafolder,
                               geneType = "protein_coding",
                               dataType = "tpm",
                               pattern = "STARdata.Rdata$",
+                              projects = "All",
                               paired = FALSE,
                               nnorm = 10)
 ```
@@ -186,6 +187,18 @@ df = getGeneExpData.pancancer(datafolder,
 得到的数据样式如下：
 
 ![](https://raw.githubusercontent.com/BioInfoCloud/ImageGo/main/20240522130053.png)
+
+也可以使用：getTCGAgeneExpDat()，该函数不能获取配对样本。
+
+```R
+getTCGAgeneExpDat(datafolder,
+                  geneSymbol,
+                  projects = "All",
+                  geneType = "protein_coding"# FALSE
+)
+```
+
+
 
 ### 13. 单基因在泛癌中表达的箱型图可视化
 
@@ -456,7 +469,112 @@ plotDEGvolcanoFig <- function(data,x,y,cut_pvalue,cutFC,title,group,colour,label
 
 data是差异分析的结果，x是x轴的列（log2FC）,y轴是p-value/FDR，cut_pvalue是显著性的截断值，cutFC是log2FC绝对值的绝对值。title是标题，group是分组所在的列，colour是颜色，长度应该以group的唯一值相同，label是需要显示的基因名所在的列。
 
-### 2.基于组学数据的评分系统
+### 3.富集分析相关函数
+
+#### （1）enrichGO富集结果的可视化
+
+GO_KEGG.enrichVisual_barplot函数用于绘制富集分析的柱状图：
+`enrichResult`：一个enrichResult对象，即clusterProfiler::enrichGO的返回结果；
+
+`showCategory`：需要显示的术语（term）条目数，默认为6，如果富集的结果条目数少于设定值，使用富集的结果数目；
+
+`palette` ：绘制图片的调色板，默认"RdPu"；
+
+`axisTitle.x/y`：绘制图像的x/y轴的标题；
+
+`title`：标题；
+
+`save`：逻辑值，表示是否保存图片到本地，如果设置为TRUE，fileName，height，width将会被使用；
+
+`fileName`：一个字符串，表示保存文件的文件名称；
+
+`height/width`：图的高/宽。
+
+```R
+GO_KEGG.enrichVisual_barplot(enrichResult,
+                             showCategory = 6,
+                             palette = "RdPu",
+                             axisTitle.x = "Number of Gene",
+                             axisTitle.y = "Term",
+                             title = "Enrichment barplot",
+                             save = FALSE,
+                             folder = "./",
+                             fileName = "EnrichBar",
+                             height = 6,
+                             width = 10)
+```
+
+#### （2）exeGO_KEGG()一步完成GO和KEGG富集分析
+
+| geneset         | a vector of entrez gene id.                                  |
+| --------------- | ------------------------------------------------------------ |
+| `OrgDb`         | OrgDb                                                        |
+| `keyType`       | keytype of input gene                                        |
+| `pvalueCutoff`  | adjusted pvalue cutoff on enrichment tests to report         |
+| `pAdjustMethod` | one of "holm", "hochberg", "hommel", "bonferroni", "BH", "BY", "fdr", "none" |
+| `qvalueCutoff`  | qvalue cutoff on enrichment tests to report as significant. Tests must pass i) `pvalueCutoff` on unadjusted pvalues, ii) `pvalueCutoff` on adjusted pvalues and iii) `qvalueCutoff` on qvalues to be reported. |
+| `minGSSize`     | minimal size of genes annotated by Ontology term for testing. |
+| `maxGSSize`     | maximal size of genes annotated for testing                  |
+| `readable`      | whether mapping gene ID to gene Name                         |
+| KEGG            | 如果执行分析过程中KEGG报错，请将KEGG设置为FALSE。            |
+| Prefix          | 一个字符串，输出文件的文件名前缀。                           |
+| organism        | KEGG分析时使用                                               |
+
+```R
+exeGO_KEGG(geneset,
+           keyType = "SYMBOL",
+           organism = "hsa",
+           showCategory = 6,
+           pvalueCutoff = 0.05,
+           OrgDb = "org.Hs.eg.db",
+           pAdjustMethod = "BH",
+           qvalueCutoff = 0.2,
+           minGSSize = 10,
+           maxGSSize = 500,
+           readable = FALSE,
+           KEGG = TRUE,
+           save = TRUE,
+           folder = "./",
+           Prefix = "enrich",
+           height = 6,
+           width = 10)
+```
+
+### （3）一步执行GSEA
+
+
+
+| 参数          | 参数解释                                                     |
+| ------------- | ------------------------------------------------------------ |
+| data          | 差异分析得到的结果，geneDEAnalysis和arrayDataDEA_limma函数的返回结果 |
+| gseGO.ont     | 仅仅执行gseGO时有用，"MF", "CC", "BP"中的一个                |
+| OrgDb         | OrgDb，仅仅执行gseGO时有用，org.Hs.eg.db                     |
+| TERM2GENE     | "msigdbr",表示使用msigdbr数据库中的数据（基于msigdbr包），也可以是自己自定义的基因集。user input annotation of TERM TO GENE mapping, a data.frame of 2 column with term and gene. Only used when gson is NULL. |
+| `species`     | Species name, such as Homo sapiens or Mus musculus. 当TERM2GENE 设置为msigdbr包时有用。 |
+| `category`    | MSigDB collection abbreviation, such as H or C1. 当TERM2GENE 设置为msigdbr包时有用。 |
+| `subcategory` | MSigDB sub-collection abbreviation, such as CGP or BP. 当TERM2GENE 设置为msigdbr包时有用。 |
+
+```R
+exe.gseGO_GSEA(data,
+               gseGO.ont = "BP",
+               keyType = "SYMBOL",
+               OrgDb = org.Hs.eg.db,
+               species = "Homo sapiens",
+               TERM2GENE = "msigdbr",
+               category = "C5",
+               subcategory = "BP",
+               showCategory = 6,
+               pvalueCutoff=0.01,
+               fileName = "enrich",
+               save = TRUE,
+               height =4,
+               width = 7,
+               folder = "./")
+```
+
+
+
+### 3.基于组学数据的评分系统
 
 scoringSys()函数用于各种算法的评分，目前支持的方法（参数method）有"ssgsea","gsva","zscore","plage"和"CRDscore"，CRDscore方法支持单细胞数据，需要指定study.type = 'scRNAseq'【参考：[PMID: 35436363](https://pubmed.ncbi.nlm.nih.gov/35436363/)】，study.type有两个值， 'scRNAseq'和'bulk_RNAseq'。"CRDscore"方法不适合小基因集的计算，小基因集容易报错："Non-enough-overlapping genes to calculate score"。其他方法，也不建议计算小基因集的评分。
 
@@ -475,7 +593,7 @@ score <- scoringSys(expr,
                     save = TRUE,folder = ".")
 ```
 
-### 3.WGCNA
+### 4.WGCNA
 
 WGCNA.ModulesPhenotype()函数用于一键式执行WGCNA，输入表型与模块相关性热图，表型特征与模块之间的hub gene。
 
