@@ -161,6 +161,11 @@ nav:
     - ICB治疗: Literature/Review/004_2021_ICB.md
     - 2023_HNSCC: Literature/scRNAseq/2023_NC_HNSCC.md
     - 纳米材料: Literature/Review/006_Nano.md
+    - 人工智能: Literature/AI/001_AI.md
+  - 数据库工具:
+    - 在线数据库: BioInfo/database/database.md
+    - 工具或软件: BioInfo/toolsandsoftware/tands.md
+    - MedBioInfoCloud包: WeChatOfficialAccount/MedBioInfoCloud.md
   - 微信:
     - WeChatOfficialAccount/HOME.md # 使用两个index 这样子左上角第一次打开会是所有Tab 而不是ABOUT
     - 文章索引: WeChatOfficialAccount/articleIndex.md
