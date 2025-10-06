@@ -58,7 +58,7 @@ edit_uri: edit/main/docs # 编辑按钮跳转的链接
 repo_url: https://bioinfocloud.github.io/note # 右上角点击跳转的链接
 repo_name: BioInfoCloud # 右上角的名字
 ## [bottom-left corner]
-copyright: Copyright &copy; 2022 DoubleHelix # 左下角的版权声明
+copyright: Copyright &copy; 2022 - 2025 DoubleHelix # 左下角的版权声明
 ## [bottom-right corner]
 extra:
   social: # icons
