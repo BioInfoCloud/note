@@ -166,7 +166,7 @@ nav:
     - 在线数据库: BioInfo/database/database.md
     - 工具或软件: BioInfo/toolsandsoftware/tands.md
     - MedBioInfoCloud包: 
-      - 安装: WeChatOfficialAccount/MedBioInfoCloud.md
+      - 安装: package/MedBioInfoCloud.md
       - 基础函数: package/baseFun.md
       - Bulk RNA-Seq: package/BulkRNA-Seq.md
       - 富集分析: package/enrichAnalysis.md
