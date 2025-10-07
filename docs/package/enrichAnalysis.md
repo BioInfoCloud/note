@@ -71,7 +71,7 @@ exeGO_KEGG(geneset,
 
 #### （3）GSEA
 
-preRankedGeneList()用于准备排序的基因数据。data通常是差异表达分析的结果。rangeColName指定值的列名，根据该列从小到大排序，每一个字对应的名称由geneColName指定。返回一个排序好的向量。
+preRankedGeneList()用于准备排序的基因数据。data通常是差异表达分析的结果。rangeColName指定值的列名，根据该列从大到小排序，每一个值对应的名称由geneColName指定。返回一个排序好的向量。
 
 ```
 preRankedGeneList(data,geneColName = "symbol",rangeColName = "log2FC")
