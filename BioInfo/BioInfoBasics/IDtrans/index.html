@@ -1,0 +1,4419 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="生物信息云">
+      
+      
+        <meta name="author" content="DoubleHelix">
+      
+      
+        <link rel="canonical" href="https://bioinfocloud.io/BioInfo/BioInfoBasics/IDtrans/">
+      
+      
+        <link rel="prev" href="../hsa2mus_2/">
+      
+      
+        <link rel="next" href="../miRNA_ID/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>各种ID转换 - 生物信息云</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/no-footer.css">
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="生物信息云" class="md-header__button md-logo" aria-label="生物信息云" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            生物信息云
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              各种ID转换
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="light-blue"  aria-label="切换风格"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换风格" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.04 8.71V4h-4.7L12 .69 8.71 4H4v4.71L.69 12 4 15.34v4.7h4.71L12 23.35l3.34-3.31h4.7v-4.7L23.35 12zM8.83 7.05c.98 0 1.77.79 1.77 1.78a1.77 1.77 0 0 1-1.77 1.77c-.99 0-1.78-.79-1.78-1.77 0-.99.79-1.78 1.78-1.78M15.22 17c-.98 0-1.77-.8-1.77-1.78a1.77 1.77 0 0 1 1.77-1.77c.98 0 1.78.79 1.78 1.77A1.78 1.78 0 0 1 15.22 17m-6.72.03L7 15.53 15.53 7l1.5 1.5z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="orange"  aria-label="切换风格"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换风格" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-purple"  aria-label="切换风格"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="切换风格" for="__palette_3" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="purple" data-md-color-primary="black" data-md-color-accent="pink"  aria-label="切换风格"  type="radio" name="__palette" id="__palette_3">
+    
+      <label class="md-header__button md-icon" title="切换风格" for="__palette_4" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="light-green" data-md-color-primary="black" data-md-color-accent="light-blue"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_4">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.04 7 9.54s-2.94 8.27-7 9.54c.95.3 1.95.46 3 .46a10 10 0 0 0 10-10A10 10 0 0 0 9 2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://bioinfocloud.github.io/note" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    BioInfoCloud
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Programming/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  生信编程
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  生信基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Programming/R/ggplot2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  可视化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../bigdata/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  大数据
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ML/knn/kNN/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  机器学习
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../scRNAseq/scRNASeq_UP/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  专题
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Literature/RNAseq_review1/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  文献
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../database/database/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  数据库工具
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../WeChatOfficialAccount/HOME/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  微信
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ABOUT/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  关于
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="生物信息云" class="md-nav__button md-logo" aria-label="生物信息云" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    生物信息云
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://bioinfocloud.github.io/note" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    BioInfoCloud
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Programming/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    生信编程
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            生信编程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Linux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Linux/linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux讲座
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Linux/commands-concise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    命令行入门精简版
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Linux/vim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    vim
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Linux/tmux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    tmux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Linux/unix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UNIX
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Linux/kernel-compile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    内核编译
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Markdown
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Markdown
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Markdown/markdown/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Markdown讲座
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/vscode-python/vscode-python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VSCode及插件安装
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Markdown/grammars/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Markdown语法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Git/git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Git/git-demos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git例子
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Git/git-teamwork/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git合作
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Git/windows-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Windows安装Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    R
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            R
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/R/Grammar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    R语法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/R/ggplot2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    可视化
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5_3" id="__nav_1_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    R包开发
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            R包开发
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/R/01-software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    软件安装
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/R/02-DevelopmentManual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    快速手册
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/R/shiny/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shiny
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/python/links/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    语法基础
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/python/numpy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Numpy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/python/pandas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pandas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/python/Matplotlib_visualization/Matplotlib_visualization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Matplotlib
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Biopython/01_install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Biopython
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    生信基础
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            生信基础
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    生信基础
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            生信基础
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    生信引言
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基础应用
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_noun/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    生信名词
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_sequence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    测序技术原理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    数据文件格式
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../biomaRt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    biomaRt包
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../counts_RPM_RPKM_FPKM_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RNASeq表达定量
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../counts_RPM_RPKM_FPKM_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RNASeq表达定量转换
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DESeq2_edgeR_limma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RNASeq差异表达分析原理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    什么是GO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KEGG_GO_GSEA_what/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    富集分析理论基础
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hsa2mus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    人鼠基因比较
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hsa2mus_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    同源基因转换
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    各种ID转换
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../miRNA_ID/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    miRNA的ID转换
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    软件使用问题
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            软件使用问题
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RNAseq/hisat2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hisat2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    可视化
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            可视化
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/R/ggplot2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    可视化
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../visualization/ScatterPlot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    散点图
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../visualization/mult_volcano/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    多重火山图
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../visualization/colorScheme01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    配色方案1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../bigdata/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    大数据
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            大数据
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    机器学习
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            机器学习
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ML/knn/kNN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.kNN算法理论
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ML/knn/knn_py/knn_py/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.kNN实践案例
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    专题
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            专题
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    单细胞专题
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            单细胞专题
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scRNAseq/scRNASeq_UP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    单细胞上游分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scRNAseq/SeuratObj/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    了解Seurat对象
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scRNAseq/scRNASeq_down/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    单细胞下游分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scRNAseq/GSE130001/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    常规分析案例一
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scRNAseq/SingleR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    细胞注释-SingleR
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scRNAseq/Scissor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    表型关联分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scRNAseq/CellChat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    cellChat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scRNAseq/scMetabolism/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    scMetabolism
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    RNAseq专题
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            RNAseq专题
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RNAseq/pipeline_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bulk RNAseq上游分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../TCGA/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    TCGA-GEO专题
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            TCGA-GEO专题
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    药物分析
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            药物分析
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../drugAna/cellminer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CellMiner数据库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../drugAna/ADMET/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ADMET计算
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    免疫浸润
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            免疫浸润
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../immune/EaSIeR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    EaSIeR
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    数据库工具
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            数据库工具
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/CoMutDB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CoMutDB数据库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/CysModDB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CysModDB数据库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    文献
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            文献
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Literature/RNAseq_review1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RNASeq综述
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Literature/Review/001_immunoediting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    癌症免疫编辑
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Literature/Review/003_2021_immunotherapy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    癌症免疫治疗
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Literature/Review/002_DTIS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    药物靶点预测
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Literature/Review/004_2021_ICB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ICB治疗
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Literature/scRNAseq/2023_NC_HNSCC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2023_HNSCC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Literature/Review/006_Nano/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    纳米材料
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Literature/AI/001_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    人工智能
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    数据库工具
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            数据库工具
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    在线数据库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolsandsoftware/tands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    工具或软件
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    MedBioInfoCloud包
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            MedBioInfoCloud包
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../package/MedBioInfoCloud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    安装
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../package/baseFun/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基础函数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../package/BulkRNA-Seq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bulk RNA-Seq
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../package/enrichAnalysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    富集分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../package/TCGA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TCGA数据挖掘
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    微信
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            微信
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WeChatOfficialAccount/HOME/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HOME
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WeChatOfficialAccount/articleIndex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    文章索引
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../ABOUT/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    关于
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            关于
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ABOUT/announcement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    工具
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ABOUT/studentsGroup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    微信群
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>各种ID转换</h1>
+
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2020/gif/1234840/1608895684520-00d6804b-c413-4734-88a8-f5c1f384db15.gif#align=left&amp;display=inline&amp;height=76&amp;margin=%5Bobject%20Object%5D&amp;originHeight=76&amp;originWidth=640&amp;size=0&amp;status=done&amp;style=none&amp;width=640" />
+我在文章<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651265423&amp;idx=2&amp;sn=288f3c8acaad8670d35a031cd9794d58&amp;chksm=841efdf2b36974e40e29d906fe4f3a46528ea5a84d17f656ad6119f612059489b9df1416c337&amp;scene=21#wechat_redirect"><strong>常用生物信息ID的介绍</strong></a>中介绍了常见的ID，也提到一些常见的ID转换工具。
+1.Uniprot ID mapping 可以很方便地把 ID 转换为其他 ID 类型, 所包含的类型十分全面【<a href="https://www.uniprot.org/uploadlists/">https://www.uniprot.org/uploadlists/</a>】
+2.bioDBnet 网站提供了常见的 ID 转换的选项, 类型全面【<a href="https://biodbnet-abcc.ncifcrf.gov/">https://biodbnet-abcc.ncifcrf.gov/</a>】.
+3.DAVID Gene ID Conversion Tool 可以把 Gene ID 转换为多种常用类型和 DAVID ID, 方便进一步用 DAVID 做 GO 分析，常做富集分析的同学估计常用到这个工具【<a href="https://david.ncifcrf.gov/">https://david.ncifcrf.gov/</a>】。
+4.sangerbox：<a href="http://sangerbox.com/IdConversion">http://sangerbox.com/IdConversion</a>
+5.biomart工具：<a href="http://www.biomart.org/">http://www.biomart.org/</a>
+6.FunRich软件，在我之前的文章就有介绍，<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651265340&amp;idx=1&amp;sn=5c3608661698d2332b992269a8721833&amp;chksm=841efd41b3697457f96ace4eecc682cbbbe3fdf3955f0060d3aafcdff0a2d85c225d5ce3f784&amp;scene=21#wechat_redirect">FunRich数据库：一个主要用于基因和蛋白质的功能富集以及相互作用网络分析的独立的软件工具</a>。
+<strong>还有org序列的R包</strong>
+<div class="highlight"><pre><span></span><code>1   org.Ag.eg.db    Anopheles   aga eg
+2   org.At.tair.db  Arabidopsis ath tair
+3   org.Bt.eg.db    Bovine  bta eg
+4   org.Ce.eg.db    Worm    cel eg
+5   org.Cf.eg.db    Canine  cfa eg
+6   org.Dm.eg.db    Fly dme eg
+7   org.Dr.eg.db    Zebrafish   dre eg
+8   org.EcK12.eg.db E coli strain K12   eco eg
+9   org.EcSakai.eg.db   E coli strain Sakai ecs eg
+10  org.Gg.eg.db    Chicken gga eg
+11  org.Hs.eg.db    Human   hsa eg
+12  org.Mm.eg.db    Mouse   mmu eg
+13  org.Mmu.eg.db   Rhesus  mcc eg
+14  org.Pf.plasmo.db    Malaria pfa orf
+15  org.Pt.eg.db    Chimp   ptr eg
+16  org.Rn.eg.db    Rat rno eg
+17  org.Sc.sgd.db   Yeast   sce orf
+18  org.Ss.eg.db    Pig ssc eg
+19  org.Xl.eg.db    Xenopus xla eg
+</code></pre></div>
+对于在线工具的话，都是傻瓜式的转换，本文主要第通过R语言进行ID转换。首先我们介绍<strong>org序列</strong>的包。
+<strong>一.org序列包进行ID转换</strong>
+org的包总共有19个，使用方式都一样，大同小异，所以我以人的为例来介绍。人对于的注释包是org.Hs.eg.db，而鼠对应的是org.Mm.eg.db，这些包的名称主要是org.后面的那几个字母不一样，就是物种的简写。都以.db结尾。
+<div class="highlight"><pre><span></span><code>if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE))
+    install.packages(&quot;BiocManager&quot;)
+BiocManager::install(&quot;org.Hs.eg.db&quot;)
+</code></pre></div>
+对于人的org.Hs.eg.db包，依赖许多数据库的包。
+<div class="highlight"><pre><span></span><code>&gt; library(org.Hs.eg.db)
+载入需要的程辑包：AnnotationDbi
+载入需要的程辑包：stats4
+载入需要的程辑包：BiocGenerics
+载入需要的程辑包：parallel
+
+载入程辑包：‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ, clusterExport, clusterMap, parApply, parCapply, parLapply, parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colMeans, colnames, colSums, dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep, grepl,
+    intersect, is.unsorted, lapply, lengths, Map, mapply, match, mget, order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank, rbind, Reduce, rowMeans, rownames,
+    rowSums, sapply, setdiff, sort, table, tapply, union, unique, unsplit, which, which.max, which.min
+
+载入需要的程辑包：Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with &#39;browseVignettes()&#39;. To cite Bioconductor, see &#39;citation(&quot;Biobase&quot;)&#39;, and for packages &#39;citation(&quot;pkgname&quot;)&#39;.
+
+载入需要的程辑包：IRanges
+载入需要的程辑包：S4Vectors
+
+载入程辑包：‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+
+载入程辑包：‘IRanges’
+
+The following object is masked from ‘package:grDevices’:
+
+    windows
+</code></pre></div>
+org.Hs.egORGANISM函数就查看该包的物种信息。
+<div class="highlight"><pre><span></span><code>&gt; org.Hs.egORGANISM
+[1] &quot;Homo sapiens&quot;
+</code></pre></div>
+我们可以通过org.Hs.egMAPCOUNTS查看各个对象中的条目数目。org.Hs.egENSEMBL就有27161个Entrez ID与ENSEMBL对应关系。
+<div class="highlight"><pre><span></span><code>&gt; org.Hs.egMAPCOUNTS
+         org.Hs.egACCNUM       org.Hs.egACCNUM2EG        org.Hs.egALIAS2EG 
+                   40183                   789529                   123135 
+            org.Hs.egCHR      org.Hs.egCHRLENGTHS          org.Hs.egCHRLOC 
+                   60951                      455                    28065 
+      org.Hs.egCHRLOCEND         org.Hs.egENSEMBL      org.Hs.egENSEMBL2EG 
+                   28065                    27161                    30292 
+    org.Hs.egENSEMBLPROT  org.Hs.egENSEMBLPROT2EG    org.Hs.egENSEMBLTRANS 
+                    7651                    25422                     8280 
+org.Hs.egENSEMBLTRANS2EG          org.Hs.egENZYME       org.Hs.egENZYME2EG 
+                   39379                     2230                      975 
+       org.Hs.egGENENAME              org.Hs.egGO       org.Hs.egGO2ALLEGS 
+                   61119                    20408                    22792 
+          org.Hs.egGO2EG             org.Hs.egMAP          org.Hs.egMAP2EG 
+                   17983                    57875                     2045 
+           org.Hs.egOMIM         org.Hs.egOMIM2EG            org.Hs.egPATH 
+                   15815                    21093                     5869 
+        org.Hs.egPATH2EG            org.Hs.egPFAM            org.Hs.egPMID 
+                     229                     5104                    37627 
+        org.Hs.egPMID2EG         org.Hs.egPROSITE          org.Hs.egREFSEQ 
+                  600981                     5104                    38868 
+      org.Hs.egREFSEQ2EG          org.Hs.egSYMBOL       org.Hs.egSYMBOL2EG 
+                  280529                    61119                    61050 
+         org.Hs.egUCSCKG         org.Hs.egUNIGENE      org.Hs.egUNIGENE2EG 
+                   25164                    26083                    29270 
+        org.Hs.egUNIPROT 
+                   19262
+</code></pre></div>
+该包总共有37个对象
+<div class="highlight"><pre><span></span><code>&gt; names(org.Hs.egMAPCOUNTS)
+ [1] &quot;org.Hs.egACCNUM&quot;          &quot;org.Hs.egACCNUM2EG&quot;      
+ [3] &quot;org.Hs.egALIAS2EG&quot;        &quot;org.Hs.egCHR&quot;            
+ [5] &quot;org.Hs.egCHRLENGTHS&quot;      &quot;org.Hs.egCHRLOC&quot;         
+ [7] &quot;org.Hs.egCHRLOCEND&quot;       &quot;org.Hs.egENSEMBL&quot;        
+ [9] &quot;org.Hs.egENSEMBL2EG&quot;      &quot;org.Hs.egENSEMBLPROT&quot;    
+[11] &quot;org.Hs.egENSEMBLPROT2EG&quot;  &quot;org.Hs.egENSEMBLTRANS&quot;   
+[13] &quot;org.Hs.egENSEMBLTRANS2EG&quot; &quot;org.Hs.egENZYME&quot;         
+[15] &quot;org.Hs.egENZYME2EG&quot;       &quot;org.Hs.egGENENAME&quot;       
+[17] &quot;org.Hs.egGO&quot;              &quot;org.Hs.egGO2ALLEGS&quot;      
+[19] &quot;org.Hs.egGO2EG&quot;           &quot;org.Hs.egMAP&quot;            
+[21] &quot;org.Hs.egMAP2EG&quot;          &quot;org.Hs.egOMIM&quot;           
+[23] &quot;org.Hs.egOMIM2EG&quot;         &quot;org.Hs.egPATH&quot;           
+[25] &quot;org.Hs.egPATH2EG&quot;         &quot;org.Hs.egPFAM&quot;           
+[27] &quot;org.Hs.egPMID&quot;            &quot;org.Hs.egPMID2EG&quot;        
+[29] &quot;org.Hs.egPROSITE&quot;         &quot;org.Hs.egREFSEQ&quot;         
+[31] &quot;org.Hs.egREFSEQ2EG&quot;       &quot;org.Hs.egSYMBOL&quot;         
+[33] &quot;org.Hs.egSYMBOL2EG&quot;       &quot;org.Hs.egUCSCKG&quot;         
+[35] &quot;org.Hs.egUNIGENE&quot;         &quot;org.Hs.egUNIGENE2EG&quot;     
+[37] &quot;org.Hs.egUNIPROT&quot;
+</code></pre></div>
+关于这37个对象，我也不一一介绍啦，就简单说一部分。
+<div class="highlight"><pre><span></span><code>1.org.Hs.egACCNUM
+将Entrez ID标识符映射到GenBank的登录号
+2.org.Hs.egCHRLOC
+获取映射到染色体位置的Entrez ID标识符
+3.org.Hs.egENSEMBL
+用于Entrez ID与EnsemblID之间的映射
+4.org.Hs.egENSEMBLPROT
+用于Entrez ID与Ensembl蛋白ID的映射
+5.org.Hs.egENSEMBLTRANS
+用于Entrez ID与Ensembl transcript编号
+6.org.Hs.egENZYME
+Entrez基因id和酶活性(EC)之间的图谱
+7.org.Hs.egGENENAME
+Entrez ID与基因名称之间的图谱
+8.org.Hs.egGO
+Entrez ID与基因本体论(GO) id之间的映射
+9.org.Hs.egMAP
+Entrez ID和细胞遗传学图谱/条带之间的映射
+10.org.Hs.egOMIM
+Map between Entrez Gene Identifiers and Mendelian Inheritance in Man (MIM) identifiers
+11.org.Hs.egPATH
+Entrez ID和KEGG通路标识符之间的映射
+14.org.Hs.egREFSEQ
+Entrez ID与RefSeq标识符之间的映射
+15.org.Hs.egSYMBOL
+Entrez ID和基因符号之间的映射
+16.org.Hs.egUNIPROT
+Map Uniprot accession numbers with Entrez Gene identifiers
+</code></pre></div>
+可以看的出这个包的ID转换都是基于Entrez ID。我们就介绍几种。其他的也就是照葫芦画瓢啦。
+<strong>1.org.Hs.egGENENAME对象</strong>
+这个对象用于Entrez ID与基因名称的对应关系。
+我们读入一个要转换的基因文件。这个文件自己准备吧。或者自己顺便输入几个数字也可以。这个文件也就2列，第一列是Entrez ID，第二列是Gene Symbol。
+<img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1608895684519-41ba5103-e22b-4a98-924e-6b54fd42a125.png#align=left&amp;display=inline&amp;height=398&amp;margin=%5Bobject%20Object%5D&amp;originHeight=398&amp;originWidth=965&amp;size=0&amp;status=done&amp;style=none&amp;width=965" />
+<div class="highlight"><pre><span></span><code>gene &lt;- read.table(&quot;gene.txt&quot;,header = T,sep = &quot;\t&quot;,stringsAsFactors = F)
+EntrezID &lt;- gene$Entrez.ID %&gt;% as.character()
+symbol &lt;- gene$Gene.symbol
+</code></pre></div>
+我读入的文件中Entrez ID是一个数值，我们要转换为字符串，这个大家要注意一下。
+其实，转换很简单，我们只需要将我们要转换的Entrez ID以字符串向量的形式作为参数，传给org.Hs.egGENENAME就可以了。
+<div class="highlight"><pre><span></span><code>&gt; org.Hs.egGENENAME[EntrezID]
+GENENAME submap for Human (object of class &quot;AnnDbBimap&quot;)
+</code></pre></div>
+但是我们注意到，返回的是一个AnnDbBimap类的对象。我们用toTable()函数提取就可以啦。
+<div class="highlight"><pre><span></span><code>&gt; en2nm &lt;- toTable(org.Hs.egGENENAME[EntrezID])
+&gt; head(en2nm)
+    gene_id                              gene_name
+1      1002                             cadherin 4
+2     10046    mastermind like domain containing 1
+3 100507421             transmembrane protein 178B
+4     10149 adhesion G protein-coupled receptor G2
+5     10202              dehydrogenase/reductase 2
+6     10231             regulator of calcineurin 2
+</code></pre></div>
+<strong>2.org.Hs.egSYMBOL对象</strong>
+其实和上面一样的。
+<div class="highlight"><pre><span></span><code>&gt; EnID2SYMBOL &lt;- toTable(org.Hs.egSYMBOL[EntrezID])
+&gt; head(EnID2SYMBOL)
+    gene_id   symbol
+1      1002     CDH4
+2     10046   MAMLD1
+3 100507421 TMEM178B
+4     10149   ADGRG2
+5     10202    DHRS2
+6     10231    RCAN2
+</code></pre></div>
+其他对象转换也是如此。就不一一介绍啦。
+<strong>3.select函数快速玩转各种转换</strong>
+上面我们介绍的2个对象，转换都是以Entrez ID作为输入，我们以其他ID转换会报错。org.Hs.egSYMBOL这个对象是Entrez ID转换为gene SYMBOL，你以为输入SYMBOL会出Entrez ID，结果不是的。
+<div class="highlight"><pre><span></span><code>&gt; org.Hs.egSYMBOL[symbol]
+Error in .checkKeys(value, Lkeys(x), x@ifnotfound) : 
+  value for &quot;SSTR2&quot; not found
+</code></pre></div>
+当然我们可以通过继续通过toTable()函数提取所有的Entrez ID与 SYMBOL对应关系的数据框，然后通过索引取值，匹配。
+<div class="highlight"><pre><span></span><code>&gt; allEnID2SYMBO &lt;- toTable(org.Hs.egSYMBOL)
+&gt; head(allEnID2SYMBO )
+  gene_id symbol
+1       1   A1BG
+2       2    A2M
+3       3  A2MP1
+4       9   NAT1
+5      10   NAT2
+6      11   NATP
+</code></pre></div>
+那么我们先看看这个包，是一个OrgDb 对象。
+<div class="highlight"><pre><span></span><code>&gt; x &lt;- org.Hs.eg.db
+&gt; x
+OrgDb object:
+| DBSCHEMAVERSION: 2.1
+| Db type: OrgDb
+| Supporting package: AnnotationDbi
+| DBSCHEMA: HUMAN_DB
+| ORGANISM: Homo sapiens
+| SPECIES: Human
+| EGSOURCEDATE: 2018-Oct11
+| EGSOURCENAME: Entrez Gene
+| EGSOURCEURL: ftp://ftp.ncbi.nlm.nih.gov/gene/DATA
+| CENTRALID: EG
+| TAXID: 9606
+| GOSOURCENAME: Gene Ontology
+| GOSOURCEURL: ftp://ftp.geneontology.org/pub/go/godatabase/archive/latest-lite/
+| GOSOURCEDATE: 2018-Oct10
+| GOEGSOURCEDATE: 2018-Oct11
+| GOEGSOURCENAME: Entrez Gene
+| GOEGSOURCEURL: ftp://ftp.ncbi.nlm.nih.gov/gene/DATA
+| KEGGSOURCENAME: KEGG GENOME
+| KEGGSOURCEURL: ftp://ftp.genome.jp/pub/kegg/genomes
+| KEGGSOURCEDATE: 2011-Mar15
+| GPSOURCENAME: UCSC Genome Bioinformatics (Homo sapiens)
+| GPSOURCEURL: 
+| GPSOURCEDATE: 2018-Oct2
+| ENSOURCEDATE: 2018-Oct05
+| ENSOURCENAME: Ensembl
+| ENSOURCEURL: ftp://ftp.ensembl.org/pub/current_fasta
+| UPSOURCENAME: Uniprot
+| UPSOURCEURL: http://www.UniProt.org/
+| UPSOURCEDATE: Thu Oct 18 05:22:10 2018
+
+Please see: help(&#39;select&#39;) for usage information
+</code></pre></div>
+有没有看到最后一行：Please see: help('select') for usage information
+说明我们可以通过select来操作这个包。
+select：(x, keys, columns, keytype, …)，基于keys, columns和keytypes以data.frame数据类型返回数据，可以是一对多的关系，使用select函数可以把任意公共数据库的数据进行一一对应。
+keytypes ：哪些类型可以使用函数select或keys以及keytype参数，如下所示：
+<div class="highlight"><pre><span></span><code>&gt; keytypes(org.Hs.eg.db)
+ [1] &quot;ACCNUM&quot;       &quot;ALIAS&quot;        &quot;ENSEMBL&quot;      &quot;ENSEMBLPROT&quot;  &quot;ENSEMBLTRANS&quot;
+ [6] &quot;ENTREZID&quot;     &quot;ENZYME&quot;       &quot;EVIDENCE&quot;     &quot;EVIDENCEALL&quot;  &quot;GENENAME&quot;    
+[11] &quot;GO&quot;           &quot;GOALL&quot;        &quot;IPI&quot;          &quot;MAP&quot;          &quot;OMIM&quot;        
+[16] &quot;ONTOLOGY&quot;     &quot;ONTOLOGYALL&quot;  &quot;PATH&quot;         &quot;PFAM&quot;         &quot;PMID&quot;        
+[21] &quot;PROSITE&quot;      &quot;REFSEQ&quot;       &quot;SYMBOL&quot;       &quot;UCSCKG&quot;       &quot;UNIGENE&quot;     
+[26] &quot;UNIPROT&quot;  
+</code></pre></div>
+keys：返回AnnotationDb 中数据库的keys，通常是某个基因的ENSEMBL的编号，ENTREZID 的编号等，经常与select配合使用，通常情况下会返回数据库的关键词，如下所示：
+<div class="highlight"><pre><span></span><code>&gt; head(keys(org.Hs.eg.db))
+[1] &quot;1&quot;  &quot;2&quot;  &quot;3&quot;  &quot;9&quot;  &quot;10&quot; &quot;11
+</code></pre></div>
+假设我们将Entrez ID 转换成SYMBOL：
+<div class="highlight"><pre><span></span><code>ens2ent &lt;- select(org.Hs.eg.db,keys = EntrezID, 
+                  columns = &#39;SYMBOL&#39;, keytype = &#39;ENTREZID&#39;) # 见下图
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&gt; head(ens2ent)
+  ENTREZID SYMBOL
+1     6752  SSTR2
+2      107  ADCY1
+3    26290 GALNT8
+4    23305  ACSL6
+5    10882  C1QL1
+6   124602  KIF19
+</code></pre></div>
+我们也可以一次进行多种转换：
+<div class="highlight"><pre><span></span><code>ens2ent2&lt;-select(org.Hs.eg.db, #.db是这个芯片数据对应的注释包，换成其他物种的也一样。
+                keys=EntrezID,columns=c(&quot;SYMBOL&quot;,&quot;ENSEMBL&quot;,&quot;GENENAME&quot;), #clolumns参数是你要转换的ID类型是什么，这里选择三个。
+                keytype=&quot;ENTREZID&quot; )#函数里面的keytype与keys参数是对应的，keys是你输入的那些数据，keytype是指这些数据是属于什么类型的数据。
+</code></pre></div>
+我们再看看将ENSEMBL转换整SYMBOL，在<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264583&amp;idx=1&amp;sn=f94bf8d77402677ee67f5d6336088254&amp;chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&amp;scene=21#wechat_redirect">TCGA中的转录组数据</a>的行名通常是ENSEMBL，我们经常要转换成SYMBOL。我们就读入一个病人的RNASeq的counts数据。
+<div class="highlight"><pre><span></span><code>counts &lt;- read.table(&quot;TCGARNASeq.counts&quot;,header = F,sep = &quot;\t&quot;)
+Ensembl &lt;- counts[,1]
+</code></pre></div>
+<img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1608895684541-44795a02-4ec5-411c-b197-000d9fe731c0.png#align=left&amp;display=inline&amp;height=271&amp;margin=%5Bobject%20Object%5D&amp;originHeight=271&amp;originWidth=945&amp;size=0&amp;status=done&amp;style=none&amp;width=945" />
+我们去掉版本号：
+<div class="highlight"><pre><span></span><code>library(stringr)
+splitEnsembl &lt;- function(Ensembl){
+  return(str_split(Ensembl[1],&#39;[.]&#39;,simplify = T)[1]) 
+}
+Ensembl &lt;- sapply(Ensembl,splitEnsembl,simplify = T)
+head(Ensembl)
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&gt; head(Ensembl)
+[1] &quot;ENSG00000000003&quot; &quot;ENSG00000000005&quot; &quot;ENSG00000000419&quot; &quot;ENSG00000000457&quot;
+[5] &quot;ENSG00000000460&quot; &quot;ENSG00000000938&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>ens2sym &lt;- select(org.Hs.eg.db, 
+                 keys=Ensembl,columns=c(&quot;SYMBOL&quot;,&quot;GENENAME&quot;), 
+                 keytype=&quot;ENSEMBL&quot; )
+</code></pre></div>
+转换后：
+<img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1608895684475-6d91ba08-1314-4d1e-9d1c-3058c15cb6ae.png#align=left&amp;display=inline&amp;height=500&amp;margin=%5Bobject%20Object%5D&amp;originHeight=500&amp;originWidth=1080&amp;size=0&amp;status=done&amp;style=none&amp;width=1080" />
+<strong>二.利用clusterProfiler的bitr()函数转换</strong>
+其实也是基于org包，底层也是通过select()进行筛选的。
+<div class="highlight"><pre><span></span><code>library(&quot;clusterProfiler&quot;)
+ent2es &lt;- bitr(EntrezID, fromType = &quot;ENTREZID&quot;, #fromType是指你的数据ID类型是属于哪一类的
+                toType = c(&quot;ENSEMBL&quot;, &quot;SYMBOL&quot;), #toType是指你要转换成哪种ID类型，可以写多种，也可以只写一种
+                OrgDb = org.Hs.eg.db)#Orgdb是指对应的注释包是哪个
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&gt; head(ent2es)
+  ENTREZID         ENSEMBL SYMBOL
+1     6752 ENSG00000180616  SSTR2
+2      107 ENSG00000164742  ADCY1
+3    26290 ENSG00000130035 GALNT8
+4    23305 ENSG00000164398  ACSL6
+5    10882 ENSG00000131094  C1QL1
+6   124602 ENSG00000196169  KIF19
+</code></pre></div>
+<strong>三.基于AnnotationDbi包</strong>
+AnnotationDbi包其实也是org序列包的依赖包。
+<div class="highlight"><pre><span></span><code>library(AnnotationDbi)
+en2symb &lt;- mget(EntrezID,
+                org.Hs.egSYMBOL, #这个是可以选择的，选择不同，转换的ID类型也不一样
+                ifnotfound=NA)
+</code></pre></div>
+<strong>四.利用gtf文件进行转换</strong>
+gtf文件我们利用data.table::fread函数读入：
+<img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1608895684478-dfea2131-c08c-4732-992c-c75647ca2f96.png#align=left&amp;display=inline&amp;height=508&amp;margin=%5Bobject%20Object%5D&amp;originHeight=508&amp;originWidth=1077&amp;size=0&amp;status=done&amp;style=none&amp;width=1077" />
+读入的数据有9列，我们通过第3列的数据进行筛选，gene还是exon，根据自己需要，我们这里进行基因ID转换，值筛选gene就可以啦，第一列是指染色体，具体前8列信息介绍如下：
+1)  seq_id：序列的编号，一般为chr或者scanfold编号；
+2)  source: 注释的来源，一般为数据库或者注释的机构，如果未知，则用点“.”代替；
+3) type: 注释信息的类型，比如Gene、cDNA、mRNA、CDS等
+4)  start:该基因或转录本在参考序列上的起始位置；
+5)  end: 该基因或转录本在参考序列上的终止位置；
+6)  score: 得分，数字，是注释信息可能性的说明，可以是序列相似性比对时的E-values值或者基因预测是的P-values值，“.”表示为空；
+7)  strand: 该基因或转录本位于参考序列的正链(+)或负链(-)上;
+8)  phase: 仅对注释类型为“CDS”有效，表示起始编码的位置，有效值为0、1、2(对于编码蛋白质的CDS来说，本列指定下一个密码子开始的位置。每3个核苷酸翻译一个氨基酸，从0开始，CDS的起始位置，除以3，余数就是这个值，，表示到达下一个密码子需要跳过的碱基个数。该编码区第一个密码子的位置，取值0,1,2。0表示该编码框的第一个密码子第一个碱基位于其5’末端；1表示该编码框的第一个密码子的第一个碱基位于该编码区外；2表示该编码框的第一个密码子的第一、二个碱基位于该编码区外；如果Feature为CDS时，必须指明具体值。)
+我们主要是通过第9列的数据进行提取，第9列的信息很多，gene_id后面跟的就是ENSEMBL，gene_type指的是编码蛋白还是lncRNA，又或者是假基因等信息。gene_name后面的就是我们常说的SYMBOL。
+<div class="highlight"><pre><span></span><code><span class="m">1</span><span class="o">:</span><span class="w"> </span><span class="n">gene_id</span><span class="w"> </span><span class="s">&quot;ENSG00000223972.5_2&quot;</span><span class="p">;</span><span class="w"> </span><span class="n">gene_type</span><span class="w"> </span><span class="s">&quot;transcribed_unprocessed_pseudogene&quot;</span><span class="p">;</span><span class="w"> </span><span class="n">gene_name</span><span class="w"> </span><span class="s">&quot;DDX11L1&quot;</span><span class="p">;</span><span class="w"> </span><span class="n">level</span><span class="w"> </span><span class="m">2</span><span class="p">;</span><span class="w"> </span><span class="n">hgnc_id</span><span class="w"> </span><span class="s">&quot;HGNC:37102&quot;</span><span class="p">;</span><span class="w"> </span><span class="n">havana_gene</span><span class="w"> </span><span class="s">&quot;OTTHUMG00000000961.2_2&quot;</span><span class="p">;</span><span class="w"> </span><span class="n">remap_status</span><span class="w"> </span><span class="s">&quot;full_contig&quot;</span><span class="p">;</span><span class="w"> </span><span class="n">remap_num_mappings</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="n">remap_target_status</span><span class="w"> </span><span class="s">&quot;overlap&quot;</span><span class="p">;</span>
+</code></pre></div>
+我们可以通过正则表达式提取。
+<div class="highlight"><pre><span></span><code><span class="n">pattern_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;.*gene_id \&quot;([^;]+)\&quot;;.*&quot;</span>
+<span class="n">pattern_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;.*gene_name \&quot;([^;]+)\&quot;;.*&quot;</span>
+<span class="n">pattern_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;.*gene_type \&quot;([^;]+)\&quot;;.*&quot;</span>
+<span class="n">gene_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sub</span><span class="p">(</span><span class="n">pattern_id</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;\\1&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">input</span><span class="p">[[</span><span class="m">9</span><span class="p">]])</span>
+<span class="n">gene_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sub</span><span class="p">(</span><span class="n">pattern_name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;\\1&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">input</span><span class="p">[[</span><span class="m">9</span><span class="p">]])</span>
+<span class="n">ene_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sub</span><span class="p">(</span><span class="n">pattern_type</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;\\1&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">input</span><span class="p">[[</span><span class="m">9</span><span class="p">]])</span>
+</code></pre></div>
+我写了一个函数，只需要将gtf文件的路径作为参数，就可以返回一个数据框。
+<div class="highlight"><pre><span></span><code><span class="c1">###利用gtf文件进行转换</span>
+<span class="n">get_IDinfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">input</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nf">is.character</span><span class="p">(</span><span class="n">input</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kr">if</span><span class="p">(</span><span class="o">!</span><span class="nf">file.exists</span><span class="p">(</span><span class="n">input</span><span class="p">))</span><span class="w"> </span><span class="nf">stop</span><span class="p">(</span><span class="s">&quot;Bad input file.&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nf">message</span><span class="p">(</span><span class="s">&quot;Treat input as file&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data.table</span><span class="o">::</span><span class="nf">fread</span><span class="p">(</span><span class="n">input</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">data.table</span><span class="o">::</span><span class="nf">setDT</span><span class="p">(</span><span class="n">input</span><span class="p">)</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">[</span><span class="n">input</span><span class="p">[[</span><span class="m">3</span><span class="p">]]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;gene&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">]</span>
+<span class="w">  </span><span class="n">pattern_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;.*gene_id \&quot;([^;]+)\&quot;;.*&quot;</span>
+<span class="w">  </span><span class="n">pattern_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;.*gene_name \&quot;([^;]+)\&quot;;.*&quot;</span>
+<span class="w">  </span><span class="n">pattern_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;.*gene_type \&quot;([^;]+)\&quot;;.*&quot;</span>
+<span class="w">  </span><span class="n">gene_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sub</span><span class="p">(</span><span class="n">pattern_id</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;\\1&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">input</span><span class="p">[[</span><span class="m">9</span><span class="p">]])</span>
+<span class="w">  </span><span class="n">gene_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sub</span><span class="p">(</span><span class="n">pattern_name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;\\1&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">input</span><span class="p">[[</span><span class="m">9</span><span class="p">]])</span>
+<span class="w">  </span><span class="n">gene_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sub</span><span class="p">(</span><span class="n">pattern_type</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;\\1&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">input</span><span class="p">[[</span><span class="m">9</span><span class="p">]])</span>
+<span class="w">  </span><span class="n">EnsemblTOGenename</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">Ensembl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gene_id</span><span class="p">,</span>
+<span class="w">                                  </span><span class="n">gene_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gene_name</span><span class="p">,</span>
+<span class="w">                                  </span><span class="n">gene_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gene_type</span><span class="p">,</span>
+<span class="w">                                  </span><span class="n">stringsAsFactors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
+<span class="w">  </span><span class="kr">return</span><span class="p">(</span><span class="n">EnsemblTOGenename</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">#gtf文件路径，注意更改</span>
+<span class="n">gtfpath</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;F:/MedBioInfoCloud/human.v33lift37.annotation.gtf&quot;</span>
+<span class="n">ens2symInfo</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">get_IDinfo</span><span class="p">(</span><span class="n">gtfpath</span><span class="p">)</span><span class="w"> </span>
+<span class="n">ens2symInfo</span><span class="o">$</span><span class="n">Ensembl</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">substr</span><span class="p">(</span><span class="n">ens2symInfo</span><span class="p">[,</span><span class="s">&quot;Ensembl&quot;</span><span class="p">],</span><span class="m">1</span><span class="p">,</span><span class="m">15</span><span class="p">)</span><span class="c1">#去掉版本号</span>
+</code></pre></div>
+这样就找到了"ENSEMBL"与"SYMBOL"的对应关系。
+<img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1608895684526-9b665e60-081f-4f4f-8b79-a4b92cd56c30.png#align=left&amp;display=inline&amp;height=388&amp;margin=%5Bobject%20Object%5D&amp;originHeight=388&amp;originWidth=1080&amp;size=0&amp;status=done&amp;style=none&amp;width=1080" />
+我们可以保存为R对象，以后就可以直接读入了，也不需要每次都处理一次。
+<div class="highlight"><pre><span></span><code><span class="c1">#可以将其保存为R对象，以后每次都不需要进行转换啦。</span>
+<span class="nf">save</span><span class="p">(</span><span class="n">ens2symInfo</span><span class="p">,</span><span class="s">&quot;ens2symInfo.Rdata&quot;</span><span class="p">)</span>
+</code></pre></div>
+gtf注释文件下载：
+<img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1608895684630-a4c801fb-1be1-400d-a533-32090ac1241c.png#align=left&amp;display=inline&amp;height=280&amp;margin=%5Bobject%20Object%5D&amp;originHeight=280&amp;originWidth=280&amp;size=0&amp;status=done&amp;style=none&amp;width=280" />
+链接：<a href="https://pan.baidu.com/s/1CxAqCwEAXS9v7Oaiep_lGQ">https://pan.baidu.com/s/1CxAqCwEAXS9v7Oaiep_lGQ</a>
+提取码：0fb6，
+也可以从官网下载：<a href="https://www.gencodegenes.org/human/">https://www.gencodegenes.org/human/</a>
+下面是本文代码：
+<img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1608895684564-290b5b45-3d1a-4e3c-b21d-5e17de82f677.png#align=left&amp;display=inline&amp;height=280&amp;margin=%5Bobject%20Object%5D&amp;originHeight=280&amp;originWidth=280&amp;size=0&amp;status=done&amp;style=none&amp;width=280" />
+链接：<a href="https://pan.baidu.com/s/15hx5-wElRjGfZrVcdyhLzw">https://pan.baidu.com/s/15hx5-wElRjGfZrVcdyhLzw</a> 
+提取码：23hr
+如果失效，后台回复：<strong>geneID转换</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 - 2025 DoubleHelix
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://space.bilibili.com/434318322" target="_blank" rel="noopener" title="Bilibili | BioInfoCloud" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/BioInfoCloud" target="_blank" rel="noopener" title="GitHub | BioInfoCloud" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../../mkdocs/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
