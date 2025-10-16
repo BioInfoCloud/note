@@ -126,6 +126,7 @@ nav:
     - 综合教程: Programming/R/ggplot2.md
     - 散点图: visualization/ScatterPlot.md
     - 多重火山图: visualization/mult_volcano.md
+    - 配色方案1: visualization/colorScheme01.md
   - 大数据:
     - 学习计划: bigdata/index.md
   - 机器学习:
