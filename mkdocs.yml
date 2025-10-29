@@ -134,6 +134,7 @@ nav:
     - 2.kNN实践案例: ML/knn/knn_py/knn_py.md
   - 专题:
     - 单细胞专题: 
+        - 单细胞相关数据库: BioInfo/database/scList.md
         - 单细胞上游分析: BioInfo/scRNAseq/scRNASeq_UP.md
         - 了解Seurat对象: BioInfo/scRNAseq/SeuratObj.md
         - 单细胞下游分析: BioInfo/scRNAseq/scRNASeq_down.md
@@ -152,6 +153,7 @@ nav:
     - 免疫浸润: 
         - EaSIeR: BioInfo/immune/EaSIeR.md       
     - 数据库工具: 
+        - 单细胞相关数据库: BioInfo/database/scList.md
         - CoMutDB数据库: BioInfo/database/CoMutDB.md
         - CysModDB数据库: BioInfo/database/CysModDB.md
   - 文献:
@@ -164,6 +166,7 @@ nav:
     - 纳米材料: Literature/Review/006_Nano.md
     - 人工智能: Literature/AI/001_AI.md
   - 数据库工具:
+    - 单细胞相关数据库: BioInfo/database/scList.md
     - 在线数据库: BioInfo/database/database.md
     - 工具或软件: BioInfo/toolsandsoftware/tands.md
     - MedBioInfoCloud包: 
