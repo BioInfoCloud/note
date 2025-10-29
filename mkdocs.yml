@@ -153,7 +153,6 @@ nav:
     - 免疫浸润: 
         - EaSIeR: BioInfo/immune/EaSIeR.md       
     - 数据库工具: 
-        - 单细胞相关数据库: BioInfo/database/scList.md
         - CoMutDB数据库: BioInfo/database/CoMutDB.md
         - CysModDB数据库: BioInfo/database/CysModDB.md
   - 文献:
