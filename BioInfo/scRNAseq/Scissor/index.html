@@ -1,0 +1,4668 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="生物信息云">
+      
+      
+        <meta name="author" content="DoubleHelix">
+      
+      
+        <link rel="canonical" href="https://bioinfocloud.io/BioInfo/scRNAseq/Scissor/">
+      
+      
+        <link rel="prev" href="../SingleR/">
+      
+      
+        <link rel="next" href="../CellChat/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>表型关联分析 - 生物信息云</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/no-footer.css">
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="生物信息云" class="md-header__button md-logo" aria-label="生物信息云" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            生物信息云
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              表型关联分析
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="light-blue"  aria-label="切换风格"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换风格" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.04 8.71V4h-4.7L12 .69 8.71 4H4v4.71L.69 12 4 15.34v4.7h4.71L12 23.35l3.34-3.31h4.7v-4.7L23.35 12zM8.83 7.05c.98 0 1.77.79 1.77 1.78a1.77 1.77 0 0 1-1.77 1.77c-.99 0-1.78-.79-1.78-1.77 0-.99.79-1.78 1.78-1.78M15.22 17c-.98 0-1.77-.8-1.77-1.78a1.77 1.77 0 0 1 1.77-1.77c.98 0 1.78.79 1.78 1.77A1.78 1.78 0 0 1 15.22 17m-6.72.03L7 15.53 15.53 7l1.5 1.5z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="orange"  aria-label="切换风格"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换风格" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-purple"  aria-label="切换风格"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="切换风格" for="__palette_3" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="purple" data-md-color-primary="black" data-md-color-accent="pink"  aria-label="切换风格"  type="radio" name="__palette" id="__palette_3">
+    
+      <label class="md-header__button md-icon" title="切换风格" for="__palette_4" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="light-green" data-md-color-primary="black" data-md-color-accent="light-blue"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_4">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.04 7 9.54s-2.94 8.27-7 9.54c.95.3 1.95.46 3 .46a10 10 0 0 0 10-10A10 10 0 0 0 9 2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://bioinfocloud.github.io/note" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    BioInfoCloud
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Programming/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  生信编程
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  生信基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Programming/R/ggplot2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  可视化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../bigdata/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  大数据
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ML/knn/kNN/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  机器学习
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../scRNASeq_UP/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  专题
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Literature/RNAseq_review1/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  文献
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../database/scList/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  数据库工具
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../WeChatOfficialAccount/HOME/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  微信
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ABOUT/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  关于
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="生物信息云" class="md-nav__button md-logo" aria-label="生物信息云" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    生物信息云
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://bioinfocloud.github.io/note" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    BioInfoCloud
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Programming/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    生信编程
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            生信编程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Linux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Linux/linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux讲座
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Linux/commands-concise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    命令行入门精简版
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Linux/vim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    vim
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Linux/tmux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    tmux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Linux/unix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UNIX
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Linux/kernel-compile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    内核编译
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Markdown
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Markdown
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Markdown/markdown/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Markdown讲座
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/vscode-python/vscode-python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VSCode及插件安装
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Markdown/grammars/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Markdown语法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Git/git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Git/git-demos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git例子
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Git/git-teamwork/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git合作
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Git/windows-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Windows安装Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    R
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            R
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/R/Grammar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    R语法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/R/ggplot2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    可视化
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5_3" id="__nav_1_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    R包开发
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            R包开发
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/R/01-software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    软件安装
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/R/02-DevelopmentManual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    快速手册
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/R/shiny/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shiny
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/python/links/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    语法基础
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/python/numpy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Numpy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/python/pandas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pandas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/python/Matplotlib_visualization/Matplotlib_visualization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Matplotlib
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Biopython/01_install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Biopython
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    生信基础
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            生信基础
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    生信基础
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            生信基础
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BioInfoBasics/Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    生信引言
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BioInfoBasics/01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基础应用
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BioInfoBasics/02_noun/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    生信名词
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BioInfoBasics/03_sequence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    测序技术原理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BioInfoBasics/04_format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    数据文件格式
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BioInfoBasics/biomaRt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    biomaRt包
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BioInfoBasics/counts_RPM_RPKM_FPKM_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RNASeq表达定量
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BioInfoBasics/counts_RPM_RPKM_FPKM_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RNASeq表达定量转换
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BioInfoBasics/DESeq2_edgeR_limma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RNASeq差异表达分析原理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BioInfoBasics/GO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    什么是GO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BioInfoBasics/KEGG_GO_GSEA_what/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    富集分析理论基础
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BioInfoBasics/hsa2mus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    人鼠基因比较
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BioInfoBasics/hsa2mus_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    同源基因转换
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BioInfoBasics/IDtrans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    各种ID转换
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BioInfoBasics/miRNA_ID/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    miRNA的ID转换
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    软件使用问题
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            软件使用问题
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RNAseq/hisat2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hisat2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    可视化
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            可视化
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/R/ggplot2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    可视化
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../visualization/visualizationList/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    公众号文章参考
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../visualization/ScatterPlot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    散点图
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../visualization/mult_volcano/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    多重火山图
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../visualization/colorScheme01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    配色方案1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../bigdata/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    大数据
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            大数据
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    机器学习
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            机器学习
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ML/knn/kNN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.kNN算法理论
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ML/knn/knn_py/knn_py/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.kNN实践案例
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    专题
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            专题
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    单细胞专题
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            单细胞专题
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scRNASeq_UP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    单细胞上游分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SeuratObj/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    了解Seurat对象
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scRNASeq_down/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    单细胞下游分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GSE130001/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    常规分析案例一
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SingleR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    细胞注释-SingleR
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    表型关联分析
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    表型关联分析
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      一.原理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      二.案例
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二.案例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.准备单细胞数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-scissor-cox" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.将 Scissor 与Cox回归一起应用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.将 Scissor 与Cox回归一起应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21rnaseq" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1准备RNAseq数据和表型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-scissor" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.执行 Scissor 以选择信息细胞
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-scissor" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.将 Scissor 与逻辑回归一起应用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.将 Scissor 与逻辑回归一起应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41rnaseq" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1准备RNAseq数据和表型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42scissor" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2执行Scissor 选择信息细胞
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.可靠性显著性试验
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.细胞水平评估
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CellChat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    cellChat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scMetabolism/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    scMetabolism
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/scList/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    单细胞相关数据库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    RNAseq专题
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            RNAseq专题
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RNAseq/pipeline_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bulk RNAseq上游分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../TCGA/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    TCGA-GEO专题
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            TCGA-GEO专题
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    药物分析
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            药物分析
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../drugAna/cellminer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CellMiner数据库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../drugAna/ADMET/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ADMET计算
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    免疫浸润
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            免疫浸润
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../immune/EaSIeR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    EaSIeR
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    数据库工具
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            数据库工具
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/CoMutDB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CoMutDB数据库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/CysModDB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CysModDB数据库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    文献
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            文献
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Literature/RNAseq_review1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RNASeq综述
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Literature/Review/001_immunoediting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    癌症免疫编辑
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Literature/Review/003_2021_immunotherapy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    癌症免疫治疗
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Literature/Review/002_DTIS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    药物靶点预测
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Literature/Review/004_2021_ICB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ICB治疗
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Literature/scRNAseq/2023_NC_HNSCC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2023_HNSCC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Literature/Review/006_Nano/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    纳米材料
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Literature/AI/001_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    人工智能
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    数据库工具
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            数据库工具
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/scList/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    单细胞相关数据库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    在线数据库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolsandsoftware/tands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    工具或软件
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    MedBioInfoCloud包
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4">
+            <span class="md-nav__icon md-icon"></span>
+            MedBioInfoCloud包
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../package/MedBioInfoCloud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    安装
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../package/baseFun/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基础函数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../package/BulkRNA-Seq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bulk RNA-Seq
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../package/enrichAnalysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    富集分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../package/TCGA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TCGA数据挖掘
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    微信
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            微信
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WeChatOfficialAccount/HOME/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HOME
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WeChatOfficialAccount/articleIndex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    文章索引
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../ABOUT/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    关于
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            关于
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ABOUT/announcement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    工具
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ABOUT/studentsGroup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    微信群
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      一.原理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      二.案例
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二.案例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.准备单细胞数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-scissor-cox" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.将 Scissor 与Cox回归一起应用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.将 Scissor 与Cox回归一起应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21rnaseq" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1准备RNAseq数据和表型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-scissor" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.执行 Scissor 以选择信息细胞
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-scissor" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.将 Scissor 与逻辑回归一起应用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.将 Scissor 与逻辑回归一起应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41rnaseq" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1准备RNAseq数据和表型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42scissor" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2执行Scissor 选择信息细胞
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.可靠性显著性试验
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.细胞水平评估
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>表型关联分析</h1>
+
+<h2 id="_1">一.原理<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>参考文献：https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9010342/</p>
+<p>单细胞 RNA 测序可区分异质组织背景下的细胞类型、状态和谱系。然而，目前的单细胞数据无法直接将具有特定表型的细胞簇联系起来。 Scissor是一种从与给定表型相关的单细胞数据中识别细胞亚群的方法。Scissor 通过首先量化每个单细胞和每个批量样本之间的相似性来整合表型相关的大量表达数据和单细胞数据。然后，它使用样本表型优化相关矩阵的回归模型，以识别相关亚群。</p>
+<p>Scissor的工作流程如图1所示。将m和n分别表示为单元编号和大样本编号。剪式输入的三个数据源是具有m个细胞的单细胞表达矩阵、具有n个样本的批量分析数据和感兴趣的样本表型Y（如图1a）。Y注释每个大样本，可以是连续因变量、二元组指示向量或临床生存数据。Scissor首先对单个单元格和批量表达式数据使用分位数归一化，以消除潜在的批处理效应。之后，为每对细胞和批量样本计算皮尔逊相关矩阵S=(s~ij~)~n×m~，以量化单细胞数据和批量数据之间的相似性，其中s~ij~是标准化单细胞和批量数据中样本i和细胞j共同基因的相关性。</p>
+<p><img alt="" src="https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202302232208694.png" /></p>
+<p>Scissor优化了相关矩阵S与样本表型Y的回归模型（图1b）。设<em>β</em>表示单元上的系数向量，l(<em>β</em>)表示适当选择的对数似然函数。l(<em>β</em>)的公式取决于输入表型Y，即连续因变量的线性回归、二分变量的逻辑回归（分类）和临床生存数据的Cox回归。由于单独的细胞亚群可以驱动感兴趣的表型，我们对模型施加稀疏惩罚（<em>l</em>~1~-norm），以选择对给定表型重要的高置信度细胞。此外，基于网络的惩罚迫使网络中紧密连接的节点（细胞）具有更相似的系数，使得表型与细胞的关联结果更一致和可解释。受此启发，我们使用Seurat中计算的共享最近邻图作为细胞-细胞相似性网络<em>G</em>，并将相应的图正则化应用于回归模型。总体而言，Scissor 被制定为以下网络正则化稀疏回归模型:</p>
+<p><img alt="" src="https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202302211659156.png" /></p>
+<p>其中 L 是对称归一化拉普拉斯矩阵，定义为:</p>
+<p><img alt="" src="https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202302211700640.png" /></p>
+<p>其中A＝(a~ij~)~m×m~是G的二进制或加权邻接矩阵。如果单元i和j在G中连接，则a~ij~等于1或范围为0到1的值，否则a~ij~＝0。D=(d~ij~)~m×m~是G的度矩阵，其中<img src="https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202302211705177.png" style="zoom:50%;" />，并且对于i≠j时<em>d~i,j~</em> = 0。调整参数λ控制惩罚的整体强度，λ平衡平滑度和稀疏度的正则化量。</p>
+<p>通过上述优化模型求解的β的非零系数用于选择与感兴趣表型相关的细胞亚群（图1c）。根据β的符号，我们用Scissor+细胞和Scissor-细胞表示选择的细胞，它们分别与感兴趣的表型正相关和负相关。系数为零的单元表示为背景单元。此外，为了控制single-cell和bulk数据之间的错误关联，我们设计了可靠性显著性测试，以确定所选数据是否适合我们的表型与细胞关联（图1d）。最后，Scissor选择的细胞将通过几个下游分析进一步研究，如差异表达基因分析、功能富集分析和基序分析，以揭示所选细胞亚群的潜在生物学机制（图1e）。</p>
+<p>对数似然函数l(<em>β</em>)的公式取决于表型Y的类型。Scissor可以做到：（1）连续因变量的线性回归；（2）二分变量分类；（3） 临床生存数据的Cox回归。具体而言，将 <em>S~i~</em> = (<em>s~i1~</em>,<em>s~i2~</em>,⋯,<em>s~im~</em>)^T^ 表示为样本 i 在所有 m 个单元格中的相关系数。如果 Y=(y~1~,y~2~,⋯,y~n~)^T^ 是连续变量，则使用线性回归对数似然函数：</p>
+<p><img alt="" src="https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202302211734785.png" /></p>
+<p>如果 Y 是二元组指标向量，例如 yi ∈{0,1}，则使用逻辑回归对数似然函数：</p>
+<p><img alt="" src="https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202302211735615.png" /></p>
+<p>对于受独立审查的事件间结果，考虑Cox回归。设T~i~为非负事件时间，C~i~为审查时间。将<img src="https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202302211738988.png" style="zoom:50%;" />表示为观察到的事件时间或删失时间，δ~i~ = I(T~i~ ≤ C~i~)作为事件指示器，其中I(.)是指示器函数。使用以下对数似然函数：</p>
+<p><img alt="" src="https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202302211739182.png" /></p>
+<p>其中 <img src="https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202302211741799.png" style="zoom:67%;" />表示在时间T^^^~i~时的风险集。</p>
+<h2 id="_2">二.案例<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="1">1.准备单细胞数据<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">devtools</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&#39;sunduanchen/Scissor&#39;</span><span class="p">)</span><span class="c1">#安装包</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">Scissor</span><span class="p">)</span>
+<span class="n">location</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;https://xialab.s3-us-west-2.amazonaws.com/Duanchen/Scissor_data/&quot;</span>
+<span class="nf">load</span><span class="p">(</span><span class="nf">url</span><span class="p">(</span><span class="nf">paste0</span><span class="p">(</span><span class="n">location</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;scRNA-seq.RData&#39;</span><span class="p">)))</span>
+<span class="nf">ls</span><span class="p">()</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">sc_dataset</span><span class="p">)[,</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">MedBioInfoCloud</span><span class="o">:</span><span class="w"> </span><span class="nf">head</span><span class="p">(</span><span class="n">sc_dataset</span><span class="p">)[,</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">]</span>
+<span class="w">              </span><span class="n">AAACCTGAGACTACAA_15</span><span class="w"> </span><span class="n">AAACCTGAGACTTGAA_20</span><span class="w"> </span><span class="n">AAACCTGAGCGCCTTG_15</span>
+<span class="n">RP11</span><span class="m">-34</span><span class="n">P13.3</span><span class="w">                    </span><span class="m">0</span><span class="w">                   </span><span class="m">0</span><span class="w">                   </span><span class="m">0</span>
+<span class="n">FAM138A</span><span class="w">                         </span><span class="m">0</span><span class="w">                   </span><span class="m">0</span><span class="w">                   </span><span class="m">0</span>
+<span class="n">OR4F5</span><span class="w">                           </span><span class="m">0</span><span class="w">                   </span><span class="m">0</span><span class="w">                   </span><span class="m">0</span>
+<span class="n">RP11</span><span class="m">-34</span><span class="n">P13.7</span><span class="w">                    </span><span class="m">0</span><span class="w">                   </span><span class="m">0</span><span class="w">                   </span><span class="m">0</span>
+<span class="n">RP11</span><span class="m">-34</span><span class="n">P13.8</span><span class="w">                    </span><span class="m">0</span><span class="w">                   </span><span class="m">0</span><span class="w">                   </span><span class="m">0</span>
+<span class="n">RP11</span><span class="m">-34</span><span class="n">P13.14</span><span class="w">                   </span><span class="m">0</span><span class="w">                   </span><span class="m">0</span><span class="w">                   </span><span class="m">0</span>
+</code></pre></div>
+<p>在这个 LUAD scRNA-seq 数据中，每一行代表一个基因，每一列代表一个癌细胞。共有33694个基因和4102个癌症细胞。对于Scissor中使用的scRNA-seq数据，优选包含预处理数据和构建网络的Seurat对象。我们使用Seurat包中的函数来预处理这些数据并构建细胞-细胞相似性网络。在这个包中，我们将Seurat分析管道打包为以下函数：</p>
+<div class="highlight"><pre><span></span><code><span class="n">sc_dataset</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">Seurat_preprocessing</span><span class="p">(</span><span class="n">sc_dataset</span><span class="p">,</span><span class="w"> </span><span class="n">verbose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">F</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">MedBioInfoCloud</span><span class="o">:</span><span class="w"> </span><span class="nf">class</span><span class="p">(</span><span class="n">sc_dataset</span><span class="p">)</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;Seurat&quot;</span>
+<span class="nf">attr</span><span class="p">(,</span><span class="s">&quot;package&quot;</span><span class="p">)</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;SeuratObject&quot;</span>
+<span class="n">MedBioInfoCloud</span><span class="o">:</span><span class="w"> </span><span class="nf">names</span><span class="p">(</span><span class="n">sc_dataset</span><span class="p">)</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;RNA&quot;</span><span class="w">     </span><span class="s">&quot;RNA_nn&quot;</span><span class="w">  </span><span class="s">&quot;RNA_snn&quot;</span><span class="w"> </span><span class="s">&quot;pca&quot;</span><span class="w">     </span><span class="s">&quot;tsne&quot;</span><span class="w">    </span><span class="s">&quot;umap&quot;</span><span class="w"> </span>
+</code></pre></div>
+<p>它包含所需的预处理矩阵和构建的细胞间相似性网络，以及其他有用的降维结果，例如 PCA、t-SNE 和 UMAP。</p>
+<p>用户可以在此函数中调整预处理参数以实现不同的目标，并将其他相关的 Seurat 函数应用于 sc_dataset。例如，我们可以使用 UMAP 坐标可视化这 4,102 个细胞：</p>
+<div class="highlight"><pre><span></span><code><span class="nf">DimPlot</span><span class="p">(</span><span class="n">sc_dataset</span><span class="p">,</span><span class="w"> </span><span class="n">reduction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;umap&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">T</span><span class="p">,</span><span class="w"> </span><span class="n">label.size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">7</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="" src="https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202302221046179.png" /></p>
+<p>此外，用户还可以使用自己的 Seurat 分析管道（需要归一化数据和构建的网络）或其他工具预处理的 scRNA-seq 数据集来提供 Seurat 对象。可参考去哦前面单细胞的文章。</p>
+<h3 id="2-scissor-cox">2.将 Scissor 与Cox回归一起应用<a class="headerlink" href="#2-scissor-cox" title="Permanent link">&para;</a></h3>
+<h4 id="21rnaseq">2.1准备RNAseq数据和表型<a class="headerlink" href="#21rnaseq" title="Permanent link">&para;</a></h4>
+<p>我们加载预处理的 LUAD 大量表达矩阵和从癌症基因组图谱 (TCGA) 下载的相应生存数据。</p>
+<div class="highlight"><pre><span></span><code><span class="nf">load</span><span class="p">(</span><span class="nf">url</span><span class="p">(</span><span class="nf">paste0</span><span class="p">(</span><span class="n">location</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;TCGA_LUAD_exp1.RData&#39;</span><span class="p">)))</span>
+<span class="nf">load</span><span class="p">(</span><span class="nf">url</span><span class="p">(</span><span class="nf">paste0</span><span class="p">(</span><span class="n">location</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;TCGA_LUAD_survival.RData&#39;</span><span class="p">)))</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">bulk_dataset</span><span class="p">)[,</span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">]</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">bulk_survival</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">MedBioInfoCloud</span><span class="o">:</span><span class="w"> </span><span class="nf">head</span><span class="p">(</span><span class="n">bulk_dataset</span><span class="p">)[,</span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">]</span>
+<span class="w">         </span><span class="n">TCGA</span><span class="m">-05-4249</span><span class="w"> </span><span class="n">TCGA</span><span class="m">-05-4250</span><span class="w"> </span><span class="n">TCGA</span><span class="m">-05-4382</span><span class="w"> </span><span class="n">TCGA</span><span class="m">-05-4384</span>
+<span class="n">TSPAN6</span><span class="w">      </span><span class="m">57.523977</span><span class="w">   </span><span class="m">66.4940573</span><span class="w">    </span><span class="m">30.905120</span><span class="w">    </span><span class="m">35.104344</span>
+<span class="n">TNMD</span><span class="w">         </span><span class="m">0.000000</span><span class="w">    </span><span class="m">0.1748819</span><span class="w">     </span><span class="m">0.000000</span><span class="w">     </span><span class="m">0.000000</span>
+<span class="n">DPM1</span><span class="w">        </span><span class="m">98.838134</span><span class="w">  </span><span class="m">135.2046911</span><span class="w">    </span><span class="m">84.362971</span><span class="w">    </span><span class="m">89.105535</span>
+<span class="n">SCYL3</span><span class="w">       </span><span class="m">16.233391</span><span class="w">    </span><span class="m">6.0050820</span><span class="w">     </span><span class="m">6.226792</span><span class="w">    </span><span class="m">16.930497</span>
+<span class="n">C1orf112</span><span class="w">     </span><span class="m">5.139334</span><span class="w">    </span><span class="m">7.4082268</span><span class="w">     </span><span class="m">4.778406</span><span class="w">     </span><span class="m">4.139623</span>
+<span class="n">FGR</span><span class="w">         </span><span class="m">20.750354</span><span class="w">   </span><span class="m">24.0549654</span><span class="w">    </span><span class="m">48.509972</span><span class="w">    </span><span class="m">35.823591</span>
+<span class="n">MedBioInfoCloud</span><span class="o">:</span><span class="w"> </span><span class="nf">head</span><span class="p">(</span><span class="n">bulk_survival</span><span class="p">)</span>
+<span class="w">  </span><span class="n">TCGA_patient_barcode</span><span class="w"> </span><span class="n">OS_time</span><span class="w"> </span><span class="n">Status</span>
+<span class="m">1</span><span class="w">         </span><span class="n">TCGA</span><span class="m">-05-4249</span><span class="w">    </span><span class="m">1158</span><span class="w">      </span><span class="m">0</span>
+<span class="m">2</span><span class="w">         </span><span class="n">TCGA</span><span class="m">-05-4250</span><span class="w">     </span><span class="m">121</span><span class="w">      </span><span class="m">1</span>
+<span class="m">3</span><span class="w">         </span><span class="n">TCGA</span><span class="m">-05-4382</span><span class="w">     </span><span class="m">607</span><span class="w">      </span><span class="m">0</span>
+<span class="m">4</span><span class="w">         </span><span class="n">TCGA</span><span class="m">-05-4384</span><span class="w">     </span><span class="m">426</span><span class="w">      </span><span class="m">0</span>
+<span class="m">5</span><span class="w">         </span><span class="n">TCGA</span><span class="m">-05-4389</span><span class="w">    </span><span class="m">1369</span><span class="w">      </span><span class="m">0</span>
+<span class="m">6</span><span class="w">         </span><span class="n">TCGA</span><span class="m">-05-4390</span><span class="w">    </span><span class="m">1126</span><span class="w">      </span><span class="m">0</span>
+</code></pre></div>
+<p>数据共有56716个基因和471个样本。用户不需要保留单细胞样本和批量样本之间的共同基因，这可以在 Scissor 中自动实现。此外，所有这些样本都有临床结果。</p>
+<p>临床生存表型需要两列矩阵，其中列名为“时间”和“状态”。第一列包含样本ID（观察值），其顺序应与表达矩阵中的列相同。</p>
+<div class="highlight"><pre><span></span><code><span class="nf">all</span><span class="p">(</span><span class="nf">colnames</span><span class="p">(</span><span class="n">bulk_dataset</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">bulk_survival</span><span class="o">$</span><span class="n">TCGA_patient_barcode</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">phenotype</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">bulk_survival</span><span class="p">[,</span><span class="m">2</span><span class="o">:</span><span class="m">3</span><span class="p">]</span>
+<span class="nf">colnames</span><span class="p">(</span><span class="n">phenotype</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;time&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;status&quot;</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">phenotype</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="22-scissor">2.2.执行 Scissor 以选择信息细胞<a class="headerlink" href="#22-scissor" title="Permanent link">&para;</a></h4>
+<p>鉴于上述输入，我们可以使用 Scissor 来选择与表型相关的细胞亚群，该亚群由 Cox 回归模型（family = 'cox'）拟合：</p>
+<div class="highlight"><pre><span></span><code><span class="n">infos1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">Scissor</span><span class="p">(</span><span class="n">bulk_dataset</span><span class="p">,</span><span class="w"> </span><span class="n">sc_dataset</span><span class="p">,</span><span class="w"> </span><span class="n">phenotype</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.05</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                 </span><span class="n">family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;cox&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Save_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;Scissor_LUAD_survival.RData&#39;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;|**************************************************|&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;Performing quality-check for the correlations&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;The five-number summary of correlations:&quot;</span>
+<span class="w">        </span><span class="m">0</span><span class="o">%        25%</span><span class="w">        </span><span class="m">50</span><span class="o">%        75%</span><span class="w">       </span><span class="m">100</span><span class="o">% </span>
+<span class="o">0.01319134 0.19658357 0.23945759 0.29808510 0.83727807 </span>
+<span class="o">[1] &quot;|**************************************************|&quot;</span>
+<span class="o">[1] &quot;Perform cox regression on the given clinical outcomes:&quot;</span>
+<span class="o">[1] &quot;alpha = 0.05&quot;</span>
+<span class="o">[1] &quot;Scissor identified 201 Scissor+ cells and 4 Scissor- cells.&quot;</span>
+<span class="o">[1] &quot;The percentage of selected cell is: 4.998%</span><span class="s">&quot;</span>
+<span class="s">[1] &quot;</span><span class="o">|**************************************************|</span><span class="s">&quot;</span>
+</code></pre></div>
+<p>如打印消息所示，Scissor首先输出单细胞样本和大样本之间相关性的五个数字摘要。我们发现所有的相关性都是正的，并且这些值不接近0。在实际应用中，如果使用的数据集的中值相关性太低（&lt;0.01），Scissor将发出警告信息，这可能会导致不可靠的表型与细胞的关联。</p>
+<p>Scissor 总共识别出 201 个与较差生存相关的 Scissor+ 细胞和 4 个与良好生存相关的 Scissor- 细胞，这些细胞保存在 infos1 中：</p>
+<div class="highlight"><pre><span></span><code><span class="n">MedBioInfoCloud</span><span class="o">:</span><span class="w"> </span><span class="nf">names</span><span class="p">(</span><span class="n">infos1</span><span class="p">)</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;para&quot;</span><span class="w">        </span><span class="s">&quot;Coefs&quot;</span><span class="w">       </span><span class="s">&quot;Scissor_pos&quot;</span><span class="w"> </span><span class="s">&quot;Scissor_neg&quot;</span>
+<span class="n">MedBioInfoCloud</span><span class="o">:</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">infos1</span><span class="o">$</span><span class="n">Scissor_pos</span><span class="p">)</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">201</span>
+<span class="n">MedBioInfoCloud</span><span class="o">:</span><span class="w"> </span><span class="n">infos1</span><span class="o">$</span><span class="n">Scissor_pos</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">]</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;AAAGTAGAGGAGCGAG_19&quot;</span><span class="w"> </span><span class="s">&quot;AACCATGCATCTCCCA_19&quot;</span><span class="w"> </span><span class="s">&quot;AACCGCGAGCTGCGAA_20&quot;</span><span class="w"> </span><span class="s">&quot;AACTCAGTCCGCGGTA_19&quot;</span>
+<span class="n">MedBioInfoCloud</span><span class="o">:</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">infos1</span><span class="o">$</span><span class="n">Scissor_neg</span><span class="p">)</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">4</span>
+<span class="n">MedBioInfoCloud</span><span class="o">:</span><span class="w"> </span><span class="n">infos1</span><span class="o">$</span><span class="n">Scissor_neg</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;ACGCCAGTCCTCCTAG_20&quot;</span><span class="w"> </span><span class="s">&quot;ACGGGCTAGTGGCACA_20&quot;</span><span class="w"> </span><span class="s">&quot;CCGGTAGGTACCCAAT_15&quot;</span><span class="w"> </span><span class="s">&quot;GACGCGTAGTGGTCCC_20&quot;</span>
+</code></pre></div>
+<p>这些选定的cell占总数 4,102 个cell的 5%。我们可以通过在 Seurat 对象 sc_dataset 中添加一个新的注释来可视化Scissor选择的单元格：</p>
+<div class="highlight"><pre><span></span><code><span class="n">Scissor_select</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rep</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="nf">ncol</span><span class="p">(</span><span class="n">sc_dataset</span><span class="p">))</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">Scissor_select</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">colnames</span><span class="p">(</span><span class="n">sc_dataset</span><span class="p">)</span>
+<span class="n">Scissor_select</span><span class="p">[</span><span class="n">infos1</span><span class="o">$</span><span class="n">Scissor_pos</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span>
+<span class="n">Scissor_select</span><span class="p">[</span><span class="n">infos1</span><span class="o">$</span><span class="n">Scissor_neg</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">2</span>
+<span class="n">sc_dataset</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">AddMetaData</span><span class="p">(</span><span class="n">sc_dataset</span><span class="p">,</span><span class="w"> </span><span class="n">metadata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Scissor_select</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                          </span><span class="n">col.name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;scissor&quot;</span><span class="p">)</span>
+<span class="nf">DimPlot</span><span class="p">(</span><span class="n">sc_dataset</span><span class="p">,</span><span class="w"> </span><span class="n">reduction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;umap&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">group.by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;scissor&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="n">cols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;grey&#39;</span><span class="p">,</span><span class="s">&#39;indianred1&#39;</span><span class="p">,</span><span class="s">&#39;royalblue&#39;</span><span class="p">),</span><span class="w"> </span>
+<span class="w">        </span><span class="n">pt.size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.2</span><span class="p">,</span><span class="w"> </span><span class="n">order</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="p">))</span>
+</code></pre></div>
+<p><img alt="" src="https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202302221114295.png" /></p>
+<p>其中1代表Scissor+细胞，2代表Scissor-细胞。 最后，我们可以使用以下方法访问参数和使用的模型：</p>
+<div class="highlight"><pre><span></span><code><span class="n">MedBioInfoCloud</span><span class="o">:</span><span class="w"> </span><span class="n">infos1</span><span class="o">$</span><span class="n">para</span>
+<span class="o">$</span><span class="n">alpha</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">0.05</span>
+
+<span class="o">$</span><span class="n">lambda</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">0.04229243</span>
+
+<span class="o">$</span><span class="n">family</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;cox&quot;</span>
+</code></pre></div>
+<p>在上述实现中，我们将参数α设置为0.05（α=0.05）。参数α平衡L1-norm和基于网络的惩罚的效果。较大的α倾向于强调L1-norm以鼓励稀疏性，使得Scissor比使用较小α的结果选择更少的细胞。在应用程序中，Scissor可以自动将回归输入保存到RData（<code>save_file='Scissor_LUAD_survive.RData</code>）中，方便用户调整不同的α。我们可以将Load_file设置为“<code>Scissor_LUAD_survive.RData</code>”，并使用默认的α序列（alpha=NULL）运行Scissor：</p>
+<div class="highlight"><pre><span></span><code><span class="n">infos2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">Scissor</span><span class="p">(</span><span class="n">bulk_dataset</span><span class="p">,</span><span class="w"> </span><span class="n">sc_dataset</span><span class="p">,</span><span class="w"> </span><span class="n">phenotype</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">cutoff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.03</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                 </span><span class="n">family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;cox&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Load_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;Scissor_LUAD_survival.RData&#39;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;alpha = 0.005&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;Scissor identified 887 Scissor+ cells and 28 Scissor- cells.&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;The percentage of selected cell is: 22.306%&quot;</span>
+
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;alpha = 0.01&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;Scissor identified 573 Scissor+ cells and 20 Scissor- cells.&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;The percentage of selected cell is: 14.456%&quot;</span>
+
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;alpha = 0.05&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;Scissor identified 201 Scissor+ cells and 4 Scissor- cells.&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;The percentage of selected cell is: 4.998%&quot;</span>
+
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;alpha = 0.1&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;Scissor identified 139 Scissor+ cells and 5 Scissor- cells.&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;The percentage of selected cell is: 3.510%&quot;</span>
+
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;alpha = 0.2&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;Scissor identified 78 Scissor+ cells and 5 Scissor- cells.&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;The percentage of selected cell is: 2.023%&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;|**************************************************|&quot;</span>
+</code></pre></div>
+<p>在上述实现中，我们设置了一个新的百分比截止值（截止值=0.03），当所选细胞的总百分比小于3%时，它停止了α搜索。相应的α等于0.2，选择了78个Scissor+细胞和5个Scissor-细胞。为了避免在实际应用中任意选择alpha，我们建议根据所选细胞在总细胞中的百分比来搜索alpha。截止值的默认值为0.2，即Scissor选择的细胞的数量不应超过单个细胞数据中总单元格的20%。此外，用户可以设置自定义的α序列和百分比截止值，以实现不同的目标。例如，我们可以将Scissor运行为：</p>
+<div class="highlight"><pre><span></span><code><span class="n">infos3</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">Scissor</span><span class="p">(</span><span class="n">bulk_dataset</span><span class="p">,</span><span class="w"> </span><span class="n">sc_dataset</span><span class="p">,</span><span class="w"> </span><span class="n">phenotype</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">seq</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">10</span><span class="p">,</span><span class="m">2</span><span class="p">)</span><span class="o">/</span><span class="m">1000</span><span class="p">,</span><span class="w"> </span><span class="n">cutoff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.2</span><span class="p">,</span>
+<span class="w">                 </span><span class="n">family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;cox&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Load_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;Scissor_LUAD_survival.RData&#39;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;alpha = 0.001&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;Scissor identified 1663 Scissor+ cells and 1870 Scissor- cells.&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;The percentage of selected cell is: 86.129%&quot;</span>
+
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;alpha = 0.003&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;Scissor identified 1264 Scissor+ cells and 37 Scissor- cells.&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;The percentage of selected cell is: 31.716%&quot;</span>
+
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;alpha = 0.005&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;Scissor identified 887 Scissor+ cells and 28 Scissor- cells.&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;The percentage of selected cell is: 22.306%&quot;</span>
+
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;alpha = 0.007&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;Scissor identified 729 Scissor+ cells and 24 Scissor- cells.&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;The percentage of selected cell is: 18.357%&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;|**************************************************|&quot;</span>
+</code></pre></div>
+<h3 id="4-scissor">4.将 Scissor 与逻辑回归一起应用<a class="headerlink" href="#4-scissor" title="Permanent link">&para;</a></h3>
+<p>在另一个例子中，我们使用TCGA-LUAD提供的其他表型特征来指导相同4102个癌症细胞内细胞亚群的识别。这里我们重点关注TP53，它是人类恶性肿瘤中最常见的突变抑癌基因之一。</p>
+<h4 id="41rnaseq">4.1准备RNAseq数据和表型<a class="headerlink" href="#41rnaseq" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nf">load</span><span class="p">(</span><span class="nf">url</span><span class="p">(</span><span class="nf">paste0</span><span class="p">(</span><span class="n">location</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;TCGA_LUAD_exp2.RData&#39;</span><span class="p">)))</span>
+<span class="nf">load</span><span class="p">(</span><span class="nf">url</span><span class="p">(</span><span class="nf">paste0</span><span class="p">(</span><span class="n">location</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;TCGA_LUAD_TP53_mutation.RData&#39;</span><span class="p">)))</span>
+</code></pre></div>
+<p>样本498个；其中255个检测到TP53突变体，其余为野生型：</p>
+<div class="highlight"><pre><span></span><code><span class="n">MedBioInfoCloud</span><span class="o">:</span><span class="w"> </span><span class="nf">table</span><span class="p">(</span><span class="n">TP53_mutation</span><span class="p">)</span>
+<span class="n">TP53_mutation</span>
+<span class="w">  </span><span class="m">0</span><span class="w">   </span><span class="m">1</span><span class="w"> </span>
+<span class="m">243</span><span class="w"> </span><span class="m">255</span><span class="w"> </span>
+</code></pre></div>
+<h4 id="42scissor">4.2执行Scissor 选择信息细胞<a class="headerlink" href="#42scissor" title="Permanent link">&para;</a></h4>
+<p>给定TP53突变体=1和野生型=0的上述二元变量，我们使用Scissor中的<code>family = 'binomial'</code>来选择表型相关的细胞亚群：</p>
+<div class="highlight"><pre><span></span><code><span class="n">phenotype</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">TP53_mutation</span>
+<span class="n">tag</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;wild-type&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;TP53 mutant&#39;</span><span class="p">)</span>
+<span class="n">infos4</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">Scissor</span><span class="p">(</span><span class="n">bulk_dataset</span><span class="p">,</span><span class="w"> </span><span class="n">sc_dataset</span><span class="p">,</span><span class="w"> </span><span class="n">phenotype</span><span class="p">,</span><span class="w"> </span><span class="n">tag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tag</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                  </span><span class="n">family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;binomial&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Save_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Scissor_LUAD_TP53_mutation.RData&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;|**************************************************|&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;Performing quality-check for the correlations&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;The five-number summary of correlations:&quot;</span>
+<span class="w">        </span><span class="m">0</span><span class="o">%        25%</span><span class="w">        </span><span class="m">50</span><span class="o">%        75%</span><span class="w">       </span><span class="m">100</span><span class="o">% </span>
+<span class="o">0.01308976 0.19502200 0.23725380 0.29589213 0.83830571 </span>
+<span class="o">[1] &quot;|**************************************************|&quot;</span>
+<span class="o">[1] &quot;Current phenotype contains 243 wild-type and 255 TP53 mutant samples.&quot;</span>
+<span class="o">[1] &quot;Perform logistic regression on the given phenotypes:&quot;</span>
+<span class="o">[1] &quot;alpha = 0.5&quot;</span>
+<span class="o">[1] &quot;Scissor identified 173 Scissor+ cells and 160 Scissor- cells.&quot;</span>
+<span class="o">[1] &quot;The percentage of selected cell is: 8.118%</span><span class="s">&quot;</span>
+<span class="s">[1] &quot;</span><span class="o">|**************************************************|</span><span class="s">&quot;</span>
+</code></pre></div>
+<p>注意，参数标签用于双重检查表型编码。表型中不同的0-1编码可能导致相反的解释。有关更多详细信息，请参阅下一节Scissor结果解释。类似地，我们可以设置α加载<code>"Load_file="Scissor_LUAD_TP53_mutation.RData"</code>重新运行：</p>
+<div class="highlight"><pre><span></span><code><span class="n">infos5</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">Scissor</span><span class="p">(</span><span class="n">bulk_dataset</span><span class="p">,</span><span class="w"> </span><span class="n">sc_dataset</span><span class="p">,</span><span class="w"> </span><span class="n">phenotype</span><span class="p">,</span><span class="w"> </span><span class="n">tag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tag</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.2</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                 </span><span class="n">family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;binomial&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Load_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Scissor_LUAD_TP53_mutation.RData&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;alpha = 0.2&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;Scissor identified 414 Scissor+ cells and 320 Scissor- cells.&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;The percentage of selected cell is: 17.894%&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;|**************************************************|&quot;</span>
+</code></pre></div>
+<p>Scissor 总共识别出 414 个与 TP53 突变体相关的 Scissor+ 细胞和 318 个与野生型相关的 Scissor- 细胞。我们可以使用 UMAP 技术可视化这些选定的细胞：</p>
+<div class="highlight"><pre><span></span><code><span class="n">Scissor_select</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rep</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="nf">ncol</span><span class="p">(</span><span class="n">sc_dataset</span><span class="p">))</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">Scissor_select</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">colnames</span><span class="p">(</span><span class="n">sc_dataset</span><span class="p">)</span>
+<span class="n">Scissor_select</span><span class="p">[</span><span class="n">infos5</span><span class="o">$</span><span class="n">Scissor_pos</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span>
+<span class="n">Scissor_select</span><span class="p">[</span><span class="n">infos5</span><span class="o">$</span><span class="n">Scissor_neg</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">2</span>
+<span class="n">sc_dataset</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">AddMetaData</span><span class="p">(</span><span class="n">sc_dataset</span><span class="p">,</span><span class="w"> </span><span class="n">metadata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Scissor_select</span><span class="p">,</span><span class="w"> </span><span class="n">col.name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;scissor&quot;</span><span class="p">)</span>
+<span class="nf">DimPlot</span><span class="p">(</span><span class="n">sc_dataset</span><span class="p">,</span><span class="w"> </span><span class="n">reduction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;umap&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">group.by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;scissor&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="n">cols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;grey&#39;</span><span class="p">,</span><span class="s">&#39;indianred1&#39;</span><span class="p">,</span><span class="s">&#39;royalblue&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">pt.size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.2</span><span class="p">,</span><span class="w"> </span><span class="n">order</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="p">))</span>
+</code></pre></div>
+<p><img alt="" src="https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202302221238660.png" /></p>
+<p>其中1代表Scissor+细胞，2代表Scissor-细胞。</p>
+<h3 id="5">5.可靠性显著性试验<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
+<p>为了确定推断出的表型与细胞的相关性是否可靠，我们使用功能<code>reliability.test</code>进行可靠性显著性检验。可靠性显著性测试的动机是：如果所选的单细胞和bulk数据不适合表型与细胞的关联，则相关性信息较少，且与表型标签不太相关。因此，相应的预测性能将是差的，并且不能与随机置换的标签显著区分。在本教程中，我们将测试上述应用程序中识别的关联作为示例，以演示如何运行<code>reliability.test</code>。</p>
+<div class="highlight"><pre><span></span><code><span class="nf">load</span><span class="p">(</span><span class="s">&#39;Scissor_LUAD_survival.RData&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p>我们使用10倍交叉验证（nfold＝10），并将置换时间设置为10（n＝10）以节省一些时间。在实际应用中，可靠性显著性测试对于较大的排列时间（默认n=100）来说可能是耗时的。</p>
+<div class="highlight"><pre><span></span><code><span class="n">numbers</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">infos1</span><span class="o">$</span><span class="n">Scissor_pos</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">infos1</span><span class="o">$</span><span class="n">Scissor_neg</span><span class="p">)</span>
+<span class="n">result1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">reliability.test</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">Y</span><span class="p">,</span><span class="w"> </span><span class="n">network</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.05</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                            </span><span class="n">family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;cox&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">cell_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbers</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">nfold</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;|**************************************************|&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;Perform cross-validation on X with true label&quot;</span>
+<span class="n">Finished</span><span class="o">!</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;|**************************************************|&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;Perform cross-validation on X with permutated label&quot;</span>
+<span class="n">Finished</span><span class="o">!</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;Test statistic = 0.628&quot;</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;Reliability significance test p = 0.000&quot;</span>
+</code></pre></div>
+<p>我们可以看到，<code>reliability.test</code>打印检验统计和检验p值。该p值小于0.05，表明这些关联是可靠的。输出结果1还包含使用真实标签和置换标签计算的评估测量值：</p>
+<p>在我们的研究中，评价度量是线性回归的均方误差（MSE）、分类的ROC曲线下面积（AUC）和Cox回归的一致性指数（c-index）。使用真实标签计算的平均评价测量值用作测试统计量。</p>
+<p>同样，我们可以测试与 TP53 突变体或野生型相关的 Scissor 选择细胞。</p>
+<div class="highlight"><pre><span></span><code><span class="nf">load</span><span class="p">(</span><span class="s">&#39;Scissor_LUAD_TP53_mutation.RData&#39;</span><span class="p">)</span>
+<span class="n">numbers</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">infos5</span><span class="o">$</span><span class="n">Scissor_pos</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">infos5</span><span class="o">$</span><span class="n">Scissor_neg</span><span class="p">)</span>
+<span class="n">result2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">reliability.test</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">Y</span><span class="p">,</span><span class="w"> </span><span class="n">network</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.2</span><span class="p">,</span><span class="w"> </span><span class="n">family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;binomial&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">cell_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbers</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">nfold</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">## [1] &quot;|**************************************************|&quot;</span>
+<span class="c1">## [1] &quot;Perform cross-validation on X with true label&quot;</span>
+<span class="c1">## Finished!</span>
+<span class="c1">## [1] &quot;|**************************************************|&quot;</span>
+<span class="c1">## [1] &quot;Perform cross-validation on X with permutated label&quot;</span>
+<span class="c1">## Finished!</span>
+<span class="c1">## [1] &quot;Test statistic = 0.790&quot;</span>
+<span class="c1">## [1] &quot;Reliability significance test p = 0.000&quot;</span>
+</code></pre></div>
+<h3 id="6">6.细胞水平评估<a class="headerlink" href="#6" title="Permanent link">&para;</a></h3>
+<p>最后，我们可以使用函数evaluate.cell为每个Scissor选择的细胞获取一些支持信息。以LUAD癌症细胞存活应用程序为例，我们通过运行以下代码评估205 Scissor选择的细胞：</p>
+<div class="highlight"><pre><span></span><code><span class="n">evaluate_summary</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">evaluate.cell</span><span class="p">(</span><span class="s">&#39;Scissor_LUAD_survival.RData&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">infos1</span><span class="p">,</span><span class="w"> </span><span class="n">FDR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.05</span><span class="p">,</span><span class="w"> </span><span class="n">bootstrap_n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">)</span>
+</code></pre></div>
+<p>evaluate.cell函数包含两种策略来评估每个Scissor选择的细胞。第一种策略侧重于具有所有bulk样本的每个选定细胞的相关值及其对应的p值，包括输出data.frame变量中的前四列：</p>
+<div class="highlight"><pre><span></span><code><span class="n">evaluate_summary</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">,</span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">MedBioInfoCloud</span><span class="o">:</span><span class="w"> </span><span class="n">evaluate_summary</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">,</span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">]</span>
+<span class="w">                    </span><span class="n">Mean</span><span class="w"> </span><span class="n">correlation</span><span class="w"> </span><span class="n">Correlation</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="n">Correlation</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="n">Significant</span><span class="w"> </span><span class="n">Correlation</span>
+<span class="n">AAAGTAGAGGAGCGAG_19</span><span class="w">        </span><span class="m">0.3056072</span><span class="w">            </span><span class="m">100</span><span class="o">%              0%</span><span class="w">                    </span><span class="m">100</span><span class="o">%</span>
+<span class="o">AACCATGCATCTCCCA_19        0.1974518            100%</span><span class="w">              </span><span class="m">0</span><span class="o">%                    100%</span>
+<span class="n">AACCGCGAGCTGCGAA_20</span><span class="w">        </span><span class="m">0.3569129</span><span class="w">            </span><span class="m">100</span><span class="o">%              0%</span><span class="w">                    </span><span class="m">100</span><span class="o">%</span>
+<span class="o">AACTCAGTCCGCGGTA_19        0.3628618            100%</span><span class="w">              </span><span class="m">0</span><span class="o">%                    100%</span>
+<span class="n">AACTCCCAGCGCCTTG_19</span><span class="w">        </span><span class="m">0.2835872</span><span class="w">            </span><span class="m">100</span><span class="o">%              0%</span><span class="w">                    </span><span class="m">100</span>%
+</code></pre></div>
+<p>我们可以看到，<code>evaluate.cell</code>函数报告了一个细胞与所有bulk样本的平均相关性（列mean correlation）和正/负相关性（列correlation&gt;0和correlation&lt;0）的百分比，这与我们提出的一般解释标准（表1）中的条件相对应。在该应用中，所有Scissor选择的细胞与相关表型更相似：</p>
+<div class="highlight"><pre><span></span><code><span class="nf">all</span><span class="p">(</span><span class="n">evaluate_summary</span><span class="o">$</span><span class="n">`Mean correlation`</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="nf">gsub</span><span class="p">(</span><span class="s">&#39;%&#39;</span><span class="p">,</span><span class="s">&#39;&#39;</span><span class="p">,</span><span class="n">evaluate_summary</span><span class="o">$</span><span class="n">`Correlation &gt; 0`</span><span class="p">))</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">50</span><span class="p">)</span>
+</code></pre></div>
+<p>evaluate.cell函数还检查从每个选定细胞的标准相关p值导出的FDR。它输出每个选定细胞的显著相关性百分比（FDR&lt;0.05，显著相关性列）。</p>
+<div class="highlight"><pre><span></span><code><span class="n">MedBioInfoCloud</span><span class="o">:</span><span class="w"> </span><span class="n">evaluate_summary</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">,</span><span class="m">5</span><span class="o">:</span><span class="m">10</span><span class="p">]</span>
+<span class="w">                    </span><span class="n">Coefficient</span><span class="w">      </span><span class="n">Beta</span><span class="w"> </span><span class="m">0</span><span class="o">%    Beta 25%</span><span class="w">    </span><span class="n">Beta</span><span class="w"> </span><span class="m">50</span><span class="o">%   Beta 75%</span><span class="w">  </span><span class="n">Beta</span><span class="w"> </span><span class="m">100</span>%
+<span class="n">AAAGTAGAGGAGCGAG_19</span><span class="w"> </span><span class="m">0.009203078</span><span class="w"> </span><span class="m">0.0006535843</span><span class="w"> </span><span class="m">0.006349622</span><span class="w"> </span><span class="m">0.009940265</span><span class="w"> </span><span class="m">0.01499857</span><span class="w"> </span><span class="m">0.02747730</span>
+<span class="n">AACCATGCATCTCCCA_19</span><span class="w"> </span><span class="m">0.003779788</span><span class="w"> </span><span class="m">0.0001131087</span><span class="w"> </span><span class="m">0.003247118</span><span class="w"> </span><span class="m">0.006729676</span><span class="w"> </span><span class="m">0.01058692</span><span class="w"> </span><span class="m">0.02185486</span>
+<span class="n">AACCGCGAGCTGCGAA_20</span><span class="w"> </span><span class="m">0.005839546</span><span class="w"> </span><span class="m">0.0001044831</span><span class="w"> </span><span class="m">0.003500107</span><span class="w"> </span><span class="m">0.007839735</span><span class="w"> </span><span class="m">0.01359622</span><span class="w"> </span><span class="m">0.02852694</span>
+<span class="n">AACTCAGTCCGCGGTA_19</span><span class="w"> </span><span class="m">0.004415840</span><span class="w"> </span><span class="m">0.0005875274</span><span class="w"> </span><span class="m">0.003877294</span><span class="w"> </span><span class="m">0.008254801</span><span class="w"> </span><span class="m">0.01476508</span><span class="w"> </span><span class="m">0.03463764</span>
+<span class="n">AACTCCCAGCGCCTTG_19</span><span class="w"> </span><span class="m">0.014565920</span><span class="w"> </span><span class="m">0.0003173535</span><span class="w"> </span><span class="m">0.010897044</span><span class="w"> </span><span class="m">0.018264455</span><span class="w"> </span><span class="m">0.02771921</span><span class="w"> </span><span class="m">0.04282416</span>
+</code></pre></div>
+<p>通过使用bootstrap重采样，<code>evaluate.cell</code>函数输出五个数字摘要以显示每个Scissor选择的细胞的系数范围，其中包括最小值（Beta列0%），下四分位数（Beta列25%）），中值（Beta列50%），上四分位数（Beta列75%）和最大值（Beta列100%）。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 - 2025 DoubleHelix
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://space.bilibili.com/434318322" target="_blank" rel="noopener" title="Bilibili | BioInfoCloud" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/BioInfoCloud" target="_blank" rel="noopener" title="GitHub | BioInfoCloud" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../../mkdocs/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

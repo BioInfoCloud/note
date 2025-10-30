@@ -1,0 +1,5183 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="生物信息云">
+      
+      
+        <meta name="author" content="DoubleHelix">
+      
+      
+        <link rel="canonical" href="https://bioinfocloud.io/Literature/Review/004_2021_ICB/">
+      
+      
+        <link rel="prev" href="../002_DTIS/">
+      
+      
+        <link rel="next" href="../../scRNAseq/2023_NC_HNSCC/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>ICB治疗 - 生物信息云</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/no-footer.css">
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="生物信息云" class="md-header__button md-logo" aria-label="生物信息云" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            生物信息云
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ICB治疗
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="light-blue"  aria-label="切换风格"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换风格" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.04 8.71V4h-4.7L12 .69 8.71 4H4v4.71L.69 12 4 15.34v4.7h4.71L12 23.35l3.34-3.31h4.7v-4.7L23.35 12zM8.83 7.05c.98 0 1.77.79 1.77 1.78a1.77 1.77 0 0 1-1.77 1.77c-.99 0-1.78-.79-1.78-1.77 0-.99.79-1.78 1.78-1.78M15.22 17c-.98 0-1.77-.8-1.77-1.78a1.77 1.77 0 0 1 1.77-1.77c.98 0 1.78.79 1.78 1.77A1.78 1.78 0 0 1 15.22 17m-6.72.03L7 15.53 15.53 7l1.5 1.5z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="orange"  aria-label="切换风格"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换风格" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-purple"  aria-label="切换风格"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="切换风格" for="__palette_3" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="purple" data-md-color-primary="black" data-md-color-accent="pink"  aria-label="切换风格"  type="radio" name="__palette" id="__palette_3">
+    
+      <label class="md-header__button md-icon" title="切换风格" for="__palette_4" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="light-green" data-md-color-primary="black" data-md-color-accent="light-blue"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_4">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.04 7 9.54s-2.94 8.27-7 9.54c.95.3 1.95.46 3 .46a10 10 0 0 0 10-10A10 10 0 0 0 9 2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://bioinfocloud.github.io/note" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    BioInfoCloud
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Programming/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  生信编程
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../BioInfo/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  生信基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Programming/R/ggplot2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  可视化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../bigdata/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  大数据
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ML/knn/kNN/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  机器学习
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../BioInfo/scRNAseq/scRNASeq_UP/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  专题
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../RNAseq_review1/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  文献
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../BioInfo/database/scList/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  数据库工具
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../WeChatOfficialAccount/HOME/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  微信
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ABOUT/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  关于
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="生物信息云" class="md-nav__button md-logo" aria-label="生物信息云" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    生物信息云
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://bioinfocloud.github.io/note" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    BioInfoCloud
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Programming/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    生信编程
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            生信编程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Linux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Linux/linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux讲座
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Linux/commands-concise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    命令行入门精简版
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Linux/vim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    vim
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Linux/tmux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    tmux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Linux/unix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UNIX
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Linux/kernel-compile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    内核编译
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Markdown
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Markdown
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Markdown/markdown/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Markdown讲座
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/vscode-python/vscode-python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VSCode及插件安装
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Markdown/grammars/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Markdown语法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Git/git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Git/git-demos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git例子
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Git/git-teamwork/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git合作
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/Git/windows-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Windows安装Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    R
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            R
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/R/Grammar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    R语法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/R/ggplot2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    可视化
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5_3" id="__nav_1_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    R包开发
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            R包开发
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/R/01-software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    软件安装
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/R/02-DevelopmentManual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    快速手册
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/R/shiny/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shiny
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/python/links/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    语法基础
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/python/numpy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Numpy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/python/pandas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pandas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/python/Matplotlib_visualization/Matplotlib_visualization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Matplotlib
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/Biopython/01_install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Biopython
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../BioInfo/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    生信基础
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            生信基础
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    生信基础
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            生信基础
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    生信引言
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基础应用
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/02_noun/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    生信名词
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/03_sequence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    测序技术原理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/04_format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    数据文件格式
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/biomaRt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    biomaRt包
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/counts_RPM_RPKM_FPKM_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RNASeq表达定量
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/counts_RPM_RPKM_FPKM_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RNASeq表达定量转换
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/DESeq2_edgeR_limma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RNASeq差异表达分析原理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/GO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    什么是GO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/KEGG_GO_GSEA_what/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    富集分析理论基础
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/hsa2mus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    人鼠基因比较
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/hsa2mus_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    同源基因转换
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/IDtrans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    各种ID转换
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/BioInfoBasics/miRNA_ID/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    miRNA的ID转换
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    软件使用问题
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            软件使用问题
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/RNAseq/hisat2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hisat2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    可视化
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            可视化
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming/R/ggplot2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    可视化
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../visualization/visualizationList/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    公众号文章参考
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../visualization/ScatterPlot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    散点图
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../visualization/mult_volcano/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    多重火山图
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../visualization/colorScheme01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    配色方案1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../bigdata/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    大数据
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            大数据
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    机器学习
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            机器学习
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ML/knn/kNN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.kNN算法理论
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ML/knn/knn_py/knn_py/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.kNN实践案例
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    专题
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            专题
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    单细胞专题
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            单细胞专题
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/scRNAseq/scRNASeq_UP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    单细胞上游分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/scRNAseq/SeuratObj/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    了解Seurat对象
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/scRNAseq/scRNASeq_down/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    单细胞下游分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/scRNAseq/GSE130001/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    常规分析案例一
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/scRNAseq/SingleR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    细胞注释-SingleR
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/scRNAseq/Scissor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    表型关联分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/scRNAseq/CellChat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    cellChat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/scRNAseq/scMetabolism/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    scMetabolism
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/database/scList/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    单细胞相关数据库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    RNAseq专题
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            RNAseq专题
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/RNAseq/pipeline_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bulk RNAseq上游分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../BioInfo/TCGA/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    TCGA-GEO专题
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            TCGA-GEO专题
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    药物分析
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            药物分析
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/drugAna/cellminer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CellMiner数据库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/drugAna/ADMET/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ADMET计算
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    免疫浸润
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            免疫浸润
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/immune/EaSIeR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    EaSIeR
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    数据库工具
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            数据库工具
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/database/CoMutDB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CoMutDB数据库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/database/CysModDB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CysModDB数据库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    文献
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            文献
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RNAseq_review1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RNASeq综述
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../001_immunoediting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    癌症免疫编辑
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../003_2021_immunotherapy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    癌症免疫治疗
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../002_DTIS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    药物靶点预测
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    ICB治疗
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    ICB治疗
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      摘要
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      前沿
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 免疫检查点和检查点封锁策略
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 免疫检查点和检查点封锁策略">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-t-4-ctla-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. 细胞毒性 T 淋巴细胞相关蛋白 4 (CTLA-4)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-1-pd-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. 程序性细胞死亡蛋白 1 (PD-1)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. 其他免疫检查点：负免疫调节
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4. 其他免疫检查点：正免疫调节
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-icb" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 影响ICB反应和耐药性的因素
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 影响ICB反应和耐药性的因素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. 宿主内在因素
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1. 宿主内在因素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.1. 肿瘤内在因素
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1.1. 肿瘤内在因素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      遗传和表观遗传缺陷
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      信号缺陷
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      细胞外囊泡
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.2. 肿瘤微环境：基质细胞
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.3. 肿瘤微环境：免疫细胞
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.4. 肿瘤微环境：代谢状态
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#215" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.5. 肿瘤微环境：微生物成分
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#216" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.6. 宿主系统因素
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. 宿主外在因素（暴露组）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 免疫治疗背景下的肿瘤进化
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-icb" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 影响ICB毒性的因素
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 影响ICB毒性的因素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-irae" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. irAE 的特征
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-irae" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. irAE 的机制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. 反应与毒性的相关性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 增强反应和消除毒性的策略
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 增强反应和消除毒性的策略">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. 使用已知和新颖的诊断策略来预测响应的精确方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1. 使用已知和新颖的诊断策略来预测响应的精确方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1. 遗传生物标志物
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#512" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.2. 免疫生物标志物
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1.2. 免疫生物标志物">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      肿瘤浸润淋巴细胞
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      免疫检查点分子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      新兴战略
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2. 促进反应和克服耐药性的治疗策略
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2. 促进反应和克服耐药性的治疗策略">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.1. 表观遗传状态的调节
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.2. 信号调制器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#523" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.3. 细胞因子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#524" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.4. 抗血管生成剂
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#525" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.5. 化疗和放疗
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#526" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.6. 溶瘤病毒
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#527" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.7. 疫苗
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#528" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.8. 其他策略
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-icb" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3. 消除 ICB 毒性的诊断和治疗策略
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3. 消除 ICB 毒性的诊断和治疗策略">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.1. 潜在的毒性生物标志物
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.2. 消除毒性的治疗策略
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      结论
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scRNAseq/2023_NC_HNSCC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2023_HNSCC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../006_Nano/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    纳米材料
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/001_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    人工智能
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    数据库工具
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            数据库工具
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/database/scList/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    单细胞相关数据库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/database/database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    在线数据库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BioInfo/toolsandsoftware/tands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    工具或软件
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    MedBioInfoCloud包
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4">
+            <span class="md-nav__icon md-icon"></span>
+            MedBioInfoCloud包
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../package/MedBioInfoCloud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    安装
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../package/baseFun/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基础函数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../package/BulkRNA-Seq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bulk RNA-Seq
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../package/enrichAnalysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    富集分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../package/TCGA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TCGA数据挖掘
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    微信
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            微信
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WeChatOfficialAccount/HOME/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HOME
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WeChatOfficialAccount/articleIndex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    文章索引
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../ABOUT/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    关于
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            关于
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ABOUT/announcement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    工具
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ABOUT/studentsGroup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    微信群
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      摘要
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      前沿
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 免疫检查点和检查点封锁策略
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 免疫检查点和检查点封锁策略">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-t-4-ctla-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. 细胞毒性 T 淋巴细胞相关蛋白 4 (CTLA-4)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-1-pd-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. 程序性细胞死亡蛋白 1 (PD-1)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. 其他免疫检查点：负免疫调节
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4. 其他免疫检查点：正免疫调节
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-icb" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 影响ICB反应和耐药性的因素
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 影响ICB反应和耐药性的因素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. 宿主内在因素
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1. 宿主内在因素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.1. 肿瘤内在因素
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1.1. 肿瘤内在因素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      遗传和表观遗传缺陷
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      信号缺陷
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      细胞外囊泡
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.2. 肿瘤微环境：基质细胞
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.3. 肿瘤微环境：免疫细胞
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.4. 肿瘤微环境：代谢状态
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#215" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.5. 肿瘤微环境：微生物成分
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#216" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.6. 宿主系统因素
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. 宿主外在因素（暴露组）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 免疫治疗背景下的肿瘤进化
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-icb" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 影响ICB毒性的因素
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 影响ICB毒性的因素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-irae" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. irAE 的特征
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-irae" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. irAE 的机制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. 反应与毒性的相关性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 增强反应和消除毒性的策略
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 增强反应和消除毒性的策略">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. 使用已知和新颖的诊断策略来预测响应的精确方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1. 使用已知和新颖的诊断策略来预测响应的精确方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1. 遗传生物标志物
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#512" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.2. 免疫生物标志物
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1.2. 免疫生物标志物">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      肿瘤浸润淋巴细胞
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      免疫检查点分子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      新兴战略
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2. 促进反应和克服耐药性的治疗策略
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2. 促进反应和克服耐药性的治疗策略">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.1. 表观遗传状态的调节
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.2. 信号调制器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#523" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.3. 细胞因子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#524" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.4. 抗血管生成剂
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#525" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.5. 化疗和放疗
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#526" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.6. 溶瘤病毒
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#527" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.7. 疫苗
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#528" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.8. 其他策略
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-icb" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3. 消除 ICB 毒性的诊断和治疗策略
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3. 消除 ICB 毒性的诊断和治疗策略">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.1. 潜在的毒性生物标志物
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.2. 消除毒性的治疗策略
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      结论
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">对免疫检查点阻断的反应、耐药性和毒性的标志<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>翻译：云森</p>
+<p>文献：<a href="https://doi.org/10.1016%2Fj.cell.2021.09.020">10.1016/j.cell.2021.09.020</a></p>
+</blockquote>
+<h2 id="_2">摘要<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>使用免疫检查点封锁 (ICB) 在癌症治疗方面取得了前所未有的进展。然而，反应仅限于一部分患者，免疫相关不良事件 (irAE) 可能会产生问题，需要停止治疗。迫切需要深入了解影响 ICB 反应和毒性的宿主内在和外在因素。在过去十年中，我们对宿主内在因素（如宿主基因组、表观基因组和免疫）的影响的理解有了长足的发展，对这些因素以及肿瘤和免疫的共同进化有了更深入的了解。此外，我们开始了解急性和累积暴露——宿主内部和外部（即暴露组）——对宿主生理和治疗反应的影响。这些共同代表了当今对 ICB 的反应、耐药性和毒性的标志。建立在这些标志上的机会是有充分理由的。</p>
+<h2 id="_3">前沿<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>在癌症发展和进展的过程中，肿瘤不断进化，并可能表现出多种机制来逃避肿瘤免疫监视和抑制抗肿瘤免疫反应。肿瘤免疫逃避的一个主要机制涉及免疫检查点通路的参与。在生理条件下，免疫检查点分子通过刺激和抑制免疫反应来调节免疫系统，以便在成功缓解感染或其他威胁后抑制免疫反应。然而，这些免疫检查点相互作用也可能参与癌症的发生，越来越多的努力以这些相互作用为目标以增强抗肿瘤免疫力。在这篇综述中，我们总结了过去十年在我们对免疫检查点封锁 (ICB) 的反应机制和耐药性的理解方面取得的进展。我们描述了不同的免疫检查点和 ICB 策略，并讨论了各种宿主内在和宿主外在因素在对 ICB 产生耐药性方面的作用，并提供了对 ICB 毒性的潜在决定因素的见解。最后，我们探索了不断增长的诊断和治疗策略，以增强对 ICB 的反应并消除毒性。</p>
+<h2 id="1">1. 免疫检查点和检查点封锁策略<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h3 id="11-t-4-ctla-4">1.1. 细胞毒性 T 淋巴细胞相关蛋白 4 (CTLA-4)<a class="headerlink" href="#11-t-4-ctla-4" title="Permanent link">&para;</a></h3>
+<p>免疫系统在动态平衡状态下运行。在淋巴组织中 T 细胞激活的初始步骤中，幼稚 T 细胞通过 T 细胞受体 (TCR) 与树突状细胞 (DC) 上主要组织相容性复合体 (MHC) 结合抗原的相互作用遇到新抗原。T 细胞的成功激活依赖于通过 T 细胞上的共刺激检查点 CD28 与 DC 上的配体 CD80 (B7.1) 和 CD86 (B7.2) 的相互作用来放大抗原识别信号。为了防止活化的 T 细胞不受控制地扩张，这种激活信号被 T 细胞上的抑制性检查点 CTLA-4（又名 CD152）抵消，它以高于 CD28 的亲和力与 CD80/86 配体结合并抑制信号。CTLA-4 调节作用主要缓和 CD4^+^辅助性 T 细胞的激活，同时增强调节性 T 细胞 (Tregs)，导致促肿瘤免疫抑制表型。因此，靶向和拮抗 CTLA-4 的策略已成为增强抗肿瘤免疫力的有前途的选择。最初的临床前研究表明，用抗体阻断 CTLA-4 会导致增强和持久的抗肿瘤免疫反应和免疫原性肿瘤的消退。虽然在完全不存在 CTLA-4 的临床前模型中观察到了显着的自身免疫，CTLA-4 阻断并未表现出明显的自身免疫性。基于这些临床前发现，启动了多项临床试验以评估人源化 CTLA-4 抗体（如 Ipilimumab 和 Tremelimumab）对晚期黑色素瘤的治疗效果，最终导致美国食品和药物管理局（FDA）批准 Ipilimumab用于临床。 在没有其他治疗选择可以提高晚期黑色素瘤患者生存期的时候，易普利姆玛与长期生存效应相关（1 年和 2 年生存率分别为 45.6% 和 23.5%）。Ipilimumab 治疗与免疫相关不良事件 (irAEs) 相关，发生率高达 60%；这证明了当前临床前模型在预测患者 irAE 发生率方面的局限性。</p>
+<h3 id="12-1-pd-1">1.2. 程序性细胞死亡蛋白 1 (PD-1)<a class="headerlink" href="#12-1-pd-1" title="Permanent link">&para;</a></h3>
+<p>调节检查点通路在外周组织中也很活跃，它们作用于多种免疫细胞类型，以防止自身免疫和炎症引起的组织损伤。PD-1（又名 CD279）在活化的 T 细胞以及其他细胞上表达，包括但不限于 B 细胞、自然杀伤 (NK) 细胞和骨髓细胞。 在与其配体、程序性死亡配体 1（PD-L1；又名 B7-H1 或 CD274）和 PD-L2（又名 B7-DC 或 CD273）相互作用后，它可以减少免疫反应。在肿瘤微环境中，PD-L1 和较小程度的 PD-L2 由肿瘤细胞表达，尽管它们的表达模式是异质的并且在不同肿瘤类型之间有所不同。肿瘤 PD-L1 和 PD-L2 与肿瘤浸润淋巴细胞 (TIL) 上的 PD-1 的相互作用已被认为是肿瘤免疫逃逸的主要机制，因此是具有治疗意义的有吸引力的靶点。此外，PD-1 及其配体在 TIL 和肿瘤细胞上的高表达表明，与 CTLA-4 阻断相比，阻断该通路可能导致更轻的免疫毒性。PD-1 抗体、Nivolumab 和 Pembrolizumab 的初步临床试验表明，在包括黑色素瘤、非小细胞肺癌 (NSCLC)、肾细胞癌和结直肠癌在内的广泛癌症类型中具有有效且持久的抗肿瘤活性和有限的免疫毒性癌症。虽然 PD-1 阻断剂观察到的毒性低于 CTLA-4 阻断剂临床试验中观察到的毒性，但发生率高于临床前模型预测的毒性。基于类似的治疗原理，抗 PD-L1 抗体（例如 Atezolizumab、Avelumab 和 Durvalumab）已被开发并证明可有效治疗多种癌症，包括 NSCLC、尿路上皮癌、三阴性乳腺癌 (TNBC) 和默克尔细胞癌癌。 迄今为止，这些抗体已被批准用于治疗各种癌症类型（<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8767569/table/T1/">表1</a>)，还有更多目前正在调查中。</p>
+<h3 id="13">1.3. 其他免疫检查点：负免疫调节<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
+<p>除了这些经过充分研究的分子外，在过去十年中还引入/重新审视了几种新型免疫检查点分子（<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8767569/figure/F1/">图1</a>) 获得的机制见解和治疗靶向的潜力。这些分子中的大多数在癌症的背景下表现出负免疫调节作用。淋巴细胞活化基因 3（LAG-3 或 CD223）在多种免疫细胞上表达，包括活化的 T 细胞、Treg、B 细胞、NK 细胞和 DC和当被包含解离蛋白和金属蛋白酶结构域的蛋白质 (ADAM) 脱落时，它也以可溶形式具有活性。LAG3 与多种分子相互作用，包括 MHCII、Galectin-3 和 α-突触核蛋白；已知它对 CD8^+^ T 细胞功能具有抑制作用并增加 Tregs 的免疫抑制行为。<a href="https://clinicaltrials.gov/ct2/show/NCT02614833">目前，作为潜在的新型 ICB（ NCT02614833</a>、<a href="https://clinicaltrials.gov/ct2/show/NCT03625323">NCT03625323</a>、<a href="https://clinicaltrials.gov/ct2/show/NCT01968109">NCT01968109</a>、<a href="https://clinicaltrials.gov/ct2/show/NCT03470922">NCT03470922</a>等）的许多临床试验正在对 LAG-3 联合抗 PD-1 治疗的不同阻断方法进行评估。来自 Phase2/3 RELATIVITY-047 试验 ( <a href="https://clinicaltrials.gov/ct2/show/NCT03470922">NCT03470922</a> ) 的初步数据显示，与抗 PD-1 相比，接受抗 Lag-3 联合抗 PD-1 治疗的转移性或未切除黑色素瘤患者的无进展生存期有所改善单独治疗）。</p>
+<p><img alt="" src="https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202212251906647.png" /></p>
+<p>T 细胞免疫球蛋白和粘蛋白结构域 containing-3 (TIM-3) 是另一种免疫检查点分子，可以在许多免疫细胞上表达，包括 CD4^+^和 CD8^+^ T 细胞、Treg、DC 和 NK 细胞以及非免疫细胞，例如肿瘤相关内皮细胞。TIM-3 与其四种配体（半乳糖凝集素 9、高迁移率族蛋白 B1、磷脂酰丝氨酸和癌胚抗原细胞粘附分子 1）之间的相互作用可通过多种机制降低抗肿瘤免疫力，包括诱导 CD8^+^ T 细胞死亡和衰竭。几种针对 TIM-3 的抗体正处于 I 期试验（<a href="https://clinicaltrials.gov/ct2/show/NCT03307785">NCT03307785</a>、<a href="https://clinicaltrials.gov/ct2/show/NCT03680508">NCT03680508</a>、<a href="https://clinicaltrials.gov/ct2/show/NCT02608268">NCT02608268</a>等），报告的初步结果表明与抗 PD-1 治疗联合使用时具有耐受性和有前景的疗效 ( <a href="https://clinicaltrials.gov/ct2/show/NCT02817633">NCT02817633</a> )。</p>
+<p>虽然 LAG-3 和 TIM-3 表现出更广泛的表达模式，但 T 细胞免疫球蛋白和 ITIM 结构域 (TIGIT) 是一种免疫检查点分子，几乎只在 T 细胞和 NK 细胞上表达，并与其配体 CD155 和 CD112 相互作用以发挥免疫抑制作用效应。TIGIT 还可以在 DC 中诱导免疫抑制活性 并抑制 NK 细胞的细胞毒性。针对 TIGIT 的单克隆抗体正在作为单一药物或与抗 PD-1 和抗 PD-L1 的联合疗法进行测试（<a href="https://clinicaltrials.gov/ct2/show/NCT04294810">NCT04294810</a>，<a href="https://clinicaltrials.gov/ct2/show/NCT04256421">NCT04256421</a>等）。Tiragolumab（抗 TIGIT）和 atezolizumab（PD-L1 抗体）的组合提高了具有高肿瘤 PD-L1 表达的转移性 NSCLC 患者的总体反应率（37% 与单独使用 atezolizumab 的 21%），并且最近被授予突破性治疗指定FDA（CITYSCAPE，<a href="https://clinicaltrials.gov/ct2/show/NCT03563716">NCT03563716</a>）。</p>
+<p>VISTA 是另一种抑制性检查点分子，主要在骨髓细胞、T 细胞和 NK 细胞上组成性表达。据报道，VSIG-3 是 VISTA 的配体，但尚未发现其他相互作用的伙伴。VISTA 被称为 PD-1 同系物；然而，它通过非冗余途径对 T 细胞发挥免疫抑制作用，因此提供了作为免疫治疗靶点的机会。正在研究作为潜在治疗靶点的其他抑制性检查点分子包括 B7-H3 (CD276) ( <a href="https://clinicaltrials.gov/ct2/show/NCT02628535">NCT02628535</a> ,<a href="https://clinicaltrials.gov/ct2/show/NCT03406949">NCT03406949</a> )、B 和 T 淋巴细胞衰减器（BTLA 或 CD272）( <a href="https://clinicaltrials.gov/ct2/show/NCT04137900">NCT04137900</a> )，以及唾液酸结合免疫球蛋白样凝集素 15 (Siglec-15) ( <a href="https://clinicaltrials.gov/ct2/show/NCT03665285">NCT03665285</a> )。</p>
+<h3 id="14">1.4. 其他免疫检查点：正免疫调节<a class="headerlink" href="#14" title="Permanent link">&para;</a></h3>
+<p>具有积极免疫调节作用的检查点分子也被考虑用于癌症免疫治疗应用。免疫共刺激因子 (ICOS) 是一种在 T 细胞上表达的共刺激分子，可增强 CD8^+^ T 细胞和 Treg 的功能和扩增。ICOS 激动剂单克隆抗体目前正在作为单一药物以及与抗 PD-1 或抗 CTLA-4 治疗联合使用进行研究（<a href="https://clinicaltrials.gov/ct2/show/NCT02904226">NCT02904226</a>、<a href="https://clinicaltrials.gov/ct2/show/NCT02723955">NCT02723955</a>、<a href="https://clinicaltrials.gov/ct2/show/NCT03251924">NCT03251924</a>)。属于肿瘤坏死因子受体 (TNF) 超家族的检查点分子，如糖皮质激素诱导的 TNFR 相关基因 (GITR) 和 OX40，也已被引入作为刺激因子，并正在作为治疗靶点进行评估。GITR 由效应 T 细胞和 Tregs、NK 细胞表达，B 细胞和骨髓细胞表达程度较低。GITR 可以通过与其配体 (GITRL) 的相互作用减少 T 细胞凋亡并增加 T 细胞活性 。OX40 在 T 细胞抗原识别后瞬时表达于 T 细胞，也可表达于多种免疫和非免疫细胞，如内皮细胞。OX40 在促进抗肿瘤免疫方面发挥着复杂的作用。与 CD28 相比，它在后期增强 T 细胞扩增，并进一步调节 T 辅助反应。迄今为止，已经开发了几种针对 GITR（<a href="https://clinicaltrials.gov/ct2/show/NCT02598960">NCT02598960</a>、<a href="https://clinicaltrials.gov/ct2/show/NCT01239134">NCT01239134</a>、<a href="https://clinicaltrials.gov/ct2/show/NCT02628574">NCT02628574</a>等）和 OX40（<a href="https://clinicaltrials.gov/ct2/show/NCT01862900">NCT01862900</a>、<a href="https://clinicaltrials.gov/ct2/show/NCT02315066">NCT02315066</a>、<a href="https://clinicaltrials.gov/ct2/show/NCT02410512">NCT02410512</a>等）的激动剂抗体，目前正在研究中。</p>
+<p>这些正免疫调节剂及其相互作用组的影响机制尚未得到彻底描述。鼓励进一步的基础研究和转化研究，以解开未知的问题，包括在稳态或主动免疫反应中的潜在作用，并为新的治疗策略提供机会。</p>
+<h2 id="2-icb">2. 影响ICB反应和耐药性的因素<a class="headerlink" href="#2-icb" title="Permanent link">&para;</a></h2>
+<p>肿瘤免疫学的科学发现以及由此产生的利用免疫系统治疗癌症的突破性概念为癌症患者带来了可观的临床益处，并极大地推动了肿瘤学领域的发展。然而，一些挑战仍然与免疫检查点抑制剂相关，需要加以解决以扩大其应用。当前免疫检查点抑制剂的一个主要缺点是在某些癌症（如胶质母细胞瘤和胰腺癌）中缺乏反应，这可能归因于它们固有的低免疫原性。在 ICB 已被证明有效的那些癌症类型中，例如黑色素瘤，有效和持久的反应仅限于一小部分患者，一些患者表现出对治疗缺乏初始反应（即，初级阻力）。此外，最初对治疗有良好反应的患者可能会随着时间的推移产生耐药性（即获得性耐药性），从而需要改变治疗策略。随着对肿瘤、免疫系统和其他系统因素之间多维相互作用的深入了解，我们对 ICB 耐药机制的理解也在不断发展。重要的是，人们也越来越认识到，患者（宿主）暴露于环境因素会影响他们的免疫反应。在这篇综述中，我们探讨了两大类检查点抑制剂耐药的潜在机制：(1) 宿主（患者）-内在因素，包括肿瘤特异性和全身因素；(2) 宿主（患者）-外在因素，包括环境因素因素。</p>
+<h3 id="21">2.1. 宿主内在因素<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<p>当我们考虑影响抗肿瘤免疫反应的力量时，我们广泛地考虑了肿瘤和患者。肿瘤本身含有多种成分，包括肿瘤细胞及其分泌蛋白、非肿瘤细胞（免疫细胞和基质细胞）以及微生物，所有这些都可能影响肿瘤免疫和对 ICB 的反应。此外，我们将讨论改变患者全身免疫力的全身性因素，作为对 ICB 反应的贡献者。</p>
+<h4 id="211">2.1.1. 肿瘤内在因素<a class="headerlink" href="#211" title="Permanent link">&para;</a></h4>
+<h5 id="_4">遗传和表观遗传缺陷<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h5>
+<p>肿瘤的遗传状态是免疫检查点抑制剂治疗反应的主要决定因素之一（<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8767569/figure/F2/">图 2</a>)。在肿瘤发展的过程中，肿瘤细胞获得了一些突变，导致突变的蛋白质和多肽的产生;这些突变的肽可以作为新的抗原，称为新抗原，这是不同于自我抗原。在许多情况下，新抗原可能具有免疫原性，不受自我耐受机制的保护。此外，肿瘤遗传畸变可以促进自身抗原以高于正常水平或在正常生理条件下不存在这些抗原的位置表达。肿瘤组织内新抗原和异常自身抗原的表达可以吸引T细胞清除肿瘤细胞，进一步增强免疫检查点抑制剂引发的抗肿瘤免疫反应。因此，肿瘤突变负荷 (TMB) 被量化为肿瘤基因组每个编码区的不同突变总数，已被用作确定肿瘤抗原性和解释对免疫检查点抑制剂的反应或耐药性的标准。黑色素瘤、肺癌和膀胱癌，这些肿瘤通常与环境 DNA 损伤引起的突变数量增加有关，对 ICB 表现出更强的反应。与未获得临床益处的黑色素瘤患者相比，对 Ipilimumab 和 Tremelimumab（CTLA-4 抗体）有持久反应的黑色素瘤患者的 TMB 更高。</p>
+<p><img alt="" src="https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202212261704459.png" /></p>
+<p>DNA 错配修复缺陷 (dMMR) 和微卫星不稳定性 (MSI) 等遗传缺陷使肿瘤细胞易于积累体细胞突变，并与 TMB 增加和对 ICB 的易感性增加有关。虽然这些研究表明高 TMB 在肿瘤对 ICB 的反应中起着重要作用，但对 ICB 的反应要微妙得多。事实上，已经证明肿瘤内新抗原的分布和组成是黑色素瘤和非小细胞肺癌患者治疗反应的更强指标。此外，遗传和表观遗传缺陷可以在肿瘤细胞中诱导多种免疫逃避机制，进一步影响对 ICB 的反应。例如，导致抗原呈递缺陷的遗传和表观遗传畸变可以促进对 ICB 的原发性和获得性耐药性，而与 TMB 无关。</p>
+<h5 id="_5">信号缺陷<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h5>
+<p>致癌信号和代谢途径及其相关突变也已被证明可以驱动各种癌症类型的免疫原性反应。通过 Janus 激酶 (JAK)/信号转导和转录激活因子 (STAT) 通路的干扰素 (IFN) 信号在肿瘤免疫中起着重要作用。与该通路及其下游效应子相关的缺陷与对 ICB 的反应呈负相关和正相关，表明该通路在肿瘤免疫中具有双重作用。</p>
+<p>多项研究表明，磷脂酰肌醇 3 激酶 (PI3K) 激活突变可能与肿瘤细胞上 PD-L1 的表达增加有关，从而导致神经胶质瘤、乳腺癌、前列腺癌、肺癌和胰腺癌发生免疫逃逸。 磷酸酶和张力蛋白同系物 (PTEN) 丢失导致的 PI3K 激活与黑色素瘤中对 PD-1 抗体的不良反应相关，并且可以通过 PI3Kβ 抑制来逆转。PTEN 缺失降低了肿瘤中 CD8^+^ T 细胞的数量和细胞溶解活性，并且还促进了对 T 细胞诱导的肿瘤细胞凋亡的抵抗。</p>
+<p>激活 Wnt/β-连环蛋白通路中的突变也可以通过改变黑色素瘤、乳腺癌、腺样囊性癌和髓母细胞瘤等一大类肿瘤中 PD-L1 和 PD-L2 的表达来诱导对 ICB 的耐药性。机制研究表明，Wnt 诱导的趋化因子 CCL4 表达降低阻碍了 CD103^+^ DC 和 T 细胞向肿瘤微环境的募集。</p>
+<p>虽然这些和其他几项研究强烈支持信号相关突变在肿瘤对 ICB 耐药中的作用，但重要的是要承认肿瘤细胞的信号通路极其复杂，存在一些重叠和相反的通路。肿瘤微环境中肿瘤细胞与基质细胞和免疫细胞之间的持续串扰进一步放大了信号传导的复杂性。尽管如此，关于信号通路在肿瘤免疫反应中的作用的大量证据已经形成了将信号通路抑制与 ICB 相结合以增强反应的基本原理，这将在本综述后面详细讨论。</p>
+<h5 id="_6">细胞外囊泡<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h5>
+<p>最近的研究表明，细胞外囊泡 (EV)，特别是 EV 的外泌体，在肿瘤免疫和 ICB 耐药中具有潜在作用。（<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8767569/figure/F2/">图 2</a>）。来自多种肿瘤类型的 EV，包括黑色素瘤、胶质母细胞瘤、乳腺癌和头颈癌，其表面含有功能性 PD-L1。外泌体 PD-L1 抑制 CD8^+^ T 细胞活性并诱导引流淋巴结中的 T 细胞耗竭，并在抗 PD-L1 阻断性前列腺癌模型中促进肿瘤生长。在接受抗 PD-1 治疗的癌症患者中，未从治疗中获益的患者循环外泌体 PD-L1 的治疗前水平较高，反映了外泌体 PD-L1 在肿瘤免疫中的作用及其与 T 的潜在关联细胞衰竭。循环 PD-L1^+^ EV 的水平可以反映肿瘤和免疫系统之间的动态相互作用，并可能作为 ICB 反应的有前途的生物标志物。</p>
+<h4 id="212">2.1.2. 肿瘤微环境：基质细胞<a class="headerlink" href="#212" title="Permanent link">&para;</a></h4>
+<p>肿瘤微环境含有几种非免疫基质成分，包括内皮细胞、成纤维细胞和组织特异性细胞，所有这些成分都对癌症的不同标志有巨大贡献，例如血管生成、侵入细胞外基质 (ECM) 和转移。越来越多的证据表明，这些基质成分也有助于免疫逃避和对 ICB 的抵抗机制（<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8767569/figure/F2/">图 2</a>)。</p>
+<p>肿瘤微环境中的高血管生成率以及由此导致的肿瘤内血管系统异常和高间质压力会损害免疫细胞的浸润和检查点抑制剂的外显率。此外，内皮细胞可以表达 PD-L1，这可以进一步减弱肿瘤微环境中的 T 细胞功能。与这些研究一致，将抗血管生成抗体与检查点抑制剂相结合的策略在增强抗肿瘤免疫反应方面显示出有希望的结果。</p>
+<p>癌症相关成纤维细胞 (CAF) 可以对肿瘤免疫反应产生双重影响。肿瘤微环境中 CAF 衍生的转化生长因子 β (TGFβ) 信号与 ECM 基因失调相关，导致与更高的 CD8^+^ T 细胞和 M1:M2 巨噬细胞比率相关的独特特征。这种特征在 TCGA 中不同癌症类型的免疫“热”肿瘤中得到丰富。相反，成纤维细胞活化蛋白 (FAP)^+^ CAF 抑制胃癌和胰腺癌中 T 细胞的抗肿瘤功能，靶向这些 FAP^+^亚型可增强肿瘤对 ICB 的反应。</p>
+<p>组织特异性基质细胞也可以在肿瘤对 ICB 的耐药性中发挥作用。前列腺癌骨转移对 ICB 的抵抗至少在某种程度上归因于破骨细胞诱导的骨吸收后 TGFβ 的释放，这减少了肿瘤内 T 辅助 1 型 (Th1) 细胞的数量。此外，与转移性脑肿瘤相关的磷酸化 STAT3^+^ 反应性星形胶质细胞显示可降低 CD8^+^ T 细胞活性并增加 CD74^+^小胶质细胞/巨噬细胞的丰度，促进肿瘤免疫逃逸并表明其在抵抗 ICB 中的潜在作用。</p>
+<h4 id="213">2.1.3. 肿瘤微环境：免疫细胞<a class="headerlink" href="#213" title="Permanent link">&para;</a></h4>
+<p>各种类型的先天性和适应性免疫细胞驻留在或渗透到肿瘤微环境中。这些免疫细胞和肿瘤细胞之间的动态串扰决定了肿瘤的免疫状态，可以促进或阻碍肿瘤对 ICB 的反应。肿瘤免疫特征可分为“冷”或“热”肿瘤，或更准确地说分为“免疫炎症”、“免疫排除”或“免疫沙漠”。免疫性炎症肿瘤通过 CD4^+^和 CD8^+^的丰度来识别T 细胞及其对肿瘤的渗透，通常但不总是与对 ICB 的良好反应相关。免疫排除和免疫荒漠肿瘤分别定义为存在未浸润肿瘤的 T 细胞或不存在 T 细胞，并且对 ICB 没有反应。随着肿瘤的发展，肿瘤微环境逐渐变得更具免疫抑制性，先天性和适应性免疫系统的几个组成部分有助于肿瘤免疫逃避，并不可避免地对检查点抑制剂产生耐药性。</p>
+<p>CD8^+^效应 T 细胞通过释放细胞溶解因子和诱导肿瘤细胞凋亡，在激发抗肿瘤免疫反应中发挥重要作用（<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8767569/figure/F2/">图 2</a>)。在用检查点抑制剂治疗之前，CD8^+^ T 细胞在肿瘤边缘和肿瘤内的存在与更强的治疗反应相关。因此，Tregs通过分泌免疫抑制细胞因子（包括 IL-2、IL-10、IL-35、TGF β）和检查点分子（如作为 CTLA-4 和 PD-1。通过 CD4、CD25 和 Forkhead box P3 (FoxP3) 转录因子的表达鉴定，Tregs 通常在肿瘤微环境和循环中大量存在。Tregs 在调节肿瘤免疫中的关键作用已通过临床前研究得到证实，在这些研究中，Tregs 在多种肿瘤类型中的耗竭可引起抗肿瘤免疫反应。由于 CTLA-4 在 Tregs 上的组成型表达和 PD-1 在这些细胞上的高表达，抗 CTLA-4 和抗 PD-1 抗体已成功耗尽肿瘤浸润性 Tregs 并增加效应 T 细胞(Teff) 与肿瘤微环境中的 Treg 比率。然而，由于检查点抑制剂的不完全耗尽，Tregs 的代偿性增殖 和 Treg 中 TIM-3 和 Lag-3 等替代检查点分子的上调是 Treg 驱动的 ICB 耐药机制之一。</p>
+<p>髓源性抑制细胞 (MDSC) 是在肿瘤微环境中具有免疫抑制活性的免疫细胞的另一个子集。通过精氨酸酶 1、诱导型一氧化氮合酶 (iNOS)、活性氧 (ROS) 和过氧亚硝酸盐等不同介质，MDSC 减弱 Teff 和 NK 细胞的活性，调节 Treg 的分化，并在巨噬细胞中诱导免疫抑制表型。此外，肿瘤浸润性 MDSC 在各种癌症类型（包括结肠癌、卵巢癌和膀胱癌）中表现出高表达的抑制性检查点，例如 PD-L1。与这些报告一致，MDSC 被 ICB 靶向并耗尽，导致 Teff 与 MDSC 的比率增加。这些观察结果表明 MDSC 在对 ICB 产生耐药性方面具有潜在作用。事实上，黑色素瘤患者中较低数量的MDSCs与Ipilimumab (CTLA-4抗体)的更好反应有关。。</p>
+<p>肿瘤相关巨噬细胞 (TAM) 在肿瘤免疫调节中也起着关键作用。对 TAM 复杂可塑性的研究表明，这些细胞存在一系列表型，M1 和 M2 是该光谱的两端 。M1 巨噬细胞通常表达促炎细胞因子并促进抗肿瘤免疫反应，而 M2 巨噬细胞的特点是表达抗炎细胞因子和趋化因子并抑制 CD8^+^ T 细胞活化，促进 Treg 的募集，并有助于肿瘤免疫逃避。PD-L1 等抑制性检查点分子在这些细胞上的表达进一步增强了它们的免疫抑制作用。多项研究表明，抑制 M2 样 TAM 的活性并将巨噬细胞的极化重定向至 M1 表型可以增强对 ICB 的反应。吞噬性骨髓细胞中促肿瘤炎症基因特征的适应性免疫反应比例较低是另一个与尿路上皮癌中 PD-L1 阻断剂耐药性相关的因素。</p>
+<p>最近的研究还证明了 B 细胞在肿瘤免疫和对 ICB 的反应中的作用。肿瘤中 B 细胞的存在与黑色素瘤和肾细胞癌中 ICB 新辅助治疗的更好反应相关。B 细胞主要存在于三级淋巴结构 (TLS) 中。应答肿瘤中的肿瘤浸润 B 细胞群富含记忆 B 细胞；相比之下，幼稚 B 细胞在无反应肿瘤中更为突出。同样，在软组织肉瘤中，富含 B 细胞的 TLS 的存在与对 PD-1 阻断的更好反应相关。B 细胞对 ICB 反应影响的潜在机制知之甚少。然而，目前的数据表明了一些潜在的机制，包括通过记忆 B 细胞和 B 细胞衍生的细胞因子呈递抗原来激活 T 细胞，以及通过产生抗肿瘤抗体的潜在贡献。未来的研究需要确定这些细胞的精确作用机制以及免疫检查点抑制剂背景下 TLS 的不同成分。</p>
+<p>其他浸润肿瘤微环境的先天免疫细胞，如 NK 细胞、中性粒细胞和 DC，可以进一步影响抗肿瘤免疫反应。肿瘤浸润的中性粒细胞显示出促肿瘤和抗肿瘤表型。肿瘤相关 DC 的活性在很大程度上取决于存在的 DC 亚型。肿瘤微环境通常决定 DC 的不成熟表型，DC 不能有效地通过抗原呈递激活 T 细胞，并通过扩展 Tregs 进一步促进免疫抑制微环境。相反，传统的 I 型树突状细胞 (cDC1) 可以有效刺激肿瘤引流淋巴结和肿瘤内的CD8^+^ T 细胞，为增加肿瘤微环境中的这些细胞以提高对 ICB 的反应的治疗努力创造了理论基础。与此相一致，NK 细胞已被证明可通过分泌 CCL5 和 XCL1 趋化因子来增加 cDC1 肿瘤浸润，并且建议将靶向这些趋化因子途径作为提高对 ICB 反应的潜在策略。</p>
+<h4 id="214">2.1.4. 肿瘤微环境：代谢状态<a class="headerlink" href="#214" title="Permanent link">&para;</a></h4>
+<p>肿瘤微环境的代谢状态是另一个可以通过多种机制影响肿瘤免疫的因素。例如，低氧肿瘤已被证明在肿瘤细胞和 DC 中表现出 MHC-I 表达降低。耗尽的 T 细胞和浸润肿瘤的 NK 细胞也表现出线粒体生物发生失调，这种机制引起了人们对使用改善线粒体生物发生以促进肿瘤免疫的策略的兴趣。除了缺氧在肿瘤免疫中的突出作用外，肿瘤微环境的其他方面也受到代谢条件的影响，例如营养来源的改变作为免疫逃避和抗 ICB 的新机制正在积极探索中。</p>
+<h4 id="215">2.1.5. 肿瘤微环境：微生物成分<a class="headerlink" href="#215" title="Permanent link">&para;</a></h4>
+<p>最近，肿瘤内微生物——肿瘤微环境的另一个组成部分，迄今为止被低估了——已被证明对抗肿瘤免疫反应和对 ICB 的反应有显着影响（<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8767569/figure/F2/">图 2</a>）。最近的两项研究表明，微生物在广泛的肿瘤中普遍存在，包括那些与呼吸消化道及其共生生物没有物理联系的肿瘤。黑色素瘤、肺、卵巢、胶质母细胞瘤、胰腺、骨、乳腺肿瘤中肿瘤微生物群的特征表明，这些微生物可以定位在癌细胞本身或肿瘤相关免疫细胞内。此外，这些微生物可能是肿瘤类型特异性的，表明可能补充肿瘤的不同功能。肿瘤内微生物已被证明会影响癌症生物学的几乎所有方面，包括肿瘤起始/生长、侵袭和转移。胰腺癌的长期存活与肿瘤微生物组中 alpha 多样性的增加以及特定瘤内微生物组特征（假黄单胞菌-链霉菌-糖多孢菌-克劳氏芽孢杆菌）的存在有关。此外，瘤内微生物还可以改变肿瘤免疫微环境；肿瘤相关微生物与免疫细胞浸润减少和向更具免疫抑制性的环境重塑有关。对人类样本的分析表明，对于接受免疫治疗的一组黑色素瘤患者，应答者和非应答者之间肿瘤微生物群的组成存在差异。来自细胞内细菌的肽可以在人类 HLA-I 和 -II 的背景下被肿瘤细胞呈递，并被肿瘤浸润性 T 细胞识别；这是肿瘤内细菌可以直接影响抗肿瘤免疫力的一种可能机制。</p>
+<h4 id="216">2.1.6. 宿主系统因素<a class="headerlink" href="#216" title="Permanent link">&para;</a></h4>
+<p>证据表明，强大的全身免疫反应对于癌症免疫疗法的成功绝对必不可少。计算机建模已被用于通过预测宿主呈递各种新抗原的能力来描述整体肿瘤免疫“适应性”。例如，我们知道 HLA 位点的纯合性会导致表达的抗原群多样性降低；HLA 纯合性与接受 ICB 治疗的癌症患者的生存率降低有关。</p>
+<p>其他宿主因素有助于整体系统免疫功能，包括肠道微生物群（<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8767569/figure/F2/">图 2</a>)。 肠道微生物群对抗肿瘤反应的影响已在临床前模型以及黑色素瘤、肾细胞癌和 NSCLC 患者中得到证实。此外，多项研究表明抗生素在 ICB 治疗的背景下会产生负面影响，这可能是由于它们对肠道微生物多样性的不利影响。可以改变肠道微生物群的因素可能会继发影响全身免疫功能和抗肿瘤免疫反应。高纤维饮食和运动与肠道微生物群多样性的增加和短链脂肪酸 (SCFA) 的丰富有关，这两者都与 ICB 治疗后的生存率提高有关。通过粪便微生物移植、抗生素和/或益生菌/益生菌或饮食改变来调节 ICB 患者肠道微生物组的临床试验正在进行中。</p>
+<p>虽然肥胖总体上与肿瘤发生和不良结果有关，但有趣的是，它与黑色素瘤、非小细胞肺癌和其他实体瘤患者对 ICB 的反应改善和生存有关（<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8767569/figure/F2/">图 2</a>)。回顾性分析表明，在接受 ICB 治疗的黑色素瘤患者中，肥胖（定义为 BMI &gt; 30）与死亡风险降低近 40% 相关；有趣的是，这种影响在男性中最为突出。</p>
+<p>雌激素和雄激素影响与性和非性相关的生理功能，包括全身免疫和抗肿瘤免疫反应。男性总体上对恶性肿瘤的易感性更高，但对 ICB 的反应更好，这可能是由于 PD-L1 表达增加。在乳腺癌的临床试验中，抗雌激素疗法与 ICB 相结合，而在前列腺癌中，抗雄激素疗法与 ICB 相结合。</p>
+<h3 id="22">2.2. 宿主外在因素（暴露组）<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<p>除了宿主的内在因素（肿瘤特异性和全身性）外，宿主的外部因素——暴露组——也可能影响癌症生物学和对包括 ICB 在内的疗法的反应。简单地定义，暴露组包括健康和疾病的所有非遗传决定因素；更具体地说，暴露组代表“在整个生命周期中对环境影响和相关生物反应的累积测量，包括来自环境、饮食、行为和内源性过程的暴露”。暴露组包括我们住的地方、工作的地方、吃的东西以及使用的药物和化妆品。包括慢性压力和抑郁/焦虑在内的社会心理因素也是关键因素。更广泛地思考，这些“暴露”本身与更多的全球社会结构有关，包括社会经济地位、教育水平、获得医疗保健和食物的机会，以及气候变化甚至种族不公正和性别歧视；这些也构成了暴露组。</p>
+<p>个体的暴露组处于恒定但可变的变化状态，其总效应只能理解为整个生命周期中暴露的累积。在发育的关键点（例如幼儿期）的暴露可能特别重要，并且可能远离研究或影响点。</p>
+<p>暴露组包罗万象的多变性质使分析成为一项艰巨的任务。然而，继续将我们的研究局限于“遗传”而忽视“环境”会限制我们充分理解人类健康和疾病的复杂性的能力。只有通过对这些外部因素的认识、欣赏和专门研究，我们才能描绘出它们对整体健康的个人和合作贡献——包括免疫功能，更具体地说是抗肿瘤免疫回应。</p>
+<p>人们已经开始了解这些“暴露”效应的迹象。如上所述，暴露于紫外线辐射和/或香烟烟雾会增加 TMB 和继发性新抗原水平，这被提议分别解释黑色素瘤和非小细胞肺癌中对 ICB 相对较高的反应率。此外，在临床前模型中，慢性应激可能通过交感神经系统放电激活 β2 受体信号通路，从而促进肿瘤生长并削弱抗肿瘤免疫反应和对 ICB 的反应。回顾性数据表明，接受 ICB 治疗的患者使用非选择性 β 受体阻滞剂可提高总生存率，这促使临床研究调查 β 受体阻滞剂与 ICB 联合使用。其他癌症相关治疗（例如，化学治疗剂、抗血管生成剂和放射治疗）可被视为暴露组的一部分。大量证据表明，这些疗法可以通过多种机制诱导剂量依赖性免疫调节作用。例如，低剂量的环磷酰胺和吉西他滨被证明可以分别减少 Tregs 和骨髓抑制细胞的数量。几种化疗药物也被证明可以增加 PD-L1 的表达。此外，化学治疗剂的细胞毒性作用可以促进抗原呈递并增强抗肿瘤免疫反应。同样，辐射也可以通过丰富抗原肽库来增加肿瘤的抗原性。</p>
+<p>在大量患病个体中纵向应用“组学”技术将是了解环境暴露对健康影响的关键。与全基因组关联研究 (GWAS) 类似的全暴露组关联研究 (EWAS) 正在缓慢发展。 然而，这些努力的成功需要从医学到环境科学等领域的专家的跨学科合作。此外，这将需要新技术和创造性策略来检测和量化暴露（智能手机技术、个人监测设备）以及更具创造性的生物样本收集（包括母乳和脐带血以及牙齿和头发）和开发处理此类复杂数据集的强大平台。</p>
+<p>总的来说，应该指出的是，我们对与 ICB 反应相关的因素（包括宿主内在因素和外在因素）的知识迅速发展表明，决定对 ICB 反应的相互作用非常复杂。虽然在对 ICB 的反应背景下这些因素中的每一个的相对个体和集体意义仍然知之甚少，但许多研究已经开发了框架和数学模型以创建更全面的肿瘤免疫和对 ICB 反应的图景。 这些模型非常有利于指导未来的临床前和临床研究，以增强我们对 ICB 反应决定因素的理解，并改进诊断和治疗应用。</p>
+<h2 id="3">3. 免疫治疗背景下的肿瘤进化<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>虽然肿瘤的遗传景观可以帮助形成抗肿瘤免疫，但免疫微环境可能会相互影响肿瘤的遗传进化（<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8767569/figure/F3/">图 3</a>)。早期未经治疗的癌症中存在的各种免疫逃避机制可能会通过影响新抗原和抗原呈递对进化中的肿瘤施加选择压力。在 DNA 和 RNA 水平上抗原呈递中断或新抗原耗尽的进化肿瘤亚克隆受到阳性选择。值得注意的是，肺腺癌中不同肿瘤区域的克隆多样性与这些区域内的 CD8^+^ T 细胞浸润呈负相关。在黑色素瘤等其他癌症类型中也观察到了这一点。</p>
+<p><img alt="" src="https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202212271307120.png" /></p>
+<p>此外，据报道，ICB 治疗可改变肿瘤的进化景观。通过 Nivolumab（PD-1 抗体）治疗过程对肿瘤遗传特征的纵向评估表明，由于新抗原产生突变的减少而不是同义突变，反应者的突变负荷减少。抗 PD-1 疗法的良好反应与重塑肿瘤的进化景观有关，几个克隆群体在治疗中变得检测不到，而 T 细胞克隆在这些患者中得到扩增。肿瘤和免疫微环境的相互进化及其在 ICB 治疗期间的共同进化不仅可以定义对 ICB 的耐药机制，还可以用来制定预测治疗反应的策略。</p>
+<h2 id="4-icb">4. 影响ICB毒性的因素<a class="headerlink" href="#4-icb" title="Permanent link">&para;</a></h2>
+<p>人类免疫系统依赖于一个复杂的制衡系统，该系统对病原体（或肿瘤）提供有效反应，同时保持对非肿瘤自身和一些共生生物的耐受性。ICB 对这种稳态平衡的扰动会导致自我耐受性的丧失和错误的非肿瘤自我导向免疫活性，从而导致 irAEs（<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8767569/figure/F4/">图 4</a>)。</p>
+<p><img alt="" src="https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202212271310659.png" /></p>
+<h3 id="41-irae">4.1. irAE 的特征<a class="headerlink" href="#41-irae" title="Permanent link">&para;</a></h3>
+<p>irAE 包含 70 多种不同的病理，几乎影响每个器官系统，包括神经系统、泌尿生殖系统、胃肠道系统、肺系统、心血管系统和外皮系统。病理的严重程度各不相同，但 irAE 可能很严重，在某些情况下甚至是致命的。irAE 很常见，在多达 90% 以上的患者中观察到低级别（1-2 级）影响，而更严重的影响（3-5 级）范围为 20-60%。虽然与其他抗癌疗法（包括化学疗法和放射疗法）相关的毒性通常遵循可预测的时间进程，但 irAE 的发作变化很大，有些是在治疗后开始几天到几周，有些是几个月。受影响系统的广度、irAE 的严重性和发生时间因药物而异，特别是在抗 CTLA-4 药物和抗 PD-1/PD-L1 及其组合之间。目前，irAE 的治疗通常包括终止 ICB 和开始大剂量皮质类固醇疗程；然而，更有针对性的治疗方案正在开发中。在所有情况下，irAE 的成功治疗都依赖于对病理学的早期认识和通常由多学科专家团队协调的积极治疗方法。</p>
+<h3 id="42-irae">4.2. irAE 的机制<a class="headerlink" href="#42-irae" title="Permanent link">&para;</a></h3>
+<p>不幸的是，我们缺乏对 irAE 发展的完整机制理解。机制的早期暗示来自临床前小鼠模型，包括 CTLA-4 基因敲除，它们死于压倒性自身免疫性淋巴组织增生性疾病和 PD-1 基因敲除并表现出伴有关节炎和心肌病的狼疮样自身免疫性疾病。支持这一点的是，CTLA-4 的单倍体不足以及 CTLA-4 和 PD-1/PD-L1 的多态性与一些自身免疫性疾病有关。 此外，偶尔存在与个别 irAE 相关的自身免疫性疾病推论，这表明在某些情况下，irAE 可能代表临床上无症状的自身免疫性疾病或由正常免疫抑制机制控制的自身免疫性疾病。然而，临床前模型中的 ICB 治疗并未导致压倒性的自身免疫病理学。此外，那些与自身免疫相关的 irAE 并不总是在相关组织中分享组织病理学发现、其他临床发现或与各自自身免疫现象相关的人口统计学因素。此外，一些患有明显自身免疫性疾病的患者已经成功地接受了 ICB 治疗，而没有出现疾病恶化的情况。因此，许多人认为 irAE 代表了真正独特的病理学。</p>
+<p>与早期小鼠研究中观察到的相比，患者中 irAE 的高发生率突出了当今临床前模型的局限性之一，不仅在预测患者 irAE 发生率方面，而且在促进我们对机制的理解方面。尽管正在开发新的临床前模型，但我们必须严重依赖临床数据收集和利用各种临床试验患者样本的转化研究。</p>
+<p>异常的 T 细胞活性被认为是 irAE 发展的主要因素。肿瘤和正常组织之间的共享抗原可能导致<em>从头</em>激活 T 细胞并沉淀靶向脱瘤效应（<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8767569/figure/F4/">图 4</a>)。这已在心肌炎和皮疹中观察到，其中分别在肿瘤和心肌或皮肤中观察到浸润性 T 细胞。该活动的范围可以通过表位扩散来扩大。抗原或表位扩散描述了肿瘤细胞死亡释放额外抗原的现象；这些抗原存在于“免疫激活”微环境中，T 细胞可以针对正常组织激活（<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8767569/figure/F4/">图 4</a>)。最后，在某些组织中，预先存在的自身反应性 T 细胞可能已经存在并通过检查点分子进行检查。组织驻留的自身反应性 T 细胞的激活或再激活被认为是 irAE 发展的主导因素。TCR 分析表明，在 ICB 诱导的结肠炎中发现的大部分细胞毒性效应细胞来自组织驻留的 CD8^+^ T 细胞。</p>
+<p>体液免疫系统和 B 细胞在引起 irAE 中的作用也被提出；外周 B 细胞库的早期变化与毒性有关。近 25% 的患者在接受 ICB 治疗黑色素瘤后产生了新的自身抗体；然而，在自身免疫性疾病中观察到的典型抗体靶点在 irAE 中并不总是可见，即使同一靶点受到影响也是如此。</p>
+<p>即便如此，如上所述，CTLA-4 和 PD-1 并非仅在 T 细胞上表达，它们的活性可能会影响其他免疫细胞成分。CTLA-4 也在 Tregs 上表达；靶向 CTLA-4 理论上可能导致 Treg 细胞功能障碍或耗竭，正如在小鼠身上所证明的那样，尽管并非所有数据都支持人类的这一观点。PD-1 也可以在一些骨髓细胞上表达，骨髓区室的变化可能导致炎症细胞涌入各种远处组织/器官并引发器官损伤。 ICB 相关结肠炎和心肌炎患者表现出强烈、活跃的巨噬细胞浸润；巨噬细胞在 ICB 诱发的糖尿病中也起着重要作用。最后，其他不太常见的效应可能继发于对正常组织的靶向效应。例如，提出的垂体功能障碍机制是抗 CTLA-4 药物与正常组织上表达的 CTLA-4 结合，从而刺激补体介导的杀伤。</p>
+<h3 id="43">4.3. 反应与毒性的相关性<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>
+<p>有重要数据表明对 ICB 的反应和毒性之间存在相关性，尽管这些数据有些混杂，并且可能特定于所用药物、肿瘤类型、产生的 irAE 以及发病动力学。 有趣的是，旨在计算白斑病、银屑病和特应性皮炎风险的多基因风险评分 (PRS) 可预测膀胱癌对 ICB 的反应。此外，如 PET 成像所示，通过增加的代谢活动检测脱靶器官中的免疫激活可预测反应。</p>
+<p>我们定义 irAE 和反应之间关联的能力因许多因素而变得模糊不清。一方面，目前尚不清楚用于 irAE 的皮质类固醇是否对抗肿瘤反应有不利影响。效果可能取决于给药时间和剂量。虽然一些研究表明没有效果，但在治疗开始时使用大剂量类固醇会降低生存率。</p>
+<p>不幸的是，经历 irAE 的患者对于未来的免疫治疗途径的选择通常非常有限，这最终会影响他们的肿瘤学结果。尽管一些数据表明 ICB（特别是抗 PD-1/PD-L1）可以在 irAE 的发展和解决后在一些患者中成功重新启动，但这并不是普遍真实。经历严重或复发性 irAE 的患者通常不会重新开始使用 ICB。在评估毒性和总生存期之间的关系时，这是另一个混杂因素。</p>
+<h2 id="5">5. 增强反应和消除毒性的策略<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<p>对 ICB 的持久反应仅见于一小部分患者，并且因不同癌症类型而异。此外，ICB 治疗可能会产生明显的副作用，使这些治疗的风险收益比偏向不利的平衡。这些局限性导致了一些正在进行的努力，以开发预测和预后方法来识别将从这些治疗中受益的患者以及治疗策略以增强对治疗的反应并克服耐药性和毒性。</p>
+<h3 id="51">5.1. 使用已知和新颖的诊断策略来预测响应的精确方法<a class="headerlink" href="#51" title="Permanent link">&para;</a></h3>
+<h4 id="511">5.1.1. 遗传生物标志物<a class="headerlink" href="#511" title="Permanent link">&para;</a></h4>
+<p>TMB、MSI 和 dMMR 作为对 ICB 反应的生物标志物的预测价值已得到多项研究的支持。CTLA-4 阻断的初步试验表明，在具有高 TMB 的黑色素瘤患者中具有明显的临床益处，在 NSCLC 中也证明了 PD-1 阻断剂的临床益处。此外，pembrolizumab（PD-1 抗体）在具有 dMMR 的结直肠和非结直肠患者中的临床疗效比较表明，反应率显着更高，无进展生存期增加。</p>
+<p>2017 年，FDA 批准 pembrolizumab 用于治疗具有高 MSI 或 dMMR 的晚期儿童和成人实体瘤，这些实体瘤对先前的治疗没有反应并且没有其他替代治疗选择，这是 ICB 的首个组织不可知批准基于跨癌症类型的共同生物标志物。该决定是根据 5 项临床试验中 149 名具有高 MSI 或 dMMR 的患者的结果做出的，在这些患者中，使用帕博利珠单抗治疗的总体反应率为 39.6%，其中 78% 的患者反应持续时间为 6 个月或更长时间（<a href="https://clinicaltrials.gov/ct2/show/NCT01876511">NCT01876511</a>). 对既往治疗无反应且没有其他替代治疗选择（基于 KEYNOTE-158试验 - <a href="https://clinicaltrials.gov/ct2/show/NCT02628067">NCT02628067</a>）的所有具有高 TMB（≥10 个突变/兆碱基）的晚期儿童和成人实体瘤的第二次组织不可知批准是后来发出。Pembrolizumab 也被批准用于具有高 MSI 或 dMMR 的结直肠癌患者作为一线治疗（基于 KEYNOTE-177试验 - <a href="https://clinicaltrials.gov/ct2/show/NCT02563002">NCT02563002</a>）。</p>
+<p>应该指出的是，尽管越来越多的证据表明这些遗传因素作为对 ICB 反应的生物标志物的益处，但并未在所有患者中观察到 TMB 与对 ICB 反应之间的关联。此外，突变负荷与黑素瘤患者对纳武单抗（PD-1 抗体）的良好反应之间的关联仅在易普利姆玛（CTLA-4 抗体）初治患者中观察到，这表明突变负荷的预测价值有限，需要替代生物标志物对于在 nivolumab 治疗之前使用易普利姆玛取得进展的患者。对先进技术进行这些分析的需求也限制了这些生物标志物在某些临床环境中的适用性。</p>
+<h4 id="512">5.1.2. 免疫生物标志物<a class="headerlink" href="#512" title="Permanent link">&para;</a></h4>
+<h5 id="_7">肿瘤浸润淋巴细胞<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h5>
+<p>治疗前肿瘤样本中免疫标志物的表达水平已被评估为对 ICB 反应的潜在预测生物标志物。在转移性黑色素瘤患者中，基线时较高密度的瘤内 CD8^+^ T 细胞表明可以预测抗 PD-1 治疗的良好反应。重要的是，这项研究评估了肿瘤内 T 细胞的时空分布，并证明治疗前浸润性肿瘤边缘的 T 细胞丰度与更好的反应相关，而治疗后，T 细胞密度在边缘和在有反应的患者的肿瘤实质内。 与 PD-1 阻断相反，TIL 的存在并未证明有利于抗 CTLA-4 治疗的预后目的，这反映了该药物的作用机制。相比之下，TIL 的早期治疗水平可以预测黑色素瘤患者对 CTLA-4 阻断的反应。因此，早期治疗活检可能是一个重要的生物标志物。国际免疫肿瘤学生物标志物工作组做出了重大努力来标准化评估 TIL 的组织学方法，以进一步提高这种潜在生物标志物的可靠性和可重复性。</p>
+<h5 id="_8">免疫检查点分子<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h5>
+<p>抗 PD-1 和抗 PD-L1 抑制剂的初步试验报告了治疗前瘤内 PD-L1 表达与多种肿瘤类型（包括黑色素瘤和非小细胞肺癌）治疗反应之间的显着关联。有趣的是，PD-L1 表达与抗 PD-L1 治疗反应之间的关联仅对肿瘤浸润免疫细胞而非肿瘤细胞上的 PD-L1 表达有显着意义。与这些研究相反，其他报告表明，在某些患者没有 PD-L1 表达的情况下可以获得持久的反应。应该注意的是，PD-L1 阳性定义和评估方法的可变性可能导致结果不一致，并需要进一步标准化这些标准。</p>
+<h5 id="_9">新兴战略<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h5>
+<p>虽然 TIL 和 PD-L1 表达的价值已在某些癌症类型中得到证实，但鉴于肿瘤免疫反应的复杂性和对 ICB 的耐药机制，仅靠这些生物标志物无法满足预后/预测需求，从而改善患者对 ICB 治疗的选择. 因此，识别可以指导 ICB 治疗决策的新型标记物具有重要意义，并且是一个积极研究的问题。对接受 CTLA-4 抑制剂治疗后继以 PD-1 阻断的黑色素瘤患者的评估表明，T 细胞相关标志物的表达包括 CD4、CD3、CD8、FOXP3 和颗粒酶 B 以及检查点抑制剂，如 PD-1、PD早期治疗样本中的 -L1 和 LAG3 与治疗反应有很强的相关性。AMADEUS 试验（<a href="https://clinicaltrials.gov/ct2/show/NCT03651271">NCT03651271</a>，正在进行中）旨在评估根据 CD8^+^ T 细胞密度（分别≥15% 和 &lt;15%）将肿瘤分类为免疫学热肿瘤和冷肿瘤的益处，作为预测性生物标志物来识别患者更有可能对 Nivolumab（PD-1 抗体）或 Nivolumab 和 Ipilimumab（CTLA-4 抗体）的组合产生反应。此外，这项前瞻性探索性研究旨在确定可用作对 ICB 反应的强有力预测指标的新型生物标志物。</p>
+<p>外泌体 PD-L1 与 CD28 的组合（曲线下面积为 0.85）也被证明具有很高的预测价值。需要在更大的队列中进行进一步的纵向研究，以验证在 ICB 治疗的背景下外泌体 PD-L1 的预测和预后价值。</p>
+<p>另一种预测和监测对 ICB 反应的新兴策略是使用微生物组特征。肠道和肿瘤微生物组与抗肿瘤反应有关，在某些情况下，还与免疫检查点阻断反应有关。此外，对 TCGA 数据集的分析确定了血液中独特的微生物特征，可以区分健康患者和癌症患者。后面的这些发现揭示了使用循环微生物组作为癌症微创生物标志物的新机会。</p>
+<h3 id="52">5.2. 促进反应和克服耐药性的治疗策略<a class="headerlink" href="#52" title="Permanent link">&para;</a></h3>
+<p>基于对 ICB 耐药机制的不断了解，已经发展出几种治疗策略来克服这些机制并促进对 ICB 的反应。</p>
+<h4 id="521">5.2.1. 表观遗传状态的调节<a class="headerlink" href="#521" title="Permanent link">&para;</a></h4>
+<p>已经引入了不同的方法来通过表观遗传调节减轻具有低免疫原性和抗原呈递的肿瘤对 ICB 的耐药性。用 DNA 甲基转移酶抑制剂治疗已被证明可以逆转 MHC-I 的表观遗传抑制，从而促进抗原呈递、免疫原性和肿瘤免疫靶向。组蛋白去乙酰化酶 (HDAC) 抑制剂与 DNA 甲基转移酶抑制剂的组合也导致临床前模型中抗肿瘤免疫反应的增加。HDAC 抑制剂作为单一药物对肿瘤免疫的影响尚未确定，其与 ICB 联合的临床疗效目前正在许多临床试验中进行评估（例如，<a href="https://clinicaltrials.gov/ct2/show/NCT02638090">NCT02638090</a>、<a href="https://clinicaltrials.gov/ct2/show/NCT02619253">NCT02619253</a>）。</p>
+<h4 id="522">5.2.2. 信号调制器<a class="headerlink" href="#522" title="Permanent link">&para;</a></h4>
+<p>肿瘤信号的突出作用为与 ICB 联合治疗策略提供了基本原理。其中一种策略包括联合使用 atezolizumab（PD-L1 抗体）和 v-raf 小鼠肉瘤病毒癌基因同系物 B1（BRAF）/丝裂原活化蛋白激酶激酶（MEK）抑制剂治疗 BRAF 突变的黑色素瘤患者，这显着增加了无进展生存期 ( <a href="https://clinicaltrials.gov/ct2/show/NCT02908672">NCT02908672</a> )。已经在临床前模型中测试了其他几种策略来逆转信号缺陷和代谢应激，以增强对 ICB 的反应，包括 PI3K 抑制剂和细胞周期蛋白依赖性激酶 4 和 6 (CDK4/6) 。 这些和许多其他研究表明，靶向信号通路有望成为改善对 ICB 反应的潜在策略。</p>
+<h4 id="523">5.2.3. 细胞因子<a class="headerlink" href="#523" title="Permanent link">&para;</a></h4>
+<p>其他治疗策略侧重于增加 TIL 的丰度以增强对 ICB 的反应。先前引入了IL-2和IL-12等细胞因子以增加肿瘤内淋巴细胞浸润和抗肿瘤免疫；然而，这些治疗与严重毒性有关。这些并发症引发了一些为治疗目的重新设计下一代细胞因子的努力，目前正在测试这些细胞因子，并在临床前研究中显示出与 ICB 联合使用的有益效果。</p>
+<h4 id="524">5.2.4. 抗血管生成剂<a class="headerlink" href="#524" title="Permanent link">&para;</a></h4>
+<p>几项临床试验评估了抗血管生成疗法与 ICB 联合治疗的益处，并证明与单独使用 ICB 相比，免疫细胞肿瘤浸润增加，免疫抑制特征患者的预后改善。迄今为止，贝伐珠单抗（抗血管生成剂）与阿特佐木单抗（PD-L1 抗体）的联合使用已获 FDA 批准用于未接受过全身治疗的患者的不可切除或转移性肝细胞癌。 这种联合疗法的适应症有望在未来得到扩展。</p>
+<h4 id="525">5.2.5. 化疗和放疗<a class="headerlink" href="#525" title="Permanent link">&para;</a></h4>
+<p>化学疗法和放射疗法治疗的免疫调节作用（<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8767569/#R242">参考综述</a>）已经形成了联合策略的基础，以提高对 ICB 的反应，目前正在多项临床试验中对其进行评估。虽然这些研究中的大多数都处于初始安全阶段，但据报道，在接受抗 PD-L1 抗体化疗的不可切除 NSCLC 患者和 TNBC 患者中，总生存期有所改善。 为进一步扩大这种治疗策略的益处，需要为不同癌症类型确定最佳治疗方案和剂量的临床前和临床工作。</p>
+<h4 id="526">5.2.6. 溶瘤病毒<a class="headerlink" href="#526" title="Permanent link">&para;</a></h4>
+<p>溶瘤病毒通过多种不同的机制靶向并杀死肿瘤细胞，例如诱导裂解、细胞毒性以及刺激抗肿瘤先天性和适应性免疫反应。由于它们具有免疫刺激作用以及将非炎症性肿瘤转变为炎症性微环境的能力，因此人们考虑将溶瘤病毒与 ICB 相结合以增强对治疗的反应。Talimogene laherparepvec 是一种基因修饰的溶瘤病毒，已与 Ipilimumab（CTLA-4 抗体）联合用于治疗晚期、不可切除的黑色素瘤，并与客观缓解率的增加相关（<a href="https://clinicaltrials.gov/ct2/show/NCT01740297">NCT01740297</a>). 选择最佳病毒株、基因改造和治疗策略是溶瘤病毒与 ICB 联合获得积极结果的关键。</p>
+<h4 id="527">5.2.7. 疫苗<a class="headerlink" href="#527" title="Permanent link">&para;</a></h4>
+<p>疫苗已被用作增强抗肿瘤免疫反应的一种方法，并在临床前和临床研究中显示出令人鼓舞的结果，从而导致肿瘤内 T 细胞浸润和抗肿瘤免疫反应的扩大。正在进行一些努力来提高疫苗的功效。最近的临床前研究表明，CD103 + cDC1s 疫苗接种与 CTLA-4 阻断相结合在诱导骨肉瘤和黑色素瘤小鼠模型中的肿瘤消退方面非常有效。此外，测试疫苗与 ICB 组合的初步试验已显示出前景；然而，需要随机临床试验来评估这种组合策略的额外好处。</p>
+<h4 id="528">5.2.8. 其他策略<a class="headerlink" href="#528" title="Permanent link">&para;</a></h4>
+<p>人们越来越有兴趣开发其他新方法来克服对 ICB 的耐药性。关于肠道和肿瘤微生物组、压力和饮食在肿瘤免疫和对 ICB 的反应中的作用的越来越多的证据为新兴的辅助疗法奠定了基础。更好地理解这些因素的潜在机制以及发现和彻底验证可操作的目标是开发和成功应用这些新兴策略的先决条件。</p>
+<h3 id="53-icb">5.3. 消除 ICB 毒性的诊断和治疗策略<a class="headerlink" href="#53-icb" title="Permanent link">&para;</a></h3>
+<p>目前，开 ICB 处方的肿瘤学家必须在没有任何真实数据指导该决定的情况下权衡 irAE 发展的风险与 ICB 的益处。这推动了为确定 irAE 的发展和严重程度的潜在生物标志物而进行的大量努力，从而指导这些药物或这些药物的组合的合理处方，以及为高风险患者制定允许早期检测和干预的监测策略。</p>
+<h4 id="531">5.3.1. 潜在的毒性生物标志物<a class="headerlink" href="#531" title="Permanent link">&para;</a></h4>
+<p>虽然自身免疫性疾病的遗传决定因素很多，但 irAE 的遗传易感性尚不清楚。某些 HLA 类型与各种 irAE 的发展有关；这些关联似乎是特定于疾病的。继续开展工作以开发具有 irAE 风险的患者的多基因风险评分，并将需要对治疗和恶性肿瘤进行非常大规模的关联研究。包括肿瘤突变负荷在内的肿瘤因素可能与 irAE 相关。</p>
+<p>肠道菌群失调也与反应和毒性有关；在接受易普利姆玛治疗的转移性黑色素瘤患者中，拟杆菌治疗前水平的增加以及与多胺转运和 B 族维生素生物合成相关的遗传途径的丰富性对免疫治疗相关结肠炎具有保护作用。甚至正在考虑预测 irAE 的更具创造性的策略。在一项概念验证研究中，在治疗前使用一阶和二阶纹理分析为每位患者获得了胸部 CT 中确定的 1860 个放射组学特征；在后来发展为肺炎的患者中，平方和的偏度和角方差（离差测量）更高。</p>
+<p>鉴于易于评估，外周血免疫特征的变化代表了一种有吸引力的生物标志物。循环 T 细胞库的早期多样化与反应和毒性相关，大量 CD8^+^ T 细胞的早期克隆扩增也与此相关。联合治疗后早期外周血中 CD21-lo B 细胞和浆母细胞的增加也与 irAE 相关。局部转移性黑色素瘤患者基线循环 IL-17 水平升高，并且在接受 ipilimumab（CTLA-4 抗体）治疗的转移性黑色素瘤患者中 IL-6 水平升高也与 irAE 相关。通过在基线或治疗早期测量 11 种细胞因子的循环水平（CYTOX 评分）来评估更多的整体细胞因子失调已被证明可以预测单独接受抗 PD1 治疗或与抗 CTLA-4 联合治疗的患者的 irAE疗法。</p>
+<p>正在寻找合适的生物标志物，包括与大型跨国数据库的合作努力，包括具有适当控制的低级和高级毒性患者（健康个体以及接受 ICB 治疗但未发生 irAE 的患者）。</p>
+<h4 id="532">5.3.2. 消除毒性的治疗策略<a class="headerlink" href="#532" title="Permanent link">&para;</a></h4>
+<p>治疗 irAE 的独特策略的开发正在进行中，重点是高剂量皮质类固醇的替代品。皮肤病通常可以通过局部类固醇或其他针对疾病的药物来控制；皮肤科医生尽早参与活检和诊断是关键。在某些情况下，用于 irAE 的某些自身免疫性疾病推论的治疗已成功用于 irAE。TNF 抑制剂在治疗炎症性肠病和严重的 ICB 诱发的结肠炎方面非常成功；事实上，它可能成为重症患者的一线治疗。α 4 β 7 - 整合素调节免疫细胞特异性运输至肠粘膜；维多珠单抗是一种 α 4 β 7整合素抑制剂，已用于炎症性肠病和 ICB 诱导的结肠炎。最后，粪便微生物群移植 (FMT) 最初是在难治性感染性结肠炎患者中进行试验，但也已成功用于部分严重难治性 ICB 诱导的结肠炎病例。</p>
+<p>对 irAE 的进一步机制理解将使我们能够从治疗所有患者（皮质类固醇）的所有 irAE 的通用方法发展到适用于特定 irAE 和各种患者因素的免疫组织病理学的更细微的方法。 这种靶向治疗策略可能包括 T 细胞和 B 细胞活性和运输的调节剂、先天免疫成分、循环细胞因子、免疫相关信号通路和共生微生物群。</p>
+<p>另一种有趣的可能性是通过改进现有的免疫治疗剂来限制脱靶活动来共同预防 irAE。更有针对性的免疫治疗方法的一种潜力是使用双特异性和三特异性抗体（即，同时结合两个或三个不同实体的基于合成抗体的分子。基于 T 细胞的双特异性抗体用于“桥接”T 细胞肿瘤细胞以促进更多局灶性 T 细胞激活。然而，这只是双特异性抗体的众多配置之一，而且实际上，该技术具有独特组合和新应用的潜力接近无限。刺激 OX40 和 CD137 这两种 TNF 超家族共刺激受体，导致 T 细胞活化、增殖和存活；然而，靶向和抑制 OX40 和 CD137 个体的 mAb 导致疗效不佳和/或促进肝毒性。然而，与 OX40 和 CD137 结合的双重激动性双特异性抗体可促进 FcRγ 交联非依赖性抗肿瘤活性，此外还能限制肝损伤；使用这些双重激动性双特异性抗体的临床试验正在进行中。</p>
+<h2 id="_10">结论<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p>癌症免疫治疗领域的范式转变发现及其对治疗策略的成功转化使癌症患者长期存活，否则这些患者的治疗选择有限。然而，由于对 ICB 的原发性或获得性耐药以及相关毒性，从这些治疗中获得临床益处的患者数量仍然有限。已经做出广泛的努力来开发诊断方法，以确定哪些患者将受益于 ICB 和增强反应和消除毒性的治疗策略。然而，将 ICB 的益处扩大到更多的癌症患者群体需要深入了解耐药性和毒性的潜在机制。宿主内在因素对 ICB 反应的作用，包括肿瘤遗传学和肿瘤微环境的免疫和非免疫成分在内，已经得到广泛研究，并且仍在积极研究中。然而，为了充分阐明这些机制，重要的是要承认各种因素，包括微生物组、宿主系统因素以及环境暴露（暴露组）可能在对 ICB 的反应和毒性中发挥重要作用。未来的研究有必要了解这些因素的个体和集体作用，并将促进新的诊断、预后和治疗策略的发展，以解决当前与 ICB 相关的局限性并改善癌症患者的结果。然而，为了充分阐明这些机制，重要的是要承认各种因素，包括微生物组、宿主系统因素以及环境暴露（暴露组）可能在对 ICB 的反应和毒性中发挥重要作用。未来的研究有必要了解这些因素的个体和集体作用，并将促进新的诊断、预后和治疗策略的发展，以解决当前与 ICB 相关的局限性并改善癌症患者的结果。然而，为了充分阐明这些机制，重要的是要承认各种因素，包括微生物组、宿主系统因素以及环境暴露（暴露组）可能在对 ICB 的反应和毒性中发挥重要作用。未来的研究有必要了解这些因素的个体和集体作用，并将促进新的诊断、预后和治疗策略的发展，以解决当前与 ICB 相关的局限性并改善癌症患者的结果。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 - 2025 DoubleHelix
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://space.bilibili.com/434318322" target="_blank" rel="noopener" title="Bilibili | BioInfoCloud" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/BioInfoCloud" target="_blank" rel="noopener" title="GitHub | BioInfoCloud" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../../mkdocs/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
