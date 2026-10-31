@@ -9,56 +9,40 @@ site_description: 生物信息云
 theme:
   name: material
   logo: assets/logo.png
+  favicon: assets/favicon.png
   plugins:
   - social: 
-      cards_font: Roboto
-  palette: 
-    - scheme: default # 日间模式
-      primary: white # 上方的
-      accent: light blue # 链接等可交互元件的高亮色
-      toggle:
-        icon: material/brightness-percent # 图标
-        name: 切换风格 # 鼠标悬浮提示
-    - scheme: slate # 夜间模式
-      primary: black
-      accent: orange
-      toggle:
-        icon: material/weather-sunny
-        name: 切换风格
-    - scheme: slate # 夜间模式
-      primary: black
-      accent: deep purple
-      toggle:
-        icon: material/brightness-7
-        name: 切换风格
-    - scheme: purple # 
-      primary: black
-      accent: pink
-      toggle:
-        icon: material/brightness-4
-        name: 切换风格
-    - scheme: light green # light green
-      primary: black
-      accent:  light blue
-      toggle:
-        icon: material/brightness-3
-        name: 切换至日间模式
+      cards_font: Noto Sans SC
+  palette:
+    # 清新浅色主题：白底 + 品牌青绿/天蓝点缀，logo 在浅底上醒目
+    scheme: default
+    primary: custom # 具体色值在 assets/stylesheets/extra.css 中定义
+    accent: custom
+  font: false # 关闭 Google Fonts，改用系统字体栈（加载更快，中文显示更好）
   features:
     - navigation.tabs # 使用Tab来进行分类
+    - navigation.tabs.sticky # 滚动时 Tab 吸顶
     - navigation.top # 返回顶部的按钮 在上滑时出现
     - navigation.indexes # Tab会有一个index.md 而不是在打开Tab时打开第一篇文章
     - navigation.expand # 打开Tab时左侧目录全部 展开
+    - navigation.tracking # 地址栏随滚动更新锚点
+    - toc.follow # 右侧目录跟随正文高亮
     - search.suggest # 搜索输入一些字母时推荐补全整个单词
     - search.highlight # 搜索出的文章关键词加入高亮
+    - search.share # 搜索结果可分享
+    - content.code.copy # 代码块一键复制
+    - content.code.select # 代码块按行选择
+    - content.tabs.link # 多语言/多方案 Tab 联动
+    - content.tooltips # 脚注/缩写悬浮提示
   language: zh # 一些提示性的文字会变成中文
   icon:
     repo: fontawesome/brands/github
 edit_uri: edit/main/docs # 编辑按钮跳转的链接
 ## [top-right corner]
-repo_url: https://bioinfocloud.github.io/note # 右上角点击跳转的链接
+repo_url: https://github.com/BioInfoCloud/note # 右上角点击跳转的链接
 repo_name: BioInfoCloud # 右上角的名字
 ## [bottom-left corner]
-copyright: Copyright &copy; 2022 - 2025 DoubleHelix # 左下角的版权声明
+copyright: Copyright &copy; 2022 - 2025 DoubleHelix · 生物信息云
 ## [bottom-right corner]
 extra:
   social: # icons
@@ -68,6 +52,10 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/BioInfoCloud
       name: GitHub | BioInfoCloud
+    - icon: fontawesome/brands/weixin
+      link: https://bioinfocloud.io
+      name: 微信公众号 | 生物信息云
+  generator: true
 
 # [Navigtion]
 nav:
@@ -195,20 +183,34 @@ markdown_extensions:
   - pymdownx.arithmatex: # latex支持
       generic: true
   - attr_list # 给图片后面添加{width="300"}设置大小
+  - admonition # 提示框
+  - md_in_html # 在 HTML 块中使用 Markdown
   - toc:
       permalink: true # 固定标题位置为当前位置
+      toc_depth: 3
   - pymdownx.highlight: # 代码块高亮
       # linenums: true # 显示行号
       # auto_title: true # 显示编程语言名称
+      anchor_linenums: true
   - pymdownx.superfences # 代码块高亮插件
+  - pymdownx.details # 可折叠的提示框
+  - pymdownx.tabbed: # 内容分栏切换
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji: # 图标 / 表情
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.mark
+  - pymdownx.caret
+  - pymdownx.tilde
+  - pymdownx.keys
+  - pymdownx.smartsymbols
   - meta # 支持Markdown文件上方自定义标题标签等
 extra_javascript:
   # latex支持
   # check https://squidfunk.github.io/mkdocs-material/reference/mathjax/?h=math for more information
-  # notice `curl https://polyfill.io/v3/polyfill.min.js?features=es6 > docs/mkdocs/javascripts/polyfill.min.js && curl https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js > docs/mkdocs/javascripts/tex-mml-chtml.js` not works... because there are other resources that need to load
-  - mkdocs/javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js # https://cdn.bytedance.com/?query=mathjax&version=3.2.0
+  - assets/javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 extra_css:
-  - mkdocs/css/no-footer.css # 不使用底部的翻页
-  - mkdocs/css/unordered-list-symbols.css # multiplt unordered list symbols
+  - assets/stylesheets/extra.css # 站点整体视觉样式
