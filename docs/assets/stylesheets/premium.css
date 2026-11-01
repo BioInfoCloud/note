@@ -70,11 +70,15 @@ html { scroll-behavior: smooth; }
 }
 .md-typeset .hero__title {
   margin: 0 0 .7rem; font-size: clamp(2.6rem, 6vw, 3.8rem); font-weight: 800; line-height: 1.1;
-  letter-spacing: .01em;
+  letter-spacing: .01em; color: #0b2824;
   background: linear-gradient(100deg, #00b89a 0%, #1ca8e8 45%, #00b89a 100%);
   background-size: 220% auto;
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-  animation: bic-shimmer 4.5s linear infinite;
+}
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .md-typeset .hero__title {
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    animation: bic-shimmer 4.5s linear infinite;
+  }
 }
 .md-typeset .hero__title span { color: inherit; }
 @keyframes bic-shimmer { to { background-position: 220% center; } }
@@ -237,23 +241,24 @@ html { scroll-behavior: smooth; }
 .roadmap { margin: 1rem auto 1.6rem; }
 .cta { margin: 1.8rem auto 0; padding: 1.2rem 1.4rem; }
 
-/* 17. 背景动态元素：漂浮的渐变光球（已用 isolation 置于内容之下、页面底色之上，清晰可见） */
+/* 17. 背景动态元素：漂浮的渐变光球（全站可见、明显、会动）
+   已用 isolation 让 .md-main 形成独立层叠上下文，光球落在「页面底色之上、正文之下」而可见。 */
 .md-main::before, .md-main::after {
   content: ""; position: absolute; z-index: -1; pointer-events: none;
-  border-radius: 50%; filter: blur(46px); opacity: .62; will-change: transform;
+  border-radius: 50%; filter: blur(28px); opacity: .82; will-change: transform;
 }
 .md-main::before {
-  width: 36vw; height: 36vw; top: 5vh; left: 1vw;
-  background: radial-gradient(circle at 50% 50%, rgba(0, 184, 154, .48), transparent 66%);
-  animation: bic-bg-float-a 22s ease-in-out infinite alternate;
+  width: 46vw; height: 46vw; top: -8vh; left: -6vw;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 184, 154, .6), rgba(0, 184, 154, 0) 66%);
+  animation: bic-bg-float-a 15s ease-in-out infinite alternate;
 }
 .md-main::after {
-  width: 32vw; height: 32vw; bottom: 9vh; right: 3vw;
-  background: radial-gradient(circle at 50% 50%, rgba(28, 168, 232, .44), transparent 66%);
-  animation: bic-bg-float-b 28s ease-in-out infinite alternate;
+  width: 42vw; height: 42vw; bottom: -10vh; right: -6vw;
+  background: radial-gradient(circle at 50% 50%, rgba(28, 168, 232, .55), rgba(28, 168, 232, 0) 66%);
+  animation: bic-bg-float-b 19s ease-in-out infinite alternate;
 }
-@keyframes bic-bg-float-a { from { transform: translate(0, 0) scale(1); } to { transform: translate(4vw, 5vh) scale(1.12); } }
-@keyframes bic-bg-float-b { from { transform: translate(0, 0) scale(1); } to { transform: translate(-4vw, -4vh) scale(1.15); } }
+@keyframes bic-bg-float-a { from { transform: translate(0, 0) scale(1); } to { transform: translate(11vw, 13vh) scale(1.18); } }
+@keyframes bic-bg-float-b { from { transform: translate(0, 0) scale(1); } to { transform: translate(-11vw, -11vh) scale(1.2); } }
 
 /* 18. 菜单栏动效：激活/悬浮态流动渐变下划线 + 悬浮轻抬升 */
 .md-tabs__link { transition: opacity .25s ease, transform .25s ease, color .25s ease; }
@@ -269,8 +274,13 @@ html { scroll-behavior: smooth; }
   display: block; margin: 1.2em auto;
 }
 
-/* 20. 动效降级（尊重偏好减少动态） */
+/* 20. 动效降级（尊重偏好减少动态，但保留柔和漂浮/流光，满足"要看到动画"的诉求） */
 @media (prefers-reduced-motion: reduce) {
-  .md-main::before, .md-main::after, .md-tabs__link::after, .hero::before { animation: none; }
+  .md-main::before, .md-main::after { animation-duration: 42s; }
+  .md-tabs__link::after { animation-duration: 9s; }
+  .md-header::before { animation-duration: 14s; }
+  .md-typeset .hero__title { animation-duration: 11s; }
+  .hero::before { animation: none; }
+  .hero__orb { animation: none; }
   .md-tabs__link:hover { transform: none; }
 }
