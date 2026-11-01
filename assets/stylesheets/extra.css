@@ -160,12 +160,12 @@ body::after {
 .md-header::before {
   content: "";
   position: absolute;
-  left: 0; right: 0; bottom: -1px; height: 2px;
-  pointer-events: none; opacity: 0.9;
-  background: linear-gradient(90deg, transparent, rgba(0, 184, 154, 0.7),
-    rgba(28, 168, 232, 0.7), rgba(45, 212, 191, 0.6), transparent);
+  left: 0; right: 0; bottom: -1px; height: 3px;
+  pointer-events: none; opacity: 1;
+  background: linear-gradient(90deg, transparent, rgba(0, 184, 154, 0.85),
+    rgba(28, 168, 232, 0.85), rgba(45, 212, 191, 0.75), transparent);
   background-size: 220% 100%;
-  animation: bic-header-line 7s linear infinite;
+  animation: bic-header-line 5s linear infinite;
 }
 @keyframes bic-header-line { 0% { background-position: 0% 0; } 100% { background-position: 220% 0; } }
 .md-header__inner { position: relative; z-index: 1; }
