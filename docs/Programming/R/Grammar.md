@@ -2235,7 +2235,7 @@ distSamp <- function(Barcode){
 
 当我们利用 R 语言处理大型数据集时，for 循环语句的运算效率非常低。有许多种方法可以提升你的代码运算效率，R对常见的运算如矩阵乘积，进行过专门的优化。那么，我们应当有意识将算法中的相关部分转用R优化过的内置函数处理，从而降低计算成本。因此在实际应用中，数据处理人员常常利用apply族函数替代for循环以便于在一定程度上提升R语言数据处理速度，除此之外，该方法还可以在一定程度上简化代码。虽然该方法非常有用，但是当你面对复杂的情形时，你需要灵活运用该函数。apply族函数包括apply(), lapply(), sapply(), vapply(),mapply(),rapply(), tapply()。在实际应用中，常常需要数据处理人员依据不同数据结构及数据处理目的采用不同apply族函数。
 
-#### ![](https://cdn.nlark.com/yuque/0/2020/png/1234840/1608900539771-99eec8dc-689f-4b40-803e-9931a350b327.png#crop=0&crop=0&crop=1&crop=1&height=779&id=SgETu&originHeight=779&originWidth=1022&originalType=binary&ratio=1&rotation=0&showTitle=false&size=0&status=done&style=none&title=&width=1022)**2.1 apply**
+#### !**2.1 apply**
 
 apply函数只能用于处理矩阵类型的数据，也就是说所有的数据必须是同一类型。因此要使用apply函数的话，需要将数据类型转换成矩阵类型。
 ```

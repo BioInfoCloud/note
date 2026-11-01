@@ -120,7 +120,7 @@ Chip platform(芯片类型)：如果表达gct文件的第一列为芯片探针id
 
 文件也在本地找的到，就是在我们电脑的用户名文件下的gsea_home/output中，比如：
 
-<u>file:///C:/Users/Administrator/gsea_home/output/jun11/my_analysis.Gsea.1591844474693/index.html</u>
+<code>gsea_home/output/…/my_analysis.Gsea/index.html</code>
 
 部分结果如下：
 
