@@ -13042,7 +13042,7 @@ remove：是否删除被分割的列
 </code></pre></div></p>
 <h3 id="2r_2"><strong>2.提升R的运算速度的一些函数</strong><a class="headerlink" href="#2r_2" title="Permanent link">&para;</a></h3>
 <p>当我们利用 R 语言处理大型数据集时，for 循环语句的运算效率非常低。有许多种方法可以提升你的代码运算效率，R对常见的运算如矩阵乘积，进行过专门的优化。那么，我们应当有意识将算法中的相关部分转用R优化过的内置函数处理，从而降低计算成本。因此在实际应用中，数据处理人员常常利用apply族函数替代for循环以便于在一定程度上提升R语言数据处理速度，除此之外，该方法还可以在一定程度上简化代码。虽然该方法非常有用，但是当你面对复杂的情形时，你需要灵活运用该函数。apply族函数包括apply(), lapply(), sapply(), vapply(),mapply(),rapply(), tapply()。在实际应用中，常常需要数据处理人员依据不同数据结构及数据处理目的采用不同apply族函数。</p>
-<h4 id="21-apply"><img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1608900539771-99eec8dc-689f-4b40-803e-9931a350b327.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=779&amp;id=SgETu&amp;originHeight=779&amp;originWidth=1022&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=1022" /><strong>2.1 apply</strong><a class="headerlink" href="#21-apply" title="Permanent link">&para;</a></h4>
+<h4 id="21-apply">!<strong>2.1 apply</strong><a class="headerlink" href="#21-apply" title="Permanent link">&para;</a></h4>
 <p>apply函数只能用于处理矩阵类型的数据，也就是说所有的数据必须是同一类型。因此要使用apply函数的话，需要将数据类型转换成矩阵类型。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-152-1" name="__codelineno-152-1" href="#__codelineno-152-1"></a>apply(X, MARGIN, FUN, …)
 </code></pre></div></p>
