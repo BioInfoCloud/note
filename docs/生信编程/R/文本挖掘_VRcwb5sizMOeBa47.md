@@ -1,6 +1,6 @@
 # 文本挖掘
 
-# 一.文本挖掘的一般过程
+## 一.文本挖掘的一般过程
 
 参考:[http://www.sthda.com/english/wiki/text-mining-and-word-cloud-fundamentals-in-r-5-simple-steps-you-should-know](http://www.sthda.com/english/wiki/text-mining-and-word-cloud-fundamentals-in-r-5-simple-steps-you-should-know)
 
@@ -148,7 +148,7 @@ summary(syuzhet_vector)
 
 更多，参考：[https://www.red-gate.com/simple-talk/databases/sql-server/bi-sql-server/text-mining-and-sentiment-analysis-with-r/](https://www.red-gate.com/simple-talk/databases/sql-server/bi-sql-server/text-mining-and-sentiment-analysis-with-r/)
 
-# 二. 作业一：查看一下这些文献有什么规律
+## 二. 作业一：查看一下这些文献有什么规律
 ```r
 A Novel Copolymer Poly(Lactide-co-b-Malic Acid).pdf
 A novel miRNA identified in GRSF1 complex drives the metastasis via the PIK3R3_AKT_NF-百B and TIMP3_MMP9 pathways in cervical cancer cells.pdf
@@ -274,7 +274,7 @@ epithelialmesenchymal             functions                 liver
                  0.29                  0.29                  0.29
 ```
 
-# 三. 作业二：TCGA计划官方文章
+## 三. 作业二：TCGA计划官方文章
 
 TCGA计划官方文章在：[https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/publications](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/publications)
 
@@ -400,7 +400,7 @@ findAssocs(dtm, terms = findFreqTerms(dtm, lowfreq = 10), corlimit = 0.25)
 wordcloud2(d,size = 0.6)
 ```
 
-# 四. 作业三：研究最热门的基因是什么
+## 四. 作业三：研究最热门的基因是什么
 
 在 NCBI的ftp里面关于人的一些基因信息， 在 ：ftp://ftp.ncbi.nlm.nih.gov//gene 下载即可！
 
@@ -515,13 +515,9 @@ ggplot(data=count, aes(x=Year, y=Counts,fill=Year)) +
   theme(legend.position="bottom")
 ```
 
-# 五. 作业四：研究的基因信息统计
+## 五. 作业四：研究的基因信息统计
 
-前面文章[什么基因研究最多？？](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651276465&idx=1&sn=46b0f163152672dd1ae4ee9acfa554fb&chksm=841ea0ccb36929daa8696264983ce3b1aba9074c6be368cc662fd011dcbc31beea34d00d90d9&scene=21#wechat_redirect)中下载的gene与pubmed的文献ID的文件，统计了研究基因与出版文献的对应关系。
-这里来探索一下你研究的基因，发表的文献，可以看看都发表在什么期刊，对题目进行文本挖掘，可以统计每年的发表文献数量等等。
-。
-。
-。
+前面文章[什么基因研究最多？？](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651276465&idx=1&sn=46b0f163152672dd1ae4ee9acfa554fb&chksm=841ea0ccb36929daa8696264983ce3b1aba9074c6be368cc662fd011dcbc31beea34d00d90d9&scene=21#wechat_redirect)中下载的gene与pubmed的文献ID的文件，统计了研究基因与出版文献的对应关系。这里来探索一下你研究的基因，发表的文献，可以看看都发表在什么期刊，对题目进行文本挖掘，可以统计每年的发表文献数量等等。。。。
 
 下面是探索ADORA1这个基因的研究情况。
 
@@ -576,8 +572,7 @@ ggplot(staty,aes(x = Var1,y=Freq))+
 
 ![1633141992195-8ed64632-c962-4122-9351-9186c9f64484.png](./img/VRcwb5sizMOeBa47/1633141992195-8ed64632-c962-4122-9351-9186c9f64484-070086.png)
 
-这里就可以看见基本的信息了。
-先看看每一年发表的文章。
+这里就可以看见基本的信息了。先看看每一年发表的文章。
 
 ![1633142041498-9352568e-b268-4982-be2a-7341ae58b239.png](./img/VRcwb5sizMOeBa47/1633142041498-9352568e-b268-4982-be2a-7341ae58b239-541366.png)
 

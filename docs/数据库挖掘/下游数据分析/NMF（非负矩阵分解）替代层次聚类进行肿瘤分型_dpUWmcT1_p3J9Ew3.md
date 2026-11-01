@@ -8,7 +8,7 @@
 
 ---
 
-# 一.原理
+## 一.原理
 
 NMF(Non-negative matrix factorization，非负矩阵分解)，即对于任意给定的一个非负矩阵V，其能够寻找到一个非负矩阵W和一个非负矩阵H，满足条件V=W*H,从而将一个非负的矩阵分解为左右两个非负矩阵的乘积。其中，V矩阵中每一列代表一个观测(observation)，每一行代表一个特征(feature)，**比如RNAseq的样本（列）和基因（行）的表达矩阵**；W矩阵称为基矩阵，H矩阵称为系数矩阵或权重矩阵。这时用系数矩阵H代替原始矩阵，就可以实现对原始矩阵进行降维，得到数据特征的降维矩阵，从而减少存储空间。过程如下图所示：
 
@@ -36,15 +36,9 @@ NMF的计算机实现可以用python、Java和R，作为生信专业的我们，
 
 【2】[<u>https://blog.csdn.net/ctyqy2015301200079/article/details/86725427</u>](https://blog.csdn.net/ctyqy2015301200079/article/details/86725427)
 
-# 二.实战
+## 二.实战
 
-随着芯片和测序水平的发展，使得我们研究所有基因在整个基因组里的表达情况成为了可能。
-合理地利用和解释这些数据，能够帮助我们探索相关的生物过程和人类疾病的机制。
-目前已经有一些软件或方法，可以将具有相似表达模式的基因或者样本进行聚类，但是都有自身的限制。
-NMF包基于非负矩阵分解(non-negative matrix factorization，以下简称NMF)方法，提取基因表达矩阵内数据的生物相关系数，通过对基因和样本进行组织，抓住数据的内部结构特征，从而对样本进行分组，目前在疾病分型方面受到广泛应用。
-我前面已经介绍过了NMF的基本原理【[NMF(非负矩阵分解)的算法原理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273259&idx=1&sn=87c9756cbc8ed78cb1a771e81cf1eec8&chksm=841edc56b369554051851c71c77a21c40936cb3c3608d2c55a869b7bdcad9c29ff82dbd12d45&scene=21#wechat_redirect)】，这里我介绍R语言实现NMF。
-下面是一篇今年刚发的一篇纯生信的分析文章，用的就是NMF这个方法来对肿瘤进行分型。
-影响因子为4.8。
+随着芯片和测序水平的发展，使得我们研究所有基因在整个基因组里的表达情况成为了可能。合理地利用和解释这些数据，能够帮助我们探索相关的生物过程和人类疾病的机制。目前已经有一些软件或方法，可以将具有相似表达模式的基因或者样本进行聚类，但是都有自身的限制。NMF包基于非负矩阵分解(non-negative matrix factorization，以下简称NMF)方法，提取基因表达矩阵内数据的生物相关系数，通过对基因和样本进行组织，抓住数据的内部结构特征，从而对样本进行分组，目前在疾病分型方面受到广泛应用。我前面已经介绍过了NMF的基本原理【[NMF(非负矩阵分解)的算法原理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273259&idx=1&sn=87c9756cbc8ed78cb1a771e81cf1eec8&chksm=841edc56b369554051851c71c77a21c40936cb3c3608d2c55a869b7bdcad9c29ff82dbd12d45&scene=21#wechat_redirect)】，这里我介绍R语言实现NMF。下面是一篇今年刚发的一篇纯生信的分析文章，用的就是NMF这个方法来对肿瘤进行分型。影响因子为4.8。
 
 ![1612611511386-0d98124a-34f3-4998-8516-201671831047.png](./img/dpUWmcT1_p3J9Ew3/1612611511386-0d98124a-34f3-4998-8516-201671831047-586022.png)
 
@@ -52,7 +46,7 @@ NMF包基于非负矩阵分解(non-negative matrix factorization，以下简称N
 
 这篇文章做的是结直肠癌。用了2个数据集，一个来自TCGA-COAD，一个GEO数据库：GSE39582，我们就以这篇文章来介绍NMF。
 
-## 1.NMF包介绍
+### 1.NMF包介绍
 
 首先得安装包NMF，这个包属于生物导体包，普通安装方法就行。
 
@@ -92,7 +86,7 @@ model：如果有已经构建好的模型，那就是直接把模型写在这里
 
 .options:可以设置是否保留每次的运算结果：keep.all=T。例：.options=list(keep.all=TRUE);
 
-## 2.加载RNAseq数据
+### 2.加载RNAseq数据
 
 下面是该文章的TCGA数据处理方式。
 
@@ -123,11 +117,9 @@ coad.fpkm <- coad.fpkm[,-c(1:2)]
 
 ![1612611511481-83eca692-829e-4578-987e-4651f345d7aa.png](./img/dpUWmcT1_p3J9Ew3/1612611511481-83eca692-829e-4578-987e-4651f345d7aa-217366.png)
 
-我这里用的是从UCSC下载的数据，从UCSC下载的数据需要自己注释。
-hsaEnsembl2Symbol这个数据框是我自己注释过的人Ensembl和Symbol之间的对应关系文件。
-自己注释，参考文章【[生信中各种ID转换](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265466&idx=1&sn=021a10503d338e09abe07b578e734566&chksm=841efdc7b36974d13b7ad95e2272d293089d49adff9b74667bbeed78306328f0a42b0259c030&scene=21#wechat_redirect)】。
+我这里用的是从UCSC下载的数据，从UCSC下载的数据需要自己注释。hsaEnsembl2Symbol这个数据框是我自己注释过的人Ensembl和Symbol之间的对应关系文件。自己注释，参考文章【[生信中各种ID转换](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265466&idx=1&sn=021a10503d338e09abe07b578e734566&chksm=841efdc7b36974d13b7ad95e2272d293089d49adff9b74667bbeed78306328f0a42b0259c030&scene=21#wechat_redirect)】。
 
-## 3.读入临床数据
+### 3.读入临床数据
 
 这里的临床数据我是从UCSC下载的【[UCSC数据库下载TCGA数据需要注意的细节](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273247&idx=1&sn=008928dbfc6c6976d53369cd20c26f87&chksm=841edc62b3695574739a6db6af267b279808c9ea82e9947a461da2e3bf02a8db215204cf65e9&scene=21#wechat_redirect)】，你可以自己去下载，我也会上传到文章【[TCGA数据库33个Project的RNA-Seq转录组数据为你整理打包好了](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264583&idx=1&sn=f94bf8d77402677ee67f5d6336088254&chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&scene=21#wechat_redirect)】中对应的网盘中。
 
@@ -139,7 +131,7 @@ coad.clin <- coad.clin[coad.clin$OS.time>=30,]
 coad.clin <- coad.clin[!duplicated(coad.clin$sample),]#去重
 ```
 
-## 4.读入基因文件
+### 4.读入基因文件
 
 上面得到的数据是TCGA-COAD所有肿瘤所有基因的FPKM数据，这篇文章做的是能量代谢相关通路的基因，基因信息如下图，自己可以去Reactome数据库搜集。
 
@@ -160,7 +152,7 @@ protein <- read.csv(file = "enengy_protein.csv",header = T)
 
 ![1612611511395-3c9cdceb-6792-4932-8b10-4d9bd9507a59.png](./img/dpUWmcT1_p3J9Ew3/1612611511395-3c9cdceb-6792-4932-8b10-4d9bd9507a59-817839.png)
 
-## 5.融合数据
+### 5.融合数据
 
 将数据与表达矩阵融合。其实也就是只要能量代谢相关基因的表达数据。
 
@@ -187,7 +179,7 @@ sum(is.na(enengyTurExp))##看看有没有空值
 
 540个基因、421个样本被纳入分析，文章中是371样本。怎么作者少了那么多，我也不知道。
 
-## 6.NMF进行肿瘤分型
+### 6.NMF进行肿瘤分型
 
 这里我们可以看文章的处理方式。方法用的是brunet，迭代次数=50，ranks为2到10。
 

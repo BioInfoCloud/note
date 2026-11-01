@@ -106,17 +106,11 @@ Seurat包CellCycleScoring较scran包cyclone函数最主要的区别是直接根�
 
 ![image.png](./Figure/scRNASeq_Down_004.jpg)
 
-如上是Seurat包提供的人的细胞中分别与S期、G2M期直接相关的marker基因。
- CellCycleScoring即根据此，对每个细胞的S期、G2M期可能性进行打分；
-具体如何计算的，暂时在Seurat官方文档中没有提及。
-在satijalab的github([https://github.com/satijalab/seurat/issues/728)](https://github.com/satijalab/seurat/issues/728))中，作者这样回复类似的提问： As we say in the vignette, the scores are computed using an algorithm developed by Itay Tirosh, when he was a postdoc in the Regev Lab (Science et al., 2016). The gene sets are also taken from his work. You can read the methods section of [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4944528/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4944528/) to see how the scoring works, but essentially the method scores cells based on the expression of each gene in a signature set - after controlling for the expected expression of genes with similar abundance. 结合一些中文教程（https://www.jianshu.com/p/e4a5b5c67de1)的介绍，认为就是根据每个细胞的S期(或者G2/M期)基因集是否显著高表达，对应的score就是表示在该细胞中，S期(或者G2/M期)基因集高表达的程度(如果是负数，就认为不属于该phase)。
+如上是Seurat包提供的人的细胞中分别与S期、G2M期直接相关的marker基因。 CellCycleScoring即根据此，对每个细胞的S期、G2M期可能性进行打分；具体如何计算的，暂时在Seurat官方文档中没有提及。在satijalab的github([https://github.com/satijalab/seurat/issues/728)](https://github.com/satijalab/seurat/issues/728))中，作者这样回复类似的提问： As we say in the vignette, the scores are computed using an algorithm developed by Itay Tirosh, when he was a postdoc in the Regev Lab (Science et al., 2016). The gene sets are also taken from his work. You can read the methods section of [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4944528/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4944528/) to see how the scoring works, but essentially the method scores cells based on the expression of each gene in a signature set - after controlling for the expected expression of genes with similar abundance. 结合一些中文教程（https://www.jianshu.com/p/e4a5b5c67de1)的介绍，认为就是根据每个细胞的S期(或者G2/M期)基因集是否显著高表达，对应的score就是表示在该细胞中，S期(或者G2/M期)基因集高表达的程度(如果是负数，就认为不属于该phase)。
 
 ![](./Figure/scRNASeq_Down_005.jpg)
 
-区别于scran包的另外重要的一点就是Seurat包仅提供了人类细胞有关的cell cycle related gene，没有小鼠的。
-对此，作者这样回复：`Thanks. We don't provide different capitalizations because this gene list was developed on a human dataset, and we don't want to create ambiguity by suggesting its created from a mouse reference dataset. **In practice however, we've found it works quite well for mouse also, and recommend the solution above.**` 简言之，作者认为可以将对应人的cc.gene转换为鼠对应的基因名，当做后者的cell cycle related gene（因为鼠和人类基因的高度相似性)。
-提到的solution就是采用biomaRt包转换一下。
-这在我之前的教程中有介绍。
+区别于scran包的另外重要的一点就是Seurat包仅提供了人类细胞有关的cell cycle related gene，没有小鼠的。对此，作者这样回复：`Thanks. We don't provide different capitalizations because this gene list was developed on a human dataset, and we don't want to create ambiguity by suggesting its created from a mouse reference dataset. **In practice however, we've found it works quite well for mouse also, and recommend the solution above.**` 简言之，作者认为可以将对应人的cc.gene转换为鼠对应的基因名，当做后者的cell cycle related gene（因为鼠和人类基因的高度相似性)。提到的solution就是采用biomaRt包转换一下。这在我之前的教程中有介绍。
 
 但是biomaRt包网络不是很稳定，有人也直接提供了转换后的结果（[https://github.com/satijalab/seurat/issues/462](https://github.com/satijalab/seurat/issues/462)），直接下载导入到R里即可，下面演示的代码就是用的该结果。
 
@@ -124,8 +118,7 @@ Seurat包CellCycleScoring较scran包cyclone函数最主要的区别是直接根�
 
 ### (2).scran包
 
-[http://bioconductor.org/packages/release/bioc/manuals/scran/man/scran.pdf](http://bioconductor.org/packages/release/bioc/manuals/scran/man/scran.pdf) scran包cyclone函数是利用‘marker基因对’表达来对细胞所在周期阶段进行预测的方法Scialdone (2015) “maker基因对”由作者根据训练集细胞（已注释了cell cycle）的基因表达特征产生，我们可以直接使用。
-对于每一细胞周期阶段（人/鼠）都有一组“maker基因对”集合。
+[http://bioconductor.org/packages/release/bioc/manuals/scran/man/scran.pdf](http://bioconductor.org/packages/release/bioc/manuals/scran/man/scran.pdf) scran包cyclone函数是利用‘marker基因对’表达来对细胞所在周期阶段进行预测的方法Scialdone (2015) “maker基因对”由作者根据训练集细胞（已注释了cell cycle）的基因表达特征产生，我们可以直接使用。对于每一细胞周期阶段（人/鼠）都有一组“maker基因对”集合。
 
 ![image.png](./Figure/scRNASeq_Down_007.jpg)
 

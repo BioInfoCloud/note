@@ -2,7 +2,7 @@
 
 今天给大家介绍几个用于预测化合物靶点的工具
 
-# 一.SwissTargetPrediction
+## 一.SwissTargetPrediction
 
 地址：[http://swisstargetprediction.ch/ ](http://swisstargetprediction.ch/ )
 
@@ -26,7 +26,7 @@
 
 【2】For technical information about the prediction algorithm, you can refer to: Shaping the interaction landscape of bioactive molecules, Bioinformatics (2013) 29:3073-3079.
 
-# 二. SuperPred
+## 二. SuperPred
 
 地址：[https://prediction.charite.de/index.php?site=chemdoodle_search_target](https://prediction.charite.de/index.php?site=chemdoodle_search_target)
 
@@ -34,7 +34,7 @@ SuperPred，这是一个预测ATC代码和化合物目标预测的网络服务�
 
 ![1625643358922-c492f4cb-213a-474b-890a-48f638837d4f.png](./img/K-ds1sIIwqZbIoS5/1625643358922-c492f4cb-213a-474b-890a-48f638837d4f-790070.png)
 
-# 三.SEA
+## 三.SEA
 
 SEA(Similarity ensemble approach)SEA数据库整合了ChEMBL和MDDR(MDL Drug Data Report)等数据库的化合物和靶点信息，利用Daylight分子指纹计算化合物的相似性，并将相似化合物的靶点进行聚类。
 
@@ -48,7 +48,7 @@ SEA(Similarity ensemble approach)SEA数据库整合了ChEMBL和MDDR(MDL Drug Dat
 
 淡蓝色背景是已知的靶点，暗草绿色背景和白色背景是预测的靶点，按照MaxTC值从大到小排序。结果中P-Value越小，潜在靶标的可靠性越大。MaxTC值表示数据库中和查询分子的相似程度。可以点击右上角的下载按钮下载所有结果。
 
-# 四. TargetHunter
+## 四. TargetHunter
 
 TargetHunter是基于小分子二维结构相似性的靶标搜寻工具，该工具比较老了。
 
@@ -62,7 +62,7 @@ TargetHunter是基于小分子二维结构相似性的靶标搜寻工具，该�
 
 ![1625644286245-720306ba-b657-4317-8ef5-3e9f5d49cd45.png](./img/K-ds1sIIwqZbIoS5/1625644286245-720306ba-b657-4317-8ef5-3e9f5d49cd45-603221.png)
 
-# 五.PharmMapper
+## 五.PharmMapper
 
 PharmMapper服务器是一个免费访问的web服务器，设计用于识别给定探针小分子(药物、天然产物或其他新发现的靶标尚未识别的化合物)的潜在靶标，使用药效团映射方法。得益于高效和稳健的映射方法，PharmMapper具有高通量能力，可以在数小时内从数据库中识别出潜在的候选靶标。
 
@@ -76,15 +76,9 @@ PharmMapper服务器是一个免费访问的web服务器，设计用于识别给
 
 ![1625644591018-555d7320-ddb9-4a17-b553-a658c6dbb6d1.png](./img/K-ds1sIIwqZbIoS5/1625644591018-555d7320-ddb9-4a17-b553-a658c6dbb6d1-263404.png)
 
-# 六.ChemMapper
+## 六.ChemMapper
 
-ChemMapper是一个用于计算药物发现的免费web服务器，基于具有高3D相似性的化合物可能具有相对相似的目标关联谱的概念。
-ChemMapper整合了来自不同来源的近30万种化学结构，并附有药理学注释，以及来自商业和公共化学目录的300多万种化合物。
-ChemMapper采用内部的shaft方法，结合分子形状叠加强度和化学特征匹配，进行三维相似性搜索、排序和叠加。
-将用户提供的化学结构作为查询，shaft将数据库中的每个目标化合物对齐到查询中，计算3D相似度评分，并返回最相似的结构。
-基于这些具有药理学注释的最相似结构，构建化学-蛋白质网络，并采用随机游走算法计算查询结构与与命中化合物相关的蛋白质相互作用的概率。
-这些潜在的蛋白质目标按概率的标准得分排列。
-ChemMapper可用于多种多药理学、药物再利用、化学靶点关联、虚拟筛选和支架跳跃研究。
+ChemMapper是一个用于计算药物发现的免费web服务器，基于具有高3D相似性的化合物可能具有相对相似的目标关联谱的概念。ChemMapper整合了来自不同来源的近30万种化学结构，并附有药理学注释，以及来自商业和公共化学目录的300多万种化合物。ChemMapper采用内部的shaft方法，结合分子形状叠加强度和化学特征匹配，进行三维相似性搜索、排序和叠加。将用户提供的化学结构作为查询，shaft将数据库中的每个目标化合物对齐到查询中，计算3D相似度评分，并返回最相似的结构。基于这些具有药理学注释的最相似结构，构建化学-蛋白质网络，并采用随机游走算法计算查询结构与与命中化合物相关的蛋白质相互作用的概率。这些潜在的蛋白质目标按概率的标准得分排列。ChemMapper可用于多种多药理学、药物再利用、化学靶点关联、虚拟筛选和支架跳跃研究。
 
 地址：[http://lilab-ecust.cn/chemmapper/](http://lilab-ecust.cn/chemmapper/)
 

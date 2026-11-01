@@ -185,11 +185,7 @@ sce <- NormalizeData(sce, normalization.method =  "LogNormalize",
 
 ## 7.查找高变基因
 
-指一些基因在细胞中表达的浮动比较大，这些往往是我们后续分群的时候需要关注的。
-FindVariableFeatures 函数有 3 种选择高表达变异基因的方法，可以通过 selection.method参数来选择，它们分别是：vst（默认值）， mean.var.plot (mvp) 和 dispersion (disp)。
-nfeatures 参数的默认值是 2000，可以改变。
-如果 selection.method 参数选择的是 mvp，就不需要人为规定高表达变异基因的数目，算法会自动选择合适的数目。
-建议使用完 FindVariableFeatures 函数后，用 VariableFeaturePlot 对这些高表达变异基因再做个可视化，看看使用默认值 2000 会不会有问题。
+指一些基因在细胞中表达的浮动比较大，这些往往是我们后续分群的时候需要关注的。FindVariableFeatures 函数有 3 种选择高表达变异基因的方法，可以通过 selection.method参数来选择，它们分别是：vst（默认值）， mean.var.plot (mvp) 和 dispersion (disp)。nfeatures 参数的默认值是 2000，可以改变。如果 selection.method 参数选择的是 mvp，就不需要人为规定高表达变异基因的数目，算法会自动选择合适的数目。建议使用完 FindVariableFeatures 函数后，用 VariableFeaturePlot 对这些高表达变异基因再做个可视化，看看使用默认值 2000 会不会有问题。
 
 ```r
 #前2000个高变feature RNA

@@ -17,8 +17,7 @@
 
 ---
 
-在前面我有文章介绍过生信中各种ID转换【文章:[**生信中各种ID转换**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265466&idx=1&sn=021a10503d338e09abe07b578e734566&chksm=841efdc7b36974d13b7ad95e2272d293089d49adff9b74667bbeed78306328f0a42b0259c030&scene=21#wechat_redirect)】，我们可以通过各种基因注释包来转换各种基因ID，这里给大家介绍一下miRNA注释包：miRBaseVersions.db。
-这个包是基于miRbase数据库的。
+在前面我有文章介绍过生信中各种ID转换【文章:[**生信中各种ID转换**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265466&idx=1&sn=021a10503d338e09abe07b578e734566&chksm=841efdc7b36974d13b7ad95e2272d293089d49adff9b74667bbeed78306328f0a42b0259c030&scene=21#wechat_redirect)】，我们可以通过各种基因注释包来转换各种基因ID，这里给大家介绍一下miRNA注释包：miRBaseVersions.db。这个包是基于miRbase数据库的。
 
 由于数据库不断的增长和变化，miRNA的名称可能在不同的版本中有不同的名称，甚至不再被列为有效的miRNA。这个注释包作为一个存储库，可以用于快速查找成熟的miRNA名称。
 

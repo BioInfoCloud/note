@@ -12,12 +12,7 @@
 
 [TCGA数据库：临床数据下载与整理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265078&idx=1&sn=1d6e6365a19762d18005380d56dc623b&chksm=841efc4bb369755d0cf25ac9f4cbde3fbec5bb6141eab39c0920eb560cf04273bcbd0c6f9375&scene=21#wechat_redirect)
 
-这些文章中处理方式都是自己写代码，从头处理，有些人可能会问，为何如此多余，不是有很多R包吗？
-为什么那么麻烦？
-各有各的好处，对于很多初学者来说，直接用一些R包，出错后不知道所以然，那是因为不知道底层代码都进行了什么。
-关于TCGA数据库挖掘的R包很多，TCGAbiolinks包就很不错，在差异分析的文章【[一文就会TCGA数据库基因表达差异分析](https://mp.weixin.qq.com/s/e05YajG5nR5HhVC1xxisOA)】中就有提到这个包，当时录制视频的时候这个包好像因为R版本的更新问题，就没有过多介绍，但很久很久前也有文字描述的教程，大家可以通过[差异分析](https://mp.weixin.qq.com/s/e05YajG5nR5HhVC1xxisOA)的文章中的链接进行查看，但关于GDCRNATools包的介绍，是我第一次介绍。
-这个包主要用于处理lncRNA, mRNA和miRNA数据，不足之处没有其他数据的处理方式，比如甲基化，SNP和CNV的数据不能处理分析，或者就是因为名字限制了它的发展。
-话就不多说啦，看视频。
+这些文章中处理方式都是自己写代码，从头处理，有些人可能会问，为何如此多余，不是有很多R包吗？为什么那么麻烦？各有各的好处，对于很多初学者来说，直接用一些R包，出错后不知道所以然，那是因为不知道底层代码都进行了什么。关于TCGA数据库挖掘的R包很多，TCGAbiolinks包就很不错，在差异分析的文章【[一文就会TCGA数据库基因表达差异分析](https://mp.weixin.qq.com/s/e05YajG5nR5HhVC1xxisOA)】中就有提到这个包，当时录制视频的时候这个包好像因为R版本的更新问题，就没有过多介绍，但很久很久前也有文字描述的教程，大家可以通过[差异分析](https://mp.weixin.qq.com/s/e05YajG5nR5HhVC1xxisOA)的文章中的链接进行查看，但关于GDCRNATools包的介绍，是我第一次介绍。这个包主要用于处理lncRNA, mRNA和miRNA数据，不足之处没有其他数据的处理方式，比如甲基化，SNP和CNV的数据不能处理分析，或者就是因为名字限制了它的发展。话就不多说啦，看视频。
 
 > 更新: 2021-02-17 15:52:31
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/ugmwwk>

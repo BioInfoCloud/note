@@ -367,8 +367,7 @@ ens2ent2<-select(org.Hs.eg.db, #.db是这个芯片数据对应的注释包，换
                 keytype="ENTREZID" )#函数里面的keytype与keys参数是对应的，keys是你输入的那些数据，keytype是指这些数据是属于什么类型的数据。
 ```
 
-我们再看看将ENSEMBL转换整SYMBOL，在[TCGA中的转录组数据](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264583&idx=1&sn=f94bf8d77402677ee67f5d6336088254&chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&scene=21#wechat_redirect)的行名通常是ENSEMBL，我们经常要转换成SYMBOL。
-我们就读入一个病人的RNASeq的counts数据。
+我们再看看将ENSEMBL转换整SYMBOL，在[TCGA中的转录组数据](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264583&idx=1&sn=f94bf8d77402677ee67f5d6336088254&chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&scene=21#wechat_redirect)的行名通常是ENSEMBL，我们经常要转换成SYMBOL。我们就读入一个病人的RNASeq的counts数据。
 
 ```plain
 counts <- read.table("TCGARNASeq.counts",header = F,sep = "\t")
@@ -516,8 +515,7 @@ ens2symInfo$Ensembl <- substr(ens2symInfo[,"Ensembl"],1,15)#去掉版本号
 我们可以保存为R对象，以后就可以直接读入了，也不需要每次都处理一次。
 
 ```r
-#可以将其保存为R对象，以后每次都不需要进行转换啦。
-save(ens2symInfo,"ens2symInfo.Rdata")
+#可以将其保存为R对象，以后每次都不需要进行转换啦。save(ens2symInfo,"ens2symInfo.Rdata")
 ```
 
 gtf注释文件下载：

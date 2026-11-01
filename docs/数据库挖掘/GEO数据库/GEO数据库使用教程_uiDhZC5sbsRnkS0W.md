@@ -14,7 +14,7 @@ NCBI Gene Expression Omnibus（GEO）作为各种高通量实验数据的公共�
 
 在GEO最基本的组织层面，有四种基本实体类型。前三个（样本，平台和系列）由用户提供; 第四，数据集由GEO工作人员根据用户提交的数据进行编译和策划。
 
-# 一.检索
+## 一.检索
 
 检索界面，网址：[http://www.ncbi.nlm.nih.gov/geo](http://www.ncbi.nlm.nih.gov/geo)
 
@@ -30,19 +30,19 @@ NCBI Gene Expression Omnibus（GEO）作为各种高通量实验数据的公共�
 
 搜索结果可以通过7来设置每页显示个数，通过8选择排序方式，可以通过左侧的选项对搜索结果进行筛选。Entry type有四种:Datasets，Series，Samples，Platforms。分别对应的是，GEO Dataset (GDS) 数据集的ID号、GEO Series (GSE) 研究的ID号、GEO Sample (GSM) 样本ID号和GEO Platform (GPL) 芯片平台。
 
-## 平台
+### 平台
 
 平台记录描述阵列上的元件列表（例如，cDNA，寡核苷酸探针组，ORF，抗体）或可在该实验中检测和定量的元件列表（例如，SAGE标签，肽）。每个平台记录都分配有唯一且稳定的GEO登录号（GPLxxx）。平台可以引用多个提交者提交的许多样本。
 
-## 样品
+### 样品
 
 样品记录描述了处理单个样品的条件，它经历的操作以及从中得到的每个元素的丰度测量。每个样品记录都分配有唯一且稳定的GEO登录号（GSMxxx）。Sample实体必须仅引用一个Platform，可以包含在多个Series中。
 
-## 系列
+### 系列
 
 系列记录定义了一组被认为是组的一部分的相关样本，样本如何相关，以及它们是否以及如何排序。A系列提供了整个实验的焦点和描述。系列记录还可能包含描述提取数据，摘要结论或分析的表格。每个系列记录都分配有唯一且稳定的GEO登记号（GSExxx）。
 
-## 数据集
+### 数据集
 
 GEO DataSet（GDSxxx）是GEO样本数据的精选集合。GDS记录代表了一系列具有生物学和统计学意义的GEO样本，构成了GEO数据显示和分析工具套件的基础。GDS中的样本指的是同一个平台，也就是说，它们共享一组共同的探测元素。假设GDS中每个样本的值测量值以等效方式计算，即背景处理和标准化等考虑因素在整个数据集中是一致的。通过GDS子集提供反映实验设计的信息。
 
@@ -128,13 +128,13 @@ GSM编号检索页面
 
 关于GEO数据库检索就介绍到这里，我们接下来就介绍GEO在线的分析工具。
 
-# 二.分析工具
+## 二.分析工具
 
 我们再看看GDS号检索的结果页面
 
 ![1610773181042-b4d1a3e4-b6b0-438e-9f56-291fe7ecbafd.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181042-b4d1a3e4-b6b0-438e-9f56-291fe7ecbafd-216166.jpeg)
 
-## 1.Find gene工具
+### 1.Find gene工具
 
 该工具用于直接查找该数据集中该基因的表达谱数据。
 
@@ -166,7 +166,7 @@ Find genes that are up/down for this condition(s)可以根据选择的实验筛�
 
 ![1610773181160-abe9ac68-cc83-4d56-a3e8-c6b718302fc9.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181160-abe9ac68-cc83-4d56-a3e8-c6b718302fc9-534458.jpeg)
 
-## 2.Compare 2 sets of samples工具
+### 2.Compare 2 sets of samples工具
 
 ![1610773181057-0380bfb7-4cb1-4130-b577-e89393118e81.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181057-0380bfb7-4cb1-4130-b577-e89393118e81-977371.jpeg)
 
@@ -184,7 +184,7 @@ Find genes that are up/down for this condition(s)可以根据选择的实验筛�
 
 ![1610773181068-7e7defb9-d4bb-4ec6-9e2b-88206b5a3fc1.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181068-7e7defb9-d4bb-4ec6-9e2b-88206b5a3fc1-968197.jpeg)
 
-## 3.Cluster heatmaps工具
+### 3.Cluster heatmaps工具
 
 ![1610773181061-bc68b9db-a031-4e9b-9a83-1ee261250c99.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181061-bc68b9db-a031-4e9b-9a83-1ee261250c99-958647.jpeg)
 
@@ -220,7 +220,7 @@ Find genes that are up/down for this condition(s)可以根据选择的实验筛�
 
 ![1610773181244-ff18a941-36a8-4fb8-a5c9-8017904302cf.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181244-ff18a941-36a8-4fb8-a5c9-8017904302cf-458189.jpeg)
 
-## 4.Experiment design and value distribution工具
+### 4.Experiment design and value distribution工具
 
 这个工具就是一些箱线图
 
@@ -230,7 +230,7 @@ Find genes that are up/down for this condition(s)可以根据选择的实验筛�
 
 ![1610773181170-f77bcab3-df62-4f82-ad24-88fac7a4eb98.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181170-f77bcab3-df62-4f82-ad24-88fac7a4eb98-769228.jpeg)
 
-## 5.GEO2R
+### 5.GEO2R
 
 GEO2R是一个交互式web工具，它允许用户比较GEO系列中的两组或两组以上的样本，以便识别在不同实验条件下表达不同的基因。结果显示为按重要性排序的基因表。
 

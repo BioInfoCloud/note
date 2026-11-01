@@ -1,6 +1,6 @@
 # pyTorch基础
 
-# 1.什么是张量
+## 1.什么是张量
 
 张量是一种多维数组，在数学概念中是标量、向量和矩阵的拓展。张量有多种创建方式,包括直接创建、依据数组创建以及依据概率分布创建。张量还与自动求导相关的变量(variable)有密切关系，variable包含了tensor的数据、梯度等属性。掌握张量的创建方法是学习PyTorch的基础。在PyTorch中，张量（Tensor）是一个核心的概念，它是多维数组的一个扩展，支持各种数学运算，并可以在GPU上加速计算。以下是如何在PyTorch中理解张量的几个关键点：
 
@@ -24,9 +24,9 @@
 
 \*\*动态图：\*\*PyTorch使用动态图来计算梯度，这意味着你可以像编写普通的Python代码一样编写你的神经网络和计算图，然后PyTorch会自动为你处理所有的梯度计算。
 
-# 2.张量的基础
+## 2.张量的基础
 
-## （1）Tensor与Variable
+### （1）Tensor与Variable
 
 tensor类似numpy，是一个矩阵，数组或值，甚至更高维的数组。tensor可以和numpy对象随意转换，它们共享内存，转换很快。 Variable（变量）是Tensor的一种特殊形式，主要用于深度学习模型的训练过程中存储和更新参数（如权重和偏置），variable是torch.autograd 中的数据类型主要用于封装Tensor，进行自动求导。
 
@@ -52,11 +52,11 @@ device：张量所在设备，GPU/CPU，是加速的关键。
 
 ![1717412981047-111beda0-4c70-48b6-ac25-39808898f77e.png](./img/rcehDcBdFPzJj-_H/1717412981047-111beda0-4c70-48b6-ac25-39808898f77e-409827.png)
 
-## （2）张量的创建
+### （2）张量的创建
 
 在PyTorch中，你可以使用多种方式来创建张量（Tensor）。张量是PyTorch中用于存储多维数组的数据结构，并支持GPU加速计算。下面是一些常见的创建张量的方法：
 
-### 使用torch.tensor()
+#### 使用torch.tensor()
 
 使用torch.tensor()可以基于已有的数据（如列表、元组、ndarray等）创建张量。相关参数介绍如下：
 
@@ -80,7 +80,7 @@ tensor_np = torch.tensor(data_np)
 print(tensor_np)
 ```
 
-### 使用torch.from_numpy创建
+#### 使用torch.from_numpy创建
 
 ```python
 arr =np.array([[1,2,3],[4,5,6]])
@@ -99,11 +99,11 @@ print(t)
 
 ![1717420454297-4c6ff8d1-3657-469b-bef2-a1aacb1ac3e5.png](./img/rcehDcBdFPzJj-_H/1717420454297-4c6ff8d1-3657-469b-bef2-a1aacb1ac3e5-856408.png)
 
-### 使用torch.Tensor()（不推荐）
+#### 使用torch.Tensor()（不推荐）
 
 虽然torch.Tensor()也可以用来创建张量，但它通常与torch.tensor()有所区别。torch.Tensor()是一个基类构造函数，通常建议直接使用torch.tensor()或torch.empty(), torch.zeros(), torch.ones()等特定函数来创建张量。
 
-### 使用特定函数创建具有特定值的张量
+#### 使用特定函数创建具有特定值的张量
 
 torch.zeros(): 创建一个全为0的张量。
 
@@ -185,7 +185,7 @@ torch.normal() 是 PyTorch 中的一个函数，用于生成满足正态（高�
 
 例如，`torch.normal(mean=torch.tensor([[0.0, 1.0], [2.0, 3.0]]), std=torch.tensor([[1.0, 2.0], [3.0, 4.0]])) `会生成一个 2x2 的张量，其左上角的元素是从均值为 0.0、标准差为 1.0 的正态分布中抽取的，右上角的元素是从均值为 1.0、标准差为 2.0 的正态分布中抽取的，以此类推。
 
-# 生成一个包含10个元素的张量，每个元素都独立地以0.3的概率取值为1
+## 生成一个包含10个元素的张量，每个元素都独立地以0.3的概率取值为1
 
 torch.bernoulli()：生成伯努利分布。
 
@@ -196,7 +196,7 @@ samples = torch.bernoulli(p)
 samples
 ```
 
-### 使用torch.arange()和torch.linspace()
+#### 使用torch.arange()和torch.linspace()
 
 torch.arange(): 类似于Python的range()函数，但返回的是一个一维张量。
 

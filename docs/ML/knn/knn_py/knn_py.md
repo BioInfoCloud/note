@@ -3,12 +3,10 @@
 ### （1）查看鸢尾花iris数据集
 
 ```python
-#对鸢尾花iris数据集进行调用，查看数据的各方面特征。
-from sklearn.datasets import load_iris
+#对鸢尾花iris数据集进行调用，查看数据的各方面特征。from sklearn.datasets import load_iris
 iris_dataset = load_iris()
 #下面是查看数据的各项属性
-print("数据集的Keys:\n",iris_dataset.keys())     #查看数据集的keys。
-print("特征名:\n",iris_dataset['feature_names'])  #查看数据集的特征名称
+print("数据集的Keys:\n",iris_dataset.keys())     #查看数据集的keys。print("特征名:\n",iris_dataset['feature_names'])  #查看数据集的特征名称
 print("数据类型:\n",type(iris_dataset['data']))    #查看数据类型
 print("数据维度:\n",iris_dataset['data'].shape)    #查看数据的结构
 print("前五条数据:\n{}".format(iris_dataset['data'][:5]))  #查看前5条数据
@@ -54,8 +52,7 @@ print('数据集简介：\n',iris_dataset['DESCR'][:20] + "\n.......")  #数据�
     .......
 
 ```python
-#对iris数据集进行拆分，并查看拆分结果。
-from sklearn.datasets import load_iris
+#对iris数据集进行拆分，并查看拆分结果。from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 iris_dataset = load_iris()
 X_train, X_test, y_train, y_test = train_test_split( iris_dataset['data'], iris_dataset['target'], random_state=2)
@@ -228,8 +225,7 @@ print("X_test shape: {}".format(X_test.shape))
     X_test shape: (38, 4)
 
 ```python
-# 使用scatter_matrix显示训练集与测试集。
-import pandas as pd
+# 使用scatter_matrix显示训练集与测试集。import pandas as pd
 iris_dataframe = pd.DataFrame(X_train, columns=iris_dataset.feature_names)
 # 创建一个scatter matrix，颜色值来自y_train
 pd.plotting.scatter_matrix(iris_dataframe, c=y_train, figsize=(15, 15), marker='o', hist_kwds={'bins': 20}, s=60, alpha=.8)

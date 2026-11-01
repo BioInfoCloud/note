@@ -1,24 +1,14 @@
 # 芯片数据分析
 
-# 一. 基因芯片的基本原理
+## 一. 基因芯片的基本原理
 
 基因芯片(genechip)（又称DNA芯片、生物芯片）的原型是80年代中期提出的。基因芯片的测序原理是杂交测序方法，即通过与一组已知序列的核酸探针杂交进行核酸序列测定的方法，在一块基片表面固定了序列已知的靶核苷酸的探针。当溶液中带有荧光标记的核酸序列TATGCAATCTAG，与基因芯片上对应位置的核酸探针产生互补匹配时，通过确定荧光强度最强的探针位置，获得一组序列完全互补的探针序列。据此可重组出靶核酸的序列。
 
-## 1. Affymetrix生物芯片介绍
+### 1. Affymetrix生物芯片介绍
 
 美国Affymetrix公司是目前全球基因芯片行业的领头羊，以其专利的寡聚核苷酸原位光刻合成技术，年产各类寡聚核苷酸基因芯片达到几十万张，占据了表达谱基因芯片科研市场的一半以上，经过了将近十年的研究和开发，已经在国际上赢得了很高的盛誉，同时也成为为数极少的已经盈利的生物芯片公司。Affymetrix公司的基因芯片为寡核苷酸芯片（Oligo芯片），这种类型的芯片具有极高的特异性和灵敏度，重复性好，假阳性率非常低，是目前世界上最先进的基因芯片。Affymetrix所利用的原位光刻专利技术可使一张芯片上合成多达500,000 个寡核苷酸。该系统可以分析样品中DNA或者RNA序列的相对含量。
 
-Affymetrix公司率先开发的寡聚核苷酸原位光刻专利技术，是生产高密度寡核苷酸基因芯片的核心关键技术。
-采用的技术原理是在合成碱基单体的5＇羟基末端连上一个光敏保护基。
-首先使支持物羟基化，并用光敏保护基团将其保护起来。
-每次选取适当的蔽光膜(mask)使需要聚合的部位透光，其它部位不透光。
-这样，光通过蔽光膜照射到支持物上，受光部位的羟基脱保护而活化。
-因为合成所用的单体分子一端按传统固相合成方法活化，另一端受光敏保护基的保护，所以发生偶联的部位反应后仍旧带有光敏保护基团。
-因此，每次通过控制蔽光膜的图案(透光与不透光)决定哪些区域应被活化，以及所用单体的种类和反应次序就可以实现在待定位点合成大量预定序列寡聚体的目的。
- 使用多种蔽光膜能以更少的合成步骤生产出高密度的阵列，在合成循环中探针数目呈指数增长。
-某一含N个核苷酸的寡聚核苷酸，通过4×N个化学步骤能合成出4N个可能结构。
-例如：一段8个碱基的寡核苷酸有65，536种排列的可能，通过32个化学步骤，8个小时就能合成65，536个探针。
-其基本原理如图所示：
+Affymetrix公司率先开发的寡聚核苷酸原位光刻专利技术，是生产高密度寡核苷酸基因芯片的核心关键技术。采用的技术原理是在合成碱基单体的5＇羟基末端连上一个光敏保护基。首先使支持物羟基化，并用光敏保护基团将其保护起来。每次选取适当的蔽光膜(mask)使需要聚合的部位透光，其它部位不透光。这样，光通过蔽光膜照射到支持物上，受光部位的羟基脱保护而活化。因为合成所用的单体分子一端按传统固相合成方法活化，另一端受光敏保护基的保护，所以发生偶联的部位反应后仍旧带有光敏保护基团。因此，每次通过控制蔽光膜的图案(透光与不透光)决定哪些区域应被活化，以及所用单体的种类和反应次序就可以实现在待定位点合成大量预定序列寡聚体的目的。 使用多种蔽光膜能以更少的合成步骤生产出高密度的阵列，在合成循环中探针数目呈指数增长。某一含N个核苷酸的寡聚核苷酸，通过4×N个化学步骤能合成出4N个可能结构。例如：一段8个碱基的寡核苷酸有65，536种排列的可能，通过32个化学步骤，8个小时就能合成65，536个探针。其基本原理如图所示：
 
 ![1629791811289-9dc9a6ed-748a-4dbe-ad51-5974ddb28335.png](./img/yFH22K8_RQMPkc70/1629791811289-9dc9a6ed-748a-4dbe-ad51-5974ddb28335-701432.png)
 
@@ -44,7 +34,7 @@ WT 芯片的好处：
 
 参考文章：<https://mp.weixin.qq.com/s/OURXVzaQF05ykQEWpXsLGw>
 
-## 2. illumina的原理
+### 2. illumina的原理
 
 illumina 方案的测序芯片称为「Infinium」（曾用名「Bead Array」），顾名思义由玻璃基片和微珠组成。
 
@@ -80,7 +70,7 @@ illumina 方案的测序芯片称为「Infinium」（曾用名「Bead Array」�
 
 参考文章：<https://mp.weixin.qq.com/s/7D0TmxWubcMnnaXOtn4bow>
 
-## 3. Agilent 生物芯片原理
+### 3. Agilent 生物芯片原理
 
 Agilent芯片的基片是一个玻璃片。它的大小和一张标准的病理载玻片一样大小。
 
@@ -92,13 +82,7 @@ Agilent芯片的基片是一个玻璃片。它的大小和一张标准的病理�
 
 ![1629813345659-9265f36d-f3b8-4e93-b0d2-a80e3f89cacc.png](./img/yFH22K8_RQMPkc70/1629813345659-9265f36d-f3b8-4e93-b0d2-a80e3f89cacc-545883.png)
 
-Agilent 表达谱芯片的检测原理也是基于 3’ IVT 原理。
-首先用 Oligo dT 引物和 T7 逆转录酶来得到第一链的 cDNA， 然后再转录或复制出第二链的 cDNA，得到双链 cDNA，这个双链cDNA 是带有 T7 启动子的。
-接下来， 如果是单色（或单通道）芯片杂交流程，我们只进行这张图的左边的蓝色部分，使用 T7 逆转录酶，以带有 A、 T、 U 碱基的核苷酸和标有 Cy5 荧光基团 CTP 为底物逆转录出 cRNA 来；
-如果是双色（或双通道）杂交流程，要加上图示的右半边红色的部分，即对于另一个样本（参照组 reference），就用标有 Cy3 荧光基团 CTP 做为底物之一。
-这样， Cy3（或 Cy5） 荧光基团就在体外逆转录过程当中，被带入到新合成的 cRNA链当中去了。
- 经纯化后，将这个制备好的 cRNA 与芯片探针进行杂交，在激光扫描仪下检测每个点的荧光强度，并计算出对应基因的 RNA 表达量来。
-不同于单色芯片以计算荧光强度作为表达值，双色芯片的表达值则计算的是实验组和参照组的比值。
+Agilent 表达谱芯片的检测原理也是基于 3’ IVT 原理。首先用 Oligo dT 引物和 T7 逆转录酶来得到第一链的 cDNA， 然后再转录或复制出第二链的 cDNA，得到双链 cDNA，这个双链cDNA 是带有 T7 启动子的。接下来， 如果是单色（或单通道）芯片杂交流程，我们只进行这张图的左边的蓝色部分，使用 T7 逆转录酶，以带有 A、 T、 U 碱基的核苷酸和标有 Cy5 荧光基团 CTP 为底物逆转录出 cRNA 来；如果是双色（或双通道）杂交流程，要加上图示的右半边红色的部分，即对于另一个样本（参照组 reference），就用标有 Cy3 荧光基团 CTP 做为底物之一。这样， Cy3（或 Cy5） 荧光基团就在体外逆转录过程当中，被带入到新合成的 cRNA链当中去了。 经纯化后，将这个制备好的 cRNA 与芯片探针进行杂交，在激光扫描仪下检测每个点的荧光强度，并计算出对应基因的 RNA 表达量来。不同于单色芯片以计算荧光强度作为表达值，双色芯片的表达值则计算的是实验组和参照组的比值。
 
 视频连接：<https://v.qq.com/x/page/h0174dobvcb.html>
 
@@ -106,18 +90,13 @@ Agilent 表达谱芯片的检测原理也是基于 3’ IVT 原理。
 
 需要注意的是，对于双色芯片，我们称标记第二种颜色的样本为参照组（reference），它可以是对照组样本（如用同一个患者的癌旁组织作为癌的对照），也可以仅仅是一个基因表达的参考，如使用一种或几种肿瘤细胞系的 RNA 混合物作为参照组。 **GEO 上使用 Agilent 双色芯片的数据集的表达谱，常常给出的是两种基因的表达强度比值，并取 log2；但也有些数据集虽然用的也是这款芯片，但只使用了单色单样本，这时候就直接和普通单色芯片一样分析即可**。
 
-# 二. 芯片数据库
+## 二. 芯片数据库
 
 比较大的芯片数据库有美国 NCBI 的 GEO，欧洲 EMBL-EBI 的 ArrayExpress，日本 DDBJ 的 GEA，不过这个 GEA 直接连接到 ArrayExpress，还有美国 NCI 下属的 TCGA，里面也有大量肿瘤芯片数据，不要误以为 TCGA 全是测序数据。其中 GEO 是最大的芯片数据库，其次是 ArrayExpress。这里就介绍GEO这个数据库。
 
-## 1. GEO数据库简介
+### 1. GEO数据库简介
 
-GEO，全称 Gene Expression Omnibus（基因表达综合数据库），是由美国国立生物技术信息中心NCBI创建并维护的基因表达数据库。
-它创建于2000年，收录并整理了全球范围内研究工作者上传的微阵列芯片、二代测序以及其他形式的高通量基因组数据，这些数据包括基于单通道和双通道微阵列的实验，检测mRNA，基因组DNA和蛋白质丰度，以及非阵列技术，如基因表达系列分析（SAGE），质谱蛋白质组学数据和高通量测序数据。
-也就是说只要是目前已经发表的论文，论文中涉及到的基因表达检测的数据都可以通过这个数据库中找到。
-关键是这个数据是免费的！
-随着芯片和测序技术的蓬勃发展和应用， 2000 年美国国立生物技术信息中心, NCBI 创建了 GEO 并维护至今。
- 2003 年到 2004 年 GEO 数据库逐渐开放供研究者获取和分析， 2001 年到 2006 年， GEO 数据上传的规则，也就是 MIAME（The MinimumInformation About a Microarray Experiment guidelines）逐渐形成并实行，并成为提交芯片数据的全球规范。
+GEO，全称 Gene Expression Omnibus（基因表达综合数据库），是由美国国立生物技术信息中心NCBI创建并维护的基因表达数据库。它创建于2000年，收录并整理了全球范围内研究工作者上传的微阵列芯片、二代测序以及其他形式的高通量基因组数据，这些数据包括基于单通道和双通道微阵列的实验，检测mRNA，基因组DNA和蛋白质丰度，以及非阵列技术，如基因表达系列分析（SAGE），质谱蛋白质组学数据和高通量测序数据。也就是说只要是目前已经发表的论文，论文中涉及到的基因表达检测的数据都可以通过这个数据库中找到。关键是这个数据是免费的！随着芯片和测序技术的蓬勃发展和应用， 2000 年美国国立生物技术信息中心, NCBI 创建了 GEO 并维护至今。 2003 年到 2004 年 GEO 数据库逐渐开放供研究者获取和分析， 2001 年到 2006 年， GEO 数据上传的规则，也就是 MIAME（The MinimumInformation About a Microarray Experiment guidelines）逐渐形成并实行，并成为提交芯片数据的全球规范。
 
 GEO 数据库收录的数据类型有：
 
@@ -133,15 +112,15 @@ GEO 数据库收录的数据类型有：
 * 10）十几组质谱 MS 数据
 * 11）其他
 
-## 2.ArrayExpress 数据库
+### 2.ArrayExpress 数据库
 
 NCBI 的基因表达综合数据库 GEO 和欧洲生物信息学研究所(EBI)的 ArrayExpress 是芯片数据的两个主要公共数据库。尽管它们具有不同的设计，但两个数据库都支持由 MIAME 定义的所有数据元素。 因此 GEO 和ArrayExpress 数据库及数据集结构十分相似，可以类比的学习。ArrayExpress 数据库在 2002建立，开始收录芯片数据， 2008 年开始收录高通量测序数据，同样，近几年测序数据的增长量逐渐超过芯片数据。 ArrayExpress 是 GEO 数据的一个良好的补充。
 
 ArrayExpres数据库的主页链接（<https://www.ebi.ac.uk/arrayexpress/>）
 
-# 三. GEO数据库使用教程
+## 三. GEO数据库使用教程
 
-## 1.检索
+### 1.检索
 
 检索界面，网址：[http://www.ncbi.nlm.nih.gov/geo](http://www.ncbi.nlm.nih.gov/geo)
 
@@ -157,19 +136,19 @@ ArrayExpres数据库的主页链接（<https://www.ebi.ac.uk/arrayexpress/>）
 
 搜索结果可以通过7来设置每页显示个数，通过8选择排序方式，可以通过左侧的选项对搜索结果进行筛选。Entry type有四种:Datasets，Series，Samples，Platforms。分别对应的是，GEO Dataset (GDS) 数据集的ID号、GEO Series (GSE) 研究的ID号、GEO Sample (GSM) 样本ID号和GEO Platform (GPL) 芯片平台。
 
-### 平台
+#### 平台
 
 平台记录描述阵列上的元件列表（例如，cDNA，寡核苷酸探针组，ORF，抗体）或可在该实验中检测和定量的元件列表（例如，SAGE标签，肽）。每个平台记录都分配有唯一且稳定的GEO登录号（GPLxxx）。平台可以引用多个提交者提交的许多样本。
 
-### 样品
+#### 样品
 
 样品记录描述了处理单个样品的条件，它经历的操作以及从中得到的每个元素的丰度测量。每个样品记录都分配有唯一且稳定的GEO登录号（GSMxxx）。Sample实体必须仅引用一个Platform，可以包含在多个Series中。
 
-### 系列
+#### 系列
 
 系列记录定义了一组被认为是组的一部分的相关样本，样本如何相关，以及它们是否以及如何排序。A系列提供了整个实验的焦点和描述。系列记录还可能包含描述提取数据，摘要结论或分析的表格。每个系列记录都分配有唯一且稳定的GEO登记号（GSExxx）。
 
-### 数据集
+#### 数据集
 
 GEO DataSet（GDSxxx）是GEO样本数据的精选集合。GDS记录代表了一系列具有生物学和统计学意义的GEO样本，构成了GEO数据显示和分析工具套件的基础。GDS中的样本指的是同一个平台，也就是说，它们共享一组共同的探测元素。假设GDS中每个样本的值测量值以等效方式计算，即背景处理和标准化等考虑因素在整个数据集中是一致的。通过GDS子集提供反映实验设计的信息。
 
@@ -255,13 +234,13 @@ GSM编号检索页面
 
 关于GEO数据库检索就介绍到这里，我们接下来就介绍GEO在线的分析工具。
 
-## 2.分析工具
+### 2.分析工具
 
 我们再看看GDS号检索的结果页面
 
 ![1610773181042-b4d1a3e4-b6b0-438e-9f56-291fe7ecbafd.jpeg](./img/yFH22K8_RQMPkc70/1610773181042-b4d1a3e4-b6b0-438e-9f56-291fe7ecbafd-330103.jpeg)
 
-### (1).Find gene工具
+#### (1).Find gene工具
 
 该工具用于直接查找该数据集中该基因的表达谱数据。
 
@@ -293,7 +272,7 @@ Find genes that are up/down for this condition(s)可以根据选择的实验筛�
 
 ![1610773181160-abe9ac68-cc83-4d56-a3e8-c6b718302fc9.jpeg](./img/yFH22K8_RQMPkc70/1610773181160-abe9ac68-cc83-4d56-a3e8-c6b718302fc9-461280.jpeg)
 
-### (2).Compare 2 sets of samples工具
+#### (2).Compare 2 sets of samples工具
 
 ![1610773181057-0380bfb7-4cb1-4130-b577-e89393118e81.jpeg](./img/yFH22K8_RQMPkc70/1610773181057-0380bfb7-4cb1-4130-b577-e89393118e81-888773.jpeg)
 
@@ -311,7 +290,7 @@ Find genes that are up/down for this condition(s)可以根据选择的实验筛�
 
 ![1610773181068-7e7defb9-d4bb-4ec6-9e2b-88206b5a3fc1.jpeg](./img/yFH22K8_RQMPkc70/1610773181068-7e7defb9-d4bb-4ec6-9e2b-88206b5a3fc1-447759.jpeg)
 
-### (3).Cluster heatmaps工具
+#### (3).Cluster heatmaps工具
 
 ![1610773181061-bc68b9db-a031-4e9b-9a83-1ee261250c99.jpeg](./img/yFH22K8_RQMPkc70/1610773181061-bc68b9db-a031-4e9b-9a83-1ee261250c99-995471.jpeg)
 
@@ -347,7 +326,7 @@ Find genes that are up/down for this condition(s)可以根据选择的实验筛�
 
 ![1610773181244-ff18a941-36a8-4fb8-a5c9-8017904302cf.jpeg](./img/yFH22K8_RQMPkc70/1610773181244-ff18a941-36a8-4fb8-a5c9-8017904302cf-188639.jpeg)
 
-### (4).Experiment design and value distribution工具
+#### (4).Experiment design and value distribution工具
 
 这个工具就是一些箱线图
 
@@ -357,7 +336,7 @@ Find genes that are up/down for this condition(s)可以根据选择的实验筛�
 
 ![1610773181170-f77bcab3-df62-4f82-ad24-88fac7a4eb98.jpeg](./img/yFH22K8_RQMPkc70/1610773181170-f77bcab3-df62-4f82-ad24-88fac7a4eb98-598748.jpeg)
 
-### (5).GEO2R
+#### (5).GEO2R
 
 GEO2R是一个交互式web工具，它允许用户比较GEO系列中的两组或两组以上的样本，以便识别在不同实验条件下表达不同的基因。结果显示为按重要性排序的基因表。
 
@@ -397,13 +376,13 @@ GEO2R使用Bioconductor项目中的GEOquery和limma R包对原始提交者提供
 
 编辑options和features
 
-#### （1）Value distribution
+##### （1）Value distribution
 
 计算和查看所选示例值的分布。值是提交者提供的原始数据，在此基础上执行GEO2R计算。查看分布对于确定选择的样本是否适合进行比较非常重要。通常，以中间值为中心的值表示数据是标准化的和可交叉比较的。
 
 ![1610773181144-0a1764ff-c74f-419b-9737-8cfe7e122c00.jpeg](./img/yFH22K8_RQMPkc70/1610773181144-0a1764ff-c74f-419b-9737-8cfe7e122c00-332447.jpeg)
 
-#### （2）Options
+##### （2）Options
 
 ![1610773181138-cb31aab9-834c-4b83-be8d-fa149197a58b.jpeg](./img/yFH22K8_RQMPkc70/1610773181138-cb31aab9-834c-4b83-be8d-fa149197a58b-002216.jpeg)
 
@@ -423,19 +402,19 @@ NCBI生成的注释可用于许多记录。这些注释是通过从平台中提�
 
 提交者提供的注释可用于所有记录。这些表示提交者提供的原始平台注释。请注意，提交者提供的注释在样式和内容上有很多多样性，而且自提交时起可能就没有更新过。
 
-#### （3）Profile graph
+##### （3）Profile graph
 
 通过从平台记录的ID列输入相应的标识符来查看特定的基因表达谱图。此功能不执行任何计算;它只是在样本间显示基因的表达值。要使此功能正常工作，不需要定义示例组。
 
 ![1610773181141-0ddca2cf-db69-4ede-95f6-cb13146afc53.jpeg](./img/yFH22K8_RQMPkc70/1610773181141-0ddca2cf-db69-4ede-95f6-cb13146afc53-045331.jpeg)
 
-#### （4）R script
+##### （4）R script
 
 此选项卡打印用于执行计算的R脚本。这些信息可以保存下来，作为计算结果的参考。
 
 ![1610773181240-0ac125a3-8d52-47ad-b136-586907527201.jpeg](./img/yFH22K8_RQMPkc70/1610773181240-0ac125a3-8d52-47ad-b136-586907527201-484777.jpeg)
 
-# 四. ArrayExpress 数据库使用教程
+## 四. ArrayExpress 数据库使用教程
 
 进到主页之后，我们可以先看一下这个数据库的信息，比如它是功能基因组数据，目前有74700个实验的数据，2556953个芯片数据，60.91TB的存档数据，这都是在描述ArrayExpres数据库的数据量的大小。
 
@@ -477,9 +456,9 @@ NCBI生成的注释可用于许多记录。这些注释是通过从平台中提�
 
 参考：<https://mp.weixin.qq.com/s/UWMcXFjtydTU9W3JTnUrhA>
 
-# 五. 芯片数据分析
+## 五. 芯片数据分析
 
-## 1. 处理芯片数据的R包
+### 1. 处理芯片数据的R包
 
 芯片原始数据文件包括： ① 芯片图像扫描得到的记录光信号强度的Intensity文件 ② 包含芯片类型、探针排布等芯片具体设计信息的Design文件 ③ 包含探针注释信息、探针序列等信息的Annotation文件 ④ 包含样本分组、实验处理等信息的Targets文件。不同芯片厂商的文件格式不同，下面是三大厂商芯片数据相应文件的格式信息：
 
@@ -491,15 +470,15 @@ NCBI生成的注释可用于许多记录。这些注释是通过从平台中提�
 
 affy/oligo；beadarray/lumi；limma ；AgiMicroRna ；GEOquery ；readr/readxl。
 
-### (1). Affymetrix芯片
+#### (1). Affymetrix芯片
 
 Affymetrix芯片原始数据最常用的格式是CEL格式，从读取原始数据到转化为基因表达量矩阵表格,可以使用affy ,oligo等R包进行数据的质量控制,背景矫正,数据标准化,其中标准化方法常用的为rma算法和mas5算法。
 
-#### 1). affy包
+##### 1). affy包
 
 R包affy用于读取Affymetrix芯片CEL文件，也可用于读取一些较早期的affy芯片数据，如3'IVT 芯片，常见的U133系列(GPL570、GPL57K GPL96) ，不适合用于读取较新的affy芯片类型，如Exon ST、 GeneSK SNP芯片。  affy读取CEL文件函数是`read.affybatch`/`ReadAffy` 读取后的对象类别：AffyBatch
 
-#### 2). oligo包
+##### 2). oligo包
 
 oligo读取Affymetrix芯片CEL文件，也可以读取affymetrix的几乎所有芯片类型的CEL文件，此外，oligo还可读取Roche NimbleGen芯片的.xys原始数据文件 ，oligo读取CEL文件函数是`read.celfiles`，读取后的对象类别：
 
@@ -511,48 +490,47 @@ oligo读取Affymetrix芯片CEL文件，也可以读取affymetrix的几乎所有�
 | SNP arrays | SnpFeatureSet |
 | Tiling arrays | TilingFeatureSet |
 
-### (2). Illumina芯片
+#### (2). Illumina芯片
 
 Illumina芯片数据分析的4个起点： ① Pixel-level,每个像素点对应一个数据， tif/tiff 格式； ②  Bead-level,每个bead对应一个数据， 类似于affymetrix的单个probe数据， 具体数据包括txt/idat/Iocs /sdf/ xml等多种格式； ③ Summary-level,每个bead type对应 —个数据，类似于affy的probe set数据， txt/CSV 格式； ④ 公共数据库存储的表达矩阵数据，如 GEO/ArrayExpress，部分数据集已经过预处理，属于summary-level。
 
 ![1630119701339-1b6023a9-d14c-4e60-97a7-ca246f162e41.png](./img/yFH22K8_RQMPkc70/1630119701339-1b6023a9-d14c-4e60-97a7-ca246f162e41-464071.png)
 
-使用iScan/BeadScan扫描图像及处理图像信息时，因软件的具体版 本和设置参数不同，产生多种不同格式的原始数据文件。
- ① `.txtfiles`,包含所有beads坐标数据和已减去背景值的光信号强度值 ② `.tiffiles`,扫描后得到的图像文件 ③ `.Iocs files`,包含所有beads的坐标信息 ④ `.idatfiles`,专有的二进制文件用于储存光信号强度数据，可供 BeadStudio/GenomeStudio读取进行后续分析 ⑤ `.xml files`,包含仪器的扫描参数设置和提取光强度值数据的具体方法信息 ⑥ `.bgx files`,包含探针注释信息 ⑦ `Metrics.txt`,包含扫描芯片的质量参数信息 ⑧ `.sdf files`,包含样本/芯片的具体构架、布局信息 ⑨ IBS (Illumina Bead Summary) files，`.csv`格式，summary-level 数据。
+使用iScan/BeadScan扫描图像及处理图像信息时，因软件的具体版 本和设置参数不同，产生多种不同格式的原始数据文件。 ① `.txtfiles`,包含所有beads坐标数据和已减去背景值的光信号强度值 ② `.tiffiles`,扫描后得到的图像文件 ③ `.Iocs files`,包含所有beads的坐标信息 ④ `.idatfiles`,专有的二进制文件用于储存光信号强度数据，可供 BeadStudio/GenomeStudio读取进行后续分析 ⑤ `.xml files`,包含仪器的扫描参数设置和提取光强度值数据的具体方法信息 ⑥ `.bgx files`,包含探针注释信息 ⑦ `Metrics.txt`,包含扫描芯片的质量参数信息 ⑧ `.sdf files`,包含样本/芯片的具体构架、布局信息 ⑨ IBS (Illumina Bead Summary) files，`.csv`格式，summary-level 数据。
 
-#### 1). limma包
+##### 1). limma包
 
 `read.ilmn`函数读取summary-level数据 ， `read.idat`读取idat数据。
 
-#### 2). beadarray包
+##### 2). beadarray包
 
 `readlllumina`函数最常用，用于读取bead-level数据 ；`readTIFF`函数读取pixel-level图像数据 ；`readldatFiles`函数读取idat文件； `readLocsFile`函数读取.Iocs文件； `readBeadSummaryData`函数读取summary-level数据。
 
-#### 3). lumi包
+##### 3). lumi包
 
 `lumiR`函数读取summary-level数据 ` lumiR.batch`函数批量读取summary-level数据
 
-#### 4). illuminaio包
+##### 4). illuminaio包
 
 ` readIDAT`函数读取idat数据 ；`readBGX`函数读取.bgx文件。
 
-### (3). Agilent芯片
+#### (3). Agilent芯片
 
-#### 1). limma
+##### 1). limma
 
 limma包中的`read.maimages`函数不限于Agilent芯片数据，可用于读取多个平台芯片文件，但不适用于affymetrix及illumina芯片数据 ，可读取单色及双色芯片数据；可读取多种图像分析程序产生的txt数据，如：Agilent Feature Extraction, Arrayvision, BlueFuse, GenePix, ImaGene, QuantArray (Version 3 or later), Stanford Microarray Database (SMD)，SPOT。
 
-#### 2). AgiMicroRna
+##### 2). AgiMicroRna
 
 ` readMicroRnaAFE` 函数适用于Agilent的miRNA芯片数据。
 
-## 2. 数据下载与处理
+### 2. 数据下载与处理
 
 数据下载方法： 可以通过GEO网站链接、FTP站点直接下载，也可以通过R 包 GEOquery 的 getGEOSuppFiles 函数下载，在Linux系统下，可以使用wgetx axek arial2等软件下载。
 
-### (1). GEOquery包
+#### (1). GEOquery包
 
-#### 1). getGEO()函数
+##### 1). getGEO()函数
 
 这个函数是GEOquery包中的主要用户级函数。它指导下载(如果没有指定文件名)，并将GEO SOFT格式文件解析为专门设计的R数据结构，使GEO SOFT格式的每个重要部分易于访问。
 
@@ -591,7 +569,7 @@ show(gse2553)
 show(pData(phenoData(gse2553[[1]]))[1:5,c(1,6,8)])
 ```
 
-#### 2). getGEOSuppFiles()函数
+##### 2). getGEOSuppFiles()函数
 
 NCBI GEO允许将补充文件附加到GEO系列(GSE)、GEO平台(GPL)和GEO样本(GSM)。这个函数“知道”如何获得基于GEO加入的这些文件。没有对下载的文件进行解析，因为计算机通常不知道文件格式。
 
@@ -609,9 +587,9 @@ getGEOSuppFiles(GEO, makeDirectory = TRUE, baseDir = getwd(),
 | fetch_files | 逻辑值。如果为TRUE，则实际下载文件。如果为FALSE，只返回将要下载的文件名。有用的测试和获得一个列表的文件没有实际下载。 |
 | filter_regex | 一个字符(1)正则表达式，用于过滤来自GEO的文件名，以限制那些将被下载的文件。这有助于限制，例如，仅下载bed文件。 |
 
-### (2). Affymetrix芯片原始数据的下载与处理
+#### (2). Affymetrix芯片原始数据的下载与处理
 
-#### 1). 数据下载
+##### 1). 数据下载
 
 这里以GEO数据库中的数据为例
 
@@ -637,7 +615,7 @@ download.file(url, destfile = "geodata/GSE5823.tar")
 
 Axel 是 CLI (command-line interface) 下的一个多线程下载工具，通常我都用它取代 wget 下载各类文件，适用于 Linux 及 BSD 等 UNIX 类平台。在Ubuntu 上安装 axel 命令是：`sudo apt-get install axel`。在CentOS上安装命令是：`sudo yum install axel`。
 
-#### 2). 整理Targets文件
+##### 2). 整理Targets文件
 
 Targets文件包含样本信息的Tab分割的文本文件，每行对应一个芯片样本，每列对应样本名、样本分组、处理因素等变量信息 等，列名可以自己定义，该文件数据来源芯片原始数据文件，部分信息可能会整合在每个样本的原始数据文件中，但有时不全面，所以通常我们需要从GSE数据主页的实验设计信息和原始文献中去获取，然后自己整理， GSE页面Samples栏目下常有简要分组、处理信息。比如数据集【GSE5823】：
 
@@ -669,7 +647,7 @@ write.table(x = celFlieInfo,
 
 ![1630242613469-8967efac-cf9d-4b68-a958-3ba49dd1fd55.png](./img/yFH22K8_RQMPkc70/1630242613469-8967efac-cf9d-4b68-a958-3ba49dd1fd55-890800.png)
 
-#### 3). 数据读入
+##### 3). 数据读入
 
 根据前面介绍的R包，读入数据的函数很多。affy包中有2个读取CEL文件的函数：`read.affybatch()`和`ReadAffy()`。
 
@@ -743,7 +721,7 @@ GSE5823_data <- cel2
 save(GSE5823_data,file="geodata/GSE5823/GSE5823_data.Rdata")
 ```
 
-#### 4). 数据质量评估
+##### 4). 数据质量评估
 
 芯片数据的获取经历多个步骤，每个环节都有可能出现问题:
 
@@ -834,8 +812,7 @@ for (i in 1:20) {
 
 ```r
 GSE5823_targets$batch <- GSE5823_data@protocolData@data$ScanDate %>%
-  str_sub(1, 8)#提取时间日期(年月日)，去掉具体详细的时间点。
-GSE5823_targets$batch
+  str_sub(1, 8)#提取时间日期(年月日)，去掉具体详细的时间点。GSE5823_targets$batch
 table(GSE5823_targets$batch)
 ```
 
@@ -984,7 +961,7 @@ dev.off()
 
 这6种方法对应的可视化图片在网页下面可以查看。
 
-#### 5). 数据的背景校正
+##### 5). 数据的背景校正
 
 Affymerix芯片背景校正的主要R包：从CEL文件读取后的数据出发，可使用affy包及oligo包中的相应函数处理。
 
@@ -1023,7 +1000,7 @@ PCA_new(log2(exprs(GSE5823_bgc)),
 
 从细胞类型来看的确分为了4个类别，这个和符合，本身就是不给不同的实验设计。但同一实验设计中就不是那么好了，只有MCF-7细胞这组的实验设计能很好的将control组和敲低组区分出来。
 
-#### 6). 芯片数据标准化
+##### 6). 芯片数据标准化
 
 通过对芯片数据标准化可以弥补一部分系统偏差对数据的影响 ，使各个样本芯片数据的分布相似，使不同的芯片之间可以进行比较 。
 
@@ -1126,7 +1103,7 @@ write.table(x = celFlieInfo,
             row.names = F)
 ```
 
-#### 7). 缺失值处理
+##### 7). 缺失值处理
 
 我们标准化后可能有缺失值，缺失值主要来自原始图像信息处理过程 、数据后续处理、转换过程。如果有，那么我们需要处理这些缺失值。补充缺失值的方法有邻近平均值局部法和删除等。
 
@@ -1159,9 +1136,9 @@ na_knn$data[row_index, col_index]
 
 我们发现部分探针填补后和原来的缺失值是和大的。你可以多运行几次看看。部分探针没有差别，但部分还是差别很大。如果缺失值不多，缺失值所在的行不是你要的探针(不是你研究的探针/基因)，我个人觉得直接删除该行会好一些。
 
-### (3). Illumina芯片原始数据的下载与处理
+#### (3). Illumina芯片原始数据的下载与处理
 
-#### 1). 数据的下载
+##### 1). 数据的下载
 
 GEO数据库中，Illumina芯片原始数据下载后解压，哪怕同一芯片，里面的数据也有些不同，甚至有的有缺失，作者并没有上传，比如数据集GSE32873，下载后的原始数据里面只有探针的注释文件。
 
@@ -1178,18 +1155,7 @@ getGEOSuppFiles("GSE140882", baseDir ="geodata", makeDirectory = T)
 getGEOSuppFiles("GSE59183", baseDir ="geodata", makeDirectory = T)
 ```
 
-下载后得到的原始数据文件GSE\*\*\*\_RAW.tar。
-我们解压到GSE\*\*\*\_RAW文件夹下。
-你需要查看一下里面有没有注释信息的文件，下面是3个不同的数据集，它们使用的是同一芯片。
-解压后会有相同的GPL文件。
-我们还可以看到，除了这2个文件，其他的GSM开头的就是样本数据文件，但他们个格式有所不同。
-前面说过Illumina芯片数据分析的4个起点： ① Pixel-level,每个像素点对应一个数据， tif/tiff 格式；
- ②  Bead-level,每个bead对应一个数据， 类似于affymetrix的单个probe数据， 具体数据包括txt/idat/Iocs/sdf/xml等多种格式；
- ③ Summary-level,每个bead type对应 —个数据，类似于affy的probe set数据， txt/CSV 格式；
- ④ 公共数据库存储的表达矩阵数据。
-这就看作者上传的是什么数据文件，通常都是 Bead-level的数据文件，所以会有txt/idat/Iocs/sdf/xml这样的数据格式文件，比如数据集GSE59183，而且该数据集还有tif格式的数据文件。
-但在GSE140882数据集中只有txt格式的Bead-level的数据。
-GSE32873数据集里面处理GPL文件外，就没有其他的，也就是说没有原始数据，所以该数据集你无法从原始数据开始分析，但作者提供了非标准化的表达矩阵文件。
+下载后得到的原始数据文件GSE\*\*\*\_RAW.tar。我们解压到GSE\*\*\*\_RAW文件夹下。你需要查看一下里面有没有注释信息的文件，下面是3个不同的数据集，它们使用的是同一芯片。解压后会有相同的GPL文件。我们还可以看到，除了这2个文件，其他的GSM开头的就是样本数据文件，但他们个格式有所不同。前面说过Illumina芯片数据分析的4个起点： ① Pixel-level,每个像素点对应一个数据， tif/tiff 格式； ②  Bead-level,每个bead对应一个数据， 类似于affymetrix的单个probe数据， 具体数据包括txt/idat/Iocs/sdf/xml等多种格式； ③ Summary-level,每个bead type对应 —个数据，类似于affy的probe set数据， txt/CSV 格式； ④ 公共数据库存储的表达矩阵数据。这就看作者上传的是什么数据文件，通常都是 Bead-level的数据文件，所以会有txt/idat/Iocs/sdf/xml这样的数据格式文件，比如数据集GSE59183，而且该数据集还有tif格式的数据文件。但在GSE140882数据集中只有txt格式的Bead-level的数据。GSE32873数据集里面处理GPL文件外，就没有其他的，也就是说没有原始数据，所以该数据集你无法从原始数据开始分析，但作者提供了非标准化的表达矩阵文件。
 
 ![1630458879744-f128b553-35ee-47f3-9210-080d7ff388ee.png](./img/yFH22K8_RQMPkc70/1630458879744-f128b553-35ee-47f3-9210-080d7ff388ee-967990.png)
 
@@ -1201,7 +1167,7 @@ GSE32873数据集里面处理GPL文件外，就没有其他的，也就是说没
 
 ![1630548085778-3441049a-18c0-48d9-a5e7-836cf68f4c0e.png](./img/yFH22K8_RQMPkc70/1630548085778-3441049a-18c0-48d9-a5e7-836cf68f4c0e-837402.png)
 
-#### 2). 数据的读入
+##### 2). 数据的读入
 
 关于 Illumina芯片原始数据读入使用什么R包在前面有介绍。数据的读入我们首先介绍beadarray包的`readIllumina()`函数。下面介绍`readIllumina()`函数。
 
@@ -1286,16 +1252,7 @@ head(data_tiff[[1]])
 
 ![1630462718750-4a40813c-8bdc-442b-bca2-29683e96222a.png](./img/yFH22K8_RQMPkc70/1630462718750-4a40813c-8bdc-442b-bca2-29683e96222a-437782.png)
 
-我们发现，useImages参数是否设置为TRUE，他们的信号强度值(Grn)不一样。
-GrnF是图片的前景值，GrnB是图片的背景值。
-前面介绍useImage设置为TRUE，则使用文本文件中提供的珠子中心坐标从TIFF图像中提取强度。
-前景值是从图像的锐化版本计算出来的。
-背景值计算为围绕珠心的17x17像素正方形中5个最低像素的中值。
-所以useImages参数是否设置为TRUE，导致计算的背景值方法不一样，所以Grn的值有区别，但整体的分析的差异应该是不大的。
-我们的原始数据中大多是没有tif格式的图像文件的，这种你就不用纠结要不是设置为TRUE，如果有，其实设置与否都行，我没有去比较这2者之间最后的差异。
-但我认为是没有太大差异的（我们验证过）。
-还要说一下Grn的值其实就是前景值(GrnF)减去背景值(GrnB)。
-背景值计算的算法参考文献如下：
+我们发现，useImages参数是否设置为TRUE，他们的信号强度值(Grn)不一样。GrnF是图片的前景值，GrnB是图片的背景值。前面介绍useImage设置为TRUE，则使用文本文件中提供的珠子中心坐标从TIFF图像中提取强度。前景值是从图像的锐化版本计算出来的。背景值计算为围绕珠心的17x17像素正方形中5个最低像素的中值。所以useImages参数是否设置为TRUE，导致计算的背景值方法不一样，所以Grn的值有区别，但整体的分析的差异应该是不大的。我们的原始数据中大多是没有tif格式的图像文件的，这种你就不用纠结要不是设置为TRUE，如果有，其实设置与否都行，我没有去比较这2者之间最后的差异。但我认为是没有太大差异的（我们验证过）。还要说一下Grn的值其实就是前景值(GrnF)减去背景值(GrnB)。背景值计算的算法参考文献如下：
 
 * Kuhn K, Baker SC, Chudin E, Lieu MH, Oeser S, Bennett H, Rigault P, Barker D, McDaniel TK, Chee MS. A novel, high-performance random array platform for quantitative gene expression profiling. Genome Research. 2004;14(11):2347-2356
 * Smith ML, Dunning MJ, Tavare S, Lynch AG. Identification and correction of previously unreported spatial phenomena using raw Illumina BeadArray data. BMC Bioinformatics. 2010;11:208
@@ -1525,7 +1482,7 @@ save(GSE42242_non_norm, file = "geodata/GSE32873/GSE32873_non-normalized.Rdata")
 
 总结：我们解压后的数据文件，可以打开看一下，如果数据量很大，每个GSM整百万行的那种，一般都是bead-level的数据，用beadarray::readIllumina函数读取；对summary-level来说，如果是idat格式的，可以用 beadarray::readIdatFiles()来读取。看到数据有四列，"ProbeID", "AVG_SIGNAL", "BEAD_STD", 'Avg_NBEADS', 'DETECTION'，需要做转换，就是改个名字+GSM的ID，limma包读取一个列sample一列detection这种数据。
 
-#### 3). 数据的标准化
+##### 3). 数据的标准化
 
 **A.数据集GSE140882的标准化**
 
@@ -1556,7 +1513,7 @@ rm(GSE140882_BLdata)
 targets <- BLdata@sectionData$Targets#
 ```
 
-### (4). 下载SOFT格式的数据
+#### (4). 下载SOFT格式的数据
 
 ```r
 gset <- getGEO(GEO = "GSE7765",AnnotGPL=F ,destdir = "./geodata")

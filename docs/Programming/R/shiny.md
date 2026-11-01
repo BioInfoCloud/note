@@ -3,11 +3,7 @@
 
 ## 2.UI
 
-Shiny 提供的 HTML 输入和输出。
-这使您能够捕获多种类型的数据并显示多种类型的 R 输出。
-在这里，我将主要坚持 Shiny 本身内置的输入和输出。
- 但是，有一个丰富而充满活力的扩展包社区，如[shinyWidgets](https://github.com/dreamRs/shinyWidgets)，[colorpicker](https://github.com/daattali/colourpicker)和[sorttable](https://rstudio.github.io/sortable/)。
- 您可以在 https://github.com/nanxstats/awesome-shiny-extensions 上找到由 [Nan Xiao](https://nanx.me/) 维护的其他软件包的全面、积极维护的列表。
+Shiny 提供的 HTML 输入和输出。这使您能够捕获多种类型的数据并显示多种类型的 R 输出。在这里，我将主要坚持 Shiny 本身内置的输入和输出。 但是，有一个丰富而充满活力的扩展包社区，如[shinyWidgets](https://github.com/dreamRs/shinyWidgets)，[colorpicker](https://github.com/daattali/colourpicker)和[sorttable](https://rstudio.github.io/sortable/)。 您可以在 https://github.com/nanxstats/awesome-shiny-extensions 上找到由 [Nan Xiao](https://nanx.me/) 维护的其他软件包的全面、积极维护的列表。
 
 像往常一样，我们将从加载shiny包开始：
 
@@ -95,8 +91,7 @@ ui <- fluidPage(
 )
 ```
 
-如果您有一组非常大的可能选项，您可能需要使用“server-side” `selectInput()`，这样完整的一组可能选项就不会嵌入到UI中（这会导致加载速度变慢），而是根据服务器的需要发送。有关此高级主题的详细信息，请访问https://shiny.rstudio.com/articles/selectize.html#server-侧选择。
-无法使用单选按钮选择多个值，但有一个概念上类似的替代方法：`checkboxGroupInput()`。
+如果您有一组非常大的可能选项，您可能需要使用“server-side” `selectInput()`，这样完整的一组可能选项就不会嵌入到UI中（这会导致加载速度变慢），而是根据服务器的需要发送。有关此高级主题的详细信息，请访问https://shiny.rstudio.com/articles/selectize.html#server-侧选择。无法使用单选按钮选择多个值，但有一个概念上类似的替代方法：`checkboxGroupInput()`。
 
 ```R
 ui <- fluidPage(
@@ -849,9 +844,7 @@ server <- function(input, output, session) {
 
 ### 4.6 Under the hood
 
-Shiny 的设计使得作为 R 用户的你不需要了解 HTML 的细节。
- 但是，如果您了解一些 HTML 和 CSS，则可以进一步自定义 Shiny。
- 不幸的是，教授 HTML 和 CSS 超出了本书的范围，但是 MDN 的  [HTML](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) 和 [CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)基础教程是一个很好的起点。
+Shiny 的设计使得作为 R 用户的你不需要了解 HTML 的细节。 但是，如果您了解一些 HTML 和 CSS，则可以进一步自定义 Shiny。 不幸的是，教授 HTML 和 CSS 超出了本书的范围，但是 MDN 的  [HTML](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) 和 [CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)基础教程是一个很好的起点。
 
 最重要的是要知道所有输入、输出和布局函数背后并没有魔法：它们只是生成 HTML。 您可以通过直接在控制台中执行 UI 函数来查看该 HTML：
 
@@ -914,8 +907,7 @@ tags$p(
 )
 ```
 
-注意inline=TRUE的用法；textOutput（）默认值是生成一个完整的段落。
-要了解更多有关使用HTML、CSS和JavaScript制作引人注目的用户界面的信息，我强烈推荐David Granjon的《 [Outstanding User Interfaces with Shiny](https://unleash-shiny.rinterface.com/index.html)》。
+注意inline=TRUE的用法；textOutput（）默认值是生成一个完整的段落。要了解更多有关使用HTML、CSS和JavaScript制作引人注目的用户界面的信息，我强烈推荐David Granjon的《 [Outstanding User Interfaces with Shiny](https://unleash-shiny.rinterface.com/index.html)》。
 
 ## 5.图形
 
@@ -1108,8 +1100,7 @@ server <- function(input, output, session) {
 
 这里有两个重要的 ggplot2 技术需要注意：
 
-我在绘图之前将距离添加到数据框。 我认为在可视化之前将相关变量放在数据框中是一种很好的做法。
-我将限制设置为 scale_size_area() 以确保大小在点击之间具有可比性。 为了找到正确的范围，我做了一些交互式实验，但如果需要，您可以计算出确切的细节（请参阅本章末尾的练习）。
+我在绘图之前将距离添加到数据框。 我认为在可视化之前将相关变量放在数据框中是一种很好的做法。我将限制设置为 scale_size_area() 以确保大小在点击之间具有可比性。 为了找到正确的范围，我做了一些交互式实验，但如果需要，您可以计算出确切的细节（请参阅本章末尾的练习）。
 这是一个更复杂的想法。 我想使用画笔逐步向选区添加点。 在这里，我使用不同的颜色显示选择，但您可以想象许多其他应用程序。 为了完成这项工作，我将 reactiveVal() 初始化为 FALSE 向量，然后使用 brushedPoints() 和 | 将画笔下的任何点添加到选区。 为了给用户一些重新开始的方式，我双击重置选择。 图 7.5 显示了正在运行的应用程序的几个屏幕截图。
 
 ```R
@@ -1142,11 +1133,7 @@ server <- function(input, output, session) {
 
 在我们继续之前，重要的是要了解交互式图中的基本数据流，以便了解它们的局限性。 基本流程是这样的：
 
-JavaScript 捕获鼠标事件。
-Shiny 将鼠标事件数据发送回 R，告诉应用程序输入现在已过时。
-重新计算所有下游反应性消费者。
-plotOutput() 生成一个新的 PNG 并将其发送到浏览器。
-对于本地应用程序，瓶颈往往是绘制绘图所花费的时间。 根据情节的复杂程度，这可能需要几分之一秒。 但对于托管应用程序，您还必须考虑将事件从浏览器传输到 R，然后将渲染图从 R 返回到浏览器所需的时间。
+JavaScript 捕获鼠标事件。Shiny 将鼠标事件数据发送回 R，告诉应用程序输入现在已过时。重新计算所有下游反应性消费者。plotOutput() 生成一个新的 PNG 并将其发送到浏览器。对于本地应用程序，瓶颈往往是绘制绘图所花费的时间。 根据情节的复杂程度，这可能需要几分之一秒。 但对于托管应用程序，您还必须考虑将事件从浏览器传输到 R，然后将渲染图从 R 返回到浏览器所需的时间。
 
 一般来说，这意味着不可能创建闪亮的应用程序，其中的动作和响应被认为是即时的（即情节似乎与您的动作同步更新）。 如果您需要那种速度，则必须在 JavaScript 中执行更多计算。 一种方法是使用包含 JavaScript 图形库的 R 包。 现在，在我写这本书的时候，我认为你会得到 plotly 包的最佳体验，正如 Carson Sievert 所著的交互式基于网络的数据可视化与 R，plotly 和 shiny 书中所记录的那样。
 

@@ -30,8 +30,8 @@ Counts<- data.frame(c(LUAD_Counts_expMatrix[,dataSmNT],LUAD_Counts_expMatrix[,da
 
 ---
 
-# **基因表达差异分析**
-# **一.数据下载**
+## **基因表达差异分析**
+## **一.数据下载**
 
 利用R包下载可参考下面2篇文章：
 
@@ -55,7 +55,7 @@ Counts<- data.frame(c(LUAD_Counts_expMatrix[,dataSmNT],LUAD_Counts_expMatrix[,da
 | <br/>Plate | <br/>Order of plate in a sequence of 96-well plates | <br/>96孔序列中板的顺序，4个数字组成 |
 | <br/>Center | <br/>Sequencing or characterization center that will receive the aliquot for analysis | <br/>数据由哪个机构分析：如 01代表The Broad Institute GCC,更多见：[<u>Center</u>](https://www.omicsclass.com/article/1081) |
 
-## **1. 官网在线下载**
+### **1. 官网在线下载**
 
 在线下载lung cancer(只选择LUAD)转录组数据的筛选条件，下载日期2020年2月5日。
 
@@ -67,7 +67,7 @@ Counts<- data.frame(c(LUAD_Counts_expMatrix[,dataSmNT],LUAD_Counts_expMatrix[,da
 
 ![1612531569159-c47d7e28-67aa-40b8-b2d2-0964668b20da.png](./img/l9nebAoHw7GO7UOY/1612531569159-c47d7e28-67aa-40b8-b2d2-0964668b20da-024955.png)
 
-## **2.官网下载工具下载  **
+### **2.官网下载工具下载  **
 
 Data Transfer Tool：[<u>https://gdc.cancer.gov/access-data/gdc-data-transfer-tool</u>](https://gdc.cancer.gov/access-data/gdc-data-transfer-tool)
 
@@ -83,7 +83,7 @@ gdc-client download -m gdc_manifest_20200211_063426.txt
 
 然后就是慢慢下载了，如果中间有报错断了，一般就是网络不好的原因，重新下载或者换个时间段就行了。国内利用这个下载速度还是挺慢的。
 
-## **3. R语言TCGAbiolinks包下载**
+### **3. R语言TCGAbiolinks包下载**
 
 TCGAbiolinks包下载数据超级慢，可以选择官网下载。这个包只下载数据的话可以试试，我好久没有用啦。
 
@@ -91,10 +91,8 @@ TCGAbiolinks包下载数据超级慢，可以选择官网下载。这个包只�
 ########################## 这里下载的是Counts数据，不是FPKM数据####################
 setwd(".")
 # 加载相应的包，可能会需要其他包，提示错误就安装缺少的包。
-# 因为每个人已经安装的包不一样。
-library(TCGAbiolinks)
-# 请求数据。
-query <- GDCquery(project = "TCGA-LUAD",
+# 因为每个人已经安装的包不一样。library(TCGAbiolinks)
+# 请求数据。query <- GDCquery(project = "TCGA-LUAD",
                   data.category = "Transcriptome Profiling",
                   data.type = "Gene Expression Quantification",
                   workflow.type = "HTSeq - Counts")
@@ -231,7 +229,7 @@ RT	Rhabdoid Tumor	横纹肌样瘤
 
 WT	High-Risk Wilms Tumor	高危肾母细胞瘤
 
-# **二. 数据的整理**
+## **二. 数据的整理**
 
 下载的数据，每个样本的数据分别不同文件夹下，我们需要将所有文件移动到同一个文件夹下。
 
@@ -257,7 +255,7 @@ for(wd in filepath){
 }
 ```
 
-## **2. 解压文件**
+### **2. 解压文件**
 
 这一步有点多余，可以不做。直接读入数据。
 
@@ -265,15 +263,14 @@ for(wd in filepath){
 
 ```plain
 ########################### 解压所有文件并删除原文件###################
-####其实有些多余，熟悉R后，是可以直接读入的。
-setwd(".\\SampleFiles")
+####其实有些多余，熟悉R后，是可以直接读入的。setwd(".\\SampleFiles")
 if(file.exists("MANIFEST.txt")){file.remove("MANIFEST.txt")}
 countsFiles <-dir(path = ".\\",pattern="gz$") #查看满足条件文件
 library(R.utils)
 sapply(countsFiles, gunzip) # 解压函数gunzip需要安装R.utils包
 ```
 
-## **3. 处理json文件**
+### **3. 处理json文件**
 
 因为我们下载的样本数据的文件名很难看出是什么样本信息。我们需要找到文件对应样品的barcode。
 
@@ -295,7 +292,7 @@ write.csv(json_File_Info,file = "..\\json_File_Info.CSV")
 
 ![1612531569103-09d36f0a-2455-4638-a8b6-88ab6c950935.png](./img/l9nebAoHw7GO7UOY/1612531569103-09d36f0a-2455-4638-a8b6-88ab6c950935-605304.png)
 
-# **三. 数据融合**
+## **三. 数据融合**
 
 即将所有样本合并成一个数据框
 
@@ -329,7 +326,7 @@ write.csv(allSampleRawCounts,file = "..\\RawCounts.CSV")
 
 ![1612531569112-f0a9795f-f7d7-4c5f-8901-218c83be5fe1.png](./img/l9nebAoHw7GO7UOY/1612531569112-f0a9795f-f7d7-4c5f-8901-218c83be5fe1-405085.png)
 
-# **四. ID转换**
+## **四. ID转换**
 
 [<u>参考文章</u>](https://mp.weixin.qq.com/s?src=11&timestamp=1581245491&ver=2148&signature=Tqc3mBFhZXrl1TIEi9TtROMKA1CsPCirp-pL3tVcX8M6MAkDqpaZ6Rc6rrF9jIZcte03mQma-kPdSNzJ7395zicreulip2VNHwojXk9fEJTC9kRvkI17bHLlWEY1jTnT&new=1)
 
@@ -379,8 +376,7 @@ mergeRawCounts <- merge(Ensembl_ID_TO_Genename,RawCounts,by="Ensembl_ID")
 mergeRawCounts <- mergeRawCounts[order(mergeRawCounts[,"gene_id"]),]
 # 根据gene_id列建立索引
 index<-duplicated(mergeRawCounts$gene_id)
-#我们想要的那一行为FALSE，所以要取反。
-mergeRawCounts <- mergeRawCounts[!index,]
+#我们想要的那一行为FALSE，所以要取反。mergeRawCounts <- mergeRawCounts[!index,]
 #利用基因名称作为行名
 rownames(mergeRawCounts) <-mergeRawCounts[,"gene_id"]
 # 删除前2列
@@ -395,10 +391,7 @@ gtf文件下载：[<u>https://www.gencodegenes.org/human/</u>](https://www.genco
 
 ![1612531569118-61eed2e4-3565-4176-9de9-53f9ecb10541.png](./img/l9nebAoHw7GO7UOY/1612531569118-61eed2e4-3565-4176-9de9-53f9ecb10541-493368.png)
 
-关于生信中的各种ID转换，我在文章中有介绍[<u>https://mp.weixin.qq.com/s/lazavD3jzRVO4QkxysHQcg</u>](https://mp.weixin.qq.com/s/lazavD3jzRVO4QkxysHQcg) ，这篇文章是付费文章，隐藏内容仅仅是gtf文件进行ID转换的内容，你不需要去付费。
-下面代码是一个函数，和上面的函数一样，用于基因转换的，只是提取的信息比较多，上面提取的基因很多，包括了假基因，下面代码还提取了更多基因的信息包括是编码蛋白的还是非编码RNA的，又或者是假基因。
-你自己把上面的gtf文件作为输入，运行一次看结果。
-都是处理同一文件，但返回的数据框的列名不一样，用在上面需要自己更改后续的代码。
+关于生信中的各种ID转换，我在文章中有介绍[<u>https://mp.weixin.qq.com/s/lazavD3jzRVO4QkxysHQcg</u>](https://mp.weixin.qq.com/s/lazavD3jzRVO4QkxysHQcg) ，这篇文章是付费文章，隐藏内容仅仅是gtf文件进行ID转换的内容，你不需要去付费。下面代码是一个函数，和上面的函数一样，用于基因转换的，只是提取的信息比较多，上面提取的基因很多，包括了假基因，下面代码还提取了更多基因的信息包括是编码蛋白的还是非编码RNA的，又或者是假基因。你自己把上面的gtf文件作为输入，运行一次看结果。都是处理同一文件，但返回的数据框的列名不一样，用在上面需要自己更改后续的代码。
 3.0的代码就是值分析编码蛋白的基因。
 
 ```plain
@@ -428,7 +421,7 @@ get_map <- function(input) {
 
 ![1612531570885-dc2ad323-4fa3-49d7-855e-f8f2270e1f1c.png](./img/l9nebAoHw7GO7UOY/1612531570885-dc2ad323-4fa3-49d7-855e-f8f2270e1f1c-611567.png)
 
-# **五. 表达差异分析**
+## **五. 表达差异分析**
 
 **DESeq2和EdgeR包**: 都可用于做基因差异表达分析，主要也是用于RNA-Seq数据，同样也可以处理类似的ChIP-Seq,shRNA以及质谱数据。这两个都属于R包，其相同点在于都是对count data数据进行处理，都是基于负二项分布模型。
 
@@ -475,8 +468,7 @@ library( "edgeR" )
 group <- c(rep(1,Norm),rep(2,Tumm))
 # 创建DGEList类型变量
 # 这一步相当于创建一列表。注意group中的顺序和counts中行名要对应，
-# 也就是对照组和实验组要指定正确。这里前59列为control，后533列为case。
-y <- DGEList(counts=Counts, group=group)
+# 也就是对照组和实验组要指定正确。这里前59列为control，后533列为case。y <- DGEList(counts=Counts, group=group)
 # 数据过滤
 keep <- filterByExpr(y)
 y <- y[keep, , keep.lib.sizes=FALSE]
@@ -510,16 +502,14 @@ write.table(etSig, "..\\LUAD_DEG.xls", sep = "\t",
 # BiocManager::install("DESeq2")
 library("DESeq2")
 ####创建分组
-# 在DESeq2中，对照组是control样本，实验组是case。
-DESeq2group <- c(rep("control",Norm),rep("case",Tumm))
+# 在DESeq2中，对照组是control样本，实验组是case。DESeq2group <- c(rep("control",Norm),rep("case",Tumm))
 # 创建实验分组
 colData <- data.frame(row.names = names(Counts),
                       condition =factor(DESeq2group,
                                         levels = c("control","case")))
 # 构建DESeqDataSet对象
 # 构建DESeqDataSet对象用于分析，colData指定我们的样本信息和分组列表，
-# design = ~ condition表示分组信息安装colData的condition列分组。
-dds <- DESeqDataSetFromMatrix(countData = Counts, colData = colData,
+# design = ~ condition表示分组信息安装colData的condition列分组。dds <- DESeqDataSetFromMatrix(countData = Counts, colData = colData,
                               design = ~ condition)
 # 函数分析差异
 dds <- DESeq(dds)
@@ -556,11 +546,8 @@ TCGAVisualize_volcano(diffData$log2FoldChange, diffData$padj,
 dev.off()
 ```
 
-在提取表达数据的时候，代码虽然复杂，很多步骤多余。
-仅仅是让初学者知道一个详细的过程还需要特别说明的是，1.0的代码分析的基因没有筛选，包括了假基因和编码RNA的基因。
-你可以通过上面的get_map函数筛选出编码蛋白的基因。
-3.0的代码的只分析了编码蛋白的基因。
-除此以外，也可以利用相关R包直接分析，比如：GDCRNATools包进行分析：[<u>https://mp.weixin.qq.com/s/XBuikduP6iiSHFl0RBKxQg</u>](https://mp.weixin.qq.com/s/XBuikduP6iiSHFl0RBKxQg)[](https://mp.weixin.qq.com/s/XBuikduP6iiSHFl0RBKxQg)
+在提取表达数据的时候，代码虽然复杂，很多步骤多余。仅仅是让初学者知道一个详细的过程还需要特别说明的是，1.0的代码分析的基因没有筛选，包括了假基因和编码RNA的基因。你可以通过上面的get_map函数筛选出编码蛋白的基因。
+3.0的代码的只分析了编码蛋白的基因。除此以外，也可以利用相关R包直接分析，比如：GDCRNATools包进行分析：[<u>https://mp.weixin.qq.com/s/XBuikduP6iiSHFl0RBKxQg</u>](https://mp.weixin.qq.com/s/XBuikduP6iiSHFl0RBKxQg)[](https://mp.weixin.qq.com/s/XBuikduP6iiSHFl0RBKxQg)
 
 最后，我觉得这教程已经够细了，如果代码还出错，那就R语言没有好好学习。建议去学习我的R语言视频教程。
 

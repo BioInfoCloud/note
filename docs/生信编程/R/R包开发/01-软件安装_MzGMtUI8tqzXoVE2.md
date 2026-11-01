@@ -1,6 +1,6 @@
 # 01-软件安装
 
-## 必备
+### 必备
 
 R [https://www.r-project.org/](https://www.r-project.org/)
 
@@ -10,7 +10,7 @@ Git [https://git-scm.com/](https://git-scm.com/)
 
 Gitee 或 Github [https://gitee.com/](https://gitee.com/) 或 [https://github.com/](https://github.com/)
 
-## 推荐
+### 推荐
 
 CRAN统计
 
@@ -24,7 +24,7 @@ METACRAN [https://www.r-pkg.org/](https://www.r-pkg.org/)
 
 沙拉查词 [https://saladict.crimx.com/download.html](https://saladict.crimx.com/download.html)
 
-# 01_开发环境
+## 01_开发环境
 
 开发环境，除了常规的R和Rstudio安装之外，还需要安装的一些东西
 
@@ -50,7 +50,7 @@ METACRAN [https://www.r-pkg.org/](https://www.r-pkg.org/)
 
 xcode-select --install
 
-# 02_开发工具包
+## 02_开发工具包
 
 除了系统和软件，开发过程中还会用到一些用于开发包的包
 
@@ -75,7 +75,7 @@ install.packages("devtools")
 devtools::install_github("r-lib/devtools")
 ```
 
-# 03_阅读材料
+## 03_阅读材料
 
 **基础**
 R Packages [https://r-pkgs.org/r.html](https://r-pkgs.org/r.html)

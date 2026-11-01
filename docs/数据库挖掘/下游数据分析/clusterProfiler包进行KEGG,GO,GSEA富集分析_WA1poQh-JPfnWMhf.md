@@ -8,9 +8,7 @@
 
 ---
 
-我们前面介绍了[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)数据库的各种数据下载与整理，获得的表达矩阵可以[**绘制热图**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264534&idx=1&sn=6d5ef1279972e730878d65742e56c855&chksm=841ef26bb3697b7d426e76b16fbe0365aa6ad5da7f86ca7d14dcb72ca47ada25ffba021d9ba8&scene=21#wechat_redirect)，可以进[**差异分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264898&idx=1&sn=f6287d98fe0b0fb48a96d2905ca0bb4f&chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&scene=21#wechat_redirect)，[**生存分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265358&idx=1&sn=a9bf8f96c942a0926c996ca3af88bb81&chksm=841efd33b36974250c2b1d0c57fbd3432cce3863163ecb33c2c92b2baa76ab81a2ccb5ffefce&scene=21#wechat_redirect)。
-还有就是利用[**FunRich工具**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265340&idx=1&sn=5c3608661698d2332b992269a8721833&chksm=841efd41b3697457f96ace4eecc682cbbbe3fdf3955f0060d3aafcdff0a2d85c225d5ce3f784&scene=21#wechat_redirect)进行富集分析。
-在文章:[**为什么选择GSEA分析？和KEGG和GO分析有什么区别？**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265618&idx=1&sn=3c5365ed2c437d3b7b034431ab4ac934&chksm=841efe2fb3697739ca349e9570aecdb0f4b0b5291c6dad8efcaca4777b631819e2951cdc5840&scene=21#wechat_redirect)介绍了GSEA分析中MSigDB（Molecular Signatures Database）数据库中定义了已知的基因集合：[<u>http://software.broadinstitute.org/gsea/msigdb</u>](http://software.broadinstitute.org/gsea/msigdb)
+我们前面介绍了[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)数据库的各种数据下载与整理，获得的表达矩阵可以[**绘制热图**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264534&idx=1&sn=6d5ef1279972e730878d65742e56c855&chksm=841ef26bb3697b7d426e76b16fbe0365aa6ad5da7f86ca7d14dcb72ca47ada25ffba021d9ba8&scene=21#wechat_redirect)，可以进[**差异分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264898&idx=1&sn=f6287d98fe0b0fb48a96d2905ca0bb4f&chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&scene=21#wechat_redirect)，[**生存分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265358&idx=1&sn=a9bf8f96c942a0926c996ca3af88bb81&chksm=841efd33b36974250c2b1d0c57fbd3432cce3863163ecb33c2c92b2baa76ab81a2ccb5ffefce&scene=21#wechat_redirect)。还有就是利用[**FunRich工具**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265340&idx=1&sn=5c3608661698d2332b992269a8721833&chksm=841efd41b3697457f96ace4eecc682cbbbe3fdf3955f0060d3aafcdff0a2d85c225d5ce3f784&scene=21#wechat_redirect)进行富集分析。在文章:[**为什么选择GSEA分析？和KEGG和GO分析有什么区别？**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265618&idx=1&sn=3c5365ed2c437d3b7b034431ab4ac934&chksm=841efe2fb3697739ca349e9570aecdb0f4b0b5291c6dad8efcaca4777b631819e2951cdc5840&scene=21#wechat_redirect)介绍了GSEA分析中MSigDB（Molecular Signatures Database）数据库中定义了已知的基因集合：[<u>http://software.broadinstitute.org/gsea/msigdb</u>](http://software.broadinstitute.org/gsea/msigdb)
 
 **本地的KEGG分析参考文章：**[**KEGG数据库使用及通路分析教程**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263326&idx=1&sn=044ed62daac16a0bd8c1f2f5e891c303&chksm=841ef523b3697c354d4e7d7717e2fd9eb78c9173926fcc00d7c211416dde75261f3bda8bb8bc&scene=21#wechat_redirect)**,GO参考文章：**[**FunRich数据库：一个主要用于基因和蛋白质的功能富集以及相互作用网络分析的独立的软件工具**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265340&idx=1&sn=5c3608661698d2332b992269a8721833&chksm=841efd41b3697457f96ace4eecc682cbbbe3fdf3955f0060d3aafcdff0a2d85c225d5ce3f784&scene=21#wechat_redirect)**，当然该工具不止可以进行富集分析，具体去看文章吧。**
 
@@ -96,9 +94,7 @@ load data我们的数据。GSEAExp.txt是我们的表示数据，GSEAExp.cls是�
 
 Expression dataset（表达文件）：选择上一步上传的GSEAExp.txt文件
 
-Gene sets database （功能基因集数据库）：GSEA包含了MSigDB数据库中的功能基因集，可以从中选择感兴趣的通路、癌症标记、转录因子数据库等。
-我们在前面文章:[**为什么选择GSEA分析？和KEGG和GO分析有什么区别？**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265618&idx=1&sn=3c5365ed2c437d3b7b034431ab4ac934&chksm=841efe2fb3697739ca349e9570aecdb0f4b0b5291c6dad8efcaca4777b631819e2951cdc5840&scene=21#wechat_redirect)中就介绍了这些数据集，当然，这个数据集我们可以自己准备，多数情况下，我们是选择数据库给我们定义好的数据集，所以直接用就好了。
-我们这里选择：c2.cp.kegg.v6.2.symbols.gmt
+Gene sets database （功能基因集数据库）：GSEA包含了MSigDB数据库中的功能基因集，可以从中选择感兴趣的通路、癌症标记、转录因子数据库等。我们在前面文章:[**为什么选择GSEA分析？和KEGG和GO分析有什么区别？**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265618&idx=1&sn=3c5365ed2c437d3b7b034431ab4ac934&chksm=841efe2fb3697739ca349e9570aecdb0f4b0b5291c6dad8efcaca4777b631819e2951cdc5840&scene=21#wechat_redirect)中就介绍了这些数据集，当然，这个数据集我们可以自己准备，多数情况下，我们是选择数据库给我们定义好的数据集，所以直接用就好了。我们这里选择：c2.cp.kegg.v6.2.symbols.gmt
 
 Number of permutations（扰动／随机次数）：通常设置1000，此参数不可过小。默认就行。
 
@@ -130,13 +126,7 @@ Chip platform(芯片类型)：如果表达gct文件的第一列为芯片探针id
 
 ![1608887983590-4ef45709-c053-4900-8438-568f192f0b5b.png](./img/WA1poQh-JPfnWMhf/1608887983590-4ef45709-c053-4900-8438-568f192f0b5b-179044.png)
 
-经过各项参数筛选后剩下176个基因集的条目，其中有124个条目在Tumor组中上调（ES值为正）；
-有35个基因集的False Discovery Rate （FDR）小于0.25，是有意义的。
-在未校正的p<0.01下，有14个基因集富集显著，在未校正的p<0.05下，有21个基因集富集显著；
-富集结果浏览，可点击**Snapshot**展示了ES绝对值最大的20个基因集的图。
-点击**enrichment results in html format查看**详细的网页形式的富集分析结果。
-点击 **enrichment results in excel**查看详细的Excel表格形式的富集结果。
-点击**Guide to**的网页链接查看官方对结果解读的指导文档。
+经过各项参数筛选后剩下176个基因集的条目，其中有124个条目在Tumor组中上调（ES值为正）；有35个基因集的False Discovery Rate （FDR）小于0.25，是有意义的。在未校正的p<0.01下，有14个基因集富集显著，在未校正的p<0.05下，有21个基因集富集显著；富集结果浏览，可点击**Snapshot**展示了ES绝对值最大的20个基因集的图。点击**enrichment results in html format查看**详细的网页形式的富集分析结果。点击 **enrichment results in excel**查看详细的Excel表格形式的富集结果。点击**Guide to**的网页链接查看官方对结果解读的指导文档。
 
 对于Enrichment in phenotype: Normal (39 samples)解释和上面一样。
 
@@ -272,8 +262,7 @@ diff <- read.table("RNA_dePC_limma.txt", header = T,sep ="",check.names = F)
 
 ![1608887983502-d618c47e-18bf-4ee4-9415-6dd4f1c60c42.png](./img/WA1poQh-JPfnWMhf/1608887983502-d618c47e-18bf-4ee4-9415-6dd4f1c60c42-648898.png)
 
-这也通常是差异分析的结果文件，我们只需要第一列的基因SYMBOL。
-我们需要进行ID转换，将SYMBOL转换为ENTREZ ID，关于基因ID转换不熟悉，可参考文章：[**生信中各种ID转换**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265466&idx=1&sn=021a10503d338e09abe07b578e734566&chksm=841efdc7b36974d13b7ad95e2272d293089d49adff9b74667bbeed78306328f0a42b0259c030&scene=21#wechat_redirect)。
+这也通常是差异分析的结果文件，我们只需要第一列的基因SYMBOL。我们需要进行ID转换，将SYMBOL转换为ENTREZ ID，关于基因ID转换不熟悉，可参考文章：[**生信中各种ID转换**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265466&idx=1&sn=021a10503d338e09abe07b578e734566&chksm=841efdc7b36974d13b7ad95e2272d293089d49adff9b74667bbeed78306328f0a42b0259c030&scene=21#wechat_redirect)。
 
 ```r
 SYMBOL <- diff[,1]
@@ -299,11 +288,7 @@ gene <-select(org.Hs.eg.db, #.db是这个数据对应的注释包
 gene <- bitr(SYMBOL, fromType="SYMBOL", toType="ENTREZID", OrgDb="org.Hs.eg.db")
 ```
 
-有时，我们转换后的ENTREZ ID有缺失值，也就是我们输入的SYMBOL没有匹配到ENTREZ ID，原因是一个ENTREZ ID对于的基因可能有多个SYMBOL名称，还有就是我输入的基因有些是编码lncRNA的基因。
-当然，我们在分析时可以不转换，也或者大家在进行差异分析的时候就先不要转换成SYMBOL，如果是TCGA的数据，可以同时保存ENSEMBL，用ENSEMBL转化为ENTREZ ID会好一些。
-[**TCGA数据库：GDCRNATools包下载数据、处理数据以及差异分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265127&idx=2&sn=8c866e064995e6feb251a5db00282fd2&chksm=841efc1ab369750c01bd1794b30a7f5d3a6033df518f7f5a10cb12b5c2a6b6a8c280b304e345&scene=21#wechat_redirect)文章中的分析方式就保留了ENSEMBL。
-差异分析后最好把编码蛋白的和ncRNA的区分开。
-当然，一般也不影响，看自己的分析。
+有时，我们转换后的ENTREZ ID有缺失值，也就是我们输入的SYMBOL没有匹配到ENTREZ ID，原因是一个ENTREZ ID对于的基因可能有多个SYMBOL名称，还有就是我输入的基因有些是编码lncRNA的基因。当然，我们在分析时可以不转换，也或者大家在进行差异分析的时候就先不要转换成SYMBOL，如果是TCGA的数据，可以同时保存ENSEMBL，用ENSEMBL转化为ENTREZ ID会好一些。[**TCGA数据库：GDCRNATools包下载数据、处理数据以及差异分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265127&idx=2&sn=8c866e064995e6feb251a5db00282fd2&chksm=841efc1ab369750c01bd1794b30a7f5d3a6033df518f7f5a10cb12b5c2a6b6a8c280b304e345&scene=21#wechat_redirect)文章中的分析方式就保留了ENSEMBL。差异分析后最好把编码蛋白的和ncRNA的区分开。当然，一般也不影响，看自己的分析。
 
 我们先把缺失值删除，然后再将基因排个序。
 
@@ -315,9 +300,7 @@ dlgene <- na.omit(gene)##删除缺失值
 
 ![1608887983588-d0917fe9-8b29-4053-a5f9-16efac084867.png](./img/WA1poQh-JPfnWMhf/1608887983588-d0917fe9-8b29-4053-a5f9-16efac084867-745022.png)
 
-我一开始以为是不是注释包的问题，然后在NCBI包里面审核了一下，发现genen SYMBOL叫TEC的，的确有2个。
-一个是HGNC提供的，叫Official Symbol，关于基因ID的介绍，可以参考文章：[**常用生物信息 ID的介绍**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265423&idx=2&sn=288f3c8acaad8670d35a031cd9794d58&chksm=841efdf2b36974e40e29d906fe4f3a46528ea5a84d17f656ad6119f612059489b9df1416c337&scene=21#wechat_redirect)。
-有时候这些ID的确让人头疼。
+我一开始以为是不是注释包的问题，然后在NCBI包里面审核了一下，发现genen SYMBOL叫TEC的，的确有2个。一个是HGNC提供的，叫Official Symbol，关于基因ID的介绍，可以参考文章：[**常用生物信息 ID的介绍**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265423&idx=2&sn=288f3c8acaad8670d35a031cd9794d58&chksm=841efdf2b36974e40e29d906fe4f3a46528ea5a84d17f656ad6119f612059489b9df1416c337&scene=21#wechat_redirect)。有时候这些ID的确让人头疼。
 
 ![1608887983534-f3b09b29-aee0-4398-b455-1eabdf5d4fb5.png](./img/WA1poQh-JPfnWMhf/1608887983534-f3b09b29-aee0-4398-b455-1eabdf5d4fb5-016582.png)
 
@@ -582,9 +565,7 @@ GSEA(
 )
 ```
 
-参数和上面的差不多，不过这里我们需要制定TERM2GENE这个参数，也就是我们的背景基因集，还记得我们本地是怎么选择的吗？
-我们在文章：[为什么选择GSEA分析？和KEGG和GO分析有什么区别？](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265618&idx=1&sn=3c5365ed2c437d3b7b034431ab4ac934&chksm=841efe2fb3697739ca349e9570aecdb0f4b0b5291c6dad8efcaca4777b631819e2951cdc5840&scene=21#wechat_redirect)介绍了MSigDB数据库中的各种数据集。
-根据自己需要选择，我这里的数据是TCGA数据的数据，我就可以选择自己需要的数据集。
+参数和上面的差不多，不过这里我们需要制定TERM2GENE这个参数，也就是我们的背景基因集，还记得我们本地是怎么选择的吗？我们在文章：[为什么选择GSEA分析？和KEGG和GO分析有什么区别？](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265618&idx=1&sn=3c5365ed2c437d3b7b034431ab4ac934&chksm=841efe2fb3697739ca349e9570aecdb0f4b0b5291c6dad8efcaca4777b631819e2951cdc5840&scene=21#wechat_redirect)介绍了MSigDB数据库中的各种数据集。根据自己需要选择，我这里的数据是TCGA数据的数据，我就可以选择自己需要的数据集。
 
 ![1608887983643-17193a3d-c9be-4b14-8a59-32fcb28850af.png](./img/WA1poQh-JPfnWMhf/1608887983643-17193a3d-c9be-4b14-8a59-32fcb28850af-987535.png)
 

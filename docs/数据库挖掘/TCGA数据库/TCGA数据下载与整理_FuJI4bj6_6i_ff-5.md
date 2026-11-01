@@ -1,11 +1,9 @@
 # TCGA数据下载与整理
 
-# 一. 转录组数据处理
+## 一. 转录组数据处理
 
 前面已经介绍过[miRNA数据下载与整理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264993&idx=1&sn=8681cbce6c7314b6db27ad465434cf18&chksm=841ef39cb3697a8a1a64403e8a03317fbb19693dc547f674cbb9e0110eb4ba613d2713bf7aae&scene=21#wechat_redirect)，[ATAC-Seq数据的下载整理及其可视化](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265040&idx=2&sn=a617872e041cda6a90a7c7fb270e8a09&chksm=841efc6db369757b41989830a159d1e211a4e6f97290dab7dca7ef0151dcd182b4bbf5938bcb&scene=21#wechat_redirect)，本文介绍**RNA-Seq数据的下载与处理。
-**尽管我们前面在[**差异分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264898&idx=1&sn=f6287d98fe0b0fb48a96d2905ca0bb4f&chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&scene=21#wechat_redirect)**【视频地址：**[https://www.bilibili.com/video/BV117411Z7Cq](https://www.bilibili.com/video/BV117411Z7Cq)**】**这一篇文章中介绍了的**RNA-Seq**数据的处理，但对基因并没有详细的分类，就直接进行差异分析了。
-那些基因包括编码蛋白的基因，编码lncRNA和其他非编码蛋白的非编码RNA的基因。
-所以我这里介绍一下，代码也不会像之前那么复杂，移动解压这些步骤完全没有啦。
+**尽管我们前面在[**差异分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264898&idx=1&sn=f6287d98fe0b0fb48a96d2905ca0bb4f&chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&scene=21#wechat_redirect)**【视频地址：**[https://www.bilibili.com/video/BV117411Z7Cq](https://www.bilibili.com/video/BV117411Z7Cq)**】**这一篇文章中介绍了的**RNA-Seq**数据的处理，但对基因并没有详细的分类，就直接进行差异分析了。那些基因包括编码蛋白的基因，编码lncRNA和其他非编码蛋白的非编码RNA的基因。所以我这里介绍一下，代码也不会像之前那么复杂，移动解压这些步骤完全没有啦。
 
 **下面是视频讲解**
 
@@ -13,8 +11,7 @@
 
 [bilibili](https://player.bilibili.com/player.html?bvid=BV1Az4y1R7gJ)
 
-介绍这个处理方式呢，主要是为了后续的教程，如果自己已经会处理的，可以忽略此文章，但有时候我们要进行特殊分析的时候，我们都是要自己写一些代码的，我的教程会不断深入，当能够自己写代码处理数据后，后期也不需要自己写太多代码，直接用一些R包进行处理，自己写一下代码也有一些好处，特别是对于初学者，巩固了[R语言](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264971&idx=1&sn=3f97d49331809b1799a5d4a5019d94d0&chksm=841ef3b6b3697aa016626af76c3d7e80ceb269864362e1a59f2e927d2276a614d1693e00a1d6&scene=21#wechat_redirect)。
-自己了解分析过程中的细节，在深入学习一些分析包的时候，出错自己也知道所以然。
+介绍这个处理方式呢，主要是为了后续的教程，如果自己已经会处理的，可以忽略此文章，但有时候我们要进行特殊分析的时候，我们都是要自己写一些代码的，我的教程会不断深入，当能够自己写代码处理数据后，后期也不需要自己写太多代码，直接用一些R包进行处理，自己写一下代码也有一些好处，特别是对于初学者，巩固了[R语言](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264971&idx=1&sn=3f97d49331809b1799a5d4a5019d94d0&chksm=841ef3b6b3697aa016626af76c3d7e80ceb269864362e1a59f2e927d2276a614d1693e00a1d6&scene=21#wechat_redirect)。自己了解分析过程中的细节，在深入学习一些分析包的时候，出错自己也知道所以然。
 
 ```r
 rm(list = ls())
@@ -217,7 +214,7 @@ for(proj in project){##循环下载HTSeq - FPKM的数据，并装换成TPM
 
 ```
 
-# 二. miRNA的数据下载与整理
+## 二. miRNA的数据下载与整理
 
 本部分内容来自下面文章;
 
@@ -269,8 +266,7 @@ miRNA_ID：miRBase v21数据库中收录的miRNA名称
 
 read_count：miRNA原始reads数，用于表达定量；
 
-reads_per_million_miRNA_mapped：每百万reads中来自于该miRNA的reads数，简称RPM；
-具体可参考文章：[RNA-seq的counts,RPM, RPKM, FPK值到底有什么区别？](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264575&idx=2&sn=69b45012dbfe61d7574446de00ec9a7b&chksm=841ef242b3697b54484a64f82bba4372a8fb2b4d411b1c1fc2bc68d12aa44756f96c3b8e48f5&scene=21#wechat_redirect)
+reads_per_million_miRNA_mapped：每百万reads中来自于该miRNA的reads数，简称RPM；具体可参考文章：[RNA-seq的counts,RPM, RPKM, FPK值到底有什么区别？](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264575&idx=2&sn=69b45012dbfe61d7574446de00ec9a7b&chksm=841ef242b3697b54484a64f82bba4372a8fb2b4d411b1c1fc2bc68d12aa44756f96c3b8e48f5&scene=21#wechat_redirect)
 
 cross-mapped：miRNA是否比对到多个位置；
 
@@ -318,8 +314,7 @@ for(i in 1:length(jsonFile)){
 rownames(filesNameToBarcode) <- filesNameToBarcode[,1]
 
 ###-----2.读入miRNA数据-----------
-#注意解压后的文件地址。
-filepath <- dir(path ="./COAD-miRNAData",pattern=".mirnas.quantification.txt$",full.names = TRUE,recursive = T)
+#注意解压后的文件地址。filepath <- dir(path ="./COAD-miRNAData",pattern=".mirnas.quantification.txt$",full.names = TRUE,recursive = T)
 counts <- data.frame()
 rpm <- data.frame()
 for(wd in filepath){
@@ -396,10 +391,7 @@ save(miRNAdata,file = "miRNAdata.Rdata")
 
 ![1615612633295-e5f59044-4382-499c-900d-69a17e2f3a4f.png](./img/FuJI4bj6_6i_ff-5/1615612633295-e5f59044-4382-499c-900d-69a17e2f3a4f-072894.png)
 
-下载后的数据处理方式和前面文章差不多。
-下载后的数据，我们打开单个文件看一下，比miRNA Expression Quantification数据多了2列。
-在miRNA_region列中就有是否成熟的信息。
-我们可以参考前面的文章【[miRNA注释包:miRBaseVersions.db](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651275464&idx=1&sn=ec20ca96dcaf40f7380253fa038bb696&chksm=841ea4b5b3692da363095e21fbd2daa962af0568fe8f13ca46b6aff632c0facc85b1634bbbf6&scene=21#wechat_redirect)】进行转换为我们常用的名称，比如：hsa-let-7a-5p。
+下载后的数据处理方式和前面文章差不多。下载后的数据，我们打开单个文件看一下，比miRNA Expression Quantification数据多了2列。在miRNA_region列中就有是否成熟的信息。我们可以参考前面的文章【[miRNA注释包:miRBaseVersions.db](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651275464&idx=1&sn=ec20ca96dcaf40f7380253fa038bb696&chksm=841ea4b5b3692da363095e21fbd2daa962af0568fe8f13ca46b6aff632c0facc85b1634bbbf6&scene=21#wechat_redirect)】进行转换为我们常用的名称，比如：hsa-let-7a-5p。
 
 ![1615612633322-e3f2fe61-df0e-4d25-96c2-975cfbcea717.png](./img/FuJI4bj6_6i_ff-5/1615612633322-e3f2fe61-df0e-4d25-96c2-975cfbcea717-096586.png)
 
@@ -519,11 +511,7 @@ rpm["hsa-let-7a-1",filesNameToBarcode[filename,2]]%>%as.numeric()
 
 这里的值就是一样的。也就是说，我们通过miRNA Expression Quantification数据得到的是miRNA前体的数据。一个miRNA前体可能有多个成熟体，一个成熟体可能来自多个前体。
 
-当然，还有其他处理方式，比如利用TCGAbiolinks包，关于TCGAbiolinks包我在很久前的一篇文章【[TCGA数据挖掘（一）：TCGAbiolinks包介绍](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263886&idx=1&sn=1c433a1b2144328a52c0d2d8af5c35ff&chksm=841ef7f3b3697ee5a7190693b0786633e618f7dc29612f3bd014d0be33bc4f92edb6a9d248cf&scene=21#wechat_redirect)】中有介绍，同时，也有差异分析的教程【[TCGAbiolinks包下载TCGA数据进行表达差异分析-乳腺癌案例](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263344&idx=1&sn=add608d265600768d3f25ee30dc4365a&chksm=841ef50db3697c1b1752d19a2a875aed07c9c19b388a8f1b4da4f05e938de0ef9487fb868f09&scene=21#wechat_redirect)】，但是现在这个包下载数据是真的感人，完全看GDC的心情，而且下载很慢，所以我是自己下载数据处理，我也发了自己下载提取数据进行差异分析的文章【[一文就会TCGA数据库基因表达差异分析](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264898&idx=1&sn=f6287d98fe0b0fb48a96d2905ca0bb4f&chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&scene=21#wechat_redirect)】，当然还有GDCRNATools包【[TCGA数据库：GDCRNATools包下载数据、处理数据以及差异分析](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265127&idx=2&sn=8c866e064995e6feb251a5db00282fd2&chksm=841efc1ab369750c01bd1794b30a7f5d3a6033df518f7f5a10cb12b5c2a6b6a8c280b304e345&scene=21#wechat_redirect)】。
-这个包下载数据的时候有时候也会挂，开VPN有时候可以解决。
-但我们可以自己下载数据后用该包的函数提取数据。
-如果你想偷懒，那么你可以在一些数据库中直接下载，比如：GDAC Firehose数据库，以及UCSC数据库【[UCSC数据库下载TCGA数据需要注意的细节](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273247&idx=1&sn=008928dbfc6c6976d53369cd20c26f87&chksm=841edc62b3695574739a6db6af267b279808c9ea82e9947a461da2e3bf02a8db215204cf65e9&scene=21#wechat_redirect)】，但从UCSC下载的数据和我们前面处理的一样，是miRNA Expression Quantification的数据，而不是Isoform Expression Quantification。
-当然还是TCGAbiolinks包好用。
+当然，还有其他处理方式，比如利用TCGAbiolinks包，关于TCGAbiolinks包我在很久前的一篇文章【[TCGA数据挖掘（一）：TCGAbiolinks包介绍](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263886&idx=1&sn=1c433a1b2144328a52c0d2d8af5c35ff&chksm=841ef7f3b3697ee5a7190693b0786633e618f7dc29612f3bd014d0be33bc4f92edb6a9d248cf&scene=21#wechat_redirect)】中有介绍，同时，也有差异分析的教程【[TCGAbiolinks包下载TCGA数据进行表达差异分析-乳腺癌案例](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263344&idx=1&sn=add608d265600768d3f25ee30dc4365a&chksm=841ef50db3697c1b1752d19a2a875aed07c9c19b388a8f1b4da4f05e938de0ef9487fb868f09&scene=21#wechat_redirect)】，但是现在这个包下载数据是真的感人，完全看GDC的心情，而且下载很慢，所以我是自己下载数据处理，我也发了自己下载提取数据进行差异分析的文章【[一文就会TCGA数据库基因表达差异分析](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264898&idx=1&sn=f6287d98fe0b0fb48a96d2905ca0bb4f&chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&scene=21#wechat_redirect)】，当然还有GDCRNATools包【[TCGA数据库：GDCRNATools包下载数据、处理数据以及差异分析](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265127&idx=2&sn=8c866e064995e6feb251a5db00282fd2&chksm=841efc1ab369750c01bd1794b30a7f5d3a6033df518f7f5a10cb12b5c2a6b6a8c280b304e345&scene=21#wechat_redirect)】。这个包下载数据的时候有时候也会挂，开VPN有时候可以解决。但我们可以自己下载数据后用该包的函数提取数据。如果你想偷懒，那么你可以在一些数据库中直接下载，比如：GDAC Firehose数据库，以及UCSC数据库【[UCSC数据库下载TCGA数据需要注意的细节](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273247&idx=1&sn=008928dbfc6c6976d53369cd20c26f87&chksm=841edc62b3695574739a6db6af267b279808c9ea82e9947a461da2e3bf02a8db215204cf65e9&scene=21#wechat_redirect)】，但从UCSC下载的数据和我们前面处理的一样，是miRNA Expression Quantification的数据，而不是Isoform Expression Quantification。当然还是TCGAbiolinks包好用。
 
 最后说明，上面我只是读入一个样本的数据来进行讲解，你可以写一个循环，把所有文件遍历读入，处理合并就行，和前文【[TCGA数据库：miRNA数据下载与整理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264993&idx=1&sn=8681cbce6c7314b6db27ad465434cf18&chksm=841ef39cb3697a8a1a64403e8a03317fbb19693dc547f674cbb9e0110eb4ba613d2713bf7aae&scene=21#wechat_redirect)】介绍的差不多，那样我们会得到如下这样的数据。
 
@@ -641,8 +629,7 @@ metaMatrix.MIR <- gdcParseMetadata(project.id = "TCGA-COAD",
                                    write.meta = FALSE)
 ### 过滤RNAseq元数据中的重复样本
 metaMatrix.MIR <- gdcFilterDuplicate(metaMatrix.MIR)
-##得到的数据中sample_type列就是样本是原发位肿瘤还是正常组织的信息。
-head(metaMatrix.MIR$sample_type)
+##得到的数据中sample_type列就是样本是原发位肿瘤还是正常组织的信息。head(metaMatrix.MIR$sample_type)
 ##entity_submitter_id列就是完整的barcode，你可以根据这个对应关系区分
 head(metaMatrix.MIR$entity_submitter_id)
 ##取共同的barcode
@@ -658,12 +645,9 @@ head(colnames(mirCount))
 save(countExp,RPMExp,metaMatrix.MIR,file = "TCGA-COAD-miR-GDCRNATools.Rdata")
 ```
 
-# 三. 临床数据的下载与整理
+## 三. 临床数据的下载与整理
 
-关于TCGA的数据下载与整理，我之前已经发布了：[TCGA数据库：miRNA数据下载与整理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264993&idx=1&sn=8681cbce6c7314b6db27ad465434cf18&chksm=841ef39cb3697a8a1a64403e8a03317fbb19693dc547f674cbb9e0110eb4ba613d2713bf7aae&scene=21#wechat_redirect)[、ATAC-Seq数据的下载整理及其可视化](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265040&idx=2&sn=a617872e041cda6a90a7c7fb270e8a09&chksm=841efc6db369757b41989830a159d1e211a4e6f97290dab7dca7ef0151dcd182b4bbf5938bcb&scene=21#wechat_redirect)、[、RNA-Seq数据的下载与处理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265067&idx=1&sn=39c75f795ad560540e2309569a68c718&chksm=841efc56b3697540fc2443869d615ea48acd5e7c11f6ed5f910963bcb0dda613bdb69ef0da72&scene=21#wechat_redirect)，这里我介绍临床数据的下载与整理。
-本文是在之前的文章：[一文解决TCGA数据库临床数据下载与整理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264504&idx=1&sn=634bd925786a3193977342634b03acc3&chksm=841ef185b369789346bfbfbc315b9976bd14b9e25ed365c26522469e1ee102212c4b005bfb86&scene=21#wechat_redirect)的基础上在进一步处理，得到我们可以结合其他数据的进行分析的结果，**我的计划是，先把所有的数据下载整理介绍结束后，再进行后续的分析教程，因为很多分析都是很类似的，也没有必要单独的又弄一次，所以近期的文章都是数据的下载与处理。
-如果自己看代码就能看的懂，就参考文章：**[**一个R脚本解决某类功能基因(比如m6A甲基化)临床预后模型分析流程**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264561&idx=1&sn=9803278a0720ef02119f91841df44b70&chksm=841ef24cb3697b5ac4c1760012b0a48739a888130cc4c53e0909ff29a137f2c9c434b870ac58&scene=21#wechat_redirect)**和**[**肿瘤免疫细胞浸润与临床相关性分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264605&idx=1&sn=4c00f321b50a7a74d2842ed7cf097f7e&chksm=841ef220b3697b36b15486349d609b47dc2dbe21410a9cbad9071b15a6b4d40f671c62a2dcc4&scene=21#wechat_redirect)**，这也是我目前提供的分析的代码。
-但好像没有讲解，很多人是不懂的，特别是连R语言都不熟悉的同学，所以自己掂量一下，不行就一步一步走吧，希望我这个菜鸟也能教给别人一些目前网上找不到的基础教程。
+关于TCGA的数据下载与整理，我之前已经发布了：[TCGA数据库：miRNA数据下载与整理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264993&idx=1&sn=8681cbce6c7314b6db27ad465434cf18&chksm=841ef39cb3697a8a1a64403e8a03317fbb19693dc547f674cbb9e0110eb4ba613d2713bf7aae&scene=21#wechat_redirect)[、ATAC-Seq数据的下载整理及其可视化](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265040&idx=2&sn=a617872e041cda6a90a7c7fb270e8a09&chksm=841efc6db369757b41989830a159d1e211a4e6f97290dab7dca7ef0151dcd182b4bbf5938bcb&scene=21#wechat_redirect)、[、RNA-Seq数据的下载与处理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265067&idx=1&sn=39c75f795ad560540e2309569a68c718&chksm=841efc56b3697540fc2443869d615ea48acd5e7c11f6ed5f910963bcb0dda613bdb69ef0da72&scene=21#wechat_redirect)，这里我介绍临床数据的下载与整理。本文是在之前的文章：[一文解决TCGA数据库临床数据下载与整理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264504&idx=1&sn=634bd925786a3193977342634b03acc3&chksm=841ef185b369789346bfbfbc315b9976bd14b9e25ed365c26522469e1ee102212c4b005bfb86&scene=21#wechat_redirect)的基础上在进一步处理，得到我们可以结合其他数据的进行分析的结果，**我的计划是，先把所有的数据下载整理介绍结束后，再进行后续的分析教程，因为很多分析都是很类似的，也没有必要单独的又弄一次，所以近期的文章都是数据的下载与处理。如果自己看代码就能看的懂，就参考文章：**[**一个R脚本解决某类功能基因(比如m6A甲基化)临床预后模型分析流程**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264561&idx=1&sn=9803278a0720ef02119f91841df44b70&chksm=841ef24cb3697b5ac4c1760012b0a48739a888130cc4c53e0909ff29a137f2c9c434b870ac58&scene=21#wechat_redirect)**和**[**肿瘤免疫细胞浸润与临床相关性分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264605&idx=1&sn=4c00f321b50a7a74d2842ed7cf097f7e&chksm=841ef220b3697b36b15486349d609b47dc2dbe21410a9cbad9071b15a6b4d40f671c62a2dcc4&scene=21#wechat_redirect)**，这也是我目前提供的分析的代码。但好像没有讲解，很多人是不懂的，特别是连R语言都不熟悉的同学，所以自己掂量一下，不行就一步一步走吧，希望我这个菜鸟也能教给别人一些目前网上找不到的基础教程。
 **
 
 [bilibili](https://player.bilibili.com/player.html?bvid=BV12p4y1D7cQ)
@@ -778,8 +762,8 @@ clin4 <- clin3
 clin4$vitalStatus <- clin4$vitalStatus <- ifelse(clin4$vitalStatus == "Alive",0,1)
 ```
 
-# 四.SNP的数据下载与整理
-## 1.背景知识
+## 四.SNP的数据下载与整理
+### 1.背景知识
 
 单核苷酸多态性主要是指在基因组水平上由单个核苷酸的变异所引起的DNA序列多态性。它是人类可遗传的变异中最常见的一种，占所有已知多态性的90%以上。SNP在人类基因组中广泛存在，平均每300个碱基对中就有1个，估计其总数可达300万个甚至更多。SNP是一种二态的标记，由单个碱基的转换或颠换所引起，也可由碱基的插入或缺失所致。SNP既可能在基因序列内，也可能在基因以外的非编码序列上。
 
@@ -793,7 +777,7 @@ SNP所表现的多态性只涉及到单个碱基的变异，这种变异可由�
 
 先形成的SNP在人群中常有更高的频率，后形成的SNP所占的比率较低。各地各民族人群中特定SNP并非一定都存在，其所占比率也不尽相同，但大约有85%应是共通的。****
 
-## 2.数据下载
+### 2.数据下载
 
 这里下载方式采用网页筛选下载的方法，具体和之前的文章筛选条件一样。
 
@@ -821,7 +805,7 @@ SNP所表现的多态性只涉及到单个碱基的变异，这种变异可由�
 
 ![1612871276548-73b50156-1f91-435b-9888-6175e2964456.png](./img/FuJI4bj6_6i_ff-5/1612871276548-73b50156-1f91-435b-9888-6175e2964456-517664.png)
 
-## 3.数据的整理
+### 3.数据的整理
 
 **（1）.设置工作路径**
 
@@ -896,16 +880,14 @@ tp53 = genesToBarcodes(laml, genes = "TP53")[[1]]
 下面这些函数，运行一下就知道是什么意思啦。
 
 ```plain
-#使用等位基因频率或按突变状态创建基因型矩阵。
-KRAS = genotypeMatrix(maf = laml, genes = "KRAS")
+#使用等位基因频率或按突变状态创建基因型矩阵。KRAS = genotypeMatrix(maf = laml, genes = "KRAS")
 # 从MAF对象中提取注释,其实就是Barcode
 Clin = getClinicalData(laml)
 #其实就是lama对象中data的列名
 colNM = getFields(laml)
 ##
 mafCompare(laml,laml)
-###总结基因和样本，不考虑改变的类型。
-mafs <- mafSummary(laml)
+###总结基因和样本，不考虑改变的类型。mafs <- mafSummary(laml)
 #基因突变数据摘要
 lamaGene = getGeneSummary(laml)
 #样本突变数据摘要
@@ -951,9 +933,7 @@ rsdata <- rsdata[,-1] #0代表野生型，其他数字代表有突变
 
 ![1612871277392-e0c5994c-a6f1-464c-ad7b-dc8c45ba9bf9.png](./img/FuJI4bj6_6i_ff-5/1612871277392-e0c5994c-a6f1-464c-ad7b-dc8c45ba9bf9-493215.png)
 
-得到这样的数据后，我们就可以进行后续的分析，比如结合[临床数据](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265078&idx=1&sn=1d6e6365a19762d18005380d56dc623b&chksm=841efc4bb369755d0cf25ac9f4cbde3fbec5bb6141eab39c0920eb560cf04273bcbd0c6f9375&scene=21#wechat_redirect)的分析。
-也可以结合[RNA-Seq](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265067&idx=1&sn=39c75f795ad560540e2309569a68c718&chksm=841efc56b3697540fc2443869d615ea48acd5e7c11f6ed5f910963bcb0dda613bdb69ef0da72&scene=21#wechat_redirect)进行分析等。
-后续再慢慢介绍吧。
+得到这样的数据后，我们就可以进行后续的分析，比如结合[临床数据](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265078&idx=1&sn=1d6e6365a19762d18005380d56dc623b&chksm=841efc4bb369755d0cf25ac9f4cbde3fbec5bb6141eab39c0920eb560cf04273bcbd0c6f9375&scene=21#wechat_redirect)的分析。也可以结合[RNA-Seq](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265067&idx=1&sn=39c75f795ad560540e2309569a68c718&chksm=841efc56b3697540fc2443869d615ea48acd5e7c11f6ed5f910963bcb0dda613bdb69ef0da72&scene=21#wechat_redirect)进行分析等。后续再慢慢介绍吧。
 
 ---
 
@@ -967,19 +947,14 @@ rsdata <- rsdata[,-1] #0代表野生型，其他数字代表有突变
 
 如果码失效，后台回复：DL-SNP
 
-# 五.ATAC-Seq数据的下载整理
-## 1. 背景知识
+## 五.ATAC-Seq数据的下载整理
+### 1. 背景知识
 
 每一条染色单体由单个线性DNA分子组成。细胞核中的DNA是经过高度有序的包装，否则就是一团乱麻，不利于DNA复制和表达调控。这种有序的状态才能保证基因组的复制和表达调控能准确和高效进行。
 
 包装分为多个水平，核小体核心颗粒(nucleosome core particle)、染色小体(chromatosome)、 30 nm水平染色质纤丝(30 nm fibre)和高于30 nm水平的染色体包装。在细胞周期的不同时期，DNA的浓缩程度不同，间期表现为染色质具有转录活性，而中期染色体是转录惰性。细胞主要处于分裂间期，所以DNA大部分时间都是染色质而不是染色体，只不过大家喜欢用染色体泛指染色质和染色体。
 
-很久之前大家喜欢研究中期的染色体，原因是光学显微镜只能看的到这种高度浓缩状态的DNA结构。
-不过中期染色体在转录上是惰性的，没有研究间期染色体的意义大。
-后来技术发展了，大家就开始通过荧光蛋白标记技术以及显微镜技术研究间期染色质的三维结构和动态。
-比如说，间期染色体其实并非随机地弥漫在细胞核中，不同的染色体占据相对独立的空间，染色体在细胞核所占的空间称之为染色体领地(chromosome territory, CT)。
-研究发现，贫基因(gene-porr)的染色体领域一般倾向于靠近核膜，而富含基因(gene-rich)的染色体领地通常位于细胞核内部。
-这也反应了人类社会的情况，富人处于核心区，穷人在边缘地带。
+很久之前大家喜欢研究中期的染色体，原因是光学显微镜只能看的到这种高度浓缩状态的DNA结构。不过中期染色体在转录上是惰性的，没有研究间期染色体的意义大。后来技术发展了，大家就开始通过荧光蛋白标记技术以及显微镜技术研究间期染色质的三维结构和动态。比如说，间期染色体其实并非随机地弥漫在细胞核中，不同的染色体占据相对独立的空间，染色体在细胞核所占的空间称之为染色体领地(chromosome territory, CT)。研究发现，贫基因(gene-porr)的染色体领域一般倾向于靠近核膜，而富含基因(gene-rich)的染色体领地通常位于细胞核内部。这也反应了人类社会的情况，富人处于核心区，穷人在边缘地带。
 
 除了染色体细胞核内的三维结构外，还需要谈谈和转录调控相关的染色质的核小体。用内切核糖酶--微球菌核酸酶(micrococcal nuclease, MNase, MN酶)处理染色质可以得到单个核小体。核小体是染色质的基本结构，由DNA、蛋白质和RNA组成的一种致密结构。组蛋白是由2个H3-H4二聚体，2个H2A-H2B二聚体形成的八聚体，直径约为10 nm， 组蛋白八聚体和DNA结合在一起形成的核心颗粒包含146bp DNA。DNA暴露在核小体表面使得其能被特定的核酸酶接近并切割。
 
@@ -997,16 +972,13 @@ MNase：能切割出单个核小体, DNase能识别超敏位点，ATAC-Seq所需
 
 背景知识，来自网络资料总结。
 
-## 2.数据下载
+### 2.数据下载
 
 数据下载地址：
 
 [<u>https://gdc.cancer.gov/about-data/publications/ATACseq-AWG</u>](https://gdc.cancer.gov/about-data/publications/ATACseq-AWG)
 
-我们从TCGA官网下载ATAC-seq数据，下载界面如下。
-我们可以选择红色部分，可以下载raw count，也可以下载normalize count。
-下载了数据的话，我们就可以得到每个肿瘤的ATAC数据矩阵。
-原始数据下载比较麻烦，需要申请，而且分析也比较麻烦，需要Linux系统，我们这里下载标准化后的数据，同时，也要下载Lookup table for various TCGA sample identifiers文件，这个用于样本名称的转换。
+我们从TCGA官网下载ATAC-seq数据，下载界面如下。我们可以选择红色部分，可以下载raw count，也可以下载normalize count。下载了数据的话，我们就可以得到每个肿瘤的ATAC数据矩阵。原始数据下载比较麻烦，需要申请，而且分析也比较麻烦，需要Linux系统，我们这里下载标准化后的数据，同时，也要下载Lookup table for various TCGA sample identifiers文件，这个用于样本名称的转换。
 ![1612871800512-bdf5f483-47a6-4aef-82aa-2264d8ac57bf.png](./img/FuJI4bj6_6i_ff-5/1612871800512-bdf5f483-47a6-4aef-82aa-2264d8ac57bf-960960.png)
 
 下载后的数据压缩包解压后，就可以得到各种癌症ATAC的数据。
@@ -1043,7 +1015,7 @@ bam_prefix栏是ATAC-Seq样本中，样品的名称，Case_ID就是TCGA病人的
 
 ![1612871800606-309bee0c-1b5e-4553-bee3-c17ce7a326bc.png](./img/FuJI4bj6_6i_ff-5/1612871800606-309bee0c-1b5e-4553-bee3-c17ce7a326bc-783063.png)
 
-## 3.数据的整理
+### 3.数据的整理
 ```plain
 rm(list = ls())
 options(stringsAsFactors = F)
@@ -1071,7 +1043,7 @@ ATAC_COAD_data <- list(peakData=peakData,peak=peak,peakMatrix=peakMatrix)
 save(ATAC_COAD_data,file = "ATAC_COAD_data.Rdata")
 ```
 
-## 4.可视化
+### 4.可视化
 
 **(1).覆盖度图**
 

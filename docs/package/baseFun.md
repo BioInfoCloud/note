@@ -28,13 +28,7 @@ geneset是一个向量，向量的每一个值应该是一个基因名称，也�
 
 ### 3.整理gmt文件
 
-tidy.gmt()用于统计或者合并多个gtf文件。
-filepath是文件路径，不用指定到具体文件，函数会自动匹配文件夹下所有以".gmt"格式结尾的文件，当然，filepath也可以是一个包括多个gmt格式文件完整路径的向量，比如：`c("./gs1.gmt","/home/user/data/gs2.gmt","/home/user/geneset/gs3.gmt")`；
-fun的值是"stat" 或 "merge"中的一个，"stat"表示统计每个gmt文件中的基因个数，并输入一个csv文件，"merge"就是合并多个基因集，会返回一个数据框（不做统计，相当于函数`clusterProfiler::read.gmt()`的读入结果），同时输出一个gmt格式文件，无论那个，都会输出一个.unique.txt的文件以记录所有基因集中的文件；
-termName用于指定当fun = "stat" 时，所有基因集的统一名称，相当于列名，默认NULL（输入的列名是trem）；
-Source是所有基因集的来源，默认""，长度应该为1；
-filename可以不指定文件后缀名，指定后缀名，输出也会根据fun的不同而添加相应的后缀名。
-addTotal的值为TRUE或FALSE，只有fun = "merge"时被使用，表示是否将所有基因集合并作为一个新的基因，相当于在输出的gmt文件中多了一行，此时作为基因集的名称由termName指定，如果termName为NULL，那么新组合的基因集名称为Total gene。
+tidy.gmt()用于统计或者合并多个gtf文件。filepath是文件路径，不用指定到具体文件，函数会自动匹配文件夹下所有以".gmt"格式结尾的文件，当然，filepath也可以是一个包括多个gmt格式文件完整路径的向量，比如：`c("./gs1.gmt","/home/user/data/gs2.gmt","/home/user/geneset/gs3.gmt")`；fun的值是"stat" 或 "merge"中的一个，"stat"表示统计每个gmt文件中的基因个数，并输入一个csv文件，"merge"就是合并多个基因集，会返回一个数据框（不做统计，相当于函数`clusterProfiler::read.gmt()`的读入结果），同时输出一个gmt格式文件，无论那个，都会输出一个.unique.txt的文件以记录所有基因集中的文件；termName用于指定当fun = "stat" 时，所有基因集的统一名称，相当于列名，默认NULL（输入的列名是trem）；Source是所有基因集的来源，默认""，长度应该为1；filename可以不指定文件后缀名，指定后缀名，输出也会根据fun的不同而添加相应的后缀名。addTotal的值为TRUE或FALSE，只有fun = "merge"时被使用，表示是否将所有基因集合并作为一个新的基因，相当于在输出的gmt文件中多了一行，此时作为基因集的名称由termName指定，如果termName为NULL，那么新组合的基因集名称为Total gene。
 
 ```R
 filepath <- "G:/publicData/base_files/GeneSet/Cytoskeleton/"

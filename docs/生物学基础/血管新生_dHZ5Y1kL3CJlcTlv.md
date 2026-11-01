@@ -14,12 +14,7 @@ VEGF 受体(VEGFR )属于酪氨酸激酶受体， 目前发现 3 个 VEGFR 受�
 
 血管新生抑制因子的主要作用是抑制血管新生过程。常见的血管新生抑制因子主要有：Arresten、 Endostatin、 Angiostatin 和 MMP。
 
-VEGF 主要通过下游 PLCγ1 通路、 MAPK 通路和 PI3K-AKT 通路， 促进内皮细胞增殖和存活。
-研究发现 VEGF 和它的受体 VEGFR 结合后，通过 PLCγ1 激活下游 PKC（protein kinaseC， 蛋白激酶 C） 促进了血管内皮细胞的增殖。
- 除了 PLCγ1 之外， VEGF 下游还可以激活Ras-Raf-MEK-ERK 通路， 最终通过 ERK 促进血管内皮细胞的增殖。
- 另外， VEGF 下游通过PI3K/AKT 通路促进内皮细胞增殖和存活， 这也已成为 VEGF 下游的经典信号通路。
- 研究显示 VEGF 通过下游 PI3K-AKT 的信号级联放大， 通过 BAD 途径抑制细胞凋亡；
- 同时又通过mTORC2 和 FOXO1 促进内皮细胞的增殖和血管新生。
+VEGF 主要通过下游 PLCγ1 通路、 MAPK 通路和 PI3K-AKT 通路， 促进内皮细胞增殖和存活。研究发现 VEGF 和它的受体 VEGFR 结合后，通过 PLCγ1 激活下游 PKC（protein kinaseC， 蛋白激酶 C） 促进了血管内皮细胞的增殖。 除了 PLCγ1 之外， VEGF 下游还可以激活Ras-Raf-MEK-ERK 通路， 最终通过 ERK 促进血管内皮细胞的增殖。 另外， VEGF 下游通过PI3K/AKT 通路促进内皮细胞增殖和存活， 这也已成为 VEGF 下游的经典信号通路。 研究显示 VEGF 通过下游 PI3K-AKT 的信号级联放大， 通过 BAD 途径抑制细胞凋亡； 同时又通过mTORC2 和 FOXO1 促进内皮细胞的增殖和血管新生。
 
 ![1604930430738-8a4589c1-7a12-4ed9-927a-8997acf474c2.png](./img/dHZ5Y1kL3CJlcTlv/1604930430738-8a4589c1-7a12-4ed9-927a-8997acf474c2-780692.png)
 

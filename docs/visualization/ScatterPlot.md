@@ -135,23 +135,17 @@ diabetesTib <- as.data.frame(diabetes)
 summary(diabetesTib)
 head(diabetesTib)
 
-#scale. = TRUE表示分析前对数据进行归一化；
-com1 <- prcomp(diabetesTib[,2:4], center = TRUE,scale. = TRUE)
-#提取PC score；
-df1<-com1$x
-#将iris数据集的第5列数据合并进来；
-df1 <- data.frame(df1,diabetesTib$class)
+#scale. = TRUE表示分析前对数据进行归一化；com1 <- prcomp(diabetesTib[,2:4], center = TRUE,scale. = TRUE)
+#提取PC score；df1<-com1$x
+#将iris数据集的第5列数据合并进来；df1 <- data.frame(df1,diabetesTib$class)
 head(df1)
 
-#提取主成分的方差贡献率，生成坐标轴标题；
-summ<-summary(com1)
+#提取主成分的方差贡献率，生成坐标轴标题；summ<-summary(com1)
 xlab<-paste0("PC1(",round(summ$importance[2,1]*100,2),"%)")
 ylab<-paste0("PC2(",round(summ$importance[2,2]*100,2),"%)")
-#计算质心，也就是“中心点”，centroid (average) position for each group；
-centroid <- aggregate(df1[,1:3],by=list(diabetesTib$class), FUN = mean)
+#计算质心，也就是“中心点”，centroid (average) position for each group；centroid <- aggregate(df1[,1:3],by=list(diabetesTib$class), FUN = mean)
 centroid
-#合并两个数据框；
-data <- merge(df1, centroid,
+#合并两个数据框；data <- merge(df1, centroid,
                 by.x = "diabetesTib.class",
                 by.y ="Group.1",
                 all.x = T,

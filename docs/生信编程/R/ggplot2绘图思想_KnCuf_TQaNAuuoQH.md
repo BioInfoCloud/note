@@ -1,6 +1,6 @@
 # ggplot2绘图思想
 
-# 一.R绘图系统
+## 一.R绘图系统
 
 在 R 里，主要有两大底层图形系统，一是 base 图形系统，二是 grid 图形系统。 lattice 包与 ggplot2包正是基于 grid 图形系统构建的，它们都有自己独特的图形语法。
 
@@ -10,27 +10,13 @@ install.packages("ggsci")
 install.packages("esquisse")
 ```
 
-在 R 里，主要有两大底层图形系统，一是 base 图形系统，二是 grid 图形系统。
- lattice 包与 ggplot2包正是基于 grid 图形系统构建的，它们都有自己独特的图形语法。
-grid 图形系统可以很容易地控制图形基础单元，给予编程者创作图形极大的灵活性。
- grid 图形系统还可以产生可编辑的图形组件，这些图形组件可以被复用和重组，并能通过 grid.layout()等函数，把图形输出到指定的位置上。
-但是因为 grid 包中没有提供生成统计图形及完整绘图的函数，因此很少直接采用 grid 包来分析与展示数据。
-lattice 包通过一维、二维或三维条件绘图，即所谓的栅栏（trellis）图来对多元变量关系进行直
+在 R 里，主要有两大底层图形系统，一是 base 图形系统，二是 grid 图形系统。 lattice 包与 ggplot2包正是基于 grid 图形系统构建的，它们都有自己独特的图形语法。grid 图形系统可以很容易地控制图形基础单元，给予编程者创作图形极大的灵活性。 grid 图形系统还可以产生可编辑的图形组件，这些图形组件可以被复用和重组，并能通过 grid.layout()等函数，把图形输出到指定的位置上。但是因为 grid 包中没有提供生成统计图形及完整绘图的函数，因此很少直接采用 grid 包来分析与展示数据。lattice 包通过一维、二维或三维条件绘图，即所谓的栅栏（trellis）图来对多元变量关系进行直
 
-观展示。
- 相比于 base()函数是直接在图形设备上绘图的，lattice()函数是返回 trellis 对象。
-在命令执行的时候，栅栏图会被自动打印，所以看起来就像是 lattice()函数直接完成了绘图。
- 更多关于 base、grid 和 lattice 的语法可以参考 Murrell 和 Paul 所撰写的书籍 R graphics。
-ggplot2 包则基于一种全面的图形语法，提供了一种全新的图形创建方式，这套图形语法把绘图过程归纳为数据（data）、转换（transformation）、 度量（scale）、 坐标系（coordinate）、元素（element）、指引（guide）、显示（display）等一系列独立的步骤，通过将这些步骤搭配组合，来实现个性化的统计绘图。
-于是，得益于该图形语法，Hadley Wickham 所开发的 ggplot2 包是如此人性化，不同于 R base基础绘图和先前的 lattice 包那样参数繁多，而是摈弃了诸多烦琐细节，并以人性化的思维进行高质量作图。
-在 ggplot2 包中，加号（+）的引入是革命性的，这个神奇的符号完成了一系列图形语法叠加。
- 更多 ggplot2 的使用与学习可以参考两本关于 ggplot2 的经典书籍：ggplot2 Elegant Graphicsfor Data Analysis 和 R Graphics Cookbook。
-R 语言基础安装中就包含 base、 grid 和 lattice 三个包，无须另外下载。
-但是除了 base 包，其他包依旧需要使用 library()函数加载后，才能被使用。
+观展示。 相比于 base()函数是直接在图形设备上绘图的，lattice()函数是返回 trellis 对象。在命令执行的时候，栅栏图会被自动打印，所以看起来就像是 lattice()函数直接完成了绘图。 更多关于 base、grid 和 lattice 的语法可以参考 Murrell 和 Paul 所撰写的书籍 R graphics。ggplot2 包则基于一种全面的图形语法，提供了一种全新的图形创建方式，这套图形语法把绘图过程归纳为数据（data）、转换（transformation）、 度量（scale）、 坐标系（coordinate）、元素（element）、指引（guide）、显示（display）等一系列独立的步骤，通过将这些步骤搭配组合，来实现个性化的统计绘图。于是，得益于该图形语法，Hadley Wickham 所开发的 ggplot2 包是如此人性化，不同于 R base基础绘图和先前的 lattice 包那样参数繁多，而是摈弃了诸多烦琐细节，并以人性化的思维进行高质量作图。在 ggplot2 包中，加号（+）的引入是革命性的，这个神奇的符号完成了一系列图形语法叠加。 更多 ggplot2 的使用与学习可以参考两本关于 ggplot2 的经典书籍：ggplot2 Elegant Graphicsfor Data Analysis 和 R Graphics Cookbook。R 语言基础安装中就包含 base、 grid 和 lattice 三个包，无须另外下载。但是除了 base 包，其他包依旧需要使用 library()函数加载后，才能被使用。
 
 ![1609075535563-69eabc81-7427-490d-b75e-80d3235eb734.png](./img/KnCuf_TQaNAuuoQH/1609075535563-69eabc81-7427-490d-b75e-80d3235eb734-213095.png)
 
-## **1.base系统**
+### **1.base系统**
 
 • 由Ross Ihaka编写
 
@@ -60,11 +46,11 @@ abline(h=1,v=1,col="red")
 
 ![1609075535535-0e68c3f8-ab71-4ab4-bd77-253a00d1a2c2.png](./img/KnCuf_TQaNAuuoQH/1609075535535-0e68c3f8-ab71-4ab4-bd77-253a00d1a2c2-345249.png)
 
-## **2.grid系统**
+### **2.grid系统**
 
 grid 图形系统可以很容易地控制图形基础单元，由Paul Murrell（2006）编写，给予编程者创作图形极大的灵活性。 grid 图形系统还可以产生可编辑的图形组件，这些图形组件可以被复用和重组，并能通过 grid.layout()等函数，把图形输出到指定的位置上。但是因为 grid 包中没有提供生成统计图形及完整绘图的函数，因此很少直接采用 grid 包来分析与展示数据。
 
-## **3.lattice系统**
+### **3.lattice系统**
 
 lattice 包通过一维、二维或三维条件绘图，即所谓的栅栏（trellis）图来对多元变量关系进行直观展示。 相比于 base()函数是直接在图形设备上绘图的，lattice()函数是返回 trellis 对象。在命令执行的时候，栅栏图会被自动打印，所以看起来就像是 lattice()函数直接完成了绘图。 更多关于 base、grid 和 lattice 的语法可以参考 Murrell 和 Paul 所撰写的书籍 R graphics。
 
@@ -86,7 +72,7 @@ histogram(~z,df,type = "count")
 
 ![1609075535589-9f18788b-5301-4318-8bb4-0b576f120235.png](./img/KnCuf_TQaNAuuoQH/1609075535589-9f18788b-5301-4318-8bb4-0b576f120235-630205.png)
 
-## **4.ggplot2系统**
+### **4.ggplot2系统**
 
 ggplot2 是一个功能强大且灵活的 R 包，由 Hadley Wickham 编写，它可以生成优雅而实用的图形。 ggplot2 中的 gg 表示图形语法（grammar of graphic），这是一个通过使用“语法” 来绘图的图形概念。 ggplot2 主张模块间的协调与分工，整个 ggplot2 的语法框架如下图所示，主要包括数据绘图部分与美化细节部分。 R ggplot2 图形语法的主要特点如下所示。
 
@@ -118,7 +104,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 
 ![1609075535516-a4b9c055-eeb3-4b79-a07d-c54c9bac1bcc.png](./img/KnCuf_TQaNAuuoQH/1609075535516-a4b9c055-eeb3-4b79-a07d-c54c9bac1bcc-735469.png)
 
-## **5.常见的绘图参数**
+### **5.常见的绘图参数**
 
 低水平绘图函数
 
@@ -202,8 +188,8 @@ mar：以数值向量表示边界大小，顺序为"下、左、上、右"，单
  title(main = " ", sub = " ", xlab = " ",  ylab = " ")
 ```
 
-# **二.ggplot2绘图框架**
-## **1.geom_**()与stat_**()**
+## **二.ggplot2绘图框架**
+### **1.geom_**()与stat_**()**
 
 geom_**()相关函数如下：
 
@@ -265,7 +251,7 @@ ggplot(data.frame(x = c(-5, 5)), aes(x))+
   stat_function(fun = dnorm)
 ```
 
-## **2.视觉通道**
+### **2.视觉通道**
 
 ![1609075535843-1e001c50-244c-4960-a3f0-dc76dd3d6d3e.png](./img/KnCuf_TQaNAuuoQH/1609075535843-1e001c50-244c-4960-a3f0-dc76dd3d6d3e-607559.png)
 
@@ -289,7 +275,7 @@ grid.arrange(f1,f2,f3,f4, ncol = 2, nrow =2)
 
 ![1609075535766-4314a6b2-1cfb-40a8-8560-0200dbdcdf92.png](./img/KnCuf_TQaNAuuoQH/1609075535766-4314a6b2-1cfb-40a8-8560-0200dbdcdf92-558764.png)
 
-## **3.度量调整**
+### **3.度量调整**
 
 ![1609075535929-b532353e-f659-470b-b645-6990fff79c44.png](./img/KnCuf_TQaNAuuoQH/1609075535929-b532353e-f659-470b-b645-6990fff79c44-230208.png)
 
@@ -298,8 +284,7 @@ grid.arrange(f1,f2,f3,f4, ncol = 2, nrow =2)
 head(df)
 ggplot(df, aes(x=SOD,y=tau,size=age)) +
   geom_point(shape=21,color="black",fill="#E53F2F",stroke=0.25,alpha=0.8)+
-  scale_size(range = c(1, 8))#range:长度为2的数字向量，指定转换后绘图符号的最小和最大大小。
-ggplot(df, aes(SOD,tau,fill=age,size=age)) +
+  scale_size(range = c(1, 8))#range:长度为2的数字向量，指定转换后绘图符号的最小和最大大小。ggplot(df, aes(SOD,tau,fill=age,size=age)) +
   geom_point(shape=21,colour="black",stroke=0.25,
              alpha=1)+
   scale_size(range = c(1,8))+
@@ -315,15 +300,15 @@ ggplot(df, aes(SOD,tau,fill=Class,size=age)) +
   scale_size(range = c(1, 8))
 ```
 
-## **4.坐标系**
+### **4.坐标系**
 
 ggplot2的直角坐标系包括coord_cartesian()、coord_fixed()、coord.fip()和coord_ trans()四种类型。ggplot2中的默认类型为coord.cartesian() ,我们在绘制条形图或者水平箱形图时，需要使用coord_fip()翻转坐标系。它会将X轴和Y轴坐标对换，从而可以将竖直的柱形图转换成水平的条形图。
 
-## **5.图例**
+### **5.图例**
 
 图例作为图表背景信息的重要组成部分，对图表的完整与正确表达尤为重要。ggplot2 的guide_colorbar()/guide_colourbar()函数用于调整连续变量的图例; guide_legend()函数用于离散变量的图例，也可以用于连续变量。guides()函数将guide_colorbar()和guide_colourbar()两种图例嵌套进去，方面映射处理，如：guides(fill = guide_colourbar())，对多个图例共同处理尤为有效。
 
-## **6.分面系统**
+### **6.分面系统**
 ```plain
 ##-------------6.分面系统
 ls(pattern = "^facet_", env = as.environment("package:ggplot2"))
@@ -356,22 +341,19 @@ ggplot(mpg, aes(displ, hwy)) +
 View(mpg)
 ```
 
-## **7.主题**
+### **7.主题**
 
-主题系统包括绘图区背景、网格线、坐标轴线条等图表的细节部分，而图表风格主要是指绘图区背景、网格线、坐标轴线条等的格式设定所展现的效果。
-ggplot2图表的主题系统的主要对象包括文本(text)、矩形(rect) 和线条(line )三大类，对应的函数包括element _text()、element_rect()、element_line()， 另外还有element_blank()表示该对象设置为无，具体如表所示。
-其中，我们使用比较多的系统对象是坐标轴的标签( axis.text.x、axis.text.y )、图例的位置与背景( legend.position 和legend.background)。
-X轴标签(axis.text.x)在绘制极坐标柱形图和径向柱形图时会用于调整X轴标签的旋转角度，Y轴标签( axis.text.y)也会用于时间序列峰峦图的Y轴标签的替换等，具体可见后面图表案例的讲解。
+主题系统包括绘图区背景、网格线、坐标轴线条等图表的细节部分，而图表风格主要是指绘图区背景、网格线、坐标轴线条等的格式设定所展现的效果。ggplot2图表的主题系统的主要对象包括文本(text)、矩形(rect) 和线条(line )三大类，对应的函数包括element _text()、element_rect()、element_line()， 另外还有element_blank()表示该对象设置为无，具体如表所示。其中，我们使用比较多的系统对象是坐标轴的标签( axis.text.x、axis.text.y )、图例的位置与背景( legend.position 和legend.background)。X轴标签(axis.text.x)在绘制极坐标柱形图和径向柱形图时会用于调整X轴标签的旋转角度，Y轴标签( axis.text.y)也会用于时间序列峰峦图的Y轴标签的替换等，具体可见后面图表案例的讲解。
 
 ![1609075535822-84e4bd8f-d33b-4b5b-84a9-72275e1533e7.png](./img/KnCuf_TQaNAuuoQH/1609075535822-84e4bd8f-d33b-4b5b-84a9-72275e1533e7-533488.png)
 
 一些主题相关包:ggThemeAssist,ggthemes,ggtech,ggthemer,**ggsci**,cowplot等。
 
-## **8.位置调整**
+### **8.位置调整**
 
 ![1609075535919-a4ea2bff-f600-4d52-9775-a54af30a8e61.png](./img/KnCuf_TQaNAuuoQH/1609075535919-a4ea2bff-f600-4d52-9775-a54af30a8e61-405531.png)
 
-## **9.学术文章图标配色**
+### **9.学术文章图标配色**
 
 RColorBrewer包是比较常用的调色板，来自网站:[https://colorbrewer2.org/](https://colorbrewer2.org/)
 
@@ -387,7 +369,7 @@ brewer.pal.info #将可用调色板的信息作为数据文件返回
 
 colorfavs工具链接：[http://www.colorfavs.com/](http://www.colorfavs.com/)
 
-## **10.排版布局**
+### **10.排版布局**
 
 ggplot2组合图形布局可以使用Rmisc包的multiplot()函数，也可以使用ggpubr包的ggarrange()函数。
 
@@ -417,8 +399,7 @@ ggarrange(fig1,fig2,fig3,fig2,# 要布局的图形
 #patchwork包的plot_layout()函数
 fig1 + fig3 + fig2 +
   plot_layout(ncol = 2, byrow = TRUE)
-#除了用+号运算来排版图形外，还可以使用/号来排版。
-fig1/fig2
+#除了用+号运算来排版图形外，还可以使用/号来排版。fig1/fig2
 fig3 | (fig1/fig2)
 (fig1 + fig3)/ fig5 +
   plot_annotation(tag_levels = "A",
@@ -432,8 +413,8 @@ library(gridExtra)
 grid.arrange(fig1,fig2,fig5, ncol = 2, nrow =2,layout_matrix=matrix(c(1,2,3,3),ncol = 2,byrow = T))
 ```
 
-# **三.散点图**
-## **1.利用plot()绘制散点图**
+## **三.散点图**
+### **1.利用plot()绘制散点图**
 
 R语言中plot()函数的基本格式如下：
 
@@ -507,7 +488,7 @@ head(trees) # 预览数据集
 
 ![1609075535741-bf03c4c6-d3e4-481b-bcaa-bfea140baaf4.png](./img/KnCuf_TQaNAuuoQH/1609075535741-bf03c4c6-d3e4-481b-bcaa-bfea140baaf4-609305.png)
 
-## **2.ggplot2()绘制散点图**
+### **2.ggplot2()绘制散点图**
 
 利用ggplot2绘图，请记住下面这个格式，因为这个格式ggplot2绘制其他图形都是这一格式。
 
@@ -589,7 +570,7 @@ ggplot(data, aes(x=carat,y=price)) +
 
 ![1609075535677-106ee198-cc98-4c07-935a-8ac47efdf9a8.png](./img/KnCuf_TQaNAuuoQH/1609075535677-106ee198-cc98-4c07-935a-8ac47efdf9a8-011036.png)
 
-# **四.柱状图**
+## **四.柱状图**
 ```plain
 library(ggplot2)
 library(RColorBrewer)
@@ -597,7 +578,7 @@ library(RColorBrewer)
 
 我们可以通过将 geom_bar() 中的参数指定为 colour="black" 为条形添加黑色边框线；可以通过 scale_fill_brewer() 或者 scale_fill_manual() 函数对图形颜色进行设置。颜色的映射设定是在 aes() 内部完成的，而颜色的重新设定是在 aes() 外部完成的
 
-## **01.单数据系列柱形图**
+### **01.单数据系列柱形图**
 ```plain
 mydata<-data.frame(Cut=c("Fair","Good","Very Good","Premium","Ideal"),
                     Price=c(4300,3800,3950,4700,3500))
@@ -667,7 +648,7 @@ ggplot(data=mydata,aes(Country,Pensions))+
 8 United States        7      3      8              1
 ```
 
-## **02.双数据系列柱形图**
+### **02.双数据系列柱形图**
 
 mydata的数据格式：
 
@@ -745,7 +726,7 @@ ggplot(data=mydata,aes(Country,value,fill=variable))+
 
 ![1609075535650-110813b9-e0ae-4645-a9e0-97d6614db1f7.png](./img/KnCuf_TQaNAuuoQH/1609075535650-110813b9-e0ae-4645-a9e0-97d6614db1f7-185143.png)
 
-## **03.堆积柱形图**
+### **03.堆积柱形图**
 
 madata数据格式
 
@@ -868,7 +849,7 @@ ggplot(data=mydata,aes(Country,value,fill=variable))+
 
 ![1609075535639-fe2ea8fc-58dc-4f4a-bf4e-39a59397dc12.png](./img/KnCuf_TQaNAuuoQH/1609075535639-fe2ea8fc-58dc-4f4a-bf4e-39a59397dc12-914150.png)
 
-## **04.百分比堆积柱形图**
+### **04.百分比堆积柱形图**
 
 数据同堆积柱形图，下面是代码
 
@@ -984,7 +965,7 @@ ggplot(data=mydata,aes(Country,value,fill=variable))+
 32 United States Other.services     1
 ```
 
-## **05.不等宽柱形图**
+### **05.不等宽柱形图**
 
 geom_rect()函数可以根据右下角坐标(xmin,ymin)和左上角坐标(xmax,ymax)绘制矩形，矩形宽度(width)为max~xmin对应X轴变量的数值大小矩形的高度(height)为ymax~ymin对应Y轴的数值大小。
 
@@ -1031,7 +1012,7 @@ ggplot(mydata)+
 
 ![1609075535661-c3d23b51-7333-4e8f-84cd-e991520fbb2d.png](./img/KnCuf_TQaNAuuoQH/1609075535661-c3d23b51-7333-4e8f-84cd-e991520fbb2d-628409.png)
 
-## **06.棒棒糖图**
+### **06.棒棒糖图**
 
 就是一根柱子加上一个圆，其实类似传统的柱状图。但是它可以给我们更多的信息，因为圆和下面的棒子可以代表同一组数据，也可以代表两组数据。“糖”和“棒子”的颜色也一样，可以表示同一个信息也可以表示不同维度的信息。
 
@@ -1098,7 +1079,7 @@ ggdotchart(dfm, x = "name", y = "mpg",
 
 ![1609075535643-60a5363b-9547-4fa6-8d7e-262c444824d5.png](./img/KnCuf_TQaNAuuoQH/1609075535643-60a5363b-9547-4fa6-8d7e-262c444824d5-480686.png)
 
-## **07.克里兰夫点图**
+### **07.克里兰夫点图**
 
 克利夫兰点图（Cleveland'sDot Plots）：也就是我们常用的滑珠散点图，非常类似于棒棒糖图，只是没有连接的线条，重点强调数据的排序展示以及互相之间的差距。克利夫兰点图一般都是横向展示，所以Y轴变量一般为类别型变量。
 
@@ -1119,7 +1100,7 @@ ggplot(mydata, aes(sum, City)) +
 
 ![1609075535739-ba47c921-17e8-44ef-9dd4-d474b1478e14.png](./img/KnCuf_TQaNAuuoQH/1609075535739-ba47c921-17e8-44ef-9dd4-d474b1478e14-358669.png)
 
-## **08.哑铃图（DumbbellPlot）**
+### **08.哑铃图（DumbbellPlot）**
 
 可以看成多数据系列的克利夫兰点图，只是使用直线连接了两个数据系列的数据点。哑铃图可以主要用于：1.展示在同一时间段两个数据点的相对位置（增加或者减少），2.比较两个类别之间的数据值差别。如图所示，就是展示了男性（male）和女性（Female）两个类别的数值差别，以女性（Female）数据系列的数值排序显示。
 
@@ -1142,7 +1123,7 @@ ggplot(mydata, aes(value,City,fill=variable)) +
 
 ![1609075535746-0c25a83e-bb73-431f-aa44-e6197c186091.png](./img/KnCuf_TQaNAuuoQH/1609075535746-0c25a83e-bb73-431f-aa44-e6197c186091-518417.png)
 
-## **09.坡度图**
+### **09.坡度图**
 ```plain
 library(ggplot2)
 library(scales)
@@ -1227,7 +1208,7 @@ p
 
 ![1609075535673-38724fda-11f4-4735-bc7a-05e3c021fcfb.png](./img/KnCuf_TQaNAuuoQH/1609075535673-38724fda-11f4-4735-bc7a-05e3c021fcfb-016115.png)
 
-## **10.南丁格尔玫瑰图**
+### **10.南丁格尔玫瑰图**
 ```plain
 library(ggplot2)
 #----------------------------------单数据系列极坐标柱形图-----------------------------------------
@@ -1285,7 +1266,7 @@ ggplot(diamonds,aes(x=clarity,fill=color))+
 
 ![1609075535704-418d2efa-c17e-460f-9c0c-9973a9aa46ab.png](./img/KnCuf_TQaNAuuoQH/1609075535704-418d2efa-c17e-460f-9c0c-9973a9aa46ab-355027.png)
 
-## **11.径向柱形图**
+### **11.径向柱形图**
 ```plain
 library(ggplot2)
 library(RColorBrewer)
@@ -1388,7 +1369,7 @@ ggplot(data=mydata,aes(x=id, y=value,group=variable,fill=variable)) +
 
 ![1609075535711-8cc89dcd-6a16-49bb-aad7-05858fd32189.png](./img/KnCuf_TQaNAuuoQH/1609075535711-8cc89dcd-6a16-49bb-aad7-05858fd32189-945736.png)
 
-## **12.词云图**
+### **12.词云图**
 
 代码有错误
 
@@ -1425,7 +1406,7 @@ df<-data.frame(term.matrix)
 wordcloud(row.names(df) , df$Paper1 , min.freq=10,col=brewer.pal(8, "Dark2"), rot.per=0.3 )
 ```
 
-# **五.箱型图**
+## **五.箱型图**
 ```plain
 > head(InsectSprays)
   count spray
@@ -1585,7 +1566,7 @@ par(op)
 
 ![1609075535772-bad6d769-34b3-4fb9-9a92-02dd9fb8ea6e.png](./img/KnCuf_TQaNAuuoQH/1609075535772-bad6d769-34b3-4fb9-9a92-02dd9fb8ea6e-821360.png)
 
-# **六.热图绘制**
+## **六.热图绘制**
 
 数据20行，10列的数据如下：
 
@@ -1899,7 +1880,7 @@ block_group_anno(4:5, "empty", gp = gpar(fill = "green"), label = "Cellular Proc
 dev.off()
 ```
 
-# **七.生存曲线**
+## **七.生存曲线**
 
 ```plain
 require("survival")
@@ -1949,7 +1930,7 @@ ggsurvplot(fit, data = lung,  main = "Survival curve",
 
 ![1609075535918-389a2509-d3ce-4697-b7f5-1fef88d9213d.png](./img/KnCuf_TQaNAuuoQH/1609075535918-389a2509-d3ce-4697-b7f5-1fef88d9213d-483434.png)
 
-# **八.火山图**
+## **八.火山图**
 ```plain
 colr <- brewer.pal(9,"Set1")[c(3,9,1)]
 ggplot(data = diff, aes(x = logFC, y = logP, color = Group)) +

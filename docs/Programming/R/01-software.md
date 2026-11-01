@@ -1,12 +1,12 @@
 
-## 必备
+### 必备
 
 R [https://www.r-project.org/](https://www.r-project.org/)
 Rstudio [https://www.rstudio.com/products/rstudio/download/#download](https://www.rstudio.com/products/rstudio/download/#download)
 Git [https://git-scm.com/](https://git-scm.com/)
 Gitee 或 Github [https://gitee.com/](https://gitee.com/) 或 [https://github.com/](https://github.com/)
 
-## 推荐
+### 推荐
 
 CRAN统计
 METACRAN [https://www.r-pkg.org/](https://www.r-pkg.org/)
@@ -41,7 +41,7 @@ METACRAN [https://www.r-pkg.org/](https://www.r-pkg.org/)
 
 xcode-select --install
 
-# 02_开发工具包
+## 02_开发工具包
 
 除了系统和软件，开发过程中还会用到一些用于开发包的包
 
@@ -66,7 +66,7 @@ install.packages("devtools")
 devtools::install_github("r-lib/devtools")
 ```
 
-# 03_阅读材料
+## 03_阅读材料
 
 **基础**
 R Packages [https://r-pkgs.org/r.html](https://r-pkgs.org/r.html)

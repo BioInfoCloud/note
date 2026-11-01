@@ -1,6 +1,6 @@
 # WGCNA分析
 
-# **1.基本原理**
+## **1.基本原理**
 
 WGCNA其译为加权基因共表达网络分析。该分析方法旨在寻找协同表达的基因模块(module)，并探索基因网络与关注的表型之间的关联关系，以及网络中的核心基因。从方法上来讲，WGCNA分为表达量聚类分析和表型关联两部分，主要包括基因之间相关系数计算、基因模块的确定、共表达网络、模块与性状关联四个步骤。
 
@@ -8,7 +8,7 @@ WGCNA其译为加权基因共表达网络分析。该分析方法旨在寻找协
 
 第二步通过基因之间的相关系数构建分层聚类树，聚类树的不同分支代表不同的基因模块，不同颜色代表不同的模块。基于基因的加权相关系数，将基因按照表达模式进行分类，将模式相似的基因归为一个模块。这样就可以将几万个基因通过基因表达模式被分成了几十个模块，是一个提取归纳信息的过程。
 
-# **2.WGCNA术语**
+## **2.WGCNA术语**
 
 **权重(weghted) ：**基因之间不仅仅是相关与否，还记录着它们的相关性数值，数值就是基因之间的联系的权重(相关性)。
 
@@ -34,11 +34,11 @@ WGCNA其译为加权基因共表达网络分析。该分析方法旨在寻找协
 
 **Topological Overlap Matrix (TOM) ：**WGNA认为基因之间的简单的相关性不足以计算共表达，所以它利用上面的邻近矩阵，又计算了一个新的邻近矩阵。一般来说，TOM就是WGCNA分析的最终结果，后续的只是对TOM的下游注释。
 
-# **3.分析流程**
+## **3.分析流程**
 
 ![1650675968716-c3c280da-33a4-4bd0-ac3f-a0b3081ee491.jpeg](./img/Uiy2rTfsu4WUTpcU/1650675968716-c3c280da-33a4-4bd0-ac3f-a0b3081ee491-946001.jpeg)
 
-## **3.1. 数据预处理**
+### **3.1. 数据预处理**
 
 这部分内容包括以下部分：
 
@@ -50,7 +50,7 @@ WGCNA其译为加权基因共表达网络分析。该分析方法旨在寻找协
 
 对于基因的表达量数据，需要进行过滤，对于基因而言，可以过滤缺失值或者低表达的基因，对于样本而言，如果该样本中基因缺失值很多，也需要过滤，WGCNA内置了一个检验基因和样本的函数，通过该函数可以进行一个基本过滤。基础过滤之后，还可以看下是否存在离群值的样本，通过样本的聚类树进行判断，生成的图片如下。
 
-### **（1）表达数据处理**
+#### **（1）表达数据处理**
 ```plain
 library(WGCNA);
 # The following setting is important, do not omit.
@@ -122,8 +122,7 @@ plot(sampleTree, main = "Sample clustering to detect outliers", sub="", xlab="",
 # Plot a line to show the cut
 abline(h = 15, col = "red");
 # Determine cluster under the line
-#cutreeStatic模块检测在分层树状图使用恒定高度树切割。只有其大小至少为minSize的分支被保留。
-clust = cutreeStatic(sampleTree, cutHeight = 15, minSize = 10)
+#cutreeStatic模块检测在分层树状图使用恒定高度树切割。只有其大小至少为minSize的分支被保留。clust = cutreeStatic(sampleTree, cutHeight = 15, minSize = 10)
 table(clust)
 # clust 1 contains the samples we want to keep.
 keepSamples = (clust==1)
@@ -138,7 +137,7 @@ cutreeStatic函数用来切枝。模块检测在分层树状图使用恒定高�
 
 ![1612609004755-c2916543-8a10-4b12-9df7-5d44fa73535e.png](./img/Uiy2rTfsu4WUTpcU/1612609004755-c2916543-8a10-4b12-9df7-5d44fa73535e-320500.png)
 
-### **（2）临床数据处理**
+#### **（2）临床数据处理**
 
 表型数据中也包含了不需要的列，而且其样本比表达谱的样本多，需要根据表达谱的样本提取对应的表型数据。
 
@@ -174,8 +173,7 @@ rownames(datTraits) = allTraits[traitRows, 1];
 执行垃圾收集，直到空闲内存标识符没有变化为止。
 
 ```plain
-##执行垃圾收集，直到空闲内存标识符没有变化为止。
-collectGarbage();
+##执行垃圾收集，直到空闲内存标识符没有变化为止。collectGarbage();
 ```
 
 表达谱数据和表型数据准备好之后，可以绘制样本聚类树和表型的热图。
@@ -209,8 +207,8 @@ plotDendroAndColors(sampleTree2, traitColors,
 save(datExpr, datTraits, file = "FemaleLiver-01-dataInput.RData")
 ```
 
-## **3.2. 识别modules**
-### **（1）选择软阈值指数：拓扑网络分析**
+### **3.2. 识别modules**
+#### **（1）选择软阈值指数：拓扑网络分析**
 
 在构建共表达网络时，将基因间的相关系数进行乘方运算来表征其相关性，首先需要确定乘方的值，也就是软阈值或者我们叫power值、beta值。这个power值至关重要！至关重要！至关重要！那怎么选呢？在WGCNA作者的官方介绍中，一般选6就可以。作者基于无尺度网络的理念提出一种选择软阈值指数的方法，来使得基因表达网络达到无尺度网络的状态。使用函数pickSoftThreshold来进行网络拓扑分析，该函数可以帮助使用者选择合适的软阈值指数。使用者选择一系列的待定指数，然后函数返回一系列的即将被检测到的网络指数。
 
@@ -226,8 +224,7 @@ lnames = load(file = "FemaleLiver-01-dataInput.RData");
 lnames
 powers = c(c(1:10), seq(from = 12, to=20, by=2))
 # Call the network topology analysis function
-#多软阈值函数的无尺度拓扑分析。目的是为了帮助用户选择一个合适的软阈值权值用于网络构建。
-sft = pickSoftThreshold(datExpr, powerVector = powers, verbose = 5)
+#多软阈值函数的无尺度拓扑分析。目的是为了帮助用户选择一个合适的软阈值权值用于网络构建。sft = pickSoftThreshold(datExpr, powerVector = powers, verbose = 5)
 ```
 
 可以明显看到powerEstimate是6，就是最佳的power值。
@@ -264,11 +261,10 @@ text(sft$fitIndices[,1], sft$fitIndices[,5], labels=powers, cex=cex1,col="red")
 
 从这个图片中怎么选择power值？最直接的方法：看y轴等于0.9的时候，与曲线的交点，在这个示例数据中，刚好等于6，那我们就选6作为power值。切记：在分析自己数据的时候，power值肯定在6的附近，4-10之内都是可以的，如果离的太远，那就有问题了。之后，就可以用6作为beta值去构建基因module了。
 
-### **（2）网络构建和模块检测**
-#### **a.方法一：自动化构建基因网络和识别模块**
+#### **（2）网络构建和模块检测**
+##### **a.方法一：自动化构建基因网络和识别模块**
 ```plain
-#跨多个数据集进行网络构建和一致性模块检测。
-net = blockwiseModules(datExpr, power = 6,
+#跨多个数据集进行网络构建和一致性模块检测。net = blockwiseModules(datExpr, power = 6,
                        TOMType = "unsigned", minModuleSize = 30,
                        reassignThreshold = 0, mergeCutHeight = 0.25,
                        numericLabels = TRUE, pamRespectsDendro = FALSE,
@@ -316,7 +312,7 @@ save(MEs, moduleLabels, moduleColors, geneTree,
      file = "FemaleLiver-02-networkConstruction-auto.RData")
 ```
 
-#### **b.方法二：Step-by-step网络构建和模块识别**
+##### **b.方法二：Step-by-step网络构建和模块识别**
 
 下面利用adjacency 函数计算邻近值，datExp是表达数据的数据框。列对应基因，行对应样本。
 
@@ -453,7 +449,7 @@ MEs = mergedMEs;
 save(MEs, moduleLabels, moduleColors, geneTree, file = "FemaleLiver-02-networkConstruction-stepByStep.RData")
 ```
 
-## **3.3. 筛选和表型相关的module**
+### **3.3. 筛选和表型相关的module**
 
 加载前面分析好的数据
 
@@ -467,7 +463,7 @@ lnames = load(file = "FemaleLiver-02-networkConstruction-auto.RData");
 lnames
 ```
 
-### **（1）定量模块-临床关系**
+#### **（1）定量模块-临床关系**
 
 在这个分析中，我们将识别出和临床表征相关的模块。我们已经有了每个模块总结性的数据eigengeneeigengene，我们将eigengenes和临床数据关联来查看最重要的联系。本质上是计算module的ME值与表型的相关系数，可以对module和表型间的系数的结果进行可视化。
 
@@ -509,12 +505,9 @@ labeledHeatmap(Matrix = moduleTraitCor,
 
 指定一个我们感兴趣的表型，可以得到与其相关性最高的module。在这个图中，红色表示正相关，绿色表示负相关，颜色越深表示相关性越强。比如，以上结果中，和weight这个表型最相关的为module为red和brown，当然也可以自己指定一个阈值，筛选出多个候选的modules。
 
-### **（2）基因和临床表征和重要模块的关系：gene显著性和模块关系**
+#### **（2）基因和临床表征和重要模块的关系：gene显著性和模块关系**
 
-在定量每个基因和感兴趣的临床表征（体重）的联系时，WGCNA定义了基因显著性（Gene Significance，GS）作为基因和表征之间的相关性绝对值。
-对于每一个模块，WGCNA也定义了模块成员关系（module membership MM）作为模块的engengene和基因表达谱的相关性。
-这样我们可以对每个模块定量所有基因的相似度。
-在WGCNA（Weighted Gene Co-Expression Network Analysis，加权基因共表达网络分析）分析中，模块内分析的一个关键步骤是识别那些具有高GS（Gene Significance）和MM（Module Membership）的基因。
+在定量每个基因和感兴趣的临床表征（体重）的联系时，WGCNA定义了基因显著性（Gene Significance，GS）作为基因和表征之间的相关性绝对值。对于每一个模块，WGCNA也定义了模块成员关系（module membership MM）作为模块的engengene和基因表达谱的相关性。这样我们可以对每个模块定量所有基因的相似度。在WGCNA（Weighted Gene Co-Expression Network Analysis，加权基因共表达网络分析）分析中，模块内分析的一个关键步骤是识别那些具有高GS（Gene Significance）和MM（Module Membership）的基因。
 
 GS（Gene Significance）：这是一个衡量基因与特定表型或性状关联程度的指标。GS值越高，说明该基因与所研究的表型或性状之间的关联度越高。
 
@@ -550,7 +543,7 @@ names(geneTraitSignificance) = paste("GS.", names(weight), sep="");
 names(GSPvalue) = paste("p.GS.", names(weight), sep="");
 ```
 
-### **（3）模块内分析：识别具有高GS和MM的gene**
+#### **（3）模块内分析：识别具有高GS和MM的gene**
 
 使用GS和MM，我们可以识别一些基因既对体重有重要意义，其所在模块也有高的模块成员关系.例如，我们观测到棕色模块和体重有较高的联系，我们在棕色模块内绘制GS vs. MM的散点图。
 
@@ -572,7 +565,7 @@ verboseScatterplot(abs(geneModuleMembership[moduleGenes, column]),
 
 在图中可以看到，GS和MM是高度协相关的，也就是对表征有重要意义的基因就在和该表征关系最密切的模块内。
 
-## **3.4. 生成网络，筛选核心基因**
+### **3.4. 生成网络，筛选核心基因**
 
 找到和表型关联的module之后，就可以导出指定modules对应的基因共表达网络，方便可视化。所谓WGCNA（共表达网络）分析，说到底还是要构建一个网络的。那么，既然说到网络，就不得不说最厉害的网络图分析软件Cytoscape。它能够帮我们去实现网络图的可视化和深层次的挖掘。在WGCNA中，也可以直接对接Cytoscape，生成的文件可以导入cytoscape进行绘图。
 

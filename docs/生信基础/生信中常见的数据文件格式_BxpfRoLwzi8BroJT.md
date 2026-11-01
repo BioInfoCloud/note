@@ -8,12 +8,7 @@
 
 ---
 
-前面我们介绍了各种测序技术的原理：[**illumina、Sanger、第三代和第四代测序技术原理**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272832&idx=1&sn=7d208df1a65e3696c41c666ef78f5881&chksm=841ed2fdb3695bebedbbc733b0bca112421a91647d2038266d0a24b8ce46ee19503a801fdd2b&scene=21#wechat_redirect)，我们测序得到的是带有质量值的碱基序列fastq格式，参考基因组是fasta格式。
-⽤⽐对⼯具把fastq格式的序列回帖到对应的fasta格式的参考基因组序列，就可以产⽣sam格式的⽐对⽂件。
-把sam格式的⽂本⽂件压缩成⼆进制bam⽂件可以节省空间。
-如果是记录某些位点或者区域碱基的变化，就是VCF⽂件格式。
-如果对参考基因组上⾯的各个区段标记它们的性质，⽐如哪些区域是外显⼦，内含⼦， UTR等等，这就是gtf/gff格式。
-如果只是为了单纯描述某个基因组区域，就是bed格式⽂件，记录染⾊体号以及起始终⽌坐标，正负链即可。
+前面我们介绍了各种测序技术的原理：[**illumina、Sanger、第三代和第四代测序技术原理**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272832&idx=1&sn=7d208df1a65e3696c41c666ef78f5881&chksm=841ed2fdb3695bebedbbc733b0bca112421a91647d2038266d0a24b8ce46ee19503a801fdd2b&scene=21#wechat_redirect)，我们测序得到的是带有质量值的碱基序列fastq格式，参考基因组是fasta格式。⽤⽐对⼯具把fastq格式的序列回帖到对应的fasta格式的参考基因组序列，就可以产⽣sam格式的⽐对⽂件。把sam格式的⽂本⽂件压缩成⼆进制bam⽂件可以节省空间。如果是记录某些位点或者区域碱基的变化，就是VCF⽂件格式。如果对参考基因组上⾯的各个区段标记它们的性质，⽐如哪些区域是外显⼦，内含⼦， UTR等等，这就是gtf/gff格式。如果只是为了单纯描述某个基因组区域，就是bed格式⽂件，记录染⾊体号以及起始终⽌坐标，正负链即可。
 
 ---
 
@@ -33,7 +28,7 @@
 
 ---
 
-# **1.fastq文件**
+## **1.fastq文件**
 
 FASTQ是基于文本的，保存生物序列（通常是核酸序列）和其测序质量信息的标准格式。其序列以及质量信息都是使用一个ASCII字符标示，最初由Sanger开发，目的是将FASTA序列与质量数据放到一起，目前已经成为高通量测序结果的事实标准。
 
@@ -88,7 +83,7 @@ FASTA文件各行记录信息如下：
 
 SAM格式文件包括头部注释部分和比对结果部分，头部分为’’可选部分’’。头部分位于比对部分之前，以“@”开头。比对部分有11列是固定的，其他多列可选。
 
-## **（1）Header （标头注释部分）**
+### **（1）Header （标头注释部分）**
 ```plain
 @HD VN:1.0 SO:coordinate @SQ SN:chr1 LN:249250621 @SQ SN:chr10 LN:135534747 @SQ SN:chr11 LN:135006516 ... @SQ SN:chrY LN:59373566 @PG ID:TopHat VN:2.0.8b CL:/home/hpages/tophat-2.0.8b.Linux_x86_64/tophat --mate-inner-dist 150 --solexa-quals --max-multihits 5 --no-discordant --no-mixed --coverage-search --microexon-search --library-type fr-unstranded --num-threads 2 --output-dir tophat2_out/ERR127306 /home/hpages/bowtie2-2.1.0/indexes/hg19 fastq/ERR127306_1.fastq fastq/ERR127306_2.fastq
 ```
@@ -97,7 +92,7 @@ SAM格式文件包括头部注释部分和比对结果部分，头部分为’�
 + @SQ：参考序列目录。SN：参考序列名字。LN：参考序列长度。
 + @PG：使用的比对程序名。
 
-## **（2）比对结果部分**
+### **（2）比对结果部分**
 
 例如这样的：
 
@@ -147,11 +142,9 @@ E00514:173:H3C3JCCXY:4:1124:12398:67234    337 Chr00   32904   0   150M    Chr09
 
 由于sam格式的文件通常都非常大，所以为了节省存储空间而将sam转换为二进制格式以便于存储，也就是bam文件。sam/bam文件可以由特定的一些软件（比如samtools）来处理的，包括格式互转、排序、建立索引等操作。
 
-# **4.GTF和GFF文件**
+## **4.GTF和GFF文件**
 
-GTF全称是Gene transfer format，用于储存基因结构信息，总共有9列。
-关于gtf文件，我在文章：[**生信中各种ID转换**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265466&idx=1&sn=021a10503d338e09abe07b578e734566&chksm=841efdc7b36974d13b7ad95e2272d293089d49adff9b74667bbeed78306328f0a42b0259c030&scene=21#wechat_redirect)中就已经有所应用。
-我之前在[**TCGA数据库差异分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264898&idx=1&sn=f6287d98fe0b0fb48a96d2905ca0bb4f&chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&scene=21#wechat_redirect)的文章中，也是通过gtf文件进行ID转换的。
+GTF全称是Gene transfer format，用于储存基因结构信息，总共有9列。关于gtf文件，我在文章：[**生信中各种ID转换**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265466&idx=1&sn=021a10503d338e09abe07b578e734566&chksm=841efdc7b36974d13b7ad95e2272d293089d49adff9b74667bbeed78306328f0a42b0259c030&scene=21#wechat_redirect)中就已经有所应用。我之前在[**TCGA数据库差异分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264898&idx=1&sn=f6287d98fe0b0fb48a96d2905ca0bb4f&chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&scene=21#wechat_redirect)的文章中，也是通过gtf文件进行ID转换的。
 
 ![1612426369906-7804dcf6-81ae-456d-97d0-c4216190aea5.png](./img/BxpfRoLwzi8BroJT/1612426369906-7804dcf6-81ae-456d-97d0-c4216190aea5-436256.png)
 

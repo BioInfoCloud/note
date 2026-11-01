@@ -25,9 +25,9 @@ GDC harmonized database:可利用的数据与GRCh38 (hg38)使用GDC生物信息�
 
 2）对于harmonized数据（与hg38对齐的数据），TCGAbiolinks正在使用GRCh38.p7 (May 2017)进行注释。
 
-# 一.TCGAbiolinks包
+## 一.TCGAbiolinks包
 
-## 1.GDCquery()函数
+### 1.GDCquery()函数
 
 ```r
 GDCquery(
@@ -178,7 +178,7 @@ query_COAD_EXP <- GDCquery(project = "TCGA-COAD",
                   workflow.type = "HTSeq - Counts")
 ```
 
-## 2.getResults()函数
+### 2.getResults()函数
 
 ```r
 getResults(query, rows, cols)
@@ -220,7 +220,7 @@ GDCquery函数请求的结果是一个数据框。
 sampCases <- getResults(query_COAD_EXP,cols=c("cases"))
 ```
 
-## 3.TCGAquery_SampleTypes()函数
+### 3.TCGAquery_SampleTypes()函数
 
 ```r
 TCGAquery_SampleTypes(barcode, typesample)
@@ -241,7 +241,7 @@ dataSmNT <- TCGAquery_SampleTypes(barcode = sampCases,
 
 ![1625706116208-00ee985a-f88c-4b5c-8a1b-2a9574fb35ef.png](./img/xw0kpVlajKCznN8e/1625706116208-00ee985a-f88c-4b5c-8a1b-2a9574fb35ef-039133.png)
 
-## 4.GDCdownload()函数
+### 4.GDCdownload()函数
 
 有两种方法可以使用`TCGAbiolinks`下载GDC数据。
 
@@ -291,7 +291,7 @@ GDCdownload(query = query_COAD_EXP)
 ./GDCdata/TCGA-COAD/harmonized/Transcriptome_Profiling/Gene_Expression_Quantification/
 ```
 
-## 5.GDCprepare()函数
+### 5.GDCprepare()函数
 
 ```r
 GDCprepare(
@@ -349,7 +349,7 @@ coadRda <- GDCprepare(query_COAD_EXP,save = TRUE,
 
 ![1625709201952-cbc83801-12e2-4d72-ab2d-4a74cee01c22.png](./img/xw0kpVlajKCznN8e/1625709201952-cbc83801-12e2-4d72-ab2d-4a74cee01c22-630528.png)
 
-## 6.TCGAanalyze_Preprocessing函数()
+### 6.TCGAanalyze_Preprocessing函数()
 
 TCGAanalyze_Preprocessing执行Array Array Intensity correlation (AAIC)。它定义了一个方对称的样本间spearman相关性矩阵。根据相关样本的矩阵和箱线图，有可能找到低相关的样本，可识别为可能的异常值。
 
@@ -391,7 +391,7 @@ head(expDataPrep)[,1:2]
 
 ![1625713411512-93f13063-2ccd-4361-ad5c-85488ea19f52.png](./img/xw0kpVlajKCznN8e/1625713411512-93f13063-2ccd-4361-ad5c-85488ea19f52-701598.png)
 
-## 7.TCGAtumor_purity()函数
+### 7.TCGAtumor_purity()函数
 
 ```r
 TCGAtumor_purity(barcodes, estimate, absolute, lump, ihc, cpe)
@@ -407,7 +407,7 @@ Purity.barcodes <- purityDATA$pure_barcodes
 
 ![1625750674089-2f3913af-c457-4a34-a726-6f6b1959fc12.png](./img/xw0kpVlajKCznN8e/1625750674089-2f3913af-c457-4a34-a726-6f6b1959fc12-601149.png)
 
-## 8.TCGA_MolecularSubtype()
+### 8.TCGA_MolecularSubtype()
 
 ```r
 TCGA_MolecularSubtype(barcodes)
@@ -417,9 +417,9 @@ TCGA_MolecularSubtype(barcodes)
 MolSub <- TCGA_MolecularSubtype(Purity.barcodes)
 ```
 
-# 二.数据分析
+## 二.数据分析
 
-## 1.转录组数据分析
+### 1.转录组数据分析
 
 ```r
 library(TCGAbiolinks)
@@ -451,7 +451,7 @@ dataSmNT <- TCGAquery_SampleTypes(barcode = sampCases,
                                   typesample = "NT")
 ```
 
-## 2.下载甲基化数据
+### 2.下载甲基化数据
 
 ```r
 #下载甲基化数据

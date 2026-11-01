@@ -7,13 +7,7 @@
 
 最早在 1956 年， 有学者在发育生物学中提出一个叫做细胞程序性死亡的概念。 细胞程序性死亡（programmed cell death， PCD） ， 指的是生理性细胞死亡， 强调的是这个过程的生理学特性， 描述在一个多细胞生物中某些细胞死亡是个体发育中的一个预定的， 并受到严格程序控制的细胞和分子生物学过程， 是正常发育过程的一部分。
 
-随后在 1972 年， Keer （基尔） 根据细胞发生了和坏死完全不同的死亡过程而提出了细胞凋亡（apoptosis） 的概念。
- 随着生物学研究的深入， 生物学家越来越意识到细胞死亡， 特别是细胞凋亡， 具有特殊的生物意义。
- 细胞凋亡对于维持一个多细胞生物的组织或器官的完整性和平衡性， 具有不可替代的重要作用。
- 在多细胞生物的生长、 发育、 存活以及死亡等过程中，都伴随着细胞凋亡的过程。
- 从 80 年代开始， 细胞凋亡成为医学和生物学研究的热点。
- 2002年， 正是由于发现了细胞凋亡的规律， 三位科学家获得了诺贝尔医学和生理学奖。
- 他们分别是英国的西德尼-布伦南和约翰-苏尔斯顿， 美国的罗伯特-霍维茨。
+随后在 1972 年， Keer （基尔） 根据细胞发生了和坏死完全不同的死亡过程而提出了细胞凋亡（apoptosis） 的概念。 随着生物学研究的深入， 生物学家越来越意识到细胞死亡， 特别是细胞凋亡， 具有特殊的生物意义。 细胞凋亡对于维持一个多细胞生物的组织或器官的完整性和平衡性， 具有不可替代的重要作用。 在多细胞生物的生长、 发育、 存活以及死亡等过程中，都伴随着细胞凋亡的过程。 从 80 年代开始， 细胞凋亡成为医学和生物学研究的热点。 2002年， 正是由于发现了细胞凋亡的规律， 三位科学家获得了诺贝尔医学和生理学奖。 他们分别是英国的西德尼-布伦南和约翰-苏尔斯顿， 美国的罗伯特-霍维茨。
 
 ### 2.凋亡的形态特征
 
@@ -108,18 +102,13 @@ Caspase 家族成员， 可以按照功能分为三组：
 
 Fas 又称为 CD95， FasL 又称为 CD95L， 因此 Fas/FasL 通路， 也被称为 CD95/CD95L 通路。Fas 死亡通路在免疫系统的发育过程中起到重要作用。 许多细胞都表达 Fas， 但是它的配体FasL 只在激活的 T 细胞和 NK 细胞中表达。 FasL 是一个同源三聚体， 每个三聚体分子结合3 个 Fas 分子， 一旦与三聚体的配体相结合， Fas 通过胞内段的 death domain（死亡结构域）招募胞质中含有死亡结构域的 Fas 相关蛋白（Fas-associated protein with death domain,FADD）。
 
-FADD 氨基端含有一个死亡效应结构域（Death effector domain， DED 结构域） ， FADD 的DED 结构域和 Caspase-8 分子的 DED 结构域相互作用， 把 Caspase-8 募集到 Fas 区域， 从而形成 Fas、 FADD 和 Caspase-8 所组成的死亡诱导信号复合体（Death-inducing signaling complex， 缩写是 DISC） 。
- Caspase-8 酶原被激活， 并自我剪切活化形成活性 Caspase-8。
- 活化的 Caspase-8 可激活下游的 Caspase-3、 Caspase-6、 Caspase-7。
- 激活后的 Casp-3、 6 和 7，又能剪切下游的很多底物， 包括 PARP、 DNA-PK、 蛋白激酶 CO（Protiein kinase CO， PKCO）和 ICAD（Inhibitor of caspase activated DNAase） 。
- ICAD 剪接成 CAD 之后， 转运入核内，降解染色质 DNA。
+FADD 氨基端含有一个死亡效应结构域（Death effector domain， DED 结构域） ， FADD 的DED 结构域和 Caspase-8 分子的 DED 结构域相互作用， 把 Caspase-8 募集到 Fas 区域， 从而形成 Fas、 FADD 和 Caspase-8 所组成的死亡诱导信号复合体（Death-inducing signaling complex， 缩写是 DISC） 。 Caspase-8 酶原被激活， 并自我剪切活化形成活性 Caspase-8。 活化的 Caspase-8 可激活下游的 Caspase-3、 Caspase-6、 Caspase-7。 激活后的 Casp-3、 6 和 7，又能剪切下游的很多底物， 包括 PARP、 DNA-PK、 蛋白激酶 CO（Protiein kinase CO， PKCO）和 ICAD（Inhibitor of caspase activated DNAase） 。 ICAD 剪接成 CAD 之后， 转运入核内，降解染色质 DNA。
 
 + **TNF-TNFR 通路**
 
 TNF 通过 TNFR-I 和 TNFR-II 介导下游的生物学活性， 这两个 TNFR（TNF 受体） 在胞外结构域具有同源性， 但 TNFR-I 含有 DD 死亡结构域， TNFR-II 缺乏 DD 死亡结构域， 两个受体都可以介导凋亡。 研究证明， TNFRs 不具有酶解活性， 因此 TNFR 通过招募其他分子，传导 TNF-TNFR 下游的信号。
 
-当 TNF 结合受体之后， TNFR 受体发生三聚体化， 然后招募一个衔接蛋白 TRADD（全称是 Tumor necrosis factor receptor type 1-associated DEATH domain protein ， 肿瘤坏死因子受体I 型相关死亡结构域蛋白）。
- TRADD 可以再招募其他的三个衔接分子： FADD（就是 Fas/FasL通路中的 FADD 分子） 、 TRAF-2 （Tumor necrosis factor receptor-associated factor-2， 肿瘤坏死因子受体相关因子 2） 和 RIP（Receptor interactive protein， 受体相互作用蛋白）
+当 TNF 结合受体之后， TNFR 受体发生三聚体化， 然后招募一个衔接蛋白 TRADD（全称是 Tumor necrosis factor receptor type 1-associated DEATH domain protein ， 肿瘤坏死因子受体I 型相关死亡结构域蛋白）。 TRADD 可以再招募其他的三个衔接分子： FADD（就是 Fas/FasL通路中的 FADD 分子） 、 TRAF-2 （Tumor necrosis factor receptor-associated factor-2， 肿瘤坏死因子受体相关因子 2） 和 RIP（Receptor interactive protein， 受体相互作用蛋白）
 
 如果 TRADD 和 RIP/TRAF-2 相互结合， 下游激活 NF-κB 通路或者 JNK/AP-1 通路； 如果TRADD 和 FADD 相互结合， 那么下游可以招募和活化 Caspases， 并激活凋亡通路。 因此，请大家要注意， 在 TNF/TNFR 通路传递到 TRADD 这里的时候， 通路开始了分叉。 如果TRADD 结合 TRAF-2/RIP， 下游激活 NF-κB 通络或者是激活 JNK/AP-1 通路； 如果 TRADD结合 FADD， 下游激活 Caspase， 从而诱导细胞发生凋亡。
 
@@ -162,18 +151,7 @@ PI 是一种核染料， 它不能透过完整的细胞膜。 但是在凋亡�
 
 ### 4.凋亡明星分子检测
 
-通常检测明星分子， 采用的是 western blot 的方法检测蛋白。
- 因为， 在凋亡通路中， 线粒体通路实在是太重要了。
- 因此， 结合线粒体通路， 首先是检测激活的 Cas-9。
- 然后激活的 Cas-9再级联放大激活下游的 Cas-3， 所以 Cas-9 和 Cas-3 几乎是逃不掉的两个明星分子。
- 前体分子是 Pro-cas-9 和 Pro-cas-3。
-在检测之前，大家需要好好看看抗体的说明书。
-因为有些抗体只识别前体 Cas-9和前体 Cas-3，有些抗体即能检测前体 Cas-9 和前体 Cas-3， 又能检测激活后的 Cas-9 和 Cas-3。
- 所以， 需要看清楚抗体说明书， 免得事倍功半。
- 另外， Cas-3 激活后可以作用于很多的底物之上，最常检测的 Cas-3 的底物是 PARP 分子。
-另外， 在凋亡发生时， Bcl-2 家族成员发挥了重要的作用。
- 例如， 抑制凋亡的 Bcl-2 和促进凋亡的 Bax。
- 因此， 常常通过 western 检测 Bcl-2 和 Bax 的表达量， 通过 Bcl-2/Bax 的比值，表征细胞凋亡的程度。
+通常检测明星分子， 采用的是 western blot 的方法检测蛋白。 因为， 在凋亡通路中， 线粒体通路实在是太重要了。 因此， 结合线粒体通路， 首先是检测激活的 Cas-9。 然后激活的 Cas-9再级联放大激活下游的 Cas-3， 所以 Cas-9 和 Cas-3 几乎是逃不掉的两个明星分子。 前体分子是 Pro-cas-9 和 Pro-cas-3。在检测之前，大家需要好好看看抗体的说明书。因为有些抗体只识别前体 Cas-9和前体 Cas-3，有些抗体即能检测前体 Cas-9 和前体 Cas-3， 又能检测激活后的 Cas-9 和 Cas-3。 所以， 需要看清楚抗体说明书， 免得事倍功半。 另外， Cas-3 激活后可以作用于很多的底物之上，最常检测的 Cas-3 的底物是 PARP 分子。另外， 在凋亡发生时， Bcl-2 家族成员发挥了重要的作用。 例如， 抑制凋亡的 Bcl-2 和促进凋亡的 Bax。 因此， 常常通过 western 检测 Bcl-2 和 Bax 的表达量， 通过 Bcl-2/Bax 的比值，表征细胞凋亡的程度。
 
 对于死亡受体介导的凋亡通路， Fas、 FasL、 TNF 和 TNFR， 都是常规需要检测的明星分子。在 FasL-Fas 通路以及 TNF-TNFR 通路之下， 都涉及到 FADD 分子。 所以检测 FADD 也是非常常见的。 但是， 在 TNF-TNFR 通路之下， 由于这条通路非常地复杂， 具体检测哪个或者哪些分子， 就需要比较个性化地去选择了。
 

@@ -18,12 +18,7 @@ A survey of best practices for RNA-seq data analysis
 
 文库类型、测序深度、重复，准确的实验操作以确保数据未被污染。
 
-首先：RNA提取中去除大量存在的rRNA， 通常占总RNA的90%，mRNA为1-2%。
-提取mRNA可选择用ployA选择性富集mRNA或删除rRNA。
-ployA通过RNA intergrity number （RIN，RNA完整度）来表示mRNA的比例，对于不能产生高质量和足够数量的材料则用删除rRNA法来获得mRNA（例如细菌mRNA无多聚A）。
-另一个问题是：是否产生strand-preserving libraries， strand-specific protocols 如dUTP法，通过在第二条cDNA合成时加入UTP，先于接头连接随后含有dUTP的链被降解。
-测序长度小于500bp，分单端测序（single end，SE）和双端测序（paired-end，PE）。
-读长较长的序列及双端序列更有利于注释信息较差的转录组分析。
+首先：RNA提取中去除大量存在的rRNA， 通常占总RNA的90%，mRNA为1-2%。提取mRNA可选择用ployA选择性富集mRNA或删除rRNA。ployA通过RNA intergrity number （RIN，RNA完整度）来表示mRNA的比例，对于不能产生高质量和足够数量的材料则用删除rRNA法来获得mRNA（例如细菌mRNA无多聚A）。另一个问题是：是否产生strand-preserving libraries， strand-specific protocols 如dUTP法，通过在第二条cDNA合成时加入UTP，先于接头连接随后含有dUTP的链被降解。测序长度小于500bp，分单端测序（single end，SE）和双端测序（paired-end，PE）。读长较长的序列及双端序列更有利于注释信息较差的转录组分析。
 
 其次：测序深度及文库大小。测序较深的到的转录组信息及转录本数量更加详细，但不是越深越好。5百万条比对序列对中岛高表达基因的量化分析足够，100万条序列足以分析低表达基因分析，单细胞转录组通常为1百万，高表达基因测序5万，脾组织只需2万。文库大小取决于目标转录组的复杂程度，测序深度有利于转录本的数量和鉴定，但同时增加了杂质信息和脱靶转录本。饱和曲线可以用来评估给定测序深度下转录组的覆盖度。
 
@@ -91,14 +86,7 @@ _**2.2 从头合成转录本重建**_
 
 **3. 转录本定量**
 
-RNA-seq分析核心为基因和转录本的定量分析，基于比对到转录本上的数量。
-最简单的定量方法是用HTSeq-count或featureCounts累积原始数量。
-基因水平定量使用GTF（genome transfer format ）文件，包含外显子和基因，通常丢弃很多序列。
-原始序列数量不能用于比较样本间的表达水平由于收到转录本厂素，总测序数以及测序偏好性的影响。
-RPKM是样本内均一化方法，用于去除长度和样本大小的影响（RPKM：reads per kilobases of exon model per millions reads）,FPKM(fragments per kilobase of exon model per million mapped read)与RPKs和TPM（transcripts per million）类似，都用于样本内归一化，FPKM可以与TPM相互转化。
-样本内和样本间的区分导致在文章中较为混乱。
-相同基因在样本之间的表达量比较时其长度不需要矫正，但同一个样本内对基因表达排序时时必须的由于较长的序列回累积更多的reads。
-样本之间Cufflinks得到基因长度显著不同不同忽略。
+RNA-seq分析核心为基因和转录本的定量分析，基于比对到转录本上的数量。最简单的定量方法是用HTSeq-count或featureCounts累积原始数量。基因水平定量使用GTF（genome transfer format ）文件，包含外显子和基因，通常丢弃很多序列。原始序列数量不能用于比较样本间的表达水平由于收到转录本厂素，总测序数以及测序偏好性的影响。RPKM是样本内均一化方法，用于去除长度和样本大小的影响（RPKM：reads per kilobases of exon model per millions reads）,FPKM(fragments per kilobase of exon model per million mapped read)与RPKs和TPM（transcripts per million）类似，都用于样本内归一化，FPKM可以与TPM相互转化。样本内和样本间的区分导致在文章中较为混乱。相同基因在样本之间的表达量比较时其长度不需要矫正，但同一个样本内对基因表达排序时时必须的由于较长的序列回累积更多的reads。样本之间Cufflinks得到基因长度显著不同不同忽略。
 
 转录水平表达计算基于相同的转录本共有多数序列来进行计算。TopHat用最大期望值来对转录本的丰富度进行计算。Cufflinks使用GTF信息来发现转录本或只从比对序列提供从头合成的转录本。从转录本比对量化表达包括SEM (RNA-Seqby Expectation Maximization)，eXpress，Sailfish，kallisto。转录本中容许多比对reads以及将序列偏好性矫正后样本内均一化值输出。RSEM使用最大期望值并返回TPM值。NURD为SE reads提供转录组表达评估，占内存低。
 

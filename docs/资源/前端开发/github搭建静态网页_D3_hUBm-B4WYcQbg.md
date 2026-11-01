@@ -13,7 +13,7 @@ https://rust-lang.github.io/mdBook/
 MkDocs构建示例
 https://yang-xijie.github.io/BLOG/Markdown/mkdocs-site
 
-# 1.安装MKdocs
+## 1.安装MKdocs
 
 [https://www.mkdocs.org/user-guide/installation/](https://www.mkdocs.org/user-guide/installation/)
 
@@ -21,7 +21,7 @@ https://yang-xijie.github.io/BLOG/Markdown/mkdocs-site
 pip install mkdocs
 ```
 
-# 2.Creating a new project
+## 2.Creating a new project
 ```r
 mkdocs new bioinfocloud
 cd bioinfocloud
@@ -84,7 +84,7 @@ Now add a second page to your documentation:
 curl 'https://jaspervdj.be/lorem-markdownum/markdown.txt' > docs/about.md
 ```
 
-# 3.Git and GitHub[¶](https://yang-xijie.github.io/BLOG/Markdown/mkdocs-site/#git-and-github)
+## 3.Git and GitHub[¶](https://yang-xijie.github.io/BLOG/Markdown/mkdocs-site/#git-and-github)
 ```r
 $ git init
 $ git add .
@@ -111,7 +111,7 @@ $ git branch -M main
 $ git push -u origin main
 ```
 
-# 4.主题
+## 4.主题
 
 [https://squidfunk.github.io/mkdocs-material/getting-started/](https://squidfunk.github.io/mkdocs-material/getting-started/)
 

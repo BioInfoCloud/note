@@ -30,9 +30,16 @@ html { scroll-behavior: smooth; }
   isolation: isolate;
   background-color: #f4f9f8;
   background-image:
-    radial-gradient(48rem 30rem at -6% -4%, rgba(0, 184, 154, .14), transparent 60%),
-    radial-gradient(48rem 30rem at 106% -4%, rgba(28, 168, 232, .12), transparent 60%),
-    radial-gradient(40rem 26rem at 50% 120%, rgba(45, 212, 191, .10), transparent 60%);
+    radial-gradient(48rem 30rem at -6% -4%, rgba(0, 184, 154, .16), transparent 60%),
+    radial-gradient(48rem 30rem at 106% -4%, rgba(28, 168, 232, .14), transparent 60%),
+    radial-gradient(40rem 26rem at 50% 120%, rgba(45, 212, 191, .12), transparent 60%),
+    linear-gradient(120deg, #eafaf6, #e8f4fb, #f3fbf8, #eafaf6);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 300% 300%;
+  animation: bic-bg-flow 24s ease-in-out infinite alternate;
+}
+@keyframes bic-bg-flow {
+  0%   { background-position: 0% 0%, 0% 0%, 0% 0%, 0% 50%; }
+  100% { background-position: 0% 0%, 0% 0%, 0% 0%, 100% 50%; }
 }
 
 /* 2. HERO 重新设计——更大气、更有品牌感 */

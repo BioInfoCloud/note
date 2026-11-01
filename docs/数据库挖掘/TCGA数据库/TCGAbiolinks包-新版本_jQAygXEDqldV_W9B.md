@@ -25,9 +25,9 @@ GDC harmonized database:可利用的数据与GRCh38 (hg38)使用GDC生物信息�
 
 2）对于harmonized数据（与hg38对齐的数据），TCGAbiolinks正在使用GRCh38.p7 (May 2017)进行注释。
 
-# 一.TCGAbiolinks包
+## 一.TCGAbiolinks包
 
-## 1.GDCquery()函数
+### 1.GDCquery()函数
 
 ```r
 GDCquery(
@@ -122,9 +122,7 @@ data.type = "Copy Number Segment"
 
 （4）workflow.type
 
-该数据类型有很多种，根据`data.type`的不同而不同，不同的数据类型，有其对应的参数可供选择。
-比如`Gene Expression Quantification`的RNA-Seq数据类型下`workflow.type` 为<code>[STAR - Counts](https://portal.gdc.cancer.gov/repository?facetTab=files&filters=%7B%22op%22%3A%22and%22%2C%22content%22%3A%5B%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22files.analysis.workflow_type%22%2C%22value%22%3A%5B%22STAR%20-%20Counts%22%5D%7D%7D%2C%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22files.data_category%22%2C%22value%22%3A%5B%22transcriptome%20profiling%22%5D%7D%7D%2C%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22files.data_type%22%2C%22value%22%3A%5B%22Gene%20Expression%20Quantification%22%5D%7D%7D%2C%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22files.experimental_strategy%22%2C%22value%22%3A%5B%22RNA-Seq%22%5D%7D%7D%5D%7D)</code>。
-在原来老版本中有4种类型分别为：
+该数据类型有很多种，根据`data.type`的不同而不同，不同的数据类型，有其对应的参数可供选择。比如`Gene Expression Quantification`的RNA-Seq数据类型下`workflow.type` 为<code>[STAR - Counts](https://portal.gdc.cancer.gov/repository?facetTab=files&filters=%7B%22op%22%3A%22and%22%2C%22content%22%3A%5B%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22files.analysis.workflow_type%22%2C%22value%22%3A%5B%22STAR%20-%20Counts%22%5D%7D%7D%2C%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22files.data_category%22%2C%22value%22%3A%5B%22transcriptome%20profiling%22%5D%7D%7D%2C%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22files.data_type%22%2C%22value%22%3A%5B%22Gene%20Expression%20Quantification%22%5D%7D%7D%2C%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22files.experimental_strategy%22%2C%22value%22%3A%5B%22RNA-Seq%22%5D%7D%7D%5D%7D)</code>。在原来老版本中有4种类型分别为：
 
 * HTSeq - FPKM-UQ：FPKM上四分位数标准化值
 * HTSeq - FPKM：FPKM值/表达量值
@@ -183,7 +181,7 @@ query <- GDCquery(
 )
 ```
 
-## 2.getResults()函数
+### 2.getResults()函数
 
 ```r
 getResults(query, rows, cols)
@@ -230,7 +228,7 @@ head(query_result)[,1:3]
 sampCases <- getResults(query,cols=c("cases"))
 ```
 
-## 3.TCGAquery_SampleTypes()函数
+### 3.TCGAquery_SampleTypes()函数
 
 ```r
 TCGAquery_SampleTypes(barcode, typesample)
@@ -251,7 +249,7 @@ dataSmNT <- TCGAquery_SampleTypes(barcode = sampCases,
 
 ![1625706116208-00ee985a-f88c-4b5c-8a1b-2a9574fb35ef.png](./img/jQAygXEDqldV_W9B/1625706116208-00ee985a-f88c-4b5c-8a1b-2a9574fb35ef-991120.png)
 
-## 4.GDCdownload()函数
+### 4.GDCdownload()函数
 
 有两种方法可以使用`TCGAbiolinks`下载GDC数据。
 
@@ -301,7 +299,7 @@ GDCdownload(query = query)
 ./GDCdata/TCGA-LUAD/harmonized/Transcriptome_Profiling/Gene_Expression_Quantification/
 ```
 
-## 5.GDCprepare()函数
+### 5.GDCprepare()函数
 
 ```r
 GDCprepare(
@@ -360,7 +358,7 @@ class(expRda)
 
 ![1691997146355-82175542-8470-4190-aa7d-f502c40e5bc6.png](./img/jQAygXEDqldV_W9B/1691997146355-82175542-8470-4190-aa7d-f502c40e5bc6-178215.png)
 
-## 6.TCGAanalyze_Preprocessing函数()
+### 6.TCGAanalyze_Preprocessing函数()
 
 TCGAanalyze_Preprocessing执行Array Array Intensity correlation (AAIC)。它定义了一个方对称的样本间spearman相关性矩阵。根据相关样本的矩阵和箱线图，有可能找到低相关的样本，可识别为可能的异常值。
 
@@ -429,7 +427,7 @@ rownames(expDataTPM) = rowData(expRda)@listData[["gene_name"]]
 rownames(expDataCounts) = rowData(expRda)@listData[["gene_name"]]
 ```
 
-## 7.TCGAtumor_purity()函数
+### 7.TCGAtumor_purity()函数
 
 ```r
 TCGAtumor_purity(barcodes, estimate, absolute, lump, ihc, cpe)
@@ -443,7 +441,7 @@ purityDATA <- TCGAtumor_purity(colnames(expRda), 0, 0, 0, 0, 0.6)
 Purity.barcodes <- purityDATA$pure_barcodes
 ```
 
-## 8.TCGA_MolecularSubtype()
+### 8.TCGA_MolecularSubtype()
 
 ```r
 TCGA_MolecularSubtype(barcodes)
@@ -453,14 +451,14 @@ TCGA_MolecularSubtype(barcodes)
 MolSub <- TCGA_MolecularSubtype(Purity.barcodes)
 ```
 
-## 9.GDCquery_clinic下载临床数据
+### 9.GDCquery_clinic下载临床数据
 
 ```r
 ```
 
-# 二.数据下载
+## 二.数据下载
 
-## 1.下载临床数据
+### 1.下载临床数据
 
 ```r
 ##方式一
@@ -481,7 +479,7 @@ allInfo_clindata <- GDCquery_clinic("TCGA-LUAD",
                                     save.csv = F)
 ```
 
-## 2.转录组数据下载
+### 2.转录组数据下载
 
 ```r
 library(TCGAbiolinks)
@@ -522,7 +520,7 @@ dataSmNT <- TCGAquery_SampleTypes(barcode = sampCases,
                                   typesample = "NT")
 ```
 
-## 3.下载甲基化数据
+### 3.下载甲基化数据
 
 ```r
 #下载甲基化数据

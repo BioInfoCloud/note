@@ -1,6 +1,6 @@
 # TCGA数据库介绍
 
-# 一.TCGA基本介绍
+## 一.TCGA基本介绍
 
 肿瘤基因组图谱（TCGA）计划是由美国National Cancer Institute（NCI）和National Human Genome Research Institute（NHGRI）于2006年联合启动的项目，研究的癌症类型从最开始的多形性成胶质细胞瘤（GBM）到现在为止共有39种，涉及29种癌症器官，1万多个肿瘤样本，27万多份文件，当然其项目也将于2017年接近尾声。
 
@@ -71,7 +71,7 @@ WT	High-Risk Wilms Tumor	高危肾母细胞瘤
 | <br/>Plate | <br/>Order of plate in a sequence of 96-well plates | <br/>96孔序列中板的顺序，4个数字组成 |
 | <br/>Center | <br/>Sequencing or characterization center that will receive the aliquot for analysis | <br/>数据由哪个机构分析：如 01代表The Broad Institute GCC,更多见：[<u>Center</u>](https://www.omicsclass.com/article/1081) |
 
-# 二.分析TCGA的在线工具
+## 二.分析TCGA的在线工具
 
 1.Oncomine：[https://www.oncomine.org/resource/main.html](https://www.oncomine.org/resource/main.html)
 

@@ -2,11 +2,11 @@
 
 文章来源：<http://pymol.chenzhaoqiang.com/intro/startManual.html>
 
-# 入门教程
+## 入门教程
 
 主要讲述PyMOL中常见的图形界面（鼠标）操作
 
-## PyMOL软件界面介绍[](http://pymol.chenzhaoqiang.com/intro/startManual.html#pymol)
+### PyMOL软件界面介绍[](http://pymol.chenzhaoqiang.com/intro/startManual.html#pymol)
 
 PyMOL 软件界面如下图所示，主要由2部分组成。第一部分是菜单窗口和第二部分是显示窗口。 PyMOL2 和PyMOL1一个明显区别: 在PyMOL2中，这2部分默认是一个整体，在PyMOL1中这2部分是分开的。 在Display->Toggle Floating 可以拆分这2个窗口，快捷键是Ctrl+E, 刚开始PyMOL的界面主要是通过tkinter实现的，在PyMOL2中逐渐采用PyQT技术实现。 和PyMOL1 相比，PyMOL2 表现能力更强，功能更多，本教程以PyMOL2为例进行讲解，大部分 内容也适用于PyMOL1.
 
@@ -24,7 +24,7 @@ PyMOL 软件界面如下图所示，主要由2部分组成。第一部分是菜�
 
 本节教程是有顺序的。
 
-## PyMOL内置的超强可视化示例[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id2)
+### PyMOL内置的超强可视化示例[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id2)
 
 打开PyMOL,点击1.1菜单窗口的Wizard菜单，然后点击Demo->Representations 然后在2.3 对象窗口 和 2.4模式窗口之间会出现各种示例：
 
@@ -49,7 +49,7 @@ PyMOL 软件界面如下图所示，主要由2部分组成。第一部分是菜�
 
 从这些示例中，我们可以感受到PyMOL的强大表现能力。
 
-## 设置和查看工作路径[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id3)
+### 设置和查看工作路径[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id3)
 
 点击1.1菜单窗口 File->Working Directory->Change 可以查看现在的工作目录在哪里，也可以设置新的路径作为工作目录。
 
@@ -67,7 +67,7 @@ PyMOL 软件界面如下图所示，主要由2部分组成。第一部分是菜�
 
 这里我设置工作目录为 D:\PyMOLstartedManual
 
-## 下载蛋白[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id4)
+### 下载蛋白[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id4)
 
 从PDB网站上下载蛋白，如 4hbk.pdb, 也可以直接通过PyMOL 下载蛋白，点击菜单栏中的 File->Get PDB,如下图图所示, 在PDB ID 对应的框中填入PDB的编号就可以了，不要包含后缀.pdb 。
 
@@ -75,7 +75,7 @@ PyMOL 软件界面如下图所示，主要由2部分组成。第一部分是菜�
 
 点击Download，你会发现PyMOL会自动加载该蛋白，在工作路径 D:\PyMOLstartedManual 下面出现 4hbk.cif 文件，随着PDB解析的结构越来越大，PDB格式文件的局限性就暴露出来，不能超过9999个原子，因此正在逐渐用cif 格式取代pdb 格式。
 
-## 蛋白的展现形式(show)[](http://pymol.chenzhaoqiang.com/intro/startManual.html#show)
+### 蛋白的展现形式(show)[](http://pymol.chenzhaoqiang.com/intro/startManual.html#show)
 
 在2.3对象列表窗口中，我们可以看到现在有2个object 名字，
 
@@ -117,7 +117,7 @@ PyMOL 软件界面如下图所示，主要由2部分组成。第一部分是菜�
 
 观察该分子对象的不同形态,如图1所示。
 
-## 蛋白对象的简单平移、旋转、缩放[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id5)
+### 蛋白对象的简单平移、旋转、缩放[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id5)
 
 **首先将鼠标移动到2.1可视化窗口**
 
@@ -131,7 +131,7 @@ PyMOL 软件界面如下图所示，主要由2部分组成。第一部分是菜�
 * File->Reinitialize->Original Settings (推荐)
 * File->Reinitialize->Everything 注意的是该操作会删除当前所有的Object,
 
-## 蛋白对象的action操作[](http://pymol.chenzhaoqiang.com/intro/startManual.html#action)
+### 蛋白对象的action操作[](http://pymol.chenzhaoqiang.com/intro/startManual.html#action)
 
 对于4HBK体系里面没有小分子，一些相互作用操作不方便演示,我会在在后面进行更详细的讲解。
 
@@ -184,7 +184,7 @@ PyMOL 软件界面如下图所示，主要由2部分组成。第一部分是菜�
 
 ![1612063832157-d87e3e15-8188-4c17-af9f-2378945b4ca2.jpeg](./img/kEQtHCNxT2NP4E3v/1612063832157-d87e3e15-8188-4c17-af9f-2378945b4ca2-219908.jpeg)
 
-## 查看小分子和蛋白的氢键作用[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id6)
+### 查看小分子和蛋白的氢键作用[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id6)
 
 由于4hbk 蛋白中没有小分子，这里我以 PDB id: 为例演示。 点击 A->preset->ligand sites 效果如图所示，其中黄色的虚线就是氢键。
 
@@ -192,19 +192,19 @@ PyMOL 软件界面如下图所示，主要由2部分组成。第一部分是菜�
 
 查看小分子和蛋白的相互作用，推荐软件 schrodinger中ligand interaction。 制作相互作用的二维图，根据提示，然后再在pymol确认并绘制这些相互作用。
 
-## 蛋白对象的Hide操作[](http://pymol.chenzhaoqiang.com/intro/startManual.html#hide)
+### 蛋白对象的Hide操作[](http://pymol.chenzhaoqiang.com/intro/startManual.html#hide)
 
 和remove delete 操作相比，hide操作更加温和， 把不需要的东西暂时掩藏起来，通过Show 可以重现显示出来。 我们先上述方法，构建4hbk 和4hbk_02 两个object， 这一次把4hbk 设置成cyan 颜色的cartoon, 4hbk_02设置成green颜色的ribbon，如图所示。 如果要掩藏4hbk_02,有2种方法 - 对4hbk_02 点击H->ribbOn - 直接点击4hbk_02的名字
 
 ![1612063832107-fe765f2e-47a3-4b52-939a-c6c8e07a10b0.png](./img/kEQtHCNxT2NP4E3v/1612063832107-fe765f2e-47a3-4b52-939a-c6c8e07a10b0-644144.png)
 
-## 查看该结构的序列(Sequence)[](http://pymol.chenzhaoqiang.com/intro/startManual.html#sequence)
+### 查看该结构的序列(Sequence)[](http://pymol.chenzhaoqiang.com/intro/startManual.html#sequence)
 
 点击左下角的S，即可显示蛋白的序列信息，如图所示,再点击一次S，则掩藏序列信息。 S是单词Sequece的缩写。
 
 ![1612063833355-60bf8a05-015c-44c7-aefd-6012714d0067.png](./img/kEQtHCNxT2NP4E3v/1612063833355-60bf8a05-015c-44c7-aefd-6012714d0067-261875.png)
 
-## 选择蛋白的特定残基[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id7)
+### 选择蛋白的特定残基[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id7)
 
 我们通过软件 [D3Pockets](https://www.d3pharma.com/D3Pocket/page_upload.php) 可以确定4hbk中口袋中氨基酸残基的组成：
 
@@ -228,7 +228,7 @@ GLU183, HIS185, 185 207 208 209
 
 ![1612063833079-2047ee63-7760-4fde-a8b6-f930e7992ce8.png](./img/kEQtHCNxT2NP4E3v/1612063833079-2047ee63-7760-4fde-a8b6-f930e7992ce8-583101.png)
 
-## 蛋白对象的着色操作[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id8)
+### 蛋白对象的着色操作[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id8)
 
 pymol中内置了多种不同的着色方案,如图所示：
 
@@ -240,19 +240,19 @@ pymol中内置了多种不同的着色方案,如图所示：
 
 ![1612063832139-5010f88c-fccd-449a-b51b-c690489c751b.png](./img/kEQtHCNxT2NP4E3v/1612063832139-5010f88c-fccd-449a-b51b-c690489c751b-783071.png)
 
-## 设置背景颜色[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id9)
+### 设置背景颜色[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id9)
 
 背景颜色默认是黑色的，发表文章的时候背景颜色通常设置为白色。 | 点击菜单栏中的 Display->background->white 如图所示：
 
 ![1612063832555-89d6d098-1a7d-42f1-81b5-95b48e41ad7b.png](./img/kEQtHCNxT2NP4E3v/1612063832555-89d6d098-1a7d-42f1-81b5-95b48e41ad7b-572405.png)
 
-## 制作b-factor-value 图[](http://pymol.chenzhaoqiang.com/intro/startManual.html#b-factor-value)
+### 制作b-factor-value 图[](http://pymol.chenzhaoqiang.com/intro/startManual.html#b-factor-value)
 
 点击A->preset->b-factor putty， 如下图所示：
 
 ![1612063835057-244e8f79-778f-4cfb-ae27-249db202d7af.png](./img/kEQtHCNxT2NP4E3v/1612063835057-244e8f79-778f-4cfb-ae27-249db202d7af-520055.png)
 
-## 对象的Label操作[](http://pymol.chenzhaoqiang.com/intro/startManual.html#label)
+### 对象的Label操作[](http://pymol.chenzhaoqiang.com/intro/startManual.html#label)
 
 选择需要Label的对象 | 然后点击对象上的L按钮，根据需要，可以标记残基的名字，原子的名字，范德华半径、元素的名字等。
 
@@ -292,7 +292,7 @@ pymol中内置了多种不同的着色方案,如图所示：
 
 ![1612063832515-49d6c84b-f5c6-4d20-a3f4-14cd443e972d.png](./img/kEQtHCNxT2NP4E3v/1612063832515-49d6c84b-f5c6-4d20-a3f4-14cd443e972d-351793.png)
 
-## 移动标签label[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id10)
+### 移动标签label[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id10)
 
 以PDB ID: 1w22蛋白为例，为其中的锌离子添加标签。
 
@@ -314,7 +314,7 @@ step4 显示所有的object.
 
 [点击查看动画教程](http://pymol.chenzhaoqiang.com/_images/move_label2020-07-19_210947.166280.gif)
 
-## 调整配体的位置[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id12)
+### 调整配体的位置[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id12)
 
 pymol中包含配体和蛋白，如何调整配体和蛋白的相对位置。
 
@@ -332,7 +332,7 @@ step4 在edit模式下，按住shit 就可以通过鼠标移动配体。
 
 [点我查看教程动画](http://pymol.chenzhaoqiang.com/_images/move_ligand2020-07-19_213557.789218.gif)
 
-## 测量距离[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id14)
+### 测量距离[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id14)
 
 点击菜单栏中的Wizard->Measurement 就可以进行距离测量。然后分别选择两个2个原子就可以显示这2个原子的距离。
 
@@ -358,7 +358,7 @@ step4 在edit模式下，按住shit 就可以通过鼠标移动配体。
 
 ![1612063832046-4b6c67b5-f4d7-47f9-9df7-9576c73e3b9b.png](./img/kEQtHCNxT2NP4E3v/1612063832046-4b6c67b5-f4d7-47f9-9df7-9576c73e3b9b-557516.png)
 
-## 测量角度[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id15)
+### 测量角度[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id15)
 
 点击菜单栏中的Wizard->Measurement，打开measurement 面板，默认是测量距离的模式。
 
@@ -382,17 +382,17 @@ step4 在edit模式下，按住shit 就可以通过鼠标移动配体。
 
 ![1612063832077-47f6d0bf-570a-4e73-aaf7-437c2e5564f9.png](./img/kEQtHCNxT2NP4E3v/1612063832077-47f6d0bf-570a-4e73-aaf7-437c2e5564f9-981193.png)
 
-## 测量二面角[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id16)
+### 测量二面角[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id16)
 
 同测量距离和角度的操作，只需要将测量模式切换为Dihedrals。
 
-## 测量环的距离[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id17)
+### 测量环的距离[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id17)
 
 同测量距离和角度的操作，只需要将测量模式切换为Dihedrals。
 
 该模式是用来测量两个环中心的距离，所以选择的2个原子必须位于环上，如苯环、环己烷、N杂环等。否则将按照Distances模式进行处理。
 
-## 突变氨基酸残基[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id18)
+### 突变氨基酸残基[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id18)
 
 如把4hbk 中的arg-40 突变成 lys-40,
 
@@ -400,7 +400,7 @@ step4 在edit模式下，按住shit 就可以通过鼠标移动配体。
 
 ![1612063832845-2b44eb4a-c477-4869-b6b0-eb88de0d83a2.png](./img/kEQtHCNxT2NP4E3v/1612063832845-2b44eb4a-c477-4869-b6b0-eb88de0d83a2-893210.png)
 
-## 设置透明度[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id19)
+### 设置透明度[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id19)
 
 鼠标操作只能基于显示模式进行设置，如：cartoon surface sphere stick等
 
@@ -428,7 +428,7 @@ step4 在edit模式下，按住shit 就可以通过鼠标移动配体。
 | --- | --- |
 | ![1612063832143-170427d6-db01-4f4d-a58f-c2902d15cb63.png](./img/kEQtHCNxT2NP4E3v/1612063832143-170427d6-db01-4f4d-a58f-c2902d15cb63-621411.png)<br/>Fig 3. Multi-Layer(real time oit) | ![1612063831842-cdd3e3c2-00a6-4009-8a8d-1589767dea55.png](./img/kEQtHCNxT2NP4E3v/1612063831842-cdd3e3c2-00a6-4009-8a8d-1589767dea55-391737.png)<br/>Fig 4. Fast-ugly |
 
-## 雾化(fogging)处理[](http://pymol.chenzhaoqiang.com/intro/startManual.html#fogging)
+### 雾化(fogging)处理[](http://pymol.chenzhaoqiang.com/intro/startManual.html#fogging)
 
 PyMOL中支持各种雾化处理，保证depth_cue是开启的。
 
@@ -445,7 +445,7 @@ PyMOL中支持各种雾化处理，保证depth_cue是开启的。
 
 set depth_cue, 0
 
-## 设置不同的光照模式[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id20)
+### 设置不同的光照模式[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id20)
 
 PyMOL2 中内置5种不同的光照模式：default, metal(金属), plastic(塑料), rubber(橡胶), X-ray。
 
@@ -461,7 +461,7 @@ PyMOL2 中内置5种不同的光照模式：default, metal(金属), plastic(塑�
 | --- | --- |
 | ![light_rubber2020-05-10_134044.483192.png](./img/kEQtHCNxT2NP4E3v/1625550800516-19643903-7f57-48b2-a2f1-adfd59639f95-675982.png)<br/>Fig 3. Rubber光照效果 | ![light_xray2020-05-10_134048.345495.png](./img/kEQtHCNxT2NP4E3v/1625550804458-9db8df21-ae2d-4148-8afc-54152e14ac01-991499.png)<br/>Fig 4. Xray光照效果 |
 
-## 选择模式：[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id21)
+### 选择模式：[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id21)
 
 根据不同的需求，切换到不同的选择模式，快速选择自己想要的原子：
 
@@ -497,7 +497,7 @@ chain模式：我们点击的是硫原子，硫原子所在的chain A,因此选�
 
 mol 模式： 我们点击的是硫原子，pymol 中是通过共价键来区分是否属于一个分子，4hbk 蛋白中间缺失了部分残基，整个蛋白分成了2部分。这里选择的是硫原子所在的那一部分。
 
-## 保存或者导出结果[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id22)
+### 保存或者导出结果[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id22)
 
 PyMOL 和 PhotoShop 有点类似，PyMOL中的Object 类似于 PhotoShop中的图层。
 
@@ -513,7 +513,7 @@ PyMOL 和 PhotoShop 有点类似，PyMOL中的Object 类似于 PhotoShop中的�
 
 set export_pse_version,0.99
 
-## 删除蛋白的一条链，然后保存为pdb[](http://pymol.chenzhaoqiang.com/intro/startManual.html#pdb)
+### 删除蛋白的一条链，然后保存为pdb[](http://pymol.chenzhaoqiang.com/intro/startManual.html#pdb)
 
 step1. 切换到chain模式
 
@@ -521,7 +521,7 @@ step2. 点击需要需要删除的Chain就可以选中chain
 
 step3. 对新产生的sele object进行删除。
 
-# 基础教程[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#intro-basicmanual)
+## 基础教程[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#intro-basicmanual)
 
 主要讲述PyMOL常见的命令操作。
 
@@ -529,7 +529,7 @@ step3. 对新产生的sele object进行删除。
 
 1.本节教程是有顺序的。 2.建议先阅读入门教程，再阅读基础教程。 3.所有的命令都支持tab键补全，提高效率。 4. 主要的示例以Bace-1蛋白6EQM为例，里面含有配体小分子BUH。
 
-## 命令输入窗口[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id2)
+### 命令输入窗口[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id2)
 
 PyMOL中有2个地方可供命令输入，如下图所示，根据自己的爱好，选择一处输入命令就可以了。
 
@@ -537,7 +537,7 @@ PyMOL中有2个地方可供命令输入，如下图所示，根据自己的爱�
 
 笔者倾向于使用命令框1，下面我将讲解一些常用的命令：
 
-## 查看切换工作路径(pwd)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#pwd)
+### 查看切换工作路径(pwd)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#pwd)
 
 默认打开和保存文件，都是在工作路径中。因此设定合适的工作路径，可以提供效率。 建议分子文件格式，如mol2,pdb等格式，全部关联到PyMOL软件，不要关联到DS，Maestro等软件。
 
@@ -550,7 +550,7 @@ PyMOL中有2个地方可供命令输入，如下图所示，根据自己的爱�
 
 ![1612063966655-fbec5f6f-6dfd-47a9-9b67-48253eaf5ddf.png](./img/kEQtHCNxT2NP4E3v/1612063966655-fbec5f6f-6dfd-47a9-9b67-48253eaf5ddf-884089.png)
 
-## 下载蛋白(fetch)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#fetch)
+### 下载蛋白(fetch)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#fetch)
 
 fetch 命令可以根据PDB ID编号下载蛋白结构到工作路径，并载入到PyMOL中显示,在PyMOL中的object的名字默认是PDB ID,可通过name参数进行修改。 从PyMOL 1.8开始，默认的格式是cif,可通过type参数修改文件的格式，也支持根据配体ligand ID的编号下载小分子。
 
@@ -572,7 +572,7 @@ set fetch_host,pdb set fetch_host,pdbe set fetch_host,pdbj
 
 pdb 数据库有2个镜像库，一个是欧洲的pbde,另一个是日本的pdbj。 如果其中一个源不能使用的时候，可以尝试切换到其他源。
 
-## 载入蛋白（load）[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#load)
+### 载入蛋白（load）[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#load)
 
 从PDB网站上下载蛋白，如 4hbk.pdb。 工作路径中已经存在PDB文件，如4hbk.pdb。 可通过load 命令进行加载。 命令：
 
@@ -580,13 +580,13 @@ load 4hbk.pdb load filename.pdb
 
 load 和 fetch 的区别，load 是指定文件的名字，而fetch是分子的ID号。
 
-## 设置背景颜色（bg_color）[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#bg-color)
+### 设置背景颜色（bg_color）[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#bg-color)
 
 设置背景颜色为白色：
 
 bg_color white
 
-## 设置surface的颜色（cartoon_color）[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#surface-cartoon-color)
+### 设置surface的颜色（cartoon_color）[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#surface-cartoon-color)
 
 设置surface的颜色为red
 
@@ -604,7 +604,7 @@ color blue
 
 unset surface_color
 
-## 绘制蛋白截面图clip[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#clip)
+### 绘制蛋白截面图clip[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#clip)
 
 需要ray后才能看到截面的效果。
 
@@ -620,13 +620,13 @@ ray
 
 ![1612063966668-e724ebed-9560-4dbc-b0d7-dd53a7e6ec40.png](./img/kEQtHCNxT2NP4E3v/1612063966668-e724ebed-9560-4dbc-b0d7-dd53a7e6ec40-398898.png)
 
-## 设置截面的颜色[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id3)
+### 设置截面的颜色[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id3)
 
 set ray_interior_color, grey
 
 set ray_interior_color, grey,obj01
 
-## 开关单双键模式 valence[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#valence)
+### 开关单双键模式 valence[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#valence)
 
 set valence,1 开启双键模式。
 
@@ -639,7 +639,7 @@ set valence,0 关闭双键模式。
 | ![buh_val1.png](./img/kEQtHCNxT2NP4E3v/1760087645747-f57d1f32-f6ed-460e-a3b4-0e490f4296d9-370148.png)<br/>Fig 1. 双键模式 | ![buh_val0.png](./img/kEQtHCNxT2NP4E3v/1760087645689-a576e434-8d18-4aef-b0bd-23ae133ce0e2-130504.png)<br/>Fig 2. 普通模式 |
 | --- | --- |
 
-## 开启球棍模型ball-stick[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#ball-stick)
+### 开启球棍模型ball-stick[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#ball-stick)
 
 set stick_ball,1
 
@@ -651,7 +651,7 @@ as stick
 
 ![1612063966689-719c19f7-ad8b-4e85-8d8a-fdaff639d9de.png](./img/kEQtHCNxT2NP4E3v/1612063966689-719c19f7-ad8b-4e85-8d8a-fdaff639d9de-511460.png)
 
-## 开启球棍模型ball-stick[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id4)
+### 开启球棍模型ball-stick[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id4)
 
 点击 Action -> preset -> ball and stick
 
@@ -659,7 +659,7 @@ as stick
 
 ![1612063966693-1a35f340-4308-45d0-82fa-2ff65de1dd78.png](./img/kEQtHCNxT2NP4E3v/1612063966693-1a35f340-4308-45d0-82fa-2ff65de1dd78-547536.png)
 
-## 设置相互作用的样式[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id5)
+### 设置相互作用的样式[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id5)
 
 1. 怎么像这样把相互作用的线调粗？
 
@@ -673,17 +673,17 @@ set dash_gap,0
 
 set dash_length, 0.8
 
-## 保存图片（png)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#png)
+### 保存图片（png)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#png)
 
 png filename.png 我建议使用该命令进行快捷保存图片
 
 下面我将以Bace-1蛋白6EQM为例，里面含有配体小分子BUH。
 
-## 高清图片（ray）[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#ray)
+### 高清图片（ray）[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#ray)
 
 制作高清图片， 制作完图片后输入ray命令，然后保存图片。
 
-## 设置两个光源 two_sided_lighting[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#two-sided-lighting)
+### 设置两个光源 two_sided_lighting[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#two-sided-lighting)
 
 set two_sided_lighting,1
 
@@ -693,11 +693,11 @@ set two_sided_lighting,1
 
 使用上述命令，设置两个光源就可以消除黑洞现象。
 
-## 批量修改氨基酸残基的编号[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id6)
+### 批量修改氨基酸残基的编号[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id6)
 
 使得残基的编号增加61。 alter (all),resi=str(int(resi)+61); sort;
 
-## 设置label的小数位数[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#label)
+### 设置label的小数位数[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#label)
 
 默认距离和角度是1位，通过下面命令可以修改，显示的位数。
 
@@ -709,7 +709,7 @@ set label_dihedral_digits,2
 
 set label_angle_digits, 2
 
-## 设置label的字体大小[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id7)
+### 设置label的字体大小[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id7)
 
 label字体的默认大小是14pt, 单位是pt。
 
@@ -719,13 +719,13 @@ set label_size,20
 
 set label_size,-1.2
 
-## 删除object[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#object)
+### 删除object[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#object)
 
 delete objectName
 
 delete all
 
-## 保存object[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id8)
+### 保存object[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id8)
 
 cmd.save(filename\[, selection\[, state\[, format]]])
 
@@ -737,19 +737,19 @@ Save: wrote “01.pdb”.
 
 PyMOL>cmd.save(“0.pdb”,”ONLYprotein”)
 
-## 掩藏object-disable[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#object-disable)
+### 掩藏object-disable[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#object-disable)
 
 disable objectName
 
-## 掩藏representation[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#representation)
+### 掩藏representation[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#representation)
 
 hide stick hide cartoon
 
-## 切换编辑模式[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id9)
+### 切换编辑模式[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id9)
 
 edit_mode
 
-## 计算phi-psi角度[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#phi-psi)
+### 计算phi-psi角度[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#phi-psi)
 
 phi_psi objectName phi_psi selection
 
@@ -757,7 +757,7 @@ phi_psi 4hbk phi_psi resi 100
 
 ***
 
-## 蛋白的展现形式(show,as)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#show-as)
+### 蛋白的展现形式(show,as)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#show-as)
 
 命令如下:
 
@@ -777,7 +777,7 @@ as stick,resn arg
 
 示例讲解： 打开pymol, 依次执行下面命令。 1. cd d:PyMOLstartedManualpse 切换到工作路径 2. fetch 6EQM 下载蛋白 3.
 
-## 调整 mesh 粗细[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#mesh)
+### 调整 mesh 粗细[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#mesh)
 
 set mesh_radius,0.2
 
@@ -785,13 +785,13 @@ ray
 
 ray 方可看到调整后的状态。
 
-## 设置双键的显示形式 valence[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id10)
+### 设置双键的显示形式 valence[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id10)
 
 set valence, 0  #关闭双键显示
 
 set valence, 1  #开启双键显示
 
-## 设置小球的大小 sphere_scale[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#sphere-scale)
+### 设置小球的大小 sphere_scale[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#sphere-scale)
 
 默认sphere_scale 是1，通过调整sphere_scale来调整 小球的大小
 
@@ -799,11 +799,11 @@ set sphere_scale,0.5
 
 ![1612063967419-8b129ec1-16f6-4004-a94e-3d3d461fd4bf.png](./img/kEQtHCNxT2NP4E3v/1612063967419-8b129ec1-16f6-4004-a94e-3d3d461fd4bf-727381.png)
 
-## 重新计算二级结构(dss)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#dss)
+### 重新计算二级结构(dss)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#dss)
 
 dss
 
-## 选择中的关键词和缩略[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id11)
+### 选择中的关键词和缩略[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id11)
 
 1. organic org. Non-polymer organic compounds (e.g. ligands, buffers)
 2. inorganic ino. Non-polymer inorganic atoms/ions
@@ -820,7 +820,7 @@ dss
 13. donors don. Hydrogen bond donor atoms
 14. acceptors acc. Hydrogen bond acceptor atoms
 
-## cartoon 模式[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#cartoon)
+### cartoon 模式[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#cartoon)
 
 pymol 中内置了10种cartoon 模式：
 
@@ -839,7 +839,7 @@ pymol 中内置了10种cartoon 模式：
 
 > cartoon loop cartoon tube cartoon putty
 
-## cartoon helix 模式[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#cartoon-helix)
+### cartoon helix 模式[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#cartoon-helix)
 
 在cartoon automaic 模式下 pymol 中内置了3种cartoon helix模式：
 
@@ -871,7 +871,7 @@ set cartoon_cylindrical_helices, 0
 
 ![1612063967429-2fd0c391-c19c-4c26-b919-45460c48fb2b.png](./img/kEQtHCNxT2NP4E3v/1612063967429-2fd0c391-c19c-4c26-b919-45460c48fb2b-912898.png)
 
-## 定义fancy 和default模式下的α-helix[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#fancy-default-helix)
+### 定义fancy 和default模式下的α-helix[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#fancy-default-helix)
 
 命令：
 
@@ -883,15 +883,15 @@ set cartoon_oval_width , 0.2  # default is 0.25
 
 ![1612063966955-5181c859-aa0e-4e5a-83a9-b7c7ff3f9133.png](./img/kEQtHCNxT2NP4E3v/1612063966955-5181c859-aa0e-4e5a-83a9-b7c7ff3f9133-014098.png)
 
-## 着色(color)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#color)
+### 着色(color)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#color)
 
 color red,object name
 
-## 设置透明度(transparency)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#transparency)
+### 设置透明度(transparency)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#transparency)
 
 所有的命令
 
-## 选择，残基(select)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#select)
+### 选择，残基(select)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#select)
 
 选择所有的碳原子： select catoms, elem C
 
@@ -903,11 +903,11 @@ color red,object name
 
 选择DNA: select dna, (nucleic & !rna)
 
-## 查看蛋白中的二硫键[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id12)
+### 查看蛋白中的二硫键[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id12)
 
 show sticks, (cys/ca+cb+sg) and byres (cys/sg and bound_to cys/sg)
 
-## 显示蛋白的口袋的静电势表面[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id13)
+### 显示蛋白的口袋的静电势表面[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id13)
 
 step1. 显示整个蛋白蛋白的静电势表面；A->generate->vacuum electrostatic->potential
 
@@ -927,11 +927,11 @@ step5 切换为溶剂可接触表面
 
 set surface_solvent, 1
 
-## 删除配体分子5A以外的水分子[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#a)
+### 删除配体分子5A以外的水分子[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#a)
 
 remove resn hoh and (resi 307 gap 5)
 
-## 叠合两个object(super)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#object-super)
+### 叠合两个object(super)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#object-super)
 
 参考： <https://pymolwiki.org/index.php/Super>
 
@@ -954,7 +954,7 @@ super p1 & alt A+'', p2 & alt B+''
 
 super obj03  & resi 2-191 & chain K, obj04  & resi 2-191 & chain C
 
-## 分组（group)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#group)
+### 分组（group)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#group)
 
 group efHand, 1cll 1ggz 1sra
 
@@ -970,11 +970,11 @@ group surf, *_e_*
 
 group target,surf
 
-## 排序object (order)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#object-order)
+### 排序object (order)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#object-order)
 
 order object
 
-## 颜色的名字[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id14)
+### 颜色的名字[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id14)
 
 PyMOL 中内置超过<code>100种颜色 <[https://pymolwiki.org/index.php/Color_Values](https://pymolwiki.org/index.php/Color_Values)></code>\_，
 
@@ -1046,7 +1046,7 @@ yellow        1.0     1.0     0.0
 
 yelloworange  1.0     0.87    0.37
 
-## 设置二级结构的颜色[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id15)
+### 设置二级结构的颜色[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id15)
 
 PyMOL中内置了3种二级结构着色策略。
 
@@ -1080,11 +1080,11 @@ PyMOL>color grey,ss l+''
 
 PyMOL>color teal,ss h
 
-## 设置颜色 (set xx_color)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#set-xx-color)
+### 设置颜色 (set xx_color)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#set-xx-color)
 
 set
 
-# 进阶教程[](http://pymol.chenzhaoqiang.com/intro/mediaManual.html#intro-startmanual)
+## 进阶教程[](http://pymol.chenzhaoqiang.com/intro/mediaManual.html#intro-startmanual)
 
 主要讲述如何用PyMOL 绘制精美图片的案例，以及制作动画。
 
@@ -1092,13 +1092,13 @@ set
 
 动画更加形象生动，做PPT的时候加入一些动画，更能引起听众的兴趣和注意力！
 
-## 简单规则[](http://pymol.chenzhaoqiang.com/intro/mediaManual.html#id2)
+### 简单规则[](http://pymol.chenzhaoqiang.com/intro/mediaManual.html#id2)
 
 对于缺少美感的人来说，如何绘制精美图片，有如下规则和方法： 1. 参考文献中图片，进行绘制 2. 文献中蛋白的颜色通常设置为灰白色。 3. 氢原子往往掩藏，尤其是非极性氢原子。
 
 如何制作动画，有如下规则： 1. 平时注意积累动画库 2. 模仿别人制作的动画
 
-### 安装ffmpeg方便直接导出mp4 和 gif 格式[](http://pymol.chenzhaoqiang.com/intro/mediaManual.html#ffmpegmp4-gif)
+#### 安装ffmpeg方便直接导出mp4 和 gif 格式[](http://pymol.chenzhaoqiang.com/intro/mediaManual.html#ffmpegmp4-gif)
 
 安装方法一：
 
@@ -1110,7 +1110,7 @@ set
 
 \*\*>>> \*\*conda install -c menpo ffmpeg
 
-### 制作分子对接示例动画[](http://pymol.chenzhaoqiang.com/intro/mediaManual.html#id3)
+#### 制作分子对接示例动画[](http://pymol.chenzhaoqiang.com/intro/mediaManual.html#id3)
 
 1. 准备材料(选定蛋白体系，配体)
 2. 分子对接，保留制作动画用的配体小分子构象
@@ -1174,7 +1174,7 @@ mplay
 
 ![1ki2_dock.gif](./img/kEQtHCNxT2NP4E3v/1793506696191-25abeb83-28b8-4628-90b4-f17f3890d7e9-753653.gif)
 
-### 制作小分子进入蛋白口袋的动画[](http://pymol.chenzhaoqiang.com/intro/mediaManual.html#id6)
+#### 制作小分子进入蛋白口袋的动画[](http://pymol.chenzhaoqiang.com/intro/mediaManual.html#id6)
 
 > 这次我主要通过保存关键的frame 进行制作。
 >
@@ -1198,11 +1198,11 @@ mplay 播放动画。
 
 注意： 这种方法不能改变蛋白的形态。
 
-# 高级教程[](http://pymol.chenzhaoqiang.com/intro/advanceManual.html#intro-startmanual)
+## 高级教程[](http://pymol.chenzhaoqiang.com/intro/advanceManual.html#intro-startmanual)
 
 主要讲述PyMOL中脚本的编写、命令的自定义、插件的编写。
 
-## PyMOL脚本、命令、插件[](http://pymol.chenzhaoqiang.com/intro/advanceManual.html#pymol)
+### PyMOL脚本、命令、插件[](http://pymol.chenzhaoqiang.com/intro/advanceManual.html#pymol)
 
 PyMOL支持Python 编程语言，故可以借助python让pymol无所不能，pymol除了显示软件，也能成为计算软件。
 
@@ -1212,7 +1212,7 @@ PyMOL支持Python 编程语言，故可以借助python让pymol无所不能，pym
 
 编写PyMOL脚本、命令、插件，需要有一定的python基础。python教程：HOW2PY
 
-### 安装PyMOLwiki中的命令[](http://pymol.chenzhaoqiang.com/intro/advanceManual.html#pymolwiki)
+#### 安装PyMOLwiki中的命令[](http://pymol.chenzhaoqiang.com/intro/advanceManual.html#pymolwiki)
 
 这里我以这个命令 [`FocalBlur<https://pymolwiki.org/index.php/FocalBlur>`\_](http://pymol.chenzhaoqiang.com/intro/advanceManual.html#id8) 为例进行演示。
 
@@ -1230,7 +1230,7 @@ FocalBlur一共有5个参数：
 
 该命名和单反的光圈相关，控制景深的。 **需要开启ray=1 才能看到光圈景深的效果**
 
-### 命令[](http://pymol.chenzhaoqiang.com/intro/advanceManual.html#id2)
+#### 命令[](http://pymol.chenzhaoqiang.com/intro/advanceManual.html#id2)
 
 这里我举一个例子: 计算两个苯环之间的距离或者五元环和苯环之间的距离。
 
@@ -1252,7 +1252,7 @@ FocalBlur一共有5个参数：
 
 ![1612064412659-e37e2d23-6a0c-4332-8b21-f263e6f2e6ed.png](./img/kEQtHCNxT2NP4E3v/1612064412659-e37e2d23-6a0c-4332-8b21-f263e6f2e6ed-630438.png)
 
-### 显示蛋白残基之间的盐桥[](http://pymol.chenzhaoqiang.com/intro/advanceManual.html#id3)
+#### 显示蛋白残基之间的盐桥[](http://pymol.chenzhaoqiang.com/intro/advanceManual.html#id3)
 
 思路：
 
@@ -1304,7 +1304,7 @@ PyMOL>show_saltbridge
 
 两个氨基酸之间存在黄色虚线，说明这个氨基酸存在盐桥。
 
-### 把蛋白装入盒子中，并可视化长宽高[](http://pymol.chenzhaoqiang.com/intro/advanceManual.html#id4)
+#### 把蛋白装入盒子中，并可视化长宽高[](http://pymol.chenzhaoqiang.com/intro/advanceManual.html#id4)
 
 计算蛋白的长宽高，并可视化。 下载脚本(右击另存为) <code>[addproteinBox.py](http://pymol.chenzhaoqiang.com/_downloads/addproteinBox2020-05-12_232157.616761.py)</code> 。
 
@@ -1316,7 +1316,7 @@ PyMOL>add_proteinbox 4hbk
 
 ![1612064412670-1acc95cd-1f63-4b8a-be24-10a53d4954ad.png](./img/kEQtHCNxT2NP4E3v/1612064412670-1acc95cd-1f63-4b8a-be24-10a53d4954ad-407730.png)
 
-### 左下角显示XYZ坐标[](http://pymol.chenzhaoqiang.com/intro/advanceManual.html#xyz)
+#### 左下角显示XYZ坐标[](http://pymol.chenzhaoqiang.com/intro/advanceManual.html#xyz)
 
 VMD左下角默认会显示XYZ坐标，PyMOL也可以做到。 下载脚本(右击另存为) <code>[axes.py](http://pymol.chenzhaoqiang.com/_downloads/axes.py)</code> 。
 
@@ -1328,7 +1328,7 @@ PyMOL>axes
 
 ![1612064412485-57f8e9f6-ce17-41d6-930f-e7ba01b516ec.png](./img/kEQtHCNxT2NP4E3v/1612064412485-57f8e9f6-ce17-41d6-930f-e7ba01b516ec-401721.png)
 
-### 加载坐标颜色文件[](http://pymol.chenzhaoqiang.com/intro/advanceManual.html#id5)
+#### 加载坐标颜色文件[](http://pymol.chenzhaoqiang.com/intro/advanceManual.html#id5)
 
 文件(test.xyzrgb)格式如下
 
@@ -1346,7 +1346,7 @@ PyMOL>loadxyzrgb test.xyzrgb
 
 ![1612064412714-5ecda3bf-3997-45dc-8937-a784b380575b.png](./img/kEQtHCNxT2NP4E3v/1612064412714-5ecda3bf-3997-45dc-8937-a784b380575b-304239.png)
 
-### 提取配体周围的位点[](http://pymol.chenzhaoqiang.com/intro/advanceManual.html#id6)
+#### 提取配体周围的位点[](http://pymol.chenzhaoqiang.com/intro/advanceManual.html#id6)
 
 **from** **pymol** **import** cmd
 
@@ -1406,7 +1406,7 @@ ligid = 'KJK'
 
 extractSiteByLig(pdbid,ligid)
 
-### PyMol的宏录制[](http://pymol.chenzhaoqiang.com/intro/advanceManual.html#id7)
+#### PyMol的宏录制[](http://pymol.chenzhaoqiang.com/intro/advanceManual.html#id7)
 
 点击 File->Log File-> Open File 填写宏的名字 xxx.pml 然后操作PyMOL， 操作完成后点击 File->Log File-> close; 文本编辑器（如vscode）打开宏文件就可以查看里面的命令。
 

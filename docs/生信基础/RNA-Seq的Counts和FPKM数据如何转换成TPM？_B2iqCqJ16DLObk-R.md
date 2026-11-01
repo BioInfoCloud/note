@@ -1,11 +1,6 @@
 # RNA-Seq的Counts和FPKM数据如何转换成TPM？
 
-我们做转录组分析，得到的数据通常是raw counts 的数据，raw counts 的数据有很多R包进行归一化。
-在TCGA数据库中下载的RNA-Seq的数据就有2种形式，raw counts 和FPKM，**尽管有很多文章是直接利用FPKM进行分析的**，但是FPKM存在不准确性，通常我们会使用TPM。
-关于什么是FPKM？
-什么是TPM？
-我在前面的文章中就有介绍：[**RNA-seq的counts,RPM, RPKM, FPK值到底有什么区别？**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264575&idx=2&sn=69b45012dbfe61d7574446de00ec9a7b&chksm=841ef242b3697b54484a64f82bba4372a8fb2b4d411b1c1fc2bc68d12aa44756f96c3b8e48f5&scene=21#wechat_redirect)。
-这里再简单回归一下：
+我们做转录组分析，得到的数据通常是raw counts 的数据，raw counts 的数据有很多R包进行归一化。在TCGA数据库中下载的RNA-Seq的数据就有2种形式，raw counts 和FPKM，**尽管有很多文章是直接利用FPKM进行分析的**，但是FPKM存在不准确性，通常我们会使用TPM。关于什么是FPKM？什么是TPM？我在前面的文章中就有介绍：[**RNA-seq的counts,RPM, RPKM, FPK值到底有什么区别？**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264575&idx=2&sn=69b45012dbfe61d7574446de00ec9a7b&chksm=841ef242b3697b54484a64f82bba4372a8fb2b4d411b1c1fc2bc68d12aa44756f96c3b8e48f5&scene=21#wechat_redirect)。这里再简单回归一下：
 
 **count：**原始测序得到的count数就是比对到某个基因i上的总数目；不知道大家是否了解测序的简单过程？在测序分析过程中，我们首先是将测得的短reads比对到参考基因组上，然后通过软件来计算该片段上比对到reads的数量，也就是说呢，count是一个整数值。
 

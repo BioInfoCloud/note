@@ -219,7 +219,7 @@ prefetch -h
 
 3) prefectch命令下载数据
 
-# prefetch下载的数据在home目录下的ncbi目录里。
+## prefetch下载的数据在home目录下的ncbi目录里。
 
 prefetch SRR5933808  &     #下载单个SRA文件
 
@@ -229,11 +229,11 @@ prefetch --option-file SRR_Acc_List.txt  #下载多个SRA文件
 
 fastq-dump --gzip --split-3 SRR5933808.sra
 
-# 也可以直接使用fastq-dump下载数据，下载之后直接即使fastq格式。
+## 也可以直接使用fastq-dump下载数据，下载之后直接即使fastq格式。
 
-# 不过还是选择prefetch比较好，因为sra数据格式比fastq格式占用空间较小，下载速度快；另一方面，sra也方便断点续传。
+## 不过还是选择prefetch比较好，因为sra数据格式比fastq格式占用空间较小，下载速度快；另一方面，sra也方便断点续传。
 
-# 直接利用fastq-dump下载数据
+## 直接利用fastq-dump下载数据
 
 fastq-dump --split-files SRR5933808 SRR5933808/
 

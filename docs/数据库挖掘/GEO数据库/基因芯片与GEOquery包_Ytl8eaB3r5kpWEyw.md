@@ -1,24 +1,10 @@
 # 基因芯片与GEOquery包
 
-关于芯片数据分析，我们之前的文章：[基因芯片数据挖掘分析表达差异基因](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263385&idx=1&sn=63528ffd7901f36387cd4f484c99e188&chksm=841ef5e4b3697cf28e4590d3509be675bc5d44fe1a1cb6f54fe6ad5cc419139c8720a5fb299d&scene=21#wechat_redirect)中也介绍过芯片的基础知识，这里我们将使用R系统性的讲解芯片的数据分析。
-不想用R语言的可以阅读文章：[GEO数据库使用教程及在线数据分析工具](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263601&idx=1&sn=443d0dddebb12f21cfd976d50473856b&chksm=841ef60cb3697f1aecc6c310ee3a77e6182a728d5b6711a5cc8f49f0739feaba904f565ce176&scene=21#wechat_redirect)，因为NCBI的GEO数据库([<u>https://www.ncbi.nlm.nih.gov/geo/</u>](https://www.ncbi.nlm.nih.gov/geo/))，ArrayExpress数据库([<u>https://www.ebi.ac.uk/arrayexpress/</u>](https://www.ebi.ac.uk/arrayexpress/))，和TCGA数据库([<u>https://cancergenome.nih.gov/</u>](https://cancergenome.nih.gov/))等等，记录和储存着大量芯片相关的数据，其中GEO数据库是目前最大最全的数据库，可供科研人员查询和下载相关数据。
-我们还有TCGA数据库的使用教程：[TCGA数据库使用教程](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263330&idx=1&sn=ff440567bbacae48dd41fb3d1daa8751&chksm=841ef51fb3697c098f2c84276930d46884bcb51663f11f2c1c01d822427fed9c4a5c7fe0cf2c&scene=21#wechat_redirect)。
-可供初学者学习，我们之前也有TCGA数据挖掘的系列教程，读者可关注本公众号，通过菜单栏找到相应的课程学习，也可通过我们的网站查询（公众号后台有网址）。
-从本文开始，我们将系列性讲解基因芯片数据分析，下面简单对基因芯片的知识进行简单的概述，作为前面文章的一个补充。
+关于芯片数据分析，我们之前的文章：[基因芯片数据挖掘分析表达差异基因](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263385&idx=1&sn=63528ffd7901f36387cd4f484c99e188&chksm=841ef5e4b3697cf28e4590d3509be675bc5d44fe1a1cb6f54fe6ad5cc419139c8720a5fb299d&scene=21#wechat_redirect)中也介绍过芯片的基础知识，这里我们将使用R系统性的讲解芯片的数据分析。不想用R语言的可以阅读文章：[GEO数据库使用教程及在线数据分析工具](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263601&idx=1&sn=443d0dddebb12f21cfd976d50473856b&chksm=841ef60cb3697f1aecc6c310ee3a77e6182a728d5b6711a5cc8f49f0739feaba904f565ce176&scene=21#wechat_redirect)，因为NCBI的GEO数据库([<u>https://www.ncbi.nlm.nih.gov/geo/</u>](https://www.ncbi.nlm.nih.gov/geo/))，ArrayExpress数据库([<u>https://www.ebi.ac.uk/arrayexpress/</u>](https://www.ebi.ac.uk/arrayexpress/))，和TCGA数据库([<u>https://cancergenome.nih.gov/</u>](https://cancergenome.nih.gov/))等等，记录和储存着大量芯片相关的数据，其中GEO数据库是目前最大最全的数据库，可供科研人员查询和下载相关数据。我们还有TCGA数据库的使用教程：[TCGA数据库使用教程](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263330&idx=1&sn=ff440567bbacae48dd41fb3d1daa8751&chksm=841ef51fb3697c098f2c84276930d46884bcb51663f11f2c1c01d822427fed9c4a5c7fe0cf2c&scene=21#wechat_redirect)。可供初学者学习，我们之前也有TCGA数据挖掘的系列教程，读者可关注本公众号，通过菜单栏找到相应的课程学习，也可通过我们的网站查询（公众号后台有网址）。从本文开始，我们将系列性讲解基因芯片数据分析，下面简单对基因芯片的知识进行简单的概述，作为前面文章的一个补充。
 
 ## 基因芯片概述
 
-简单地讲，基因芯片就是一系列微小特征序列的（通常是DNA探针，也可能是蛋白质）的集合，它们可以被用于定性或者定量检查样品内特异分子的成份。
-比如说，基因芯片可以检测几十个gene marker在细胞样品中的表达量。
-现在最常见的是用于整个基因组的表达量分析。
-它的雏形来自于同位素杂交技术，又如Southern blots或者dot blots。
-在上世纪九十年代，2维的具有现代意义的基因芯片才在实验室里诞生。
-基因芯片自问世以来，已经有超过23年（至2014年）了。
-现在，世界上主流的芯片制造商有4家，分别是Affymetrix，Agilent，Nimblegen以及Illumina。
-下图为历年来提交至Gene Expression Omnibus数据库的主流芯片厂商的芯片数据统计分布图（数据截止日期为2014年3月1日）。
-从下图中可以看出，Affymetrix制造的基因芯片在2008年以前占据了市场的主流，在2008年，因为illumina BeadArray的推广，它的市场份额有较大的攀升，但是2年以后就下降至与Affymetrix公司类似的份额。
-而Agilent却在2010年以后成为芯片市场份额最大的一家。
-市场份额的变化有价格的因素，质量的因素，使用习惯的因素，也有受到第二代测序技术冲击的因素。
+简单地讲，基因芯片就是一系列微小特征序列的（通常是DNA探针，也可能是蛋白质）的集合，它们可以被用于定性或者定量检查样品内特异分子的成份。比如说，基因芯片可以检测几十个gene marker在细胞样品中的表达量。现在最常见的是用于整个基因组的表达量分析。它的雏形来自于同位素杂交技术，又如Southern blots或者dot blots。在上世纪九十年代，2维的具有现代意义的基因芯片才在实验室里诞生。基因芯片自问世以来，已经有超过23年（至2014年）了。现在，世界上主流的芯片制造商有4家，分别是Affymetrix，Agilent，Nimblegen以及Illumina。下图为历年来提交至Gene Expression Omnibus数据库的主流芯片厂商的芯片数据统计分布图（数据截止日期为2014年3月1日）。从下图中可以看出，Affymetrix制造的基因芯片在2008年以前占据了市场的主流，在2008年，因为illumina BeadArray的推广，它的市场份额有较大的攀升，但是2年以后就下降至与Affymetrix公司类似的份额。而Agilent却在2010年以后成为芯片市场份额最大的一家。市场份额的变化有价格的因素，质量的因素，使用习惯的因素，也有受到第二代测序技术冲击的因素。
 
 ![1612929683395-0ba54962-1a99-4e9b-8ff5-58c017ddac83.webp](./img/Ytl8eaB3r5kpWEyw/1612929683395-0ba54962-1a99-4e9b-8ff5-58c017ddac83-637789.webp)
 

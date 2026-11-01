@@ -28,8 +28,7 @@ title: 在macOS上用VSCode配置Python环境的一种思路
 
 那么如何安装呢？有两种方式。
 
-苹果的开发集成工具是`Xcode.app`，其中就带着`Command Line Tools`，安装了`Xcode`相当于安装了`Command Line Tools`，那么我们可以直接在`App Store`下载`Xcode`。不过你打开一看，12G！！太大了吧。
-`Command Line Tools`不过400MB多一点。如果你不从事苹果平台的软件开发，不需要使用`Xcode`，下载`Xcode`这么大的东西占电脑的存储空间，实在划不来。不过如果你已经安装了`Xcode`，那已经可以跳过这一步了。
+苹果的开发集成工具是`Xcode.app`，其中就带着`Command Line Tools`，安装了`Xcode`相当于安装了`Command Line Tools`，那么我们可以直接在`App Store`下载`Xcode`。不过你打开一看，12G！！太大了吧。`Command Line Tools`不过400MB多一点。如果你不从事苹果平台的软件开发，不需要使用`Xcode`，下载`Xcode`这么大的东西占电脑的存储空间，实在划不来。不过如果你已经安装了`Xcode`，那已经可以跳过这一步了。
 
 - - -
 

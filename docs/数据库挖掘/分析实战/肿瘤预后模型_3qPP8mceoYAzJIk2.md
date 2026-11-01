@@ -98,9 +98,7 @@ ROC曲线
 
 下面只提供R代码，**有疑虑，就此打住**，我用的都是入门级别的函数，懂点R语法，就能看懂，大部分有注释，如果您付费，请尽量选择安卓手机付费，苹果付费要被老美收30%的税费，钱我也收不到。
 
-初次学习，请使用TCGA-STAD转录组和临床的数据进行学习，我也不提供百度网盘下载了，百度网盘下载的速度，非会员太慢，自己去TCGA下载吧，至于基因注释的gtf文件，文章：[一文就会TCGA数据库基因表达差异分析](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264493&idx=1&sn=2164cc4d202fc081551f8918c8cbd7a4&chksm=841ef190b36978866b9bd71a989960370614bf234453b3bd070a56fbe324deb4ecaea2305923&scene=21#wechat_redirect)：有地址，临床数据下载整理我们也发过文章：[一文解决TCGA数据库临床数据下载与整理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264504&idx=1&sn=634bd925786a3193977342634b03acc3&chksm=841ef185b369789346bfbfbc315b9976bd14b9e25ed365c26522469e1ee102212c4b005bfb86&scene=21#wechat_redirect)，下面代码直接读取TCGA的临床数据的tsv格式文件。
-至于gene文件，你可以选择300左右的基因进行学习。
-也可以用下面我模拟的基因学习。
+初次学习，请使用TCGA-STAD转录组和临床的数据进行学习，我也不提供百度网盘下载了，百度网盘下载的速度，非会员太慢，自己去TCGA下载吧，至于基因注释的gtf文件，文章：[一文就会TCGA数据库基因表达差异分析](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264493&idx=1&sn=2164cc4d202fc081551f8918c8cbd7a4&chksm=841ef190b36978866b9bd71a989960370614bf234453b3bd070a56fbe324deb4ecaea2305923&scene=21#wechat_redirect)：有地址，临床数据下载整理我们也发过文章：[一文解决TCGA数据库临床数据下载与整理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264504&idx=1&sn=634bd925786a3193977342634b03acc3&chksm=841ef185b369789346bfbfbc315b9976bd14b9e25ed365c26522469e1ee102212c4b005bfb86&scene=21#wechat_redirect)，下面代码直接读取TCGA的临床数据的tsv格式文件。至于gene文件，你可以选择300左右的基因进行学习。也可以用下面我模拟的基因学习。
 
 ![1612611038785-0bdd4a5b-9f3c-4f2b-8fa9-138c8feb471b.png](./img/3qPP8mceoYAzJIk2/1612611038785-0bdd4a5b-9f3c-4f2b-8fa9-138c8feb471b-929962.png)
 
@@ -335,8 +333,7 @@ rownames(completeExpMatrix) <- as.vector(geneNames)
 completeExpMatrix <- avereps(completeExpMatrix)
 completeExpMatrix <- as.data.frame(completeExpMatrix)
 completeExpMatrix <-t(completeExpMatrix)
-# 从数据集中删除零方差列，可以使用相同的apply 表达式，设置方差不等于零。
-completeExpMatrix <- completeExpMatrix[,which(apply(completeExpMatrix, 2, var)!=0)]
+# 从数据集中删除零方差列，可以使用相同的apply 表达式，设置方差不等于零。completeExpMatrix <- completeExpMatrix[,which(apply(completeExpMatrix, 2, var)!=0)]
 completeExpMatrix <- t(completeExpMatrix)
 ​
 #保存文件
@@ -353,8 +350,7 @@ TumorSampleBarcode <- SampleList[which(SampleList$Type == "Tumor"),"ID"]
 onlyTumorExpMatrix <- completeExpMatrix[,TumorSampleBarcode]
 ​
 onlyTumorExpMatrix <-t(onlyTumorExpMatrix)
-# 从数据集中删除零方差列，可以使用相同的apply 表达式，设置方差不等于零。
-onlyTumorExpMatrix <- onlyTumorExpMatrix[,which(apply(onlyTumorExpMatrix, 2, var)!=0)]
+# 从数据集中删除零方差列，可以使用相同的apply 表达式，设置方差不等于零。onlyTumorExpMatrix <- onlyTumorExpMatrix[,which(apply(onlyTumorExpMatrix, 2, var)!=0)]
 onlyTumorExpMatrix <- t(onlyTumorExpMatrix)
 ​
 write.table(onlyTumorExpMatrix,file = paste(outputPath[1],onlyTumorExpMatrixFN,sep = ""),

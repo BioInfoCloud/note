@@ -148,14 +148,7 @@ Survival和Phenotype数据（fromUCSC）：[微信公众号生物信息云提供
 
 ### 12 . 获取某个基因在泛癌中的表达数据
 
-geneSymbol是要分析的基因名称的向量；
-dataType是tpm,fpkm和count中的一种；
-datafolder来自 getTCGA_RNAseqData()函数下载数据，并存放在某个文件夹中，或者从这里下载（RNAseq：[微信公众号生物信息云提供的链接](https://pan.baidu.com/s/1VWz8bIlgKaUKR0ncughBhg?pwd=e6wz )），但这里下载的数据没有fpkm；
-geneType参照函数filterGeneTypeExpr()中的fil_col，pattern正则表达式匹配datafolder中的数据文件；
-paired指定是否只获取配对样本的数据；
-nnorm表示至少包含几个正常样本；
-得到的数据进行了log2转换。
-还可以指定projects来选择特定的癌症类型，默认是All,表示获取所有癌症类型的数据，如果想获取其中的几种，其是一个向量，如c("TCGA-LUAD","TCGA-LUSC")
+geneSymbol是要分析的基因名称的向量；dataType是tpm,fpkm和count中的一种；datafolder来自 getTCGA_RNAseqData()函数下载数据，并存放在某个文件夹中，或者从这里下载（RNAseq：[微信公众号生物信息云提供的链接](https://pan.baidu.com/s/1VWz8bIlgKaUKR0ncughBhg?pwd=e6wz )），但这里下载的数据没有fpkm；geneType参照函数filterGeneTypeExpr()中的fil_col，pattern正则表达式匹配datafolder中的数据文件；paired指定是否只获取配对样本的数据；nnorm表示至少包含几个正常样本；得到的数据进行了log2转换。还可以指定projects来选择特定的癌症类型，默认是All,表示获取所有癌症类型的数据，如果想获取其中的几种，其是一个向量，如c("TCGA-LUAD","TCGA-LUSC")
 
 ```R
 geneSymbol = c("ATG7","ATG12")
@@ -285,9 +278,7 @@ width,height：图片的宽和高。
 
 ### 3.基于组学数据的评分系统
 
-scoringSys()函数用于各种算法的评分，目前支持的方法（参数method）有"ssgsea","gsva","zscore","plage"和"CRDscore"，CRDscore方法支持单细胞数据，需要指定study.type = 'scRNAseq'【参考：[PMID: 35436363](https://pubmed.ncbi.nlm.nih.gov/35436363/)】，study.type有两个值， 'scRNAseq'和'bulk_RNAseq'。
-"CRDscore"方法不适合小基因集的计算，小基因集容易报错："Non-enough-overlapping genes to calculate score"。
-其他方法，也不建议计算小基因集的评分。
+scoringSys()函数用于各种算法的评分，目前支持的方法（参数method）有"ssgsea","gsva","zscore","plage"和"CRDscore"，CRDscore方法支持单细胞数据，需要指定study.type = 'scRNAseq'【参考：[PMID: 35436363](https://pubmed.ncbi.nlm.nih.gov/35436363/)】，study.type有两个值， 'scRNAseq'和'bulk_RNAseq'。"CRDscore"方法不适合小基因集的计算，小基因集容易报错："Non-enough-overlapping genes to calculate score"。其他方法，也不建议计算小基因集的评分。
 
 expr是一个表达数据，行为基因，列为样本，如果是TCGA数据库的数据，并且是getTCGA_RNAseqData()函数获取的count、tpm，fpkm数据，可以指定TCGA = TRUE，默认为FALSE，需要注意的是，TCGA的数据会自动过滤掉正常样本，只保留肿瘤样本。这里建议使用tpm或者fpkm的数据。
 
@@ -373,12 +364,7 @@ fs <- featureSelect.baseSur(data
                             ,folder = ".")
 ```
 
-data是一个数据框，列应该包括生存数据和特征，行为样本。
-如果数据来源mergeSurExp()函数，前3列的列名应该如下图所示，并且需要指定dataFrom = "mergeSurExp"，如果是自己整理的数据，第一列的列名可以随意，但第2列（生存状态）和第3列（生存时间）的列名必须与图中相同。
-如果没有第一列，将设置dataFrom = NULL。
-feature，表示要进行分析的特征，默认是所有特征（下图中除了前3列）；
-method的值有lasso、cox、randomForest，单独设置这3个值时，函数返回一个向量（即筛选出的特征），method="all"时，3种方法都执行，最后返回一个list，包括3种方法的结果。
-cutoff只有当method="cox"或method="all"时被使用。
+data是一个数据框，列应该包括生存数据和特征，行为样本。如果数据来源mergeSurExp()函数，前3列的列名应该如下图所示，并且需要指定dataFrom = "mergeSurExp"，如果是自己整理的数据，第一列的列名可以随意，但第2列（生存状态）和第3列（生存时间）的列名必须与图中相同。如果没有第一列，将设置dataFrom = NULL。feature，表示要进行分析的特征，默认是所有特征（下图中除了前3列）；method的值有lasso、cox、randomForest，单独设置这3个值时，函数返回一个向量（即筛选出的特征），method="all"时，3种方法都执行，最后返回一个list，包括3种方法的结果。cutoff只有当method="cox"或method="all"时被使用。
 
 ![](https://raw.githubusercontent.com/BioInfoCloud/ImageGo/main/20240526115531.png)
 

@@ -1,28 +1,16 @@
 # 肿瘤相关免疫细胞浸润评估
 
-# 一.什么是免疫微环境？
+## 一.什么是免疫微环境？
 
 肿瘤免疫微环境（Tumor immune microenvironment）是指肿瘤细胞存在的周围微环境，包括周围的血管、免疫细胞、成纤维细胞、骨髓源性炎性细胞、各种信号分子和细胞外基质。肿瘤和周围环境密切相关，不断进行交互作用，肿瘤可以通过释放细胞信号分子影响其微环境，促进肿瘤的血管生成和诱导免疫耐受，而微环境中的免疫细胞可影响癌细胞增长和发育。
 
 ![1664468024208-51b1b4ef-3544-47a8-920b-efe9cf803335.png](./img/nhteSvyRXv1I2efo/1664468024208-51b1b4ef-3544-47a8-920b-efe9cf803335-070656.png)
 
-对于免疫微环境有一个流行的学说——“种子与土壤”学说，肿瘤的发生发展是肿瘤细胞与其微环境相互影响、共同进化的结果。
-肿瘤微环境由不同种类的间质细胞和炎性介质以及细胞外基质（ECM）组成。
-其中肿瘤相关成纤维细胞是最主要的间质细胞；
-血管内皮细胞介导的血管新生为肿瘤生长和转移提供必需的营养；
-免疫浸润包括树突状细胞、巨噬细胞、NK细胞及不同亚型的T细胞等等。
-肿瘤相关巨噬细胞与肿瘤细胞可以通过分泌特殊的细胞因子形成正反馈循环促进肿瘤恶性表型的形成和维持。
-肿瘤微环境在肿瘤恶性进展、免疫逃逸和治疗抵抗中发挥重要作用,我们统计了近8年（截至2020.11）pubmed 收录的关于肿瘤免疫浸润的文章数目，可见一直呈增长趋势，热度未减。
+对于免疫微环境有一个流行的学说——“种子与土壤”学说，肿瘤的发生发展是肿瘤细胞与其微环境相互影响、共同进化的结果。肿瘤微环境由不同种类的间质细胞和炎性介质以及细胞外基质（ECM）组成。其中肿瘤相关成纤维细胞是最主要的间质细胞；血管内皮细胞介导的血管新生为肿瘤生长和转移提供必需的营养；免疫浸润包括树突状细胞、巨噬细胞、NK细胞及不同亚型的T细胞等等。肿瘤相关巨噬细胞与肿瘤细胞可以通过分泌特殊的细胞因子形成正反馈循环促进肿瘤恶性表型的形成和维持。肿瘤微环境在肿瘤恶性进展、免疫逃逸和治疗抵抗中发挥重要作用,我们统计了近8年（截至2020.11）pubmed 收录的关于肿瘤免疫浸润的文章数目，可见一直呈增长趋势，热度未减。
 
 ![1664468024202-d778a3ab-8435-4ad6-8081-3829c5abcfea.png](./img/nhteSvyRXv1I2efo/1664468024202-d778a3ab-8435-4ad6-8081-3829c5abcfea-047744.png)
 
-肿瘤细胞和基质成分之间相互作用，形成了功能复杂的TME。
-肿瘤相关成纤维细胞（CAFs）主要分布于血管周围或肿瘤外周纤维间质内，分泌细胞因子、ECM成分及相关酶分子。
-TME中有多种免疫浸润细胞，其中CD8+或细胞毒性T淋巴细胞（CTL）发挥肿瘤杀伤功能，而调节型T细胞（Treg）减弱T细胞活性，促进TME免疫抑制。
-一般M1型巨噬细胞发挥促炎和抗瘤作用，但TME中的肿瘤相关巨噬细胞（TAM）为M2型，通过分泌Th2细胞因子促进血管生成和肿瘤侵袭。
-我们所熟知的NK细胞会释放颗粒酶和穿孔素杀伤靶细胞，但在TME中富集的TGF-β会抑制其杀伤活性。
-而树突状细胞（DC）也会受到TME中的缺氧和炎症影响消弱其抗原呈递活性。
-基质细胞类型和富集程度决定了TME特性，进一步影响着肿瘤进展和免疫应答情况。
+肿瘤细胞和基质成分之间相互作用，形成了功能复杂的TME。肿瘤相关成纤维细胞（CAFs）主要分布于血管周围或肿瘤外周纤维间质内，分泌细胞因子、ECM成分及相关酶分子。TME中有多种免疫浸润细胞，其中CD8+或细胞毒性T淋巴细胞（CTL）发挥肿瘤杀伤功能，而调节型T细胞（Treg）减弱T细胞活性，促进TME免疫抑制。一般M1型巨噬细胞发挥促炎和抗瘤作用，但TME中的肿瘤相关巨噬细胞（TAM）为M2型，通过分泌Th2细胞因子促进血管生成和肿瘤侵袭。我们所熟知的NK细胞会释放颗粒酶和穿孔素杀伤靶细胞，但在TME中富集的TGF-β会抑制其杀伤活性。而树突状细胞（DC）也会受到TME中的缺氧和炎症影响消弱其抗原呈递活性。基质细胞类型和富集程度决定了TME特性，进一步影响着肿瘤进展和免疫应答情况。
 
 ![1664468024369-2a87bdfc-1150-44a4-a1c9-dd306979f18c.png](./img/nhteSvyRXv1I2efo/1664468024369-2a87bdfc-1150-44a4-a1c9-dd306979f18c-174145.png)
 
@@ -55,7 +43,7 @@ marker gene算法得到的是每一个样本某个细胞的富集分数。
 
 ![1664515256290-05d3b497-4148-4a0b-8bd9-274ed0b5aa48.jpeg](./img/nhteSvyRXv1I2efo/1664515256290-05d3b497-4148-4a0b-8bd9-274ed0b5aa48-890682.jpeg)
 
-# 一. ssGSEA分析
+## 一. ssGSEA分析
 
 单样本基因集富集分析（single sample gene set enrichment analysis, ssGSEA），是GSEA方法的扩展，主要是针对单个样本无法做GSEA而设计。算法概括来说就是首先对给定样本的基因表达值进行秩次标准化，然后利用经验累积分布函数计算富集分数（ES）。
 
@@ -176,7 +164,7 @@ pheatmap(
 
 [3] Jia Q, Wu W, Wang Y, et al. Local mutational diversity drives intratumoral immune heterogeneity in non-small cell lung cancer. Nat Commun. 2018;9(1):5361. Published 2018 Dec 18. doi:10.1038/s41467-018-07767
 
-# 二. 免疫微环境评分-estimate包
+## 二. 免疫微环境评分-estimate包
 
 Estimate是2013年发表在Nature communication杂志上的一种推断肿瘤微环境中免疫得分，基质得分及免疫微环境得分的工具。主要是利用能够表征基质和免疫细胞的基因集的表达信号进行估算。
 
@@ -202,7 +190,7 @@ Yoshihara, K., Shahmoradgoli, M., Martínez, E., Vegesna, R., Kim, H., Torres-Ga
 
 肿瘤纯度计算： Tumour purity=cos (0.6049872018+0.0001467884 X ESTIMATE score).
 
-## 1.包的安装
+### 1.包的安装
 ```r
 library(utils)
 rforge <- "http://r-forge.r-project.org"#开发中的包
@@ -229,7 +217,7 @@ filterCommonGenes(input.f, output.f, id=c("GeneSymbol”， "EntrezID”))
 
 ![1634197099976-3ca3a22a-aefe-4b7f-93d1-495761c32ebc.png](./img/nhteSvyRXv1I2efo/1634197099976-3ca3a22a-aefe-4b7f-93d1-495761c32ebc-889967.png)
 
-## 2.分析
+### 2.分析
 ```r
 # 加载estimate包
 library(estimate)
@@ -248,7 +236,7 @@ estimateScore("005-estimate/estimate_input.gct",
               platform="illumina")#计算肿瘤微环境的评分
 ```
 
-# 三. CIBERSORT
+## 三. CIBERSORT
 
 为了方便用户的使用，CIBERSORT被开发成一个网页版的工具，其网址链接：http://cibersort.stanford.edu/.不过，由于CIBERSORT初期版本不支持单细胞测序数据的分析，所以近期又升级到了CIBERSORTX，升级版的网址链接为：https://cibersortx.stanford.edu/
 
@@ -266,7 +254,7 @@ LM22——这个数据集来自**Robust enumeration of cell subsets from tissue 
 
 mice——这个数据集来自**Inference of immune cell composition on the expression profiles of mouse tissue**，这篇文献中的参考数据集是一个小鼠的免疫细胞数据集，可以替换LM22来**进行肿瘤和非肿瘤，物种为小鼠的免疫浸润分析**，当然这篇文献也提出了一种方法**ImmunCC**
 
-# 四.MCPcounter
+## 四.MCPcounter
 
 我们通过对方法学文献**Estimating the population abundance of tissue-infiltrating immune and stromal cell populations using gene expression**的阅读，对该免疫浸润的输入数据进行定义
 
@@ -278,15 +266,9 @@ mice——这个数据集来自**Inference of immune cell composition on the exp
 
 4.从方法学中我们可以明确（Already-normalized “level 3” data were downloaded separately for each project）即针对测序数据需要经过标准化的处理（TPM即可），芯片数据我们依旧可以选择RMA方法标准化后的数据
 
-# 五. xCell
+## 五. xCell
 
-xCell (http://xcell.ucsf.edu/) 是2017年发表在Genome Biology杂志上公布的基于ssGSEA的方法工具，该方法通过反褶积整合了基因富集分析的优势，可以评估64种细胞类型，涉及多个适应性和先天免疫细胞、造血祖细胞、上皮细胞和细胞外基质细胞，**其中包括48种肿瘤微环境相关细胞**。
-xCell基于从不同项目和研究的大规模表达数据中提取的489个基因集（FANTOM5, ENCODE, Blueprint, IRIS, Human Primary Cell Atlas (HPCA)和Novershtern等人的文章）。
-对于每种细胞类型，通过四个主要步骤计算xCell丰度得分：（1）使用R包GSVA对489个基因集单独进行ssGSEA；
-（2）在属于一种细胞类型的所有基因集的ES进行平均；
-（3）将特定平台的ES转换为丰度分数；
-（4）使用类似于用于流式细胞术数据分析的spillover方法校正紧密相关的细胞类型之间的相关性。
-尽管最终的xCell丰度分数不能直接解释为细胞分数，但它们与真实的细胞比例具有很高的相关性。
+xCell (http://xcell.ucsf.edu/) 是2017年发表在Genome Biology杂志上公布的基于ssGSEA的方法工具，该方法通过反褶积整合了基因富集分析的优势，可以评估64种细胞类型，涉及多个适应性和先天免疫细胞、造血祖细胞、上皮细胞和细胞外基质细胞，**其中包括48种肿瘤微环境相关细胞**。xCell基于从不同项目和研究的大规模表达数据中提取的489个基因集（FANTOM5, ENCODE, Blueprint, IRIS, Human Primary Cell Atlas (HPCA)和Novershtern等人的文章）。对于每种细胞类型，通过四个主要步骤计算xCell丰度得分：（1）使用R包GSVA对489个基因集单独进行ssGSEA；（2）在属于一种细胞类型的所有基因集的ES进行平均；（3）将特定平台的ES转换为丰度分数；（4）使用类似于用于流式细胞术数据分析的spillover方法校正紧密相关的细胞类型之间的相关性。尽管最终的xCell丰度分数不能直接解释为细胞分数，但它们与真实的细胞比例具有很高的相关性。
 
 原文题目为：xCell: digitally portraying the tissue cellularheterogeneity landscape.
 
@@ -327,13 +309,13 @@ xCell使用的是表达水平排序而不是实际值，因此归一化没有效
   xCell_RNAseq <- xCellAnalysis(tur_exp,rnaseq = T)
 ```
 
-# 六.ImmuneCellAI
+## 六.ImmuneCellAI
 
 [http://bioinfo.life.hust.edu.cn/ImmuCellAI#!/](http://bioinfo.life.hust.edu.cn/ImmuCellAI#!/)
 
-# 七.其他
-## 1.qyanTISEQ
-## 2.EPIC
+## 七.其他
+### 1.qyanTISEQ
+### 2.EPIC
 
 [https://gfellerlab.shinyapps.io/EPIC_1-1/](https://gfellerlab.shinyapps.io/EPIC_1-1/)
 

@@ -8,8 +8,7 @@
 
 ---
 
-关于GEO数据库认识和在线使用教程，参考文章:[**G****EO数据库使用教程及在线数据分析工具**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263601&idx=1&sn=443d0dddebb12f21cfd976d50473856b&chksm=841ef60cb3697f1aecc6c310ee3a77e6182a728d5b6711a5cc8f49f0739feaba904f565ce176&scene=21#wechat_redirect)。
-关于GEO数据库的R包：[**Bioconductor：GEOquery包**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651266556&idx=1&sn=05fe660c9241f3a850584d73b5e8e665&chksm=841ef981b36970976f4310b412f53823afeda1e9a5be5c49c8213525db9cd0b852a96daba4cc&scene=21#wechat_redirect)**，**我们前面已经介绍，当然是官方案例，我们这里实战一下。
+关于GEO数据库认识和在线使用教程，参考文章:[**G****EO数据库使用教程及在线数据分析工具**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263601&idx=1&sn=443d0dddebb12f21cfd976d50473856b&chksm=841ef60cb3697f1aecc6c310ee3a77e6182a728d5b6711a5cc8f49f0739feaba904f565ce176&scene=21#wechat_redirect)。关于GEO数据库的R包：[**Bioconductor：GEOquery包**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651266556&idx=1&sn=05fe660c9241f3a850584d73b5e8e665&chksm=841ef981b36970976f4310b412f53823afeda1e9a5be5c49c8213525db9cd0b852a96daba4cc&scene=21#wechat_redirect)**，**我们前面已经介绍，当然是官方案例，我们这里实战一下。
 
 大家可以先通过网页搜索GSE152509数据集，对该数据集有一个基本的认识：
 
@@ -386,17 +385,7 @@ PTPN21   135.289   100.369   353.498   229.589   230.143   340.561
 
 好了，我们接着说，为什么要进行log2转换。
 
-GEO中的Series Matrix File(s)通常是经过了标准化和对数转换的数据。
-但不全是。
-在实际应用的时候需要根据情况判断一下。
-对于芯片数据，可能作者将.cel的文件处理成未标准化的数据直接上传。
-一般来说，在判断counts是否需要重新标准化以及是否需要log2时，可以根据数值大小粗略估计。
-如果表达量的数值在50以内，通常是经过log2转化后的。
-如果数字在几百几千，则是未经转化的。
-因为2的几十次方已经非常巨大，如果2的几百次方，则不符合实际情况。
-我们上面的矩阵，我们肉眼就能看到数值都是个位数字，最大上千，这就是没有经过log处理过的，所以我们需要处理。
-前面处理的时候为什么+1？
-就是避免有0的值，取不了log值，所以加1再取log值，这对整体影响不大，这是个中学数学问题。
+GEO中的Series Matrix File(s)通常是经过了标准化和对数转换的数据。但不全是。在实际应用的时候需要根据情况判断一下。对于芯片数据，可能作者将.cel的文件处理成未标准化的数据直接上传。一般来说，在判断counts是否需要重新标准化以及是否需要log2时，可以根据数值大小粗略估计。如果表达量的数值在50以内，通常是经过log2转化后的。如果数字在几百几千，则是未经转化的。因为2的几十次方已经非常巨大，如果2的几百次方，则不符合实际情况。我们上面的矩阵，我们肉眼就能看到数值都是个位数字，最大上千，这就是没有经过log处理过的，所以我们需要处理。前面处理的时候为什么+1？就是避免有0的值，取不了log值，所以加1再取log值，这对整体影响不大，这是个中学数学问题。
 
 ```plain
 eset <- log2(eset +1)
@@ -417,8 +406,7 @@ PTPN21  7.090525  6.663473  8.469634  7.849180  7.852642  8.415999
 
 ![1610771743390-d38f7c67-ff03-4db4-ad99-84d3313ae4ad.png](./img/jdLPLhH72todZWSZ/1610771743390-d38f7c67-ff03-4db4-ad99-84d3313ae4ad-498947.png)
 
-好了，我们提取数据后，就可以进行后续的分析了，比如[**差异分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264898&idx=1&sn=f6287d98fe0b0fb48a96d2905ca0bb4f&chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&scene=21#wechat_redirect)、[**表达谱热图绘制**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264534&idx=1&sn=6d5ef1279972e730878d65742e56c855&chksm=841ef26bb3697b7d426e76b16fbe0365aa6ad5da7f86ca7d14dcb72ca47ada25ffba021d9ba8&scene=21#wechat_redirect)了。
-但差异分析是不是还要分组，所以我们还得知道每个GSM是那一组，比如对照和实验组。
+好了，我们提取数据后，就可以进行后续的分析了，比如[**差异分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264898&idx=1&sn=f6287d98fe0b0fb48a96d2905ca0bb4f&chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&scene=21#wechat_redirect)、[**表达谱热图绘制**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264534&idx=1&sn=6d5ef1279972e730878d65742e56c855&chksm=841ef26bb3697b7d426e76b16fbe0365aa6ad5da7f86ca7d14dcb72ca47ada25ffba021d9ba8&scene=21#wechat_redirect)了。但差异分析是不是还要分组，所以我们还得知道每个GSM是那一组，比如对照和实验组。
 
 我们提取表型数据。
 
@@ -437,10 +425,7 @@ GSM188020   DMSO treated MCF7 breast cancer cells [HG-U133A] Exp 3     GSM188020
 GSM188022 Dioxin treated MCF7 breast cancer cells [HG-U133A] Exp 3     GSM188022
 ```
 
-可以看的出来，DMSO处理组就是对照，Dioxin处理组就是实验组。
-就可以设计分组，进行差异分析了。
-如果我们获得的数据是原始的Counts数，可以利用[**edgeR包和DESeq2包进行差异分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264898&idx=1&sn=f6287d98fe0b0fb48a96d2905ca0bb4f&chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&scene=21#wechat_redirect)，可以参考我在TCGA数据库差异分析的文章，在哪里，我也说过，尽管那是TCGA数据库的教程，但仅仅是提取表达数据的方法不同，只要获取了表达矩阵，后面的分析都一样。
-下面是之前的文章：
+可以看的出来，DMSO处理组就是对照，Dioxin处理组就是实验组。就可以设计分组，进行差异分析了。如果我们获得的数据是原始的Counts数，可以利用[**edgeR包和DESeq2包进行差异分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264898&idx=1&sn=f6287d98fe0b0fb48a96d2905ca0bb4f&chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&scene=21#wechat_redirect)，可以参考我在TCGA数据库差异分析的文章，在哪里，我也说过，尽管那是TCGA数据库的教程，但仅仅是提取表达数据的方法不同，只要获取了表达矩阵，后面的分析都一样。下面是之前的文章：
 
 [**一文就会TCGA数据库基因表达差异分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264898&idx=1&sn=f6287d98fe0b0fb48a96d2905ca0bb4f&chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&scene=21#wechat_redirect)
 
