@@ -2,33 +2,33 @@
 
 ![1612930518200-fb210b93-bc6a-4709-991d-4fd422de47f8.gif](./img/np70NcqAn5EcHLFs/1612930518200-fb210b93-bc6a-4709-991d-4fd422de47f8-790610.gif)
 
-[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**| **[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[TCGA](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect) | [GEO](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect) | [文献阅读](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect) | [数据库](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect) | [理论知识](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
-[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)** |**** **[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | 服务器与**[**Linux**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1410264757734817793&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[R 语言](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect) | [Bioconductor](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect) | 服务器与[Linux](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1410264757734817793&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
 ![1612930518303-965dbae3-be6c-457f-b55d-29bdef8b8b07.jpeg](./img/np70NcqAn5EcHLFs/1612930518303-965dbae3-be6c-457f-b55d-29bdef8b8b07-902342.jpeg)
 
 ---
 
-## 使用fastqc质控
+## 使用 fastqc 质控
 
-做转录组测序，通常公司是不给分析的，分析也要自己多花钱，当然不同公司收费不一样，有的可能带有简单的分析。之前测序的第一家公司给了简单的分析，后面换了一家测序公司，不给分析。所以我得自己分析啦，在分析的时候顺便写一下教程。分享给大家，要分析转录组数据，首先得知道测序原理【参考文章：[illumina、Sanger、第三代和第四代测序技术原理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272832&idx=1&sn=7d208df1a65e3696c41c666ef78f5881&chksm=841ed2fdb3695bebedbbc733b0bca112421a91647d2038266d0a24b8ce46ee19503a801fdd2b&scene=21#wechat_redirect)】，还有就是了解生信分析中一些文件格式【参考文章：[生信中常见的数据文件格式](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272899&idx=1&sn=6779b2bd21f3b607a08227d31c7212c6&chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&scene=21#wechat_redirect)】，当然，还有其他一些生物背景知识，除此以外，还需要会Linux，这个是一个漫长的学习过程。本文就介绍转录组数据分析的第一步分析：质控，主要就是fastqc这个软件的使用和结果解读。
+做转录组测序，通常公司是不给分析的，分析也要自己多花钱，当然不同公司收费不一样，有的可能带有简单的分析。之前测序的第一家公司给了简单的分析，后面换了一家测序公司，不给分析。所以我得自己分析啦，在分析的时候顺便写一下教程。分享给大家，要分析转录组数据，首先得知道测序原理【参考文章：[illumina、Sanger、第三代和第四代测序技术原理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272832&idx=1&sn=7d208df1a65e3696c41c666ef78f5881&chksm=841ed2fdb3695bebedbbc733b0bca112421a91647d2038266d0a24b8ce46ee19503a801fdd2b&scene=21#wechat_redirect)】，还有就是了解生信分析中一些文件格式【参考文章：[生信中常见的数据文件格式](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272899&idx=1&sn=6779b2bd21f3b607a08227d31c7212c6&chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&scene=21#wechat_redirect)】，当然，还有其他一些生物背景知识，除此以外，还需要会 Linux，这个是一个漫长的学习过程。本文就介绍转录组数据分析的第一步分析：质控，主要就是 fastqc 这个软件的使用和结果解读。
 
-### 一.fastqc介绍
+### 一.fastqc 介绍
 
-拿到原始数据后我们首先采用fastqc程序进行质控，看原始数据质量情况，fastqc会生成一个html结果报告，根据图形化界面，我们可以判断下机数据情况是否符合分析要求。我们测序得到的是带有质量值的碱基序列fastq格式。所以这里你需要先了解[生信中常见的数据文件格式 。](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272899&idx=1&sn=6779b2bd21f3b607a08227d31c7212c6&scene=21#wechat_redirect)
+拿到原始数据后我们首先采用 fastqc 程序进行质控，看原始数据质量情况，fastqc 会生成一个 html 结果报告，根据图形化界面，我们可以判断下机数据情况是否符合分析要求。我们测序得到的是带有质量值的碱基序列 fastq 格式。所以这里你需要先了解[生信中常见的数据文件格式。](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272899&idx=1&sn=6779b2bd21f3b607a08227d31c7212c6&scene=21#wechat_redirect)
 
-FastQC的官网：[<u>http://www.bioinformatics.babraham.ac.uk/projects/fastqc/</u>](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+FastQC 的官网：[<u>http://www.bioinformatics.babraham.ac.uk/projects/fastqc/</u>](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 
-FastQC的下载地址：[<u>http://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc</u>](http://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc)
+FastQC 的下载地址：[<u>http://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc</u>](http://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc)
 
-但在Linux中，通常我们是搭建环境安装分析流程相关的软件的，具体参考文章：[Linux系统下Anaconda的安装和使用教程](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273219&idx=1&sn=44ad6dfa492aa50f8360ab2bb161b28c&chksm=841edc7eb36955685650eaf067fbded8d3b1d427c1f5e52caf2aa5a25fb9a57250ea12a217a4&scene=21#wechat_redirect)。
+但在 Linux 中，通常我们是搭建环境安装分析流程相关的软件的，具体参考文章：[Linux 系统下 Anaconda 的安装和使用教程](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273219&idx=1&sn=44ad6dfa492aa50f8360ab2bb161b28c&chksm=841edc7eb36955685650eaf067fbded8d3b1d427c1f5e52caf2aa5a25fb9a57250ea12a217a4&scene=21#wechat_redirect)。
 
-将测序的数据上传到自己的服务器或者虚拟机中，我这里上传数据到目录：/data/RNAseq下。总共12个文件，27G。
+将测序的数据上传到自己的服务器或者虚拟机中，我这里上传数据到目录：/data/RNAseq 下。总共 12 个文件，27G。
 
 ![1612930518357-aade66e9-6b4c-472b-971d-95b1a807d76a.png](./img/np70NcqAn5EcHLFs/1612930518357-aade66e9-6b4c-472b-971d-95b1a807d76a-748034.png)
 
-首先，我介绍一下fastqc的用法：
+首先，我介绍一下 fastqc 的用法：
 
 ```plain
    fastqc seqfile1 seqfile2 .. seqfileN
@@ -46,47 +46,47 @@ FastQC的下载地址：[<u>http://www.bioinformatics.babraham.ac.uk/projects/do
  -c --contaminants，污染物选项，输入的是一个文件，格式是Name [Tab] Sequence，里面是可能的污染序列，如果有这个选项，FastQC会在计算时候评估污染的情况，并在统计的时候进行分析，一般用不到。
 ```
 
-FastQC读取一组序列文件，并从每个文件生成质量控制报告，该报告由许多不同的模块组成，每个模块将帮助识别数据中可能存在的不同类型的问题。
+FastQC 读取一组序列文件，并从每个文件生成质量控制报告，该报告由许多不同的模块组成，每个模块将帮助识别数据中可能存在的不同类型的问题。
 
 如果命令行上没有指定要处理的文件，那么程序将作为交互式图形应用程序启动。如果在命令行上提供了文件，那么程序将运行而不需要用户交互。在这种模式下，它适合纳入一个标准化的分析管道。
 
 更多参数可以查看帮助文档，我这里翻译了一部分。
 
- -h --help ：打印此帮助文件并退出
+- `-h` / `--help`：打印此帮助文件并退出
 
- -v --version：打印程序的版本并退出
+- `-v` / `--version`：打印程序的版本并退出
 
--o --outdir：在指定的输出目录中创建所有输出文件。
+- `-o` / `--outdir`：在指定的输出目录中创建所有输出文件。
 
-请注意，这个目录必须存在，因为程序不会创建它。如果没有设置此选项，则在处理的序列文件所在的目录中创建每个序列文件的输出文件。
+    请注意，这个目录必须存在，因为程序不会创建它。如果没有设置此选项，则在处理的序列文件所在的目录中创建每个序列文件的输出文件。
 
-    --casava：文件来自原始Casava输出。同一采样组中的文件(仅组号不同)将作为一组文件进行分析，而不是单独分析。在标题中设置了筛选器标志的序列将从分析中排除。文件必须与Casava为其指定的名称相同(包括被gzip压缩并以.gz结尾)，否则它们将无法正确分组在一起。
+- `--casava`：文件来自原始 Casava 输出。同一采样组中的文件（仅组号不同）将作为一组文件进行分析，而不是单独分析。在标题中设置了筛选器标志的序列将从分析中排除。文件必须与 Casava 为其指定的名称相同（包括被 gzip 压缩并以.gz 结尾），否则它们将无法正确分组在一起。
 
-    --nano ：文件来自nanopore序列并且是fast5格式。在这种模式下，您可以将目录传递给进程，程序将接收这些目录中的所有fast5文件，并根据所有文件中的序列生成单个输出文件。
+- `--nano`：文件来自 nanopore 序列并且是 fast5 格式。在这种模式下，您可以将目录传递给进程，程序将接收这些目录中的所有 fast5 文件，并根据所有文件中的序列生成单个输出文件。
 
-   --nofilter ：如果运行-casava，那么在执行QC分析时，不要删除由casava标记的不良质量。
+- `--nofilter`：如果运行 `--casava`，那么在执行 QC 分析时，不要删除由 casava 标记的不良质量。
 
-    --extract ：如果设置，则压缩后的输出文件将在创建后在同一目录中解压。默认情况下，fastqc在非交互模式下运行时将设置此选项。
+- `--extract`：如果设置，则压缩后的输出文件将在创建后在同一目录中解压。默认情况下，fastqc 在非交互模式下运行时将设置此选项。
 
- -j --java：提供要用于启动fastqc的java二进制文件的完整路径。如果没有提供，则假定java在您的路径中。
+- `-j` / `--java`：提供要用于启动 fastqc 的 java 二进制文件的完整路径。如果没有提供，则假定 java 在您的路径中。
 
-    --noextract：创建输出文件后，不要解压缩它。如果在非交互模式下运行时不希望解压缩输出，则应该设置此选项。
+- `--noextract`：创建输出文件后，不要解压缩它。如果在非交互模式下运行时不希望解压缩输出，则应该设置此选项。
 
-    --min_length：为报告中显示的序列长度设置一个人为的下限。只要您将其设置为大于或等于最长读取长度的值，那么这将是用于创建读取组的序列长度。这对于从读取长度可变的数据集中生成可直接分解的统计信息非常有用。
+- `--min_length`：为报告中显示的序列长度设置一个人为的下限。只要您将其设置为大于或等于最长读取长度的值，那么这将是用于创建读取组的序列长度。这对于从读取长度可变的数据集中生成可直接分解的统计信息非常有用。
 
--f --format：绕过正常序列文件格式检测，并强制程序使用指定的格式。有效的格式是bam、sam、bam_mapped、sam_mapped和fastq。
+- `-f` / `--format`：绕过正常序列文件格式检测，并强制程序使用指定的格式。有效的格式是 bam、sam、bam_mapped、sam_mapped 和 fastq。
 
--t --threads：指定可同时处理的文件数目。每个线程将被分配250MB的内存，所以您不应该运行超过可用内存应付的线程，并且在32位机器上不应该超过6个线程
+- `-t` / `--threads`：指定可同时处理的文件数目。每个线程将被分配 250 MB 内存，所以不应运行超过可用内存所能承受的线程数，并且在 32 位机器上不应超过 6 个线程。
 
--k --kmers ：指定要在Kmer内容模块中查找的Kmer的长度。指定的Kmer长度必须在2到10之间。如果未指定，默认长度为7。
+- `-k` / `--kmers`：指定要在 Kmer 内容模块中查找的 Kmer 长度。指定的 Kmer 长度必须在 2 到 10 之间。如果未指定，默认长度为 7。
 
--q --quiet：在标准输出上压缩所有进度消息，只报告错误。
+- `-q` / `--quiet`：压缩标准输出上的所有进度消息，只报告错误。
 
--d --dir：选择要用于生成报表映像时写入的临时文件的目录。如果未指定，默认为系统临时目录。
+- `-d` / `--dir`：选择生成报告图像时写入临时文件的目录。如果未指定，默认为系统临时目录。
 
-**二.fastqc质控**
+### 二.fastqc 质控
 
-我这里将路径已经切换到了数据所在文件路径：data/RNAseq，数据在当前环境目录下，我打算输出结果路径：/root/HGJ_RNAseq/ ，你可以自定义，事先先创建好文件夹。质控只需要一行命令就搞定，注意，星号前面有一个空格，前面是定义的输出路径，后面是分析的文件名称。
+我这里已将路径切换到数据所在目录 `/data/RNAseq`，计划把结果输出到 `/root/HGJ_RNAseq/`，你可以自定义，事先创建好文件夹。质控只需要一行命令就能搞定；注意星号前面有一个空格，星号前面是输出路径，后面是待分析的文件名。
 
 ```plain
 fastqc -o /root/HGJ_RNAseq/ *.fq.gz
@@ -94,7 +94,7 @@ fastqc -o /root/HGJ_RNAseq/ *.fq.gz
 
 ![1612930518378-10585079-a9e7-4073-9516-a93217985449.png](./img/np70NcqAn5EcHLFs/1612930518378-10585079-a9e7-4073-9516-a93217985449-376532.png)
 
-然后就开始一个文件一个文件处理，时间长短和文件大小、个数以及计算机配制有关，我这里的数据30分钟左右。
+然后就开始一个文件一个文件处理，时间长短和文件大小、个数以及计算机配制有关，我这里的数据 30 分钟左右。
 
 处理结束后，查看输出路径下的文件信息。
 
@@ -104,147 +104,147 @@ ll -h /root/HGJ_RNAseq/
 
 ![1612930518288-d9694b1a-d4bb-4dd2-92bb-5c4ba817cdc8.png](./img/np70NcqAn5EcHLFs/1612930518288-d9694b1a-d4bb-4dd2-92bb-5c4ba817cdc8-153644.png)
 
-我们可以看到，一个数据文件处理后会得到2个文件，一个html格式文件和一个zip的压缩文件，zip解压后和html格式文件内容是一样的，只需要下载html格式文件到本地，用浏览器打开查看。
+我们可以看到，一个数据文件处理后会得到 2 个文件，一个 html 格式文件和一个 zip 的压缩文件，zip 解压后和 html 格式文件内容是一样的，只需要下载 html 格式文件到本地，用浏览器打开查看。
 
-**三.结果解读**
+### 三.结果解读
 
-FastqC有3种结果：绿色代表PASS；黄色代表WARN；红色代表FAIL。当出现黄色时说明需要查看结果。当然，我这里没有黄色的结果。
+FastQC 有 3 种结果：绿色代表 PASS；黄色代表 WARN；红色代表 FAIL。当出现黄色时说明需要查看结果。当然，我这里没有黄色的结果。
 
-#### **1.Basic Statistics**
+#### 1.Basic Statistics
 
-Basic statistics是该fastq一些基本信息，主要有
+Basic statistics 是该 fastq 的一些基本信息，主要有：
 
-Filename:文件名
+- Filename：文件名
 
-File type: 文件类型
+- File type：文件类型
 
-Encoding：测序平台的版本和相应的编码版本号，用于计算Phred反推error P时用
+- Encoding：测序平台的版本和相应的编码版本号，用于计算 Phred 反推 error P 时用
 
-Total Sequences: 输入文本的reads的数量
+- Total Sequences：输入文本的 reads 数量
 
-Sequence length: 测序长度
+- Sequence length：测序长度
 
-%GC: GC含量，表示整体序列的GC含量，由于二代测序GC偏好性高，且深度越高，GC含量会越高。
+- %GC：GC 含量，表示整体序列的 GC 含量，由于二代测序 GC 偏好性高，且深度越高，GC 含量会越高。
 
-           ![1612930518252-8f547197-34cb-4b0d-b761-f29adb05c340.png](./img/np70NcqAn5EcHLFs/1612930518252-8f547197-34cb-4b0d-b761-f29adb05c340-322504.png)
+![1612930518252-8f547197-34cb-4b0d-b761-f29adb05c340.png](./img/np70NcqAn5EcHLFs/1612930518252-8f547197-34cb-4b0d-b761-f29adb05c340-322504.png)
 
-#### **2.Per base sequence quality**
+#### 2.Per base sequence quality
 
-横轴为read长度，纵轴为质量得分，Q = -10*log10（error P）。关于错误率计算，可参考文章【[生信中常见的数据文件格式](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272899&idx=1&sn=6779b2bd21f3b607a08227d31c7212c6&chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&scene=21#wechat_redirect)】。柱状表示该位置所有序列的测序质量的统计，柱状是25%~75%区间质量分布，error bar是10%~90%区间质量分布，蓝线表示平均数。一般要求所有位置的10%分位数大于20，即大于最多允许该位置10%的序列低于Q20。当任何碱基质量低于10，或者任何中位数低于25报WARN,需注意；当任何碱基质量低于5或者任何中位数低于20报FAIL。
+横轴为 read 长度，纵轴为质量得分，Q = -10*log10（error P）。关于错误率计算，可参考文章【[生信中常见的数据文件格式](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272899&idx=1&sn=6779b2bd21f3b607a08227d31c7212c6&chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&scene=21#wechat_redirect)】。柱状表示该位置所有序列的测序质量的统计，柱状是 25%~75% 区间质量分布，error bar 是 10%~90% 区间质量分布，蓝线表示平均数。一般要求所有位置的 10% 分位数大于 20，即大于最多允许该位置 10% 的序列低于 Q20。当任何碱基质量低于 10，或者任何中位数低于 25 报 WARN,需注意；当任何碱基质量低于 5 或者任何中位数低于 20 报 FAIL。
 
-           ![1612930518381-a36a82ac-5534-4758-b9e4-c0856050d0c5.png](./img/np70NcqAn5EcHLFs/1612930518381-a36a82ac-5534-4758-b9e4-c0856050d0c5-605028.png)
+![1612930518381-a36a82ac-5534-4758-b9e4-c0856050d0c5.png](./img/np70NcqAn5EcHLFs/1612930518381-a36a82ac-5534-4758-b9e4-c0856050d0c5-605028.png)
 
-#### **3.Per tile sequence quality**
+#### 3.Per tile sequence quality
 
-每个tail测序情况，横轴表示碱基位置，纵轴表示tail的index编号，这个图主要是为了防止在测序过程中某些tail受到不可控因素的影响而出现测序质量偏低，蓝色表示测序质量很高，暖色表示测序质量不高。当某些tail出现暖色，在后续的分析种把该tail测序结果全部去除。我这里的样本测序质量还是不错的。
+每个 tile（测序芯片上的一个小区）的测序情况，横轴表示碱基位置，纵轴表示 tile 的编号。这个图主要是为了发现测序过程中某些 tile 受不可控因素影响而出现的测序质量偏低：蓝色表示测序质量很高，暖色表示测序质量不高。当某些 tile 出现暖色，在后续分析中应把该 tile 的测序结果全部去除。我这里的样本测序质量还是不错的。
 
-           ![1612930518312-6a8196fb-5be6-4100-b610-a8596124ef75.png](./img/np70NcqAn5EcHLFs/1612930518312-6a8196fb-5be6-4100-b610-a8596124ef75-852564.png)
+![1612930518312-6a8196fb-5be6-4100-b610-a8596124ef75.png](./img/np70NcqAn5EcHLFs/1612930518312-6a8196fb-5be6-4100-b610-a8596124ef75-852564.png)
 
-#### **4.Per sequence quality scores**
+#### 4.Per sequence quality scores
 
-横轴表示Q值，纵轴表示每个值对应的read数目，当测序结果主要集中在高分中，证明测序质量良好。
+横轴表示 Q 值，纵轴表示每个值对应的 read 数目，当测序结果主要集中在高分中，证明测序质量良好。
 
-           ![1612930518264-b83b8170-0710-4805-85d5-a8a3d90c7d35.png](./img/np70NcqAn5EcHLFs/1612930518264-b83b8170-0710-4805-85d5-a8a3d90c7d35-678285.png)
+![1612930518264-b83b8170-0710-4805-85d5-a8a3d90c7d35.png](./img/np70NcqAn5EcHLFs/1612930518264-b83b8170-0710-4805-85d5-a8a3d90c7d35-678285.png)
 
-#### **5.Per base sequence content**
+#### 5.Per base sequence content
 
-统计在序列中的每一个位置，四种不同碱基占总碱基数的比例，检测有无AT、GC分离的现象。横轴为位置，纵轴为百分比。正常情况下四种碱基出现的频率应是接近的，且没有位置差异，因此好的样品中四条线应该是平行且接近的，由于刚开始测序仪状态不稳定，造成前几个碱基有波动。在 reads 开头出现碱基组成偏离往往是我们的建库操作造成的，比如建 GBS 文库时在 reads 开头加了 barcode；barcode 的碱基组成不是均一的，酶切位点的碱基组成是固定不变的，这样会造成明显的碱基组成偏离；在 reads 结尾出现的碱基组成偏离，往往是测序接头的污染造成的。当所有位置的碱基比例一致现出偏差时，即四条线平行且分开，代表文库有偏差，或测序中的系统误差；当部分位置碱基的比例出现偏差时，即四条线在某些位置纷乱交织，则有overrepresented sequence的污染。当任一位置的A/T比例与G/C比例相差超过10%，报"WARN"；当任一位置的A/T比例与G/C比例相差超过20%，报"FAIL"。
+统计在序列中的每一个位置，四种不同碱基占总碱基数的比例，检测有无 AT、GC 分离的现象。横轴为位置，纵轴为百分比。正常情况下四种碱基出现的频率应是接近的，且没有位置差异，因此好的样品中四条线应该是平行且接近的，由于刚开始测序仪状态不稳定，造成前几个碱基有波动。在 reads 开头出现碱基组成偏离往往是我们的建库操作造成的，比如建 GBS 文库时在 reads 开头加了 barcode；barcode 的碱基组成不是均一的，酶切位点的碱基组成是固定不变的，这样会造成明显的碱基组成偏离；在 reads 结尾出现的碱基组成偏离，往往是测序接头的污染造成的。当所有位置的碱基比例一致地表现出偏差时，即四条线平行且分开，代表文库有偏差，或测序中的系统误差；当部分位置碱基的比例出现偏差时，即四条线在某些位置纷乱交织，则有 overrepresented sequence 的污染。当任一位置的 A/T 比例与 G/C 比例相差超过 10%，报"WARN"；当任一位置的 A/T 比例与 G/C 比例相差超过 20%，报"FAIL"。
 
-           ![1612930518262-d74fef7b-be6b-45ba-8703-5be4257baf1e.png](./img/np70NcqAn5EcHLFs/1612930518262-d74fef7b-be6b-45ba-8703-5be4257baf1e-458484.png)
+![1612930518262-d74fef7b-be6b-45ba-8703-5be4257baf1e.png](./img/np70NcqAn5EcHLFs/1612930518262-d74fef7b-be6b-45ba-8703-5be4257baf1e-458484.png)
 
-#### **6.Per sequence GC content**
+#### 6.Per sequence GC content
 
-横轴表示GC含量，纵轴表示不同GC含量对应的read数，蓝线是理论分布（正态分布，通过从所测数据计算并构建理论分布），红色是实际情况，两个比较接近判为好的。曲线形状的偏差往往是由于文库的污染或是部分reads构成的子集有偏差（overrepresented reads）；形状接近正态分布但偏离理论分布的情况提示我们可能有系统偏差；如果出现两个或多个峰值，表明测序数据里可能有其他来源的DNA序列污染，或者有接头序列的二聚体污染。偏离理论分布的reads超过15%时，报"WARN"；偏离理论分布的reads超过30%时，报"FAIL"。
+横轴表示 GC 含量，纵轴表示不同 GC 含量对应的 read 数，蓝线是理论分布（正态分布，通过从所测数据计算并构建理论分布），红色是实际情况，两个比较接近判为好的。曲线形状的偏差往往是由于文库的污染或是部分 reads 构成的子集有偏差（overrepresented reads）；形状接近正态分布但偏离理论分布的情况提示我们可能有系统偏差；如果出现两个或多个峰值，表明测序数据里可能有其他来源的 DNA 序列污染，或者有接头序列的二聚体污染。偏离理论分布的 reads 超过 15% 时，报"WARN"；偏离理论分布的 reads 超过 30% 时，报"FAIL"。
 
-           ![1612930518273-298f8f2f-48c4-4feb-95ab-c60847a2a4a0.png](./img/np70NcqAn5EcHLFs/1612930518273-298f8f2f-48c4-4feb-95ab-c60847a2a4a0-389130.png)
+![1612930518273-298f8f2f-48c4-4feb-95ab-c60847a2a4a0.png](./img/np70NcqAn5EcHLFs/1612930518273-298f8f2f-48c4-4feb-95ab-c60847a2a4a0-389130.png)
 
-#### **7.Per base N content**
+#### 7.Per base N content
 
-当出现测序仪不能分辨的碱基时会产生N，横轴为碱基分布，纵轴为N比率，当任一位置N的比率超过5%报WARN，超过20%报FAIL。我这里几乎没有。
+当出现测序仪不能分辨的碱基时会产生 N，横轴为碱基分布，纵轴为 N 比率，当任一位置 N 的比率超过 5% 报 WARN，超过 20% 报 FAIL。我这里几乎没有。
 
-           ![1612930518295-f04438b2-3320-468b-98d1-86df0ccfd7c9.png](./img/np70NcqAn5EcHLFs/1612930518295-f04438b2-3320-468b-98d1-86df0ccfd7c9-173578.png)
+![1612930518295-f04438b2-3320-468b-98d1-86df0ccfd7c9.png](./img/np70NcqAn5EcHLFs/1612930518295-f04438b2-3320-468b-98d1-86df0ccfd7c9-173578.png)
 
-#### **8.Sequence Length Distribution**
+#### 8.Sequence Length Distribution
 
-理论上每次测序仪测出的read长度是一致的，但是由于建库等因素通常会导致一些小片段，如果报FAIL，表明此次测序过程中产生的数据不可信。
+理论上每次测序仪测出的 read 长度是一致的，但是由于建库等因素通常会导致一些小片段，如果报 FAIL，表明此次测序过程中产生的数据不可信。
 
-           ![1612930518279-d2004595-c154-4d0a-953a-0f8575b7d3a4.png](./img/np70NcqAn5EcHLFs/1612930518279-d2004595-c154-4d0a-953a-0f8575b7d3a4-716778.png)
+![1612930518279-d2004595-c154-4d0a-953a-0f8575b7d3a4.png](./img/np70NcqAn5EcHLFs/1612930518279-d2004595-c154-4d0a-953a-0f8575b7d3a4-716778.png)
 
-#### **9.Sequence Duplication Levels**
+#### 9.Sequence Duplication Levels
 
-统计序列完全一致的reads的频率，横轴表示重复的次数，纵轴表示重复的reads的数目。一般测序深度越高，越容易产生一定程度的重复序列。           ![1612930518298-d81d2509-319b-4f75-a335-d267d45b4069.png](./img/np70NcqAn5EcHLFs/1612930518298-d81d2509-319b-4f75-a335-d267d45b4069-470146.png)
+统计序列完全一致的 reads 的频率，横轴表示重复的次数，纵轴表示重复的 reads 的数目。一般测序深度越高，越容易产生一定程度的重复序列。![1612930518298-d81d2509-319b-4f75-a335-d267d45b4069.png](./img/np70NcqAn5EcHLFs/1612930518298-d81d2509-319b-4f75-a335-d267d45b4069-470146.png)
 
-#### **10.Overrepresented sequences**
+#### 10.Overrepresented sequences
 
-当有某个序列大量出现时，超过总reads数的0.1%时报WARN，超过1%时报FAIL。
+当有某个序列大量出现时，超过总 reads 数的 0.1% 时报 WARN，超过 1% 时报 FAIL。
 
-           ![1612930518404-1370c822-9b09-4675-8ef3-14413db603fc.png](./img/np70NcqAn5EcHLFs/1612930518404-1370c822-9b09-4675-8ef3-14413db603fc-073137.png)
+![1612930518404-1370c822-9b09-4675-8ef3-14413db603fc.png](./img/np70NcqAn5EcHLFs/1612930518404-1370c822-9b09-4675-8ef3-14413db603fc-073137.png)
 
-#### **11.Adapter Content**
+#### 11.Adapter Content
 
-横轴表示碱基位置，纵轴表示百分比。当fastqc分析时没有选择参数-a adapter list时，默认使用图例中的4种通用adapter序列进行统计。若有adapter残留，后续必须去接头。
+横轴表示碱基位置，纵轴表示百分比。当 fastqc 分析时没有选择参数-a adapter list 时，默认使用图例中的 4 种通用 adapter 序列进行统计。若有 adapter 残留，后续必须去接头。
 
-           ![1612930518533-0c60a932-fc72-4e56-92b5-86fe56e5c35b.png](./img/np70NcqAn5EcHLFs/1612930518533-0c60a932-fc72-4e56-92b5-86fe56e5c35b-634514.png)
+![1612930518533-0c60a932-fc72-4e56-92b5-86fe56e5c35b.png](./img/np70NcqAn5EcHLFs/1612930518533-0c60a932-fc72-4e56-92b5-86fe56e5c35b-634514.png)
 
-以上就是一个完整的fastqC结果报告的简单说明，更多信息可参考：[http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/)
+以上就是一个完整的 fastqC 结果报告的简单说明，更多信息可参考：[http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/)
 
-结果解读部分来自文章：[<u>https://blog.csdn.net/gateswell/article/details/78858579</u>](https://blog.csdn.net/gateswell/article/details/78858579)  ，对此感谢原作者。
+结果解读部分来自文章：[<u>https://blog.csdn.net/gateswell/article/details/78858579</u>](https://blog.csdn.net/gateswell/article/details/78858579) ，对此感谢原作者。
 
-## 使用trim-galore去除低质量的reads和adaptor
+## 使用 trim-galore 去除低质量的 reads 和 adaptor
 
 ![1612930686925-5e3f5773-3e78-4d6d-80a3-d059cbf03942.gif](./img/np70NcqAn5EcHLFs/1612930686925-5e3f5773-3e78-4d6d-80a3-d059cbf03942-227678.gif)
 
-[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**| **[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[TCGA](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect) | [GEO](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect) | [文献阅读](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect) | [数据库](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect) | [理论知识](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
-[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)** |**** **[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | 服务器与**[**Linux**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1410264757734817793&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[R 语言](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect) | [Bioconductor](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect) | 服务器与[Linux](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1410264757734817793&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
 ![1612930686809-6c6e41d3-beab-4d13-b3a8-d6e87c80330a.jpeg](./img/np70NcqAn5EcHLFs/1612930686809-6c6e41d3-beab-4d13-b3a8-d6e87c80330a-684857.jpeg)
 
-我前面已经介绍了转录组分析中利用fastqc这个软件来查看测序质量【文章：[转录组分析 | fastqc进行质控与结果解读](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273374&idx=1&sn=dfac9e82a09fbb18cd8b2c8179afcad8&chksm=841edce3b36955f5ef17ae96b03c11b9d0052cd3490f1d6b91e3600a5d2eafa77ad79d4a40ff&scene=21#wechat_redirect)】，通过分析结果报告，我测序的数据还是可以的，但不管怎样，还是要清除一些不好的reads。这里我用trim-galore去除低质量的reads和adaptor。
+我前面已经介绍了转录组分析中利用 fastqc 这个软件来查看测序质量【文章：[转录组分析 | fastqc 进行质控与结果解读](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273374&idx=1&sn=dfac9e82a09fbb18cd8b2c8179afcad8&chksm=841edce3b36955f5ef17ae96b03c11b9d0052cd3490f1d6b91e3600a5d2eafa77ad79d4a40ff&scene=21#wechat_redirect)】，通过分析结果报告，我测序的数据还是可以的，但不管怎样，还是要清除一些不好的 reads。这里我用 trim-galore 去除低质量的 reads 和 adaptor。
 
-### 一.Trim Galore介绍
+### 一.Trim Galore 介绍
 
-Trim Galore是对FastQC和Cutadapt的包装。适用于所有高通量测序，包括RRBS(Reduced Representation Bisulfite-Seq ), Illumina、Nextera 和smallRNA测序平台的双端和单端数据。主要功能包括两步：
+Trim Galore 是对 FastQC 和 Cutadapt 的包装。适用于所有高通量测序，包括 RRBS（Reduced Representation Bisulfite-Seq）、Illumina、Nextera 和 small RNA 测序平台的双端和单端数据。主要功能包括两步：
 
-首先去除低质量碱基，然后去除3' 末端的adapter, 如果没有指定具体的adapter，程序会自动检测前1million的序列，然后对比前12-13bp的序列是否符合以下类型的adapter:
+首先去除低质量碱基，然后去除 3' 末端的 adapter；如果没有指定具体的 adapter，程序会自动检测前 100 万条序列，然后比对前 12–13 bp 的序列是否符合以下类型的 adapter：
 
-● Illumina:   AGATCGGAAGAGC
+- Illumina：`AGATCGGAAGAGC`
 
-● Small RNA:  TGGAATTCTCGG
+- Small RNA：`TGGAATTCTCGG`
 
-● Nextera:    CTGTCTCTTATA
+- Nextera：`CTGTCTCTTATA`
 
 ---
 
-当然，Trim Galore是可以自动检测adapter。
+当然，Trim Galore 是可以自动检测 adapter。
 
 接下来我们看软件参数：
 
---quality：设定Phred quality score阈值，默认为20。我后面分析改成25，稍微严格一些。
+--quality：设定 Phred quality score 阈值，默认为 20。我后面分析改成 25，稍微严格一些。
 
---phred33：：选择-phred33或者-phred64，表示测序平台使用的Phred quality score。具体怎么选择，看你用什么测序平台，这个在上一篇文章中的报告中就有【[转录组分析 | fastqc进行质控与结果解读](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273374&idx=1&sn=dfac9e82a09fbb18cd8b2c8179afcad8&chksm=841edce3b36955f5ef17ae96b03c11b9d0052cd3490f1d6b91e3600a5d2eafa77ad79d4a40ff&scene=21#wechat_redirect)】。
+--phred33：选择 -phred33 或者 -phred64，表示测序平台使用的 Phred quality score。具体怎么选择，看你用什么测序平台，这个在上一篇文章中的报告中就有【[转录组分析 | fastqc 进行质控与结果解读](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273374&idx=1&sn=dfac9e82a09fbb18cd8b2c8179afcad8&chksm=841edce3b36955f5ef17ae96b03c11b9d0052cd3490f1d6b91e3600a5d2eafa77ad79d4a40ff&scene=21#wechat_redirect)】。
 
 ![1612930686850-e05fffda-6558-4546-86d6-8e0798e53309.png](./img/np70NcqAn5EcHLFs/1612930686850-e05fffda-6558-4546-86d6-8e0798e53309-237793.png)
 
-具体是-phred33还是-phred64我在文章【[生信中常见的数据文件格式](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272899&idx=1&sn=6779b2bd21f3b607a08227d31c7212c6&chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&scene=21#wechat_redirect)】中有提到。
+具体是 -phred33 还是 -phred64，我在文章【[生信中常见的数据文件格式](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272899&idx=1&sn=6779b2bd21f3b607a08227d31c7212c6&chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&scene=21#wechat_redirect)】中有提到。
 
---adapter：输入adapter序列。也可以不输入，Trim Galore!会自动寻找可能性最高的平台对应的adapter。自动搜选的平台三个，也直接显式输入这三种平台，即--illumina、--nextera和--small_rna。
+--adapter：输入 adapter 序列。也可以不输入，此时 Trim Galore! 会自动寻找可能性最高的平台所对应的 adapter。能被自动识别的一共是三种平台，也可以直接显式输入，即 --illumina、--nextera 和 --small_rna。
 
---stringency：设定可以忍受的前后adapter重叠的碱基数，默认为1（非常苛刻）。可以适度放宽，因为后一个adapter几乎不可能被测序仪读到。
+--stringency：设定可以忍受的前后 adapter 重叠的碱基数，默认为 1（非常苛刻）。可以适度放宽，因为后一个 adapter 几乎不可能被测序仪读到。
 
---length：设定输出reads长度阈值，小于设定值会被抛弃。
+--length：设定输出 reads 长度阈值，小于设定值会被抛弃。
 
---paired：对于双端测序结果，一对reads中，如果有一个被剔除，那么另一个会被同样抛弃，而不管是否达到标准。
+--paired：对于双端测序结果，一对 reads 中，如果有一个被剔除，那么另一个会被同样抛弃，而不管是否达到标准。
 
---retain_unpaired：对于双端测序结果，一对reads中，如果一个read达到标准，但是对应的另一个要被抛弃，达到标准的read会被单独保存为一个文件。
+--retain_unpaired：对于双端测序结果，一对 reads 中，如果一个 read 达到标准，但是对应的另一个要被抛弃，达到标准的 read 会被单独保存为一个文件。
 
---gzip和--dont_gzip：清洗后的数据zip打包或者不打包。
+--gzip 和 --dont_gzip：清洗后的数据是否用 gzip 打包。
 
 --output_dir：输入目录。需要提前建立目录，否则运行会报错。
 
--- trim-n : 移除read一端的reads
+--trim-n：移除 read 两端的 N 碱基。
 
-### 二.使用trim-galore去除低质量的reads和adaptor
+### 二.使用 trim-galore 去除低质量的 reads 和 adaptor
 
 首先，创建保存输出数据的文件夹。
 
@@ -252,23 +252,23 @@ Trim Galore是对FastQC和Cutadapt的包装。适用于所有高通量测序，�
 mkdir cleandata mkdir ./cleandata/trim_galoredata
 ```
 
-然后接下来我们就可以处理数据了。下面命令是处理单个样本的案例，可以不先运行，只需要知道是什么意思。
+然后接下来我们就可以处理数据了。下面命令是处理单个样本的示例，可以先不运行，只需知道每一部分是什么意思。
 
 ```plain
 trim_galore -q 25 --phred33 --stringency 3 --length 36  --paired CK-4_1.fq.gz CK-4_2.fq.gz --gzip -o ./cleandata/trim_galoredata/
 ```
 
-参数解释前面已经介绍，这里提一下，我的测序是双端测序，我们前面12个文件对应6个样本，都是成对的。CK-4_1.fq.gz CK-4_2.fq.gz是一对，处理数据的时候就是一起处理。
+参数解释前面已经介绍，这里提一下，我的测序是双端测序，我们前面 12 个文件对应 6 个样本，都是成对的。CK-4_1.fq.gz CK-4_2.fq.gz 是一对，处理数据的时候就是一起处理。
 
-![1612930686831-bb2286a1-9a03-4990-9eeb-c642c13f576e.png](./img/np70NcqAn5EcHLFs/1612930686831-bb2286a1-9a03-4990-9eeb-c642c13f576e-241577.png)  但是我们有6个样本的数据，就需要写6个命令，好像有点不高效，所以我们可以写一个脚本，执行一次就行。
+![1612930686831-bb2286a1-9a03-4990-9eeb-c642c13f576e.png](./img/np70NcqAn5EcHLFs/1612930686831-bb2286a1-9a03-4990-9eeb-c642c13f576e-241577.png) 但是我们有6个样本的数据，就需要写6个命令，好像有点不高效，所以我们可以写一个脚本，执行一次就行。
 
-在当前路径下创建一个脚本文件trim_galore_batch.sh
+在当前路径下创建一个脚本文件 trim_galore_batch.sh
 
 ```plain
 vim trim_galore_batch.sh
 ```
 
- 输入下面内容：
+输入下面内容：
 
 ```plain
 #!/bin/bash
@@ -279,15 +279,15 @@ do
 done
 ```
 
-其实就是一个for循环：CK-4 CK-7 CK-8 HGJ-10 HGJ-6 HGJ-9是文件名称的前部分，也就是样本名称，测序数据文件命名都是有规律的，认真看一下，就知道上面内容是什么意思。
+其实就是一个 for 循环：CK-4 CK-7 CK-8 HGJ-10 HGJ-6 HGJ-9 是文件名称的前部分，也就是样本名称，测序数据文件命名都是有规律的，认真看一下，就知道上面内容是什么意思。
 
-         ![1612930686994-870f6538-76be-41cd-8fcd-4e59550b9548.png](./img/np70NcqAn5EcHLFs/1612930686994-870f6538-76be-41cd-8fcd-4e59550b9548-074731.png) 保存脚本，然后执行脚本。
+![1612930686994-870f6538-76be-41cd-8fcd-4e59550b9548.png](./img/np70NcqAn5EcHLFs/1612930686994-870f6538-76be-41cd-8fcd-4e59550b9548-074731.png) 保存脚本，然后执行脚本。
 
 ```plain
 bash trim_galore_batch.sh
 ```
 
-  脚本没有问题的话，会看到类似下面的信息
+脚本没有问题的话，会看到类似下面的信息
 
 ```plain
 (RNAseq1) [root@localhost RNAseq]# bash trim_galore_batch.sh
@@ -334,7 +334,7 @@ Writing final adapter and quality trimmed output to CK-4_1_trimmed.fq.gz
 
 ![1612930686982-6cb57aa2-b0d8-4be4-958b-adf393353620.png](./img/np70NcqAn5EcHLFs/1612930686982-6cb57aa2-b0d8-4be4-958b-adf393353620-816131.png)
 
-这个时间很长很长。一个文件1个小时左右。慢慢等..................
+这个过程耗时很长，一个文件大约需要 1 个小时，慢慢等。
 
 运行结束后查看文件：
 
@@ -344,7 +344,7 @@ ll -h /data/RNAseq/cleandata/trim_galoredata
 
 ![1612930687024-d6bc12b2-d31e-4425-aee0-281bf3abd20f.png](./img/np70NcqAn5EcHLFs/1612930687024-d6bc12b2-d31e-4425-aee0-281bf3abd20f-412104.png)
 
-fq.gz格式文件是处理后得到的数据，如果还记得的话，前面我们的数据是27G，现在质控后只有22G的数据。txt格式文件是样品处理的结果报告，也包括软件运行的参数信息。下面是其中一个的结果。
+fq.gz 格式文件是处理后得到的数据，如果还记得的话，前面我们的数据是 27G，现在质控后只有 22G 的数据。txt 格式文件是样品处理的结果报告，也包括软件运行的参数信息。下面是其中一个的结果。
 
 ```plain
 SUMMARISING RUN PARAMETERS
@@ -552,31 +552,29 @@ RUN STATISTICS FOR INPUT FILE: /data/RNAseq/CK-4_1.fq.gz
 
 这一部分就介绍到这里，本公众号文章目录可查看文章：[公众号文章目录](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273306&idx=1&sn=d92056ee1fde1ff12b1506e02f8eb56f&chksm=841edc27b36955310bac7e1b4e5e4ab7e26e669c192926dbee3efc4f6d185cf3509a8fc87696&scene=21#wechat_redirect)，快速浏览相应文章。
 
-## [使用Hisat2进行序列比对](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273450&idx=1&sn=efab631b255e12cf5ffd259dd53fb2b3&chksm=841edc97b3695581de924856b0e6901c67b87648f85bd491729eaa2ee0592271d84042b9eb76&token=108642787&lang=zh_CN#rd)
+## 使用 HISAT2 进行序列比对
 
 我前面已经对数据进行了质控：
 
-[**转录组分析 | fastqc进行质控与结果解读**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273374&idx=1&sn=dfac9e82a09fbb18cd8b2c8179afcad8&chksm=841edce3b36955f5ef17ae96b03c11b9d0052cd3490f1d6b91e3600a5d2eafa77ad79d4a40ff&scene=21#wechat_redirect)
+[**转录组分析 | fastqc 进行质控与结果解读**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273374&idx=1&sn=dfac9e82a09fbb18cd8b2c8179afcad8&chksm=841edce3b36955f5ef17ae96b03c11b9d0052cd3490f1d6b91e3600a5d2eafa77ad79d4a40ff&scene=21#wechat_redirect)
 
-[**转录组分析 | 使用trim-galore去除低质量的reads和adaptor**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273401&idx=1&sn=ff9e3478309d805950c40d0ebae74296&chksm=841edcc4b36955d2a5bf8c85429114b5b83ec4e5afe869378b42ec4f659d4953d5f6c8e9e379&scene=21#wechat_redirect)
+[**转录组分析 | 使用 trim-galore 去除低质量的 reads 和 adaptor**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273401&idx=1&sn=ff9e3478309d805950c40d0ebae74296&chksm=841edcc4b36955d2a5bf8c85429114b5b83ec4e5afe869378b42ec4f659d4953d5f6c8e9e379&scene=21#wechat_redirect)
 
-接下来我们进行序列比对，利用的软件是Hisat2。
+接下来我们进行序列比对，利用的软件是 Hisat2。
 
-### 一.index文件下载
+### 一.index 文件下载
 
-index文件直接去官网下载
-
-([<u>http://daehwankimlab.github.io/hisat2/download/</u>](http://daehwankimlab.github.io/hisat2/download/))，我测序的组织来自小鼠，所以我这里下载的是小鼠的。
+index 文件直接去官网下载（<http://daehwankimlab.github.io/hisat2/download/>），我测序的组织来自小鼠，所以这里下载的是小鼠的。
 
 ![1612932193936-1f3d7dab-999d-4af7-84dc-7ba1b91fdfd2.png](./img/np70NcqAn5EcHLFs/1612932193936-1f3d7dab-999d-4af7-84dc-7ba1b91fdfd2-799116.png)
 
-下载完后上传到Linux服务器，解压后就可以直接用了。
+下载完后上传到 Linux 服务器，解压后就可以直接用了。
 
-我上传到了： /data/mouse_genome/  ，就是mm10_genome.tar.gz这个文件。
+我上传到了：/data/mouse_genome/ ，就是 mm10_genome.tar.gz 这个文件。
 
 ![1612932193893-b5dcba84-2ad9-4f1f-ac86-d14ef7c3397f.png](./img/np70NcqAn5EcHLFs/1612932193893-b5dcba84-2ad9-4f1f-ac86-d14ef7c3397f-007014.png)
 
-解压文件，解压过程中会在当前文件夹下创建mm10文件，解压后的文件就在mm10文件夹中。
+解压文件，解压过程中会在当前文件夹下创建 mm10 文件，解压后的文件就在 mm10 文件夹中。
 
 ```plain
 tar -zxvf /data/mouse_genome/mm10_genome_tar.gz
@@ -592,33 +590,39 @@ ll -h ./mm10
 
 ![1612932193888-827fcfaa-a61c-4589-ba61-1a16f699bb29.png](./img/np70NcqAn5EcHLFs/1612932193888-827fcfaa-a61c-4589-ba61-1a16f699bb29-593147.png)
 
-总共8个ht2格式文件，一个sh格式文件。
+总共 8 个 ht2 格式文件，一个 sh 格式文件。
 
-### 二.hisat2介绍
+### 二.HISAT2 介绍
 
-Hisat是一种高效的RNA-seq实验比对工具。它使用了基于BWT和Ferragina-manzini (Fm) index 两种算法的索引框架。使用了两类索引去比对，一类是全基因组范围的FM索引来锚定每一个比对，另一类是大量的局部索引对这些比对做快速的扩展。比对原理可阅读文献原文：HISAT: a fast spliced aligner with low memory requirements.
+HISAT2 是一种高效的 RNA-seq 比对工具。它使用了基于 BWT 和 Ferragina–Manzini（FM）index 两种算法的索引框架。使用了两类索引去比对，一类是全基因组范围的 FM 索引来锚定每一个比对，另一类是大量的局部索引对这些比对做快速的扩展。比对原理可阅读文献原文：HISAT: a fast spliced aligner with low memory requirements.
 
 #### （一）背景
 
-自2008年起，RNAseq已经成为研究基因表达、转录本结构、长链非编码RNA确定以及融合转录本的重要手段。随着测序深度的加深和read读长的延长，给比对工作带来很多困难。目前的工具如Tophat2和GSNAP等在对单个转录组实验的比对中耗时几天，而新型的STAR虽然很快，但是会吃掉大量的内存空间，如基于人类基因组的比对需要消耗28G左右，而hisat2是4.3G，小鼠3.8G左右。
+自 2008 年起，RNAseq 已经成为研究基因表达、转录本结构、长链非编码 RNA 确定以及融合转录本的重要手段。随着测序深度的加深和 read 读长的延长，给比对工作带来很多困难。目前的工具如 Tophat2 和 GSNAP 等在对单个转录组实验的比对中耗时几天，而新型的 STAR 虽然很快，但是会吃掉大量的内存空间，如基于人类基因组的比对需要消耗 28G 左右，而 hisat2 是 4.3G，小鼠 3.8G 左右。
 
-#### （二）Hisat设计原则
+#### （二）HISAT2 设计原则
 
-**1.优化了索引建立策略**
+**1. 优化了索引建立策略**
 
-hisat应用了基于bowtie2的方法去处理很多低水平的用于构建和查询FM索引的操作。但是与其它比对器不同的是，该软件应用了两类不同的索引类型：代表全基因组的全局FM索引和大量的局部小索引，每个索引代表64000bp。以人类基因组为例，创建了48000个局部索引，每一个覆盖1024bp，最终可以覆盖这个3 billion 的碱基的基因组。这种存在交叉（overlap）的边界可以轻松的比对那些跨区域的read（可变剪切体）。尽管有很多索引，但是hisat会把他们使用合适方法压缩，最终只占4gb左右的内存。
+HISAT2 应用了基于 Bowtie2 的方法去处理很多低水平的用于构建和查询 FM 索引的操作。但是与其它比对器不同的是，该软件应用了两类不同的索引类型：代表全基因组的全局 FM 索引，以及大量的局部小索引。以人类基因组为例，共创建了 48000 个局部索引，每个覆盖 64000 bp，合计可覆盖 30 亿碱基的基因组。这种相互重叠（overlap）的边界可以轻松比对那些跨区域的 read（即可变剪接体）。尽管索引数量很多，HISAT2 会用合适的方法把它们压缩，最终只占 4 GB 左右的内存。
 
-**2.采用了新的比对策略**
+**2. 采用了新的比对策略**
 
-RNA-seq产生的reads可能跨长度比较大的内含子，哺乳动物中甚至最长能达到1MB，同时外显子比较短，read也比较短，会有很多read（模拟数据中大概34%）跨两个外显子的情况。为了更好的比对，将跨外显子的reads分成了三类：1）长锚定read，至少有16bp在两个外显子的每一个上 2）中间锚定read，有8-15bp在一个外显子上 3）短锚定read，只有1-7bp在一个外显子上。所以总的reads可以被划分为五类：1）不跨外显子的read 2）长锚定read 3）中间锚定read 4）短锚定read 5）跨两个外显子以上的read。在模拟的数据中，有25%左右的read是长锚定read，这种read在大多数情况下可以被唯一的定位到人的基因组上。5%为中间锚定read，对于这类，很多依赖于全局索引的算法就很难执行下去（需要比对很多次），而hisat，可以先将read中的长片段实现唯一比对，之后再使用局部索引对剩下的小片段进行比对（局部索引可以实现快速检索）。
-4.2%为短锚定read，因为这些序列特别短，因此只能通过在hisat比对其它read时发现的剪切位点或者用户自己提供的剪切位点来辅助比对。最后还有3%的是跨多个外显子的read，比对策略在hisat的online method中有介绍，文章中没有详解。比对过程中，中间锚定read、短锚定read、跨多个外显子read的比对占总比对时长的30%-60%，而且比对错误率很高！
+RNA-seq 产生的 reads 可能跨越长度较大的内含子，哺乳动物中甚至最长可达 1 Mb；同时外显子比较短，read 也比较短，因此会有很多 read（模拟数据中约 34%）跨两个外显子。为了更好地比对，可将跨外显子的 reads 分成三类：
+
+1. 长锚定 read：至少有 16 bp 落在两个外显子中的每一个上；
+2. 中间锚定 read：有 8–15 bp 落在一个外显子上；
+3. 短锚定 read：只有 1–7 bp 落在一个外显子上。
+
+于是总的 reads 可以划分为五类：① 不跨外显子的 read；② 长锚定 read；③ 中间锚定 read；④ 短锚定 read；⑤ 跨两个以上外显子的 read。在模拟数据中，约 25% 的 read 是长锚定 read，这类 read 在大多数情况下可以被唯一定位到人的基因组上；5% 为中间锚定 read，对这类 read，很多依赖全局索引的算法很难执行下去（需要比对很多次），而 HISAT2 可以先将 read 中的长片段实现唯一比对，再用局部索引对剩下的小片段进行比对（局部索引可实现快速检索）。
+4.2% 为短锚定 read，这类序列特别短，只能借助 HISAT2 比对其它 read 时发现的剪接位点，或用户自己提供的剪接位点来辅助比对。最后还有 3% 是跨多个外显子的 read，其比对策略在 HISAT2 的在线方法文档中有介绍，原文没有详解。比对过程中，中间锚定 read、短锚定 read、跨多个外显子 read 的比对占总比对时长的 30%–60%，而且错误率很高。
 **【引用：1】**
 
 ---
 
 官方手册：[<u>https://daehwankimlab.github.io/hisat2/manual/</u>](https://daehwankimlab.github.io/hisat2/manual/)
 
-#### （三）.HiSat2进行比对的参数设置 【引用：2】
+#### （三）HISAT2 进行比对的参数设置【引用：2】
 ```plain
 HISAT2 version 2.1.0 by Daehwan Kim (infphilo@gmail.com, www.ccb.jhu.edu/people/infphilo)
 Usage:
@@ -812,7 +816,7 @@ Options (defaults in parentheses):
                      输出帮助信息
 ```
 
-hisat2可以自己建立index文件，如果没有现成的index的话，那就得自己去建立了，这个就比较麻烦而且耗内存和时间，下面是建立index的一些参数介绍。因为我们的index文件是直接下载的，所以我后面不需要建立index文件，关于这部分，后面有机会介绍。
+hisat2 可以自己建立 index 文件，如果没有现成的 index 的话，那就得自己去建立了，这个就比较麻烦而且耗内存和时间，下面是建立 index 的一些参数介绍。因为我们的 index 文件是直接下载的，所以我后面不需要建立 index 文件，关于这部分，后面有机会介绍。
 
 ```plain
 HISAT2 version 2.1.0 by Daehwan Kim (infphilo@gmail.com, http://www.ccb.jhu.edu/people/infphilo)
@@ -854,7 +858,7 @@ Options:
     --version               print version information and quit
 ```
 
-### 三. 使用Hisat2进行序列比对
+### 三.使用 HISAT2 进行序列比对
 
 创建输出数据的文件夹
 
@@ -862,21 +866,19 @@ Options:
 mkdir cleandata/hisat2_mm10data
 ```
 
-因为比对这一过程很耗内存，所以样本多话，计算机内存不够大，需要分批比对，我就先介绍一个样本比对的命令：
+因为比对这一过程很耗内存，所以样本多、计算机内存不够大时，需要分批比对，我就先介绍一个样本比对的命令：
 
 ```plain
 hisat2 --dta -t -x /data/RNAseq/mm10/genome -1 /data/RNAseq/cleandata/trim_galoredata/CK-4_1_val_1.fq.gz -2 /data/RNAseq/cleandata/trim_galoredata/CK-4_2_val_2.fq.gz -S cleandata/hisat2_mm10data/CK4.sam
 ```
 
--1和-2分别表示双端测序的1个文件，后面跟的是文件路径，一定要注意 /data/RNAseq/mm10/genome文件的目录，genome这个不是文件夹，是index文件的前缀，我的mm10文件下并没有这个文件，如果不加genome就会发生如下报错：
+`-1` 和 `-2` 分别表示双端测序的两个文件，后面跟的是文件路径，一定要注意 /data/RNAseq/mm10/genome 文件的目录，genome 这个不是文件夹，是 index 文件的前缀，我的 mm10 文件下并没有这个文件，如果不加 genome 就会发生如下报错：
 
 ```plain
 ## Could not locate a HISAT2 index corresponding to basename "/data/RNAseq/mm10/genome/" ##
 ```
 
-另外一定要加上 --dta，后续用Stringtie处理会更容易一些，这是StringTie使用说明里面的一句话：【NOTE: be sure to run HISAT2 with the --dta
-
-option for alignment, or your results will suffer.】后续再介绍。-S后面cleandata/hisat2_mm10data/CK4.sam 是输出文件路径，hisat2_mm10data这个文件夹如果没有建立，需要事先建立。
+另外一定要加上 --dta，后续用 Stringtie 处理会更容易一些，这是 StringTie 使用说明里面的一句话：【NOTE: be sure to run HISAT2 with the --dta option for alignment, or your results will suffer.】后续再介绍。-S 后面 cleandata/hisat2_mm10data/CK4.sam 是输出文件路径，hisat2_mm10data 这个文件夹如果没有建立，需要事先建立。
 
 命令没有问题的话，出现下面提示表示程序正在执行，就去干其他的，等执行结束再往下：
 
@@ -887,9 +889,9 @@ Time loading reference: 00:00:16
 
 ![1612932193827-19e3d8f3-335d-4bb9-b470-f71fb41924af.png](./img/np70NcqAn5EcHLFs/1612932193827-19e3d8f3-335d-4bb9-b470-f71fb41924af-330284.png)
 
-我这里，一个样本43分钟。
+我这里，一个样本 43 分钟。
 
-计算机内存足够大的话，我们可以像前文【[**转录组分析 | 使用trim-galore去除低质量的reads和adaptor**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273401&idx=1&sn=ff9e3478309d805950c40d0ebae74296&chksm=841edcc4b36955d2a5bf8c85429114b5b83ec4e5afe869378b42ec4f659d4953d5f6c8e9e379&scene=21#wechat_redirect)】一样，通过一个脚本一次执行。
+计算机内存足够大的话，我们可以像前文【[**转录组分析 | 使用 trim-galore 去除低质量的 reads 和 adaptor**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273401&idx=1&sn=ff9e3478309d805950c40d0ebae74296&chksm=841edcc4b36955d2a5bf8c85429114b5b83ec4e5afe869378b42ec4f659d4953d5f6c8e9e379&scene=21#wechat_redirect)】一样，通过一个脚本一次执行。
 
 创建脚本文件：hisat2_mm10_batch.sh
 
@@ -912,7 +914,7 @@ hisat2 --dta -t -p 8 -x /data/RNAseq/mm10/genome \
 
 ![1612932193899-887f402a-43f0-44e5-87d4-5d58ce863101.png](./img/np70NcqAn5EcHLFs/1612932193899-887f402a-43f0-44e5-87d4-5d58ce863101-683486.png)
 
-我这里由于CK-4这个样本前面单独处理了，批量处理就不需要处理。
+我这里由于 CK-4 这个样本前面单独处理了，批量处理就不需要处理。
 
 保存脚本，然后执行脚本。
 
@@ -920,23 +922,23 @@ hisat2 --dta -t -p 8 -x /data/RNAseq/mm10/genome \
 bash hisat2_mm10_batch.sh
 ```
 
-脚本运行时间和计算机配制还有数据量的大小有关。运行结束后我们查看结果：
+脚本运行时间与计算机配置以及数据量大小有关。运行结束后我们查看结果：
 
 ```plain
 ll -h ./cleandata/hisat2_mm10data/
 ```
 
-原本22G的数据，运行结束后155G，所以自己用本地计算机跑的话，数据多注意一下内存。
+原本 22 G 的数据，运行结束后变成 155 G，所以用本地计算机跑的话，数据一多就要注意内存。
 
 ![1612932194033-bb32bdd1-4b55-4208-99fb-75245895e485.png](./img/np70NcqAn5EcHLFs/1612932194033-bb32bdd1-4b55-4208-99fb-75245895e485-843901.png)
 
 ### 四.结果解读
 
-我们比对后得到的是sam文件，关于sam文件是一个什么样的文件，参考文章：[**生信中常见的数据文件格式**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272899&idx=1&sn=6779b2bd21f3b607a08227d31c7212c6&chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&scene=21#wechat_redirect)。
+我们比对后得到的是 sam 文件，关于 sam 文件是一个什么样的文件，参考文章：[**生信中常见的数据文件格式**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272899&idx=1&sn=6779b2bd21f3b607a08227d31c7212c6&chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&scene=21#wechat_redirect)。
 
-### 五.Hisat2自定义索引文件
+### 五.HISAT2 自定义索引文件
 
-已有index的物种文件：[Download | HISAT2 (daehwankimlab.github.io)](http://daehwankimlab.github.io/hisat2/download/)
+已有 index 的物种文件：[Download | HISAT2 (daehwankimlab.github.io)](http://daehwankimlab.github.io/hisat2/download/)
 
 ```shell
 extract_splice_sites.py tRNA.fragments.hg19.gtf > tsRNA.ss
@@ -950,13 +952,13 @@ extract_exons.py tRNA.fragments.hg19.gtf > tsRNA.exon
 hisat2-build --ss tsRNA.ss --exon tsRNA.exon gencode.v42.transcripts.fa tsRNA
 ```
 
-最后面的tsRNA是输出索引文件的前缀。
+最后面的 tsRNA 是输出索引文件的前缀。
 
 为了快速查看本公众号文章，可阅读文章：[**公众号文章目录**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273306&idx=1&sn=d92056ee1fde1ff12b1506e02f8eb56f&chksm=841edc27b36955310bac7e1b4e5e4ab7e26e669c192926dbee3efc4f6d185cf3509a8fc87696&scene=21#wechat_redirect)
 
 ---
 
-**致谢：****本文还参考了以下内容：**
+**致谢：** 本文还参考了以下内容：
 
 <u>【1】</u>[<u>https://www.jianshu.com/p/ce3f4afb9b60</u>](https://www.jianshu.com/p/ce3f4afb9b60)。
 
@@ -964,32 +966,32 @@ hisat2-build --ss tsRNA.ss --exon tsRNA.exon gencode.v42.transcripts.fa tsRNA
 
 对原作者表示感谢！
 
-## [使用SAMtools将SAM文件转换为BAM文件、排序、建立索引](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273488&idx=1&sn=f5ed53f20164b19720d31f0a2cfcd268&chksm=841edd6db369547bc04ae15a2a8a7661fefa1193cabbe05d7e2f9e2fa986211603537cf8fbd0&token=108642787&lang=zh_CN#rd)
+## 使用 SAMtools 将 SAM 文件转换为 BAM 文件、排序、建立索引
 
-我们前面经过质控，比对得到sam文件：
+我们前面经过质控，比对得到 sam 文件：
 
-[**转录组分析 | fastqc进行质控与结果解读**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273374&idx=1&sn=dfac9e82a09fbb18cd8b2c8179afcad8&chksm=841edce3b36955f5ef17ae96b03c11b9d0052cd3490f1d6b91e3600a5d2eafa77ad79d4a40ff&scene=21#wechat_redirect)
+[**转录组分析 | fastqc 进行质控与结果解读**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273374&idx=1&sn=dfac9e82a09fbb18cd8b2c8179afcad8&chksm=841edce3b36955f5ef17ae96b03c11b9d0052cd3490f1d6b91e3600a5d2eafa77ad79d4a40ff&scene=21#wechat_redirect)
 
-[**转录组分析 | 使用trim-galore去除低质量的reads和adaptor**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273401&idx=1&sn=ff9e3478309d805950c40d0ebae74296&chksm=841edcc4b36955d2a5bf8c85429114b5b83ec4e5afe869378b42ec4f659d4953d5f6c8e9e379&scene=21#wechat_redirect)
+[**转录组分析 | 使用 trim-galore 去除低质量的 reads 和 adaptor**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273401&idx=1&sn=ff9e3478309d805950c40d0ebae74296&chksm=841edcc4b36955d2a5bf8c85429114b5b83ec4e5afe869378b42ec4f659d4953d5f6c8e9e379&scene=21#wechat_redirect)
 
-[**转录组分析 | 使用Hisat2进行序列比对**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273450&idx=1&sn=efab631b255e12cf5ffd259dd53fb2b3&chksm=841edc97b3695581de924856b0e6901c67b87648f85bd491729eaa2ee0592271d84042b9eb76&scene=21#wechat_redirect)
+[**转录组分析 | 使用 Hisat2 进行序列比对**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273450&idx=1&sn=efab631b255e12cf5ffd259dd53fb2b3&chksm=841edc97b3695581de924856b0e6901c67b87648f85bd491729eaa2ee0592271d84042b9eb76&scene=21#wechat_redirect)
 
-接下来为什么要进行格式转换？为了让计算机好处理。SAM（sequence Alignment/mapping)数据格式是目前高通量测序中存放比对数据的标准格式。bam是sam的二进制格式，减少了sam文件的储存量。这在我之前的文章【[**生信中常见的数据文件格式**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272899&idx=1&sn=6779b2bd21f3b607a08227d31c7212c6&chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&scene=21#wechat_redirect)】中也有介绍。
+接下来为什么要进行格式转换？为了让计算机好处理。SAM（sequence alignment/map）数据格式是目前高通量测序中存放比对数据的标准格式。bam 是 sam 的二进制格式，减少了 sam 文件的储存量。这在我之前的文章【[**生信中常见的数据文件格式**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272899&idx=1&sn=6779b2bd21f3b607a08227d31c7212c6&chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&scene=21#wechat_redirect)】中也有介绍。
 
-接下来，我们要做的事情就是使用SAMtools将SAM文件转换为BAM文件、排序、建立索引。
+接下来，我们要做的事情就是使用 SAMtools 将 SAM 文件转换为 BAM 文件、排序、建立索引。
 
-### 一.SAMtools介绍
+### 一.SAMtools 介绍
 
-SAMtools是一个用于操作sam和bam文件的工具合集。能够实现二进制查看、格式转换、排序及合并等功能，结合sam格式中的flag、tag等信息，还可以完成比对结果的统计汇总。同时利用linux中的grep、awk等操作命令，还可以大大扩展samtools的使用范围与功能。包含有许多命令。我这里主要介绍几个，重点是samtools view。
+SAMtools 是一个用于操作 sam 和 bam 文件的工具合集。能够实现二进制查看、格式转换、排序及合并等功能，结合 sam 格式中的 flag、tag 等信息，还可以完成比对结果的统计汇总。同时利用 linux 中的 grep、awk 等操作命令，还可以大大扩展 samtools 的使用范围与功能。包含有许多命令。我这里主要介绍几个，重点是 samtools view。
 
-samtools更多信息：[**<u>http://www.htslib.org/</u>**](http://www.htslib.org/)
+samtools 更多信息：[**<u>http://www.htslib.org/</u>**](http://www.htslib.org/)
 
-**1.samtools ****view**
+**1. samtools view**
 
-samtools view主要用来转换SAM/BAM/CRAM文件。将sam文件与bam文件互换；然后对bam文件进行各种操作，比如数据的排序(sort)和提取(这些操作 是对bam文件进行的，因而当输入为sam文件的时候，不能进行该操作)；最后将排序或提取得到的数据输出为bam或sam（默认的）格式。如果没有指定选项或区域，则将指定的输入对齐文件(SAM、BAM或CRAM格式)中的所有对齐打印到SAM格式的标准输出(没有标头)。可以在输入文件名后指定一个或多个空格分隔的区域规范，以将输出限制为仅覆盖指定区域的那些对齐。使用区域规范需要一个协调排序和索引的输入文件(BAM或CRAM格式)。samtools view的参数很多，-b、-C、-1、-u、-h、-H和-C选项将更改缺省的无header SAM的输出格式，而-o和-u选项将设置输出文件名。
--t和-T选项提供了额外的参考数据。当SAM输入不包含@SQ headers时，这两个选项中的一个是必需的，当编写CRAM输出时，-T选项是必需的。
--L、-M、-r、-R、-d、-D、-s、-q、-L、-M、-f、-F和-G选项过滤将包含在输出中的对齐，只筛选那些匹配特定条件的对齐。
--x和-B选项修改包含在每次对齐中的数据。如果数据文件夹不包含任何索引文件，可以使用-X选项允许用户指定定制的索引文件位置。
+samtools view 主要用来转换 SAM/BAM/CRAM 文件。将 sam 文件与 bam 文件互换；然后对 bam 文件进行各种操作，比如数据的排序(sort)和提取（这些操作是对 bam 文件进行的，因而当输入为 sam 文件的时候，不能进行该操作）；最后将排序或提取得到的数据输出为 bam 或 sam（默认的）格式。如果没有指定选项或区域，则将指定的输入对齐文件（SAM、BAM 或 CRAM 格式）中的所有对齐打印到 SAM 格式的标准输出（没有标头）。可以在输入文件名后指定一个或多个空格分隔的区域规范，以将输出限制为仅覆盖指定区域的那些对齐。使用区域规范需要一个协调排序和索引的输入文件（BAM 或 CRAM 格式）。samtools view 的参数很多，-b、-C、-1、-u、-h、-H 和-C 选项将更改缺省的无 header SAM 的输出格式，而-o 和-u 选项将设置输出文件名。
+- `-t` 和 `-T` 选项提供了额外的参考数据。当 SAM 输入不包含@SQ headers 时，这两个选项中的一个是必需的，当编写 CRAM 输出时，-T 选项是必需的。
+- `-L`、`-M`、`-r`、`-R`、`-d`、`-D`、`-s`、`-q`、`-f`、`-F` 和 `-G` 选项用于过滤输出中的比对，只保留匹配特定条件的比对。
+- `-x` 和 `-B` 选项修改包含在每条比对中的数据。如果数据文件夹不包含任何索引文件，可以使用-X 选项允许用户指定定制的索引文件位置。
 
 ```plain
 samtools view [options] <in.bam>|<in.sam>|<in.cram> [region ...]
@@ -1030,9 +1032,9 @@ samtools view [options] <in.bam>|<in.sam>|<in.cram> [region ...]
 
 其他更多参数介绍，阅读：[<u>http://www.htslib.org/doc/samtools-view.html</u>](http://www.htslib.org/doc/samtools-view.html)
 
-**2.samtools sort**
+**2. samtools sort**
 
-samtools sort用来对SAM/BAM/CRAM文件进行排序，按最左坐标排序，或使用-n时按读取名称排序。默认情况下，排序后的输出被写到标准输出，或者在使用-o时写到指定的文件(out.bam)。此命令还将创建临时文件tmpprefixv .%d。当整个对齐数据无法装入内存时(通过-m选项控制)，根据需要使用bam。
+samtools sort 用来对 SAM/BAM/CRAM 文件进行排序，按最左坐标排序，或使用-n 时按读取名称排序。默认情况下，排序后的输出被写到标准输出，或者在使用-o 时写到指定的文件(out.bam)。此命令还会创建临时文件 `tmpprefix.%d.bam`。当整个对齐数据无法装入内存时（通过-m 选项控制），根据需要使用 bam。
 
 ```plain
 samtools sort [-l level] [-m maxMem] [-o out.bam] [-O format] [-n] [-T tmpprefix] [-@ threads] [in.sam|in.bam|in.cram]
@@ -1050,9 +1052,9 @@ samtools sort [-l level] [-m maxMem] [-o out.bam] [-O format] [-n] [-T tmpprefix
 -@ INT 设置排序和压缩是的线程数量，默认是单线程。
 ```
 
-**3.samtools index**
+**3. samtools index**
 
-必须对bam文件进行默认情况下的排序后，才能进行index。否则会报错。建立索引后将产生后缀为.bai的文件，用于快速的随机处理。很多情况下需要有bai文件的存在，特别是显示序列比对情况下。比如samtool的tview命令就需要；gbrowse2显示reads的比对图形的时候也需要。IGV显示比对情况也需要。
+必须对 bam 文件进行默认情况下的排序后，才能进行 index。否则会报错。建立索引后将产生后缀为.bai 的文件，用于快速的随机处理。很多情况下需要有 bai 文件的存在，特别是显示序列比对情况下。比如 samtools 的 tview 命令就需要；gbrowse2 显示 reads 的比对图形的时候也需要。IGV 显示比对情况也需要。
 
 ```plain
 samtools index [-bc] [-m INT] aln.sam|aln.bam|aln.cram [out.index]
@@ -1068,13 +1070,13 @@ samtools index [-bc] [-m INT] aln.sam|aln.bam|aln.cram [out.index]
     除了主线程[0]之外，要使用的输入/输出压缩线程数。
 ```
 
-samtools sort命令按默认染色体位置排序，顺利建立Index，如果前面排序有出入，可能不能正确建立索引。
+samtools sort 命令按默认染色体位置排序，顺利建立 Index，如果前面排序有出入，可能不能正确建立索引。
 
 参考：[<u>http://www.htslib.org/doc/samtools-index.html</u>](http://www.htslib.org/doc/samtools-index.html)
 
-**4.samtools flagstat**
+**4. samtools flagstat**
 
-samtools flagstat用于给出BAM文件的比对结果。
+samtools flagstat 用于给出 BAM 文件的比对结果。
 
 ```plain
 samtools flagstat in.sam|in.bam|in.cram
@@ -1091,15 +1093,15 @@ samtools flagstat in.sam|in.bam|in.cram
 
 ---
 
-关于SAMtools工具的用法还很多，我就介绍上面几个，其他更多用法，阅读：[<u>http://www.htslib.org/doc/samtools.html</u>](http://www.htslib.org/doc/samtools.html)
+关于 SAMtools 工具的用法还很多，我就介绍上面几个，其他更多用法，阅读：[<u>http://www.htslib.org/doc/samtools.html</u>](http://www.htslib.org/doc/samtools.html)
 
 参考：[<u>https://blog.csdn.net/sinat_38163598/article/details/72910115</u>](https://blog.csdn.net/sinat_38163598/article/details/72910115)
 
-### 二.SAMtools实战
+### 二.SAMtools 实战
 
-**1.格式转换(samtools view)**
+**1. 格式转换（samtools view）**
 
-我们先查看一下上一篇文章【[**转录组分析 | 使用Hisat2进行序列比对**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273450&idx=1&sn=efab631b255e12cf5ffd259dd53fb2b3&chksm=841edc97b3695581de924856b0e6901c67b87648f85bd491729eaa2ee0592271d84042b9eb76&scene=21#wechat_redirect)】中产生的sam文件。
+我们先查看一下上一篇文章【[**转录组分析 | 使用 Hisat2 进行序列比对**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273450&idx=1&sn=efab631b255e12cf5ffd259dd53fb2b3&chksm=841edc97b3695581de924856b0e6901c67b87648f85bd491729eaa2ee0592271d84042b9eb76&scene=21#wechat_redirect)】中产生的 sam 文件。
 
 ```plain
 ll -h ./cleandata/hisat2_mm10data/
@@ -1144,7 +1146,7 @@ done
 bash samtools_view_batch.sh
 ```
 
-运行结束后我么你查看一下输入的数据：
+运行结束后我们查看一下输出的数据：
 
 ```plain
 ll -h ./cleandata/samtools_bam/
@@ -1152,11 +1154,11 @@ ll -h ./cleandata/samtools_bam/
 
 ![1612932524555-a056ddd8-36d5-4dff-861d-5336df9df285.png](./img/np70NcqAn5EcHLFs/1612932524555-a056ddd8-36d5-4dff-861d-5336df9df285-904526.png)
 
-我们可以看到，转换后的数据只有32G，原来可是155G。相差5倍左右。
+我们可以看到，转换后的数据只有 32G，原来可是 155G。相差 5 倍左右。
 
-**2 排序(samtools sort)**
+**2. 排序（samtools sort）**
 
-单个排序:
+单个排序：
 
 ```plain
 samtools sort -l 4 -o ./cleandata/samtools_bam/CK-4_sort.bam ./cleandata/samtools_bam/CK4.bam
@@ -1195,11 +1197,11 @@ ll -h cleandata/samtools_bam/*sort.bam
 
 ![1612932524617-df293494-9f86-4543-bc3a-db8b23a404a2.png](./img/np70NcqAn5EcHLFs/1612932524617-df293494-9f86-4543-bc3a-db8b23a404a2-153047.png)
 
-sort后文件几乎小了2倍。
+sort 后文件几乎小了 2 倍。
 
-**3. 建立索引(samtools index)**
+**3. 建立索引（samtools index）**
 
-samtools sort命令时，按默认染色体位置排序，顺利建立Index，如果前面排序有出入，可能不能正确建立索引。
+使用 samtools sort 命令时，按默认染色体位置排序即可顺利建立索引；如果前面的排序有出入，可能无法正确建立索引。
 
 这里我就一次建立索引了。
 
@@ -1207,7 +1209,7 @@ samtools sort命令时，按默认染色体位置排序，顺利建立Index，�
 for i in CK-4 CK-7 CK-8 HGJ-10 HGJ-6 HGJ-9;do samtools index ./cleandata/samtools_bam/${i}_sort.bam ./cleandata/samtools_bam/${i}_sort.bam.bai;done
 ```
 
-**4.查看reads比对情况(samtools flagstat)**
+**4. 查看 reads 比对情况（samtools flagstat）**
 
 ```plain
 samtools flagstat cleandata/samtools_bam/CK-4_sort.bam
@@ -1249,13 +1251,13 @@ samtools flagstat cleandata/samtools_bam/CK-4_sort.bam
 
 这一部分就介绍到这里，本公众号文章目录可查看文章：[**公众号文章目录**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273306&idx=1&sn=d92056ee1fde1ff12b1506e02f8eb56f&chksm=841edc27b36955310bac7e1b4e5e4ab7e26e669c192926dbee3efc4f6d185cf3509a8fc87696&scene=21#wechat_redirect)，快速浏览相应文章。
 
-### 三. SAMtools报错解决
+### 三.SAMtools 报错解决
 
-<u>如果</u>SAMtools报下面错误：
+如果 SAMtools 报下面错误：
 
 ![1672116397459-896014b9-dafc-415e-ae73-07159adf99ea.png](./img/np70NcqAn5EcHLFs/1672116397459-896014b9-dafc-415e-ae73-07159adf99ea-721524.png)
 
-查看安装环境下的的文件libcrypto.so版本：这里的conda环境是tsRNA
+查看安装环境下的的文件 libcrypto.so 版本：这里的 conda 环境是 tsRNA
 
 ```shell
 ls -l /home/chens/miniconda3/envs/tsRNA/lib/
@@ -1267,44 +1269,43 @@ ls -l /home/chens/miniconda3/envs/tsRNA/lib/
 ln -s /home/chens/miniconda3/envs/tsRNA/lib/libcrypto.so.1.1 /home/chens/miniconda3/envs/tsRNA/lib/libcrypto.so.1.0.0
 ```
 
-<u></u>
 
-## [使用RSeQC软件对生成的BAM文件进行质控](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273531&idx=1&sn=8a9b12fe030f6c0f8bb1d6c8abbf622d&chksm=841edd46b36954501a57801f8149301d1bbb7b2d62a6f0d73b8a4795071e2aace94e02c2f392&token=108642787&lang=zh_CN#rd)
+## 使用 RSeQC 软件对生成的 BAM 文件进行质控
 
 接前面文章：
 
-[转录组分析 | fastqc进行质控与结果解读](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273374&idx=1&sn=dfac9e82a09fbb18cd8b2c8179afcad8&chksm=841edce3b36955f5ef17ae96b03c11b9d0052cd3490f1d6b91e3600a5d2eafa77ad79d4a40ff&scene=21#wechat_redirect)
+[转录组分析 | fastqc 进行质控与结果解读](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273374&idx=1&sn=dfac9e82a09fbb18cd8b2c8179afcad8&chksm=841edce3b36955f5ef17ae96b03c11b9d0052cd3490f1d6b91e3600a5d2eafa77ad79d4a40ff&scene=21#wechat_redirect)
 
-[转录组分析 | 使用trim-galore去除低质量的reads和adaptor](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273401&idx=1&sn=ff9e3478309d805950c40d0ebae74296&chksm=841edcc4b36955d2a5bf8c85429114b5b83ec4e5afe869378b42ec4f659d4953d5f6c8e9e379&scene=21#wechat_redirect)
+[转录组分析 | 使用 trim-galore 去除低质量的 reads 和 adaptor](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273401&idx=1&sn=ff9e3478309d805950c40d0ebae74296&chksm=841edcc4b36955d2a5bf8c85429114b5b83ec4e5afe869378b42ec4f659d4953d5f6c8e9e379&scene=21#wechat_redirect)
 
-[转录组分析 | 使用Hisat2进行序列比对](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273450&idx=1&sn=efab631b255e12cf5ffd259dd53fb2b3&chksm=841edc97b3695581de924856b0e6901c67b87648f85bd491729eaa2ee0592271d84042b9eb76&scene=21#wechat_redirect)
+[转录组分析 | 使用 Hisat2 进行序列比对](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273450&idx=1&sn=efab631b255e12cf5ffd259dd53fb2b3&chksm=841edc97b3695581de924856b0e6901c67b87648f85bd491729eaa2ee0592271d84042b9eb76&scene=21#wechat_redirect)
 
-[转录组分析 | 使用SAMtools将SAM文件转换为BAM文件、排序、建立索引](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273488&idx=1&sn=f5ed53f20164b19720d31f0a2cfcd268&chksm=841edd6db369547bc04ae15a2a8a7661fefa1193cabbe05d7e2f9e2fa986211603537cf8fbd0&scene=21#wechat_redirect)
+[转录组分析 | 使用 SAMtools 将 SAM 文件转换为 BAM 文件、排序、建立索引](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273488&idx=1&sn=f5ed53f20164b19720d31f0a2cfcd268&chksm=841edd6db369547bc04ae15a2a8a7661fefa1193cabbe05d7e2f9e2fa986211603537cf8fbd0&scene=21#wechat_redirect)
 
-本文接着介绍：使用RSeQC软件对生成的BAM文件进行质控。也就是看看前面数据的质量怎么样。
+本文接着介绍：使用 RSeQC 软件对生成的 BAM 文件进行质控。也就是看看前面数据的质量怎么样。
 
-首先介绍一下RSeQC这个软件
+首先介绍一下 RSeQC 这个软件
 
-### 一.RSeQC介绍
+### 一.RSeQC 介绍
 
-RSeQC是发表于2012年的一个RNA-Seq质控工具，属于python包。它提供了一系列有用的小工具能够评估高通量测序尤其是RNA-seq数据，比如一些基本模块，检查序列质量, 核酸组分偏性, PCR偏性, GC含量偏性,还有RNA-seq特异性模块: 评估测序饱和度， 映射读数分布， 覆盖均匀性， 链特异性， 转录水平RNA完整性等。该软件的使用命令非常多，但很多功能并不是用来诊断转录组测序的，所以不在我们的考虑范围内。你可以参考官方教程文档：
+RSeQC 是发表于 2012 年的一个 RNA-seq 质控工具，属于 Python 包。它提供了一系列有用的小工具，能够评估高通量测序数据尤其是 RNA-seq 数据，比如一些基本模块：检查序列质量、核酸组分偏性、PCR 偏性、GC 含量偏性；还有 RNA-seq 特异性模块：评估测序饱和度、映射读数分布、覆盖均匀性、链特异性、转录水平 RNA 完整性等。该软件的使用命令非常多，但很多功能并不是用来诊断转录组测序的，所以不在我们的考虑范围内。你可以参考官方教程文档：
 
 [<u>https://pythonhosted.org/RSeQC/#bam2fq-py</u>](https://pythonhosted.org/RSeQC/#bam2fq-py)
 
-RSeQC接受4种文件格式:
+RSeQC 接受 4 种文件格式：
 
-+ BED 格式: Tab 分割, 12列的表示基因模型的纯文本文件
-+ SAM 或BAM 格式: 用来存储reads 比对结果信息.
-+ 染色体大小文件: 只有两列的纯文本文
-+ Fasta文件的参考基因组
++ BED 格式：Tab 分割、12 列的表示基因模型的纯文本文件
++ SAM 或 BAM 格式：用来存储 reads 比对结果信息。
++ 染色体大小文件：只有两列的纯文本文件
++ FASTA 文件的参考基因组
 
-### 二. 使用bam_stat.py命令查看比对的总体情况
+### 二.使用 bam_stat.py 命令查看比对的总体情况
 
-用 bam_stat.py来统计总比对记录, PCR重复数, Non Primary Hits表示多匹配位点, 不匹配的reads数, 比对到+链的reads, 比对到-链的reads, 有剪切位点的reads等。
+用 `bam_stat.py` 可以统计总比对记录、PCR 重复数、Non Primary Hits（多匹配位点）、不匹配的 reads 数、比对到 + 链的 reads 数、比对到 - 链的 reads 数、有剪切位点的 reads 数等。
 
 ![1612932844663-3fe73cc3-950b-425c-80eb-b4243a1830c0.png](./img/np70NcqAn5EcHLFs/1612932844663-3fe73cc3-950b-425c-80eb-b4243a1830c0-729263.png)
 
-我们查看前面产生的文件CK-4_sort.bam【文章:[转录组分析 | 使用SAMtools将SAM文件转换为BAM文件、排序、建立索引](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273488&idx=1&sn=f5ed53f20164b19720d31f0a2cfcd268&chksm=841edd6db369547bc04ae15a2a8a7661fefa1193cabbe05d7e2f9e2fa986211603537cf8fbd0&scene=21#wechat_redirect)】。
+我们查看前面产生的文件 `CK-4_sort.bam`【文章：[转录组分析 | 使用 SAMtools 将 SAM 文件转换为 BAM 文件、排序、建立索引](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273488&idx=1&sn=f5ed53f20164b19720d31f0a2cfcd268&chksm=841edd6db369547bc04ae15a2a8a7661fefa1193cabbe05d7e2f9e2fa986211603537cf8fbd0&scene=21#wechat_redirect)】。
 
 ```plain
 bam_stat.py -i cleandata/samtools_bam/CK-4_sort.bam
@@ -1312,17 +1313,17 @@ bam_stat.py -i cleandata/samtools_bam/CK-4_sort.bam
 
 ![1612932844687-a4c1301d-eebf-4ffa-929e-089d7076173c.png](./img/np70NcqAn5EcHLFs/1612932844687-a4c1301d-eebf-4ffa-929e-089d7076173c-574880.png)
 
-**三.使用read_distribution.py命令查看基因组覆盖率**
+### 三.使用 read_distribution.py 命令查看基因组覆盖率
 
-该命令需要输入两个文件， -i为BAM或SAM文件；-r为参考的bed文件。
+该命令需要输入两个文件：`-i` 指定 BAM 或 SAM 文件，`-r` 指定参考的 bed 文件。
 
 ![1612932844707-bb084cbf-7205-472b-9409-3b4c0dd2fe7d.png](./img/np70NcqAn5EcHLFs/1612932844707-bb084cbf-7205-472b-9409-3b4c0dd2fe7d-377163.png)
 
-bed文件参考文章：[生信中常见的数据文件格式](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272899&idx=1&sn=6779b2bd21f3b607a08227d31c7212c6&chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&scene=21#wechat_redirect)。bed文件下载地址RSeQC官网：[<u>https://sourceforge.net/projects/rseqc/files/BED/</u>](https://sourceforge.net/projects/rseqc/files/BED/)，我这里下载的是小鼠的：[<u>https://sourceforge.net/projects/rseqc/files/BED/Mouse_Mus_musculus/</u>](https://sourceforge.net/projects/rseqc/files/BED/Mouse_Mus_musculus/)
+bed 文件参考文章：[生信中常见的数据文件格式](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272899&idx=1&sn=6779b2bd21f3b607a08227d31c7212c6&chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&scene=21#wechat_redirect)。bed 文件下载地址 RSeQC 官网：[<u>https://sourceforge.net/projects/rseqc/files/BED/</u>](https://sourceforge.net/projects/rseqc/files/BED/)，我这里下载的是小鼠的：[<u>https://sourceforge.net/projects/rseqc/files/BED/Mouse_Mus_musculus/</u>](https://sourceforge.net/projects/rseqc/files/BED/Mouse_Mus_musculus/)
 
 ![1612932844722-33d023b1-68f7-4d07-8d06-5e6934e9c901.png](./img/np70NcqAn5EcHLFs/1612932844722-33d023b1-68f7-4d07-8d06-5e6934e9c901-000103.png)
 
-下载后解压上传到Linux服务器中，我的bed文件在 /data/mouse_RefSeq/  这个目录下。
+下载后解压上传到 Linux 服务器中，我的 bed 文件在 /data/mouse_RefSeq/ 这个目录下。
 
 ```plain
 ll -h /data/mouse_RefSeq/
@@ -1336,7 +1337,7 @@ read_distribution.py -i cleandata/samtools_bam/CK-4_sort.bam -r /data/mouse_RefS
 
 ![1612932844852-59da39e0-679c-48fd-b88f-4004e602e4f0.png](./img/np70NcqAn5EcHLFs/1612932844852-59da39e0-679c-48fd-b88f-4004e602e4f0-949916.png)
 
-组学分析流程的每一个步骤都很重要，实验设计，质控，read比对，表达定量，可视化，差异表达，识别可变剪切，功能注释，融合基因检测，eQTL定位等都需要考虑。我们后面介绍：使用Stringtie对数据进行下游处理。
+组学分析流程的每一个步骤都很重要——实验设计、质控、read 比对、表达定量、可视化、差异表达、可变剪接识别、功能注释、融合基因检测、eQTL 定位等，都需要认真考虑。我们后面介绍：使用 Stringtie 对数据进行下游处理。
 
 为了快速查看本公众号文章，可阅读文章：[公众号文章目录](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273306&idx=1&sn=d92056ee1fde1ff12b1506e02f8eb56f&chksm=841edc27b36955310bac7e1b4e5e4ab7e26e669c192926dbee3efc4f6d185cf3509a8fc87696&scene=21#wechat_redirect)
 
@@ -1344,43 +1345,43 @@ read_distribution.py -i cleandata/samtools_bam/CK-4_sort.bam -r /data/mouse_RefS
 
 参考：[<u>https://mp.weixin.qq.com/s/KpQwwDm_aIvIbxXHiaNrLg</u>](https://mp.weixin.qq.com/s/KpQwwDm_aIvIbxXHiaNrLg)
 
-## [使用Stringtie对数据进行下游处理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273566&idx=1&sn=947e61eb19a63943f8c56bfcad81cc82&chksm=841edd23b36954359fe559dc4a832ffd66a0792868d2d2ea65123765cc0b7dc4424ca4344549#rd)
+## 使用 StringTie 对数据进行下游处理
 
 接前文：
 
-[转录组分析 | fastqc进行质控与结果解读](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273374&idx=1&sn=dfac9e82a09fbb18cd8b2c8179afcad8&chksm=841edce3b36955f5ef17ae96b03c11b9d0052cd3490f1d6b91e3600a5d2eafa77ad79d4a40ff&scene=21#wechat_redirect)
+[转录组分析 | fastqc 进行质控与结果解读](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273374&idx=1&sn=dfac9e82a09fbb18cd8b2c8179afcad8&chksm=841edce3b36955f5ef17ae96b03c11b9d0052cd3490f1d6b91e3600a5d2eafa77ad79d4a40ff&scene=21#wechat_redirect)
 
-[转录组分析 | 使用trim-galore去除低质量的reads和adaptor](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273401&idx=1&sn=ff9e3478309d805950c40d0ebae74296&chksm=841edcc4b36955d2a5bf8c85429114b5b83ec4e5afe869378b42ec4f659d4953d5f6c8e9e379&scene=21#wechat_redirect)
+[转录组分析 | 使用 trim-galore 去除低质量的 reads 和 adaptor](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273401&idx=1&sn=ff9e3478309d805950c40d0ebae74296&chksm=841edcc4b36955d2a5bf8c85429114b5b83ec4e5afe869378b42ec4f659d4953d5f6c8e9e379&scene=21#wechat_redirect)
 
-[转录组分析 | 使用Hisat2进行序列比对](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273450&idx=1&sn=efab631b255e12cf5ffd259dd53fb2b3&chksm=841edc97b3695581de924856b0e6901c67b87648f85bd491729eaa2ee0592271d84042b9eb76&scene=21#wechat_redirect)
+[转录组分析 | 使用 Hisat2 进行序列比对](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273450&idx=1&sn=efab631b255e12cf5ffd259dd53fb2b3&chksm=841edc97b3695581de924856b0e6901c67b87648f85bd491729eaa2ee0592271d84042b9eb76&scene=21#wechat_redirect)
 
-[转录组分析 | 使用SAMtools将SAM文件转换为BAM文件、排序、建立索引](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273488&idx=1&sn=f5ed53f20164b19720d31f0a2cfcd268&chksm=841edd6db369547bc04ae15a2a8a7661fefa1193cabbe05d7e2f9e2fa986211603537cf8fbd0&scene=21#wechat_redirect)
+[转录组分析 | 使用 SAMtools 将 SAM 文件转换为 BAM 文件、排序、建立索引](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273488&idx=1&sn=f5ed53f20164b19720d31f0a2cfcd268&chksm=841edd6db369547bc04ae15a2a8a7661fefa1193cabbe05d7e2f9e2fa986211603537cf8fbd0&scene=21#wechat_redirect)
 
-[转录组分析 | 使用RSeQC软件对生成的BAM文件进行质控](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273531&idx=1&sn=8a9b12fe030f6c0f8bb1d6c8abbf622d&chksm=841edd46b36954501a57801f8149301d1bbb7b2d62a6f0d73b8a4795071e2aace94e02c2f392&scene=21#wechat_redirect)
+[转录组分析 | 使用 RSeQC 软件对生成的 BAM 文件进行质控](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273531&idx=1&sn=8a9b12fe030f6c0f8bb1d6c8abbf622d&chksm=841edd46b36954501a57801f8149301d1bbb7b2d62a6f0d73b8a4795071e2aace94e02c2f392&scene=21#wechat_redirect)
 
-我们接下来使用Stringtie对数据进行下游处理。
+我们接下来使用 Stringtie 对数据进行下游处理。
 
-### 一.StringTie介绍
+### 一.StringTie 介绍
 
-StringTie 是用于 RNA-seq 的转录本组装和定量软件，StringTie 可以看做是cufflinks软件的升级版本，其功能和Cufflinks是一样的，包括下面两个主要功能：转录本组装和定量；相比Cuffinks, 其运行速度更快。该软件的官网：[<u>https://ccb.jhu.edu/software/stringtie/index.shtml</u>](https://ccb.jhu.edu/software/stringtie/index.shtml)。
+StringTie 是用于 RNA-seq 的转录本组装和定量软件，StringTie 可以看做是 Cufflinks 软件的升级版本，其功能和 Cufflinks 是一样的，包括下面两个主要功能：转录本组装和定量；相比 Cufflinks，其运行速度更快。该软件的官网：[<u>https://ccb.jhu.edu/software/stringtie/index.shtml</u>](https://ccb.jhu.edu/software/stringtie/index.shtml)。
 
-1、Stringtie通过使用genome指导的组装的方法与从头组装的概念结合的新方法来改善转录组组装。
+1. Stringtie 通过使用 genome 指导的组装的方法与从头组装的概念结合的新方法来改善转录组组装。
 
-2、Stringtie的输入不仅可以是经过比对的结果，也可以是Stringtie通过从头组装read所得到的contig，当这两种输入都用到的时候，我们下面称之为stringtie+SR。
+2. Stringtie 的输入不仅可以是经过比对的结果，也可以是 Stringtie 通过从头组装 read 所得到的 contig，当这两种输入都用到的时候，我们下面称之为 StringTie+SR。
 
-3、对于很多使用参考基因组辅助组装的方法，组装的的策略都是先对read进行cluter，然后建立一个graph model来推测每个基因所有可能的isoform，最终通过不同的graph的解析方法得到对转录本的组装结果。
+3. 对于很多使用参考基因组辅助组装的方法，组装的策略都是先对 read 进行 cluster，然后建立一个 graph model 来推测每个基因所有可能的 isoform，最终通过不同的 graph 的解析方法得到对转录本的组装结果。
 
-4、有名的cufflinks用的是overlap graph，该模型中nodes代表fragment，如果两个fragment存在overlap并存在兼容的剪切模式，则对应的node连接起来。其解析方法为一种保守的算法，可以产生能够解释所有read的最少的转录本，尽管这种方法很吸引人，但是它没有考虑到转录本的丰度并且对于某些isoform来说该方法没有办法组装！
+4. 有名的 Cufflinks 用的是 overlap graph，该模型中 nodes 代表 fragment，如果两个 fragment 存在 overlap 并存在兼容的剪切模式，则对应的 node 连接起来。其解析方法为一种保守的算法，可以产生能够解释所有 read 的最少的转录本，尽管这种方法很吸引人，但是它没有考虑到转录本的丰度并且对于某些 isoform 来说该方法没有办法组装！
 
-5、stringtie采用了组装转录本和估计表达量同步进行的方法，这不同于cufflinks的先组装后定量的策略。
+5. StringTie 采用了组装转录本和估计表达量同步进行的方法，这不同于 Cufflinks 先组装后定量的策略。
 
-6、首先，stringtie将read聚成cluster，然后采用了splice graph，其中node代表外显子或外显子的一部分，path将graph中可能 的剪切现象都连起来，最终对每个转录本通过创建一个网络流的方法，利用最大流算法（maximum flow algorithm）估计转录本的表达量。
+6. 首先，StringTie 将 read 聚成 cluster，然后采用了 splice graph，其中 node 代表外显子或外显子的一部分，path 将 graph 中可能的剪切现象都连起来，最终对每个转录本通过创建一个网络流的方法，利用最大流算法（maximum flow algorithm）估计转录本的表达量。
 
-7、最大流的问题是最优理论中的经典问题，但是目前还没有应用到转录本定量中。
+7. 最大流的问题是最优理论中的经典问题，但是目前还没有应用到转录本定量中。
 
-8、与其它组装软件相比，stringtie具有很高的准确性和新型isoform的发现能力，其优势在于使用了网络流算法，同时stringtie也支持将read从头组装成更长的片段，这进一步提高了其组装的正确性。
+8. 与其它组装软件相比，StringTie 具有很高的准确性和新型 isoform 的发现能力，其优势在于使用了网络流算法，同时 StringTie 也支持将 read 从头组装成更长的片段，这进一步提高了其组装的正确性。
 
-9、其另一个优势在于它的最优化策略，它平衡了每次组装中每条转录本的覆盖度，这样可以对组装算法产生一定的限制，因为在组装基因组时，覆盖度是很重要的一个参数因为它需要被用来限制算法，否则组装器可能将重复的片段错误地堆叠到一起，相似地转录组装也是如此，在isoform中的每一个外显子需要有相似的覆盖度，如果忽略这个参数可能会产生一些保守但是错误的转录本，其中含有大量剪切位点的基因组装起来尤其困难。
+9. 其另一个优势在于它的最优化策略，它平衡了每次组装中每条转录本的覆盖度，这样可以对组装算法产生一定的限制，因为在组装基因组时，覆盖度是很重要的一个参数因为它需要被用来限制算法，否则组装器可能将重复的片段错误地堆叠到一起，相似地转录组装也是如此，在 isoform 中的每一个外显子需要有相似的覆盖度，如果忽略这个参数可能会产生一些保守但是错误的转录本，其中含有大量剪切位点的基因组装起来尤其困难。
 
 常用的参数及描述：
 
@@ -1408,17 +1409,17 @@ StringTie 是用于 RNA-seq 的转录本组装和定量软件，StringTie 可以
 -l <label>             #输出转录本的名称前缀 (默认值: MSTRG)
 ```
 
-### 二.StringTie应用
+### 二.StringTie 应用
 
-**1.单样本转录本组装**
+**1. 单样本转录本组装**
 
-输入文档是BAM格式的比对结果文档，该文档必需经过排序。这些文档可以是来源于Tophat比对的结果文档，也可以是hisat2的结果文档经过转换和排序的文档(使用samtools)。我们前面使用的就是hisat2比对后用samtools排序后的bam文件。除此以外，我们还需要gtf注释文件。关于gtf注释文件格式参考文章：[生信中常见的数据文件格式](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272899&idx=1&sn=6779b2bd21f3b607a08227d31c7212c6&chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&scene=21#wechat_redirect)。
+输入文档是 BAM 格式的比对结果文档，该文档必须经过排序。这些文档可以是来源于 Tophat 比对的结果文档，也可以是 hisat2 的结果文档经过转换和排序的文档（使用 samtools）。我们前面使用的就是 hisat2 比对后用 samtools 排序后的 bam 文件。除此以外，我们还需要 gtf 注释文件。关于 gtf 注释文件格式参考文章：[生信中常见的数据文件格式](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272899&idx=1&sn=6779b2bd21f3b607a08227d31c7212c6&chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&scene=21#wechat_redirect)。
 
-gtf注释文件可以去genecode下载你需要的gtf文件，我这里下载的是小鼠的。
+gtf 注释文件可以去 genecode 下载你需要的 gtf 文件，我这里下载的是小鼠的。
 
-genecode官网：[<u>https://www.gencodegenes.org/</u>](https://www.gencodegenes.org/)
+genecode 官网：[<u>https://www.gencodegenes.org/</u>](https://www.gencodegenes.org/)
 
-我的gtf文件在/data/mouse_annotation/ 目录下：
+我的 gtf 文件在 `/data/mouse_annotation/` 目录下：
 
 ![1612932994068-8361e677-becc-4c5f-9116-5881d583e6d1.png](./img/np70NcqAn5EcHLFs/1612932994068-8361e677-becc-4c5f-9116-5881d583e6d1-122990.png)
 
@@ -1442,9 +1443,9 @@ ll -h cleandata/stringtiedata/
 
 ![1612932993957-a1aae046-774a-43ce-877c-a1442635b273.png](./img/np70NcqAn5EcHLFs/1612932993957-a1aae046-774a-43ce-877c-a1442635b273-380910.png)
 
-**2.多样本转录本整合**
+**2. 多样本转录本整合**
 
-stringtie --merge [options] gtf.list :转录组merge模式，在该模式下，Stringtie可以利用输入的一个gtf list并将他们中的转录本进行非冗余的整理。可以在处理多个RNA-seq样本的时候，由于转录组存在时空特异性，可以将每个样本各自的转录组进行非冗余的整合，如果-G提供了参考gtf文件，可以将其一起整合到一个文件中,最终输出成一个完整的gtf文件。
+`StringTie --merge [options] gtf.list`：转录组 merge 模式，在该模式下，Stringtie 可以利用输入的一个 gtf list 并将他们中的转录本进行非冗余的整理。在处理多个 RNA-seq 样本时，由于转录组存在时空特异性，可以将每个样本各自的转录组进行非冗余的整合；如果通过 `-G` 提供了参考 gtf 文件，可以将其一并整合进来，最终输出成一个完整的 gtf 文件。
 
 将文件名的完整路径输入到一个文件中：
 
@@ -1452,7 +1453,7 @@ stringtie --merge [options] gtf.list :转录组merge模式，在该模式下，S
 find /data/RNAseq/cleandata/stringtiedata/ -name *.gtf > /data/RNAseq/cleandata/stringtiedata/merglist.txt
 ```
 
-查看一下merglist.txt文件中的内容：
+查看一下 merglist.txt 文件中的内容：
 
 ```plain
 cat /data/RNAseq/cleandata/stringtiedata/merglist.txt
@@ -1466,9 +1467,9 @@ stringtie --merge -p 8 -G /data/mouse_annotation/gencode.mouse.annotation.gtf -o
 
 ![1612932993969-b68a62f2-a519-46cd-95df-09e831335e30.png](./img/np70NcqAn5EcHLFs/1612932993969-b68a62f2-a519-46cd-95df-09e831335e30-266511.png)
 
-**3. 使用gffcompare检验数据比对到基因组上的情况(可选)**
+**3. 使用 gffcompare 检验数据比对到基因组上的情况（可选）**
 
-程序gffcompare可用于比较、合并、注释和估计一个或多个GFF文件(“查询”文件)的准确性。
+程序 gffcompare 可用于比较、合并、注释和估计一个或多个 GFF 文件（“查询”文件）的准确性。
 
 ```plain
 gffcompare [options]* {-i <input_gtf_list> | <input1.gtf> [<input2.gtf> .. <inputN.gtf>]}
@@ -1502,7 +1503,7 @@ gffcompare [options]* {-i <input_gtf_list> | <input1.gtf> [<input2.gtf> .. <inpu
 
 参考：[<u>http://ccb.jhu.edu/software/stringtie/gffcompare.shtml</u>](http://ccb.jhu.edu/software/stringtie/gffcompare.shtml)
 
-我们将前面我们整合的转录本文件检验数据比对到基因组上的情况
+下面用前面整合好的转录本文件，检验数据比对到基因组上的情况。
 
 ```plain
 gffcompare -r /data/mouse_annotation/gencode.mouse.annotation.gtf -G cleandata/stringtiedata/stringtie_merged.gtf
@@ -1512,7 +1513,7 @@ gffcompare -r /data/mouse_annotation/gencode.mouse.annotation.gtf -G cleandata/s
 
 ![1612932994004-16dc4229-ce36-464f-8edf-06b5e1cb19d3.png](./img/np70NcqAn5EcHLFs/1612932994004-16dc4229-ce36-464f-8edf-06b5e1cb19d3-794143.png)
 
-其中gffcompare.annotated.gtf存储的是StringTie组装的转录本与注释文件内的转录本的差别信息，通过class_code来表示：
+其中 gffcompare.annotated.gtf 存储的是 StringTie 组装的转录本与注释文件内的转录本的差别信息，通过 class_code 来表示：
 
 ```plain
 head cleandata/stringtiedata/gffcompare.annotated.gtf |grep  class_code | cut -d ";" -f 5-8
@@ -1531,7 +1532,7 @@ head cleandata/stringtiedata/gffcompare.annotated.gtf |grep  class_code | cut -d
 
 ![1612932993997-a712ca03-c81c-4e50-99a6-43ed13b37af4.png](./img/np70NcqAn5EcHLFs/1612932993997-a712ca03-c81c-4e50-99a6-43ed13b37af4-917212.png)
 
-gffcmp.stats文件存储比对结果的准确性和预测率。
+gffcmp.stats 文件存储比对结果的准确性和预测率。
 
 ```plain
 cat cleandata/stringtiedata/gffcompare.stats
@@ -1572,16 +1573,16 @@ Intron chain level:   100.0     |    91.4    |
 155156 out of 155156 consensus transcripts written in cleandata/stringtiedata/gffcompare.annotated.gtf (0 discarded as redundant)
 ```
 
-**4.重新组装转录本并估算基因表达丰度**
+**4. 重新组装转录本并估算基因表达丰度**
 
-利用merge得到的gtf重新对各个样本做定量，并创建ballgown可读取文件。
+利用 merge 得到的 gtf 重新对各个样本做定量，并创建 ballgown 可读取文件。
 
 ```plain
 mkdir cleandata/ballgown
 for i in CK-4 CK-7 CK-8 HGJ-10 HGJ-6 HGJ-9; do stringtie -e -B -p 8 -G cleandata/stringtiedata/stringtie_merged.gtf  -o cleandata/ballgown/${i}/${i}.gtf cleandata/samtools_bam/${i}_sort.bam; done
 ```
 
-查看ballgown目录下生成的文件:
+查看 ballgown 目录下生成的文件：
 
 ![1612932993990-460d4364-10ff-470b-9425-aa802e9b38e5.png](./img/np70NcqAn5EcHLFs/1612932993990-460d4364-10ff-470b-9425-aa802e9b38e5-826105.png)
 
@@ -1591,15 +1592,15 @@ for i in CK-4 CK-7 CK-8 HGJ-10 HGJ-6 HGJ-9; do stringtie -e -B -p 8 -G cleandata
 
 ![1612932993992-1ff7c56f-6be3-458c-aa80-76c06f08b527.png](./img/np70NcqAn5EcHLFs/1612932993992-1ff7c56f-6be3-458c-aa80-76c06f08b527-694533.png)
 
-**5.read count数据输出**
+**5. read count 数据输出**
 
-这里需要prepDE.py这个脚本。
+这里需要 prepDE.py 这个脚本。
 
 ```plain
 prepDE.py -i cleandata/ballgown/
 ```
 
-会在当前文件夹下产生2个csv文件。
+会在当前文件夹下产生 2 个 csv 文件。
 
 ![1612932994786-26aa167c-ab0a-41f8-ba3c-301ebb14bb60.png](./img/np70NcqAn5EcHLFs/1612932994786-26aa167c-ab0a-41f8-ba3c-301ebb14bb60-075593.png)
 
@@ -1607,7 +1608,7 @@ prepDE.py -i cleandata/ballgown/
 
 ![1612932994643-650f8d54-1117-4d2e-b4e3-9b78ed1b3bd4.png](./img/np70NcqAn5EcHLFs/1612932994643-650f8d54-1117-4d2e-b4e3-9b78ed1b3bd4-350299.png)
 
-基础的转录组分析大概流程就是这样，当然，分析流程很多，我这里只是其中一个分析流程，可以参考文献，这里面涉及的软件也要不断应用，才知道那里出问题怎么解决，后续的分析算是下游分析，比如利用edgR包或DESeq2进行差异表达分析，这里得到的gene_count_matrix.csv数据就可以用于后续的下游分析了，比如差异表达分析，可参考TCGA序列的文章【[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)】，本公众号文章目录可通过文章浏览：[**公众号文章目录**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273306&idx=1&sn=d92056ee1fde1ff12b1506e02f8eb56f&chksm=841edc27b36955310bac7e1b4e5e4ab7e26e669c192926dbee3efc4f6d185cf3509a8fc87696&scene=21#wechat_redirect)。
+基础的转录组分析流程大致就是这样。当然，分析流程有很多，这里只是其中一种，具体可以参考文献；流程中涉及的软件也要反复使用，才知道哪里出了问题、怎么解决。后续的分析属于下游分析，比如利用 edgeR 包或 DESeq2 进行差异表达分析——这里得到的 `gene_count_matrix.csv` 正好可以用于下游的差异表达分析，可参考 TCGA 系列文章【[TCGA](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)】，本公众号文章目录可通过文章浏览：[公众号文章目录](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273306&idx=1&sn=d92056ee1fde1ff12b1506e02f8eb56f&chksm=841edc27b36955310bac7e1b4e5e4ab7e26e669c192926dbee3efc4f6d185cf3509a8fc87696&scene=21#wechat_redirect)。
 
 > 更新: 2022-12-27 12:53:59
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/wq9hr4>
