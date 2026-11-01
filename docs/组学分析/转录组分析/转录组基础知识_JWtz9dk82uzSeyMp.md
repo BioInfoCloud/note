@@ -23,8 +23,6 @@ A survey of best practices for RNA-seq data analysis
 
 ---
 
-box2
-
 RNA-seq文库准备和测序过程中包扩：RNA大段，cDNA合成，接头，PCR扩增，bar-coding，lane loading，这些过程可能会增加测序结果的偏好性。外源参考转录组（exogenous reference transcripts，‘spike-ins’）可用来作为质控以及文库大小矫正。若测序量较大，降低技术误差：文库准备时不同批次及lane的样本完全随机，或每个样本单独进行barcoding，然后在多个illumina lane中，加入所有的样本进行测序。
 
 ![1612928520640-1244bf5f-1c89-4a71-86dc-58adb6d902e7.png](./img/JWtz9dk82uzSeyMp/1612928520640-1244bf5f-1c89-4a71-86dc-58adb6d902e7-070350.png)
@@ -56,8 +54,6 @@ _**1.4 重复**_
 
 ![1612928545076-0f86448f-2b08-49dd-9352-e9a17e21df94.png](./img/JWtz9dk82uzSeyMp/1612928545076-0f86448f-2b08-49dd-9352-e9a17e21df94-494746.png)
 
-图2.png
-
 **2. 转录本**
 
 **有参**分析时将序列比对到参考基因组或是转录组上获得表达转录本，比对到转录组上会屏蔽新的未注释的转录本，只对已知转录本进行定量分析。**无参**时先组装为长contigs后已contig作为表达转录组将reads比对上去进行定量分析，或者覆盖度可用于对转录本进行定量。区别在于转录和定量同时完成还是顺序完成。
@@ -68,7 +64,7 @@ _**2.1  比对**_
 
 ---
 
-box3 比对到参考序列
+#### 比对到参考序列
 
 比对到参考基因组可发现新的转录本和基因，需要gap或剪接map由于序列可能跨越剪接区。要发现正确的剪接区尤其是参考基因组中存在错误或差异或者无保守区和融合转录本。Tophat分两步进行无剪接序列先比对到外显子，没比对的序列被分开比对来寻找外显子区。比对时参数设置取决于文库，错配数，reads的长度和类型及测序长度。
 
@@ -172,9 +168,9 @@ scRNA-seq比对在转录组参考基因组上不能发现新的基因，若研�
 
 缺点：测序错误率高，不能用于从头合成需要参考基因组；SMRT细胞数量较低阻碍了转录本定量分析。
 
-<font style="color:#B2B2B2;">作者：dandanwu90</font>
+作者：dandanwu90
 
-<font style="color:#B2B2B2;">来源：</font>[<font style="color:#B2B2B2;">https://www.jianshu.com/p/2055db183907</font>](https://www.jianshu.com/p/2055db183907)
+来源：[https://www.jianshu.com/p/2055db183907](https://www.jianshu.com/p/2055db183907)
 
 
 

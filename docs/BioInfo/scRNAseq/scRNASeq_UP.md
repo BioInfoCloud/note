@@ -58,7 +58,7 @@ scRNA-seq 非常适合研究细胞群的异质性。例如，识别组织的细�
 
 ## 1.背景
 
-基于下一代测序的单细胞基因表达分析在1992年首次被描述。2015年，开发了基于encapsulation和barcode的分析。在过去的5年里，单细胞分析变得大众化，大多数学术机构都有专门的核心设施来进行单细胞表达、表观基因组或其他分析。新的统计分析方法得到了迅速发展。一些分析平台也已经开发出来，如Seurat，它是用R 语言写的([https://satijalab.org/seurat/get_started.](https://satijalab.org/seurat/get_started.) html) ，用Python写的Scanpy ([https://scanpy.readthedocs.io/en/](https://scanpy.readthedocs.io/en/) stable/tutorials.html)。在这里，我们回顾了基本的分析工具和概念。我们关注于10× Genomics数据，因为它们更常用(图1)。本文主要基于两个案例研究教程([https://www.](https://www.) github.com/theislab/single-cell-tutorial 和[http://scrnaseqcourse.cog.sanger.](http://scrnaseqcourse.cog.sanger.)ac.uk/website/index.html)。
+基于下一代测序的单细胞基因表达分析在1992年首次被描述。2015年，开发了基于encapsulation和barcode的分析。在过去的5年里，单细胞分析变得大众化，大多数学术机构都有专门的核心设施来进行单细胞表达、表观基因组或其他分析。新的统计分析方法得到了迅速发展。一些分析平台也已经开发出来，如Seurat，它是用R 语言写的[Seurat](https://satijalab.org/seurat/get_started) ，用 Python 写的 [Scanpy](https://scanpy.readthedocs.io/en/stable/tutorials.html)。在这里，我们回顾了基本的分析工具和概念。我们关注于 10× Genomics 数据，因为它们更常用 (图 1)。本文主要基于两个案例研究教程：[single-cell-tutorial](https://github.com/theislab/single-cell-tutorial) 和 [scrnaseqcourse](http://scrnaseqcourse.cog.sanger.ac.uk/website/index.html)。
 
 ![image.png](./Figure/scRNASeq_UP_010.jpg)
 

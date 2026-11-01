@@ -231,7 +231,7 @@ CNA.test <- data.frame(copykat.test$CNAmat)
 
 预测的结果正常细胞（diploid）还是肿瘤细胞（aneuploid），每个CNV segment在每个细胞的表达量。
 
-#### <font style="color:rgb(31, 35, 40);">(4) navigate prediction results</font>
+#### (4) navigate prediction results
 
 ```r
   my_palette <- colorRampPalette(rev(RColorBrewer::brewer.pal(n = 3, name = "RdBu")))(n = 999)
@@ -259,7 +259,7 @@ heatmap.3(t(CNA.test[,4:ncol(CNA.test)]),dendrogram="r", distfun = function(x) p
 
 ```
 
-#### <font style="color:rgb(31, 35, 40);">(5) define subpopulations of aneuploid tumor cells</font>
+#### (5) define subpopulations of aneuploid tumor cells
 
 ```r
 tumor.cells <- pred.test$cell.names[which(pred.test$copykat.pred=="aneuploid")]

@@ -283,7 +283,7 @@ adata = adata[adata.obs.n_genes_by_counts < 2500, :]
 adata = adata[adata.obs.pct_counts_mt < 5, :]
 ```
 
-<font style="color:rgb(50, 50, 50);">Total-count normalize (library-size correct) the data matrix </font><font style="color:rgb(50, 50, 50);">X</font><font style="color:rgb(50, 50, 50);"> to 10,000 reads per cell, so that counts become comparable among cells.</font>
+Total-count normalize (library-size correct) the data matrix X to 10,000 reads per cell, so that counts become comparable among cells.
 
 ```python
 sc.pp.normalize_total(adata, target_sum=1e4)

@@ -20,17 +20,17 @@
 
 ![1650715301398-583322c5-222b-4ebc-bdfd-eae06ac16f8f.png](./img/58tA4WBE-xbCE9Rg/1650715301398-583322c5-222b-4ebc-bdfd-eae06ac16f8f-146047.png)
 
-### (1) <font style="color:rgb(18, 18, 18);">10×genomics技术</font>
+### (1) 10×genomics技术
 
 ![1650715398799-072b9eb2-cd03-4e93-b4af-1ec5d5ce45ff.png](./img/58tA4WBE-xbCE9Rg/1650715398799-072b9eb2-cd03-4e93-b4af-1ec5d5ce45ff-223725.png)
 
-<font style="color:rgb(18, 18, 18);">首先在凝胶微珠上种上特定的DNA片段，DNA片段由三部分组成：Barcode、UMI、PolyT组成。Barcode是16个碱基的长度。一共有400万种Barcode，一个微珠是对应于一种Barcode，通过这400万种Barcode，可以把凝胶微珠给区分开。UMI是一段随机序列，也就是说每一个DNA分子，都有自己的UMI序列。10个碱基长的UMI，有100万种序列的变化（4^10 = 1,048,576），UMI的作用是为了区分哪些哪些reads是来自于一个原始cDNA分子，区分基因片段重复还是duplication及区分是真实的SNP位点还是PCR产生的突变。</font>
+首先在凝胶微珠上种上特定的DNA片段，DNA片段由三部分组成：Barcode、UMI、PolyT组成。Barcode是16个碱基的长度。一共有400万种Barcode，一个微珠是对应于一种Barcode，通过这400万种Barcode，可以把凝胶微珠给区分开。UMI是一段随机序列，也就是说每一个DNA分子，都有自己的UMI序列。10个碱基长的UMI，有100万种序列的变化（4^10 = 1,048,576），UMI的作用是为了区分哪些哪些reads是来自于一个原始cDNA分子，区分基因片段重复还是duplication及区分是真实的SNP位点还是PCR产生的突变。
 
 ![1650716254850-3916e61f-5b8a-4555-8def-b9dcec8aaf28.png](./img/58tA4WBE-xbCE9Rg/1650716254850-3916e61f-5b8a-4555-8def-b9dcec8aaf28-218835.png)
 
-#### <font style="color:rgb(18, 18, 18);">3'端文库的构建</font>
+#### 3'端文库的构建
 
-<font style="color:rgb(18, 18, 18);">通过10×genomics仪器将单个细胞与单个凝胶微珠通过油相混在一起，形成油包水的小微滴，接下来把细胞膜破掉，让细胞当中的mRNA游离出来。游离出来的mRNA与小液滴中的水相混合，也就是和逆转录酶、结合在凝胶微珠上的核酸引物、以及dNTP底物相接触。接着，发生逆转录反应。mRNA与凝胶微珠上带标签的DNA分子相结合，在逆转录酶的作用下，逆转录出cDNA来。</font>
+通过10×genomics仪器将单个细胞与单个凝胶微珠通过油相混在一起，形成油包水的小微滴，接下来把细胞膜破掉，让细胞当中的mRNA游离出来。游离出来的mRNA与小液滴中的水相混合，也就是和逆转录酶、结合在凝胶微珠上的核酸引物、以及dNTP底物相接触。接着，发生逆转录反应。mRNA与凝胶微珠上带标签的DNA分子相结合，在逆转录酶的作用下，逆转录出cDNA来。
 
 ![1650719903977-60da27ca-09c5-4640-90d0-2794a45f9742.png](./img/58tA4WBE-xbCE9Rg/1650719903977-60da27ca-09c5-4640-90d0-2794a45f9742-266144.png)
 
@@ -40,21 +40,21 @@
 
 ![1650720027867-db00de23-4746-4934-a798-4b34bd2ef97e.png](./img/58tA4WBE-xbCE9Rg/1650720027867-db00de23-4746-4934-a798-4b34bd2ef97e-824634.png)
 
-<font style="color:rgb(18, 18, 18);">把这个乳浊液当中所有的水相抽出来，也就是把所有带了标签的cDNA分子都抽出来，再把这些cDNA分子都加上接头，经过PCR扩增，做成illumina的测序文库，放到Illumina的测序仪上进行测序。</font>
+把这个乳浊液当中所有的水相抽出来，也就是把所有带了标签的cDNA分子都抽出来，再把这些cDNA分子都加上接头，经过PCR扩增，做成illumina的测序文库，放到Illumina的测序仪上进行测序。
 
 ![1650720089204-56a23411-98f9-477c-8a95-c86452eb351b.png](./img/58tA4WBE-xbCE9Rg/1650720089204-56a23411-98f9-477c-8a95-c86452eb351b-135728.png)
 
 ![1650720128929-b0f4a731-d222-4c8c-a287-572bafdfbd8c.png](./img/58tA4WBE-xbCE9Rg/1650720128929-b0f4a731-d222-4c8c-a287-572bafdfbd8c-205261.png)
 
-<font style="color:rgb(18, 18, 18);"></font>
 
-#### <font style="color:rgb(18, 18, 18);">5'端文库的构建</font>
 
-<font style="color:rgb(18, 18, 18);">与3’端文库的构建过程相似</font>
+#### 5'端文库的构建
+
+与3’端文库的构建过程相似
 
 ![1650720197047-bd22c500-d426-4ba4-8f1a-2c0e0d9f56b5.png](./img/58tA4WBE-xbCE9Rg/1650720197047-bd22c500-d426-4ba4-8f1a-2c0e0d9f56b5-517573.png)
 
-\*\*<font style="color:#F5222D;">小提示：</font>\*\*barcode和UMI是单细胞中常见的名词，barcode就像是每个凝胶微珠的身份证号码；而UMI则像是每个DNA标签分子的身份证号码。
+\*\*小提示：\*\*barcode和UMI是单细胞中常见的名词，barcode就像是每个凝胶微珠的身份证号码；而UMI则像是每个DNA标签分子的身份证号码。
 
 使用scRNA-seq，可以估计基因在细胞群的表达水平分布。
 
@@ -74,7 +74,7 @@ SMART-seq2是一种低通量单细胞测序法，提供全长转录组的定量�
 
 ## 1.背景
 
-基于下一代测序的单细胞基因表达分析在1992年首次被描述。2015年，开发了基于encapsulation和barcode的分析。在过去的5年里，单细胞分析变得大众化，大多数学术机构都有专门的核心设施来进行单细胞表达、表观基因组或其他分析。新的统计分析方法得到了迅速发展。一些分析平台也已经开发出来，如Seurat，它是用R 语言写的(<https://satijalab.org/seurat/get_started.> html) ，用Python写的Scanpy (<https://scanpy.readthedocs.io/en/> stable/tutorials.html)。在这里，我们回顾了基本的分析工具和概念。我们关注于<font style="color:rgb(18, 18, 18);">10×</font> Genomics数据，因为它们更常用(图1)。本文主要基于两个案例研究教程(<https://www.> github.com/theislab/single-cell-tutorial 和<http://scrnaseqcourse.cog.sanger.>ac.uk/website/index.html)。
+基于下一代测序的单细胞基因表达分析在1992年首次被描述。2015年，开发了基于encapsulation和barcode的分析。在过去的5年里，单细胞分析变得大众化，大多数学术机构都有专门的核心设施来进行单细胞表达、表观基因组或其他分析。新的统计分析方法得到了迅速发展。一些分析平台也已经开发出来，如Seurat，它是用R 语言写的(<https://satijalab.org/seurat/get_started.> html) ，用Python写的Scanpy (<https://scanpy.readthedocs.io/en/> stable/tutorials.html)。在这里，我们回顾了基本的分析工具和概念。我们关注于10× Genomics数据，因为它们更常用(图1)。本文主要基于两个案例研究教程(<https://www.> github.com/theislab/single-cell-tutorial 和<http://scrnaseqcourse.cog.sanger.>ac.uk/website/index.html)。
 
 ![1650869914724-993c95cd-f3a5-438e-91fe-c8a1d2fdeaac.png](./img/58tA4WBE-xbCE9Rg/1650869914724-993c95cd-f3a5-438e-91fe-c8a1d2fdeaac-871306.png)
 
@@ -456,7 +456,7 @@ conda install -c bioconda/label/cf201901 star
 
 STAR比对需要索引， cellranger软件的索引包含基因组注释，这里可以直接使用这些数据来构建STAR
 
-比对的索引。**<font style="color:#E8323C;">注意：不同STAR软件版本构建的索引是不通用的，更换软件版本后需要重新构建索引。</font>**
+比对的索引。**注意：不同STAR软件版本构建的索引是不通用的，更换软件版本后需要重新构建索引。**
 
 ```shell
 STAR --runMode genomeGenerate \
@@ -492,13 +492,13 @@ STAR --runMode genomeGenerate \
 
 ![1651378574114-6c5eb865-f216-488e-ac50-66493a27652a.png](./img/58tA4WBE-xbCE9Rg/1651378574114-6c5eb865-f216-488e-ac50-66493a27652a-015319.png)
 
-• --genomeDir<font style="color:rgb(0,0,0);">： STAR索引所在目录\
-</font>• --readFilesCommand <font style="color:rgb(0,0,0);">zcat：使用zcat读取gz压缩格式文件\
-</font>• --readFilesIn<font style="color:rgb(0,0,0);">：读入fastq文件的路径，首先是R2，然后是R1\
-</font>• --soloOutFileNames<font style="color:rgb(0,0,0);">：输出文件夹名\
-</font>• --soloType CB_UMI_Simple<font style="color:rgb(0,0,0);">：文库类型\
-</font>• --soloCBwhitelist<font style="color:rgb(0,0,0);">：所有使用的barcode序列\
-</font>• --runThreadN<font style="color:rgb(0,0,0);">：服务器使用的线程数</font>
+• --genomeDir： STAR索引所在目录\
+• --readFilesCommand zcat：使用zcat读取gz压缩格式文件\
+• --readFilesIn：读入fastq文件的路径，首先是R2，然后是R1\
+• --soloOutFileNames：输出文件夹名\
+• --soloType CB_UMI_Simple：文库类型\
+• --soloCBwhitelist：所有使用的barcode序列\
+• --runThreadN：服务器使用的线程数
 
 STARsolo的结果与cellranger count的结果相同， cellranger count也是调用STAR进行比对。STARsolo的运行速度比cellranger count快10倍。
 
@@ -570,7 +570,7 @@ index：运行salmon索引构建程序； -t：之前下载的cdna序列； -i�
 
 ## 1.数据读入
 
-Cell Ranger生成的主要表格文件主要包括3个文件，分别是barcodes, features, matrix三个表格文件，其中barcodes文件存储的是细胞的信息，features存储的是基因的名称信息，matrix存储的是表达量的信息。还有一种数据是作者在GEO数据库<font style="color:rgb(43, 43, 43);">直接提供表达矩阵（csv或txt）</font>
+Cell Ranger生成的主要表格文件主要包括3个文件，分别是barcodes, features, matrix三个表格文件，其中barcodes文件存储的是细胞的信息，features存储的是基因的名称信息，matrix存储的是表达量的信息。还有一种数据是作者在GEO数据库直接提供表达矩阵（csv或txt）
 
 ### (1).读入csv文件的表达矩阵构建Seurat对象
 
@@ -626,13 +626,13 @@ main_tiss_filtered <- subset(x=main_tiss, subset = nCount_RNA > 50000 & nFeature
 main_tiss_filtered
 ```
 
-<font style="color:rgb(0, 0, 0);">我们得到了main_tiss_filtered这个变量，是一个Seurat对象，就可以follow我们的教程后后续分析流程啦。参考代码仍然是：</font>
+我们得到了main_tiss_filtered这个变量，是一个Seurat对象，就可以follow我们的教程后后续分析流程啦。参考代码仍然是：
 
 * [祖传的单个10x样本的seurat标准代码](https://mp.weixin.qq.com/s?__biz=MzAxMDkxODM1Ng==\&mid=2247495635\&idx=1\&sn=b80a060573dfc266fe9d4c7773c88c7f\&scene=21#wechat_redirect)
 * [祖传的单个10x样本的seurat标准代码（人和鼠需要区别对待）](https://mp.weixin.qq.com/s?__biz=MzAxMDkxODM1Ng==\&mid=2247495646\&idx=1\&sn=b24b77c21e99f11793ae8166be9ad02f\&scene=21#wechat_redirect)
 * [seurat标准流程实例之2个10x样本的项目（GSE135927数据集）](https://mp.weixin.qq.com/s?__biz=MzAxMDkxODM1Ng==\&mid=2247495874\&idx=1\&sn=1189c08b96ce1ea2c70964db93f480d6\&scene=21#wechat_redirect)
 
-### (2).读入<font style="color:rgb(43, 43, 43);">10X标准输出的3个文件和融合多个样本数据</font>
+### (2).读入10X标准输出的3个文件和融合多个样本数据
 
 这三个文件指的是：barcodes.tsv, features.tsv, matrix.mtx。这个情况就比较好处理了，barcodes.tsv就是 cell id，features.tsv就是 gene id，matrix.mtx就是计数 counts 矩阵。
 
@@ -743,7 +743,7 @@ library(stringr)
 table(sce.all$orig.ident)
 ```
 
-### (3).读入<font style="color:rgb(43, 43, 43);">h5格式文件</font>
+### (3).读入h5格式文件
 
 ```r
 ############### h5格式文件 ##############
@@ -778,9 +778,9 @@ table(sce_big$orig.ident)
 save(sce_big,file = 'sce_big.Rdata') # 保存的数据
 ```
 
-### (4)<font style="color:rgb(43, 43, 43);">. h5ad格式</font>
+### (4). h5ad格式
 
-<font style="color:rgb(34, 34, 34);">需要安装</font><font style="color:rgb(53, 148, 247);">SeuratDisk</font><font style="color:rgb(34, 34, 34);">包，先将后</font><font style="color:rgb(53, 148, 247);">h5ad</font><font style="color:rgb(34, 34, 34);">格式转换为</font><font style="color:rgb(53, 148, 247);">h5seurat</font><font style="color:rgb(34, 34, 34);">格式，再使用</font><font style="color:rgb(53, 148, 247);">LoadH5Seurat()</font><font style="color:rgb(34, 34, 34);">函数读取Seurat对象。</font>
+需要安装SeuratDisk包，先将后h5ad格式转换为h5seurat格式，再使用LoadH5Seurat()函数读取Seurat对象。
 
 ```r
 ############### h5ad格式文件 ##############
@@ -796,7 +796,7 @@ Convert("GSM4648565_liver_raw_counts.h5ad", "h5seurat",
 sce <- LoadH5Seurat("GSM4648565_liver_raw_counts.h5seurat")
 ```
 
-## <font style="color:rgb(34, 34, 34);">2.数据质控</font>
+## 2.数据质控
 
 可参考：<https://mp.weixin.qq.com/s/g_tAhFQfr2IhFyHxzcFRTg>
 
@@ -905,7 +905,7 @@ Seurat对象在生成时，已经将每个细胞表达的基因数和reads数记
 
 ## 3.数据标准化
 
-<font style="color:rgb(34, 34, 34);">基因的表达矩阵需要经过标准化后才能进行后续的分析。使用NormalizeData函数进行标准化，</font>normalization.method：标准化方法，可选项，
+基因的表达矩阵需要经过标准化后才能进行后续的分析。使用NormalizeData函数进行标准化，normalization.method：标准化方法，可选项，
 
 ```
 -  logNormalize： log(每个细胞的特征counts/细胞count总数*scale.factor)
@@ -913,7 +913,7 @@ Seurat对象在生成时，已经将每个细胞表达的基因数和reads数记
 - RC：相对计数，计算公式同logNormalize，不取log，计算CPM表达量，设置scale.factor=1e6
 ```
 
-<font style="color:rgb(34, 34, 34);">课选择LogNormalize：</font>
+课选择LogNormalize：
 
 ```r
 sce.all.filt = NormalizeData(sce.all.filt)
@@ -953,15 +953,15 @@ str(cc.genes)
 
 CellCycleScoring即根据此，对每个细胞的S期、G2M期可能性进行打分；具体如何计算的，暂时在Seurat官方文档中没有提及。在satijalab的github([https://github.com/satijalab/seurat/issues/728)](https://github.com/satijalab/seurat/issues/728))中，作者这样回复类似的提问：
 
-<font style="background-color:#BFBFBF;">As we say in the vignette, the scores are computed using an algorithm developed by Itay Tirosh, when he was a postdoc in the Regev Lab (Science et al., 2016). The gene sets are also taken from his work.</font>
+As we say in the vignette, the scores are computed using an algorithm developed by Itay Tirosh, when he was a postdoc in the Regev Lab (Science et al., 2016). The gene sets are also taken from his work.
 
-<font style="background-color:#BFBFBF;">You can read the methods section of </font>[<font style="background-color:#BFBFBF;">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4944528/</font>](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4944528/)<font style="background-color:#BFBFBF;"> to see how the scoring works, but essentially the method scores cells based on the expression of each gene in a signature set - after controlling for the expected expression of genes with similar abundance. </font>
+You can read the methods section of [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4944528/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4944528/) to see how the scoring works, but essentially the method scores cells based on the expression of each gene in a signature set - after controlling for the expected expression of genes with similar abundance. 
 
-<font style="color:rgb(0, 0, 0);">结合一些中文教程（</font><font style="color:rgb(255, 0, 0);">https://www.jianshu.com/p/e4a5b5c67de1</font><font style="color:rgb(0, 0, 0);">)的介绍，认为就是根据每个细胞的S期(或者G2/M期)基因集是否显著高表达，对应的score就是表示在该细胞中，S期(或者G2/M期)基因集高表达的程度(如果是负数，就认为不属于该phase)。</font>
+结合一些中文教程（https://www.jianshu.com/p/e4a5b5c67de1)的介绍，认为就是根据每个细胞的S期(或者G2/M期)基因集是否显著高表达，对应的score就是表示在该细胞中，S期(或者G2/M期)基因集高表达的程度(如果是负数，就认为不属于该phase)。
 
 ![1664719053951-445ac683-7cb0-42d9-aee1-9037c3d134c0.jpeg](./img/58tA4WBE-xbCE9Rg/1664719053951-445ac683-7cb0-42d9-aee1-9037c3d134c0-827068.jpeg)
 
-区别于scran包的另外重要的一点就是Seurat包仅提供了人类细胞有关的cell cycle related gene，没有小鼠的。对此，作者这样回复：<code><font style="color:rgb(0, 0, 0);">Thanks. We don't provide different capitalizations because this gene list was developed on a human dataset, and we don't want to create ambiguity by suggesting its created from a mouse reference dataset. </font>**<font style="color:rgb(248, 57, 41);">In practice however, we've found it works quite well for mouse also, and recommend the solution above.</font>**</code>
+区别于scran包的另外重要的一点就是Seurat包仅提供了人类细胞有关的cell cycle related gene，没有小鼠的。对此，作者这样回复：<code>Thanks. We don't provide different capitalizations because this gene list was developed on a human dataset, and we don't want to create ambiguity by suggesting its created from a mouse reference dataset. **In practice however, we've found it works quite well for mouse also, and recommend the solution above.**</code>
 
 简言之，作者认为可以将对应人的cc.gene转换为鼠对应的基因名，当做后者的cell cycle related gene（因为鼠和人类基因的高度相似性）。提到的solution就是采用biomaRt包转换一下。这在我之前的教程中有介绍。
 
@@ -1120,7 +1120,7 @@ head(assigned$scores)
 
 ![1664771965079-21078d29-a04c-419d-84eb-f9101fa28b86.png](./img/58tA4WBE-xbCE9Rg/1664771965079-21078d29-a04c-419d-84eb-f9101fa28b86-274406.png)
 
-根据每一个细胞对于三个周期阶段的scores，可进行判断；具体规则为 **<font style="color:rgb(42, 43, 46);">G1或G2M评分高于0.5的细胞分别被分配到G1期或G2M期</font>**。若G1 or G2M phases均小于0.5，则可判断为S期(虽然可以直接看S期的score)；若G1 or G2M phases均大于0.5，则 the higher score is used for assignment。
+根据每一个细胞对于三个周期阶段的scores，可进行判断；具体规则为 **G1或G2M评分高于0.5的细胞分别被分配到G1期或G2M期**。若G1 or G2M phases均小于0.5，则可判断为S期(虽然可以直接看S期的score)；若G1 or G2M phases均大于0.5，则 the higher score is used for assignment。
 
 ## 5.检测doublets
 

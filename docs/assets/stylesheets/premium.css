@@ -227,3 +227,42 @@ html { scroll-behavior: smooth; }
 .md-content__inner > .features { margin: 0 0 1.4rem; }
 .roadmap { margin: 1rem auto 1.6rem; }
 .cta { margin: 1.8rem auto 0; padding: 1.2rem 1.4rem; }
+
+/* 17. 背景动态元素：漂浮的渐变光球（克制、不抢内容，置于内容之下） */
+.md-main { position: relative; }
+.md-main::before, .md-main::after {
+  content: ""; position: absolute; z-index: -1; pointer-events: none;
+  border-radius: 50%; filter: blur(50px); opacity: .5; will-change: transform;
+}
+.md-main::before {
+  width: 38vw; height: 38vw; top: -8vw; left: -6vw;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 184, 154, .30), transparent 70%);
+  animation: bic-bg-float-a 26s ease-in-out infinite alternate;
+}
+.md-main::after {
+  width: 34vw; height: 34vw; bottom: -10vw; right: -5vw;
+  background: radial-gradient(circle at 50% 50%, rgba(28, 168, 232, .26), transparent 70%);
+  animation: bic-bg-float-b 32s ease-in-out infinite alternate;
+}
+@keyframes bic-bg-float-a { from { transform: translate(0, 0) scale(1); } to { transform: translate(3vw, 4vw) scale(1.08); } }
+@keyframes bic-bg-float-b { from { transform: translate(0, 0) scale(1); } to { transform: translate(-3vw, -3vw) scale(1.1); } }
+
+/* 18. 菜单栏动效：激活/悬浮态流动渐变下划线 + 悬浮轻抬升 */
+.md-tabs__link { transition: opacity .25s ease, transform .25s ease, color .25s ease; }
+.md-tabs__link:hover { transform: translateY(-1px); }
+.md-tabs__link::after {
+  background-size: 220% 100%;
+  animation: bic-tab-flow 3.2s linear infinite;
+}
+@keyframes bic-tab-flow { 0% { background-position: 0 0; } 100% { background-position: 220% 0; } }
+
+/* 19. 图片稳健排版：段落/列表内图片一律块级居中（修复"图贴着文字"的换行问题） */
+.md-typeset p img:not(.twemoji), .md-typeset li img:not(.twemoji) {
+  display: block; margin: 1.2em auto;
+}
+
+/* 20. 动效降级（尊重偏好减少动态） */
+@media (prefers-reduced-motion: reduce) {
+  .md-main::before, .md-main::after, .md-tabs__link::after, .hero::before { animation: none; }
+  .md-tabs__link:hover { transform: none; }
+}
