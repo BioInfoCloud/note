@@ -1,2 +1,13 @@
 .DS_Store
 __TEMP
+site/
+
+# 本地构建临时配置与中间产物（含绝对路径，不可移植）
+_mkdocs_build.yml
+_nav_out.txt
+
+# WorkBuddy 本地项目记忆，不入库
+.workbuddy/
+
+# Baidu Syncdisk 临时上传标记文件
+*.baiduyun.*

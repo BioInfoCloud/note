@@ -59,117 +59,235 @@ extra:
 
 # [Navigtion]
 nav:
-  - 生信编程: 
-    - Programming/index.md 
-    - Linux: 
-      - Linux讲座: Programming/Linux/linux.md
-      - 命令行入门精简版: Programming/Linux/commands-concise.md
-      - vim: Programming/Linux/vim.md
-      - tmux: Programming/Linux/tmux.md
-      - UNIX: Programming/Linux/unix.md
-      - 内核编译: Programming/Linux/kernel-compile.md
-    - Markdown: 
-      - Markdown讲座: Programming/Markdown/markdown.md
-      - VSCode及插件安装: Programming/vscode-python/vscode-python.md
-      - Markdown语法: Programming/Markdown/grammars.md
-    - Git: 
-      - Git: Programming/Git/git.md
-      - Git例子: Programming/Git/git-demos.md
-      - Git合作: Programming/Git/git-teamwork.md
-      - Windows安装Git: Programming/Git/windows-install.md
-    - R: 
-      - R语法: Programming/R/Grammar.md
-      - 可视化: Programming/R/ggplot2.md
-      - R包开发:
-        - 软件安装: Programming/R/01-software.md
-        - 快速手册: Programming/R/02-DevelopmentManual.md
-      - Shiny: Programming/R/shiny.md
-    - Python: 
-      - 语法基础: Programming/python/links.md
-      - Numpy: Programming/python/numpy.md
-      - Pandas: Programming/python/pandas.md
-      - Matplotlib: Programming/python/Matplotlib_visualization/Matplotlib_visualization.md
-      - Biopython: BioInfo/Biopython/01_install.md
-  - 生信基础:
-    - BioInfo/index.md
+  - 导读与基础:
+    - 导读与基础:
+      - 导读:
+        - 导读与基础/导读/绪论_uXODe8dBs4oLosqJ.md
+    - 生物学基础:
+      - 生物学基础/信号通路_q_0LG-mrjppGBTPo.md
+      - 生物学基础/基础知识笔记_-J7NnCHF3bZAc2yT.md
+      - 生物学基础/基础科研思路_7v8x5wBOvMbRvyxw.md
+      - 生物学基础/生物学基础知识【总】_X9fOOAsfxOF38Bip.md
+      - 生物学基础/甲基化_ibVDq-26nsrDiB9_.md
+      - 生物学基础/细胞凋亡_411jfYxK-ePnbibm.md
+      - 生物学基础/细胞周期_pHR4a6UDfdB54Flp.md
+      - 生物学基础/细胞自噬_yxOYLH11p-9_C-L8.md
+      - 生物学基础/细胞衰老_MKFlRXnOD1YQ5H__.md
+      - 生物学基础/蛋白泛素化_X6QzhSBiWEJmtSLh.md
+      - 生物学基础/蛋白磷酸化_iI2S1lxFUEazQ08D.md
+      - 生物学基础/血管新生_dHZ5Y1kL3CJlcTlv.md
+      - 生物学基础/非编码RNA__lZNdYy9mFhDoJhv.md
     - 生信基础:
-      - 生信引言: BioInfo/BioInfoBasics/Introduction.md
-      - 基础应用: BioInfo/BioInfoBasics/01.md
-      - 生信名词: BioInfo/BioInfoBasics/02_noun.md
-      - 测序技术原理: BioInfo/BioInfoBasics/03_sequence.md
-      - 数据文件格式: BioInfo/BioInfoBasics/04_format.md
-      - biomaRt包: BioInfo/BioInfoBasics/biomaRt.md
-      - RNASeq表达定量: BioInfo/BioInfoBasics/counts_RPM_RPKM_FPKM_1.md
-      - RNASeq表达定量转换: BioInfo/BioInfoBasics/counts_RPM_RPKM_FPKM_2.md
-      - RNASeq差异表达分析原理: BioInfo/BioInfoBasics/DESeq2_edgeR_limma.md
-      - 什么是GO: BioInfo/BioInfoBasics/GO.md
-      - 富集分析理论基础: BioInfo/BioInfoBasics/KEGG_GO_GSEA_what.md
-      - 人鼠基因比较: BioInfo/BioInfoBasics/hsa2mus.md
-      - 同源基因转换: BioInfo/BioInfoBasics/hsa2mus_2.md
-      - 各种ID转换: BioInfo/BioInfoBasics/IDtrans.md
-      - miRNA的ID转换: BioInfo/BioInfoBasics/miRNA_ID.md
-    - 软件使用问题:
-      - Hisat2: BioInfo/RNAseq/hisat2.md
+      - 生信基础/KEGG、GO与GSEA是什么？_FwJUBg2xocUbu9Al.md
+      - 生信基础/RNA-Seq的Counts和FPKM数据如何转换成TPM？_B2iqCqJ16DLObk-R.md
+      - 生信基础/RNA-seq的count,TPM,FPKM_RPKM值的区别与转换_08QLyEVmIYT1PuBG.md
+      - 生信基础/biomaRt包实现不同物种之间同源基因转换_YxPMyka-AYqApeNX.md
+      - 生信基础/miRNAID转换为常用名称_KXLt7IQgD8Ez9VxL.md
+      - 生信基础/人-小鼠同源基因之间的转换_0gjCm7Zi7l-77ID-.md
+      - 生信基础/人-小鼠基因集之间的比较_6M8-rBa2nOJ8wL3l.md
+      - 生信基础/处理基因组文件_VZr9sm4yFLybTV3O.md
+      - 生信基础/测序技术原理及应用_vc-M4CwgCNpj002d.md
+      - 生信基础/理解GO是什么？？_DwS16bmFIMbfjlr7.md
+      - 生信基础/生信中各种ID转换_95-4_H9QUVG1RBIf.md
+      - 生信基础/生信中常见的数据文件格式_BxpfRoLwzi8BroJT.md
+      - 生信基础/生物信息学入门必须了解的名词_QyC0NHqMJR7AqyqQ.md
+      - 生信基础/生物信息学基础应用_SN6L-BFr3vYuue2U.md
+      - 生信基础/超详细的DESeq2、edgeR和limma包的基本原理和实战案例_IiIzWKglDVISqhN8.md
+  - 生信编程:
+    - 讲稿:
+      - Programming/index.md
+      - Git:
+        - Programming/Git/git-demos.md
+        - Programming/Git/git-teamwork.md
+        - Programming/Git/git.md
+        - Programming/Git/windows-install.md
+      - GitHub:
+        - Programming/GitHub/github-pages.md
+      - Linux:
+        - Programming/Linux/centOS.md
+        - Programming/Linux/commands-concise.md
+        - Programming/Linux/kernel-compile.md
+        - Programming/Linux/linux.md
+        - Programming/Linux/tmux.md
+        - Programming/Linux/unix.md
+        - Programming/Linux/vim.md
+      - Markdown:
+        - Programming/Markdown/grammars.md
+        - Programming/Markdown/markdown.md
+      - R:
+        - Programming/R/01-software.md
+        - Programming/R/02-DevelopmentManual.md
+        - Programming/R/Grammar.md
+        - Programming/R/RContents.md
+        - Programming/R/catalogue.md
+        - Programming/R/dataAnalysis.md
+        - Programming/R/ggplot2.md
+        - Programming/R/shiny.md
+      - python:
+        - Matplotlib_visualization:
+          - Programming/python/Matplotlib_visualization/Matplotlib_visualization.md
+        - Programming/python/links.md
+        - Programming/python/numpy.md
+        - Programming/python/pandas.md
+      - vscode-python:
+        - Programming/vscode-python/vscode-python.md
+    - 生信编程:
+      - Linux:
+        - 生信编程/Linux/linux快速入门手册（BioInfoNotes）_iWhPtJ-jO7bxwH_i.md
+      - Python:
+        - 生信编程/Python/Python快速入门手册_KfJAGUhtPqrPwsHF.md
+        - 生信编程/Python/Python编程基础_8L8j3SHUUPk2HD7_.md
+      - R:
+        - R包开发:
+          - 生信编程/R/R包开发/01-软件安装_MzGMtUI8tqzXoVE2.md
+          - 生信编程/R/R包开发/R包开发快速手册_ycwwHnreIl2Uh4Ke.md
+        - 生信编程/R/R语言公众号文章目录_w_nVnDV4-EL_e3JY.md
+        - 生信编程/R/ggplot2绘图思想_KnCuf_TQaNAuuoQH.md
+        - 生信编程/R/shiny开发_mUYZg5dawCmdgZkB.md
+        - 生信编程/R/参考书籍_TTHSMUwUrr8UFyRy.md
+        - 生信编程/R/基于R语言的生物统计与数据分析_nBuY2PsSZTEROv0u.md
+        - 生信编程/R/基础语法_yRQlRCnBAeN1NBje.md
+        - 生信编程/R/文本挖掘_VRcwb5sizMOeBa47.md
+    - Biopython:
+      - BioInfo/Biopython/01_install.md
+  - 组学数据分析:
+    - 组学分析:
+      - 单细胞分析:
+        - 组学分析/单细胞分析/SCENIC：单细胞转录因子调控_u81ECyUnpceOmxxa.md
+        - 组学分析/单细胞分析/scRNASeq_58tA4WBE-xbCE9Rg.md
+        - 组学分析/单细胞分析/scanpy_dFTJgk5Yb3drDOHQ.md
+        - 组学分析/单细胞分析/单细胞常规分析案例一_Vj_r0whCD9TyWrS9.md
+        - 组学分析/单细胞分析/单细胞相关分析技能_7L4vN2lHYRWrDGTU.md
+      - 甲基化分析:
+        - 组学分析/甲基化分析/甲基化分析_7csXBw2VGAYsQQvP.md
+      - 转录组分析:
+        - 组学分析/转录组分析/BioJupies分析RNASeq数据_2qW6uHZFTdWBzhH_.md
+        - 组学分析/转录组分析/SRA数据库_rr-XVuclmC4PtEXL.md
+        - 组学分析/转录组分析/一个转录组分析流程_np70NcqAn5EcHLFs.md
+        - 组学分析/转录组分析/转录组基础知识_JWtz9dk82uzSeyMp.md
+      - 组学分析/转录组测序背景知识_eg3yZxC7f3LbGAl7.md
+    - scRNAseq:
+      - BioInfo/scRNAseq/CellChat.md
+      - BioInfo/scRNAseq/GSE130001.md
+      - BioInfo/scRNAseq/Scissor.md
+      - BioInfo/scRNAseq/SeuratObj.md
+      - BioInfo/scRNAseq/SingleR.md
+      - BioInfo/scRNAseq/scMetabolism.md
+      - BioInfo/scRNAseq/scRNASeq_UP.md
+      - BioInfo/scRNAseq/scRNASeq_down.md
+    - RNAseq:
+      - BioInfo/RNAseq/hisat2.md
+      - BioInfo/RNAseq/pipeline_1.md
+  - 数据库与数据挖掘:
+    - 数据库挖掘:
+      - GEO数据库:
+        - 数据库挖掘/GEO数据库/GEO数据库使用教程_uiDhZC5sbsRnkS0W.md
+        - 数据库挖掘/GEO数据库/GEO数据库表达数据的提取以及limma包进行差异分析_jdLPLhH72todZWSZ.md
+        - 数据库挖掘/GEO数据库/基因芯片与GEOquery包_Ytl8eaB3r5kpWEyw.md
+      - TCGA数据库:
+        - 数据库挖掘/TCGA数据库/GDCRNATools包_HN4ZjXiqIBncBHFu.md
+        - 数据库挖掘/TCGA数据库/TCGAbiolinks包-新版本_jQAygXEDqldV_W9B.md
+        - 数据库挖掘/TCGA数据库/TCGAbiolinks包-老版本_xw0kpVlajKCznN8e.md
+        - 数据库挖掘/TCGA数据库/TCGA数据下载与整理_FuJI4bj6_6i_ff-5.md
+        - 数据库挖掘/TCGA数据库/TCGA数据库介绍_SbEzbzG88mN4YZ7b.md
+        - TCGA数据库的癌症没有正常样本怎么办？:
+          - 数据库挖掘/TCGA数据库/TCGA数据库的癌症没有正常样本怎么办？/index.md
+          - 数据库挖掘/TCGA数据库/TCGA数据库的癌症没有正常样本怎么办？/无标题文档_E8QptJ2nyl-ZpO0j.md
+      - 下游数据分析:
+        - 数据库挖掘/下游数据分析/IMvigor210CoreBiologies——免疫反应_fXL91fUpySjDQVPK.md
+        - 数据库挖掘/下游数据分析/NMF（非负矩阵分解）替代层次聚类进行肿瘤分型_dpUWmcT1_p3J9Ew3.md
+        - 数据库挖掘/下游数据分析/WGCNA分析_Uiy2rTfsu4WUTpcU.md
+        - 数据库挖掘/下游数据分析/clusterProfiler包进行KEGG,GO,GSEA富集分析_WA1poQh-JPfnWMhf.md
+        - 数据库挖掘/下游数据分析/cytoscape使用教程_ngU8bu0AfMpgMtal.md
+        - 数据库挖掘/下游数据分析/在线分析工具_MpawVafil0WYy5Lc.md
+        - 数据库挖掘/下游数据分析/基因表达差异分析_l9nebAoHw7GO7UOY.md
+        - 数据库挖掘/下游数据分析/教你如何查找调节差异基因的转录因子_ogJTyduoPeP7rT4G.md
+        - 数据库挖掘/下游数据分析/肿瘤TMB计算_DWrpzaZFcV6292r8.md
+        - 数据库挖掘/下游数据分析/肿瘤免疫细胞浸润_ab7ucakEf8elXTg-.md
+        - 数据库挖掘/下游数据分析/肿瘤相关免疫细胞浸润评估_nhteSvyRXv1I2efo.md
+        - 数据库挖掘/下游数据分析/蛋白互作分析_oOu3b7kl3pz5cl1n.md
+      - 分析实战:
+        - 数据库挖掘/分析实战/index.md
+        - 数据库挖掘/分析实战/肿瘤预后模型_3qPP8mceoYAzJIk2.md
+      - 芯片数据分析:
+        - 数据库挖掘/芯片数据分析/芯片数据分析_yFH22K8_RQMPkc70.md
+    - TCGA-GEO:
+      - BioInfo/TCGA/index.md
+    - database:
+      - BioInfo/database/CoMutDB.md
+      - BioInfo/database/CysModDB.md
+      - BioInfo/database/database.md
+      - BioInfo/database/scList.md
+    - drugAna:
+      - BioInfo/drugAna/ADMET.md
+      - BioInfo/drugAna/cellminer.md
+    - immune:
+      - BioInfo/immune/EaSIeR.md
+    - toolsandsoftware:
+      - BioInfo/toolsandsoftware/tands.md
+  - 机器学习与深度学习:
+    - 机器学习:
+      - 机器学习/sklearn介绍_2QcdjFfuQk92ZB-E.md
+      - 机器学习/机器学习_YA-MBiDn2KbHdbcg.md
+      - 机器学习/降维算法_o8m-XfSf7077FQBl.md
+    - 深度学习:
+      - 深度学习/pyTorch基础_rcehDcBdFPzJj-_H.md
+      - 深度学习/pyTorch环境安装_KK7dnf3Rkf_Fyv3K.md
+    - ML:
+      - ML/01_review.md
+      - ML/02_basis.md
+      - LOGISTIC_REGRESSION:
+        - ML/LOGISTIC_REGRESSION/LOGISTIC_REGRESSION.md
+      - knn:
+        - ML/knn/kNN.md
+        - knn_py:
+          - ML/knn/knn_py/knn_py.md
+  - 网络药理学:
+    - 网络药理学/PyMOL的使用教程_kEQtHCNxT2NP4E3v.md
+    - 网络药理学/分子对接_RlF9XutPxSSSW6YN.md
+    - 网络药理学/药物靶点预测_K-ds1sIIwqZbIoS5.md
+    - 网络药理学/虚拟筛选_vedpMAo2GmVPQuwr.md
+  - 智能体:
+    - 智能体/智能体配置及使用手册.md
   - 可视化:
-    - 综合教程: Programming/R/ggplot2.md
-    - 公众号文章参考: visualization/visualizationList.md
-    - 散点图: visualization/ScatterPlot.md
-    - 多重火山图: visualization/mult_volcano.md
-    - 配色方案1: visualization/colorScheme01.md
-  - 大数据:
-    - 学习计划: bigdata/index.md
-  - 机器学习:
-    - 1.kNN算法理论: ML/knn/kNN.md
-    - 2.kNN实践案例: ML/knn/knn_py/knn_py.md
-  - 专题:
-    - 单细胞专题: 
-        - 单细胞上游分析: BioInfo/scRNAseq/scRNASeq_UP.md
-        - 了解Seurat对象: BioInfo/scRNAseq/SeuratObj.md
-        - 单细胞下游分析: BioInfo/scRNAseq/scRNASeq_down.md
-        - 常规分析案例一: BioInfo/scRNAseq/GSE130001.md
-        - 细胞注释-SingleR: BioInfo/scRNAseq/SingleR.md
-        - 表型关联分析: BioInfo/scRNAseq/Scissor.md
-        - cellChat: BioInfo/scRNAseq/CellChat.md
-        - scMetabolism: BioInfo/scRNAseq/scMetabolism.md
-        - 单细胞相关数据库: BioInfo/database/scList.md
-    - RNAseq专题: 
-        - Bulk RNAseq上游分析: BioInfo/RNAseq/pipeline_1.md
-    - TCGA-GEO专题: 
-      - TCGA-GEO: BioInfo/TCGA/index.md
-    - 药物分析: 
-        - CellMiner数据库: BioInfo/drugAna/cellminer.md
-        - ADMET计算: BioInfo/drugAna/ADMET.md
-    - 免疫浸润: 
-        - EaSIeR: BioInfo/immune/EaSIeR.md       
-    - 数据库工具: 
-        - CoMutDB数据库: BioInfo/database/CoMutDB.md
-        - CysModDB数据库: BioInfo/database/CysModDB.md
+    - visualization/ScatterPlot.md
+    - visualization/barbox.md
+    - visualization/colorScheme01.md
+    - visualization/mult_volcano.md
+    - visualization/visualizationList.md
   - 文献:
-    - RNASeq综述: Literature/RNAseq_review1.md
-    - 癌症免疫编辑: Literature/Review/001_immunoediting.md
-    - 癌症免疫治疗: Literature/Review/003_2021_immunotherapy.md
-    - 药物靶点预测: Literature/Review/002_DTIS.md
-    - ICB治疗: Literature/Review/004_2021_ICB.md
-    - 2023_HNSCC: Literature/scRNAseq/2023_NC_HNSCC.md
-    - 纳米材料: Literature/Review/006_Nano.md
-    - 人工智能: Literature/AI/001_AI.md
-  - 数据库工具:
-    - 单细胞相关数据库: BioInfo/database/scList.md
-    - 在线数据库: BioInfo/database/database.md
-    - 工具或软件: BioInfo/toolsandsoftware/tands.md
-    - MedBioInfoCloud包: 
-      - 安装: package/MedBioInfoCloud.md
-      - 基础函数: package/baseFun.md
-      - Bulk RNA-Seq: package/BulkRNA-Seq.md
-      - 富集分析: package/enrichAnalysis.md
-      - TCGA数据挖掘: package/TCGA.md
-  - 微信:
-    - WeChatOfficialAccount/HOME.md # 使用两个index 这样子左上角第一次打开会是所有Tab 而不是ABOUT
-    - 文章索引: WeChatOfficialAccount/articleIndex.md
-  - 关于:
-    - ABOUT/index.md # 使用两个index 这样子左上角第一次打开会是所有Tab 而不是ABOUT
-    - 工具: ABOUT/announcement.md
-    - 微信群: ABOUT/studentsGroup.md
+    - AI:
+      - Literature/AI/001_AI.md
+    - Literature/RNAseq_review1.md
+    - Review:
+      - Literature/Review/001_immunoediting.md
+      - Literature/Review/002_DTIS.md
+      - Literature/Review/003_2021_immunotherapy.md
+      - Literature/Review/004_2021_ICB.md
+      - Literature/Review/005_2022_DL_in_TP.md
+      - Literature/Review/006_Nano.md
+    - Ubiquitination:
+      - Literature/Ubiquitination/ubiq2020review.md
+    - scRNAseq:
+      - Literature/scRNAseq/2023_NC_HNSCC.md
+  - 资源:
+    - 资源:
+      - 前端开发:
+        - 资源/前端开发/github搭建静态网页_D3_hUBm-B4WYcQbg.md
+        - 资源/前端开发/前端开发_pKky0cY78Xd_6HMj.md
+    - WeChatOfficialAccount:
+      - WeChatOfficialAccount/HOME.md
+      - WeChatOfficialAccount/articleIndex.md
+    - Index:
+      - ABOUT/index.md
+      - ABOUT/announcement.md
+      - ABOUT/studentsGroup.md
+    - package:
+      - package/BulkRNA-Seq.md
+      - package/MedBioInfoCloud.md
+      - package/TCGA.md
+      - package/baseFun.md
+      - package/enrichAnalysis.md
 
 # [Extensions]
 plugins:
