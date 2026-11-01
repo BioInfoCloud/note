@@ -13,19 +13,51 @@ def ignore(src, names):
             or n == "__TEMP"]
 
 # 复用临时目录，覆盖复制（避免一次性删除海量文件触发安全拦截）。
-# 文件集合与 docs 一致（本流程不删除文档），覆盖复制即等价于干净副本。
 shutil.copytree(DOCS, TMP, ignore=ignore, dirs_exist_ok=True)
+
+
+def prune(root, keep_rel, exts=None):
+    """删除 root 下不在 keep_rel（相对 docs 的路径集合）里的文件，返回被删的相对路径列表。"""
+    gone = []
+    for dirpath, _dirnames, filenames in os.walk(root):
+        for f in filenames:
+            full = os.path.join(dirpath, f)
+            rel = os.path.relpath(full, root)
+            if rel not in keep_rel:
+                os.remove(full)
+                if exts is None or f.lower().endswith(exts):
+                    gone.append(rel)
+    # 清理空目录
+    for dirpath, dirnames, filenames in os.walk(root, topdown=False):
+        if dirpath != root and not os.listdir(dirpath):
+            os.rmdir(dirpath)
+    return gone
+
+
+keep = set()
+for dirpath, _dirnames, filenames in os.walk(DOCS):
+    for f in filenames:
+        keep.add(os.path.relpath(os.path.join(dirpath, f), DOCS))
+
+removed_md = prune(TMP, keep, exts=(".md",))
+if removed_md:
+    print("已从副本中移除 %d 个已删除文件（其中 md %d 个）" % (len(removed_md), len(removed_md)))
 print("Clean docs copied to", TMP)
 
 with open(os.path.join(ROOT, "mkdocs.yml"), encoding="utf-8") as f:
     cfg = f.read()
-# 插入 docs_dir 指向干净副本（绝对路径，正斜杠）；
-# site_dir 固定为仓库外的目录，并统一用 --dirty 构建：
-# mkdocs 默认会 “Cleaning site directory”（一次删除上千文件，会被批量删除拦截打断），
-# --dirty 跳过清理，因此既不触发拦截，也不会像时间戳目录那样不断堆积。
-# 注意：--dirty 不会删除已下线页面残留的 html；若 docs 里删/改了文件名，
-# 请先手动把 C:\tmp\bic_site 整个目录挪走或删掉，再做一次全量构建。
+# site_dir 固定为仓库外的目录。
+# 关键：不能用 --dirty 构建 —— 导航栏会渲染进每个页面，--dirty 只重建改动过的页面，
+# 未改动页面的侧边栏会一直停留在旧的 mkdocs.yml 上（已删的目录项仍可点）。
+# 但 mkdocs 全量构建前会 "Cleaning site directory" 一次性删上千个文件，会被批量删除拦截打断。
+# 解决办法：把上一次的站点目录改名挪走（改名是 O(1)，不涉及删除），再让 mkdocs 全新建站。
 SITE = r"C:\tmp\bic_site"
+if os.path.isdir(SITE):
+    i = 1
+    while os.path.exists("%s_old%d" % (SITE, i)):
+        i += 1
+    os.rename(SITE, "%s_old%d" % (SITE, i))
+    print("上一次的站点目录已改名为 %s_old%d（可择机清理）" % (SITE, i))
 cfg = (
     "docs_dir: " + TMP.replace("\\", "/") + "\n"
     + "site_dir: " + SITE.replace("\\", "/") + "\n"
@@ -36,9 +68,10 @@ with open(CFG, "w", encoding="utf-8") as f:
 print("Wrote temp config", CFG)
 
 mode = sys.argv[1] if len(sys.argv) > 1 else "build"
-cmd = [sys.executable, "-m", "mkdocs", mode, "-f", CFG, "--dirty"]
+cmd = [sys.executable, "-m", "mkdocs", mode, "-f", CFG]
 if mode == "gh-deploy":
     cmd.append("--force")
 print("Running:", " ".join(cmd))
 r = subprocess.run(cmd, cwd=ROOT)
+
 sys.exit(r.returncode)

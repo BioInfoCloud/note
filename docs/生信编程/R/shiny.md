@@ -1,3 +1,20 @@
+# Shiny 入门与实战
+
+## 0.Shiny 工作原理图解
+
+下面这组图把 Shiny 的输入、输出与 `render*()` 渲染流程串了一遍，可以先建立整体印象，再往下读代码。
+
+![Shiny 工作原理图解 1](./img/mUYZg5dawCmdgZkB/1648802172199-8773cb3a-5f4f-4a6e-ace6-55f339055fd9-879536.png)
+
+![Shiny 工作原理图解 2](./img/mUYZg5dawCmdgZkB/1648802422105-6a15e5cb-1e9c-4954-91d9-acf6f0617888-110591.png)
+
+![Shiny 工作原理图解 3](./img/mUYZg5dawCmdgZkB/1648802391908-32950847-5769-452b-9e6d-e3f0c65fb730-630493.png)
+
+![Shiny 工作原理图解 4](./img/mUYZg5dawCmdgZkB/1648802490346-25afefee-2607-41ae-b193-18adc045ff01-845645.png)
+
+![Shiny 工作原理图解 5](./img/mUYZg5dawCmdgZkB/1648802546922-6d4cd0d5-4375-47c3-8976-f76bcf28117e-129394.png)
+
+![Shiny 工作原理图解 6](./img/mUYZg5dawCmdgZkB/1648805182974-7566c475-5882-4428-8665-333e8a3427eb-765458.png)
 
 ## 1.Shiny APP结构
 

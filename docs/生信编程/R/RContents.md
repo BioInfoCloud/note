@@ -1,3 +1,5 @@
+# R 语言文章目录
+
 > 作者：DoubleHelix，云森
 >
 > B站：[https://space.bilibili.com/434318322](https://space.bilibili.com/434318322)
@@ -5,6 +7,8 @@
 > 公众号：生物信息云（ID：MedBioInfoCloud）
 
 下面的有些内容在公众号设置了付费，但在已经免费发布到B站。感觉有用，可选择下面的文章赞赏！！
+
+这套 R 语法视频分两个阶段录制，第 1 阶段共 10 章，见文章：[生物专业学生 0 基础入门 R 语言语法视频教程](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264971&idx=1&sn=3f97d49331809b1799a5d4a5019d94d0&chksm=841ef3b6b3697aa016626af76c3d7e80ceb269864362e1a59f2e927d2276a614d1693e00a1d6&scene=21#wechat_redirect)；千聊平台另有一套[**整套视频教程**](https://m.qlchat.com/api/gos?target=%2Fwechat%2Fpage%2Fchannel-intro%3FchannelId%3D2000011348597177%26ch_r%3DshareR2%26shareKey%3D940722fc193f3543649b46189b61078f%26sourceNo%3Dlink&pre=%2Fwechat%2Fpage%2Flive%2F2000006988381669%3FisBackFromShare%3DY%26wcl%3Dmiddlepage)。下面是目录。
 
 ## 1.R语法篇目录【视频版】
 

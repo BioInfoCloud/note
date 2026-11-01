@@ -82,7 +82,7 @@ hide:
 
     ggplot2 绘图思想与常见图形的实战代码。
 
-    [:octicons-arrow-right-24: 进入](Programming/R/ggplot2.md)
+    [:octicons-arrow-right-24: 进入](生信编程/R/ggplot2绘图思想_KnCuf_TQaNAuuoQH.md)
 
 -   :material-robot-outline:{ .lg .middle } __机器学习__
 
@@ -146,7 +146,7 @@ hide:
 快速了解 ggplot2 的图层语法，不需要精通，够用即可。
 
 - [R 语言数据可视化 —— 解读 ggplot2 绘图思想（B 站）](https://www.bilibili.com/video/BV1aT411V73F?spm_id_from=333.999.0.0)
-- [ggplot2 综合教程](Programming/R/ggplot2.md)
+- [ggplot2 综合教程](生信编程/R/ggplot2绘图思想_KnCuf_TQaNAuuoQH.md)
 </div>
 
 <div class="roadmap__step" markdown>

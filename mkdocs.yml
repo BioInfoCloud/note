@@ -118,15 +118,6 @@ nav:
       - Markdown:
         - Programming/Markdown/grammars.md
         - Programming/Markdown/markdown.md
-      - R:
-        - Programming/R/01-software.md
-        - Programming/R/02-DevelopmentManual.md
-        - Programming/R/Grammar.md
-        - Programming/R/RContents.md
-        - Programming/R/catalogue.md
-        - Programming/R/dataAnalysis.md
-        - Programming/R/ggplot2.md
-        - Programming/R/shiny.md
       - python:
         - Matplotlib_visualization:
           - Programming/python/Matplotlib_visualization/Matplotlib_visualization.md
@@ -145,13 +136,13 @@ nav:
         - R包开发:
           - 生信编程/R/R包开发/01-软件安装_MzGMtUI8tqzXoVE2.md
           - 生信编程/R/R包开发/R包开发快速手册_ycwwHnreIl2Uh4Ke.md
-        - 生信编程/R/R语言公众号文章目录_w_nVnDV4-EL_e3JY.md
-        - 生信编程/R/ggplot2绘图思想_KnCuf_TQaNAuuoQH.md
-        - 生信编程/R/shiny开发_mUYZg5dawCmdgZkB.md
-        - 生信编程/R/参考书籍_TTHSMUwUrr8UFyRy.md
-        - 生信编程/R/基于R语言的生物统计与数据分析_nBuY2PsSZTEROv0u.md
         - 生信编程/R/基础语法_yRQlRCnBAeN1NBje.md
+        - 生信编程/R/基于R语言的生物统计与数据分析_nBuY2PsSZTEROv0u.md
+        - 生信编程/R/ggplot2绘图思想_KnCuf_TQaNAuuoQH.md
+        - 生信编程/R/shiny.md
+        - 生信编程/R/RContents.md
         - 生信编程/R/文本挖掘_VRcwb5sizMOeBa47.md
+        - 生信编程/R/参考书籍_TTHSMUwUrr8UFyRy.md
     - Biopython:
       - BioInfo/Biopython/01_install.md
   - 组学数据分析:
@@ -181,7 +172,6 @@ nav:
       - BioInfo/scRNAseq/scRNASeq_down.md
     - RNAseq:
       - BioInfo/RNAseq/hisat2.md
-      - BioInfo/RNAseq/pipeline_1.md
   - 数据库与数据挖掘:
     - 数据库挖掘:
       - GEO数据库:
