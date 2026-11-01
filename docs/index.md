@@ -36,7 +36,7 @@ hide:
 
 ## 为什么用本站
 
-<div class="grid cards" markdown>
+<div class="grid cards bic-nav" markdown>
 
 -   :material-map-marker-path:{ .lg .middle } __系统路线__
 
@@ -58,7 +58,7 @@ hide:
 
 ## 内容导航
 
-<div class="grid cards" markdown>
+<div class="grid cards bic-nav" markdown>
 
 -   :material-console:{ .lg .middle } __生信编程__
 

@@ -4,11 +4,11 @@ Pandas 的核心是 Series 和 DataFrame 两种数据结构。Series 是一种�
 
 Pandas 提供了一系列用于数据处理和分析的函数和方法，如：
 
-    数据读取和写入：read_csv、read_excel、read_json、to_csv、to_excel、to_json 等。
-    数据清洗：dropna、fillna、drop_duplicates 等。
-    数据转换：map、replace、applymap、apply 等。
-    数据聚合：groupby、agg、pivot_table 等。
-    数据可视化：plot、hist、bar、箱形图等。
+- 数据读取和写入：read_csv、read_excel、read_json、to_csv、to_excel、to_json 等。
+- 数据清洗：dropna、fillna、drop_duplicates 等。
+- 数据转换：map、replace、applymap、apply 等。
+- 数据聚合：groupby、agg、pivot_table 等。
+- 数据可视化：plot、hist、bar、箱形图等。
 
 ## 1.Pandas 的数据结构
 
