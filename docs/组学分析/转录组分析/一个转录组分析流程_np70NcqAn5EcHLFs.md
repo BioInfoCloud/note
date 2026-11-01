@@ -18,9 +18,9 @@
 
 拿到原始数据后我们首先采用 fastqc 程序进行质控，看原始数据质量情况，fastqc 会生成一个 html 结果报告，根据图形化界面，我们可以判断下机数据情况是否符合分析要求。我们测序得到的是带有质量值的碱基序列 fastq 格式。所以这里你需要先了解[生信中常见的数据文件格式。](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272899&idx=1&sn=6779b2bd21f3b607a08227d31c7212c6&scene=21#wechat_redirect)
 
-FastQC 的官网：[<u>http://www.bioinformatics.babraham.ac.uk/projects/fastqc/</u>](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+FastQC 的官网：[http://www.bioinformatics.babraham.ac.uk/projects/fastqc/](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 
-FastQC 的下载地址：[<u>http://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc</u>](http://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc)
+FastQC 的下载地址：[http://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc](http://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc)
 
 但在 Linux 中，通常我们是搭建环境安装分析流程相关的软件的，具体参考文章：[Linux 系统下 Anaconda 的安装和使用教程](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273219&idx=1&sn=44ad6dfa492aa50f8360ab2bb161b28c&chksm=841edc7eb36955685650eaf067fbded8d3b1d427c1f5e52caf2aa5a25fb9a57250ea12a217a4&scene=21#wechat_redirect)。
 
@@ -188,7 +188,7 @@ Basic statistics 是该 fastq 的一些基本信息，主要有：
 
 以上就是一个完整的 fastqC 结果报告的简单说明，更多信息可参考：[http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/)
 
-结果解读部分来自文章：[<u>https://blog.csdn.net/gateswell/article/details/78858579</u>](https://blog.csdn.net/gateswell/article/details/78858579) ，对此感谢原作者。
+结果解读部分来自文章：[https://blog.csdn.net/gateswell/article/details/78858579](https://blog.csdn.net/gateswell/article/details/78858579) ，对此感谢原作者。
 
 ## 使用 trim-galore 去除低质量的 reads 和 adaptor
 
@@ -620,7 +620,7 @@ RNA-seq 产生的 reads 可能跨越长度较大的内含子，哺乳动物中�
 
 ---
 
-官方手册：[<u>https://daehwankimlab.github.io/hisat2/manual/</u>](https://daehwankimlab.github.io/hisat2/manual/)
+官方手册：[https://daehwankimlab.github.io/hisat2/manual/](https://daehwankimlab.github.io/hisat2/manual/)
 
 #### （三）HISAT2 进行比对的参数设置【引用：2】
 ```plain
@@ -960,9 +960,9 @@ hisat2-build --ss tsRNA.ss --exon tsRNA.exon gencode.v42.transcripts.fa tsRNA
 
 **致谢：** 本文还参考了以下内容：
 
-<u>【1】</u>[<u>https://www.jianshu.com/p/ce3f4afb9b60</u>](https://www.jianshu.com/p/ce3f4afb9b60)。
+【1】[https://www.jianshu.com/p/ce3f4afb9b60](https://www.jianshu.com/p/ce3f4afb9b60)。
 
-<u>【2】</u>[<u>https://github.com/ricket-sjtu/bioinformatics/wiki/HiSat2%E5%BA%94%E7%94%A8%E4%BB%8B%E7%BB%8D</u>](https://github.com/ricket-sjtu/bioinformatics/wiki/HiSat2%25E5%25BA%2594%25E7%2594%25A8%25E4%25BB%258B%25E7%25BB%258D)
+【2】[https://github.com/ricket-sjtu/bioinformatics/wiki/HiSat2%E5%BA%94%E7%94%A8%E4%BB%8B%E7%BB%8D](https://github.com/ricket-sjtu/bioinformatics/wiki/HiSat2%25E5%25BA%2594%25E7%2594%25A8%25E4%25BB%258B%25E7%25BB%258D)
 
 对原作者表示感谢！
 
@@ -984,7 +984,7 @@ hisat2-build --ss tsRNA.ss --exon tsRNA.exon gencode.v42.transcripts.fa tsRNA
 
 SAMtools 是一个用于操作 sam 和 bam 文件的工具合集。能够实现二进制查看、格式转换、排序及合并等功能，结合 sam 格式中的 flag、tag 等信息，还可以完成比对结果的统计汇总。同时利用 linux 中的 grep、awk 等操作命令，还可以大大扩展 samtools 的使用范围与功能。包含有许多命令。我这里主要介绍几个，重点是 samtools view。
 
-samtools 更多信息：[**<u>http://www.htslib.org/</u>**](http://www.htslib.org/)
+samtools 更多信息：[**http://www.htslib.org/**](http://www.htslib.org/)
 
 **1. samtools view**
 
@@ -1030,7 +1030,7 @@ samtools view [options] <in.bam>|<in.sam>|<in.cram> [region ...]
     比对的最低质量值，一般认为20就为unique比对了，可以结合上述-bF参数使用使用提取特定的比对结果
 ```
 
-其他更多参数介绍，阅读：[<u>http://www.htslib.org/doc/samtools-view.html</u>](http://www.htslib.org/doc/samtools-view.html)
+其他更多参数介绍，阅读：[http://www.htslib.org/doc/samtools-view.html](http://www.htslib.org/doc/samtools-view.html)
 
 **2. samtools sort**
 
@@ -1072,7 +1072,7 @@ samtools index [-bc] [-m INT] aln.sam|aln.bam|aln.cram [out.index]
 
 samtools sort 命令按默认染色体位置排序，顺利建立 Index，如果前面排序有出入，可能不能正确建立索引。
 
-参考：[<u>http://www.htslib.org/doc/samtools-index.html</u>](http://www.htslib.org/doc/samtools-index.html)
+参考：[http://www.htslib.org/doc/samtools-index.html](http://www.htslib.org/doc/samtools-index.html)
 
 **4. samtools flagstat**
 
@@ -1089,13 +1089,13 @@ samtools flagstat in.sam|in.bam|in.cram
 -O FORMAT 设置输出格式。FORMAT可以设置为'default'， 'json'或'tsv'来选择默认的，json或标签分隔值输出格式。如果不使用此选项，将选择默认格式。
 ```
 
-参考：[<u>http://www.htslib.org/doc/samtools-flagstat.html</u>](http://www.htslib.org/doc/samtools-flagstat.html)
+参考：[http://www.htslib.org/doc/samtools-flagstat.html](http://www.htslib.org/doc/samtools-flagstat.html)
 
 ---
 
-关于 SAMtools 工具的用法还很多，我就介绍上面几个，其他更多用法，阅读：[<u>http://www.htslib.org/doc/samtools.html</u>](http://www.htslib.org/doc/samtools.html)
+关于 SAMtools 工具的用法还很多，我就介绍上面几个，其他更多用法，阅读：[http://www.htslib.org/doc/samtools.html](http://www.htslib.org/doc/samtools.html)
 
-参考：[<u>https://blog.csdn.net/sinat_38163598/article/details/72910115</u>](https://blog.csdn.net/sinat_38163598/article/details/72910115)
+参考：[https://blog.csdn.net/sinat_38163598/article/details/72910115](https://blog.csdn.net/sinat_38163598/article/details/72910115)
 
 ### 二.SAMtools 实战
 
@@ -1245,9 +1245,9 @@ samtools flagstat cleandata/samtools_bam/CK-4_sort.bam
 
 参考：
 
-【1】[<u>https://blog.csdn.net/sinat_38163598/article/details/72910115</u>](https://blog.csdn.net/sinat_38163598/article/details/72910115)
+【1】[https://blog.csdn.net/sinat_38163598/article/details/72910115](https://blog.csdn.net/sinat_38163598/article/details/72910115)
 
-【2】[<u>http://www.htslib.org/doc/samtools.html</u>](http://www.htslib.org/doc/samtools.html)
+【2】[http://www.htslib.org/doc/samtools.html](http://www.htslib.org/doc/samtools.html)
 
 这一部分就介绍到这里，本公众号文章目录可查看文章：[**公众号文章目录**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273306&idx=1&sn=d92056ee1fde1ff12b1506e02f8eb56f&chksm=841edc27b36955310bac7e1b4e5e4ab7e26e669c192926dbee3efc4f6d185cf3509a8fc87696&scene=21#wechat_redirect)，快速浏览相应文章。
 
@@ -1290,7 +1290,7 @@ ln -s /home/chens/miniconda3/envs/tsRNA/lib/libcrypto.so.1.1 /home/chens/minicon
 
 RSeQC 是发表于 2012 年的一个 RNA-seq 质控工具，属于 Python 包。它提供了一系列有用的小工具，能够评估高通量测序数据尤其是 RNA-seq 数据，比如一些基本模块：检查序列质量、核酸组分偏性、PCR 偏性、GC 含量偏性；还有 RNA-seq 特异性模块：评估测序饱和度、映射读数分布、覆盖均匀性、链特异性、转录水平 RNA 完整性等。该软件的使用命令非常多，但很多功能并不是用来诊断转录组测序的，所以不在我们的考虑范围内。你可以参考官方教程文档：
 
-[<u>https://pythonhosted.org/RSeQC/#bam2fq-py</u>](https://pythonhosted.org/RSeQC/#bam2fq-py)
+[https://pythonhosted.org/RSeQC/#bam2fq-py](https://pythonhosted.org/RSeQC/#bam2fq-py)
 
 RSeQC 接受 4 种文件格式：
 
@@ -1319,7 +1319,7 @@ bam_stat.py -i cleandata/samtools_bam/CK-4_sort.bam
 
 ![1612932844707-bb084cbf-7205-472b-9409-3b4c0dd2fe7d.png](./img/np70NcqAn5EcHLFs/1612932844707-bb084cbf-7205-472b-9409-3b4c0dd2fe7d-377163.png)
 
-bed 文件参考文章：[生信中常见的数据文件格式](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272899&idx=1&sn=6779b2bd21f3b607a08227d31c7212c6&chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&scene=21#wechat_redirect)。bed 文件下载地址 RSeQC 官网：[<u>https://sourceforge.net/projects/rseqc/files/BED/</u>](https://sourceforge.net/projects/rseqc/files/BED/)，我这里下载的是小鼠的：[<u>https://sourceforge.net/projects/rseqc/files/BED/Mouse_Mus_musculus/</u>](https://sourceforge.net/projects/rseqc/files/BED/Mouse_Mus_musculus/)
+bed 文件参考文章：[生信中常见的数据文件格式](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272899&idx=1&sn=6779b2bd21f3b607a08227d31c7212c6&chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&scene=21#wechat_redirect)。bed 文件下载地址 RSeQC 官网：[https://sourceforge.net/projects/rseqc/files/BED/](https://sourceforge.net/projects/rseqc/files/BED/)，我这里下载的是小鼠的：[https://sourceforge.net/projects/rseqc/files/BED/Mouse_Mus_musculus/](https://sourceforge.net/projects/rseqc/files/BED/Mouse_Mus_musculus/)
 
 ![1612932844722-33d023b1-68f7-4d07-8d06-5e6934e9c901.png](./img/np70NcqAn5EcHLFs/1612932844722-33d023b1-68f7-4d07-8d06-5e6934e9c901-000103.png)
 
@@ -1343,7 +1343,7 @@ read_distribution.py -i cleandata/samtools_bam/CK-4_sort.bam -r /data/mouse_RefS
 
 ---
 
-参考：[<u>https://mp.weixin.qq.com/s/KpQwwDm_aIvIbxXHiaNrLg</u>](https://mp.weixin.qq.com/s/KpQwwDm_aIvIbxXHiaNrLg)
+参考：[https://mp.weixin.qq.com/s/KpQwwDm_aIvIbxXHiaNrLg](https://mp.weixin.qq.com/s/KpQwwDm_aIvIbxXHiaNrLg)
 
 ## 使用 StringTie 对数据进行下游处理
 
@@ -1363,7 +1363,7 @@ read_distribution.py -i cleandata/samtools_bam/CK-4_sort.bam -r /data/mouse_RefS
 
 ### 一.StringTie 介绍
 
-StringTie 是用于 RNA-seq 的转录本组装和定量软件，StringTie 可以看做是 Cufflinks 软件的升级版本，其功能和 Cufflinks 是一样的，包括下面两个主要功能：转录本组装和定量；相比 Cufflinks，其运行速度更快。该软件的官网：[<u>https://ccb.jhu.edu/software/stringtie/index.shtml</u>](https://ccb.jhu.edu/software/stringtie/index.shtml)。
+StringTie 是用于 RNA-seq 的转录本组装和定量软件，StringTie 可以看做是 Cufflinks 软件的升级版本，其功能和 Cufflinks 是一样的，包括下面两个主要功能：转录本组装和定量；相比 Cufflinks，其运行速度更快。该软件的官网：[https://ccb.jhu.edu/software/stringtie/index.shtml](https://ccb.jhu.edu/software/stringtie/index.shtml)。
 
 1. Stringtie 通过使用 genome 指导的组装的方法与从头组装的概念结合的新方法来改善转录组组装。
 
@@ -1417,7 +1417,7 @@ StringTie 是用于 RNA-seq 的转录本组装和定量软件，StringTie 可以
 
 gtf 注释文件可以去 genecode 下载你需要的 gtf 文件，我这里下载的是小鼠的。
 
-genecode 官网：[<u>https://www.gencodegenes.org/</u>](https://www.gencodegenes.org/)
+genecode 官网：[https://www.gencodegenes.org/](https://www.gencodegenes.org/)
 
 我的 gtf 文件在 `/data/mouse_annotation/` 目录下：
 
@@ -1501,7 +1501,7 @@ gffcompare [options]* {-i <input_gtf_list> | <input1.gtf> [<input2.gtf> .. <inpu
 --debug  Enables debug mode, which enables -V and generates additional files: <outprefix>.Q_discarded.lst, <outprefix>.missed_introns.gtf and <outprefix>.R_missed.lst
 ```
 
-参考：[<u>http://ccb.jhu.edu/software/stringtie/gffcompare.shtml</u>](http://ccb.jhu.edu/software/stringtie/gffcompare.shtml)
+参考：[http://ccb.jhu.edu/software/stringtie/gffcompare.shtml](http://ccb.jhu.edu/software/stringtie/gffcompare.shtml)
 
 下面用前面整合好的转录本文件，检验数据比对到基因组上的情况。
 

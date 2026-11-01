@@ -164,26 +164,26 @@ Python包含以下函数:
 
 | <br/>**序号** | <br/>**函数** |
 | :--- | :--- |
-| <br/>1 | <br/>[<u>len(list)</u>](https://www.runoob.com/python3/python3-att-list-len.html)<br/>列表元素个数 |
-| <br/>2 | <br/>[<u>max(list)</u>](https://www.runoob.com/python3/python3-att-list-max.html)<br/>返回列表元素最大值 |
-| <br/>3 | <br/>[<u>min(list)</u>](https://www.runoob.com/python3/python3-att-list-min.html)<br/>返回列表元素最小值 |
-| <br/>4 | <br/>[<u>list(seq)</u>](https://www.runoob.com/python3/python3-att-list-list.html)<br/>将元组转换为列表 |
+| <br/>1 | <br/>[len(list)](https://www.runoob.com/python3/python3-att-list-len.html)<br/>列表元素个数 |
+| <br/>2 | <br/>[max(list)](https://www.runoob.com/python3/python3-att-list-max.html)<br/>返回列表元素最大值 |
+| <br/>3 | <br/>[min(list)](https://www.runoob.com/python3/python3-att-list-min.html)<br/>返回列表元素最小值 |
+| <br/>4 | <br/>[list(seq)](https://www.runoob.com/python3/python3-att-list-list.html)<br/>将元组转换为列表 |
 
 Python包含以下方法:
 
 | <br/>**序号** | <br/>**方法** |
 | :--- | :--- |
-| <br/>1 | <br/>[<u>list.append(obj)</u>](https://www.runoob.com/python3/python3-att-list-append.html)<br/>在列表末尾添加新的对象 |
-| <br/>2 | <br/>[<u>list.count(obj)</u>](https://www.runoob.com/python3/python3-att-list-count.html)<br/>统计某个元素在列表中出现的次数 |
-| <br/>3 | <br/>[<u>list.extend(seq)</u>](https://www.runoob.com/python3/python3-att-list-extend.html)<br/>在列表末尾一次性追加另一个序列中的多个值（用新列表扩展原来的列表） |
-| <br/>4 | <br/>[<u>list.index(obj)</u>](https://www.runoob.com/python3/python3-att-list-index.html)<br/>从列表中找出某个值第一个匹配项的索引位置 |
-| <br/>5 | <br/>[<u>list.insert(index, obj)</u>](https://www.runoob.com/python3/python3-att-list-insert.html)<br/>将对象插入列表 |
-| <br/>6 | <br/>[<u>list.pop([index=-1])</u>](https://www.runoob.com/python3/python3-att-list-pop.html)<br/>移除列表中的一个元素（默认最后一个元素），并且返回该元素的值 |
-| <br/>7 | <br/>[<u>list.remove(obj)</u>](https://www.runoob.com/python3/python3-att-list-remove.html)<br/>移除列表中某个值的第一个匹配项 |
-| <br/>8 | <br/>[<u>list.reverse()</u>](https://www.runoob.com/python3/python3-att-list-reverse.html)<br/>反向列表中元素 |
-| <br/>9 | <br/>[<u>list.sort( key=None, reverse=False)</u>](https://www.runoob.com/python3/python3-att-list-sort.html)<br/>对原列表进行排序 |
-| <br/>10 | <br/>[<u>list.clear()</u>](https://www.runoob.com/python3/python3-att-list-clear.html)<br/>清空列表 |
-| <br/>11 | <br/>[<u>list.copy()</u>](https://www.runoob.com/python3/python3-att-list-copy.html)<br/>复制列表 |
+| <br/>1 | <br/>[list.append(obj)](https://www.runoob.com/python3/python3-att-list-append.html)<br/>在列表末尾添加新的对象 |
+| <br/>2 | <br/>[list.count(obj)](https://www.runoob.com/python3/python3-att-list-count.html)<br/>统计某个元素在列表中出现的次数 |
+| <br/>3 | <br/>[list.extend(seq)](https://www.runoob.com/python3/python3-att-list-extend.html)<br/>在列表末尾一次性追加另一个序列中的多个值（用新列表扩展原来的列表） |
+| <br/>4 | <br/>[list.index(obj)](https://www.runoob.com/python3/python3-att-list-index.html)<br/>从列表中找出某个值第一个匹配项的索引位置 |
+| <br/>5 | <br/>[list.insert(index, obj)](https://www.runoob.com/python3/python3-att-list-insert.html)<br/>将对象插入列表 |
+| <br/>6 | <br/>[list.pop([index=-1])](https://www.runoob.com/python3/python3-att-list-pop.html)<br/>移除列表中的一个元素（默认最后一个元素），并且返回该元素的值 |
+| <br/>7 | <br/>[list.remove(obj)](https://www.runoob.com/python3/python3-att-list-remove.html)<br/>移除列表中某个值的第一个匹配项 |
+| <br/>8 | <br/>[list.reverse()](https://www.runoob.com/python3/python3-att-list-reverse.html)<br/>反向列表中元素 |
+| <br/>9 | <br/>[list.sort( key=None, reverse=False)](https://www.runoob.com/python3/python3-att-list-sort.html)<br/>对原列表进行排序 |
+| <br/>10 | <br/>[list.clear()](https://www.runoob.com/python3/python3-att-list-clear.html)<br/>清空列表 |
+| <br/>11 | <br/>[list.copy()](https://www.runoob.com/python3/python3-att-list-copy.html)<br/>复制列表 |
 
 ### 元组
 
@@ -415,18 +415,18 @@ Python字典包含了以下内置方法：
 
 | <br/>**序号** | <br/>**函数及描述** |
 | :--- | :--- |
-| <br/>1 | <br/>[<u>radiansdict.clear()</u>](https://www.runoob.com/python3/python3-att-dictionary-clear.html)<br/>删除字典内所有元素 |
-| <br/>2 | <br/>[<u>radiansdict.copy()</u>](https://www.runoob.com/python3/python3-att-dictionary-copy.html)<br/>返回一个字典的浅复制 |
-| <br/>3 | <br/>[<u>radiansdict.fromkeys()</u>](https://www.runoob.com/python3/python3-att-dictionary-fromkeys.html)<br/>创建一个新字典，以序列seq中元素做字典的键，val为字典所有键对应的初始值 |
-| <br/>4 | <br/>[<u>radiansdict.get(key, default=None)</u>](https://www.runoob.com/python3/python3-att-dictionary-get.html)<br/>返回指定键的值，如果值不在字典中返回default值 |
-| <br/>5 | <br/>[<u>key in dict</u>](https://www.runoob.com/python3/python3-att-dictionary-in.html)<br/>如果键在字典dict里返回true，否则返回false |
-| <br/>6 | <br/>[<u>radiansdict.items()</u>](https://www.runoob.com/python3/python3-att-dictionary-items.html)<br/>以列表返回可遍历的(键, 值) 元组数组 |
-| <br/>7 | <br/>[<u>radiansdict.keys()</u>](https://www.runoob.com/python3/python3-att-dictionary-keys.html)<br/>返回一个迭代器，可以使用 list() 来转换为列表 |
-| <br/>8 | <br/>[<u>radiansdict.setdefault(key, default=None)</u>](https://www.runoob.com/python3/python3-att-dictionary-setdefault.html)<br/>和get()类似, 但如果键不存在于字典中，将会添加键并将值设为default |
-| <br/>9 | <br/>[<u>radiansdict.update(dict2)</u>](https://www.runoob.com/python3/python3-att-dictionary-update.html)<br/>把字典dict2的键/值对更新到dict里 |
-| <br/>10 | <br/>[<u>radiansdict.values()</u>](https://www.runoob.com/python3/python3-att-dictionary-values.html)<br/>返回一个迭代器，可以使用 list() 来转换为列表 |
-| <br/>11 | <br/>[<u>pop(key[,default])</u>](https://www.runoob.com/python3/python3-att-dictionary-pop.html)<br/>删除字典给定键 key 所对应的值，返回值为被删除的值。key值必须给出。 否则，返回default值。 |
-| <br/>12 | <br/>[<u>popitem()</u>](https://www.runoob.com/python3/python3-att-dictionary-popitem.html)<br/>随机返回并删除字典中的最后一对键和值。 |
+| <br/>1 | <br/>[radiansdict.clear()](https://www.runoob.com/python3/python3-att-dictionary-clear.html)<br/>删除字典内所有元素 |
+| <br/>2 | <br/>[radiansdict.copy()](https://www.runoob.com/python3/python3-att-dictionary-copy.html)<br/>返回一个字典的浅复制 |
+| <br/>3 | <br/>[radiansdict.fromkeys()](https://www.runoob.com/python3/python3-att-dictionary-fromkeys.html)<br/>创建一个新字典，以序列seq中元素做字典的键，val为字典所有键对应的初始值 |
+| <br/>4 | <br/>[radiansdict.get(key, default=None)](https://www.runoob.com/python3/python3-att-dictionary-get.html)<br/>返回指定键的值，如果值不在字典中返回default值 |
+| <br/>5 | <br/>[key in dict](https://www.runoob.com/python3/python3-att-dictionary-in.html)<br/>如果键在字典dict里返回true，否则返回false |
+| <br/>6 | <br/>[radiansdict.items()](https://www.runoob.com/python3/python3-att-dictionary-items.html)<br/>以列表返回可遍历的(键, 值) 元组数组 |
+| <br/>7 | <br/>[radiansdict.keys()](https://www.runoob.com/python3/python3-att-dictionary-keys.html)<br/>返回一个迭代器，可以使用 list() 来转换为列表 |
+| <br/>8 | <br/>[radiansdict.setdefault(key, default=None)](https://www.runoob.com/python3/python3-att-dictionary-setdefault.html)<br/>和get()类似, 但如果键不存在于字典中，将会添加键并将值设为default |
+| <br/>9 | <br/>[radiansdict.update(dict2)](https://www.runoob.com/python3/python3-att-dictionary-update.html)<br/>把字典dict2的键/值对更新到dict里 |
+| <br/>10 | <br/>[radiansdict.values()](https://www.runoob.com/python3/python3-att-dictionary-values.html)<br/>返回一个迭代器，可以使用 list() 来转换为列表 |
+| <br/>11 | <br/>[pop(key[,default])](https://www.runoob.com/python3/python3-att-dictionary-pop.html)<br/>删除字典给定键 key 所对应的值，返回值为被删除的值。key值必须给出。 否则，返回default值。 |
+| <br/>12 | <br/>[popitem()](https://www.runoob.com/python3/python3-att-dictionary-popitem.html)<br/>随机返回并删除字典中的最后一对键和值。 |
 
 ### 序列
 
@@ -589,23 +589,23 @@ x in s判断元素 x 是否在集合 s 中，存在返回 True，不存在返回
 
 | <br/>**方法** | <br/>**描述** |
 | :--- | :--- |
-| <br/>[<u>add()</u>](https://www.runoob.com/python3/ref-set-add.html) | <br/>为集合添加元素 |
-| <br/>[<u>clear()</u>](https://www.runoob.com/python3/ref-set-clear.html) | <br/>移除集合中的所有元素 |
-| <br/>[<u>copy()</u>](https://www.runoob.com/python3/ref-set-copy.html) | <br/>拷贝一个集合 |
-| <br/>[<u>difference()</u>](https://www.runoob.com/python3/ref-set-difference.html) | <br/>返回多个集合的差集 |
-| <br/>[<u>difference_update()</u>](https://www.runoob.com/python3/ref-set-difference_update.html) | <br/>移除集合中的元素，该元素在指定的集合也存在。 |
-| <br/>[<u>discard()</u>](https://www.runoob.com/python3/ref-set-discard.html) | <br/>删除集合中指定的元素 |
-| <br/>[<u>intersection()</u>](https://www.runoob.com/python3/ref-set-intersection.html) | <br/>返回集合的交集 |
-| <br/>[<u>intersection_update()</u>](https://www.runoob.com/python3/ref-set-intersection_update.html) | <br/>返回集合的交集。 |
-| <br/>[<u>isdisjoint()</u>](https://www.runoob.com/python3/ref-set-isdisjoint.html) | <br/>判断两个集合是否包含相同的元素，如果没有返回 True，否则返回 False。 |
-| <br/>[<u>issubset()</u>](https://www.runoob.com/python3/ref-set-issubset.html) | <br/>判断指定集合是否为该方法参数集合的子集。 |
-| <br/>[<u>issuperset()</u>](https://www.runoob.com/python3/ref-set-issuperset.html) | <br/>判断该方法的参数集合是否为指定集合的子集 |
-| <br/>[<u>pop()</u>](https://www.runoob.com/python3/ref-set-pop.html) | <br/>随机移除元素 |
-| <br/>[<u>remove()</u>](https://www.runoob.com/python3/ref-set-remove.html) | <br/>移除指定元素 |
-| <br/>[<u>symmetric_difference()</u>](https://www.runoob.com/python3/ref-set-symmetric_difference.html) | <br/>返回两个集合中不重复的元素集合。 |
-| <br/>[<u>symmetric_difference_update()</u>](https://www.runoob.com/python3/ref-set-symmetric_difference_update.html) | <br/>移除当前集合中在另外一个指定集合相同的元素，并将另外一个指定集合中不同的元素插入到当前集合中。 |
-| <br/>[<u>union()</u>](https://www.runoob.com/python3/ref-set-union.html) | <br/>返回两个集合的并集 |
-| <br/>[<u>update()</u>](https://www.runoob.com/python3/ref-set-update.html) | <br/>给集合添加元素 |
+| <br/>[add()](https://www.runoob.com/python3/ref-set-add.html) | <br/>为集合添加元素 |
+| <br/>[clear()](https://www.runoob.com/python3/ref-set-clear.html) | <br/>移除集合中的所有元素 |
+| <br/>[copy()](https://www.runoob.com/python3/ref-set-copy.html) | <br/>拷贝一个集合 |
+| <br/>[difference()](https://www.runoob.com/python3/ref-set-difference.html) | <br/>返回多个集合的差集 |
+| <br/>[difference_update()](https://www.runoob.com/python3/ref-set-difference_update.html) | <br/>移除集合中的元素，该元素在指定的集合也存在。 |
+| <br/>[discard()](https://www.runoob.com/python3/ref-set-discard.html) | <br/>删除集合中指定的元素 |
+| <br/>[intersection()](https://www.runoob.com/python3/ref-set-intersection.html) | <br/>返回集合的交集 |
+| <br/>[intersection_update()](https://www.runoob.com/python3/ref-set-intersection_update.html) | <br/>返回集合的交集。 |
+| <br/>[isdisjoint()](https://www.runoob.com/python3/ref-set-isdisjoint.html) | <br/>判断两个集合是否包含相同的元素，如果没有返回 True，否则返回 False。 |
+| <br/>[issubset()](https://www.runoob.com/python3/ref-set-issubset.html) | <br/>判断指定集合是否为该方法参数集合的子集。 |
+| <br/>[issuperset()](https://www.runoob.com/python3/ref-set-issuperset.html) | <br/>判断该方法的参数集合是否为指定集合的子集 |
+| <br/>[pop()](https://www.runoob.com/python3/ref-set-pop.html) | <br/>随机移除元素 |
+| <br/>[remove()](https://www.runoob.com/python3/ref-set-remove.html) | <br/>移除指定元素 |
+| <br/>[symmetric_difference()](https://www.runoob.com/python3/ref-set-symmetric_difference.html) | <br/>返回两个集合中不重复的元素集合。 |
+| <br/>[symmetric_difference_update()](https://www.runoob.com/python3/ref-set-symmetric_difference_update.html) | <br/>移除当前集合中在另外一个指定集合相同的元素，并将另外一个指定集合中不同的元素插入到当前集合中。 |
+| <br/>[union()](https://www.runoob.com/python3/ref-set-union.html) | <br/>返回两个集合的并集 |
+| <br/>[update()](https://www.runoob.com/python3/ref-set-update.html) | <br/>给集合添加元素 |
 
 ## 三.格式化方法
 
@@ -1010,7 +1010,7 @@ while True:
 
 如果你已经了解的面向对象编程，就知道类都有一个构造函数，Python 的构造函数为 __init__(), 它会在对象初始化的时候执行。
 
-更多内容查阅：[<u>Python3 面向对象</u>](https://www.runoob.com/python3/python3-class.html)
+更多内容查阅：[Python3 面向对象](https://www.runoob.com/python3/python3-class.html)
 
 __iter__() 方法返回一个特殊的迭代器对象， 这个迭代器对象实现了 __next__() 方法并通过 StopIteration 异常标识迭代的完成。
 
@@ -1321,19 +1321,19 @@ file 对象使用 open 函数来创建，下表列出了 file 对象常用的函
 
 | <br/>**序号** | <br/>**方法及描述** |
 | :--- | :--- |
-| <br/>1 | <br/>[<u>file.close()</u>](https://www.runoob.com/python3/python3-file-close.html)<br/>关闭文件。关闭后文件不能再进行读写操作。 |
-| <br/>2 | <br/>[<u>file.flush()</u>](https://www.runoob.com/python3/python3-file-flush.html)<br/>刷新文件内部缓冲，直接把内部缓冲区的数据立刻写入文件, 而不是被动的等待输出缓冲区写入。 |
-| <br/>3 | <br/>[<u>file.fileno()</u>](https://www.runoob.com/python3/python3-file-fileno.html)<br/>返回一个整型的文件描述符(file descriptor FD 整型), 可以用在如os模块的read方法等一些底层操作上。 |
-| <br/>4 | <br/>[<u>file.isatty()</u>](https://www.runoob.com/python3/python3-file-isatty.html)<br/>如果文件连接到一个终端设备返回 True，否则返回 False。 |
-| <br/>5 | <br/>[<u>file.next()</u>](https://www.runoob.com/python3/python3-file-next.html)<br/>Python 3 中的 File 对象不支持 next() 方法。<br/>返回文件下一行。 |
-| <br/>6 | <br/>[<u>file.read([size])</u>](https://www.runoob.com/python3/python3-file-read.html)<br/>从文件读取指定的字节数，如果未给定或为负则读取所有。 |
-| <br/>7 | <br/>[<u>file.readline([size])</u>](https://www.runoob.com/python3/python3-file-readline.html)<br/>读取整行，包括 "\n" 字符。 |
-| <br/>8 | <br/>[<u>file.readlines([sizeint])</u>](https://www.runoob.com/python3/python3-file-readlines.html)<br/>读取所有行并返回列表，若给定sizeint>0，返回总和大约为sizeint字节的行, 实际读取值可能比 sizeint 较大, 因为需要填充缓冲区。 |
-| <br/>9 | <br/>[<u>file.seek(offset[, whence])</u>](https://www.runoob.com/python3/python3-file-seek.html)<br/>移动文件读取指针到指定位置 |
-| <br/>10 | <br/>[<u>file.tell()</u>](https://www.runoob.com/python3/python3-file-tell.html)<br/>返回文件当前位置。 |
-| <br/>11 | <br/>[<u>file.truncate([size])</u>](https://www.runoob.com/python3/python3-file-truncate.html)<br/>从文件的首行首字符开始截断，截断文件为 size 个字符，无 size 表示从当前位置截断；截断之后后面的所有字符被删除，其中 Widnows 系统下的换行代表2个字符大小。 |
-| <br/>12 | <br/>[<u>file.write(str)</u>](https://www.runoob.com/python3/python3-file-write.html)<br/>将字符串写入文件，返回的是写入的字符长度。 |
-| <br/>13 | <br/>[<u>file.writelines(sequence)</u>](https://www.runoob.com/python3/python3-file-writelines.html)<br/>向文件写入一个序列字符串列表，如果需要换行则要自己加入每行的换行符。 |
+| <br/>1 | <br/>[file.close()](https://www.runoob.com/python3/python3-file-close.html)<br/>关闭文件。关闭后文件不能再进行读写操作。 |
+| <br/>2 | <br/>[file.flush()](https://www.runoob.com/python3/python3-file-flush.html)<br/>刷新文件内部缓冲，直接把内部缓冲区的数据立刻写入文件, 而不是被动的等待输出缓冲区写入。 |
+| <br/>3 | <br/>[file.fileno()](https://www.runoob.com/python3/python3-file-fileno.html)<br/>返回一个整型的文件描述符(file descriptor FD 整型), 可以用在如os模块的read方法等一些底层操作上。 |
+| <br/>4 | <br/>[file.isatty()](https://www.runoob.com/python3/python3-file-isatty.html)<br/>如果文件连接到一个终端设备返回 True，否则返回 False。 |
+| <br/>5 | <br/>[file.next()](https://www.runoob.com/python3/python3-file-next.html)<br/>Python 3 中的 File 对象不支持 next() 方法。<br/>返回文件下一行。 |
+| <br/>6 | <br/>[file.read([size])](https://www.runoob.com/python3/python3-file-read.html)<br/>从文件读取指定的字节数，如果未给定或为负则读取所有。 |
+| <br/>7 | <br/>[file.readline([size])](https://www.runoob.com/python3/python3-file-readline.html)<br/>读取整行，包括 "\n" 字符。 |
+| <br/>8 | <br/>[file.readlines([sizeint])](https://www.runoob.com/python3/python3-file-readlines.html)<br/>读取所有行并返回列表，若给定sizeint>0，返回总和大约为sizeint字节的行, 实际读取值可能比 sizeint 较大, 因为需要填充缓冲区。 |
+| <br/>9 | <br/>[file.seek(offset[, whence])](https://www.runoob.com/python3/python3-file-seek.html)<br/>移动文件读取指针到指定位置 |
+| <br/>10 | <br/>[file.tell()](https://www.runoob.com/python3/python3-file-tell.html)<br/>返回文件当前位置。 |
+| <br/>11 | <br/>[file.truncate([size])](https://www.runoob.com/python3/python3-file-truncate.html)<br/>从文件的首行首字符开始截断，截断文件为 size 个字符，无 size 表示从当前位置截断；截断之后后面的所有字符被删除，其中 Widnows 系统下的换行代表2个字符大小。 |
+| <br/>12 | <br/>[file.write(str)](https://www.runoob.com/python3/python3-file-write.html)<br/>将字符串写入文件，返回的是写入的字符长度。 |
+| <br/>13 | <br/>[file.writelines(sequence)](https://www.runoob.com/python3/python3-file-writelines.html)<br/>向文件写入一个序列字符串列表，如果需要换行则要自己加入每行的换行符。 |
 
 #### 文件对象的方法
 ##### f.read()
@@ -1496,70 +1496,70 @@ x = pickle.load(file)
 
 | <br/>**序号** | <br/>**方法及描述** |
 | :--- | :--- |
-| <br/>1 | <br/>[<u>os.access(path, mode)</u>](https://www.runoob.com/python3/python3-os-access.html)<br/><br/>检验权限模式 |
-| <br/>2 | <br/>[<u>os.chdir(path)</u>](https://www.runoob.com/python3/python3-os-chdir.html)<br/><br/>改变当前工作目录 |
-| <br/>3 | <br/>[<u>os.chflags(path, flags)</u>](https://www.runoob.com/python3/python3-os-chflags.html)<br/><br/>设置路径的标记为数字标记。 |
-| <br/>4 | <br/>[<u>os.chmod(path, mode)</u>](https://www.runoob.com/python3/python3-os-chmod.html)<br/><br/>更改权限 |
-| <br/>5 | <br/>[<u>os.chown(path, uid, gid)</u>](https://www.runoob.com/python3/python3-os-chown.html)<br/><br/>更改文件所有者 |
-| <br/>6 | <br/>[<u>os.chroot(path)</u>](https://www.runoob.com/python3/python3-os-chroot.html)<br/><br/>改变当前进程的根目录 |
-| <br/>7 | <br/>[<u>os.close(fd)</u>](https://www.runoob.com/python3/python3-os-close.html)<br/><br/>关闭文件描述符 fd |
-| <br/>8 | <br/>[<u>os.closerange(fd_low, fd_high)</u>](https://www.runoob.com/python3/python3-os-closerange.html)<br/><br/>关闭所有文件描述符，从 fd_low (包含) 到 fd_high (不包含), 错误会忽略 |
-| <br/>9 | <br/>[<u>os.dup(fd)</u>](https://www.runoob.com/python3/python3-os-dup.html)<br/><br/>复制文件描述符 fd |
-| <br/>10 | <br/>[<u>os.dup2(fd, fd2)</u>](https://www.runoob.com/python3/python3-os-dup2.html)<br/><br/>将一个文件描述符 fd 复制到另一个 fd2 |
-| <br/>11 | <br/>[<u>os.fchdir(fd)</u>](https://www.runoob.com/python3/python3-os-fchdir.html)<br/><br/>通过文件描述符改变当前工作目录 |
-| <br/>12 | <br/>[<u>os.fchmod(fd, mode)</u>](https://www.runoob.com/python3/python3-os-fchmod.html)<br/><br/>改变一个文件的访问权限，该文件由参数fd指定，参数mode是Unix下的文件访问权限。 |
-| <br/>13 | <br/>[<u>os.fchown(fd, uid, gid)</u>](https://www.runoob.com/python3/python3-os-fchown.html)<br/><br/>修改一个文件的所有权，这个函数修改一个文件的用户ID和用户组ID，该文件由文件描述符fd指定。 |
-| <br/>14 | <br/>[<u>os.fdatasync(fd)</u>](https://www.runoob.com/python3/python3-os-fdatasync.html)<br/><br/>强制将文件写入磁盘，该文件由文件描述符fd指定，但是不强制更新文件的状态信息。 |
-| <br/>15 | <br/>[<u>os.fdopen(fd[, mode[, bufsize]])</u>](https://www.runoob.com/python3/python3-os-fdopen.html)<br/><br/>通过文件描述符 fd 创建一个文件对象，并返回这个文件对象 |
-| <br/>16 | <br/>[<u>os.fpathconf(fd, name)</u>](https://www.runoob.com/python3/python3-os-fpathconf.html)<br/><br/>返回一个打开的文件的系统配置信息。name为检索的系统配置的值，它也许是一个定义系统值的字符串，这些名字在很多标准中指定（POSIX.1, Unix 95, Unix 98, 和其它）。 |
-| <br/>17 | <br/>[<u>os.fstat(fd)</u>](https://www.runoob.com/python3/python3-os-fstat.html)<br/><br/>返回文件描述符fd的状态，像stat()。 |
-| <br/>18 | <br/>[<u>os.fstatvfs(fd)</u>](https://www.runoob.com/python3/python3-os-fstatvfs.html)<br/><br/>返回包含文件描述符fd的文件的文件系统的信息，Python 3.3 相等于 statvfs()。 |
-| <br/>19 | <br/>[<u>os.fsync(fd)</u>](https://www.runoob.com/python3/python3-os-fsync.html)<br/><br/>强制将文件描述符为fd的文件写入硬盘。 |
-| <br/>20 | <br/>[<u>os.ftruncate(fd, length)</u>](https://www.runoob.com/python3/python3-os-ftruncate.html)<br/><br/>裁剪文件描述符fd对应的文件, 所以它最大不能超过文件大小。 |
-| <br/>21 | <br/>[<u>os.getcwd()</u>](https://www.runoob.com/python3/python3-os-getcwd.html)<br/><br/>返回当前工作目录 |
-| <br/>22 | <br/>[<u>os.getcwdu()</u>](https://www.runoob.com/python3/python3-os-getcwdu.html)<br/><br/>返回一个当前工作目录的Unicode对象 |
-| <br/>23 | <br/>[<u>os.isatty(fd)</u>](https://www.runoob.com/python3/python3-os-isatty.html)<br/><br/>如果文件描述符fd是打开的，同时与tty(-like)设备相连，则返回true, 否则False。 |
-| <br/>24 | <br/>[<u>os.lchflags(path, flags)</u>](https://www.runoob.com/python3/python3-os-lchflags.html)<br/><br/>设置路径的标记为数字标记，类似 chflags()，但是没有软链接 |
-| <br/>25 | <br/>[<u>os.lchmod(path, mode)</u>](https://www.runoob.com/python3/python3-os-lchmod.html)<br/><br/>修改连接文件权限 |
-| <br/>26 | <br/>[<u>os.lchown(path, uid, gid)</u>](https://www.runoob.com/python3/python3-os-lchown.html)<br/><br/>更改文件所有者，类似 chown，但是不追踪链接。 |
-| <br/>27 | <br/>[<u>os.link(src, dst)</u>](https://www.runoob.com/python3/python3-os-link.html)<br/><br/>创建硬链接，名为参数 dst，指向参数 src |
-| <br/>28 | <br/>[<u>os.listdir(path)</u>](https://www.runoob.com/python3/python3-os-listdir.html)<br/><br/>返回path指定的文件夹包含的文件或文件夹的名字的列表。 |
-| <br/>29 | <br/>[<u>os.lseek(fd, pos, how)</u>](https://www.runoob.com/python3/python3-os-lseek.html)<br/><br/>设置文件描述符 fd当前位置为pos, how方式修改: SEEK_SET 或者 0 设置从文件开始的计算的pos; SEEK_CUR或者 1 则从当前位置计算; os.SEEK_END或者2则从文件尾部开始. 在unix，Windows中有效 |
-| <br/>30 | <br/>[<u>os.lstat(path)</u>](https://www.runoob.com/python3/python3-os-lstat.html)<br/><br/>像stat(),但是没有软链接 |
-| <br/>31 | <br/>[<u>os.major(device)</u>](https://www.runoob.com/python3/python3-os-major.html)<br/><br/>从原始的设备号中提取设备major号码 (使用stat中的st_dev或者st_rdev field)。 |
-| <br/>32 | <br/>[<u>os.makedev(major, minor)</u>](https://www.runoob.com/python3/python3-os-makedev.html)<br/><br/>以major和minor设备号组成一个原始设备号 |
-| <br/>33 | <br/>[<u>os.makedirs(path[, mode])</u>](https://www.runoob.com/python3/python3-os-makedirs.html)<br/><br/>递归文件夹创建函数。像mkdir(), 但创建的所有intermediate-level文件夹需要包含子文件夹。 |
-| <br/>34 | <br/>[<u>os.minor(device)</u>](https://www.runoob.com/python3/python3-os-minor.html)<br/><br/>从原始的设备号中提取设备minor号码 (使用stat中的st_dev或者st_rdev field )。 |
-| <br/>35 | <br/>[<u>os.mkdir(path[, mode])</u>](https://www.runoob.com/python3/python3-os-mkdir.html)<br/><br/>以数字mode的mode创建一个名为path的文件夹.默认的 mode 是 0777 (八进制)。 |
-| <br/>36 | <br/>[<u>os.mkfifo(path[, mode])</u>](https://www.runoob.com/python3/python3-os-mkfifo.html)<br/><br/>创建命名管道，mode 为数字，默认为 0666 (八进制) |
-| <br/>37 | <br/>[<u>os.mknod(filename[, mode=0600, device])</u>](https://www.runoob.com/python3/python3-os-mknod.html)<br/>创建一个名为filename文件系统节点（文件，设备特别文件或者命名pipe）。 |
-| <br/>38 | <br/>[<u>os.open(file, flags[, mode])</u>](https://www.runoob.com/python3/python3-os-open.html)<br/><br/>打开一个文件，并且设置需要的打开选项，mode参数是可选的 |
-| <br/>39 | <br/>[<u>os.openpty()</u>](https://www.runoob.com/python3/python3-os-openpty.html)<br/><br/>打开一个新的伪终端对。返回 pty 和 tty的文件描述符。 |
-| <br/>40 | <br/>[<u>os.pathconf(path, name)</u>](https://www.runoob.com/python3/python3-os-pathconf.html)<br/><br/>返回相关文件的系统配置信息。 |
-| <br/>41 | <br/>[<u>os.pipe()</u>](https://www.runoob.com/python3/python3-os-pipe.html)<br/><br/>创建一个管道. 返回一对文件描述符(r, w) 分别为读和写 |
-| <br/>42 | <br/>[<u>os.popen(command[, mode[, bufsize]])</u>](https://www.runoob.com/python3/python3-os-popen.html)<br/><br/>从一个 command 打开一个管道 |
-| <br/>43 | <br/>[<u>os.read(fd, n)</u>](https://www.runoob.com/python3/python3-os-read.html)<br/><br/>从文件描述符 fd 中读取最多 n 个字节，返回包含读取字节的字符串，文件描述符 fd对应文件已达到结尾, 返回一个空字符串。 |
-| <br/>44 | <br/>[<u>os.readlink(path)</u>](https://www.runoob.com/python3/python3-os-readlink.html)<br/><br/>返回软链接所指向的文件 |
-| <br/>45 | <br/>[<u>os.remove(path)</u>](https://www.runoob.com/python3/python3-os-remove.html)<br/><br/>删除路径为path的文件。如果path 是一个文件夹，将抛出OSError; 查看下面的rmdir()删除一个 directory。 |
-| <br/>46 | <br/>[<u>os.removedirs(path)</u>](https://www.runoob.com/python3/python3-os-removedirs.html)<br/><br/>递归删除目录。 |
-| <br/>47 | <br/>[<u>os.rename(src, dst)</u>](https://www.runoob.com/python3/python3-os-rename.html)<br/><br/>重命名文件或目录，从 src 到 dst |
-| <br/>48 | <br/>[<u>os.renames(old, new)</u>](https://www.runoob.com/python3/python3-os-renames.html)<br/><br/>递归地对目录进行更名，也可以对文件进行更名。 |
-| <br/>49 | <br/>[<u>os.rmdir(path)</u>](https://www.runoob.com/python3/python3-os-rmdir.html)<br/><br/>删除path指定的空目录，如果目录非空，则抛出一个OSError异常。 |
-| <br/>50 | <br/>[<u>os.stat(path)</u>](https://www.runoob.com/python3/python3-os-stat.html)<br/><br/>获取path指定的路径的信息，功能等同于C API中的stat()系统调用。 |
-| <br/>51 | <br/>[<u>os.stat_float_times([newvalue])</u>](https://www.runoob.com/python3/python3-os-stat_float_times.html)<br/>决定stat_result是否以float对象显示时间戳 |
-| <br/>52 | <br/>[<u>os.statvfs(path)</u>](https://www.runoob.com/python3/python3-os-statvfs.html)<br/><br/>获取指定路径的文件系统统计信息 |
-| <br/>53 | <br/>[<u>os.symlink(src, dst)</u>](https://www.runoob.com/python3/python3-os-symlink.html)<br/><br/>创建一个软链接 |
-| <br/>54 | <br/>[<u>os.tcgetpgrp(fd)</u>](https://www.runoob.com/python3/python3-os-tcgetpgrp.html)<br/><br/>返回与终端fd（一个由os.open()返回的打开的文件描述符）关联的进程组 |
-| <br/>55 | <br/>[<u>os.tcsetpgrp(fd, pg)</u>](https://www.runoob.com/python3/python3-os-tcsetpgrp.html)<br/><br/>设置与终端fd（一个由os.open()返回的打开的文件描述符）关联的进程组为pg。 |
+| <br/>1 | <br/>[os.access(path, mode)](https://www.runoob.com/python3/python3-os-access.html)<br/><br/>检验权限模式 |
+| <br/>2 | <br/>[os.chdir(path)](https://www.runoob.com/python3/python3-os-chdir.html)<br/><br/>改变当前工作目录 |
+| <br/>3 | <br/>[os.chflags(path, flags)](https://www.runoob.com/python3/python3-os-chflags.html)<br/><br/>设置路径的标记为数字标记。 |
+| <br/>4 | <br/>[os.chmod(path, mode)](https://www.runoob.com/python3/python3-os-chmod.html)<br/><br/>更改权限 |
+| <br/>5 | <br/>[os.chown(path, uid, gid)](https://www.runoob.com/python3/python3-os-chown.html)<br/><br/>更改文件所有者 |
+| <br/>6 | <br/>[os.chroot(path)](https://www.runoob.com/python3/python3-os-chroot.html)<br/><br/>改变当前进程的根目录 |
+| <br/>7 | <br/>[os.close(fd)](https://www.runoob.com/python3/python3-os-close.html)<br/><br/>关闭文件描述符 fd |
+| <br/>8 | <br/>[os.closerange(fd_low, fd_high)](https://www.runoob.com/python3/python3-os-closerange.html)<br/><br/>关闭所有文件描述符，从 fd_low (包含) 到 fd_high (不包含), 错误会忽略 |
+| <br/>9 | <br/>[os.dup(fd)](https://www.runoob.com/python3/python3-os-dup.html)<br/><br/>复制文件描述符 fd |
+| <br/>10 | <br/>[os.dup2(fd, fd2)](https://www.runoob.com/python3/python3-os-dup2.html)<br/><br/>将一个文件描述符 fd 复制到另一个 fd2 |
+| <br/>11 | <br/>[os.fchdir(fd)](https://www.runoob.com/python3/python3-os-fchdir.html)<br/><br/>通过文件描述符改变当前工作目录 |
+| <br/>12 | <br/>[os.fchmod(fd, mode)](https://www.runoob.com/python3/python3-os-fchmod.html)<br/><br/>改变一个文件的访问权限，该文件由参数fd指定，参数mode是Unix下的文件访问权限。 |
+| <br/>13 | <br/>[os.fchown(fd, uid, gid)](https://www.runoob.com/python3/python3-os-fchown.html)<br/><br/>修改一个文件的所有权，这个函数修改一个文件的用户ID和用户组ID，该文件由文件描述符fd指定。 |
+| <br/>14 | <br/>[os.fdatasync(fd)](https://www.runoob.com/python3/python3-os-fdatasync.html)<br/><br/>强制将文件写入磁盘，该文件由文件描述符fd指定，但是不强制更新文件的状态信息。 |
+| <br/>15 | <br/>[os.fdopen(fd[, mode[, bufsize]])](https://www.runoob.com/python3/python3-os-fdopen.html)<br/><br/>通过文件描述符 fd 创建一个文件对象，并返回这个文件对象 |
+| <br/>16 | <br/>[os.fpathconf(fd, name)](https://www.runoob.com/python3/python3-os-fpathconf.html)<br/><br/>返回一个打开的文件的系统配置信息。name为检索的系统配置的值，它也许是一个定义系统值的字符串，这些名字在很多标准中指定（POSIX.1, Unix 95, Unix 98, 和其它）。 |
+| <br/>17 | <br/>[os.fstat(fd)](https://www.runoob.com/python3/python3-os-fstat.html)<br/><br/>返回文件描述符fd的状态，像stat()。 |
+| <br/>18 | <br/>[os.fstatvfs(fd)](https://www.runoob.com/python3/python3-os-fstatvfs.html)<br/><br/>返回包含文件描述符fd的文件的文件系统的信息，Python 3.3 相等于 statvfs()。 |
+| <br/>19 | <br/>[os.fsync(fd)](https://www.runoob.com/python3/python3-os-fsync.html)<br/><br/>强制将文件描述符为fd的文件写入硬盘。 |
+| <br/>20 | <br/>[os.ftruncate(fd, length)](https://www.runoob.com/python3/python3-os-ftruncate.html)<br/><br/>裁剪文件描述符fd对应的文件, 所以它最大不能超过文件大小。 |
+| <br/>21 | <br/>[os.getcwd()](https://www.runoob.com/python3/python3-os-getcwd.html)<br/><br/>返回当前工作目录 |
+| <br/>22 | <br/>[os.getcwdu()](https://www.runoob.com/python3/python3-os-getcwdu.html)<br/><br/>返回一个当前工作目录的Unicode对象 |
+| <br/>23 | <br/>[os.isatty(fd)](https://www.runoob.com/python3/python3-os-isatty.html)<br/><br/>如果文件描述符fd是打开的，同时与tty(-like)设备相连，则返回true, 否则False。 |
+| <br/>24 | <br/>[os.lchflags(path, flags)](https://www.runoob.com/python3/python3-os-lchflags.html)<br/><br/>设置路径的标记为数字标记，类似 chflags()，但是没有软链接 |
+| <br/>25 | <br/>[os.lchmod(path, mode)](https://www.runoob.com/python3/python3-os-lchmod.html)<br/><br/>修改连接文件权限 |
+| <br/>26 | <br/>[os.lchown(path, uid, gid)](https://www.runoob.com/python3/python3-os-lchown.html)<br/><br/>更改文件所有者，类似 chown，但是不追踪链接。 |
+| <br/>27 | <br/>[os.link(src, dst)](https://www.runoob.com/python3/python3-os-link.html)<br/><br/>创建硬链接，名为参数 dst，指向参数 src |
+| <br/>28 | <br/>[os.listdir(path)](https://www.runoob.com/python3/python3-os-listdir.html)<br/><br/>返回path指定的文件夹包含的文件或文件夹的名字的列表。 |
+| <br/>29 | <br/>[os.lseek(fd, pos, how)](https://www.runoob.com/python3/python3-os-lseek.html)<br/><br/>设置文件描述符 fd当前位置为pos, how方式修改: SEEK_SET 或者 0 设置从文件开始的计算的pos; SEEK_CUR或者 1 则从当前位置计算; os.SEEK_END或者2则从文件尾部开始. 在unix，Windows中有效 |
+| <br/>30 | <br/>[os.lstat(path)](https://www.runoob.com/python3/python3-os-lstat.html)<br/><br/>像stat(),但是没有软链接 |
+| <br/>31 | <br/>[os.major(device)](https://www.runoob.com/python3/python3-os-major.html)<br/><br/>从原始的设备号中提取设备major号码 (使用stat中的st_dev或者st_rdev field)。 |
+| <br/>32 | <br/>[os.makedev(major, minor)](https://www.runoob.com/python3/python3-os-makedev.html)<br/><br/>以major和minor设备号组成一个原始设备号 |
+| <br/>33 | <br/>[os.makedirs(path[, mode])](https://www.runoob.com/python3/python3-os-makedirs.html)<br/><br/>递归文件夹创建函数。像mkdir(), 但创建的所有intermediate-level文件夹需要包含子文件夹。 |
+| <br/>34 | <br/>[os.minor(device)](https://www.runoob.com/python3/python3-os-minor.html)<br/><br/>从原始的设备号中提取设备minor号码 (使用stat中的st_dev或者st_rdev field )。 |
+| <br/>35 | <br/>[os.mkdir(path[, mode])](https://www.runoob.com/python3/python3-os-mkdir.html)<br/><br/>以数字mode的mode创建一个名为path的文件夹.默认的 mode 是 0777 (八进制)。 |
+| <br/>36 | <br/>[os.mkfifo(path[, mode])](https://www.runoob.com/python3/python3-os-mkfifo.html)<br/><br/>创建命名管道，mode 为数字，默认为 0666 (八进制) |
+| <br/>37 | <br/>[os.mknod(filename[, mode=0600, device])](https://www.runoob.com/python3/python3-os-mknod.html)<br/>创建一个名为filename文件系统节点（文件，设备特别文件或者命名pipe）。 |
+| <br/>38 | <br/>[os.open(file, flags[, mode])](https://www.runoob.com/python3/python3-os-open.html)<br/><br/>打开一个文件，并且设置需要的打开选项，mode参数是可选的 |
+| <br/>39 | <br/>[os.openpty()](https://www.runoob.com/python3/python3-os-openpty.html)<br/><br/>打开一个新的伪终端对。返回 pty 和 tty的文件描述符。 |
+| <br/>40 | <br/>[os.pathconf(path, name)](https://www.runoob.com/python3/python3-os-pathconf.html)<br/><br/>返回相关文件的系统配置信息。 |
+| <br/>41 | <br/>[os.pipe()](https://www.runoob.com/python3/python3-os-pipe.html)<br/><br/>创建一个管道. 返回一对文件描述符(r, w) 分别为读和写 |
+| <br/>42 | <br/>[os.popen(command[, mode[, bufsize]])](https://www.runoob.com/python3/python3-os-popen.html)<br/><br/>从一个 command 打开一个管道 |
+| <br/>43 | <br/>[os.read(fd, n)](https://www.runoob.com/python3/python3-os-read.html)<br/><br/>从文件描述符 fd 中读取最多 n 个字节，返回包含读取字节的字符串，文件描述符 fd对应文件已达到结尾, 返回一个空字符串。 |
+| <br/>44 | <br/>[os.readlink(path)](https://www.runoob.com/python3/python3-os-readlink.html)<br/><br/>返回软链接所指向的文件 |
+| <br/>45 | <br/>[os.remove(path)](https://www.runoob.com/python3/python3-os-remove.html)<br/><br/>删除路径为path的文件。如果path 是一个文件夹，将抛出OSError; 查看下面的rmdir()删除一个 directory。 |
+| <br/>46 | <br/>[os.removedirs(path)](https://www.runoob.com/python3/python3-os-removedirs.html)<br/><br/>递归删除目录。 |
+| <br/>47 | <br/>[os.rename(src, dst)](https://www.runoob.com/python3/python3-os-rename.html)<br/><br/>重命名文件或目录，从 src 到 dst |
+| <br/>48 | <br/>[os.renames(old, new)](https://www.runoob.com/python3/python3-os-renames.html)<br/><br/>递归地对目录进行更名，也可以对文件进行更名。 |
+| <br/>49 | <br/>[os.rmdir(path)](https://www.runoob.com/python3/python3-os-rmdir.html)<br/><br/>删除path指定的空目录，如果目录非空，则抛出一个OSError异常。 |
+| <br/>50 | <br/>[os.stat(path)](https://www.runoob.com/python3/python3-os-stat.html)<br/><br/>获取path指定的路径的信息，功能等同于C API中的stat()系统调用。 |
+| <br/>51 | <br/>[os.stat_float_times([newvalue])](https://www.runoob.com/python3/python3-os-stat_float_times.html)<br/>决定stat_result是否以float对象显示时间戳 |
+| <br/>52 | <br/>[os.statvfs(path)](https://www.runoob.com/python3/python3-os-statvfs.html)<br/><br/>获取指定路径的文件系统统计信息 |
+| <br/>53 | <br/>[os.symlink(src, dst)](https://www.runoob.com/python3/python3-os-symlink.html)<br/><br/>创建一个软链接 |
+| <br/>54 | <br/>[os.tcgetpgrp(fd)](https://www.runoob.com/python3/python3-os-tcgetpgrp.html)<br/><br/>返回与终端fd（一个由os.open()返回的打开的文件描述符）关联的进程组 |
+| <br/>55 | <br/>[os.tcsetpgrp(fd, pg)](https://www.runoob.com/python3/python3-os-tcsetpgrp.html)<br/><br/>设置与终端fd（一个由os.open()返回的打开的文件描述符）关联的进程组为pg。 |
 | <br/>56 | <br/>os.tempnam([dir[, prefix]])<br/><br/>Python3 中已删除。返回唯一的路径名用于创建临时文件。 |
 | <br/>57 | <br/>os.tmpfile()<br/><br/>Python3 中已删除。返回一个打开的模式为(w+b)的文件对象 .这文件对象没有文件夹入口，没有文件描述符，将会自动删除。 |
 | <br/>58 | <br/>os.tmpnam()<br/><br/>Python3 中已删除。为创建一个临时文件返回一个唯一的路径 |
-| <br/>59 | <br/>[<u>os.ttyname(fd)</u>](https://www.runoob.com/python3/python3-os-ttyname.html)<br/><br/>返回一个字符串，它表示与文件描述符fd 关联的终端设备。如果fd 没有与终端设备关联，则引发一个异常。 |
-| <br/>60 | <br/>[<u>os.unlink(path)</u>](https://www.runoob.com/python3/python3-os-unlink.html)<br/><br/>删除文件路径 |
-| <br/>61 | <br/>[<u>os.utime(path, times)</u>](https://www.runoob.com/python3/python3-os-utime.html)<br/><br/>返回指定的path文件的访问和修改的时间。 |
-| <br/>62 | <br/>[<u>os.walk(top[, topdown=True[, onerror=None[, followlinks=False]]])</u>](https://www.runoob.com/python3/python3-os-walk.html)<br/><br/>输出在文件夹中的文件名通过在树中游走，向上或者向下。 |
-| <br/>63 | <br/>[<u>os.write(fd, str)</u>](https://www.runoob.com/python3/python3-os-write.html)<br/><br/>写入字符串到文件描述符 fd中. 返回实际写入的字符串长度 |
-| <br/>64 | <br/>[<u>os.path 模块</u>](https://www.runoob.com/python3/python3-os-path.html)<br/><br/>获取文件的属性信息。 |
+| <br/>59 | <br/>[os.ttyname(fd)](https://www.runoob.com/python3/python3-os-ttyname.html)<br/><br/>返回一个字符串，它表示与文件描述符fd 关联的终端设备。如果fd 没有与终端设备关联，则引发一个异常。 |
+| <br/>60 | <br/>[os.unlink(path)](https://www.runoob.com/python3/python3-os-unlink.html)<br/><br/>删除文件路径 |
+| <br/>61 | <br/>[os.utime(path, times)](https://www.runoob.com/python3/python3-os-utime.html)<br/><br/>返回指定的path文件的访问和修改的时间。 |
+| <br/>62 | <br/>[os.walk(top[, topdown=True[, onerror=None[, followlinks=False]]])](https://www.runoob.com/python3/python3-os-walk.html)<br/><br/>输出在文件夹中的文件名通过在树中游走，向上或者向下。 |
+| <br/>63 | <br/>[os.write(fd, str)](https://www.runoob.com/python3/python3-os-write.html)<br/><br/>写入字符串到文件描述符 fd中. 返回实际写入的字符串长度 |
+| <br/>64 | <br/>[os.path 模块](https://www.runoob.com/python3/python3-os-path.html)<br/><br/>获取文件的属性信息。 |
 
 ## 十八.错误和异常
 
@@ -2105,7 +2105,7 @@ c.myMethod()         # 子类调用重写方法
 super(Child,c).myMethod() #用子类对象调用父类已被覆盖的方法
 ```
 
-[<u>super() 函数</u>](https://www.runoob.com/python/python-func-super.html)是用于调用父类(超类)的一个方法。
+[super() 函数](https://www.runoob.com/python/python-func-super.html)是用于调用父类(超类)的一个方法。
 
 ### 类属性与方法
 #### 类的私有属性

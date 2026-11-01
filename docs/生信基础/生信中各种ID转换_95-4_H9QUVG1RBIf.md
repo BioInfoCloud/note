@@ -4,15 +4,15 @@
 
 我在文章[**常用生物信息ID的介绍**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265423&idx=2&sn=288f3c8acaad8670d35a031cd9794d58&chksm=841efdf2b36974e40e29d906fe4f3a46528ea5a84d17f656ad6119f612059489b9df1416c337&scene=21#wechat_redirect)中介绍了常见的ID，也提到一些常见的ID转换工具。
 
-1.Uniprot ID mapping 可以很方便地把 ID 转换为其他 ID 类型, 所包含的类型十分全面【[<u>https://www.uniprot.org/uploadlists/</u>](https://www.uniprot.org/uploadlists/)】
+1.Uniprot ID mapping 可以很方便地把 ID 转换为其他 ID 类型, 所包含的类型十分全面【[https://www.uniprot.org/uploadlists/](https://www.uniprot.org/uploadlists/)】
 
-2.bioDBnet 网站提供了常见的 ID 转换的选项, 类型全面【[<u>https://biodbnet-abcc.ncifcrf.gov/</u>](https://biodbnet-abcc.ncifcrf.gov/)】.
+2.bioDBnet 网站提供了常见的 ID 转换的选项, 类型全面【[https://biodbnet-abcc.ncifcrf.gov/](https://biodbnet-abcc.ncifcrf.gov/)】.
 
-3.DAVID Gene ID Conversion Tool 可以把 Gene ID 转换为多种常用类型和 DAVID ID, 方便进一步用 DAVID 做 GO 分析，常做富集分析的同学估计常用到这个工具【[<u>https://david.ncifcrf.gov/</u>](https://david.ncifcrf.gov/)】。
+3.DAVID Gene ID Conversion Tool 可以把 Gene ID 转换为多种常用类型和 DAVID ID, 方便进一步用 DAVID 做 GO 分析，常做富集分析的同学估计常用到这个工具【[https://david.ncifcrf.gov/](https://david.ncifcrf.gov/)】。
 
-4.sangerbox：[<u>http://sangerbox.com/IdConversion</u>](http://sangerbox.com/IdConversion)
+4.sangerbox：[http://sangerbox.com/IdConversion](http://sangerbox.com/IdConversion)
 
-5.biomart工具：[<u>http://www.biomart.org/</u>](http://www.biomart.org/)
+5.biomart工具：[http://www.biomart.org/](http://www.biomart.org/)
 
 6.FunRich软件，在我之前的文章就有介绍，[FunRich数据库：一个主要用于基因和蛋白质的功能富集以及相互作用网络分析的独立的软件工具](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265340&idx=1&sn=5c3608661698d2332b992269a8721833&chksm=841efd41b3697457f96ace4eecc682cbbbe3fdf3955f0060d3aafcdff0a2d85c225d5ce3f784&scene=21#wechat_redirect)。
 
@@ -526,7 +526,7 @@ gtf注释文件下载：
 
 提取码：0fb6，
 
-也可以从官网下载：[<u>https://www.gencodegenes.org/human/</u>](https://www.gencodegenes.org/human/)
+也可以从官网下载：[https://www.gencodegenes.org/human/](https://www.gencodegenes.org/human/)
 
 下面是本文代码：
 

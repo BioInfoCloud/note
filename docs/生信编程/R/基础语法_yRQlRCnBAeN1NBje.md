@@ -70,12 +70,12 @@ S（和R）与其他主流的统计系统在本质上有一个很重要的不同
 
 ### 6.R语言与生物信息学
 
-生物信息学(Bioinformatics)是研究生物信息的采集、处理、存储、传播，分析和解释等各方面的学科，也是随着生命科学和计算机科学的迅猛发展，生命科学和计算机科学相结合形成的一门新学科。它通过综合利用生物学，计算机科学和信息技术而揭示大量而复杂的生物数据所赋有的生物学奥秘。R语言是一个很优秀的统计分析软件，生物信息工作者，是需要这样的一个工具的，矩诞生了一个专门为生物科学领域科学研究的R包库Bioconductor([<u>https://www.bioconductor.org/</u>](https://www.bioconductor.org/))就诞生了，为生物科研工作者提供了很大帮助，尤其在这个大数据的时代，各种组学技术和计算机的发展，生物科研工作者会离不开计算机科学的辅助的工具的。
+生物信息学(Bioinformatics)是研究生物信息的采集、处理、存储、传播，分析和解释等各方面的学科，也是随着生命科学和计算机科学的迅猛发展，生命科学和计算机科学相结合形成的一门新学科。它通过综合利用生物学，计算机科学和信息技术而揭示大量而复杂的生物数据所赋有的生物学奥秘。R语言是一个很优秀的统计分析软件，生物信息工作者，是需要这样的一个工具的，矩诞生了一个专门为生物科学领域科学研究的R包库Bioconductor([https://www.bioconductor.org/](https://www.bioconductor.org/))就诞生了，为生物科研工作者提供了很大帮助，尤其在这个大数据的时代，各种组学技术和计算机的发展，生物科研工作者会离不开计算机科学的辅助的工具的。
 
 ## 二.与R语言的第一次约会
 ### 1.R的下载和安装
 
-官网链接：[<u>https://www.r-project.org/</u>](https://www.r-project.org/)
+官网链接：[https://www.r-project.org/](https://www.r-project.org/)
 
 配置环境变量：
 
@@ -118,7 +118,7 @@ R-Studio是一个功能强大、节省成本的反删除和数据恢复软件系
 
 RStudio是一款比较好用的R语言开发环境（IDE）。提供很好的编辑和运行窗口，图形创建等。还可以安装需要的包。
 
-官网：[<u>https://rstudio.com/</u>](https://rstudio.com/)
+官网：[https://rstudio.com/](https://rstudio.com/)
 
 **RStudio界面**![1608900539713-17dc2448-1263-461c-9241-f5382dbfa91a.jpeg](./img/yRQlRCnBAeN1NBje/1608900539713-17dc2448-1263-461c-9241-f5382dbfa91a-427289.jpeg)
 
@@ -144,9 +144,9 @@ Ctrl + S
 
 ![1608900539764-540a91d2-f2ef-4e85-b627-94c9b6877627.jpeg](./img/yRQlRCnBAeN1NBje/1608900539764-540a91d2-f2ef-4e85-b627-94c9b6877627-775147.jpeg)C区域 Environment：是用来记录当前变量的数值，方便查看当前变量的状况。
 
-![1608900539765-189f7593-3396-43b8-bdd6-5944d912bda9.jpeg](./img/yRQlRCnBAeN1NBje/1608900539765-189f7593-3396-43b8-bdd6-5944d912bda9-199805.jpeg)** **History：是所有在 Console区内代码执行的历史记录。
+![1608900539765-189f7593-3396-43b8-bdd6-5944d912bda9.jpeg](./img/yRQlRCnBAeN1NBje/1608900539765-189f7593-3396-43b8-bdd6-5944d912bda9-199805.jpeg)History：是所有在 Console区内代码执行的历史记录。
 
-![1608900539778-0044db5d-f1b8-478e-a60e-cb0b5b3a7fb3.jpeg](./img/yRQlRCnBAeN1NBje/1608900539778-0044db5d-f1b8-478e-a60e-cb0b5b3a7fb3-801478.jpeg)** **Connections：是用来方便连接外部数据库，用得非常少，先不介绍。
+![1608900539778-0044db5d-f1b8-478e-a60e-cb0b5b3a7fb3.jpeg](./img/yRQlRCnBAeN1NBje/1608900539778-0044db5d-f1b8-478e-a60e-cb0b5b3a7fb3-801478.jpeg)Connections：是用来方便连接外部数据库，用得非常少，先不介绍。
 
 D区域：Files, Plots, Packages, Help, ViewerFiles：这里会显示当前工作路径下的文件，让使用者了解所在的工作路径，这对读写文件非常重要。
 
@@ -1631,7 +1631,7 @@ remove(list=ls())
 
 除了创建文件夹，创建文件，删除文件，复制文件等操作外，我们还会经常解压和打包文件，这些文件的格式：zip，tar.gz，.gz 与 .bz2。
 
-若要压缩文件，就直接在 zip() 函数的第一个参数里面输入压缩后的文件名，第二个参数输入压缩前的文件名。而解压文件就更简单了，直接利用 unzip() 里面加上需要解压的文件名称即可。tar.gz压缩用tar()，解压用untar()，同 .zip 后缀的压缩文件。**.gz 与 .bz2这两个压缩文件与前面的相比，是最与众不同的，因为这两种后缀的文件，可以称之为压缩文件，也可以直接作为一个数据文件，当成 data frame 直接进行读取。因为其本身就是数据文件。****tar.gz格式压缩文件很常见，特别是生信数据文件，比如TCGA数据库中下载的数据很多都是这个格式的压缩文件。**
+若要压缩文件，就直接在 zip() 函数的第一个参数里面输入压缩后的文件名，第二个参数输入压缩前的文件名。而解压文件就更简单了，直接利用 unzip() 里面加上需要解压的文件名称即可。tar.gz压缩用tar()，解压用untar()，同 .zip 后缀的压缩文件。**.gz 与 .bz2这两个压缩文件与前面的相比，是最与众不同的，因为这两种后缀的文件，可以称之为压缩文件，也可以直接作为一个数据文件，当成 data frame 直接进行读取。因为其本身就是数据文件。tar.gz格式压缩文件很常见，特别是生信数据文件，比如TCGA数据库中下载的数据很多都是这个格式的压缩文件。**
 
 R 中默认没有解压相关文件的函数，需要使用一个包：R.utils，然后如下述代码所示，利用 gunzip() 函数，即可解压。
 
@@ -2083,7 +2083,7 @@ tidyverse是一个汇总包，用于数据清洗、转换、可视化等。其�
 
 #### 3.1 tidyr包
 
-地址：[<u>https://tidyr.tidyverse.org/</u>](https://tidyr.tidyverse.org/)
+地址：[https://tidyr.tidyverse.org/](https://tidyr.tidyverse.org/)
 
 tidry包是把需要用的数据处理成标准而统一的数据框:
 
@@ -2401,14 +2401,14 @@ R具有许多内置函数，可以直接在程序中调用，而不必定义它�
 | <br/>Label | <br/>Identifier for | <br/>解释 |
 | :--- | :--- | :--- |
 | <br/>Project | <br/>Project name | <br/>来自哪个项目: 如TCGA、TARGET等等 |
-| <br/>TSS | <br/>Tissue source site | <br/>样品来自哪个组织机构：01 代表International Genomics Consortium, 更多见：[<u>TSS</u>](https://www.omicsclass.com/article/1079) |
+| <br/>TSS | <br/>Tissue source site | <br/>样品来自哪个组织机构：01 代表International Genomics Consortium, 更多见：[TSS](https://www.omicsclass.com/article/1079) |
 | <br/>Participant | <br/>Study participant | <br/>样品唯一编号(可以理解为一个病人唯一编号） |
-| <br/>Sample | <br/>Sample type | <br/>样品来自人体组织类型，如：01代表Primary Solid Tumor， 更多见：[<u>SampleType</u>](https://www.omicsclass.com/article/1080) |
+| <br/>Sample | <br/>Sample type | <br/>样品来自人体组织类型，如：01代表Primary Solid Tumor， 更多见：[SampleType](https://www.omicsclass.com/article/1080) |
 | <br/>Vial | <br/>Order of sample in a sequence of samples | <br/>一份样品被分割成好几份，表示第几份，通常是A-Z编号 |
 | <br/>Portion | <br/>Order of portion in a sequence of 100-120 mg sample portions | <br/>每份样品再分割成不同的小样品：01-99等等编号，代表第几份 |
-| <br/>Analyte | <br/>Molecular type of analyte for analysis | <br/>实验数据来源分子类型，如R代表 RNA，D代表DNA等等，更多见：[<u>Portion / Analyte Codes</u>](https://gdc.cancer.gov/resources-tcga-users/tcga-code-tables/portion-analyte-codes) |
+| <br/>Analyte | <br/>Molecular type of analyte for analysis | <br/>实验数据来源分子类型，如R代表 RNA，D代表DNA等等，更多见：[Portion / Analyte Codes](https://gdc.cancer.gov/resources-tcga-users/tcga-code-tables/portion-analyte-codes) |
 | <br/>Plate | <br/>Order of plate in a sequence of 96-well plates | <br/>96孔序列中板的顺序，4个数字组成 |
-| <br/>Center | <br/>Sequencing or characterization center that will receive the aliquot for analysis | <br/>数据由哪个机构分析：如 01代表The Broad Institute GCC,更多见：[<u>Center</u>](https://www.omicsclass.com/article/1081) |
+| <br/>Center | <br/>Sequencing or characterization center that will receive the aliquot for analysis | <br/>数据由哪个机构分析：如 01代表The Broad Institute GCC,更多见：[Center](https://www.omicsclass.com/article/1081) |
 
 Sample位置的，01-09表示肿瘤组织，10-19表示对照样本，我们写一个函数用来区分肿瘤和对照样本的Barcode。
 
@@ -2681,7 +2681,7 @@ HTML框架简单说就是任何HTML网页文件中都会包含的基本代码内
 
 第七行 </html>
 
-这七行代码是所有HTML页面所共有的，也就是HTML的框架了。不信我们来验证一下。https://[<u>www.w3school.com.cn/</u>](http://www.w3school.com.cn/)
+这七行代码是所有HTML页面所共有的，也就是HTML的框架了。不信我们来验证一下。https://[www.w3school.com.cn/](http://www.w3school.com.cn/)
 
 ![1608900539812-610caae0-d43b-4698-ac24-b7c4daccbbc9.png](./img/yRQlRCnBAeN1NBje/1608900539812-610caae0-d43b-4698-ac24-b7c4daccbbc9-427746.png)![1608900539826-c8a665ea-ba3a-4267-b80b-2bce178e33bc.png](./img/yRQlRCnBAeN1NBje/1608900539826-c8a665ea-ba3a-4267-b80b-2bce178e33bc-872912.png)
 
@@ -2727,9 +2727,9 @@ submit_form()用来提交表单
 
 str_trim() 删除字符串2端的空格，转义字符也能删掉。
 
-我们以[<u>http://www.chemfaces.com/</u>](http://www.chemfaces.com/) 进行介绍，爬取该网站所有天然产物的药物信息。
+我们以[http://www.chemfaces.com/](http://www.chemfaces.com/) 进行介绍，爬取该网站所有天然产物的药物信息。
 
-[<u>http://www.chemfaces.com/natural/</u>](http://www.chemfaces.com/natural/)
+[http://www.chemfaces.com/natural/](http://www.chemfaces.com/natural/)
 
 #### 2.1 read_html函数
 
@@ -2756,13 +2756,13 @@ html_nodes(x, css, xpath)
 
 x： 网页信息，即read_html获取的网页信息变量；
 
-css：使用css选择参数，用于定位网页节点，语法为标准css选择器的语法，参见http://[<u>www.w3school.com.cn/cssref/css_selectors.asp</u>](http://www.w3school.com.cn/cssref/css_selectors.asp) 。
+css：使用css选择参数，用于定位网页节点，语法为标准css选择器的语法，参见http://[www.w3school.com.cn/cssref/css_selectors.asp](http://www.w3school.com.cn/cssref/css_selectors.asp) 。
 
-xpath：使用xpath选择参数，功能与css一致，用于定位网页节点，语法为xpath语法，参见http://[<u>www.w3school.com.cn/xpath/xpath_syntax.asp</u>](http://www.w3school.com.cn/xpath/xpath_syntax.asp) 。
+xpath：使用xpath选择参数，功能与css一致，用于定位网页节点，语法为xpath语法，参见http://[www.w3school.com.cn/xpath/xpath_syntax.asp](http://www.w3school.com.cn/xpath/xpath_syntax.asp) 。
 
 css参数xpath参数功能一致，两者选择一种即可。
 
-网站：[<u>https://www.chemicalbook.com/</u>](https://www.chemicalbook.com/)
+网站：[https://www.chemicalbook.com/](https://www.chemicalbook.com/)
 
 ```plain
 stringAsFactors=FALSE
@@ -3334,7 +3334,7 @@ selectMethod("work", "Person")
 
 ## 十三.高效R语言编程
 
-[<u>https://github.com/csgillespie/efficientR</u>](https://github.com/csgillespie/efficientR)
+[https://github.com/csgillespie/efficientR](https://github.com/csgillespie/efficientR)
 
 R运行的时候先运行D:\Program Files\R\R-3.6.3\library\base\R下的Rprofile文件，然后再运行D:\Program Files\R\R-3.6.3\etc下的Rprofile.site文件，最后是当前目录下面的.Rprofile文件
 

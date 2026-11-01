@@ -1108,7 +1108,7 @@ set
 
 安装方法2：
 
-\*\*>>> \*\*conda install -c menpo ffmpeg
+**>>> **conda install -c menpo ffmpeg
 
 #### 制作分子对接示例动画
 
@@ -1238,12 +1238,12 @@ FocalBlur一共有5个参数：
 
 首先我们为命令起名字，要求是简洁高效，通过命令就能猜测到这个命令的功能。 这里我起的脚本名 dist_center。 核心是在python 脚本中定义这个函数，并cmd.extend拓展命令。 框架如下
 
-| 1 2 3 4 | **from** **pymol** **import** cmd **def** dist_center(obj1="obj01",obj2="obj02",showflag=True):     **pass** cmd.extend("dist_center", dist_center) |
+| 1 2 3 4 | **frompymolimport** cmd **def** dist_center(obj1="obj01",obj2="obj02",showflag=True):     **pass** cmd.extend("dist_center", dist_center) |
 | --- | --- |
 
 完整代码（dist_center_2obj.py）如下：
 
-|  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 | *"""* *DESCRIPTION* *measure the distance between the centers of two objects* *the object usually is  benzene, pyridine and other cyclo object* *more information at: \_ [*http://pymol.chenzhaoqiang.com/intro/advanceManual.html*](http://pymol.chenzhaoqiang.com/intro/advanceManual.html)<br/> *AUTHOR* *Zhaoqiang Chen, 2017* *Please inform me if you use/improve/like/dislike/publish with this script.* *email: 744891290@qq.com* *"""* **from** **pymol** **import** cmd,math  **def** getcenterofatoms(atoms):     *'''* \_    '''*     x=0     y=0     z=0     **for** atm **in** atoms:         x+=atm.coord\[0]         y+=atm.coord\[1]         z+=atm.coord\[2]     numatm=float(len(atoms))     x=x/numatm     y=y/numatm     z=z/numatm     **return** \[x,y,z] **def** getdist(cen1,cen2):     *'''* \_    '''\_     dx=cen1\[0]-cen2\[0]     dy=cen1\[1]-cen2\[1]     dz=cen1\[2]-cen2\[2]     dist=dx*dx+dy*dy+dz\*dz     **return** math.sqrt(dist) **def** dist_center(obj1="obj01",obj2="obj02",showflag=True):     *'''* \_    usage1:\_ \_    dist_center obj01,obj02 \_ \_    usage2:\_ \_    dist_center obj01,obj02,1 \_ \_    usage3:\_ \_    dist_center obj01,obj02,0\_ \_    usage1 is equal to usage2!\_ \_    '''\_     obj1atoms=cmd.get_model(obj1).atom     obj2atoms=cmd.get_model(obj2).atom     obj1center=getcenterofatoms(obj1atoms)     obj2center=getcenterofatoms(obj2atoms)     dist = getdist(obj1center,obj2center)     **print**("distance: *%.2f*"%(dist ))     **if** showflag:         cmd.pseudoatom('cen1', pos=obj1center)         cmd.pseudoatom('cen2', pos=obj2center)         cmd.distance("dist","cen1","cen2")          cmd.extend("dist_center", dist_center) |
+|  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 | *"""* *DESCRIPTION* *measure the distance between the centers of two objects* *the object usually is  benzene, pyridine and other cyclo object* *more information at: \_ [*http://pymol.chenzhaoqiang.com/intro/advanceManual.html*](http://pymol.chenzhaoqiang.com/intro/advanceManual.html)<br/> *AUTHOR* *Zhaoqiang Chen, 2017* *Please inform me if you use/improve/like/dislike/publish with this script.* *email: 744891290@qq.com* *"""* **frompymolimport** cmd,math  **def** getcenterofatoms(atoms):     *'''* \_    '''*     x=0     y=0     z=0     **for** atm **in** atoms:         x+=atm.coord\[0]         y+=atm.coord\[1]         z+=atm.coord\[2]     numatm=float(len(atoms))     x=x/numatm     y=y/numatm     z=z/numatm     **return** \[x,y,z] **def** getdist(cen1,cen2):     *'''* \_    '''\_     dx=cen1\[0]-cen2\[0]     dy=cen1\[1]-cen2\[1]     dz=cen1\[2]-cen2\[2]     dist=dx*dx+dy*dy+dz\*dz     **return** math.sqrt(dist) **def** dist_center(obj1="obj01",obj2="obj02",showflag=True):     *'''* \_    usage1:\_ \_    dist_center obj01,obj02 \_ \_    usage2:\_ \_    dist_center obj01,obj02,1 \_ \_    usage3:\_ \_    dist_center obj01,obj02,0\_ \_    usage1 is equal to usage2!\_ \_    '''\_     obj1atoms=cmd.get_model(obj1).atom     obj2atoms=cmd.get_model(obj2).atom     obj1center=getcenterofatoms(obj1atoms)     obj2center=getcenterofatoms(obj2atoms)     dist = getdist(obj1center,obj2center)     **print**("distance: *%.2f*"%(dist ))     **if** showflag:         cmd.pseudoatom('cen1', pos=obj1center)         cmd.pseudoatom('cen2', pos=obj2center)         cmd.distance("dist","cen1","cen2")          cmd.extend("dist_center", dist_center) |
 | --- | --- |
 
 演示如下：
@@ -1278,7 +1278,7 @@ PyMOL>distance saltbridge, (negative ), (positive ), 4.0, 0
 
 方法2 拓展成一个命令 saltbridge.py
 
-**from** **pymol** **import** cmd
+**frompymolimport** cmd
 
 **def** show_saltbridge(dist=4.0):
 
@@ -1348,9 +1348,9 @@ PyMOL>loadxyzrgb test.xyzrgb
 
 #### 提取配体周围的位点
 
-**from** **pymol** **import** cmd
+**frompymolimport** cmd
 
-**from** **pymol** **import** util
+**frompymolimport** util
 
 *# example 6SP6 KJK A*
 
@@ -1364,7 +1364,7 @@ cmd.delete('all')
 
 cmd.fetch(pdbid)
 
-**if** **not** chainid:
+**ifnot** chainid:
 
 cmd.select("ligall","resn *%s*"%ligid)
 

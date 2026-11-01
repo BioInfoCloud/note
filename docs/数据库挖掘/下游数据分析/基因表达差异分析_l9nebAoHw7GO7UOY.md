@@ -1,20 +1,20 @@
 # 基因表达差异分析
 
-参考文章【[<u>一文就会TCGA数据库基因表达差异分析</u>](https://mp.weixin.qq.com/s/e05YajG5nR5HhVC1xxisOA)】。视频可去B站：[<u>https://www.bilibili.com/video/BV117411Z7Cq</u>](https://www.bilibili.com/video/BV117411Z7Cq) ，
+参考文章【[一文就会TCGA数据库基因表达差异分析](https://mp.weixin.qq.com/s/e05YajG5nR5HhVC1xxisOA)】。视频可去B站：[https://www.bilibili.com/video/BV117411Z7Cq](https://www.bilibili.com/video/BV117411Z7Cq) ，
 
 ![1612531756791-50a45664-0956-49db-89ef-f6d700417f38.png](./img/l9nebAoHw7GO7UOY/1612531756791-50a45664-0956-49db-89ef-f6d700417f38-226307.png)
 
 如果二维码失效，后台回复：TCGA-20200313，获取。提取码：0uvi百度网盘，如果下载慢，或者保存超过文件个数，你可以只下载R代码，其他的按照视频教程来。
 
-你需要参考文章：超详细的[<u>DESeq2和edgeR包的基本原理和实战案例</u>](https://mp.weixin.qq.com/s/CtKlpDgtNs3f2NXaoulD5Q)
+你需要参考文章：超详细的[DESeq2和edgeR包的基本原理和实战案例](https://mp.weixin.qq.com/s/CtKlpDgtNs3f2NXaoulD5Q)
 
-案列数据下载链接：[<u>https://pan.baidu.com/s/1HcAdYficX7rjq62mTixL1Q</u>](https://pan.baidu.com/s/1HcAdYficX7rjq62mTixL1Q)  提取码：1n3u。这个数据包括了FPKM和counts的。
+案列数据下载链接：[https://pan.baidu.com/s/1HcAdYficX7rjq62mTixL1Q](https://pan.baidu.com/s/1HcAdYficX7rjq62mTixL1Q)  提取码：1n3u。这个数据包括了FPKM和counts的。
 
 ![1612531569515-27398f06-a0ba-4a41-a1a2-b903200fe091.png](./img/l9nebAoHw7GO7UOY/1612531569515-27398f06-a0ba-4a41-a1a2-b903200fe091-720973.png)
 
 你只需要下载红框中的数据。
 
-网盘gtf文件下载链接：[<u>https://pan.baidu.com/s/1Tx5DD2zztdKG_gt-r9SP2A </u>](https://pan.baidu.com/s/1Tx5DD2zztdKG_gt-r9SP2A)
+网盘gtf文件下载链接：[https://pan.baidu.com/s/1Tx5DD2zztdKG_gt-r9SP2A ](https://pan.baidu.com/s/1Tx5DD2zztdKG_gt-r9SP2A)
 
 提取码：hy9w
 
@@ -35,9 +35,9 @@ Counts<- data.frame(c(LUAD_Counts_expMatrix[,dataSmNT],LUAD_Counts_expMatrix[,da
 
 利用R包下载可参考下面2篇文章：
 
-[<u>1.TCGA数据挖掘（一）：TCGAbiolinks包介绍</u>](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263886&idx=1&sn=1c433a1b2144328a52c0d2d8af5c35ff&scene=19#wechat_redirect)
+[1.TCGA数据挖掘（一）：TCGAbiolinks包介绍](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263886&idx=1&sn=1c433a1b2144328a52c0d2d8af5c35ff&scene=19#wechat_redirect)
 
-2[<u>.R语言TCGA-Assembler包下载TCGA数据</u>](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263287&idx=1&sn=6194d0824e8883145508b1b1b92b1227&chksm=841ef54ab3697c5cde3e28c0872685f1b60106add95129f77c2a9553804d0d896788cf9a2c6d&scene=21#wechat_redirect)
+2[.R语言TCGA-Assembler包下载TCGA数据](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263287&idx=1&sn=6194d0824e8883145508b1b1b92b1227&chksm=841ef54ab3697c5cde3e28c0872685f1b60106add95129f77c2a9553804d0d896788cf9a2c6d&scene=21#wechat_redirect)
 
 关于利用R包下载，我主要用过TCGAbiolinks和GDCRNATools，但是这2个包有些函数现在好像有些问题，所以这部分你自己关注，这里主要是自己下载后从头整理，只需要关注官网在线下载部分。主要是让大家知道细节是一个怎么回事。
 
@@ -46,14 +46,14 @@ Counts<- data.frame(c(LUAD_Counts_expMatrix[,dataSmNT],LUAD_Counts_expMatrix[,da
 | <br/>Label | <br/>Identifier for | <br/>解释 |
 | :--- | :--- | :--- |
 | <br/>Project | <br/>Project name | <br/>来自哪个项目: 如TCGA、TARGET等等 |
-| <br/>TSS | <br/>Tissue source site | <br/>样品来自哪个组织机构：01 代表International Genomics Consortium, 更多见：[<u>TSS</u>](https://www.omicsclass.com/article/1079) |
+| <br/>TSS | <br/>Tissue source site | <br/>样品来自哪个组织机构：01 代表International Genomics Consortium, 更多见：[TSS](https://www.omicsclass.com/article/1079) |
 | <br/>Participant | <br/>Study participant | <br/>样品唯一编号(可以理解为一个病人唯一编号） |
-| <br/>Sample | <br/>Sample type | <br/>样品来自人体组织类型，如：01代表Primary Solid Tumor， 更多见：[<u>SampleType</u>](https://www.omicsclass.com/article/1080) |
+| <br/>Sample | <br/>Sample type | <br/>样品来自人体组织类型，如：01代表Primary Solid Tumor， 更多见：[SampleType](https://www.omicsclass.com/article/1080) |
 | <br/>Vial | <br/>Order of sample in a sequence of samples | <br/>一份样品被分割成好几份，表示第几份，通常是A-Z编号 |
 | <br/>Portion | <br/>Order of portion in a sequence of 100-120 mg sample portions | <br/>每份样品再分割成不同的小样品：01-99等等编号，代表第几份 |
-| <br/>Analyte | <br/>Molecular type of analyte for analysis | <br/>实验数据来源分子类型，如R代表 RNA，D代表DNA等等，更多见：[<u>Portion / Analyte Codes</u>](https://gdc.cancer.gov/resources-tcga-users/tcga-code-tables/portion-analyte-codes) |
+| <br/>Analyte | <br/>Molecular type of analyte for analysis | <br/>实验数据来源分子类型，如R代表 RNA，D代表DNA等等，更多见：[Portion / Analyte Codes](https://gdc.cancer.gov/resources-tcga-users/tcga-code-tables/portion-analyte-codes) |
 | <br/>Plate | <br/>Order of plate in a sequence of 96-well plates | <br/>96孔序列中板的顺序，4个数字组成 |
-| <br/>Center | <br/>Sequencing or characterization center that will receive the aliquot for analysis | <br/>数据由哪个机构分析：如 01代表The Broad Institute GCC,更多见：[<u>Center</u>](https://www.omicsclass.com/article/1081) |
+| <br/>Center | <br/>Sequencing or characterization center that will receive the aliquot for analysis | <br/>数据由哪个机构分析：如 01代表The Broad Institute GCC,更多见：[Center](https://www.omicsclass.com/article/1081) |
 
 ### 1. 官网在线下载
 
@@ -69,7 +69,7 @@ Counts<- data.frame(c(LUAD_Counts_expMatrix[,dataSmNT],LUAD_Counts_expMatrix[,da
 
 ### 2.官网下载工具下载
 
-Data Transfer Tool：[<u>https://gdc.cancer.gov/access-data/gdc-data-transfer-tool</u>](https://gdc.cancer.gov/access-data/gdc-data-transfer-tool)
+Data Transfer Tool：[https://gdc.cancer.gov/access-data/gdc-data-transfer-tool](https://gdc.cancer.gov/access-data/gdc-data-transfer-tool)
 
 ![1612531569130-9dad5919-117a-4fbd-9791-49400d80c3d7.png](./img/l9nebAoHw7GO7UOY/1612531569130-9dad5919-117a-4fbd-9791-49400d80c3d7-087745.png)
 
@@ -328,7 +328,7 @@ write.csv(allSampleRawCounts,file = "..\\RawCounts.CSV")
 
 ## 四. ID转换
 
-[<u>参考文章</u>](https://mp.weixin.qq.com/s?src=11&timestamp=1581245491&ver=2148&signature=Tqc3mBFhZXrl1TIEi9TtROMKA1CsPCirp-pL3tVcX8M6MAkDqpaZ6Rc6rrF9jIZcte03mQma-kPdSNzJ7395zicreulip2VNHwojXk9fEJTC9kRvkI17bHLlWEY1jTnT&new=1)
+[参考文章](https://mp.weixin.qq.com/s?src=11&timestamp=1581245491&ver=2148&signature=Tqc3mBFhZXrl1TIEi9TtROMKA1CsPCirp-pL3tVcX8M6MAkDqpaZ6Rc6rrF9jIZcte03mQma-kPdSNzJ7395zicreulip2VNHwojXk9fEJTC9kRvkI17bHLlWEY1jTnT&new=1)
 
 ![1612531569135-f07dc587-75f9-4a96-8377-cc02056348d9.png](./img/l9nebAoHw7GO7UOY/1612531569135-f07dc587-75f9-4a96-8377-cc02056348d9-728941.png)
 
@@ -385,13 +385,13 @@ LUAD_Counts_expMatrix <- mergeRawCounts[,-c(1:2)]
 write.csv(LUAD_Counts_expMatrix,file = "..\\LUAD_Counts_expMatrix.csv")
 ```
 
-gtf文件下载：[<u>https://www.gencodegenes.org/human/</u>](https://www.gencodegenes.org/human/)
+gtf文件下载：[https://www.gencodegenes.org/human/](https://www.gencodegenes.org/human/)
 
 运行上面代码后会得到一个Ensembl_ID与基因名称的对应关系的数据框：
 
 ![1612531569118-61eed2e4-3565-4176-9de9-53f9ecb10541.png](./img/l9nebAoHw7GO7UOY/1612531569118-61eed2e4-3565-4176-9de9-53f9ecb10541-493368.png)
 
-关于生信中的各种ID转换，我在文章中有介绍[<u>https://mp.weixin.qq.com/s/lazavD3jzRVO4QkxysHQcg</u>](https://mp.weixin.qq.com/s/lazavD3jzRVO4QkxysHQcg) ，这篇文章是付费文章，隐藏内容仅仅是gtf文件进行ID转换的内容，你不需要去付费。下面代码是一个函数，和上面的函数一样，用于基因转换的，只是提取的信息比较多，上面提取的基因很多，包括了假基因，下面代码还提取了更多基因的信息包括是编码蛋白的还是非编码RNA的，又或者是假基因。你自己把上面的gtf文件作为输入，运行一次看结果。都是处理同一文件，但返回的数据框的列名不一样，用在上面需要自己更改后续的代码。
+关于生信中的各种ID转换，我在文章中有介绍[https://mp.weixin.qq.com/s/lazavD3jzRVO4QkxysHQcg](https://mp.weixin.qq.com/s/lazavD3jzRVO4QkxysHQcg) ，这篇文章是付费文章，隐藏内容仅仅是gtf文件进行ID转换的内容，你不需要去付费。下面代码是一个函数，和上面的函数一样，用于基因转换的，只是提取的信息比较多，上面提取的基因很多，包括了假基因，下面代码还提取了更多基因的信息包括是编码蛋白的还是非编码RNA的，又或者是假基因。你自己把上面的gtf文件作为输入，运行一次看结果。都是处理同一文件，但返回的数据框的列名不一样，用在上面需要自己更改后续的代码。
 3.0的代码就是值分析编码蛋白的基因。
 
 ```plain
@@ -425,7 +425,7 @@ get_map <- function(input) {
 
 **DESeq2和EdgeR包**: 都可用于做基因差异表达分析，主要也是用于RNA-Seq数据，同样也可以处理类似的ChIP-Seq,shRNA以及质谱数据。这两个都属于R包，其相同点在于都是对count data数据进行处理，都是基于负二项分布模型。
 
-差异分析可以参考文章：[<u>超详细的DESeq2和edgeR包的基本原理和实战案例 </u>](https://mp.weixin.qq.com/s/CtKlpDgtNs3f2NXaoulD5Q)。
+差异分析可以参考文章：[超详细的DESeq2和edgeR包的基本原理和实战案例 ](https://mp.weixin.qq.com/s/CtKlpDgtNs3f2NXaoulD5Q)。
 
 ```plain
 #############################差异分析#################################
@@ -547,7 +547,7 @@ dev.off()
 ```
 
 在提取表达数据的时候，代码虽然复杂，很多步骤多余。仅仅是让初学者知道一个详细的过程还需要特别说明的是，1.0的代码分析的基因没有筛选，包括了假基因和编码RNA的基因。你可以通过上面的get_map函数筛选出编码蛋白的基因。
-3.0的代码的只分析了编码蛋白的基因。除此以外，也可以利用相关R包直接分析，比如：GDCRNATools包进行分析：[<u>https://mp.weixin.qq.com/s/XBuikduP6iiSHFl0RBKxQg</u>](https://mp.weixin.qq.com/s/XBuikduP6iiSHFl0RBKxQg)[](https://mp.weixin.qq.com/s/XBuikduP6iiSHFl0RBKxQg)
+3.0的代码的只分析了编码蛋白的基因。除此以外，也可以利用相关R包直接分析，比如：GDCRNATools包进行分析：[https://mp.weixin.qq.com/s/XBuikduP6iiSHFl0RBKxQg](https://mp.weixin.qq.com/s/XBuikduP6iiSHFl0RBKxQg)[](https://mp.weixin.qq.com/s/XBuikduP6iiSHFl0RBKxQg)
 
 最后，我觉得这教程已经够细了，如果代码还出错，那就R语言没有好好学习。建议去学习我的R语言视频教程。
 

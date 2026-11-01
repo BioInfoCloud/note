@@ -1,6 +1,6 @@
 # 超详细的DESeq2、edgeR和limma包的基本原理和实战案例
 
-本文来自文章：超详细的[<u>DESeq2和edgeR包的基本原理和实战案例</u>](https://mp.weixin.qq.com/s/CtKlpDgtNs3f2NXaoulD5Q)
+本文来自文章：超详细的[DESeq2和edgeR包的基本原理和实战案例](https://mp.weixin.qq.com/s/CtKlpDgtNs3f2NXaoulD5Q)
 
 ## edgeR包的基本原理
 

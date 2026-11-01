@@ -1,6 +1,6 @@
 # 基因芯片与GEOquery包
 
-关于芯片数据分析，我们之前的文章：[基因芯片数据挖掘分析表达差异基因](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263385&idx=1&sn=63528ffd7901f36387cd4f484c99e188&chksm=841ef5e4b3697cf28e4590d3509be675bc5d44fe1a1cb6f54fe6ad5cc419139c8720a5fb299d&scene=21#wechat_redirect)中也介绍过芯片的基础知识，这里我们将使用R系统性的讲解芯片的数据分析。不想用R语言的可以阅读文章：[GEO数据库使用教程及在线数据分析工具](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263601&idx=1&sn=443d0dddebb12f21cfd976d50473856b&chksm=841ef60cb3697f1aecc6c310ee3a77e6182a728d5b6711a5cc8f49f0739feaba904f565ce176&scene=21#wechat_redirect)，因为NCBI的GEO数据库([<u>https://www.ncbi.nlm.nih.gov/geo/</u>](https://www.ncbi.nlm.nih.gov/geo/))，ArrayExpress数据库([<u>https://www.ebi.ac.uk/arrayexpress/</u>](https://www.ebi.ac.uk/arrayexpress/))，和TCGA数据库([<u>https://cancergenome.nih.gov/</u>](https://cancergenome.nih.gov/))等等，记录和储存着大量芯片相关的数据，其中GEO数据库是目前最大最全的数据库，可供科研人员查询和下载相关数据。我们还有TCGA数据库的使用教程：[TCGA数据库使用教程](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263330&idx=1&sn=ff440567bbacae48dd41fb3d1daa8751&chksm=841ef51fb3697c098f2c84276930d46884bcb51663f11f2c1c01d822427fed9c4a5c7fe0cf2c&scene=21#wechat_redirect)。可供初学者学习，我们之前也有TCGA数据挖掘的系列教程，读者可关注本公众号，通过菜单栏找到相应的课程学习，也可通过我们的网站查询（公众号后台有网址）。从本文开始，我们将系列性讲解基因芯片数据分析，下面简单对基因芯片的知识进行简单的概述，作为前面文章的一个补充。
+关于芯片数据分析，我们之前的文章：[基因芯片数据挖掘分析表达差异基因](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263385&idx=1&sn=63528ffd7901f36387cd4f484c99e188&chksm=841ef5e4b3697cf28e4590d3509be675bc5d44fe1a1cb6f54fe6ad5cc419139c8720a5fb299d&scene=21#wechat_redirect)中也介绍过芯片的基础知识，这里我们将使用R系统性的讲解芯片的数据分析。不想用R语言的可以阅读文章：[GEO数据库使用教程及在线数据分析工具](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263601&idx=1&sn=443d0dddebb12f21cfd976d50473856b&chksm=841ef60cb3697f1aecc6c310ee3a77e6182a728d5b6711a5cc8f49f0739feaba904f565ce176&scene=21#wechat_redirect)，因为NCBI的GEO数据库([https://www.ncbi.nlm.nih.gov/geo/](https://www.ncbi.nlm.nih.gov/geo/))，ArrayExpress数据库([https://www.ebi.ac.uk/arrayexpress/](https://www.ebi.ac.uk/arrayexpress/))，和TCGA数据库([https://cancergenome.nih.gov/](https://cancergenome.nih.gov/))等等，记录和储存着大量芯片相关的数据，其中GEO数据库是目前最大最全的数据库，可供科研人员查询和下载相关数据。我们还有TCGA数据库的使用教程：[TCGA数据库使用教程](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263330&idx=1&sn=ff440567bbacae48dd41fb3d1daa8751&chksm=841ef51fb3697c098f2c84276930d46884bcb51663f11f2c1c01d822427fed9c4a5c7fe0cf2c&scene=21#wechat_redirect)。可供初学者学习，我们之前也有TCGA数据挖掘的系列教程，读者可关注本公众号，通过菜单栏找到相应的课程学习，也可通过我们的网站查询（公众号后台有网址）。从本文开始，我们将系列性讲解基因芯片数据分析，下面简单对基因芯片的知识进行简单的概述，作为前面文章的一个补充。
 
 ## 基因芯片概述
 
@@ -18,7 +18,7 @@ Affymetrix公司在基因芯片的高密度生产上做出了里程碑式的贡�
 
 ![1612929861038-5a052d88-f277-4b76-ab16-136b66224352.gif](./img/Ytl8eaB3r5kpWEyw/1612929861038-5a052d88-f277-4b76-ab16-136b66224352-601537.gif)
 
-[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**| **[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**| **[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
 [**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
@@ -26,7 +26,7 @@ Affymetrix公司在基因芯片的高密度生产上做出了里程碑式的贡�
 
 关于GEO数据库的基本认识和在线使用，可阅读文章：[**GEO数据库使用教程及在线数据分析工具**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263601&idx=1&sn=443d0dddebb12f21cfd976d50473856b&chksm=841ef60cb3697f1aecc6c310ee3a77e6182a728d5b6711a5cc8f49f0739feaba904f565ce176&scene=21#wechat_redirect)。本文介绍GEOquery这个包，官方教程地址：
 
-[<u>http://www.bioconductor.org/packages/release/bioc/vignettes/GEOquery/inst/doc/GEOquery.html</u>](http://www.bioconductor.org/packages/release/bioc/vignettes/GEOquery/inst/doc/GEOquery.html)
+[http://www.bioconductor.org/packages/release/bioc/vignettes/GEOquery/inst/doc/GEOquery.html](http://www.bioconductor.org/packages/release/bioc/vignettes/GEOquery/inst/doc/GEOquery.html)
 
 本文相当于官方教程的译文吧，再加上我个人的理解，可能翻译不是那么准确。请多多指教！！
 
@@ -34,7 +34,7 @@ Affymetrix公司在基因芯片的高密度生产上做出了里程碑式的贡�
 
 NCBI基因表达综合库（GEO）可以用作各种高通量实验数据的公共存储库。这些数据包括测量mRNA，基因组DNA和蛋白质丰度的基于单通道和双通道微阵列的实验，以及非阵列技术，例如基因表达的串行分析（SAGE），质谱蛋白质组学数据和高通量测序数据。
 
-在GEO的最基本组织层次上，有四种基本实体类型。前三个（样本，平台和系列）由用户提供；第四个是数据集，由GEO员工根据用户提交的数据进行编译和整理。有关更多信息，请参见GEO主页([<u>https://www.ncbi.nlm.nih.gov/geo/</u>](https://www.ncbi.nlm.nih.gov/geo/))。
+在GEO的最基本组织层次上，有四种基本实体类型。前三个（样本，平台和系列）由用户提供；第四个是数据集，由GEO员工根据用户提交的数据进行编译和整理。有关更多信息，请参见GEO主页([https://www.ncbi.nlm.nih.gov/geo/](https://www.ncbi.nlm.nih.gov/geo/))。
 
 **1.1平台**
 
@@ -197,7 +197,7 @@ $contact_fax
 
 Meta(gse)提取的信息就是网页上的信息。你可以网页上查看该数据集看看。
 
-[<u>https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE781</u>](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE781)
+[https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE781](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE781)
 
 ![1612929861073-5c72595f-2e9c-40a0-95f7-83691512321d.png](./img/Ytl8eaB3r5kpWEyw/1612929861073-5c72595f-2e9c-40a0-95f7-83691512321d-903538.png)
 
@@ -437,17 +437,17 @@ a <- getGEOSuppFiles('GSM1137', fetch_files = FALSE)
 
 原文地址：
 
-[<u>http://www.bioconductor.org/packages/release/bioc/vignettes/GEOquery/inst/doc/GEOquery.html</u>](http://www.bioconductor.org/packages/release/bioc/vignettes/GEOquery/inst/doc/GEOquery.html)
+[http://www.bioconductor.org/packages/release/bioc/vignettes/GEOquery/inst/doc/GEOquery.html](http://www.bioconductor.org/packages/release/bioc/vignettes/GEOquery/inst/doc/GEOquery.html)
 
-<u></u>
 
-<u></u>
 
-<u></u>
 
-<u></u>
 
-<u></u>
+
+
+
+
+
 
 > 更新: 2022-03-27 14:29:16
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/it6bra>

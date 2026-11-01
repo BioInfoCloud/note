@@ -439,11 +439,11 @@ c) Hydroxychloroquine（羟氯喹）
 
 #### 人自噬相关基因
 
-人自噬数据库：[<u>http://www.autophagy.lu/index.html</u>](http://www.autophagy.lu/index.html)
+人自噬数据库：[http://www.autophagy.lu/index.html](http://www.autophagy.lu/index.html)
 
-自噬相关基因：[<u>https://docs.qq.com/sheet/DTGxMQmtxcXJZcFhF?c=K18A0A0</u>](https://docs.qq.com/sheet/DTGxMQmtxcXJZcFhF?c=K18A0A0)
+自噬相关基因：[https://docs.qq.com/sheet/DTGxMQmtxcXJZcFhF?c=K18A0A0](https://docs.qq.com/sheet/DTGxMQmtxcXJZcFhF?c=K18A0A0)
 
-网站：[<u>http://thanatos.biocuckoo.org/result.php?type=simple</u>](http://thanatos.biocuckoo.org/result.php?type=simple)
+网站：[http://thanatos.biocuckoo.org/result.php?type=simple](http://thanatos.biocuckoo.org/result.php?type=simple)
 
 ### 四、细胞衰老
 #### 细胞衰老现象的发现
@@ -1060,11 +1060,11 @@ VEGFR（vascular endothelial growth factor receptor，VEGFR）共有三种：VEG
 
 蛋白质磷酸化位点的预测和识别，对蛋白质磷酸化的研究至关重要。除了采用实验方法判断磷酸化位点之外，还可以通过蛋白质磷酸化位点的预测识别，对蛋白质的磷酸化作出预测。我们介绍几个常用的磷酸化预测网站：
 
-1）Uniprot（[<u>http://www.uniprot.org/</u>](http://www.uniprot.org/)）
+1）Uniprot（[http://www.uniprot.org/](http://www.uniprot.org/)）
 
 这是一个综合性网站。在网站内检索基因名，然后进入该基因的主页面。主页面内有 PTM/Processing 一栏。PTM 就是翻译后修饰（post-translational modification）。这一栏内有蛋白磷酸化位点的信息。
 
-2）GPS（[<u>http://gps.biocuckoo.org/</u>](http://gps.biocuckoo.org/)）
+2）GPS（[http://gps.biocuckoo.org/](http://gps.biocuckoo.org/)）
 
 GPS 是 Group-based prediction system 的缩写。它建立了一套很好的规则，将激酶分类到 4 层的层次聚类中。同时，网站还开发了一个简单的方法来估计理论上最大的 FPR（假阳性率，false positive rate）。这个软件可以预测人类 408 个激酶特异的磷酸化位点的层次结构。作为一个应用程序，网站进行了对超过 13000 个哺乳动物磷酸化位点进行了高性能的预测。特别需要说明的是，这个网站不仅能进行磷酸化位点的预测，还能进行其他翻译后修饰的预测（例如，蛋白的甲基化 Protein Methylation、赖氨酸的乙酰化 lysine acetylation 和蛋白的棕榈酰化 palmitoylation 等）。
 
@@ -1197,11 +1197,11 @@ p53 是凋亡途径中一个非常重要的抑癌基因。p53 强大的肿瘤抑
 #### 6.泛素化专业信息数据库介绍
 ##### （1）E3Net
 
-韩国科学技术院生物信息学实验室设计并开发了 E3Net 数据库([<u>http://pnet.kaist.ac.kr/e3net/</u>](http://pnet.kaist.ac.kr/e3net/)) 。该数据库在数据量方面较为庞大，且界面更为友好美观，从数据量及注释信息的丰富程度上来说，该数据库都是当前泛素化修饰相关蛋白数据库中最为出色的。E3Net 数据库共收录了 427 个物种中 2201 个泛素化修饰 E3 及 4896 个底物蛋白信息，其中包含 493 个 E3 与 1277 个底物蛋白之间的 1671 个特异选择关系，该数据库的数据来源主要是文本挖掘方法挖掘 MEDLINE 摘要得到的结果、UniProt 相关条目注释信息、公共泛素化数据库收录数据以及高通量实验数据。
+韩国科学技术院生物信息学实验室设计并开发了 E3Net 数据库([http://pnet.kaist.ac.kr/e3net/](http://pnet.kaist.ac.kr/e3net/)) 。该数据库在数据量方面较为庞大，且界面更为友好美观，从数据量及注释信息的丰富程度上来说，该数据库都是当前泛素化修饰相关蛋白数据库中最为出色的。E3Net 数据库共收录了 427 个物种中 2201 个泛素化修饰 E3 及 4896 个底物蛋白信息，其中包含 493 个 E3 与 1277 个底物蛋白之间的 1671 个特异选择关系，该数据库的数据来源主要是文本挖掘方法挖掘 MEDLINE 摘要得到的结果、UniProt 相关条目注释信息、公共泛素化数据库收录数据以及高通量实验数据。
 
 ##### （2）hUbiquitome
 
-hUbiquitome ([<u>http://bioinfo.bjmu.edu.cn/hubi/</u>](http://bioinfo.bjmu.edu.cn/hubi/)) 是北京大学发布的一个数据库，旨在收录高可信度的实验验证的人类泛素化相关蛋白质，该数据库共收录了 1 个 E1、12 个 E2、138 个 E3、279 个底物蛋白以及 17 个去泛素化酶。该数据库规模较小，但可信度较高，由于收录的全部为实验验证的数据，且为人工手动录入，提高了数据库所收录数据的可靠性，但同时降低了数据量，倘若加入质量控制体系，多渠道收集数据并对数据进行打分，将对提高数据量有所帮助。此外，该数据库的条目注释信息较少，每个条目包含的相关信息不多，但该数据库包含了数据提交功能，更为友好的是提供了原始数据下载的功能，这是相对于其它泛素化相关蛋白质数据库显著的优点。
+hUbiquitome ([http://bioinfo.bjmu.edu.cn/hubi/](http://bioinfo.bjmu.edu.cn/hubi/)) 是北京大学发布的一个数据库，旨在收录高可信度的实验验证的人类泛素化相关蛋白质，该数据库共收录了 1 个 E1、12 个 E2、138 个 E3、279 个底物蛋白以及 17 个去泛素化酶。该数据库规模较小，但可信度较高，由于收录的全部为实验验证的数据，且为人工手动录入，提高了数据库所收录数据的可靠性，但同时降低了数据量，倘若加入质量控制体系，多渠道收集数据并对数据进行打分，将对提高数据量有所帮助。此外，该数据库的条目注释信息较少，每个条目包含的相关信息不多，但该数据库包含了数据提交功能，更为友好的是提供了原始数据下载的功能，这是相对于其它泛素化相关蛋白质数据库显著的优点。
 
 #### 7.泛素化异常与神经退行性疾病
 

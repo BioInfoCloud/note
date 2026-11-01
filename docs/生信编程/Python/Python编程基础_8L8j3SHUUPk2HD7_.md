@@ -69,7 +69,7 @@ Downloads 》》Windows 跳转页面：<https://www.python.org/downloads/windows
 
 ![1694436397342-e7e0ecf9-d808-47af-92c4-d9e1e7d090c0.png](./img/8L8j3SHUUPk2HD7_/1694436397342-e7e0ecf9-d808-47af-92c4-d9e1e7d090c0-491252.png)
 
-上面页面默认前面勾选，不需要管。点击\*\*Next\*\*即可。
+上面页面默认前面勾选，不需要管。点击**Next**即可。
 
 得到的窗口如下：
 

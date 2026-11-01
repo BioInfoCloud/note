@@ -224,7 +224,7 @@ for(proj in project){##循环下载HTSeq - FPKM的数据，并装换成TPM
 
 [3] [TCGA数据库：miRNA的数据下载与整理【视频】](https://mp.weixin.qq.com/s/axoGSe7k5BnGcZW5ok8IdQ)
 
-TCGA官网：[<u>https://portal.gdc.cancer.gov/</u>](https://portal.gdc.cancer.gov/)
+TCGA官网：[https://portal.gdc.cancer.gov/](https://portal.gdc.cancer.gov/)
 
 关于miRNA的基础知识可参考文章：[生物学基础知识:非编码RNA](https://www.yuque.com/docs/share/701482fb-252b-4ce5-8490-1d6c952814fc)。
 
@@ -976,7 +976,7 @@ MNase：能切割出单个核小体, DNase能识别超敏位点，ATAC-Seq所需
 
 数据下载地址：
 
-[<u>https://gdc.cancer.gov/about-data/publications/ATACseq-AWG</u>](https://gdc.cancer.gov/about-data/publications/ATACseq-AWG)
+[https://gdc.cancer.gov/about-data/publications/ATACseq-AWG](https://gdc.cancer.gov/about-data/publications/ATACseq-AWG)
 
 我们从TCGA官网下载ATAC-seq数据，下载界面如下。我们可以选择红色部分，可以下载raw count，也可以下载normalize count。下载了数据的话，我们就可以得到每个肿瘤的ATAC数据矩阵。原始数据下载比较麻烦，需要申请，而且分析也比较麻烦，需要Linux系统，我们这里下载标准化后的数据，同时，也要下载Lookup table for various TCGA sample identifiers文件，这个用于样本名称的转换。
 ![1612871800512-bdf5f483-47a6-4aef-82aa-2264d8ac57bf.png](./img/FuJI4bj6_6i_ff-5/1612871800512-bdf5f483-47a6-4aef-82aa-2264d8ac57bf-960960.png)

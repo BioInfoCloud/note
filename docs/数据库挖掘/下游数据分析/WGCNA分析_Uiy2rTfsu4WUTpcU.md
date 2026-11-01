@@ -22,7 +22,7 @@ WGCNA其译为加权基因共表达网络分析。该分析方法旨在寻找协
 
 **Connectivity (连接度)：**类似于网络中 “度”(degree)的概念。每个基因的连接度是与其相连的基因的边属性之和。
 
-**Module eigengene：**Eigengene（eigen +‎ gene），基因和样本构成的矩阵，[<u>https://en.wiktionary.org/wiki/eigengene</u>](https://en.wiktionary.org/wiki/eigengene) ，Module eigengene是一个基因模块的代表，通常定义为该模块内所有基因表达谱的第一主成分（PC1）。它代表了整个模块的基因表达谱，并用于计算模块与表型或其他基因模块之间的关联。
+**Module eigengene：**Eigengene（eigen +‎ gene），基因和样本构成的矩阵，[https://en.wiktionary.org/wiki/eigengene](https://en.wiktionary.org/wiki/eigengene) ，Module eigengene是一个基因模块的代表，通常定义为该模块内所有基因表达谱的第一主成分（PC1）。它代表了整个模块的基因表达谱，并用于计算模块与表型或其他基因模块之间的关联。
 
 **Intramodular connectivity：**给定基因与给定Module内其他基因的关联度，判断基因所属关系。
 

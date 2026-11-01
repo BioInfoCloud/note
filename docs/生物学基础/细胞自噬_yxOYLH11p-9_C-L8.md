@@ -173,242 +173,242 @@ c）Hydroxychloroquine（羟氯喹）
 
 ## 10.人自噬相关基因
 
-来自于人自噬数据库：[<u>http://www.autophagy.lu/index.html</u>](http://www.autophagy.lu/index.html)
+来自于人自噬数据库：[http://www.autophagy.lu/index.html](http://www.autophagy.lu/index.html)
 
 | **GeneId** | **Name** | **Symbol** |
 | :--- | :--- | :--- |
-| [<u>55626</u>](http://www.autophagy.lu/genes/55626) | autophagy/beclin-1 regulator 1 | AMBRA1 |
-| [<u>8542</u>](http://www.autophagy.lu/genes/8542) | apolipoprotein L, 1 | APOL1 |
-| [<u>405</u>](http://www.autophagy.lu/genes/405) | aryl hydrocarbon receptor nuclear translocator | ARNT |
-| [<u>410</u>](http://www.autophagy.lu/genes/410) | arylsulfatase A | ARSA |
-| [<u>411</u>](http://www.autophagy.lu/genes/411) | arylsulfatase B | ARSB |
-| [<u>468</u>](http://www.autophagy.lu/genes/468) | activating transcription factor 4 (tax-responsive enhancer element B67) | ATF4 |
-| [<u>22926</u>](http://www.autophagy.lu/genes/22926) | activating transcription factor 6 | ATF6 |
-| [<u>83734</u>](http://www.autophagy.lu/genes/83734) | ATG10 autophagy related 10 homolog (S. cerevisiae) | ATG10 |
-| [<u>9140</u>](http://www.autophagy.lu/genes/9140) | ATG12 autophagy related 12 homolog (S. cerevisiae) | ATG12 |
-| [<u>55054</u>](http://www.autophagy.lu/genes/55054) | ATG16 autophagy related 16-like 1 (S. cerevisiae) | ATG16L1 |
-| [<u>89849</u>](http://www.autophagy.lu/genes/89849) | ATG16 autophagy related 16-like 2 (S. cerevisiae) | ATG16L2 |
-| [<u>23130</u>](http://www.autophagy.lu/genes/23130) | ATG2 autophagy related 2 homolog A (S. cerevisiae) | ATG2A |
-| [<u>55102</u>](http://www.autophagy.lu/genes/55102) | ATG2 autophagy related 2 homolog B (S. cerevisiae) | ATG2B |
-| [<u>64422</u>](http://www.autophagy.lu/genes/64422) | ATG3 autophagy related 3 homolog (S. cerevisiae) | ATG3 |
-| [<u>115201</u>](http://www.autophagy.lu/genes/115201) | ATG4 autophagy related 4 homolog A (S. cerevisiae) | ATG4A |
-| [<u>23192</u>](http://www.autophagy.lu/genes/23192) | ATG4 autophagy related 4 homolog B (S. cerevisiae) | ATG4B |
-| [<u>84938</u>](http://www.autophagy.lu/genes/84938) | ATG4 autophagy related 4 homolog C (S. cerevisiae) | ATG4C |
-| [<u>84971</u>](http://www.autophagy.lu/genes/84971) | ATG4 autophagy related 4 homolog D (S. cerevisiae) | ATG4D |
-| [<u>9474</u>](http://www.autophagy.lu/genes/9474) | ATG5 autophagy related 5 homolog (S. cerevisiae) | ATG5 |
-| [<u>10533</u>](http://www.autophagy.lu/genes/10533) | ATG7 autophagy related 7 homolog (S. cerevisiae) | ATG7 |
-| [<u>79065</u>](http://www.autophagy.lu/genes/79065) | ATG9 autophagy related 9 homolog A (S. cerevisiae) | ATG9A |
-| [<u>285973</u>](http://www.autophagy.lu/genes/285973) | ATG9 autophagy related 9 homolog B (S. cerevisiae) | ATG9B |
-| [<u>471</u>](http://www.autophagy.lu/genes/471) | 5-aminoimidazole-4-carboxamide ribonucleotide formyltransferase/IMP cyclohydrolase | ATIC |
-| [<u>573</u>](http://www.autophagy.lu/genes/573) | BCL2-associated athanogene | BAG1 |
-| [<u>9531</u>](http://www.autophagy.lu/genes/9531) | BCL2-associated athanogene 3 | BAG3 |
-| [<u>578</u>](http://www.autophagy.lu/genes/578) | BCL2-antagonist/killer 1 | BAK1 |
-| [<u>581</u>](http://www.autophagy.lu/genes/581) | BCL2-associated X protein | BAX |
-| [<u>596</u>](http://www.autophagy.lu/genes/596) | B-cell CLL/lymphoma 2 | BCL2 |
-| [<u>598</u>](http://www.autophagy.lu/genes/598) | BCL2-like 1 | BCL2L1 |
-| [<u>8678</u>](http://www.autophagy.lu/genes/8678) | beclin 1, autophagy related | BECN1 |
-| [<u>637</u>](http://www.autophagy.lu/genes/637) | BH3 interacting domain death agonist | BID |
-| [<u>332</u>](http://www.autophagy.lu/genes/332) | baculoviral IAP repeat-containing 5 | BIRC5 |
-| [<u>57448</u>](http://www.autophagy.lu/genes/57448) | baculoviral IAP repeat-containing 6 | BIRC6 |
-| [<u>662</u>](http://www.autophagy.lu/genes/662) | BCL2/adenovirus E1B 19kDa interacting protein 1 | BNIP1 |
-| [<u>664</u>](http://www.autophagy.lu/genes/664) | BCL2/adenovirus E1B 19kDa interacting protein 3 | BNIP3 |
-| [<u>665</u>](http://www.autophagy.lu/genes/665) | BCL2/adenovirus E1B 19kDa interacting protein 3-like | BNIP3L |
-| [<u>60673</u>](http://www.autophagy.lu/genes/60673) | chromosome 12 open reading frame 44 | C12orf44 |
-| [<u>23591</u>](http://www.autophagy.lu/genes/23591) | chromosome 17 open reading frame 88 | C17orf88 |
-| [<u>10241</u>](http://www.autophagy.lu/genes/10241) | calcium binding and coiled-coil domain 2 | CALCOCO2 |
-| [<u>10645</u>](http://www.autophagy.lu/genes/10645) | calcium/calmodulin-dependent protein kinase kinase 2, beta | CAMKK2 |
-| [<u>821</u>](http://www.autophagy.lu/genes/821) | calnexin | CANX |
-| [<u>823</u>](http://www.autophagy.lu/genes/823) | calpain 1, (mu/I) large subunit | CAPN1 |
-| [<u>11132</u>](http://www.autophagy.lu/genes/11132) | calpain 10 | CAPN10 |
-| [<u>824</u>](http://www.autophagy.lu/genes/824) | calpain 2, (m/II) large subunit | CAPN2 |
-| [<u>826</u>](http://www.autophagy.lu/genes/826) | calpain, small subunit 1 | CAPNS1 |
-| [<u>834</u>](http://www.autophagy.lu/genes/834) | caspase 1, apoptosis-related cysteine peptidase (interleukin 1, beta, convertase) | CASP1 |
-| [<u>836</u>](http://www.autophagy.lu/genes/836) | caspase 3, apoptosis-related cysteine peptidase | CASP3 |
-| [<u>837</u>](http://www.autophagy.lu/genes/837) | caspase 4, apoptosis-related cysteine peptidase | CASP4 |
-| [<u>841</u>](http://www.autophagy.lu/genes/841) | caspase 8, apoptosis-related cysteine peptidase | CASP8 |
-| [<u>6347</u>](http://www.autophagy.lu/genes/6347) | chemokine (C-C motif) ligand 2 | CCL2 |
-| [<u>729230</u>](http://www.autophagy.lu/genes/729230) | chemokine (C-C motif) receptor 2 | CCR2 |
-| [<u>4179</u>](http://www.autophagy.lu/genes/4179) | CD46 molecule, complement regulatory protein | CD46 |
-| [<u>1026</u>](http://www.autophagy.lu/genes/1026) | cyclin-dependent kinase inhibitor 1A (p21, Cip1) | CDKN1A |
-| [<u>1027</u>](http://www.autophagy.lu/genes/1027) | cyclin-dependent kinase inhibitor 1B (p27, Kip1) | CDKN1B |
-| [<u>1029</u>](http://www.autophagy.lu/genes/1029) | cyclin-dependent kinase inhibitor 2A (melanoma, p16, inhibits CDK4) | CDKN2A |
-| [<u>8837</u>](http://www.autophagy.lu/genes/8837) | CASP8 and FADD-like apoptosis regulator | CFLAR |
-| [<u>25978</u>](http://www.autophagy.lu/genes/25978) | chromatin modifying protein 2B | CHMP2B |
-| [<u>128866</u>](http://www.autophagy.lu/genes/128866) | chromatin modifying protein 4B | CHMP4B |
-| [<u>1201</u>](http://www.autophagy.lu/genes/1201) | ceroid-lipofuscinosis, neuronal 3 | CLN3 |
-| [<u>1508</u>](http://www.autophagy.lu/genes/1508) | cathepsin B | CTSB |
-| [<u>1509</u>](http://www.autophagy.lu/genes/1509) | cathepsin D | CTSD |
-| [<u>1514</u>](http://www.autophagy.lu/genes/1514) | cathepsin L1 | CTSL1 |
-| [<u>6376</u>](http://www.autophagy.lu/genes/6376) | chemokine (C-X3-C motif) ligand 1 | CX3CL1 |
-| [<u>7852</u>](http://www.autophagy.lu/genes/7852) | chemokine (C-X-C motif) receptor 4 | CXCR4 |
-| [<u>1612</u>](http://www.autophagy.lu/genes/1612) | death-associated protein kinase 1 | DAPK1 |
-| [<u>23604</u>](http://www.autophagy.lu/genes/23604) | death-associated protein kinase 2 | DAPK2 |
-| [<u>1649</u>](http://www.autophagy.lu/genes/1649) | DNA-damage-inducible transcript 3 | DDIT3 |
-| [<u>9077</u>](http://www.autophagy.lu/genes/9077) | DIRAS family, GTP-binding RAS-like 3 | DIRAS3 |
-| [<u>10395</u>](http://www.autophagy.lu/genes/10395) | deleted in liver cancer 1 | DLC1 |
-| [<u>3337</u>](http://www.autophagy.lu/genes/3337) | DnaJ (Hsp40) homolog, subfamily B, member 1 | DNAJB1 |
-| [<u>4189</u>](http://www.autophagy.lu/genes/4189) | DnaJ (Hsp40) homolog, subfamily B, member 9 | DNAJB9 |
-| [<u>55332</u>](http://www.autophagy.lu/genes/55332) | DNA-damage regulated autophagy modulator 1 | DRAM1 |
-| [<u>9695</u>](http://www.autophagy.lu/genes/9695) | ER degradation enhancer, mannosidase alpha-like 1 | EDEM1 |
-| [<u>1938</u>](http://www.autophagy.lu/genes/1938) | eukaryotic translation elongation factor 2 | EEF2 |
-| [<u>29904</u>](http://www.autophagy.lu/genes/29904) | eukaryotic elongation factor-2 kinase | EEF2K |
-| [<u>1956</u>](http://www.autophagy.lu/genes/1956) | epidermal growth factor receptor (erythroblastic leukemia viral (v-erb-b) oncogene homolog, avian) | EGFR |
-| [<u>5610</u>](http://www.autophagy.lu/genes/5610) | eukaryotic translation initiation factor 2-alpha kinase 2 | EIF2AK2 |
-| [<u>9451</u>](http://www.autophagy.lu/genes/9451) | eukaryotic translation initiation factor 2-alpha kinase 3 | EIF2AK3 |
-| [<u>1965</u>](http://www.autophagy.lu/genes/1965) | eukaryotic translation initiation factor 2, subunit 1 alpha, 35kDa | EIF2S1 |
-| [<u>1978</u>](http://www.autophagy.lu/genes/1978) | eukaryotic translation initiation factor 4E binding protein 1 | EIF4EBP1 |
-| [<u>1981</u>](http://www.autophagy.lu/genes/1981) | eukaryotic translation initiation factor 4 gamma, 1 | EIF4G1 |
-| [<u>2064</u>](http://www.autophagy.lu/genes/2064) | v-erb-b2 erythroblastic leukemia viral oncogene homolog 2, neuro/glioblastoma derived oncogene homolog (avian) | ERBB2 |
-| [<u>2081</u>](http://www.autophagy.lu/genes/2081) | endoplasmic reticulum to nucleus signaling 1 | ERN1 |
-| [<u>30001</u>](http://www.autophagy.lu/genes/30001) | ERO1-like (S. cerevisiae) | ERO1L |
-| [<u>8772</u>](http://www.autophagy.lu/genes/8772) | Fas (TNFRSF6)-associated via death domain | FADD |
-| [<u>55578</u>](http://www.autophagy.lu/genes/55578) | family with sequence similarity 48, member A | FAM48A |
-| [<u>355</u>](http://www.autophagy.lu/genes/355) | Fas (TNF receptor superfamily, member 6) | FAS |
-| [<u>2280</u>](http://www.autophagy.lu/genes/2280) | FK506 binding protein 1A, 12kDa | FKBP1A |
-| [<u>2281</u>](http://www.autophagy.lu/genes/2281) | FK506 binding protein 1B, 12.6 kDa | FKBP1B |
-| [<u>2353</u>](http://www.autophagy.lu/genes/2353) | FBJ murine osteosarcoma viral oncogene homolog | FOS |
-| [<u>2308</u>](http://www.autophagy.lu/genes/2308) | forkhead box O1 | FOXO1 |
-| [<u>2309</u>](http://www.autophagy.lu/genes/2309) | forkhead box O3 | FOXO3 |
-| [<u>2548</u>](http://www.autophagy.lu/genes/2548) | glucosidase, alpha; acid | GAA |
-| [<u>11337</u>](http://www.autophagy.lu/genes/11337) | GABA(A) receptor-associated protein | GABARAP |
-| [<u>23710</u>](http://www.autophagy.lu/genes/23710) | GABA(A) receptor-associated protein like 1 | GABARAPL1 |
-| [<u>11345</u>](http://www.autophagy.lu/genes/11345) | GABA(A) receptor-associated protein-like 2 | GABARAPL2 |
-| [<u>2597</u>](http://www.autophagy.lu/genes/2597) | glyceraldehyde-3-phosphate dehydrogenase | GAPDH |
-| [<u>2773</u>](http://www.autophagy.lu/genes/2773) | guanine nucleotide binding protein (G protein), alpha inhibiting activity polypeptide 3 | GNAI3 |
-| [<u>10399</u>](http://www.autophagy.lu/genes/10399) | guanine nucleotide binding protein (G protein), beta polypeptide 2-like 1 | GNB2L1 |
-| [<u>57120</u>](http://www.autophagy.lu/genes/57120) | golgi-associated PDZ and coiled-coil motif containing | GOPC |
-| [<u>2894</u>](http://www.autophagy.lu/genes/2894) | glutamate receptor, ionotropic, delta 1 | GRID1 |
-| [<u>2895</u>](http://www.autophagy.lu/genes/2895) | glutamate receptor, ionotropic, delta 2 | GRID2 |
-| [<u>3065</u>](http://www.autophagy.lu/genes/3065) | histone deacetylase 1 | HDAC1 |
-| [<u>10013</u>](http://www.autophagy.lu/genes/10013) | histone deacetylase 6 | HDAC6 |
-| [<u>9146</u>](http://www.autophagy.lu/genes/9146) | hepatocyte growth factor-regulated tyrosine kinase substrate | HGS |
-| [<u>3091</u>](http://www.autophagy.lu/genes/3091) | hypoxia inducible factor 1, alpha subunit (basic helix-loop-helix transcription factor) | HIF1A |
-| [<u>3326</u>](http://www.autophagy.lu/genes/3326) | heat shock protein 90kDa alpha (cytosolic), class B member 1 | HSP90AB1 |
-| [<u>3309</u>](http://www.autophagy.lu/genes/3309) | heat shock 70kDa protein 5 (glucose-regulated protein, 78kDa) | HSPA5 |
-| [<u>3312</u>](http://www.autophagy.lu/genes/3312) | heat shock 70kDa protein 8 | HSPA8 |
-| [<u>26353</u>](http://www.autophagy.lu/genes/26353) | heat shock 22kDa protein 8 | HSPB8 |
-| [<u>3458</u>](http://www.autophagy.lu/genes/3458) | interferon, gamma | IFNG |
-| [<u>3551</u>](http://www.autophagy.lu/genes/3551) | inhibitor of kappa light polypeptide gene enhancer in B-cells, kinase beta | IKBKB |
-| [<u>9641</u>](http://www.autophagy.lu/genes/9641) | inhibitor of kappa light polypeptide gene enhancer in B-cells, kinase epsilon | IKBKE |
-| [<u>11009</u>](http://www.autophagy.lu/genes/11009) | interleukin 24 | IL24 |
-| [<u>345611</u>](http://www.autophagy.lu/genes/345611) | immunity-related GTPase family, M | IRGM |
-| [<u>3675</u>](http://www.autophagy.lu/genes/3675) | integrin, alpha 3 (antigen CD49C, alpha 3 subunit of VLA-3 receptor) | ITGA3 |
-| [<u>3655</u>](http://www.autophagy.lu/genes/3655) | integrin, alpha 6 | ITGA6 |
-| [<u>3688</u>](http://www.autophagy.lu/genes/3688) | integrin, beta 1 (fibronectin receptor, beta polypeptide, antigen CD29 includes MDF2, MSK12) | ITGB1 |
-| [<u>3691</u>](http://www.autophagy.lu/genes/3691) | integrin, beta 4 | ITGB4 |
-| [<u>3708</u>](http://www.autophagy.lu/genes/3708) | inositol 1,4,5-triphosphate receptor, type 1 | ITPR1 |
-| [<u>2548</u>](http://www.autophagy.lu/genes/2548) | glucosidase, alpha; acid | GAA |
-| [<u>11337</u>](http://www.autophagy.lu/genes/11337) | GABA(A) receptor-associated protein | GABARAP |
-| [<u>23710</u>](http://www.autophagy.lu/genes/23710) | GABA(A) receptor-associated protein like 1 | GABARAPL1 |
-| [<u>11345</u>](http://www.autophagy.lu/genes/11345) | GABA(A) receptor-associated protein-like 2 | GABARAPL2 |
-| [<u>2597</u>](http://www.autophagy.lu/genes/2597) | glyceraldehyde-3-phosphate dehydrogenase | GAPDH |
-| [<u>2773</u>](http://www.autophagy.lu/genes/2773) | guanine nucleotide binding protein (G protein), alpha inhibiting activity polypeptide 3 | GNAI3 |
-| [<u>10399</u>](http://www.autophagy.lu/genes/10399) | guanine nucleotide binding protein (G protein), beta polypeptide 2-like 1 | GNB2L1 |
-| [<u>57120</u>](http://www.autophagy.lu/genes/57120) | golgi-associated PDZ and coiled-coil motif containing | GOPC |
-| [<u>2894</u>](http://www.autophagy.lu/genes/2894) | glutamate receptor, ionotropic, delta 1 | GRID1 |
-| [<u>2895</u>](http://www.autophagy.lu/genes/2895) | glutamate receptor, ionotropic, delta 2 | GRID2 |
-| [<u>9711</u>](http://www.autophagy.lu/genes/9711) | KIAA0226 | KIAA0226 |
-| [<u>9776</u>](http://www.autophagy.lu/genes/9776) | KIAA0652 | KIAA0652 |
-| [<u>22863</u>](http://www.autophagy.lu/genes/22863) | KIAA0831 | KIAA0831 |
-| [<u>3799</u>](http://www.autophagy.lu/genes/3799) | kinesin family member 5B | KIF5B |
-| [<u>54800</u>](http://www.autophagy.lu/genes/54800) | kelch-like 24 (Drosophila) | KLHL24 |
-| [<u>3916</u>](http://www.autophagy.lu/genes/3916) | lysosomal-associated membrane protein 1 | LAMP1 |
-| [<u>3920</u>](http://www.autophagy.lu/genes/3920) | lysosomal-associated membrane protein 2 | LAMP2 |
-| [<u>84557</u>](http://www.autophagy.lu/genes/84557) | microtubule-associated protein 1 light chain 3 alpha | MAP1LC3A |
-| [<u>81631</u>](http://www.autophagy.lu/genes/81631) | microtubule-associated protein 1 light chain 3 beta | MAP1LC3B |
-| [<u>440738</u>](http://www.autophagy.lu/genes/440738) | microtubule-associated protein 1 light chain 3 gamma | MAP1LC3C |
-| [<u>5609</u>](http://www.autophagy.lu/genes/5609) | mitogen-activated protein kinase kinase 7 | MAP2K7 |
-| [<u>5594</u>](http://www.autophagy.lu/genes/5594) | mitogen-activated protein kinase 1 | MAPK1 |
-| [<u>5595</u>](http://www.autophagy.lu/genes/5595) | mitogen-activated protein kinase 3 | MAPK3 |
-| [<u>5599</u>](http://www.autophagy.lu/genes/5599) | mitogen-activated protein kinase 8 | MAPK8 |
-| [<u>9479</u>](http://www.autophagy.lu/genes/9479) | mitogen-activated protein kinase 8 interacting protein 1 | MAPK8IP1 |
-| [<u>5601</u>](http://www.autophagy.lu/genes/5601) | mitogen-activated protein kinase 9 | MAPK9 |
-| [<u>51360</u>](http://www.autophagy.lu/genes/51360) | membrane-bound transcription factor peptidase, site 2 | MBTPS2 |
-| [<u>64223</u>](http://www.autophagy.lu/genes/64223) | MTOR associated protein, LST8 homolog (S. cerevisiae) | MLST8 |
-| [<u>64419</u>](http://www.autophagy.lu/genes/64419) | myotubularin related protein 14 | MTMR14 |
-| [<u>2475</u>](http://www.autophagy.lu/genes/2475) | mechanistic target of rapamycin (serine/threonine kinase) | MTOR |
-| [<u>4609</u>](http://www.autophagy.lu/genes/4609) | v-myc myelocytomatosis viral oncogene homolog (avian) | MYC |
-| [<u>92345</u>](http://www.autophagy.lu/genes/92345) | nuclear assembly factor 1 homolog (S. cerevisiae) | NAF1 |
-| [<u>10135</u>](http://www.autophagy.lu/genes/10135) | nicotinamide phosphoribosyltransferase | NAMPT |
-| [<u>4077</u>](http://www.autophagy.lu/genes/4077) | neighbor of BRCA1 gene 1 | NBR1 |
-| [<u>10787</u>](http://www.autophagy.lu/genes/10787) | NCK-associated protein 1 | NCKAP1 |
-| [<u>4780</u>](http://www.autophagy.lu/genes/4780) | nuclear factor (erythroid-derived 2)-like 2 | NFE2L2 |
-| [<u>4790</u>](http://www.autophagy.lu/genes/4790) | nuclear factor of kappa light polypeptide gene enhancer in B-cells 1 | NFKB1 |
-| [<u>159296</u>](http://www.autophagy.lu/genes/159296) | NK2 transcription factor related, locus 3 (Drosophila) | NKX2-3 |
-| [<u>58484</u>](http://www.autophagy.lu/genes/58484) | NLR family, CARD domain containing 4 | NLRC4 |
-| [<u>4864</u>](http://www.autophagy.lu/genes/4864) | Niemann-Pick disease, type C1 | NPC1 |
-| [<u>3084</u>](http://www.autophagy.lu/genes/3084) | neuregulin 1 | NRG1 |
-| [<u>9542</u>](http://www.autophagy.lu/genes/9542) | neuregulin 2 | NRG2 |
-| [<u>10718</u>](http://www.autophagy.lu/genes/10718) | neuregulin 3 | NRG3 |
-| [<u>5034</u>](http://www.autophagy.lu/genes/5034) | prolyl 4-hydroxylase, beta polypeptide | P4HB |
-| [<u>5071</u>](http://www.autophagy.lu/genes/5071) | Parkinson disease (autosomal recessive, juvenile) 2, parkin | PARK2 |
-| [<u>142</u>](http://www.autophagy.lu/genes/142) | poly (ADP-ribose) polymerase 1 | PARP1 |
-| [<u>8682</u>](http://www.autophagy.lu/genes/8682) | phosphoprotein enriched in astrocytes 15 | PEA15 |
-| [<u>27043</u>](http://www.autophagy.lu/genes/27043) | proline, glutamate and leucine rich protein 1 | PELP1 |
-| [<u>5195</u>](http://www.autophagy.lu/genes/5195) | peroxisomal biogenesis factor 14 | PEX14 |
-| [<u>8504</u>](http://www.autophagy.lu/genes/8504) | peroxisomal biogenesis factor 3 | PEX3 |
-| [<u>5289</u>](http://www.autophagy.lu/genes/5289) | phosphoinositide-3-kinase, class 3 | PIK3C3 |
-| [<u>30849</u>](http://www.autophagy.lu/genes/30849) | phosphoinositide-3-kinase, regulatory subunit 4 | PIK3R4 |
-| [<u>65018</u>](http://www.autophagy.lu/genes/65018) | PTEN induced putative kinase 1 | PINK1 |
-| [<u>23645</u>](http://www.autophagy.lu/genes/23645) | protein phosphatase 1, regulatory (inhibitor) subunit 15A | PPP1R15A |
-| [<u>5564</u>](http://www.autophagy.lu/genes/5564) | protein kinase, AMP-activated, beta 1 non-catalytic subunit | PRKAB1 |
-| [<u>5573</u>](http://www.autophagy.lu/genes/5573) | protein kinase, cAMP-dependent, regulatory, type I, alpha (tissue specific extinguisher 1) | PRKAR1A |
-| [<u>5580</u>](http://www.autophagy.lu/genes/5580) | protein kinase C, delta | PRKCD |
-| [<u>5588</u>](http://www.autophagy.lu/genes/5588) | protein kinase C, theta | PRKCQ |
-| [<u>5728</u>](http://www.autophagy.lu/genes/5728) | phosphatase and tensin homolog | PTEN |
-| [<u>5753</u>](http://www.autophagy.lu/genes/5753) | PTK6 protein tyrosine kinase 6 | PTK6 |
-| [<u>8766</u>](http://www.autophagy.lu/genes/8766) | RAB11A, member RAS oncogene family | RAB11A |
-| [<u>5861</u>](http://www.autophagy.lu/genes/5861) | RAB1A, member RAS oncogene family | RAB1A |
-| [<u>53917</u>](http://www.autophagy.lu/genes/53917) | RAB24, member RAS oncogene family | RAB24 |
-| [<u>83452</u>](http://www.autophagy.lu/genes/83452) | RAB33B, member RAS oncogene family | RAB33B |
-| [<u>5868</u>](http://www.autophagy.lu/genes/5868) | RAB5A, member RAS oncogene family | RAB5A |
-| [<u>7879</u>](http://www.autophagy.lu/genes/7879) | RAB7A, member RAS oncogene family | RAB7A |
-| [<u>5879</u>](http://www.autophagy.lu/genes/5879) | ras-related C3 botulinum toxin substrate 1 (rho family, small GTP binding protein Rac1) | RAC1 |
-| [<u>5894</u>](http://www.autophagy.lu/genes/5894) | v-raf-1 murine leukemia viral oncogene homolog 1 | RAF1 |
-| [<u>5925</u>](http://www.autophagy.lu/genes/5925) | retinoblastoma 1 | RB1 |
-| [<u>9821</u>](http://www.autophagy.lu/genes/9821) | RB1-inducible coiled-coil 1 | RB1CC1 |
-| [<u>5970</u>](http://www.autophagy.lu/genes/5970) | v-rel reticuloendotheliosis viral oncogene homolog A (avian) | RELA |
-| [<u>10287</u>](http://www.autophagy.lu/genes/10287) | regulator of G-protein signaling 19 | RGS19 |
-| [<u>6009</u>](http://www.autophagy.lu/genes/6009) | Ras homolog enriched in brain | RHEB |
-| [<u>6198</u>](http://www.autophagy.lu/genes/6198) | ribosomal protein S6 kinase, 70kDa, polypeptide 1 | RPS6KB1 |
-| [<u>57521</u>](http://www.autophagy.lu/genes/57521) | regulatory associated protein of MTOR, complex 1 | RPTOR |
-| [<u>56681</u>](http://www.autophagy.lu/genes/56681) | SAR1 homolog A (S. cerevisiae) | SAR1A |
-| [<u>5265</u>](http://www.autophagy.lu/genes/5265) | serpin peptidase inhibitor, clade A (alpha-1 antiproteinase, antitrypsin), member 1 | SERPINA1 |
-| [<u>83667</u>](http://www.autophagy.lu/genes/83667) | sestrin 2 | SESN2 |
-| [<u>51100</u>](http://www.autophagy.lu/genes/51100) | SH3-domain GRB2-like endophilin B1 | SH3GLB1 |
-| [<u>23411</u>](http://www.autophagy.lu/genes/23411) | sirtuin (silent mating type information regulation 2 homolog) 1 (S. cerevisiae) | SIRT1 |
-| [<u>22933</u>](http://www.autophagy.lu/genes/22933) | sirtuin (silent mating type information regulation 2 homolog) 2 (S. cerevisiae) | SIRT2 |
-| [<u>8877</u>](http://www.autophagy.lu/genes/8877) | sphingosine kinase 1 | SPHK1 |
-| [<u>83985</u>](http://www.autophagy.lu/genes/83985) | spinster homolog 1 (Drosophila) | SPNS1 |
-| [<u>8878</u>](http://www.autophagy.lu/genes/8878) | sequestosome 1 | SQSTM1 |
-| [<u>6767</u>](http://www.autophagy.lu/genes/6767) | suppression of tumorigenicity 13 (colon carcinoma) (Hsp70 interacting protein) | ST13 |
-| [<u>6794</u>](http://www.autophagy.lu/genes/6794) | serine/threonine kinase 11 | STK11 |
-| [<u>29110</u>](http://www.autophagy.lu/genes/29110) | TANK-binding kinase 1 | TBK1 |
-| [<u>10548</u>](http://www.autophagy.lu/genes/10548) | transmembrane 9 superfamily member 1 | TM9SF1 |
-| [<u>81671</u>](http://www.autophagy.lu/genes/81671) | transmembrane protein 49 | TMEM49 |
-| [<u>157753</u>](http://www.autophagy.lu/genes/157753) | transmembrane protein 74 | TMEM74 |
-| [<u>8743</u>](http://www.autophagy.lu/genes/8743) | tumor necrosis factor (ligand) superfamily, member 10 | TNFSF10 |
-| [<u>7157</u>](http://www.autophagy.lu/genes/7157) | tumor protein p53 | TP53 |
-| [<u>58476</u>](http://www.autophagy.lu/genes/58476) | tumor protein p53 inducible nuclear protein 2 | TP53INP2 |
-| [<u>8626</u>](http://www.autophagy.lu/genes/8626) | tumor protein p63 | TP63 |
-| [<u>7161</u>](http://www.autophagy.lu/genes/7161) | tumor protein p73 | TP73 |
-| [<u>7248</u>](http://www.autophagy.lu/genes/7248) | tuberous sclerosis 1 | TSC1 |
-| [<u>7249</u>](http://www.autophagy.lu/genes/7249) | tuberous sclerosis 2 | TSC2 |
-| [<u>286319</u>](http://www.autophagy.lu/genes/286319) | tumor suppressor candidate 1 | TUSC1 |
-| [<u>8408</u>](http://www.autophagy.lu/genes/8408) | unc-51-like kinase 1 (C. elegans) | ULK1 |
-| [<u>9706</u>](http://www.autophagy.lu/genes/9706) | unc-51-like kinase 2 (C. elegans) | ULK2 |
-| [<u>25989</u>](http://www.autophagy.lu/genes/25989) | unc-51-like kinase 3 (C. elegans) | ULK3 |
-| [<u>9100</u>](http://www.autophagy.lu/genes/9100) | ubiquitin specific peptidase 10 | USP10 |
-| [<u>7405</u>](http://www.autophagy.lu/genes/7405) | UV radiation resistance associated gene | UVRAG |
-| [<u>9341</u>](http://www.autophagy.lu/genes/9341) | vesicle-associated membrane protein 3 (cellubrevin) | VAMP3 |
-| [<u>6845</u>](http://www.autophagy.lu/genes/6845) | vesicle-associated membrane protein 7 | VAMP7 |
-| [<u>7422</u>](http://www.autophagy.lu/genes/7422) | vascular endothelial growth factor A | VEGFA |
-| [<u>23001</u>](http://www.autophagy.lu/genes/23001) | WD repeat and FYVE domain containing 3 | WDFY3 |
-| [<u>11152</u>](http://www.autophagy.lu/genes/11152) | WD repeat domain 45 | WDR45 |
-| [<u>56270</u>](http://www.autophagy.lu/genes/56270) | WDR45-like | WDR45L |
-| [<u>55062</u>](http://www.autophagy.lu/genes/55062) | WD repeat domain, phosphoinositide interacting 1 | WIPI1 |
-| [<u>26100</u>](http://www.autophagy.lu/genes/26100) | WD repeat domain, phosphoinositide interacting 2 | WIPI2 |
-| [<u>53349</u>](http://www.autophagy.lu/genes/53349) | zinc finger, FYVE domain containing 1 | ZFYVE1 |
+| [55626](http://www.autophagy.lu/genes/55626) | autophagy/beclin-1 regulator 1 | AMBRA1 |
+| [8542](http://www.autophagy.lu/genes/8542) | apolipoprotein L, 1 | APOL1 |
+| [405](http://www.autophagy.lu/genes/405) | aryl hydrocarbon receptor nuclear translocator | ARNT |
+| [410](http://www.autophagy.lu/genes/410) | arylsulfatase A | ARSA |
+| [411](http://www.autophagy.lu/genes/411) | arylsulfatase B | ARSB |
+| [468](http://www.autophagy.lu/genes/468) | activating transcription factor 4 (tax-responsive enhancer element B67) | ATF4 |
+| [22926](http://www.autophagy.lu/genes/22926) | activating transcription factor 6 | ATF6 |
+| [83734](http://www.autophagy.lu/genes/83734) | ATG10 autophagy related 10 homolog (S. cerevisiae) | ATG10 |
+| [9140](http://www.autophagy.lu/genes/9140) | ATG12 autophagy related 12 homolog (S. cerevisiae) | ATG12 |
+| [55054](http://www.autophagy.lu/genes/55054) | ATG16 autophagy related 16-like 1 (S. cerevisiae) | ATG16L1 |
+| [89849](http://www.autophagy.lu/genes/89849) | ATG16 autophagy related 16-like 2 (S. cerevisiae) | ATG16L2 |
+| [23130](http://www.autophagy.lu/genes/23130) | ATG2 autophagy related 2 homolog A (S. cerevisiae) | ATG2A |
+| [55102](http://www.autophagy.lu/genes/55102) | ATG2 autophagy related 2 homolog B (S. cerevisiae) | ATG2B |
+| [64422](http://www.autophagy.lu/genes/64422) | ATG3 autophagy related 3 homolog (S. cerevisiae) | ATG3 |
+| [115201](http://www.autophagy.lu/genes/115201) | ATG4 autophagy related 4 homolog A (S. cerevisiae) | ATG4A |
+| [23192](http://www.autophagy.lu/genes/23192) | ATG4 autophagy related 4 homolog B (S. cerevisiae) | ATG4B |
+| [84938](http://www.autophagy.lu/genes/84938) | ATG4 autophagy related 4 homolog C (S. cerevisiae) | ATG4C |
+| [84971](http://www.autophagy.lu/genes/84971) | ATG4 autophagy related 4 homolog D (S. cerevisiae) | ATG4D |
+| [9474](http://www.autophagy.lu/genes/9474) | ATG5 autophagy related 5 homolog (S. cerevisiae) | ATG5 |
+| [10533](http://www.autophagy.lu/genes/10533) | ATG7 autophagy related 7 homolog (S. cerevisiae) | ATG7 |
+| [79065](http://www.autophagy.lu/genes/79065) | ATG9 autophagy related 9 homolog A (S. cerevisiae) | ATG9A |
+| [285973](http://www.autophagy.lu/genes/285973) | ATG9 autophagy related 9 homolog B (S. cerevisiae) | ATG9B |
+| [471](http://www.autophagy.lu/genes/471) | 5-aminoimidazole-4-carboxamide ribonucleotide formyltransferase/IMP cyclohydrolase | ATIC |
+| [573](http://www.autophagy.lu/genes/573) | BCL2-associated athanogene | BAG1 |
+| [9531](http://www.autophagy.lu/genes/9531) | BCL2-associated athanogene 3 | BAG3 |
+| [578](http://www.autophagy.lu/genes/578) | BCL2-antagonist/killer 1 | BAK1 |
+| [581](http://www.autophagy.lu/genes/581) | BCL2-associated X protein | BAX |
+| [596](http://www.autophagy.lu/genes/596) | B-cell CLL/lymphoma 2 | BCL2 |
+| [598](http://www.autophagy.lu/genes/598) | BCL2-like 1 | BCL2L1 |
+| [8678](http://www.autophagy.lu/genes/8678) | beclin 1, autophagy related | BECN1 |
+| [637](http://www.autophagy.lu/genes/637) | BH3 interacting domain death agonist | BID |
+| [332](http://www.autophagy.lu/genes/332) | baculoviral IAP repeat-containing 5 | BIRC5 |
+| [57448](http://www.autophagy.lu/genes/57448) | baculoviral IAP repeat-containing 6 | BIRC6 |
+| [662](http://www.autophagy.lu/genes/662) | BCL2/adenovirus E1B 19kDa interacting protein 1 | BNIP1 |
+| [664](http://www.autophagy.lu/genes/664) | BCL2/adenovirus E1B 19kDa interacting protein 3 | BNIP3 |
+| [665](http://www.autophagy.lu/genes/665) | BCL2/adenovirus E1B 19kDa interacting protein 3-like | BNIP3L |
+| [60673](http://www.autophagy.lu/genes/60673) | chromosome 12 open reading frame 44 | C12orf44 |
+| [23591](http://www.autophagy.lu/genes/23591) | chromosome 17 open reading frame 88 | C17orf88 |
+| [10241](http://www.autophagy.lu/genes/10241) | calcium binding and coiled-coil domain 2 | CALCOCO2 |
+| [10645](http://www.autophagy.lu/genes/10645) | calcium/calmodulin-dependent protein kinase kinase 2, beta | CAMKK2 |
+| [821](http://www.autophagy.lu/genes/821) | calnexin | CANX |
+| [823](http://www.autophagy.lu/genes/823) | calpain 1, (mu/I) large subunit | CAPN1 |
+| [11132](http://www.autophagy.lu/genes/11132) | calpain 10 | CAPN10 |
+| [824](http://www.autophagy.lu/genes/824) | calpain 2, (m/II) large subunit | CAPN2 |
+| [826](http://www.autophagy.lu/genes/826) | calpain, small subunit 1 | CAPNS1 |
+| [834](http://www.autophagy.lu/genes/834) | caspase 1, apoptosis-related cysteine peptidase (interleukin 1, beta, convertase) | CASP1 |
+| [836](http://www.autophagy.lu/genes/836) | caspase 3, apoptosis-related cysteine peptidase | CASP3 |
+| [837](http://www.autophagy.lu/genes/837) | caspase 4, apoptosis-related cysteine peptidase | CASP4 |
+| [841](http://www.autophagy.lu/genes/841) | caspase 8, apoptosis-related cysteine peptidase | CASP8 |
+| [6347](http://www.autophagy.lu/genes/6347) | chemokine (C-C motif) ligand 2 | CCL2 |
+| [729230](http://www.autophagy.lu/genes/729230) | chemokine (C-C motif) receptor 2 | CCR2 |
+| [4179](http://www.autophagy.lu/genes/4179) | CD46 molecule, complement regulatory protein | CD46 |
+| [1026](http://www.autophagy.lu/genes/1026) | cyclin-dependent kinase inhibitor 1A (p21, Cip1) | CDKN1A |
+| [1027](http://www.autophagy.lu/genes/1027) | cyclin-dependent kinase inhibitor 1B (p27, Kip1) | CDKN1B |
+| [1029](http://www.autophagy.lu/genes/1029) | cyclin-dependent kinase inhibitor 2A (melanoma, p16, inhibits CDK4) | CDKN2A |
+| [8837](http://www.autophagy.lu/genes/8837) | CASP8 and FADD-like apoptosis regulator | CFLAR |
+| [25978](http://www.autophagy.lu/genes/25978) | chromatin modifying protein 2B | CHMP2B |
+| [128866](http://www.autophagy.lu/genes/128866) | chromatin modifying protein 4B | CHMP4B |
+| [1201](http://www.autophagy.lu/genes/1201) | ceroid-lipofuscinosis, neuronal 3 | CLN3 |
+| [1508](http://www.autophagy.lu/genes/1508) | cathepsin B | CTSB |
+| [1509](http://www.autophagy.lu/genes/1509) | cathepsin D | CTSD |
+| [1514](http://www.autophagy.lu/genes/1514) | cathepsin L1 | CTSL1 |
+| [6376](http://www.autophagy.lu/genes/6376) | chemokine (C-X3-C motif) ligand 1 | CX3CL1 |
+| [7852](http://www.autophagy.lu/genes/7852) | chemokine (C-X-C motif) receptor 4 | CXCR4 |
+| [1612](http://www.autophagy.lu/genes/1612) | death-associated protein kinase 1 | DAPK1 |
+| [23604](http://www.autophagy.lu/genes/23604) | death-associated protein kinase 2 | DAPK2 |
+| [1649](http://www.autophagy.lu/genes/1649) | DNA-damage-inducible transcript 3 | DDIT3 |
+| [9077](http://www.autophagy.lu/genes/9077) | DIRAS family, GTP-binding RAS-like 3 | DIRAS3 |
+| [10395](http://www.autophagy.lu/genes/10395) | deleted in liver cancer 1 | DLC1 |
+| [3337](http://www.autophagy.lu/genes/3337) | DnaJ (Hsp40) homolog, subfamily B, member 1 | DNAJB1 |
+| [4189](http://www.autophagy.lu/genes/4189) | DnaJ (Hsp40) homolog, subfamily B, member 9 | DNAJB9 |
+| [55332](http://www.autophagy.lu/genes/55332) | DNA-damage regulated autophagy modulator 1 | DRAM1 |
+| [9695](http://www.autophagy.lu/genes/9695) | ER degradation enhancer, mannosidase alpha-like 1 | EDEM1 |
+| [1938](http://www.autophagy.lu/genes/1938) | eukaryotic translation elongation factor 2 | EEF2 |
+| [29904](http://www.autophagy.lu/genes/29904) | eukaryotic elongation factor-2 kinase | EEF2K |
+| [1956](http://www.autophagy.lu/genes/1956) | epidermal growth factor receptor (erythroblastic leukemia viral (v-erb-b) oncogene homolog, avian) | EGFR |
+| [5610](http://www.autophagy.lu/genes/5610) | eukaryotic translation initiation factor 2-alpha kinase 2 | EIF2AK2 |
+| [9451](http://www.autophagy.lu/genes/9451) | eukaryotic translation initiation factor 2-alpha kinase 3 | EIF2AK3 |
+| [1965](http://www.autophagy.lu/genes/1965) | eukaryotic translation initiation factor 2, subunit 1 alpha, 35kDa | EIF2S1 |
+| [1978](http://www.autophagy.lu/genes/1978) | eukaryotic translation initiation factor 4E binding protein 1 | EIF4EBP1 |
+| [1981](http://www.autophagy.lu/genes/1981) | eukaryotic translation initiation factor 4 gamma, 1 | EIF4G1 |
+| [2064](http://www.autophagy.lu/genes/2064) | v-erb-b2 erythroblastic leukemia viral oncogene homolog 2, neuro/glioblastoma derived oncogene homolog (avian) | ERBB2 |
+| [2081](http://www.autophagy.lu/genes/2081) | endoplasmic reticulum to nucleus signaling 1 | ERN1 |
+| [30001](http://www.autophagy.lu/genes/30001) | ERO1-like (S. cerevisiae) | ERO1L |
+| [8772](http://www.autophagy.lu/genes/8772) | Fas (TNFRSF6)-associated via death domain | FADD |
+| [55578](http://www.autophagy.lu/genes/55578) | family with sequence similarity 48, member A | FAM48A |
+| [355](http://www.autophagy.lu/genes/355) | Fas (TNF receptor superfamily, member 6) | FAS |
+| [2280](http://www.autophagy.lu/genes/2280) | FK506 binding protein 1A, 12kDa | FKBP1A |
+| [2281](http://www.autophagy.lu/genes/2281) | FK506 binding protein 1B, 12.6 kDa | FKBP1B |
+| [2353](http://www.autophagy.lu/genes/2353) | FBJ murine osteosarcoma viral oncogene homolog | FOS |
+| [2308](http://www.autophagy.lu/genes/2308) | forkhead box O1 | FOXO1 |
+| [2309](http://www.autophagy.lu/genes/2309) | forkhead box O3 | FOXO3 |
+| [2548](http://www.autophagy.lu/genes/2548) | glucosidase, alpha; acid | GAA |
+| [11337](http://www.autophagy.lu/genes/11337) | GABA(A) receptor-associated protein | GABARAP |
+| [23710](http://www.autophagy.lu/genes/23710) | GABA(A) receptor-associated protein like 1 | GABARAPL1 |
+| [11345](http://www.autophagy.lu/genes/11345) | GABA(A) receptor-associated protein-like 2 | GABARAPL2 |
+| [2597](http://www.autophagy.lu/genes/2597) | glyceraldehyde-3-phosphate dehydrogenase | GAPDH |
+| [2773](http://www.autophagy.lu/genes/2773) | guanine nucleotide binding protein (G protein), alpha inhibiting activity polypeptide 3 | GNAI3 |
+| [10399](http://www.autophagy.lu/genes/10399) | guanine nucleotide binding protein (G protein), beta polypeptide 2-like 1 | GNB2L1 |
+| [57120](http://www.autophagy.lu/genes/57120) | golgi-associated PDZ and coiled-coil motif containing | GOPC |
+| [2894](http://www.autophagy.lu/genes/2894) | glutamate receptor, ionotropic, delta 1 | GRID1 |
+| [2895](http://www.autophagy.lu/genes/2895) | glutamate receptor, ionotropic, delta 2 | GRID2 |
+| [3065](http://www.autophagy.lu/genes/3065) | histone deacetylase 1 | HDAC1 |
+| [10013](http://www.autophagy.lu/genes/10013) | histone deacetylase 6 | HDAC6 |
+| [9146](http://www.autophagy.lu/genes/9146) | hepatocyte growth factor-regulated tyrosine kinase substrate | HGS |
+| [3091](http://www.autophagy.lu/genes/3091) | hypoxia inducible factor 1, alpha subunit (basic helix-loop-helix transcription factor) | HIF1A |
+| [3326](http://www.autophagy.lu/genes/3326) | heat shock protein 90kDa alpha (cytosolic), class B member 1 | HSP90AB1 |
+| [3309](http://www.autophagy.lu/genes/3309) | heat shock 70kDa protein 5 (glucose-regulated protein, 78kDa) | HSPA5 |
+| [3312](http://www.autophagy.lu/genes/3312) | heat shock 70kDa protein 8 | HSPA8 |
+| [26353](http://www.autophagy.lu/genes/26353) | heat shock 22kDa protein 8 | HSPB8 |
+| [3458](http://www.autophagy.lu/genes/3458) | interferon, gamma | IFNG |
+| [3551](http://www.autophagy.lu/genes/3551) | inhibitor of kappa light polypeptide gene enhancer in B-cells, kinase beta | IKBKB |
+| [9641](http://www.autophagy.lu/genes/9641) | inhibitor of kappa light polypeptide gene enhancer in B-cells, kinase epsilon | IKBKE |
+| [11009](http://www.autophagy.lu/genes/11009) | interleukin 24 | IL24 |
+| [345611](http://www.autophagy.lu/genes/345611) | immunity-related GTPase family, M | IRGM |
+| [3675](http://www.autophagy.lu/genes/3675) | integrin, alpha 3 (antigen CD49C, alpha 3 subunit of VLA-3 receptor) | ITGA3 |
+| [3655](http://www.autophagy.lu/genes/3655) | integrin, alpha 6 | ITGA6 |
+| [3688](http://www.autophagy.lu/genes/3688) | integrin, beta 1 (fibronectin receptor, beta polypeptide, antigen CD29 includes MDF2, MSK12) | ITGB1 |
+| [3691](http://www.autophagy.lu/genes/3691) | integrin, beta 4 | ITGB4 |
+| [3708](http://www.autophagy.lu/genes/3708) | inositol 1,4,5-triphosphate receptor, type 1 | ITPR1 |
+| [2548](http://www.autophagy.lu/genes/2548) | glucosidase, alpha; acid | GAA |
+| [11337](http://www.autophagy.lu/genes/11337) | GABA(A) receptor-associated protein | GABARAP |
+| [23710](http://www.autophagy.lu/genes/23710) | GABA(A) receptor-associated protein like 1 | GABARAPL1 |
+| [11345](http://www.autophagy.lu/genes/11345) | GABA(A) receptor-associated protein-like 2 | GABARAPL2 |
+| [2597](http://www.autophagy.lu/genes/2597) | glyceraldehyde-3-phosphate dehydrogenase | GAPDH |
+| [2773](http://www.autophagy.lu/genes/2773) | guanine nucleotide binding protein (G protein), alpha inhibiting activity polypeptide 3 | GNAI3 |
+| [10399](http://www.autophagy.lu/genes/10399) | guanine nucleotide binding protein (G protein), beta polypeptide 2-like 1 | GNB2L1 |
+| [57120](http://www.autophagy.lu/genes/57120) | golgi-associated PDZ and coiled-coil motif containing | GOPC |
+| [2894](http://www.autophagy.lu/genes/2894) | glutamate receptor, ionotropic, delta 1 | GRID1 |
+| [2895](http://www.autophagy.lu/genes/2895) | glutamate receptor, ionotropic, delta 2 | GRID2 |
+| [9711](http://www.autophagy.lu/genes/9711) | KIAA0226 | KIAA0226 |
+| [9776](http://www.autophagy.lu/genes/9776) | KIAA0652 | KIAA0652 |
+| [22863](http://www.autophagy.lu/genes/22863) | KIAA0831 | KIAA0831 |
+| [3799](http://www.autophagy.lu/genes/3799) | kinesin family member 5B | KIF5B |
+| [54800](http://www.autophagy.lu/genes/54800) | kelch-like 24 (Drosophila) | KLHL24 |
+| [3916](http://www.autophagy.lu/genes/3916) | lysosomal-associated membrane protein 1 | LAMP1 |
+| [3920](http://www.autophagy.lu/genes/3920) | lysosomal-associated membrane protein 2 | LAMP2 |
+| [84557](http://www.autophagy.lu/genes/84557) | microtubule-associated protein 1 light chain 3 alpha | MAP1LC3A |
+| [81631](http://www.autophagy.lu/genes/81631) | microtubule-associated protein 1 light chain 3 beta | MAP1LC3B |
+| [440738](http://www.autophagy.lu/genes/440738) | microtubule-associated protein 1 light chain 3 gamma | MAP1LC3C |
+| [5609](http://www.autophagy.lu/genes/5609) | mitogen-activated protein kinase kinase 7 | MAP2K7 |
+| [5594](http://www.autophagy.lu/genes/5594) | mitogen-activated protein kinase 1 | MAPK1 |
+| [5595](http://www.autophagy.lu/genes/5595) | mitogen-activated protein kinase 3 | MAPK3 |
+| [5599](http://www.autophagy.lu/genes/5599) | mitogen-activated protein kinase 8 | MAPK8 |
+| [9479](http://www.autophagy.lu/genes/9479) | mitogen-activated protein kinase 8 interacting protein 1 | MAPK8IP1 |
+| [5601](http://www.autophagy.lu/genes/5601) | mitogen-activated protein kinase 9 | MAPK9 |
+| [51360](http://www.autophagy.lu/genes/51360) | membrane-bound transcription factor peptidase, site 2 | MBTPS2 |
+| [64223](http://www.autophagy.lu/genes/64223) | MTOR associated protein, LST8 homolog (S. cerevisiae) | MLST8 |
+| [64419](http://www.autophagy.lu/genes/64419) | myotubularin related protein 14 | MTMR14 |
+| [2475](http://www.autophagy.lu/genes/2475) | mechanistic target of rapamycin (serine/threonine kinase) | MTOR |
+| [4609](http://www.autophagy.lu/genes/4609) | v-myc myelocytomatosis viral oncogene homolog (avian) | MYC |
+| [92345](http://www.autophagy.lu/genes/92345) | nuclear assembly factor 1 homolog (S. cerevisiae) | NAF1 |
+| [10135](http://www.autophagy.lu/genes/10135) | nicotinamide phosphoribosyltransferase | NAMPT |
+| [4077](http://www.autophagy.lu/genes/4077) | neighbor of BRCA1 gene 1 | NBR1 |
+| [10787](http://www.autophagy.lu/genes/10787) | NCK-associated protein 1 | NCKAP1 |
+| [4780](http://www.autophagy.lu/genes/4780) | nuclear factor (erythroid-derived 2)-like 2 | NFE2L2 |
+| [4790](http://www.autophagy.lu/genes/4790) | nuclear factor of kappa light polypeptide gene enhancer in B-cells 1 | NFKB1 |
+| [159296](http://www.autophagy.lu/genes/159296) | NK2 transcription factor related, locus 3 (Drosophila) | NKX2-3 |
+| [58484](http://www.autophagy.lu/genes/58484) | NLR family, CARD domain containing 4 | NLRC4 |
+| [4864](http://www.autophagy.lu/genes/4864) | Niemann-Pick disease, type C1 | NPC1 |
+| [3084](http://www.autophagy.lu/genes/3084) | neuregulin 1 | NRG1 |
+| [9542](http://www.autophagy.lu/genes/9542) | neuregulin 2 | NRG2 |
+| [10718](http://www.autophagy.lu/genes/10718) | neuregulin 3 | NRG3 |
+| [5034](http://www.autophagy.lu/genes/5034) | prolyl 4-hydroxylase, beta polypeptide | P4HB |
+| [5071](http://www.autophagy.lu/genes/5071) | Parkinson disease (autosomal recessive, juvenile) 2, parkin | PARK2 |
+| [142](http://www.autophagy.lu/genes/142) | poly (ADP-ribose) polymerase 1 | PARP1 |
+| [8682](http://www.autophagy.lu/genes/8682) | phosphoprotein enriched in astrocytes 15 | PEA15 |
+| [27043](http://www.autophagy.lu/genes/27043) | proline, glutamate and leucine rich protein 1 | PELP1 |
+| [5195](http://www.autophagy.lu/genes/5195) | peroxisomal biogenesis factor 14 | PEX14 |
+| [8504](http://www.autophagy.lu/genes/8504) | peroxisomal biogenesis factor 3 | PEX3 |
+| [5289](http://www.autophagy.lu/genes/5289) | phosphoinositide-3-kinase, class 3 | PIK3C3 |
+| [30849](http://www.autophagy.lu/genes/30849) | phosphoinositide-3-kinase, regulatory subunit 4 | PIK3R4 |
+| [65018](http://www.autophagy.lu/genes/65018) | PTEN induced putative kinase 1 | PINK1 |
+| [23645](http://www.autophagy.lu/genes/23645) | protein phosphatase 1, regulatory (inhibitor) subunit 15A | PPP1R15A |
+| [5564](http://www.autophagy.lu/genes/5564) | protein kinase, AMP-activated, beta 1 non-catalytic subunit | PRKAB1 |
+| [5573](http://www.autophagy.lu/genes/5573) | protein kinase, cAMP-dependent, regulatory, type I, alpha (tissue specific extinguisher 1) | PRKAR1A |
+| [5580](http://www.autophagy.lu/genes/5580) | protein kinase C, delta | PRKCD |
+| [5588](http://www.autophagy.lu/genes/5588) | protein kinase C, theta | PRKCQ |
+| [5728](http://www.autophagy.lu/genes/5728) | phosphatase and tensin homolog | PTEN |
+| [5753](http://www.autophagy.lu/genes/5753) | PTK6 protein tyrosine kinase 6 | PTK6 |
+| [8766](http://www.autophagy.lu/genes/8766) | RAB11A, member RAS oncogene family | RAB11A |
+| [5861](http://www.autophagy.lu/genes/5861) | RAB1A, member RAS oncogene family | RAB1A |
+| [53917](http://www.autophagy.lu/genes/53917) | RAB24, member RAS oncogene family | RAB24 |
+| [83452](http://www.autophagy.lu/genes/83452) | RAB33B, member RAS oncogene family | RAB33B |
+| [5868](http://www.autophagy.lu/genes/5868) | RAB5A, member RAS oncogene family | RAB5A |
+| [7879](http://www.autophagy.lu/genes/7879) | RAB7A, member RAS oncogene family | RAB7A |
+| [5879](http://www.autophagy.lu/genes/5879) | ras-related C3 botulinum toxin substrate 1 (rho family, small GTP binding protein Rac1) | RAC1 |
+| [5894](http://www.autophagy.lu/genes/5894) | v-raf-1 murine leukemia viral oncogene homolog 1 | RAF1 |
+| [5925](http://www.autophagy.lu/genes/5925) | retinoblastoma 1 | RB1 |
+| [9821](http://www.autophagy.lu/genes/9821) | RB1-inducible coiled-coil 1 | RB1CC1 |
+| [5970](http://www.autophagy.lu/genes/5970) | v-rel reticuloendotheliosis viral oncogene homolog A (avian) | RELA |
+| [10287](http://www.autophagy.lu/genes/10287) | regulator of G-protein signaling 19 | RGS19 |
+| [6009](http://www.autophagy.lu/genes/6009) | Ras homolog enriched in brain | RHEB |
+| [6198](http://www.autophagy.lu/genes/6198) | ribosomal protein S6 kinase, 70kDa, polypeptide 1 | RPS6KB1 |
+| [57521](http://www.autophagy.lu/genes/57521) | regulatory associated protein of MTOR, complex 1 | RPTOR |
+| [56681](http://www.autophagy.lu/genes/56681) | SAR1 homolog A (S. cerevisiae) | SAR1A |
+| [5265](http://www.autophagy.lu/genes/5265) | serpin peptidase inhibitor, clade A (alpha-1 antiproteinase, antitrypsin), member 1 | SERPINA1 |
+| [83667](http://www.autophagy.lu/genes/83667) | sestrin 2 | SESN2 |
+| [51100](http://www.autophagy.lu/genes/51100) | SH3-domain GRB2-like endophilin B1 | SH3GLB1 |
+| [23411](http://www.autophagy.lu/genes/23411) | sirtuin (silent mating type information regulation 2 homolog) 1 (S. cerevisiae) | SIRT1 |
+| [22933](http://www.autophagy.lu/genes/22933) | sirtuin (silent mating type information regulation 2 homolog) 2 (S. cerevisiae) | SIRT2 |
+| [8877](http://www.autophagy.lu/genes/8877) | sphingosine kinase 1 | SPHK1 |
+| [83985](http://www.autophagy.lu/genes/83985) | spinster homolog 1 (Drosophila) | SPNS1 |
+| [8878](http://www.autophagy.lu/genes/8878) | sequestosome 1 | SQSTM1 |
+| [6767](http://www.autophagy.lu/genes/6767) | suppression of tumorigenicity 13 (colon carcinoma) (Hsp70 interacting protein) | ST13 |
+| [6794](http://www.autophagy.lu/genes/6794) | serine/threonine kinase 11 | STK11 |
+| [29110](http://www.autophagy.lu/genes/29110) | TANK-binding kinase 1 | TBK1 |
+| [10548](http://www.autophagy.lu/genes/10548) | transmembrane 9 superfamily member 1 | TM9SF1 |
+| [81671](http://www.autophagy.lu/genes/81671) | transmembrane protein 49 | TMEM49 |
+| [157753](http://www.autophagy.lu/genes/157753) | transmembrane protein 74 | TMEM74 |
+| [8743](http://www.autophagy.lu/genes/8743) | tumor necrosis factor (ligand) superfamily, member 10 | TNFSF10 |
+| [7157](http://www.autophagy.lu/genes/7157) | tumor protein p53 | TP53 |
+| [58476](http://www.autophagy.lu/genes/58476) | tumor protein p53 inducible nuclear protein 2 | TP53INP2 |
+| [8626](http://www.autophagy.lu/genes/8626) | tumor protein p63 | TP63 |
+| [7161](http://www.autophagy.lu/genes/7161) | tumor protein p73 | TP73 |
+| [7248](http://www.autophagy.lu/genes/7248) | tuberous sclerosis 1 | TSC1 |
+| [7249](http://www.autophagy.lu/genes/7249) | tuberous sclerosis 2 | TSC2 |
+| [286319](http://www.autophagy.lu/genes/286319) | tumor suppressor candidate 1 | TUSC1 |
+| [8408](http://www.autophagy.lu/genes/8408) | unc-51-like kinase 1 (C. elegans) | ULK1 |
+| [9706](http://www.autophagy.lu/genes/9706) | unc-51-like kinase 2 (C. elegans) | ULK2 |
+| [25989](http://www.autophagy.lu/genes/25989) | unc-51-like kinase 3 (C. elegans) | ULK3 |
+| [9100](http://www.autophagy.lu/genes/9100) | ubiquitin specific peptidase 10 | USP10 |
+| [7405](http://www.autophagy.lu/genes/7405) | UV radiation resistance associated gene | UVRAG |
+| [9341](http://www.autophagy.lu/genes/9341) | vesicle-associated membrane protein 3 (cellubrevin) | VAMP3 |
+| [6845](http://www.autophagy.lu/genes/6845) | vesicle-associated membrane protein 7 | VAMP7 |
+| [7422](http://www.autophagy.lu/genes/7422) | vascular endothelial growth factor A | VEGFA |
+| [23001](http://www.autophagy.lu/genes/23001) | WD repeat and FYVE domain containing 3 | WDFY3 |
+| [11152](http://www.autophagy.lu/genes/11152) | WD repeat domain 45 | WDR45 |
+| [56270](http://www.autophagy.lu/genes/56270) | WDR45-like | WDR45L |
+| [55062](http://www.autophagy.lu/genes/55062) | WD repeat domain, phosphoinositide interacting 1 | WIPI1 |
+| [26100](http://www.autophagy.lu/genes/26100) | WD repeat domain, phosphoinositide interacting 2 | WIPI2 |
+| [53349](http://www.autophagy.lu/genes/53349) | zinc finger, FYVE domain containing 1 | ZFYVE1 |
 ```plain
 AMBRA1
 APOL1
@@ -634,134 +634,134 @@ WIPI2
 ZFYVE1
 ```
 
-来自于：[<u>https://www.genecards.org/</u>](https://www.genecards.org/)  检索结果筛选
+来自于：[https://www.genecards.org/](https://www.genecards.org/)  检索结果筛选
 
-自噬相关基因：[<u>https://docs.qq.com/sheet/DTGxMQmtxcXJZcFhF?c=K18A0A0</u>](https://docs.qq.com/sheet/DTGxMQmtxcXJZcFhF?c=K18A0A0)
+自噬相关基因：[https://docs.qq.com/sheet/DTGxMQmtxcXJZcFhF?c=K18A0A0](https://docs.qq.com/sheet/DTGxMQmtxcXJZcFhF?c=K18A0A0)
 
-来自网站：[<u>http://thanatos.biocuckoo.org/result.php?type=simple</u>](http://thanatos.biocuckoo.org/result.php?type=simple)
+来自网站：[http://thanatos.biocuckoo.org/result.php?type=simple](http://thanatos.biocuckoo.org/result.php?type=simple)
 
 | 条目 | 基因 | 物种 |
 | :--- | :--- | :--- |
-| [<u>ANA-HSA-111744</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111744) | ULK1; KIAA0722 | Homo sapiens (human) |
-| [<u>ANA-HSA-113275</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113275) | C9orf72 | Homo sapiens (human) |
-| [<u>ANA-HSA-112794</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112794) | ATG10; APG10L; PP12616 | Homo sapiens (human) |
-| [<u>ANA-HSA-110991</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-110991) | MAPK14; CSBP; CSBP1; CSBP2; CSPB1; MXI2; SAPK2A | Homo sapiens (human) |
-| [<u>ANA-HSA-110887</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-110887) | SNAP29 | Homo sapiens (human) |
-| [<u>ANA-HSA-111606</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111606) | RAB33B | Homo sapiens (human) |
-| [<u>ANA-HSA-111620</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111620) | RPTOR; KIAA1303; RAPTOR | Homo sapiens (human) |
-| [<u>ANA-HSA-112381</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112381) | OPTN; FIP2; GLC1E; HIP7; HYPL; NRP | Homo sapiens (human) |
-| [<u>ANA-HSA-112130</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112130) | UBQLN4; C1orf6; CIP75; UBIN | Homo sapiens (human) |
-| [<u>ANA-HSA-113294</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113294) | DAPK1; DAPK | Homo sapiens (human) |
-| [<u>ANA-HSA-113255</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113255) | PRKAA2; AMPK; AMPK2 | Homo sapiens (human) |
-| [<u>ANA-HSA-112293</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112293) | PINK1 | Homo sapiens (human) |
-| [<u>ANA-HSA-111438</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111438) | WIPI2; CGI-50 | Homo sapiens (human) |
-| [<u>ANA-HSA-113305</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113305) | WDR6 | Homo sapiens (human) |
-| [<u>ANA-HSA-111205</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111205) | WIPI1; WIPI49 | Homo sapiens (human) |
-| [<u>ANA-HSA-111523</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111523) | LRRK2; PARK8 | Homo sapiens (human) |
-| [<u>ANA-HSA-112937</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112937) | IRGM; IFI1; IRGM1; LRG47 | Homo sapiens (human) |
-| [<u>ANA-HSA-113298</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113298) | EI24; PIG8 | Homo sapiens (human) |
-| [<u>ANA-HSA-111594</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111594) | TMEM208; HSPC171 | Homo sapiens (human) |
-| [<u>ANA-HSA-112135</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112135) | GOPC; CAL; FIG | Homo sapiens (human) |
-| [<u>ANA-HSA-112152</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112152) | ATG5; APG5L; ASP | Homo sapiens (human) |
-| [<u>ANA-HSA-112358</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112358) | PARK7 | Homo sapiens (human) |
-| [<u>ANA-HSA-110859</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-110859) | RB1CC1; KIAA0203; RBICC | Homo sapiens (human) |
-| [<u>ANA-HSA-112997</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112997) | DRAM2; TMEM77; PSEC0031; UNQ154/PRO180 | Homo sapiens (human) |
-| [<u>ANA-HSA-112682</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112682) | TMBIM6; BI1; TEGT | Homo sapiens (human) |
-| [<u>ANA-HSA-112475</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112475) | SQSTM1; ORCA; OSIL | Homo sapiens (human) |
-| [<u>ANA-HSA-113109</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113109) | ULK3 | Homo sapiens (human) |
-| [<u>ANA-HSA-112177</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112177) | VMA21; MEAX; XMEA | Homo sapiens (human) |
-| [<u>ANA-HSA-111927</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111927) | TP53INP1; P53DINP1; SIP | Homo sapiens (human) |
-| [<u>ANA-HSA-112145</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112145) | S100A9; CAGB; CFAG; MRP14 | Homo sapiens (human) |
-| [<u>ANA-HSA-110940</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-110940) | RASIP1 | Homo sapiens (human) |
-| [<u>ANA-HSA-113308</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113308) | WASH1; FAM39E | Homo sapiens (human) |
-| [<u>ANA-HSA-111316</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111316) | FBXO7; FBX7 | Homo sapiens (human) |
-| [<u>ANA-HSA-111972</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111972) | UVRAG | Homo sapiens (human) |
-| [<u>ANA-HSA-111950</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111950) | KIF25; KNSL3 | Homo sapiens (human) |
-| [<u>ANA-HSA-112974</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112974) | STX17 | Homo sapiens (human) |
-| [<u>ANA-HSA-111520</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111520) | DEPP; C10orf10; FIG | Homo sapiens (human) |
-| [<u>ANA-HSA-112288</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112288) | MAP1LC3A | Homo sapiens (human) |
-| [<u>ANA-HSA-111264</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111264) | VAMP8 | Homo sapiens (human) |
-| [<u>ANA-HSA-112325</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112325) | WDR45; WDRX1; WDRXI4; WIPI4; JM5 | Homo sapiens (human) |
-| [<u>ANA-HSA-112744</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112744) | CALCOCO2; NDP52 | Homo sapiens (human) |
-| [<u>ANA-HSA-111654</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111654) | ATG4D; APG4D; AUTL4 | Homo sapiens (human) |
-| [<u>ANA-HSA-112350</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112350) | ATG2A; KIAA0404 | Homo sapiens (human) |
-| [<u>ANA-HSA-111783</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111783) | TBK1; NAK | Homo sapiens (human) |
-| [<u>ANA-HSA-112538</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112538) | ULK2; KIAA0623 | Homo sapiens (human) |
-| [<u>ANA-HSA-112886</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112886) | FBXL2; FBL2; FBL3 | Homo sapiens (human) |
-| [<u>ANA-HSA-112965</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112965) | ATG13; KIAA0652 | Homo sapiens (human) |
-| [<u>ANA-HSA-112328</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112328) | PIM2 | Homo sapiens (human) |
-| [<u>ANA-HSA-112738</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112738) | COPB1; COPB; MSTP026 | Homo sapiens (human) |
-| [<u>ANA-HSA-112194</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112194) | ATG4C; APG4C; AUTL1; AUTL3 | Homo sapiens (human) |
-| [<u>ANA-HSA-111695</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111695) | TLK2 | Homo sapiens (human) |
-| [<u>ANA-HSA-112034</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112034) | ATG2B; C14orf103 | Homo sapiens (human) |
-| [<u>ANA-HSA-112409</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112409) | TRIM5; RNF88 | Homo sapiens (human) |
-| [<u>ANA-HSA-111948</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111948) | PRKAA1; AMPK1 | Homo sapiens (human) |
-| [<u>ANA-HSA-112015</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112015) | VCP | Homo sapiens (human) |
-| [<u>ANA-HSA-112913</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112913) | CISD2; CDGSH2; ERIS; ZCD2 | Homo sapiens (human) |
-| [<u>ANA-HSA-111666</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111666) | LEP; OB; OBS | Homo sapiens (human) |
-| [<u>ANA-HSA-111063</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111063) | ATG14; ATG14L; KIAA0831 | Homo sapiens (human) |
-| [<u>ANA-HSA-111936</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111936) | UBQLN2; N4BP4; PLIC2; HRIHFB2157 | Homo sapiens (human) |
-| [<u>ANA-HSA-110861</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-110861) | GABARAPL2; FLC3A; GEF2 | Homo sapiens (human) |
-| [<u>ANA-HSA-110884</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-110884) | SIRT1; SIR2L1 | Homo sapiens (human) |
-| [<u>ANA-HSA-113338</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113338) | SIRT2; SIR2L; SIR2L2 | Homo sapiens (human) |
-| [<u>ANA-HSA-112870</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112870) | AMBRA1; KIAA1736 | Homo sapiens (human) |
-| [<u>ANA-HSA-111016</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111016) | TMEM59; C1orf8; HSPC001; UNQ169/PRO195 | Homo sapiens (human) |
-| [<u>ANA-HSA-112057</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112057) | MTOR; FRAP; FRAP1; FRAP2; RAFT1; RAPT1 | Homo sapiens (human) |
-| [<u>ANA-HSA-112781</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112781) | TBC1D5; KIAA0210 | Homo sapiens (human) |
-| [<u>ANA-HSA-111333</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111333) | MAP1LC3B; MAP1ALC3 | Homo sapiens (human) |
-| [<u>ANA-HSA-112712</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112712) | GPSM1; AGS3 | Homo sapiens (human) |
-| [<u>ANA-HSA-111748</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111748) | STK11; LKB1; PJS | Homo sapiens (human) |
-| [<u>ANA-HSA-111007</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111007) | EVA1A; FAM176A; TMEM166; SP24 | Homo sapiens (human) |
-| [<u>ANA-HSA-112170</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112170) | KIAA1324; EIG121; UNQ2426/PRO4985 | Homo sapiens (human) |
-| [<u>ANA-HSA-112663</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112663) | CLEC16A; KIAA0350 | Homo sapiens (human) |
-| [<u>ANA-HSA-111994</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111994) | MAP1LC3C | Homo sapiens (human) |
-| [<u>ANA-HSA-112032</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112032) | PTPN22; PTPN8 | Homo sapiens (human) |
-| [<u>ANA-HSA-111485</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111485) | WDFY3; KIAA0993 | Homo sapiens (human) |
-| [<u>ANA-HSA-111516</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111516) | TMEM74 | Homo sapiens (human) |
-| [<u>ANA-HSA-112326</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112326) | UBQLN1; DA41; PLIC1 | Homo sapiens (human) |
-| [<u>ANA-HSA-112224</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112224) | ABL1; ABL; JTK7 | Homo sapiens (human) |
-| [<u>ANA-HSA-112317</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112317) | ACBD5; KIAA1996 | Homo sapiens (human) |
-| [<u>ANA-HSA-113152</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113152) | STAT3; APRF | Homo sapiens (human) |
-| [<u>ANA-HSA-111410</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111410) | ATG3; APG3; APG3L | Homo sapiens (human) |
-| [<u>ANA-HSA-112086</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112086) | PARK2; PRKN | Homo sapiens (human) |
-| [<u>ANA-HSA-113175</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113175) | FNBP1L; C1orf39; TOCA1 | Homo sapiens (human) |
-| [<u>ANA-HSA-113332</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113332) | BECN2; BECN1L1; BECN1P1 | Homo sapiens (human) |
-| [<u>ANA-HSA-111484</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111484) | IFI16; IFNGIP1 | Homo sapiens (human) |
-| [<u>ANA-HSA-113228</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113228) | ATG9B; APG9L2; NOS3AS | Homo sapiens (human) |
-| [<u>ANA-HSA-111732</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111732) | PHF23 | Homo sapiens (human) |
-| [<u>ANA-HSA-113318</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113318) | ATG16L1; APG16L; UNQ9393/PRO34307 | Homo sapiens (human) |
-| [<u>ANA-HSA-112144</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112144) | S100A8; CAGA; CFAG; MRP8 | Homo sapiens (human) |
-| [<u>ANA-HSA-112072</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112072) | ATG9A; APG9L1 | Homo sapiens (human) |
-| [<u>ANA-HSA-111924</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111924) | TFEB; BHLHE35 | Homo sapiens (human) |
-| [<u>ANA-HSA-111494</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111494) | RUBCN; KIAA0226 | Homo sapiens (human) |
-| [<u>ANA-HSA-112718</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112718) | DAP; DAP1 | Homo sapiens (human) |
-| [<u>ANA-HSA-111613</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111613) | GABARAP; FLC3B; HT004 | Homo sapiens (human) |
-| [<u>ANA-HSA-113137</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113137) | BECN1; GT197 | Homo sapiens (human) |
-| [<u>ANA-HSA-112621</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112621) | ATG4B; APG4B; AUTL1; KIAA0943 | Homo sapiens (human) |
-| [<u>ANA-HSA-111397</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111397) | EPG5; KIAA1632 | Homo sapiens (human) |
-| [<u>ANA-HSA-110935</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-110935) | TBC1D17 | Homo sapiens (human) |
-| [<u>ANA-HSA-111958</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111958) | WAC; KIAA1844 | Homo sapiens (human) |
-| [<u>ANA-HSA-112933</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112933) | RNF185 | Homo sapiens (human) |
-| [<u>ANA-HSA-113189</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113189) | SCOC; SCOCO; HRIHFB2072 | Homo sapiens (human) |
-| [<u>ANA-HSA-113089</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113089) | DAPK2 | Homo sapiens (human) |
-| [<u>ANA-HSA-112977</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112977) | TM9SF1 | Homo sapiens (human) |
-| [<u>ANA-HSA-111145</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111145) | DRAM1; DRAM | Homo sapiens (human) |
-| [<u>ANA-HSA-113229</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113229) | SH3GLB1; KIAA0491; CGI-61 | Homo sapiens (human) |
-| [<u>ANA-HSA-112793</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112793) | TECPR1; KIAA1358 | Homo sapiens (human) |
-| [<u>ANA-HSA-111952</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111952) | ATG7; APG7L | Homo sapiens (human) |
-| [<u>ANA-HSA-112606</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112606) | HMGB1; HMG1 | Homo sapiens (human) |
-| [<u>ANA-HSA-111543</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111543) | DAPK3; ZIPK | Homo sapiens (human) |
-| [<u>ANA-HSA-111971</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111971) | TRIM13; LEU5; RFP2; RNF77 | Homo sapiens (human) |
-| [<u>ANA-HSA-111865</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111865) | ATG101; C12orf44; PP894 | Homo sapiens (human) |
-| [<u>ANA-HSA-112028</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112028) | TECPR2; KIAA0297; KIAA0329 | Homo sapiens (human) |
-| [<u>ANA-HSA-111441</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111441) | PIK3CB; PIK3C1 | Homo sapiens (human) |
-| [<u>ANA-HSA-112539</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112539) | MAPK8; JNK1; PRKM8; SAPK1; SAPK1C | Homo sapiens (human) |
-| [<u>ANA-HSA-112219</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112219) | ATG4A; APG4A; AUTL2 | Homo sapiens (human) |
-| [<u>ANA-HSA-111090</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111090) | ZKSCAN3; ZFP47; ZNF306; ZNF309; ZSCAN13 | Homo sapiens (human) |
-| [<u>ANA-HSA-112070</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112070) | CDKN2A; CDKN2; MLM | Homo sapiens (human) |
-| [<u>ANA-HSA-112287</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112287) | TP53INP2; C20orf110; DOR; PINH | Homo sapiens (human) |
-| [<u>ANA-HSA-112878</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112878) | MFN2; CPRP1; KIAA0214 | Homo sapiens (human) |
-| [<u>ANA-HSA-112885</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112885) | SUPT20H; C13orf19; FAM48A; FP757 | Homo sapiens (human) |
-| [<u>ANA-HSA-112919</u>](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112919) | ATG12; APG12; APG12L | Homo sapiens (human) |
+| [ANA-HSA-111744](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111744) | ULK1; KIAA0722 | Homo sapiens (human) |
+| [ANA-HSA-113275](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113275) | C9orf72 | Homo sapiens (human) |
+| [ANA-HSA-112794](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112794) | ATG10; APG10L; PP12616 | Homo sapiens (human) |
+| [ANA-HSA-110991](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-110991) | MAPK14; CSBP; CSBP1; CSBP2; CSPB1; MXI2; SAPK2A | Homo sapiens (human) |
+| [ANA-HSA-110887](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-110887) | SNAP29 | Homo sapiens (human) |
+| [ANA-HSA-111606](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111606) | RAB33B | Homo sapiens (human) |
+| [ANA-HSA-111620](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111620) | RPTOR; KIAA1303; RAPTOR | Homo sapiens (human) |
+| [ANA-HSA-112381](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112381) | OPTN; FIP2; GLC1E; HIP7; HYPL; NRP | Homo sapiens (human) |
+| [ANA-HSA-112130](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112130) | UBQLN4; C1orf6; CIP75; UBIN | Homo sapiens (human) |
+| [ANA-HSA-113294](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113294) | DAPK1; DAPK | Homo sapiens (human) |
+| [ANA-HSA-113255](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113255) | PRKAA2; AMPK; AMPK2 | Homo sapiens (human) |
+| [ANA-HSA-112293](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112293) | PINK1 | Homo sapiens (human) |
+| [ANA-HSA-111438](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111438) | WIPI2; CGI-50 | Homo sapiens (human) |
+| [ANA-HSA-113305](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113305) | WDR6 | Homo sapiens (human) |
+| [ANA-HSA-111205](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111205) | WIPI1; WIPI49 | Homo sapiens (human) |
+| [ANA-HSA-111523](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111523) | LRRK2; PARK8 | Homo sapiens (human) |
+| [ANA-HSA-112937](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112937) | IRGM; IFI1; IRGM1; LRG47 | Homo sapiens (human) |
+| [ANA-HSA-113298](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113298) | EI24; PIG8 | Homo sapiens (human) |
+| [ANA-HSA-111594](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111594) | TMEM208; HSPC171 | Homo sapiens (human) |
+| [ANA-HSA-112135](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112135) | GOPC; CAL; FIG | Homo sapiens (human) |
+| [ANA-HSA-112152](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112152) | ATG5; APG5L; ASP | Homo sapiens (human) |
+| [ANA-HSA-112358](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112358) | PARK7 | Homo sapiens (human) |
+| [ANA-HSA-110859](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-110859) | RB1CC1; KIAA0203; RBICC | Homo sapiens (human) |
+| [ANA-HSA-112997](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112997) | DRAM2; TMEM77; PSEC0031; UNQ154/PRO180 | Homo sapiens (human) |
+| [ANA-HSA-112682](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112682) | TMBIM6; BI1; TEGT | Homo sapiens (human) |
+| [ANA-HSA-112475](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112475) | SQSTM1; ORCA; OSIL | Homo sapiens (human) |
+| [ANA-HSA-113109](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113109) | ULK3 | Homo sapiens (human) |
+| [ANA-HSA-112177](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112177) | VMA21; MEAX; XMEA | Homo sapiens (human) |
+| [ANA-HSA-111927](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111927) | TP53INP1; P53DINP1; SIP | Homo sapiens (human) |
+| [ANA-HSA-112145](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112145) | S100A9; CAGB; CFAG; MRP14 | Homo sapiens (human) |
+| [ANA-HSA-110940](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-110940) | RASIP1 | Homo sapiens (human) |
+| [ANA-HSA-113308](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113308) | WASH1; FAM39E | Homo sapiens (human) |
+| [ANA-HSA-111316](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111316) | FBXO7; FBX7 | Homo sapiens (human) |
+| [ANA-HSA-111972](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111972) | UVRAG | Homo sapiens (human) |
+| [ANA-HSA-111950](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111950) | KIF25; KNSL3 | Homo sapiens (human) |
+| [ANA-HSA-112974](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112974) | STX17 | Homo sapiens (human) |
+| [ANA-HSA-111520](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111520) | DEPP; C10orf10; FIG | Homo sapiens (human) |
+| [ANA-HSA-112288](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112288) | MAP1LC3A | Homo sapiens (human) |
+| [ANA-HSA-111264](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111264) | VAMP8 | Homo sapiens (human) |
+| [ANA-HSA-112325](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112325) | WDR45; WDRX1; WDRXI4; WIPI4; JM5 | Homo sapiens (human) |
+| [ANA-HSA-112744](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112744) | CALCOCO2; NDP52 | Homo sapiens (human) |
+| [ANA-HSA-111654](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111654) | ATG4D; APG4D; AUTL4 | Homo sapiens (human) |
+| [ANA-HSA-112350](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112350) | ATG2A; KIAA0404 | Homo sapiens (human) |
+| [ANA-HSA-111783](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111783) | TBK1; NAK | Homo sapiens (human) |
+| [ANA-HSA-112538](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112538) | ULK2; KIAA0623 | Homo sapiens (human) |
+| [ANA-HSA-112886](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112886) | FBXL2; FBL2; FBL3 | Homo sapiens (human) |
+| [ANA-HSA-112965](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112965) | ATG13; KIAA0652 | Homo sapiens (human) |
+| [ANA-HSA-112328](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112328) | PIM2 | Homo sapiens (human) |
+| [ANA-HSA-112738](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112738) | COPB1; COPB; MSTP026 | Homo sapiens (human) |
+| [ANA-HSA-112194](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112194) | ATG4C; APG4C; AUTL1; AUTL3 | Homo sapiens (human) |
+| [ANA-HSA-111695](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111695) | TLK2 | Homo sapiens (human) |
+| [ANA-HSA-112034](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112034) | ATG2B; C14orf103 | Homo sapiens (human) |
+| [ANA-HSA-112409](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112409) | TRIM5; RNF88 | Homo sapiens (human) |
+| [ANA-HSA-111948](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111948) | PRKAA1; AMPK1 | Homo sapiens (human) |
+| [ANA-HSA-112015](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112015) | VCP | Homo sapiens (human) |
+| [ANA-HSA-112913](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112913) | CISD2; CDGSH2; ERIS; ZCD2 | Homo sapiens (human) |
+| [ANA-HSA-111666](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111666) | LEP; OB; OBS | Homo sapiens (human) |
+| [ANA-HSA-111063](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111063) | ATG14; ATG14L; KIAA0831 | Homo sapiens (human) |
+| [ANA-HSA-111936](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111936) | UBQLN2; N4BP4; PLIC2; HRIHFB2157 | Homo sapiens (human) |
+| [ANA-HSA-110861](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-110861) | GABARAPL2; FLC3A; GEF2 | Homo sapiens (human) |
+| [ANA-HSA-110884](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-110884) | SIRT1; SIR2L1 | Homo sapiens (human) |
+| [ANA-HSA-113338](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113338) | SIRT2; SIR2L; SIR2L2 | Homo sapiens (human) |
+| [ANA-HSA-112870](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112870) | AMBRA1; KIAA1736 | Homo sapiens (human) |
+| [ANA-HSA-111016](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111016) | TMEM59; C1orf8; HSPC001; UNQ169/PRO195 | Homo sapiens (human) |
+| [ANA-HSA-112057](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112057) | MTOR; FRAP; FRAP1; FRAP2; RAFT1; RAPT1 | Homo sapiens (human) |
+| [ANA-HSA-112781](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112781) | TBC1D5; KIAA0210 | Homo sapiens (human) |
+| [ANA-HSA-111333](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111333) | MAP1LC3B; MAP1ALC3 | Homo sapiens (human) |
+| [ANA-HSA-112712](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112712) | GPSM1; AGS3 | Homo sapiens (human) |
+| [ANA-HSA-111748](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111748) | STK11; LKB1; PJS | Homo sapiens (human) |
+| [ANA-HSA-111007](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111007) | EVA1A; FAM176A; TMEM166; SP24 | Homo sapiens (human) |
+| [ANA-HSA-112170](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112170) | KIAA1324; EIG121; UNQ2426/PRO4985 | Homo sapiens (human) |
+| [ANA-HSA-112663](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112663) | CLEC16A; KIAA0350 | Homo sapiens (human) |
+| [ANA-HSA-111994](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111994) | MAP1LC3C | Homo sapiens (human) |
+| [ANA-HSA-112032](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112032) | PTPN22; PTPN8 | Homo sapiens (human) |
+| [ANA-HSA-111485](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111485) | WDFY3; KIAA0993 | Homo sapiens (human) |
+| [ANA-HSA-111516](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111516) | TMEM74 | Homo sapiens (human) |
+| [ANA-HSA-112326](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112326) | UBQLN1; DA41; PLIC1 | Homo sapiens (human) |
+| [ANA-HSA-112224](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112224) | ABL1; ABL; JTK7 | Homo sapiens (human) |
+| [ANA-HSA-112317](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112317) | ACBD5; KIAA1996 | Homo sapiens (human) |
+| [ANA-HSA-113152](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113152) | STAT3; APRF | Homo sapiens (human) |
+| [ANA-HSA-111410](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111410) | ATG3; APG3; APG3L | Homo sapiens (human) |
+| [ANA-HSA-112086](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112086) | PARK2; PRKN | Homo sapiens (human) |
+| [ANA-HSA-113175](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113175) | FNBP1L; C1orf39; TOCA1 | Homo sapiens (human) |
+| [ANA-HSA-113332](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113332) | BECN2; BECN1L1; BECN1P1 | Homo sapiens (human) |
+| [ANA-HSA-111484](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111484) | IFI16; IFNGIP1 | Homo sapiens (human) |
+| [ANA-HSA-113228](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113228) | ATG9B; APG9L2; NOS3AS | Homo sapiens (human) |
+| [ANA-HSA-111732](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111732) | PHF23 | Homo sapiens (human) |
+| [ANA-HSA-113318](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113318) | ATG16L1; APG16L; UNQ9393/PRO34307 | Homo sapiens (human) |
+| [ANA-HSA-112144](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112144) | S100A8; CAGA; CFAG; MRP8 | Homo sapiens (human) |
+| [ANA-HSA-112072](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112072) | ATG9A; APG9L1 | Homo sapiens (human) |
+| [ANA-HSA-111924](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111924) | TFEB; BHLHE35 | Homo sapiens (human) |
+| [ANA-HSA-111494](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111494) | RUBCN; KIAA0226 | Homo sapiens (human) |
+| [ANA-HSA-112718](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112718) | DAP; DAP1 | Homo sapiens (human) |
+| [ANA-HSA-111613](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111613) | GABARAP; FLC3B; HT004 | Homo sapiens (human) |
+| [ANA-HSA-113137](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113137) | BECN1; GT197 | Homo sapiens (human) |
+| [ANA-HSA-112621](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112621) | ATG4B; APG4B; AUTL1; KIAA0943 | Homo sapiens (human) |
+| [ANA-HSA-111397](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111397) | EPG5; KIAA1632 | Homo sapiens (human) |
+| [ANA-HSA-110935](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-110935) | TBC1D17 | Homo sapiens (human) |
+| [ANA-HSA-111958](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111958) | WAC; KIAA1844 | Homo sapiens (human) |
+| [ANA-HSA-112933](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112933) | RNF185 | Homo sapiens (human) |
+| [ANA-HSA-113189](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113189) | SCOC; SCOCO; HRIHFB2072 | Homo sapiens (human) |
+| [ANA-HSA-113089](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113089) | DAPK2 | Homo sapiens (human) |
+| [ANA-HSA-112977](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112977) | TM9SF1 | Homo sapiens (human) |
+| [ANA-HSA-111145](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111145) | DRAM1; DRAM | Homo sapiens (human) |
+| [ANA-HSA-113229](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-113229) | SH3GLB1; KIAA0491; CGI-61 | Homo sapiens (human) |
+| [ANA-HSA-112793](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112793) | TECPR1; KIAA1358 | Homo sapiens (human) |
+| [ANA-HSA-111952](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111952) | ATG7; APG7L | Homo sapiens (human) |
+| [ANA-HSA-112606](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112606) | HMGB1; HMG1 | Homo sapiens (human) |
+| [ANA-HSA-111543](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111543) | DAPK3; ZIPK | Homo sapiens (human) |
+| [ANA-HSA-111971](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111971) | TRIM13; LEU5; RFP2; RNF77 | Homo sapiens (human) |
+| [ANA-HSA-111865](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111865) | ATG101; C12orf44; PP894 | Homo sapiens (human) |
+| [ANA-HSA-112028](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112028) | TECPR2; KIAA0297; KIAA0329 | Homo sapiens (human) |
+| [ANA-HSA-111441](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111441) | PIK3CB; PIK3C1 | Homo sapiens (human) |
+| [ANA-HSA-112539](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112539) | MAPK8; JNK1; PRKM8; SAPK1; SAPK1C | Homo sapiens (human) |
+| [ANA-HSA-112219](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112219) | ATG4A; APG4A; AUTL2 | Homo sapiens (human) |
+| [ANA-HSA-111090](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-111090) | ZKSCAN3; ZFP47; ZNF306; ZNF309; ZSCAN13 | Homo sapiens (human) |
+| [ANA-HSA-112070](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112070) | CDKN2A; CDKN2; MLM | Homo sapiens (human) |
+| [ANA-HSA-112287](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112287) | TP53INP2; C20orf110; DOR; PINH | Homo sapiens (human) |
+| [ANA-HSA-112878](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112878) | MFN2; CPRP1; KIAA0214 | Homo sapiens (human) |
+| [ANA-HSA-112885](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112885) | SUPT20H; C13orf19; FAM48A; FP757 | Homo sapiens (human) |
+| [ANA-HSA-112919](http://thanatos.biocuckoo.org/view.php?id=ANA-HSA-112919) | ATG12; APG12; APG12L | Homo sapiens (human) |
 > 更新: 2023-09-04 10:14:05
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/vpcvbb>

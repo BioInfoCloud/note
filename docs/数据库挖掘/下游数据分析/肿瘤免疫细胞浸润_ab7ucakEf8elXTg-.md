@@ -16,7 +16,7 @@ Profiles of immune infiltration in colorectal cancer and theirclinical significa
 
 分析用到的软件是CIBERSORT，这个软件的原理就是把我们输入的基因矩阵转换为免疫细胞的矩阵，这个矩阵的列名是细胞名称，行名是样品。当然我们需要根据p值对样品进行筛选。
 
-CIBERSORT，是由Binder G等开发的反卷积算法，可以基于标准化的基因表达数据来计算复杂组织的细胞组成，改方法能量化特定细胞类型的丰度。通过流式细胞分选术很好地验证并成功评估了乳腺癌及肝癌组织中免疫细胞的组成。具体可浏览官网：[<u>https://cibersortx.stanford.edu/</u>](https://cibersortx.stanford.edu/)
+CIBERSORT，是由Binder G等开发的反卷积算法，可以基于标准化的基因表达数据来计算复杂组织的细胞组成，改方法能量化特定细胞类型的丰度。通过流式细胞分选术很好地验证并成功评估了乳腺癌及肝癌组织中免疫细胞的组成。具体可浏览官网：[https://cibersortx.stanford.edu/](https://cibersortx.stanford.edu/)
 
 ![1612608562319-23dbba1c-6a62-4f8a-9508-7b3e5612de0e.jpeg](./img/ab7ucakEf8elXTg-/1612608562319-23dbba1c-6a62-4f8a-9508-7b3e5612de0e-817069.jpeg)
 
@@ -70,7 +70,7 @@ write.table(expdata,file = "as.ImmueInputExp.txt",row.names = F,sep = "\t")
 
 **登录网址，没有账号得先注册**
 
-[<u>https://cibersortx.stanford.edu/</u>](https://cibersortx.stanford.edu/)
+[https://cibersortx.stanford.edu/](https://cibersortx.stanford.edu/)
 
 ![1612608562330-c5f35bbc-92ed-4a45-8c8c-a3629e41f5ae.jpeg](./img/ab7ucakEf8elXTg-/1612608562330-c5f35bbc-92ed-4a45-8c8c-a3629e41f5ae-564455.jpeg)
 
@@ -492,7 +492,7 @@ write.table(StageR,file=paste0(outputPath,"immueStageFig\\",clin,".xls"),
 
 ![1612608562588-251ca6b6-386e-46a7-af1f-4e183e52c44a.png](./img/ab7ucakEf8elXTg-/1612608562588-251ca6b6-386e-46a7-af1f-4e183e52c44a-351474.png)
 
-链接：[<u>https://pan.baidu.com/s/1uEhnIA4sCFr8RKX_LpkcSA</u>](https://pan.baidu.com/s/1uEhnIA4sCFr8RKX_LpkcSA)<u> </u>
+链接：[https://pan.baidu.com/s/1uEhnIA4sCFr8RKX_LpkcSA](https://pan.baidu.com/s/1uEhnIA4sCFr8RKX_LpkcSA) 
 
 提取码：**v9tx **
 

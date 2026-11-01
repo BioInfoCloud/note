@@ -164,11 +164,11 @@ VEGFR（vascular endothelial growth factor receptor，VEGFR）共有三种：VEG
 
 蛋白质磷酸化位点的预测和识别，对蛋白质磷酸化的研究至关重要。除了采用实验方法判断磷酸化位点之外，还可以通过蛋白质磷酸化位点的预测识别，对蛋白质的磷酸化作出预测。我们介绍几个常用的磷酸化预测网站。
 
-1）Uniprot（[<u>http://www.uniprot.org/</u>](http://www.uniprot.org/)）
+1）Uniprot（[http://www.uniprot.org/](http://www.uniprot.org/)）
 
 这是一个综合性网站。在网站内检索基因名，然后进入该基因的主页面。主页面内有 PTM/Processing 一栏。PTM 就是翻译后修饰（post-translational modification）。这一栏内有蛋白磷酸化位点的信息。
 
-2）GPS（[<u>http://gps.biocuckoo.org/</u>](http://gps.biocuckoo.org/)）
+2）GPS（[http://gps.biocuckoo.org/](http://gps.biocuckoo.org/)）
 
 GPS 是 Group-based prediction system 的缩写。它建立了一套很好的规则，将激酶分类到 4 层的层次聚类中。同时，网站还开发了一个简单的方法来估计理论上最大的 FPR（假阳性率，false positive rate）。这个软件可以预测人类 408 个激酶特异的磷酸化位点的层次结构。作为一个应用程序，网站进行了对超过 13000 个哺乳动物磷酸化位点进行了高性能的预测。特别需要说明的是，这个网站不仅能进行磷酸化位点的预测，还能进行其他翻译后修饰的预测（例如，蛋白的甲基化 Protein Methylation、赖氨酸的乙酰化 lysine acetylation 和蛋白的棕榈酰化 palmitoylation 等）。
 
