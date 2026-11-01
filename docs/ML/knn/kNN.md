@@ -860,7 +860,7 @@ pd.plotting.scatter_matrix(iris_dataframe, c=y_train, figsize=(15, 15), marker='
 
 ```
 
-<img src="output_3_1.png" alt="png" style="zoom:80%;" />
+<img src="../output_3_1.png" alt="png" style="zoom:80%;" />
 
 ### 3.2 使用KNN对鸢尾花iris数据集进行分类。
 

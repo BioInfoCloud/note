@@ -4,16 +4,16 @@ DOCS = r"E:\BaiduSyncdisk\00-gitHubProjects\MyProjects\note\docs"
 ASSET_DIRS = {'img', 'media', 'images', 'assets'}  # 资源目录，不进入导航
 
 TABS = [
-  ('导读与基础', ['导读与基础', '生物学基础', '生信基础']),
-  ('生信编程', ['Programming', '生信编程', 'BioInfo/Biopython']),
-  ('组学数据分析', ['组学分析', 'BioInfo/scRNAseq', 'BioInfo/RNAseq']),
-  ('数据库与数据挖掘', ['数据库挖掘', 'BioInfo/TCGA', 'BioInfo/database', 'BioInfo/drugAna', 'BioInfo/immune', 'BioInfo/toolsandsoftware']),
-  ('机器学习与深度学习', ['机器学习', '深度学习', 'ML']),
-  ('网络药理学', ['网络药理学']),
-  ('智能体', ['智能体']),
+  ('导读与基础', ['getting-started', 'biology', 'bioinformatics-basics']),
+  ('生信编程', ['Programming', 'bioinformatics-programming', 'BioInfo/Biopython']),
+  ('组学数据分析', ['omics-analysis', 'BioInfo/scRNAseq', 'BioInfo/RNAseq']),
+  ('数据库与数据挖掘', ['database-mining', 'BioInfo/TCGA', 'BioInfo/database', 'BioInfo/drugAna', 'BioInfo/immune', 'BioInfo/toolsandsoftware']),
+  ('机器学习与深度学习', ['machine-learning', 'deep-learning', 'ML']),
+  ('网络药理学', ['network-pharmacology']),
+  ('智能体', ['ai-agents']),
   ('可视化', ['visualization']),
   ('文献', ['Literature']),
-  ('资源', ['资源', 'WeChatOfficialAccount', 'ABOUT', 'package']),
+  ('资源', ['resources', 'WeChatOfficialAccount', 'ABOUT', 'package']),
 ]
 
 def page_title(md_path):

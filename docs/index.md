@@ -13,7 +13,7 @@ hide:
       从 Linux、R、Python 到转录组、单细胞与机器学习，这里整理了一条可以按图索骥的生信学习路线，以及公众号文章的全部索引。
     </p>
     <div class="hero__actions">
-      <a class="hero__btn hero__btn--primary" href="导读与基础/导读/绪论_uXODe8dBs4oLosqJ/">开始学习 →</a>
+      <a class="hero__btn hero__btn--primary" href="getting-started/introduction/preface/">开始学习 →</a>
       <a class="hero__btn" href="Programming/">编程入门</a>
       <a class="hero__btn" href="https://github.com/BioInfoCloud/note" target="_blank" rel="noopener">GitHub 仓库</a>
     </div>
@@ -74,7 +74,7 @@ hide:
 
     测序原理、文件格式、表达定量与富集分析。
 
-    [:octicons-arrow-right-24: 进入](生信基础/生物信息学入门必须了解的名词_QyC0NHqMJR7AqyqQ.md)
+    [:octicons-arrow-right-24: 进入](./bioinformatics-basics/bioinformatics-glossary-for-beginners.md)
 
 -   :material-chart-scatter-plot:{ .lg .middle } __数据可视化__
 
@@ -82,7 +82,7 @@ hide:
 
     ggplot2 绘图思想与常见图形的实战代码。
 
-    [:octicons-arrow-right-24: 进入](生信编程/R/ggplot2绘图思想_KnCuf_TQaNAuuoQH.md)
+    [:octicons-arrow-right-24: 进入](./bioinformatics-programming/R/ggplot2-plotting-philosophy.md)
 
 -   :material-robot-outline:{ .lg .middle } __机器学习__
 
@@ -146,7 +146,7 @@ hide:
 快速了解 ggplot2 的图层语法，不需要精通，够用即可。
 
 - [R 语言数据可视化 —— 解读 ggplot2 绘图思想（B 站）](https://www.bilibili.com/video/BV1aT411V73F?spm_id_from=333.999.0.0)
-- [ggplot2 综合教程](生信编程/R/ggplot2绘图思想_KnCuf_TQaNAuuoQH.md)
+- [ggplot2 综合教程](./bioinformatics-programming/R/ggplot2-plotting-philosophy.md)
 </div>
 
 <div class="roadmap__step" markdown>

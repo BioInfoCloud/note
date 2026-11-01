@@ -66,37 +66,37 @@ nav:
   - 导读与基础:
     - 导读与基础:
       - 导读:
-        - 导读与基础/导读/绪论_uXODe8dBs4oLosqJ.md
+        - getting-started/introduction/preface.md
     - 生物学基础:
-      - 生物学基础/信号通路_q_0LG-mrjppGBTPo.md
-      - 生物学基础/基础知识笔记_-J7NnCHF3bZAc2yT.md
-      - 生物学基础/基础科研思路_7v8x5wBOvMbRvyxw.md
-      - 生物学基础/生物学基础知识【总】_X9fOOAsfxOF38Bip.md
-      - 生物学基础/甲基化_ibVDq-26nsrDiB9_.md
-      - 生物学基础/细胞凋亡_411jfYxK-ePnbibm.md
-      - 生物学基础/细胞周期_pHR4a6UDfdB54Flp.md
-      - 生物学基础/细胞自噬_yxOYLH11p-9_C-L8.md
-      - 生物学基础/细胞衰老_MKFlRXnOD1YQ5H__.md
-      - 生物学基础/蛋白泛素化_X6QzhSBiWEJmtSLh.md
-      - 生物学基础/蛋白磷酸化_iI2S1lxFUEazQ08D.md
-      - 生物学基础/血管新生_dHZ5Y1kL3CJlcTlv.md
-      - 生物学基础/非编码RNA__lZNdYy9mFhDoJhv.md
+      - biology/signaling-pathways.md
+      - biology/biology-fundamentals-notes.md
+      - biology/basic-research-approach.md
+      - biology/biology-basics-overview.md
+      - biology/DNA-methylation.md
+      - biology/apoptosis.md
+      - biology/cell-cycle.md
+      - biology/autophagy.md
+      - biology/cell-senescence.md
+      - biology/protein-ubiquitination.md
+      - biology/protein-phosphorylation.md
+      - biology/angiogenesis.md
+      - biology/non-coding-RNA.md
     - 生信基础:
-      - 生信基础/KEGG、GO与GSEA是什么？_FwJUBg2xocUbu9Al.md
-      - 生信基础/RNA-Seq的Counts和FPKM数据如何转换成TPM？_B2iqCqJ16DLObk-R.md
-      - 生信基础/RNA-seq的count,TPM,FPKM_RPKM值的区别与转换_08QLyEVmIYT1PuBG.md
-      - 生信基础/biomaRt包实现不同物种之间同源基因转换_YxPMyka-AYqApeNX.md
-      - 生信基础/miRNAID转换为常用名称_KXLt7IQgD8Ez9VxL.md
-      - 生信基础/人-小鼠同源基因之间的转换_0gjCm7Zi7l-77ID-.md
-      - 生信基础/人-小鼠基因集之间的比较_6M8-rBa2nOJ8wL3l.md
-      - 生信基础/处理基因组文件_VZr9sm4yFLybTV3O.md
-      - 生信基础/测序技术原理及应用_vc-M4CwgCNpj002d.md
-      - 生信基础/理解GO是什么？？_DwS16bmFIMbfjlr7.md
-      - 生信基础/生信中各种ID转换_95-4_H9QUVG1RBIf.md
-      - 生信基础/生信中常见的数据文件格式_BxpfRoLwzi8BroJT.md
-      - 生信基础/生物信息学入门必须了解的名词_QyC0NHqMJR7AqyqQ.md
-      - 生信基础/生物信息学基础应用_SN6L-BFr3vYuue2U.md
-      - 生信基础/超详细的DESeq2、edgeR和limma包的基本原理和实战案例_IiIzWKglDVISqhN8.md
+      - bioinformatics-basics/what-are-KEGG-GO-and-GSEA.md
+      - bioinformatics-basics/convert-counts-and-FPKM-to-TPM.md
+      - bioinformatics-basics/count-TPM-FPKM-RPKM-differences-and-conversion.md
+      - bioinformatics-basics/biomaRt-ortholog-gene-conversion.md
+      - bioinformatics-basics/miRNA-ID-to-name-conversion.md
+      - bioinformatics-basics/human-mouse-ortholog-gene-conversion.md
+      - bioinformatics-basics/human-mouse-gene-set-comparison.md
+      - bioinformatics-basics/genome-file-processing.md
+      - bioinformatics-basics/sequencing-principles-and-applications.md
+      - bioinformatics-basics/understanding-gene-ontology.md
+      - bioinformatics-basics/bioinformatics-ID-conversion.md
+      - bioinformatics-basics/common-bioinformatics-file-formats.md
+      - bioinformatics-basics/bioinformatics-glossary-for-beginners.md
+      - bioinformatics-basics/bioinformatics-basic-applications.md
+      - bioinformatics-basics/DESeq2-edgeR-limma-principles-and-practice.md
   - 生信编程:
     - 讲稿:
       - Programming/index.md
@@ -128,39 +128,39 @@ nav:
         - Programming/vscode-python/vscode-python.md
     - 生信编程:
       - Linux:
-        - 生信编程/Linux/linux快速入门手册（BioInfoNotes）_iWhPtJ-jO7bxwH_i.md
+        - bioinformatics-programming/Linux/Linux-quick-start-guide.md
       - Python:
-        - 生信编程/Python/Python快速入门手册_KfJAGUhtPqrPwsHF.md
-        - 生信编程/Python/Python编程基础_8L8j3SHUUPk2HD7_.md
+        - bioinformatics-programming/Python/Python-quick-start-guide.md
+        - bioinformatics-programming/Python/Python-programming-basics.md
       - R:
         - R包开发:
-          - 生信编程/R/R包开发/01-软件安装_MzGMtUI8tqzXoVE2.md
-          - 生信编程/R/R包开发/R包开发快速手册_ycwwHnreIl2Uh4Ke.md
-        - 生信编程/R/基础语法_yRQlRCnBAeN1NBje.md
-        - 生信编程/R/基于R语言的生物统计与数据分析_nBuY2PsSZTEROv0u.md
-        - 生信编程/R/ggplot2绘图思想_KnCuf_TQaNAuuoQH.md
-        - 生信编程/R/shiny.md
-        - 生信编程/R/RContents.md
-        - 生信编程/R/文本挖掘_VRcwb5sizMOeBa47.md
-        - 生信编程/R/参考书籍_TTHSMUwUrr8UFyRy.md
+          - bioinformatics-programming/R/package-development/01-software-installation.md
+          - bioinformatics-programming/R/package-development/R-package-development-guide.md
+        - bioinformatics-programming/R/R-basic-syntax.md
+        - bioinformatics-programming/R/biostatistics-and-data-analysis-with-R.md
+        - bioinformatics-programming/R/ggplot2-plotting-philosophy.md
+        - bioinformatics-programming/R/shiny.md
+        - bioinformatics-programming/R/RContents.md
+        - bioinformatics-programming/R/text-mining-with-R.md
+        - bioinformatics-programming/R/reference-books.md
     - Biopython:
       - BioInfo/Biopython/01_install.md
   - 组学数据分析:
     - 组学分析:
       - 单细胞分析:
-        - 组学分析/单细胞分析/SCENIC：单细胞转录因子调控_u81ECyUnpceOmxxa.md
-        - 组学分析/单细胞分析/scRNASeq_58tA4WBE-xbCE9Rg.md
-        - 组学分析/单细胞分析/scanpy_dFTJgk5Yb3drDOHQ.md
-        - 组学分析/单细胞分析/单细胞常规分析案例一_Vj_r0whCD9TyWrS9.md
-        - 组学分析/单细胞分析/单细胞相关分析技能_7L4vN2lHYRWrDGTU.md
+        - omics-analysis/single-cell/SCENIC-single-cell-transcription-factor-regulation.md
+        - omics-analysis/single-cell/scRNASeq_58tA4WBE-xbCE9Rg.md
+        - omics-analysis/single-cell/scanpy_dFTJgk5Yb3drDOHQ.md
+        - omics-analysis/single-cell/single-cell-routine-analysis-case-1.md
+        - omics-analysis/single-cell/single-cell-analysis-skills.md
       - 甲基化分析:
-        - 组学分析/甲基化分析/甲基化分析_7csXBw2VGAYsQQvP.md
+        - omics-analysis/methylation/methylation-analysis.md
       - 转录组分析:
-        - 组学分析/转录组分析/BioJupies分析RNASeq数据_2qW6uHZFTdWBzhH_.md
-        - 组学分析/转录组分析/SRA数据库_rr-XVuclmC4PtEXL.md
-        - 组学分析/转录组分析/一个转录组分析流程_np70NcqAn5EcHLFs.md
-        - 组学分析/转录组分析/转录组基础知识_JWtz9dk82uzSeyMp.md
-      - 组学分析/转录组测序背景知识_eg3yZxC7f3LbGAl7.md
+        - omics-analysis/transcriptomics/BioJupies-RNA-seq-analysis.md
+        - omics-analysis/transcriptomics/SRA-database.md
+        - omics-analysis/transcriptomics/transcriptome-analysis-workflow.md
+        - omics-analysis/transcriptomics/transcriptomics-basics.md
+      - omics-analysis/RNA-seq-background-knowledge.md
     - scRNAseq:
       - BioInfo/scRNAseq/CellChat.md
       - BioInfo/scRNAseq/GSE130001.md
@@ -175,36 +175,36 @@ nav:
   - 数据库与数据挖掘:
     - 数据库挖掘:
       - GEO数据库:
-        - 数据库挖掘/GEO数据库/GEO数据库使用教程_uiDhZC5sbsRnkS0W.md
-        - 数据库挖掘/GEO数据库/GEO数据库表达数据的提取以及limma包进行差异分析_jdLPLhH72todZWSZ.md
-        - 数据库挖掘/GEO数据库/基因芯片与GEOquery包_Ytl8eaB3r5kpWEyw.md
+        - database-mining/GEO-database/GEO-database-tutorial.md
+        - database-mining/GEO-database/GEO-expression-data-extraction-and-limma-differential-analysis.md
+        - database-mining/GEO-database/microarray-and-GEOquery-package.md
       - TCGA数据库:
-        - 数据库挖掘/TCGA数据库/GDCRNATools包_HN4ZjXiqIBncBHFu.md
-        - 数据库挖掘/TCGA数据库/TCGAbiolinks包-新版本_jQAygXEDqldV_W9B.md
-        - 数据库挖掘/TCGA数据库/TCGAbiolinks包-老版本_xw0kpVlajKCznN8e.md
-        - 数据库挖掘/TCGA数据库/TCGA数据下载与整理_FuJI4bj6_6i_ff-5.md
-        - 数据库挖掘/TCGA数据库/TCGA数据库介绍_SbEzbzG88mN4YZ7b.md
+        - database-mining/TCGA-database/GDCRNATools-package.md
+        - database-mining/TCGA-database/TCGAbiolinks-package-new-version.md
+        - database-mining/TCGA-database/TCGAbiolinks-package-old-version.md
+        - database-mining/TCGA-database/TCGA-data-download-and-organization.md
+        - database-mining/TCGA-database/TCGA-database-introduction.md
         - TCGA数据库的癌症没有正常样本怎么办？:
-          - 数据库挖掘/TCGA数据库/TCGA数据库的癌症没有正常样本怎么办？/index.md
-          - 数据库挖掘/TCGA数据库/TCGA数据库的癌症没有正常样本怎么办？/无标题文档_E8QptJ2nyl-ZpO0j.md
+          - database-mining/TCGA-database/TCGA-cancer-without-normal-samples/index.md
+          - database-mining/TCGA-database/TCGA-cancer-without-normal-samples/how-to-handle-missing-normal-samples.md
       - 下游数据分析:
-        - 数据库挖掘/下游数据分析/IMvigor210CoreBiologies——免疫反应_fXL91fUpySjDQVPK.md
-        - 数据库挖掘/下游数据分析/NMF（非负矩阵分解）替代层次聚类进行肿瘤分型_dpUWmcT1_p3J9Ew3.md
-        - 数据库挖掘/下游数据分析/WGCNA分析_Uiy2rTfsu4WUTpcU.md
-        - 数据库挖掘/下游数据分析/clusterProfiler包进行KEGG,GO,GSEA富集分析_WA1poQh-JPfnWMhf.md
-        - 数据库挖掘/下游数据分析/cytoscape使用教程_ngU8bu0AfMpgMtal.md
-        - 数据库挖掘/下游数据分析/在线分析工具_MpawVafil0WYy5Lc.md
-        - 数据库挖掘/下游数据分析/基因表达差异分析_l9nebAoHw7GO7UOY.md
-        - 数据库挖掘/下游数据分析/教你如何查找调节差异基因的转录因子_ogJTyduoPeP7rT4G.md
-        - 数据库挖掘/下游数据分析/肿瘤TMB计算_DWrpzaZFcV6292r8.md
-        - 数据库挖掘/下游数据分析/肿瘤免疫细胞浸润_ab7ucakEf8elXTg-.md
-        - 数据库挖掘/下游数据分析/肿瘤相关免疫细胞浸润评估_nhteSvyRXv1I2efo.md
-        - 数据库挖掘/下游数据分析/蛋白互作分析_oOu3b7kl3pz5cl1n.md
+        - database-mining/downstream-analysis/IMvigor210CoreBiologies-immune-response.md
+        - database-mining/downstream-analysis/NMF-tumor-subtyping-instead-of-hierarchical-clustering.md
+        - database-mining/downstream-analysis/WGCNA-analysis.md
+        - database-mining/downstream-analysis/clusterProfiler-KEGG-GO-GSEA-enrichment-analysis.md
+        - database-mining/downstream-analysis/Cytoscape-tutorial.md
+        - database-mining/downstream-analysis/online-analysis-tools.md
+        - database-mining/downstream-analysis/differential-gene-expression-analysis.md
+        - database-mining/downstream-analysis/find-transcription-factors-regulating-DEGs.md
+        - database-mining/downstream-analysis/tumor-TMB-calculation.md
+        - database-mining/downstream-analysis/tumor-immune-cell-infiltration.md
+        - database-mining/downstream-analysis/tumor-immune-infiltration-assessment.md
+        - database-mining/downstream-analysis/protein-protein-interaction-analysis.md
       - 分析实战:
-        - 数据库挖掘/分析实战/index.md
-        - 数据库挖掘/分析实战/肿瘤预后模型_3qPP8mceoYAzJIk2.md
+        - database-mining/case-studies/index.md
+        - database-mining/case-studies/tumor-prognosis-model.md
       - 芯片数据分析:
-        - 数据库挖掘/芯片数据分析/芯片数据分析_yFH22K8_RQMPkc70.md
+        - database-mining/microarray-analysis/microarray-data-analysis.md
     - TCGA-GEO:
       - BioInfo/TCGA/index.md
     - database:
@@ -221,12 +221,12 @@ nav:
       - BioInfo/toolsandsoftware/tands.md
   - 机器学习与深度学习:
     - 机器学习:
-      - 机器学习/sklearn介绍_2QcdjFfuQk92ZB-E.md
-      - 机器学习/机器学习_YA-MBiDn2KbHdbcg.md
-      - 机器学习/降维算法_o8m-XfSf7077FQBl.md
+      - machine-learning/sklearn-introduction.md
+      - machine-learning/machine-learning-overview.md
+      - machine-learning/dimensionality-reduction-algorithms.md
     - 深度学习:
-      - 深度学习/pyTorch基础_rcehDcBdFPzJj-_H.md
-      - 深度学习/pyTorch环境安装_KK7dnf3Rkf_Fyv3K.md
+      - deep-learning/PyTorch-basics.md
+      - deep-learning/PyTorch-environment-setup.md
     - ML:
       - ML/01_review.md
       - ML/02_basis.md
@@ -237,12 +237,12 @@ nav:
         - knn_py:
           - ML/knn/knn_py/knn_py.md
   - 网络药理学:
-    - 网络药理学/PyMOL的使用教程_kEQtHCNxT2NP4E3v.md
-    - 网络药理学/分子对接_RlF9XutPxSSSW6YN.md
-    - 网络药理学/药物靶点预测_K-ds1sIIwqZbIoS5.md
-    - 网络药理学/虚拟筛选_vedpMAo2GmVPQuwr.md
+    - network-pharmacology/PyMOL-tutorial.md
+    - network-pharmacology/molecular-docking.md
+    - network-pharmacology/drug-target-prediction.md
+    - network-pharmacology/virtual-screening.md
   - 智能体:
-    - 智能体/智能体配置及使用手册.md
+    - ai-agents/agent-setup-and-usage-guide.md
   - 可视化:
     - visualization/ScatterPlot.md
     - visualization/barbox.md
@@ -267,8 +267,8 @@ nav:
   - 资源:
     - 资源:
       - 前端开发:
-        - 资源/前端开发/github搭建静态网页_D3_hUBm-B4WYcQbg.md
-        - 资源/前端开发/前端开发_pKky0cY78Xd_6HMj.md
+        - resources/frontend/build-static-site-with-github-pages.md
+        - resources/frontend/frontend-development.md
     - WeChatOfficialAccount:
       - WeChatOfficialAccount/HOME.md
       - WeChatOfficialAccount/articleIndex.md
