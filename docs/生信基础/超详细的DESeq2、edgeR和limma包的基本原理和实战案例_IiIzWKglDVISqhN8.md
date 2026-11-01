@@ -32,7 +32,6 @@ edgeR与DESeq2这两种方法并不使用RPKM，FPKM，TPM等方法来进行均�
 
 第二，文库补偿（library composition没有找到相应的中文译名，此处译为“文库补偿”），因为不同的样本含有不同的活跃基因（FPKM，FPKM和TPM做不到），如下所示：
 
-##
 
 ### edgeR均一化步骤
 
