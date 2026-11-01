@@ -241,5 +241,5 @@ hide:
 
 公众号持续更新生信教程与实战笔记，欢迎在 B 站、GitHub 一起交流。
 
-[:fontawesome-brands-bilibili: B 站](https://space.bilibili.com/434318322){ target=_blank } &nbsp; [:fontawesome-brands-github: GitHub](https://github.com/BioInfoCloud){ target=_blank } &nbsp; [:material-newspaper-variant-outline: 文章索引](WeChatOfficialAccount/articleIndex.md)
+[:fontawesome-brands-bilibili: B 站](https://space.bilibili.com/434318322){ target=_blank } &nbsp; [:fontawesome-brands-weixin: 微信公众号](https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA4NDAzODkzMA==){ target=_blank } &nbsp; [:fontawesome-brands-github: GitHub](https://github.com/BioInfoCloud){ target=_blank } &nbsp; [:material-newspaper-variant-outline: 文章索引](WeChatOfficialAccount/articleIndex.md)
 </div>
