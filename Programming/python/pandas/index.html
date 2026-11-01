@@ -9950,12 +9950,13 @@
 <p>Pandas 是一个 Python 库，提供了高效的数据操作和分析功能。它主要用于数据处理和分析，包括数据读取、数据清洗、数据转换、数据聚合和可视化等功能。Pandas 基于 NumPy 库，并提供了类似 MATLAB 的接口，使得数据处理和分析变得更加方便。</p>
 <p>Pandas 的核心是 Series 和 DataFrame 两种数据结构。Series 是一种一维数组，可以包含各种类型的数据（如整数、浮点数、字符串等），并具有标签（index）用于标记数据。DataFrame 是一个二维表格，可以看作是由多个 Series 组成的表格，其中每一列都可以看作是一个 Series。</p>
 <p>Pandas 提供了一系列用于数据处理和分析的函数和方法，如：</p>
-<div class="highlight"><pre><span></span><code>数据读取和写入：read_csv、read_excel、read_json、to_csv、to_excel、to_json 等。
-数据清洗：dropna、fillna、drop_duplicates 等。
-数据转换：map、replace、applymap、apply 等。
-数据聚合：groupby、agg、pivot_table 等。
-数据可视化：plot、hist、bar、箱形图等。
-</code></pre></div>
+<ul>
+<li>数据读取和写入：read_csv、read_excel、read_json、to_csv、to_excel、to_json 等。</li>
+<li>数据清洗：dropna、fillna、drop_duplicates 等。</li>
+<li>数据转换：map、replace、applymap、apply 等。</li>
+<li>数据聚合：groupby、agg、pivot_table 等。</li>
+<li>数据可视化：plot、hist、bar、箱形图等。</li>
+</ul>
 <h2 id="1pandas">1.Pandas 的数据结构<a class="headerlink" href="#1pandas" title="Permanent link">&para;</a></h2>
 <p>Pandas 的核心数据结构是 Series 和 DataFrame。</p>
 <p><strong>Series</strong>：是一种一维数组，包含一组数据（values,ndarray类型）以及一个标签（index）。它可以看作是 Python 中的一维 NumPy 数组的扩展，增加了标签和数据类型等额外信息。Series 可以包含各种类型的数据，如整数、浮点数、字符串等。Series: 可以看做是一个有序的字典结构。</p>

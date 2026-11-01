@@ -1,8 +1,12 @@
 /* ==========================================================================
-   生物信息云 · 进阶质感升级层（叠加在 extra.css 之上，统一覆盖全站页面）
-   设计目标：更有层次、更有"高级感"，而非朴素文档观感
-   - 阅读进度条 / Hero 极光 / 图片光晕悬浮 / 提示框渐变描边 / 表格吸顶
-   - 内容入场动效 / 页脚品牌化 / 标题渐变下划线 / 卡片悬浮 / 平滑滚动
+   生物信息云 · 质感升级层 v2（更明显的高级感，叠加在 extra.css 之上，全站生效）
+   思路：在已批准的「白底清新」主题内，强化层次与品牌识别——
+   - 更大气的 Hero（渐变面板 + 极光 + 大字号）
+   - 卡片渐变图标 chip + 悬浮抬升 + 顶部渐变高光
+   - 区块标题渐变下划线 + 左侧渐变方点
+   - 提示框更精致的彩色描边与悬浮
+   - 表格吸顶 + 外圈渐变描边 + 行高亮
+   - 更克制的极光背景、收紧的间距、阅读进度条
    ========================================================================== */
 
 /* 0. 阅读进度条（由 assets/javascripts/progress.js 注入元素） */
@@ -14,97 +18,212 @@
   transition: width .12s ease-out;
 }
 
-/* 平滑滚动 + 焦点可见性（精致 & 可访问） */
+/* 平滑滚动 + 焦点可见 */
 html { scroll-behavior: smooth; }
 :focus-visible { outline: 2px solid rgba(0, 184, 154, .6); outline-offset: 2px; border-radius: 4px; }
 
-/* 1. Hero 极光升级：流动渐变光晕 + 玻璃质感（仅首页，但代码复用于全站 hero 组件） */
-.hero::before {
-  content: ""; position: absolute; inset: -30% -10% auto -10%; height: 120%;
-  z-index: 0; pointer-events: none; opacity: .55;
+/* 1. 页面背景：更明显的极光氛围（克制，不抢内容） */
+.md-main {
+  background-color: #f4f9f8;
+  background-image:
+    radial-gradient(48rem 30rem at -6% -4%, rgba(0, 184, 154, .10), transparent 60%),
+    radial-gradient(48rem 30rem at 106% -4%, rgba(28, 168, 232, .09), transparent 60%),
+    radial-gradient(40rem 26rem at 50% 120%, rgba(45, 212, 191, .07), transparent 60%);
+}
+
+/* 2. HERO 重新设计——更大气、更有品牌感 */
+.hero {
+  position: relative; overflow: hidden; isolation: isolate;
+  display: flex; align-items: center; gap: 1.5rem;
+  margin: 0.4rem 0 1.5rem; padding: 3.4rem 3rem;
+  border-radius: 28px; color: #10302e;
   background:
-    radial-gradient(36rem 22rem at 18% 10%, rgba(0, 184, 154, .28), transparent 60%),
-    radial-gradient(34rem 24rem at 86% 0%, rgba(28, 168, 232, .26), transparent 62%),
-    radial-gradient(26rem 18rem at 60% 90%, rgba(45, 212, 191, .22), transparent 60%);
-  filter: blur(8px);
+    linear-gradient(135deg, rgba(255, 255, 255, .97) 0%, rgba(234, 250, 245, .92) 46%, rgba(230, 246, 251, .94) 100%),
+    radial-gradient(60rem 40rem at 102% -10%, rgba(0, 184, 154, .20), transparent 55%),
+    radial-gradient(52rem 38rem at -4% 110%, rgba(28, 168, 232, .16), transparent 55%);
+  border: 1px solid var(--bic-border);
+  box-shadow: 0 34px 80px -52px rgba(0, 150, 135, .6), var(--bic-shadow-sm);
+}
+.hero::before {
+  content: ""; position: absolute; inset: -30% -10% auto -10%; height: 130%;
+  z-index: 0; pointer-events: none; opacity: .6;
+  background:
+    radial-gradient(38rem 22rem at 16% 8%, rgba(0, 184, 154, .30), transparent 60%),
+    radial-gradient(34rem 24rem at 88% 2%, rgba(28, 168, 232, .28), transparent 62%),
+    radial-gradient(28rem 18rem at 62% 92%, rgba(45, 212, 191, .24), transparent 60%);
+  filter: blur(10px);
   animation: bic-aurora 16s ease-in-out infinite alternate;
 }
 @keyframes bic-aurora {
   0%   { transform: translate3d(-2%, 0, 0) scale(1); }
   100% { transform: translate3d(3%, 2%, 0) scale(1.08); }
 }
-.hero {
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, .92) 0%, rgba(234, 250, 245, .85) 50%, rgba(230,246,251,.8) 100%),
-    radial-gradient(40rem 28rem at 12% -10%, rgba(0, 184, 154, .16), transparent 60%);
-  backdrop-filter: blur(2px);
-  box-shadow: var(--bic-shadow-sm), 0 30px 70px -40px rgba(0, 184, 154, .6);
+.hero__inner { position: relative; z-index: 1; flex: 1 1 auto; max-width: 42rem; }
+.md-typeset .hero__eyebrow {
+  display: inline-flex; align-items: center; gap: .4rem; margin: 0 0 1rem;
+  padding: .3rem .8rem; border-radius: 999px; border: 1px solid rgba(0, 184, 154, .35);
+  background: rgba(0, 184, 154, .12); font-size: .64rem; font-weight: 700; letter-spacing: .1em; color: #008f78;
+}
+.md-typeset .hero__title {
+  margin: 0 0 .7rem; font-size: clamp(2.6rem, 6vw, 3.8rem); font-weight: 800; line-height: 1.1;
+  letter-spacing: .01em; color: #0b2824;
+}
+.md-typeset .hero__title span { background: linear-gradient(100deg, #00b89a 8%, #1ca8e8 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.md-typeset .hero__lead { margin: 0 0 1.7rem; max-width: 36rem; font-size: .82rem; line-height: 1.9; color: #3c5856; }
+.md-typeset .hero__actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 1.5rem; }
+.md-typeset .hero__btn {
+  display: inline-flex; align-items: center; gap: .35rem; padding: .55rem 1.2rem; border-radius: 999px;
+  border: 1px solid rgba(0, 184, 154, .45); background: rgba(0, 184, 154, .1); color: #0b2824;
+  font-size: .72rem; font-weight: 700; letter-spacing: .02em; text-decoration: none;
+  transition: transform .25s ease, background .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.md-typeset .hero__btn:hover { transform: translateY(-2px); background: rgba(0, 184, 154, .18); border-color: rgba(0, 184, 154, .65); color: #0b2824; border-bottom-color: rgba(0, 184, 154, .65); }
+.md-typeset .hero__btn--primary { border-color: transparent; background: linear-gradient(100deg, #00b89a, #1ca8e8); color: #fff; box-shadow: 0 16px 34px -16px rgba(0, 184, 154, .75); }
+.md-typeset .hero__btn--primary:hover { background: linear-gradient(100deg, #2dd4bf, #4fc0f0); color: #fff; }
+.md-typeset ul.hero__tags { display: flex; flex-wrap: wrap; gap: .45rem; margin: 0; padding: 0; list-style: none; }
+.md-typeset .hero__tags li { margin: 0; padding: .2rem .65rem; border-radius: 999px; border: 1px solid var(--bic-border); background: rgba(255, 255, 255, .7); font-size: .62rem; font-weight: 600; letter-spacing: .04em; color: #5d7674; }
+.md-typeset .hero__tags li::marker { content: ""; }
+
+/* 3. 区块标题：左侧渐变方点 + 短渐变下划线（更明显） */
+.md-typeset h2 {
+  margin-top: 1.7em; padding-bottom: .5rem; border-bottom: none; position: relative;
+}
+.md-typeset h2::before {
+  content: ""; display: inline-block; width: .42rem; height: .95rem; margin-right: .5rem;
+  border-radius: 4px; background: linear-gradient(180deg, var(--brand-cyan), var(--brand-blue));
+  vertical-align: -.1em;
+}
+.md-typeset h2::after {
+  content: ""; display: block; width: 3.2rem; height: 3px; margin-top: .45rem;
+  border-radius: 3px; background: linear-gradient(90deg, var(--brand-cyan), var(--brand-blue));
 }
 
-/* 2. 图片：叠加光晕 + 悬浮轻微放大（覆盖默认） */
+/* 4. 卡片网格——更精致 */
+.md-typeset .grid.cards > ul > li, .md-typeset .grid.cards > ol > li, .md-typeset .grid > .card {
+  position: relative; border: 1px solid var(--bic-border); border-radius: 18px;
+  background: #ffffff; padding: 1.15rem 1.2rem 1.2rem; box-shadow: var(--bic-shadow-sm);
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.md-typeset .grid.cards > ul > li::before, .md-typeset .grid.cards > ol > li::before, .md-typeset .grid > .card::before {
+  content: ""; position: absolute; top: 0; left: 1.1rem; right: 1.1rem; height: 3px; border-radius: 3px;
+  background: linear-gradient(90deg, transparent, var(--brand-cyan), var(--brand-blue), transparent);
+  opacity: .55; pointer-events: none; transition: opacity .3s ease, left .3s ease, right .3s ease;
+}
+.md-typeset .grid.cards > ul > li:hover, .md-typeset .grid.cards > ol > li:hover, .md-typeset .grid > .card:hover {
+  transform: translateY(-6px); border-color: rgba(0, 184, 154, .55);
+  box-shadow: 0 0 0 1px rgba(0, 184, 154, .3) inset, 0 26px 54px -30px rgba(0, 184, 154, .5);
+}
+.md-typeset .grid.cards > ul > li:hover::before, .md-typeset .grid.cards > ol > li:hover::before, .md-typeset .grid > .card:hover::before { opacity: 1; left: .9rem; right: .9rem; }
+/* 图标 chip 放大 + 渐变 + 阴影 */
+.md-typeset .grid.cards > ul > li > p:first-child .twemoji, .md-typeset .grid.cards > ol > li > p:first-child .twemoji {
+  display: inline-flex; align-items: center; justify-content: center; width: 2.7rem; height: 2.7rem;
+  margin-right: .5rem; border-radius: 14px;
+  background: linear-gradient(135deg, rgba(0, 184, 154, .22), rgba(28, 168, 232, .18));
+  box-shadow: 0 10px 22px -12px rgba(0, 184, 154, .55); color: #008f78; vertical-align: middle;
+}
+.md-typeset .grid.cards > ul > li > p:first-child .twemoji svg, .md-typeset .grid.cards > ol > li > p:first-child .twemoji svg { width: 1.35rem; height: 1.35rem; fill: currentColor; }
+.md-typeset .grid.cards > ul > li > p:first-child strong, .md-typeset .grid.cards > ol > li > p:first-child strong { font-size: .86rem; letter-spacing: .01em; color: #0b2824; }
+.md-typeset .grid.cards a { font-size: .7rem; font-weight: 700; color: var(--md-accent-fg-color); }
+.md-typeset .grid.cards a .twemoji { width: .9rem; height: .9rem; vertical-align: -.15em; }
+
+/* 5. 内容导航：强制对称网格（8 卡 → 4×2） */
+.md-typeset .grid.cards.bic-nav {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .8rem;
+}
+@media screen and (max-width: 56em) {
+  .md-typeset .grid.cards.bic-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media screen and (max-width: 32em) {
+  .md-typeset .grid.cards.bic-nav { grid-template-columns: 1fr; }
+}
+
+/* 6. 图片：悬浮光晕 + 轻微放大 */
 .md-typeset img:not(.twemoji) {
   box-shadow: var(--bic-shadow-sm), 0 0 0 1px rgba(255, 255, 255, .6) inset;
 }
-.md-typeset a > img:hover {
-  transform: scale(1.025);
-  box-shadow: 0 20px 46px -18px rgba(0, 184, 154, .55);
-}
+.md-typeset a > img:hover { transform: scale(1.03); box-shadow: 0 22px 50px -20px rgba(0, 184, 154, .55); }
 
-/* 3. 提示框：渐变描边加粗 + 悬浮抬升 + 顶部细高光 */
+/* 7. 提示框：更精致的彩色描边 + 悬浮抬升 + 顶部细高光 */
 .md-typeset .admonition, .md-typeset details {
-  border-left-width: 4px;
+  border-left-width: 4px; border-radius: 14px;
   transition: transform .25s ease, box-shadow .25s ease;
 }
 .md-typeset .admonition:hover, .md-typeset details:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 0 1px var(--bic-border) inset, 0 20px 44px -26px rgba(16, 48, 46, .4);
+  box-shadow: 0 0 0 1px var(--bic-border) inset, 0 22px 48px -28px rgba(16, 48, 46, .42);
 }
-.md-typeset .admonition > .admonition-title, .md-typeset details > summary {
-  position: relative;
-}
+.md-typeset .admonition > .admonition-title, .md-typeset details > summary { position: relative; }
 .md-typeset .admonition > .admonition-title::after, .md-typeset details > summary::after {
   content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px;
   background: linear-gradient(90deg, var(--bic-border-strong), transparent);
 }
 
-/* 4. 表格：吸顶表头（长表阅读更舒适） */
+/* 8. 表格：吸顶表头 + 外圈渐变描边 + 行高亮 */
+.md-typeset table:not([class]) {
+  border: 1px solid var(--bic-border); border-radius: 14px; overflow: hidden;
+  box-shadow: var(--bic-shadow-sm), 0 0 0 1px rgba(0, 184, 154, .08); font-size: .72rem;
+}
 .md-typeset table:not([class]) thead th {
   position: sticky; top: 0; z-index: 2;
+  background: linear-gradient(180deg, rgba(0, 184, 154, .16), rgba(28, 168, 232, .09));
   box-shadow: 0 1px 0 var(--bic-border-strong);
 }
+.md-typeset table:not([class]) tbody tr:hover { background: var(--md-accent-fg-color--transparent); }
 
-/* 5. 标题：去掉整行下边框，改为短渐变下划线（更现代） */
-.md-typeset h2 { border-bottom: none; padding-bottom: .55rem; }
-.md-typeset h2::after {
-  content: ""; display: block; width: 2.6rem; height: 3px; margin-top: .4rem;
-  border-radius: 3px; background: linear-gradient(90deg, var(--brand-cyan), var(--brand-blue));
+/* 9. 引用：更优雅的大引号 */
+.md-typeset blockquote {
+  border-left: 3px solid var(--md-accent-fg-color); border-radius: 0 12px 12px 0;
+  background: linear-gradient(90deg, var(--md-accent-fg-color--transparent), transparent 70%);
+  box-shadow: var(--bic-shadow-sm);
 }
 
-/* 6. 内容入场动效（轻微淡入上浮，提升"打开即高级"的观感） */
+/* 10. 列表：项目符号更精致 */
+.md-typeset ul > li::marker { color: var(--md-accent-fg-color); }
+
+/* 11. 入门路线：编号徽章感（圆点强化） */
+.roadmap__step::before {
+  width: .72rem; height: .72rem; border: 2px solid var(--md-accent-fg-color);
+  box-shadow: 0 0 0 5px var(--md-accent-fg-color--transparent);
+}
+.roadmap__step {
+  border: 1px solid var(--bic-border); border-radius: 16px; background: #fff;
+  box-shadow: var(--bic-shadow-sm);
+  transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+.roadmap__step:hover { transform: translateY(-3px); border-color: rgba(0, 184, 154, .45); box-shadow: 0 0 0 1px rgba(0, 184, 154, .22) inset, 0 24px 52px -32px rgba(0, 184, 154, .5); }
+
+/* 12. 页脚品牌化：深色渐变 + 社交图标胶囊 */
+.md-footer { background: linear-gradient(135deg, #0b2824 0%, #07201c 100%); border-top: 1px solid var(--bic-border); }
+.md-footer-meta { border-top: 1px solid rgba(255, 255, 255, .06); }
+.md-social__link {
+  width: 2rem; height: 2rem; border-radius: 999px; background: rgba(255, 255, 255, .06);
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: background .2s ease, transform .2s ease;
+}
+.md-social__link:hover { background: rgba(0, 184, 154, .2); transform: translateY(-2px); }
+
+/* 13. 侧边栏激活态更明显 */
+.md-nav__item--active > .md-nav__link, .md-nav__link--active {
+  box-shadow: inset 3px 0 0 var(--md-accent-fg-color);
+}
+
+/* 14. 内容入场动效（轻微淡入上浮，提升「打开即高级」观感） */
 @keyframes bic-rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
-.md-content__inner { animation: bic-rise .5s ease both; }
+.md-content__inner { animation: bic-rise .45s ease both; }
 .md-typeset .grid.cards > ul > li, .md-typeset .grid.cards > ol > li, .md-typeset .grid > .card,
-.roadmap__step, .features .feature { animation: bic-rise .5s ease both; }
+.roadmap__step, .features .feature { animation: bic-rise .45s ease both; }
 @media (prefers-reduced-motion: reduce) {
   .md-content__inner, .md-typeset .grid.cards > ul > li, .md-typeset .grid.cards > ol > li,
   .md-typeset .grid > .card, .roadmap__step, .features .feature, .hero::before { animation: none; }
 }
 
-/* 7. 页脚品牌化：深色渐变 + 社交图标成胶囊 */
-.md-footer { background: linear-gradient(135deg, #0b2824 0%, #07201c 100%); }
-.md-footer-meta { border-top: 1px solid rgba(255, 255, 255, .06); }
-.md-social__link {
-  width: 2rem; height: 2rem; border-radius: 999px;
-  background: rgba(255, 255, 255, .06);
-  display: inline-flex; align-items: center; justify-content: center;
-}
-.md-social__link:hover { background: rgba(0, 184, 154, .18); }
-
-/* 8. 侧边栏激活态更明显 */
-.md-nav__item--active > .md-nav__link,
-.md-nav__link--active { box-shadow: inset 3px 0 0 var(--md-accent-fg-color); }
-
-/* 9. 正文首段轻微强调（仅文章页，排除首页 hero），让开篇更有呼吸感 */
+/* 15. 正文首段轻微强调（仅文章页，排除首页 hero） */
 .md-content__inner:not(:has(.hero)) .md-typeset > p:first-of-type {
-  font-size: 0.82rem; line-height: 2; color: #2c4a48;
+  font-size: .82rem; line-height: 2; color: #2c4a48;
 }
+
+/* 16. 首页区块间距收紧（减少过大的留白） */
+.md-content__inner > .features { margin: 0 0 1.4rem; }
+.roadmap { margin: 1rem auto 1.6rem; }
+.cta { margin: 1.8rem auto 0; padding: 1.2rem 1.4rem; }
