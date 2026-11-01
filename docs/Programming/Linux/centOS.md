@@ -62,7 +62,7 @@ CentOS可以去官网下载最新版本：https://www.centos.org/download/
 
 同样，选择密码登录。
 
-​     ![img](https://qqadapt.qpic.cn/txdocdl/1004417556/81FACB71C068D70D04905A93583C537F/0)       输入相应的信息，就登录啦，腾讯云的密码是在购买后会给你发一个邮件，里面有密码，后面可以自己更改。
+     ![img](https://qqadapt.qpic.cn/txdocdl/1004417556/81FACB71C068D70D04905A93583C537F/0)       输入相应的信息，就登录啦，腾讯云的密码是在购买后会给你发一个邮件，里面有密码，后面可以自己更改。
 
 ![img](https://qqadapt.qpic.cn/txdocdl/1004417556/98EEF28DD2AE8137F74FBEAD85C6E936/0)
 
@@ -421,7 +421,7 @@ mv /root/bioinfo.txt /root/bioinfonotes.txt
 
 语法：#mkdir 需要创建的目录名	（可以是路径也可以是名称）
 
-​	  例如：在当前工作目录下创建一个名为RNASeqData的目录，然后可以在其中创建一个任意文件。
+	  例如：在当前工作目录下创建一个名为RNASeqData的目录，然后可以在其中创建一个任意文件。
 
 创建文件夹：
 
@@ -482,7 +482,7 @@ mv /data/RNASeqData /root/BioInfoFiles
 
 语法：#mv 需要重命名的文件夹 新的文件夹名称
 
-​	  例如：将当前目录下的BioInfoFiles目录重命名，新的名字叫做BioInfoData。
+	  例如：将当前目录下的BioInfoFiles目录重命名，新的名字叫做BioInfoData。
 
 ```
 mv BioInfoFiles BioInfoData
@@ -546,7 +546,7 @@ vim +/login ./passwd
 
 特别说明：
 
-​		以上三个打开文件的方法，都有一个共同的特点，当打开的文件不存在的时候，它会以新文件的方式进行打开。
+		以上三个打开文件的方法，都有一个共同的特点，当打开的文件不存在的时候，它会以新文件的方式进行打开。
 
 ## 三.vim的三种模式
 
@@ -804,11 +804,11 @@ vim /etc/passwd
 
 参数说明：
 
-​		在Linux中，经常会用到的用户修改的参数有2个。
+		在Linux中，经常会用到的用户修改的参数有2个。
 
-​		-l：表示给后面传递的用户修改用户名，语法格式：usermod -l 新的用户名 需要修改的用户名
+		-l：表示给后面传递的用户修改用户名，语法格式：usermod -l 新的用户名 需要修改的用户名
 
-​		-g：表示给后面传递的用户名修改用户组，语法格式：usermod –g 用户组id 需要修改的用户名
+		-g：表示给后面传递的用户名修改用户组，语法格式：usermod –g 用户组id 需要修改的用户名
 
 例如：将yunsen用户的用户名，修改成BioInfoNotes。
 
@@ -870,9 +870,9 @@ group文件中每个颜色所表达的含义:
 
 参数说明：
 
-​		常规的用户组编辑操作就需要了解用户组的重命名：
+		常规的用户组编辑操作就需要了解用户组的重命名：
 
-​		语法格式：#groupmod -n 新的用户组名 旧的用户组名
+		语法格式：#groupmod -n 新的用户组名 旧的用户组名
 
 例如：给创建好的用户组bioinfogroup进行重命名，新的名字叫BioInfoGroup。
 
@@ -948,7 +948,7 @@ groupmod -n BioInfoGroup bioinfogroup
 
 第一个情况：针对单个对象（ugo）的拆分
 
-​	给某个组成部分添加读权限：#chmod u+r,g+r,o+r 需要操作的文件/文件夹。
+	给某个组成部分添加读权限：#chmod u+r,g+r,o+r 需要操作的文件/文件夹。
 
 我首先创建一个RNASeq-Counts.txt文件，
 
@@ -1006,13 +1006,13 @@ total 0
 
 第二个情况：设置全部的组成部分：
 
-​	可以使用下面的这个语法：
+	可以使用下面的这个语法：
 
-​	#chmod a+r 文件		（表示给全部的组成部分添加读权限）
+	#chmod a+r 文件		（表示给全部的组成部分添加读权限）
 
-​	#chmod a-r 文件		（表示给全部的组成部分删减读权限）
+	#chmod a-r 文件		（表示给全部的组成部分删减读权限）
 
-​	#chmod a=rwx 文件	（表示给全部的组成部分权限设置成刻度可行可执行）
+	#chmod a=rwx 文件	（表示给全部的组成部分权限设置成刻度可行可执行）
 
 其中a表示全部（ugo组合）
 

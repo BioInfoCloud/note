@@ -359,7 +359,7 @@ surImdata = surImmue
 surImdata = data.matrix(surImdata) %>% as.data.frame()
 surImdata$SurvivalTime=surImdata$SurvivalTime/365  #如果以月为单位，除以30；以年为单位，除以365
 outSurImResults=data.frame()
-​
+
 for(gene in colnames(surImdata[,3:ncol(surImdata)])){
   a=surImdata[,gene]<=median(surImdata[,gene])
   diff=survdiff(Surv(SurvivalTime, VitalStatus) ~a,data = surImdata)
@@ -494,7 +494,7 @@ write.table(StageR,file=paste0(outputPath,"immueStageFig\\",clin,".xls"),
 
 链接：[https://pan.baidu.com/s/1uEhnIA4sCFr8RKX_LpkcSA](https://pan.baidu.com/s/1uEhnIA4sCFr8RKX_LpkcSA) 
 
-提取码：**v9tx **
+提取码：**v9tx**
 
 如果失效，后台回复：**TCGA-ImmuneInfiltration**
 

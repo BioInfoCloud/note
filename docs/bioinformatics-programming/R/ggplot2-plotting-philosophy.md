@@ -189,9 +189,9 @@ mar：以数值向量表示边界大小，顺序为"下、左、上、右"，单
 ```
 
 ## 二.ggplot2绘图框架
-### 1.geom_()与stat_()
+### 1. geom\_\*() 与 stat\_\*()
 
-geom_**()相关函数如下：
+`geom_*()` 相关函数如下：
 
 ![1609075535752-37f31826-7761-4d8e-ad5c-b88ba8611e49.png](./img/ggplot2-plotting-philosophy/1609075535752-37f31826-7761-4d8e-ad5c-b88ba8611e49-853561.png)
 
@@ -203,7 +203,7 @@ library(ggplot2)
 ls(pattern = "^geom_", env = as.environment("package:ggplot2"))
 ```
 
-stat_**()相关函数如下：
+`stat_*()` 相关函数如下：
 
 ```plain
 ls(pattern = "^stat_", env = as.environment("package:ggplot2"))

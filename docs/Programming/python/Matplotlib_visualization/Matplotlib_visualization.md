@@ -88,15 +88,15 @@ ax3 = fig.add_subplot(2, 2, 3)  # 创建第三个子图
 ax4 = fig.add_subplot(224)  # 创建第四个子图
 ```
 
-​
+
 ![png](output_7_0.png)
-​
+
 
 ### 2.3 plt.subplot函数创建坐标系
 
 plt.subplot函数是Matplotlib库中用于创建子图的函数之一，它可以在当前图形上创建一个新的子图，并返回该子图的轴坐标系对象。
 
-> plt.subplot(nrows, ncols, index, **kwargs)
+> `plt.subplot(nrows, ncols, index, **kwargs)`
 
 其中，参数的含义如下：
 
@@ -114,9 +114,9 @@ fig = plt.figure()
 ax1 = plt.subplot(2, 1, 1)
 ```
 
-​
+
 ![png](output_9_0.png)
-​
+
 
 ```python
 x = list(range(6))
@@ -129,9 +129,9 @@ plt.show()
 
 ```
 
-​
+
 ![png](output_10_0.png)
-​
+
 
 ### 2.4 plt.subplots()函数创建坐标系
 
@@ -157,9 +157,9 @@ ax[1,1].plot(x,y)
 plt.show()
 ```
 
-​
+
 ![png](output_12_0.png)
-​
+
 
 ### 2.5 plt.subplot2grid函数建立坐标系
 
@@ -177,7 +177,7 @@ plt.subplot2grid函数是Matplotlib库中用于创建子图的函数之一，它
     rowspan：表示子图跨越的行数，默认为0，表示不跨越。
     fig：表示要在哪个图形上创建子图，默认为当前图形。
 
-​
+
 
 ```python
 import matplotlib.pyplot as plt
@@ -197,9 +197,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-​
+
 ![png](output_14_0.png)
-​
+
 
 plt.subplots()与plt.subplot()plt.subplot2grid()的不同之处在于plt.subplot()plt.subplot2grid()每次只返回一个坐标系。plt.subplots()每次可以返回多个左边系。
 
@@ -209,11 +209,11 @@ plt.subplots()与plt.subplot()plt.subplot2grid()的不同之处在于plt.subplot
 
 **xlabel和ylabel方法**
 
-plt.xlabel(label, fontsize=None, **kwargs)：
+`plt.xlabel(label, fontsize=None, **kwargs)`：
 
     设置x轴的标签。label是标签的文本字符串，fontsize是标签字体大小，**kwargs是可选的其他参数。
 
-plt.ylabel(label, fontsize=None, **kwargs)：
+`plt.ylabel(label, fontsize=None, **kwargs)`：
 
     设置y轴的标签。同样，label是标签的文本字符串，fontsize是标签字体大小，**kwargs是可选的其他参数。
 
@@ -229,9 +229,9 @@ plt.ylabel("Income",fontsize = 10,color = "red")
 
     Text(0, 0.5, 'Income')
 
-​
+
 ![png](output_18_1.png)
-​
+
 
 颜色标签
 
@@ -253,9 +253,9 @@ plt.xticks(month,["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","N
 plt.show()
 ```
 
-​
+
 ![png](output_21_0.png)
-​
+
 
 ### 3.3 设置坐标轴刻度值范围
 
@@ -280,9 +280,9 @@ plt.ylim([-1.5, 1.5])
 plt.show()
 ```
 
-​
+
 ![png](output_23_0.png)
-​
+
 
 ## 4. 设置网格线
 
@@ -306,9 +306,9 @@ plt.grid(visible = True,linestyle = 'dashed',which='major',
 plt.show()
 ```
 
-​
+
 ![png](output_25_0.png)
-​
+
 
 ## 5. 设置图例
 
@@ -399,9 +399,9 @@ plt.legend(loc='upper left')
 plt.show()
 ```
 
-​
+
 ![png](output_28_0.png)
-​
+
 
 ```python
 import matplotlib.pyplot as plt
@@ -425,9 +425,9 @@ plt.gca().add_artist(l1)
 
     <matplotlib.legend.Legend at 0x2783f33f220>
 
-​
+
 ![png](output_29_1.png)
-​
+
 
 ## 6. 设置图表标题
 
@@ -451,9 +451,9 @@ plt.title("Monthly income in 2023",fontsize=16,
 plt.show()
 ```
 
-​
+
 ![png](output_31_0.png)
-​
+
 
 ## 7. 设置数据标签
 
@@ -486,9 +486,9 @@ plt.text(2, income[1], 'Data label', fontsize=14)
 plt.show()
 ```
 
-​
+
 ![png](output_33_0.png)
-​
+
 
 plt.text()函数只针对坐标轴的具体某一点（x，y），显示字符串s，如果要对整个图表显示数据标签，可以用for循环遍历
 
@@ -511,9 +511,9 @@ for i, j  in zip(month,income):
 plt.show()
 ```
 
-​
+
 ![png](output_35_0.png)
-​
+
 
 ## 8. 设置数据表
 
@@ -559,9 +559,9 @@ plt.xticks([])
 plt.show()
 ```
 
-​
+
 ![png](output_37_0.png)
-​
+
 
 ## 9. 绘图风格
 
@@ -633,9 +633,9 @@ plt.legend(loc='upper left')
 plt.show()
 ```
 
-​
+
 ![png](output_43_0.png)
-​
+
 
 ## 10. 动态rc参数
 
@@ -706,9 +706,9 @@ plt.legend(loc='upper left')
 plt.show()
 ```
 
-​
+
 ![png](output_50_0.png)
-​
+
 
 ### 10.2 坐标轴常用的rc参数
 
@@ -727,9 +727,9 @@ plt.plot(x, np.sin(x))
 plt.show()
 ```
 
-​
+
 ![png](output_52_0.png)
-​
+
 
 ### 10.3 字体常用的rc参数
 
@@ -777,9 +777,9 @@ plt.legend(loc='upper left')
 plt.show()
 ```
 
-​
+
 ![png](output_57_0.png)
-​
+
 
 ## 11. Matplotlib常用函数
 
@@ -834,7 +834,7 @@ help(matplotlib.pyplot.plot)
 
         When conflicting with *fmt*, keyword arguments take precedence.
 
-​
+
         **Plotting labelled data**
 
         There's a convenient way for plotting objects with labelled data (i.e.
@@ -847,7 +847,7 @@ help(matplotlib.pyplot.plot)
         All indexable objects are supported. This could e.g. be a `dict`, a
         `pandas.DataFrame` or a structured numpy array.
 
-​
+
         **Plotting multiple sets of data**
 
         There are various ways to plot multiple sets of data.
@@ -889,7 +889,7 @@ help(matplotlib.pyplot.plot)
         Alternatively, you can also change the style cycle using
         :rc:`axes.prop_cycle`.
 
-​
+
         Parameters
         ----------
         x, y : array-like or scalar
@@ -1090,7 +1090,7 @@ help(matplotlib.pyplot.plot)
         additionally use any  `matplotlib.colors` spec, e.g. full names
         (``'green'``) or hex strings (``'#008000'``).
 
-​
+
 
 ```python
 # 假设有三个分组，每个分组有 x 和 y 数据
@@ -1121,9 +1121,9 @@ plt.show()
 
 ```
 
-​
+
 ![png](output_61_0.png)
-​
+
 
 ### 11.2 scatter()
 
@@ -1147,9 +1147,9 @@ plt.ylabel('Y-axis')
 plt.show()
 ```
 
-​
+
 ![png](output_63_0.png)
-​
+
 
 ```python
 import matplotlib.pyplot as plt
@@ -1179,9 +1179,9 @@ plt.legend()
 plt.show()
 ```
 
-​
+
 ![png](output_64_0.png)
-​
+
 
 ### 11.3 bar()
 
@@ -1216,9 +1216,9 @@ plt.show()
 
 ```
 
-​
+
 ![png](output_68_0.png)
-​
+
 
 ```python
 import matplotlib.pyplot as plt
@@ -1254,9 +1254,9 @@ plt.show()
 
 ```
 
-​
+
 ![png](output_69_0.png)
-​
+
 
 ### 10.4 hist()
 
@@ -1306,9 +1306,9 @@ plt.ylabel('Frequency')
 plt.show()
 ```
 
-​
+
 ![png](output_73_0.png)
-​
+
 
 ### 10.5 bie()
 
@@ -1357,9 +1357,9 @@ plt.show()
 
 ```
 
-​
+
 ![png](output_77_0.png)
-​
+
 
 ### 10.6 boxplot
 
@@ -1412,9 +1412,9 @@ plt.show()
 
 ```
 
-​
+
 ![png](output_81_0.png)
-​
+
 
  ## 12. 基于Matplotlib 的其他可视化库
 
@@ -1553,9 +1553,9 @@ plt.show()
 
 ```
 
-​
+
 ![png](output_84_0.png)
-​
+
 
 ```python
 import seaborn as sns
@@ -1581,9 +1581,9 @@ plt.show()
 
 ```
 
-​
+
 ![png](output_85_0.png)
-​
+
 
 ```python
 import seaborn as sns
@@ -1605,9 +1605,9 @@ plt.show()
 
 ```
 
-​
+
 ![png](output_86_0.png)
-​
+
 
 #### （2）seaborn.barplot
 

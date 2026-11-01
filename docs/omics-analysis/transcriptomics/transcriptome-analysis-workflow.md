@@ -300,16 +300,16 @@ Output will be written into the directory: /data/RNAseq/cleandata/trim_galoredat
 AUTO-DETECTING ADAPTER TYPE
 ===========================
 Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> /data/RNAseq/CK-4_1.fq.gz <<)
-​
+
 Found perfect matches for the following adapter sequences:
 Adapter type    Count   Sequence        Sequences analysed      Percentage
 Illumina        28671   AGATCGGAAGAGC   1000000 2.87
 smallRNA        5       TGGAATTCTCGG    1000000 0.00
 Nextera 4       CTGTCTCTTATA    1000000 0.00
 Using Illumina adapter for trimming (count: 28671). Second best hit was smallRNA (count: 5)
-​
+
 Writing report to '/data/RNAseq/cleandata/trim_galoredata/CK-4_1.fq.gz_trimming_report.txt'
-​
+
 SUMMARISING RUN PARAMETERS
 ==========================
 Input filename: /data/RNAseq/CK-4_1.fq.gz
@@ -324,11 +324,11 @@ Maximum trimming error rate: 0.1 (default)
 Minimum required adapter overlap (stringency): 3 bp
 Minimum required sequence length for both reads before a sequence pair gets removed: 36 bp
 Output file(s) will be GZIP compressed
-​
+
 Cutadapt seems to be reasonably up-to-date. Setting -j 1
 Writing final adapter and quality trimmed output to CK-4_1_trimmed.fq.gz
-​
-​
+
+
   >>> Now performing quality (cutoff '-q 25') and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file /data/RNAseq/CK-4_1.fq.gz <<<
 ```
 
@@ -362,37 +362,37 @@ Maximum trimming error rate: 0.1 (default)
 Minimum required adapter overlap (stringency): 3 bp
 Minimum required sequence length for both reads before a sequence pair gets removed: 36 bp
 Output file will be GZIP compressed
-​
-​
+
+
 This is cutadapt 1.18 with Python 2.7.15
 Command line parameters: -j 1 -e 0.1 -q 25 -O 3 -a AGATCGGAAGAGC /data/RNAseq/CK-4_1.fq.gz
 Processing reads on 1 core in single-end mode ...
 Finished in 1496.55 s (62 us/read; 0.96 M reads/minute).
-​
+
 === Summary ===
-​
+
 Total reads processed:              23,985,482
 Reads with adapters:                 1,508,012 (6.3%)
 Reads written (passing filters):    23,985,482 (100.0%)
-​
+
 Total basepairs processed: 3,597,822,300 bp
 Quality-trimmed:               6,269,587 bp (0.2%)
 Total written (filtered):  3,567,424,870 bp (99.2%)
-​
+
 === Adapter 1 ===
-​
+
 Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 1508012 times.
-​
+
 No. of allowed errors:
 0-9 bp: 0; 10-13 bp: 1
-​
+
 Bases preceding removed adapters:
   A: 19.9%
   C: 34.7%
   G: 33.0%
   T: 12.4%
   none/other: 0.0%
-​
+
 Overview of removed sequences
 length  count  expect  max.err  error counts
 3  490193  374773.2  0  490193
@@ -543,8 +543,8 @@ length  count  expect  max.err  error counts
 148  22  0.4  1  0 22
 149  14  0.4  1  0 14
 150  344  0.4  1  4 340
-​
-​
+
+
 RUN STATISTICS FOR INPUT FILE: /data/RNAseq/CK-4_1.fq.gz
 =============================================
 23985482 sequences processed in total
@@ -627,7 +627,7 @@ RNA-seq 产生的 reads 可能跨越长度较大的内含子，哺乳动物中�
 HISAT2 version 2.1.0 by Daehwan Kim (infphilo@gmail.com, www.ccb.jhu.edu/people/infphilo)
 Usage:
   hisat2 [options]* -x <ht2-idx> {-1 <m1> -2 <m2> | -U <r>} [-S <sam>]
-​
+
   <ht2-idx>  Index filename prefix (minus trailing .X.ht2).
              索引文件的前缀
   <m1>       Files with #1 mates, paired with files in <m2>.
@@ -641,13 +641,13 @@ Usage:
              single-end测序的文件
   <sam>      File for SAM output (default: stdout)
              输出比对的结果（`.sam`）
-​
+
   <m1>, <m2>, <r> can be comma-separated lists (no whitespace) and can be
   specified many times.  E.g. '-U file1.fq,file2.fq -U file3.fq'.
   可以是多个序列文件用逗号分隔
-​
+
 Options (defaults in parentheses):
-​
+
  Input:
   -q                 query input files are FASTQ .fq/.fastq (default)
                      输入检索序列为FASTQG格式
@@ -673,7 +673,7 @@ Options (defaults in parentheses):
                      序列质量打分为Phred+64
   --int-quals        qualities encoded as space-delimited integers
                      序列质量打分为用空格分隔的整数
-​
+
  Alignment:
   --n-ceil <func>    func for max # non-A/C/G/Ts permitted in aln (L,0,0.15)
                      允许在比对结果中出现的最多非ACTG的计算函数
@@ -683,7 +683,7 @@ Options (defaults in parentheses):
                      不比对前向的read
   --norc             do not align reverse-complement version of read (off)
                      不比对后向的read
-​
+
  Spliced Alignment:
   --pen-cansplice <int>              penalty for a canonical splice site (0)
                                      对已知剪接位点的罚分
@@ -719,7 +719,7 @@ Options (defaults in parentheses):
                                      避免与假基因的比对
   --no-templatelen-adjustment        disables template length adjustment for RNA-seq reads
                                      不允许对reads的模板长度进行调整
-​
+
  Scoring:
   --mp <int>,<int>   max and min penalties for mismatch; lower qual = lower penalty <6,2>
                      不匹配的最大与最小罚分值，低质量对应低罚分
@@ -736,11 +736,11 @@ Options (defaults in parentheses):
   --score-min <func> min acceptable alignment score w/r/t read length
                      (L,0.0,-0.2)
                      相对read长度的最小接受比对分值
-​
+
  Reporting:
   -k <int> (default: 5) report up to <int> alns per read
                      对每个read只报告`<int>`个比对结果
-​
+
  Paired-end:
   -I/--minins <int>  minimum fragment length (0), only valid with --no-spliced-alignment
                      paired-end的最小片段长度
@@ -752,7 +752,7 @@ Options (defaults in parentheses):
                      不输出paired reads的不能匹配的比对结果
   --no-discordant    suppress discordant alignments for paired reads
                      不输出paired-reads的不统一的比对结果
-​
+
  Output:
   -t/--time          print wall-clock time taken by search phases
                      输出搜索阶段所花费的wall-clock时间
@@ -788,7 +788,7 @@ Options (defaults in parentheses):
                      将`<text>`加到SAM文件的`@RG`行
   --omit-sec-seq     put '*' in SEQ and QUAL fields for secondary alignments.
                      将"*"置于SEQ和QUAL两列中，进行二次比对
-​
+
  Performance:
   -o/--offrate <int> override offrate of index; must be >= index's offrate
                      重置索引的`offrate`，该值必须大于原有的`offrate`
@@ -798,7 +798,7 @@ Options (defaults in parentheses):
                      强制要求SAM输出顺序比对与输入reads一致
   --mm               use memory-mapped I/O for index; many 'hisat2's can share
                      使用内存映射的I/O作为索引
-​
+
  Other:
   --qc-filter        filter out reads that are bad according to QSEQ filter
                      根据QSEQ filter过滤输入的reads
@@ -1544,7 +1544,7 @@ cat cleandata/stringtiedata/gffcompare.stats
 # gffcompare v0.11.2 | Command line was:
 #gffcompare -r /data/mouse_annotation/gencode.mouse.annotation.gtf -G cleandata/stringtiedata/stringtie_merged.gtf -o cleandata/stringtiedata/gffcompare
 #
-​
+
 #= Summary for dataset: cleandata/stringtiedata/stringtie_merged.gtf
 #     Query mRNAs :  155156 in   54744 loci  (127176 multi-exon transcripts)
 #            (20889 multi-transcript loci, ~2.8 transcripts per locus)
@@ -1557,18 +1557,18 @@ cat cleandata/stringtiedata/gffcompare.stats
 Intron chain level:   100.0     |    91.4    |
   Transcript level:    99.5     |    92.1    |
        Locus level:    99.7     |    98.3    |
-​
+
      Matching intron chains:  116302
        Matching transcripts:  142855
               Matching loci:   54117
-​
+
           Missed exons:       0/451928  (  0.0%)
            Novel exons:    3037/433435  (  0.7%)
         Missed introns:       6/288208  (  0.0%)
          Novel introns:    2186/295137  (  0.7%)
            Missed loci:       0/54276  (  0.0%)
             Novel loci:     804/54744  (  1.5%)
-​
+
  Total union super-loci across all input datasets: 54744
 155156 out of 155156 consensus transcripts written in cleandata/stringtiedata/gffcompare.annotated.gtf (0 discarded as redundant)
 ```

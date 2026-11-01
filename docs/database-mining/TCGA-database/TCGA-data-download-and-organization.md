@@ -22,9 +22,9 @@ library(dplyr) #没有安装事先安装
 library(limma) #没有安装事先安装
 library(stringr) #没有安装事先安装
 ###---------------------------数据下载-------------------------#
-​
+
 ####网页在线下载数据是最新的
-​
+
 ###---------------------------数据处理-------------------------#
 ###---1.处理json文件----------------------
 jsonFile <- fromJSON(file="./metadata.cart.2020-05-10.json")
@@ -35,7 +35,7 @@ for(i in 1:length(jsonFile)){
   filesNameToBarcode <- rbind(filesNameToBarcode,data.frame(filesName = file_name,TCGA_Barcode = TCGA_Barcode))
 }
 rownames(filesNameToBarcode) <- filesNameToBarcode[,1]
-​
+
 ###-----2.读入转录组数据-----------
 filepath <- dir(path ="./data",pattern=".gz$",full.names = TRUE,recursive = T)
 exp <- data.frame()
@@ -55,7 +55,7 @@ for(wd in filepath){
   {exp <- merge(exp,oneSampExp,by = "Ensembl")}
 }
 exp$Ensembl <- substr(exp[,"Ensembl"],1,15)
-​
+
 ###-------3.处理gtf文件(用于基因注释文件)
 # 一个函数，通过gtf文件获取Ensemble_ID与基因名称的对应关系
 #gtf文件下载地址：https://www.gencodegenes.org/ 微信公众号:MedBioInfoCloud
@@ -82,18 +82,18 @@ get_map = function(input) {
 }
 EnsemblTOGenename <- get_map(".\\human.v33lift37.annotation.gtf")
 EnsemblTOGenename$Ensembl <- substr(EnsemblTOGenename[,"Ensembl"],1,15)
-​
+
 protein_coding <- EnsemblTOGenename[EnsemblTOGenename$gene_type == "protein_coding",]
 lncRNA <- EnsemblTOGenename[EnsemblTOGenename$gene_type  == "lncRNA",]
 ncRNA <- EnsemblTOGenename[grep("RNA$",EnsemblTOGenename$gene_type),]
-​
+
 #-------3.融合数据
 allGenesExp <- merge(protein_coding,exp,by="Ensembl")#包括假基因在内,后续不处理
 pcExp <- merge(protein_coding,exp,by="Ensembl") #编码蛋白的表达数据
 lncRNAExp <- merge(lncRNA,exp,by="Ensembl")#lncRNA的表达数据
 ncRNAExp <- merge(ncRNA,exp,by="Ensembl")#所有非编码RNA的表达数据
-​
-​
+
+
 #-------4.处理表达数据
 DLExpData <- function(Exp){ #处理表达数据的函数，返回一个列表
   Exp <- as.matrix(Exp)
@@ -123,11 +123,11 @@ DLExpData <- function(Exp){ #处理表达数据的函数，返回一个列表
               sampleNum = sampleNum ,sampleList = sampleList,
               note = "The column order in Exp is normal sample first,tumor sample last"))
 }
-​
+
 #-------4.1.处理编码蛋白的表达数据
 pcExpdata <- DLExpData(Exp = pcExp)
 save(pcExpdata,file = "pcExpdata.Rdata")
-​
+
 #-------4.2.处理lncRNA的表达数据
 lncRNAExpData <- DLExpData(Exp = lncRNAExp)
 save(lncRNAExpData,file = "lncRNAExpData.Rdata")
@@ -647,8 +647,7 @@ save(countExp,RPMExp,metaMatrix.MIR,file = "TCGA-COAD-miR-GDCRNATools.Rdata")
 
 ## 三. 临床数据的下载与整理
 
-关于TCGA的数据下载与整理，我之前已经发布了：[TCGA数据库：miRNA数据下载与整理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264993&idx=1&sn=8681cbce6c7314b6db27ad465434cf18&chksm=841ef39cb3697a8a1a64403e8a03317fbb19693dc547f674cbb9e0110eb4ba613d2713bf7aae&scene=21#wechat_redirect)[、ATAC-Seq数据的下载整理及其可视化](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265040&idx=2&sn=a617872e041cda6a90a7c7fb270e8a09&chksm=841efc6db369757b41989830a159d1e211a4e6f97290dab7dca7ef0151dcd182b4bbf5938bcb&scene=21#wechat_redirect)、[、RNA-Seq数据的下载与处理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265067&idx=1&sn=39c75f795ad560540e2309569a68c718&chksm=841efc56b3697540fc2443869d615ea48acd5e7c11f6ed5f910963bcb0dda613bdb69ef0da72&scene=21#wechat_redirect)，这里我介绍临床数据的下载与整理。本文是在之前的文章：[一文解决TCGA数据库临床数据下载与整理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264504&idx=1&sn=634bd925786a3193977342634b03acc3&chksm=841ef185b369789346bfbfbc315b9976bd14b9e25ed365c26522469e1ee102212c4b005bfb86&scene=21#wechat_redirect)的基础上在进一步处理，得到我们可以结合其他数据的进行分析的结果，**我的计划是，先把所有的数据下载整理介绍结束后，再进行后续的分析教程，因为很多分析都是很类似的，也没有必要单独的又弄一次，所以近期的文章都是数据的下载与处理。如果自己看代码就能看的懂，就参考文章：**[**一个R脚本解决某类功能基因(比如m6A甲基化)临床预后模型分析流程**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264561&idx=1&sn=9803278a0720ef02119f91841df44b70&chksm=841ef24cb3697b5ac4c1760012b0a48739a888130cc4c53e0909ff29a137f2c9c434b870ac58&scene=21#wechat_redirect)**和**[**肿瘤免疫细胞浸润与临床相关性分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264605&idx=1&sn=4c00f321b50a7a74d2842ed7cf097f7e&chksm=841ef220b3697b36b15486349d609b47dc2dbe21410a9cbad9071b15a6b4d40f671c62a2dcc4&scene=21#wechat_redirect)**，这也是我目前提供的分析的代码。但好像没有讲解，很多人是不懂的，特别是连R语言都不熟悉的同学，所以自己掂量一下，不行就一步一步走吧，希望我这个菜鸟也能教给别人一些目前网上找不到的基础教程。
-**
+关于TCGA的数据下载与整理，我之前已经发布了：[TCGA数据库：miRNA数据下载与整理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264993&idx=1&sn=8681cbce6c7314b6db27ad465434cf18&chksm=841ef39cb3697a8a1a64403e8a03317fbb19693dc547f674cbb9e0110eb4ba613d2713bf7aae&scene=21#wechat_redirect)[、ATAC-Seq数据的下载整理及其可视化](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265040&idx=2&sn=a617872e041cda6a90a7c7fb270e8a09&chksm=841efc6db369757b41989830a159d1e211a4e6f97290dab7dca7ef0151dcd182b4bbf5938bcb&scene=21#wechat_redirect)、[、RNA-Seq数据的下载与处理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265067&idx=1&sn=39c75f795ad560540e2309569a68c718&chksm=841efc56b3697540fc2443869d615ea48acd5e7c11f6ed5f910963bcb0dda613bdb69ef0da72&scene=21#wechat_redirect)，这里我介绍临床数据的下载与整理。本文是在之前的文章：[一文解决TCGA数据库临床数据下载与整理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264504&idx=1&sn=634bd925786a3193977342634b03acc3&chksm=841ef185b369789346bfbfbc315b9976bd14b9e25ed365c26522469e1ee102212c4b005bfb86&scene=21#wechat_redirect)的基础上在进一步处理，得到我们可以结合其他数据的进行分析的结果，**我的计划是，先把所有的数据下载整理介绍结束后，再进行后续的分析教程，因为很多分析都是很类似的，也没有必要单独的又弄一次，所以近期的文章都是数据的下载与处理。如果自己看代码就能看的懂，就参考文章：**[**一个R脚本解决某类功能基因(比如m6A甲基化)临床预后模型分析流程**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264561&idx=1&sn=9803278a0720ef02119f91841df44b70&chksm=841ef24cb3697b5ac4c1760012b0a48739a888130cc4c53e0909ff29a137f2c9c434b870ac58&scene=21#wechat_redirect)**和**[**肿瘤免疫细胞浸润与临床相关性分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264605&idx=1&sn=4c00f321b50a7a74d2842ed7cf097f7e&chksm=841ef220b3697b36b15486349d609b47dc2dbe21410a9cbad9071b15a6b4d40f671c62a2dcc4&scene=21#wechat_redirect)，这也是我目前提供的分析的代码。但好像没有讲解，很多人是不懂的，特别是连R语言都不熟悉的同学，所以自己掂量一下，不行就一步一步走吧，希望我这个菜鸟也能教给别人一些目前网上找不到的基础教程。
 
 [bilibili](https://player.bilibili.com/player.html?bvid=BV12p4y1D7cQ)
 
@@ -775,13 +774,13 @@ SNP所表现的多态性只涉及到单个碱基的变异，这种变异可由�
 
 从对生物的遗传性状的影响上来看，cSNP又可分为2种：一种是同义cSNP(synonymous cSNP),即SNP所致的编码序列的改变并不影响其所翻译的蛋白质的氨基酸序列，突变碱基与未突变碱基的含义相同；另一种是非同义cSNP(non-synonymous cSNP),指碱基序列的改变可使以其为蓝本翻译的蛋白质序列发生改变，从而影响了蛋白质的功能。这种改变常是导致生物性状改变的直接原因。cSNP中约有一半为非同义cSNP。
 
-先形成的SNP在人群中常有更高的频率，后形成的SNP所占的比率较低。各地各民族人群中特定SNP并非一定都存在，其所占比率也不尽相同，但大约有85%应是共通的。****
+先形成的SNP在人群中常有更高的频率，后形成的SNP所占的比率较低。各地各民族人群中特定SNP并非一定都存在，其所占比率也不尽相同，但大约有85%应是共通的。
 
 ### 2.数据下载
 
 这里下载方式采用网页筛选下载的方法，具体和之前的文章筛选条件一样。
 
-[TCGA数据库：miRNA数据下载与整理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264993&idx=1&sn=8681cbce6c7314b6db27ad465434cf18&chksm=841ef39cb3697a8a1a64403e8a03317fbb19693dc547f674cbb9e0110eb4ba613d2713bf7aae&scene=21#wechat_redirect)****
+[TCGA数据库：miRNA数据下载与整理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264993&idx=1&sn=8681cbce6c7314b6db27ad465434cf18&chksm=841ef39cb3697a8a1a64403e8a03317fbb19693dc547f674cbb9e0110eb4ba613d2713bf7aae&scene=21#wechat_redirect)
 
 [TCGA数据库：ATAC-Seq数据的下载整理及其可视化](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265040&idx=2&sn=a617872e041cda6a90a7c7fb270e8a09&chksm=841efc6db369757b41989830a159d1e211a4e6f97290dab7dca7ef0151dcd182b4bbf5938bcb&scene=21#wechat_redirect)
 
@@ -1079,11 +1078,11 @@ dev.off()
 #if (!requireNamespace("BiocManager", quietly = TRUE))
 #    install.packages("BiocManager")
 #BiocManager::install("ChIPseeker", version = "3.8")
-​
+
 #if (!requireNamespace("BiocManager", quietly = TRUE))
 #    install.packages("BiocManager")
 #BiocManager::install("TxDb.Hsapiens.UCSC.hg38.knownGene", version = "3.8")
-​
+
 #if (!requireNamespace("BiocManager", quietly = TRUE))
 #    install.packages("BiocManager")
 #BiocManager::install("org.Hs.eg.db", version = "3.8")
@@ -1139,7 +1138,7 @@ dev.off()
 
 ![1612871800739-720dfe46-ecbf-468e-9f05-fae72134ef42.png](./img/TCGA-data-download-and-organization/1612871800739-720dfe46-ecbf-468e-9f05-fae72134ef42-897456.png)
 
-**(4)****.热图**‍
+**(4)****.热图**
 
 ```plain
 ######热图

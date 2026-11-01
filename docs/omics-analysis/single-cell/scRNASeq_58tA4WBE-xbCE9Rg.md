@@ -225,7 +225,7 @@ cellranger mkfastq --id=tiny-bcl --run=cellranger-tiny-bcl-1.2.0 --csv=cellrange
 
 ![1650771780183-f6cd462a-01a0-4bf4-a038-e09668ac87cf.png](./img/58tA4WBE-xbCE9Rg/1650771780183-f6cd462a-01a0-4bf4-a038-e09668ac87cf-999179.png)
 
-运行时间根据系统资源的不同而不同，但是它不应该占用多于几分钟的时间。现在转到 fastq \_ path 目录。
+运行时间根据系统资源的不同而不同，但是它不应该占用多于几分钟的时间。现在转到 fastq_path 目录。
 
 ```shell
  cd tiny-bcl/outs/fastq_path/
@@ -387,7 +387,7 @@ pbmc_1k_v3_fastqs/pbmc_1k_v3_S1_L002_R2_001.fastq.gz
 pbmc_1k_v3_fastqs/pbmc_1k_v3_S1_L001_I1_001.fastq.gz
 ```
 
-现在你有了一个包含两组 FASTQ 文件的目录，可以看到它们是根据 bcl2fastq 变数命名原则命名的: Sample_S1_L00X_R1_001.fastq.gz。这些文件的名称表明它们都来自同一个名为 pbmc \_ 1k \_ v3的样本，并且这个库在两个lanes上运行，Lane 1: L001 和 lane 2: L002.。
+现在你有了一个包含两组 FASTQ 文件的目录，可以看到它们是根据 bcl2fastq 变数命名原则命名的: Sample_S1_L00X_R1_001.fastq.gz。这些文件的名称表明它们都来自同一个名为 pbmc_1k_v3的样本，并且这个库在两个lanes上运行，Lane 1: L001 和 lane 2: L002.。
 
 一旦你有了 FASTQ 文件和参考转录组，你就可以运行`cellranger count`了。
 

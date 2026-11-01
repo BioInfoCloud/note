@@ -162,7 +162,7 @@ GEO DataSet（GDSxxx）是GEO样本数据的精选集合。GDS记录代表了一
 
 4是根据作者进行筛选，个人感觉一般用不到。5是属性名称，表示数据来自于组织还是特定的细胞类型。6是指初版日期。
 
-上面是通过关键词检索，只是为了让大家了解一下检索页面，通常在文章中我们会看到作者都是用GSE\*\***号，我们知道GSE编号，我们也可以直接通过检索GSE编号获取信息，同时也可以通过GDS**\*,和GSM来检索。GSE编号检索比较常用。
+上面是通过关键词检索，只是为了让大家了解一下检索页面，通常在文章中我们会看到作者都是用 GSE 号，我们知道GSE编号，我们也可以直接通过检索GSE编号获取信息，同时也可以通过 GDS、GSM 来检索。GSE编号检索比较常用。
 
 GDS编号检索结果页面，以GDS402为例
 
@@ -1155,7 +1155,7 @@ getGEOSuppFiles("GSE140882", baseDir ="geodata", makeDirectory = T)
 getGEOSuppFiles("GSE59183", baseDir ="geodata", makeDirectory = T)
 ```
 
-下载后得到的原始数据文件GSE\*\*\*\_RAW.tar。我们解压到GSE\*\*\*\_RAW文件夹下。你需要查看一下里面有没有注释信息的文件，下面是3个不同的数据集，它们使用的是同一芯片。解压后会有相同的GPL文件。我们还可以看到，除了这2个文件，其他的GSM开头的就是样本数据文件，但他们个格式有所不同。前面说过Illumina芯片数据分析的4个起点： ① Pixel-level,每个像素点对应一个数据， tif/tiff 格式； ②  Bead-level,每个bead对应一个数据， 类似于affymetrix的单个probe数据， 具体数据包括txt/idat/Iocs/sdf/xml等多种格式； ③ Summary-level,每个bead type对应 —个数据，类似于affy的probe set数据， txt/CSV 格式； ④ 公共数据库存储的表达矩阵数据。这就看作者上传的是什么数据文件，通常都是 Bead-level的数据文件，所以会有txt/idat/Iocs/sdf/xml这样的数据格式文件，比如数据集GSE59183，而且该数据集还有tif格式的数据文件。但在GSE140882数据集中只有txt格式的Bead-level的数据。GSE32873数据集里面处理GPL文件外，就没有其他的，也就是说没有原始数据，所以该数据集你无法从原始数据开始分析，但作者提供了非标准化的表达矩阵文件。
+下载后得到的原始数据文件 `GSE<编号>_RAW.tar`。我们解压到同名文件夹下。你需要查看一下里面有没有注释信息的文件，下面是3个不同的数据集，它们使用的是同一芯片。解压后会有相同的GPL文件。我们还可以看到，除了这2个文件，其他的GSM开头的就是样本数据文件，但他们个格式有所不同。前面说过Illumina芯片数据分析的4个起点： ① Pixel-level,每个像素点对应一个数据， tif/tiff 格式； ②  Bead-level,每个bead对应一个数据， 类似于affymetrix的单个probe数据， 具体数据包括txt/idat/Iocs/sdf/xml等多种格式； ③ Summary-level,每个bead type对应 —个数据，类似于affy的probe set数据， txt/CSV 格式； ④ 公共数据库存储的表达矩阵数据。这就看作者上传的是什么数据文件，通常都是 Bead-level的数据文件，所以会有txt/idat/Iocs/sdf/xml这样的数据格式文件，比如数据集GSE59183，而且该数据集还有tif格式的数据文件。但在GSE140882数据集中只有txt格式的Bead-level的数据。GSE32873数据集里面处理GPL文件外，就没有其他的，也就是说没有原始数据，所以该数据集你无法从原始数据开始分析，但作者提供了非标准化的表达矩阵文件。
 
 ![1630458879744-f128b553-35ee-47f3-9210-080d7ff388ee.png](./img/microarray-data-analysis/1630458879744-f128b553-35ee-47f3-9210-080d7ff388ee-967990.png)
 

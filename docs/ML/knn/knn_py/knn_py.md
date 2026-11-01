@@ -250,9 +250,9 @@ pd.plotting.scatter_matrix(iris_dataframe, c=y_train, figsize=(15, 15), marker='
             <matplotlib.axes._subplots.AxesSubplot object at 0x000002079030DA58>]],
           dtype=object)
 
-​
+
 ![png](output_3_1.png)
-​
+
 
 ### （2）使用KNN对鸢尾花iris数据集进行分类。
 
@@ -989,6 +989,6 @@ plt.pcolormesh(X,Y,label,cmap=ColorMp)
 plt.show()
 ```
 
-​
+
 ![png](output_11_0.png)
-​
+

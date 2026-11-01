@@ -16,19 +16,19 @@ WGCNA其译为加权基因共表达网络分析。该分析方法旨在寻找协
 
 ![1650615619766-78d17742-430c-4d93-9d7d-e8af4efb7d6f.png](./img/WGCNA-analysis/1650615619766-78d17742-430c-4d93-9d7d-e8af4efb7d6f-147115.png)
 
-**共表达网络：**定义为加权基因网络。点代表基因，边代表基因表达相关性。加权是指对相关性值进行冥次运算(冥次的值也就是软阈值（power, pickSoftThreshold这个函数所做的就是确定合适的power）)。无向网络的边属性计算方式为  abs(cor(genex, geney)) ^ power；有向网络的边属性计算方式为 (1+cor(genex, geney)/2) ^  power; sign hybrid的边属性计算方式为cor(genex, geney)^power if cor>0 else  0。这种处理方式强化了强相关，弱化了弱相关或负相关，使得相关性数值更符合无标度网络特征，更具有生物意义。如果没有合适的power，一般是由于部分样品与其它样品因为某种原因差别太大导致的，可根据具体问题移除部分样品或查看后面的经验值。
+**共表达网络**：定义为加权基因网络。点代表基因，边代表基因表达相关性。加权是指对相关性值进行幂次运算（幂次的值也就是软阈值 power，pickSoftThreshold 这个函数所做的就是确定合适的 power）。无向网络的边属性计算方式为  abs(cor(genex, geney)) ^ power；有向网络的边属性计算方式为 (1+cor(genex, geney)/2) ^  power; sign hybrid的边属性计算方式为cor(genex, geney)^power if cor>0 else  0。这种处理方式强化了强相关，弱化了弱相关或负相关，使得相关性数值更符合无标度网络特征，更具有生物意义。如果没有合适的power，一般是由于部分样品与其它样品因为某种原因差别太大导致的，可根据具体问题移除部分样品或查看后面的经验值。
 
 **Module(模块)：**高度內连的基因集。在无向网络中，模块内是高度相关的基因。在有向网络中，模块内是高度正相关的基因。把基因聚类成模块后，可以对每个模块进行三个层次的分析：a. 功能富集分析查看其功能特征是否与研究目的相符；b. 模块与性状进行关联分析，找出与关注性状相关度最高的模块；c.  模块与样本进行关联分析，找到样品特异高表达的模块。
 
 **Connectivity (连接度)：**类似于网络中 “度”(degree)的概念。每个基因的连接度是与其相连的基因的边属性之和。
 
-**Module eigengene：**Eigengene（eigen +‎ gene），基因和样本构成的矩阵，[https://en.wiktionary.org/wiki/eigengene](https://en.wiktionary.org/wiki/eigengene) ，Module eigengene是一个基因模块的代表，通常定义为该模块内所有基因表达谱的第一主成分（PC1）。它代表了整个模块的基因表达谱，并用于计算模块与表型或其他基因模块之间的关联。
+**Module eigengene：**Eigengene（eigen + gene），基因和样本构成的矩阵，[https://en.wiktionary.org/wiki/eigengene](https://en.wiktionary.org/wiki/eigengene) ，Module eigengene是一个基因模块的代表，通常定义为该模块内所有基因表达谱的第一主成分（PC1）。它代表了整个模块的基因表达谱，并用于计算模块与表型或其他基因模块之间的关联。
 
 **Intramodular connectivity：**给定基因与给定Module内其他基因的关联度，判断基因所属关系。
 
 **Module membership: **给定基因表达谱与给定**Module**的eigengene的相关性。Module membership是一个基因表达谱与给定模块的Module eigengene之间的相关性度量。它表示了单个基因属于某个特定模块的程度。
 
-**Hub gene: **关键基因（连接度最多或连接多个模块的基因）。
+**Hub gene:**关键基因（连接度最多或连接多个模块的基因）。
 
 **邻近矩阵：**是图的一种存储形式，用一个一维数组存放图中所有顶点数据；用一个二维数组存放顶点间关系（边或弧）的数据，这个二维数组称为邻接矩阵；在WGCNA分析里面指的是基因与基因之间的相关性系数矩阵。 如果用了阈值来判断基因相关与否，那么这个邻近矩阵就是0/1矩阵，只记录基因相关与否。但是WGCNA没有用阈值来卡基因的相关性，而是记录了所有基因之间的相关性。
 

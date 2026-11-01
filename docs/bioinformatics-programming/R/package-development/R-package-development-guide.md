@@ -366,7 +366,7 @@ name：可以使用没有扩展名的名称，也可以使用NULL来根据脚本
 
 use_rmarkdown_template(   template_name ="Template Name",   template_dir =NULL,   template_description ="A description of the template",   template_create_dir =FALSE)
 
-### 5\*\*\*\*.Use_data()
+### 5. use_data()
 
 ```r
 use_data(...,   internal =FALSE,   overwrite =FALSE,   compress ="bzip2",   version =2)
@@ -378,7 +378,7 @@ internal ：如果为FALSE，则将每个对象保存在data/目录中自己的.
 
 overwrite : 默认情况下，use_data()不会覆盖现有文件。如果您真的想这样做，请将此设置为TRUE。
 
-**compress : **选择save()使用的压缩类型。应该是"gzip"， "bzip2"，或"xz"之一。
+**compress :**选择save()使用的压缩类型。应该是"gzip"， "bzip2"，或"xz"之一。
 
 version : 要使用的序列化格式版本。默认的2是从R 1.4.0到3.5.3。版本3从R 3.6.0开始成为默认版本，只能由R版本3.5.0及更高版本读取。
 

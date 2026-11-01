@@ -184,11 +184,11 @@ The hypothesis space,which defines the class of functions mapping the input spac
 
 预测值和实际值精确相等则“没有损失”为0，否则意味着“完全损失”，为1预测值和实际值精确相等有些过于严格，可以采用两者的差小于某个國值的方式。
 
-​       1,Y≠f(X)
+       1,Y≠f(X)
 
 L(Y,f(X))=  0,Y=f(X)
 
-​        1,|Y-f(X)|>=T
+        1,|Y-f(X)|>=T
 
 L(Y,f(X))= 0,|Y=f(X)|<T
 

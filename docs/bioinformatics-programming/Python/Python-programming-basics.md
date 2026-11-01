@@ -24,9 +24,9 @@ Downloads 》》Windows 跳转页面：<https://www.python.org/downloads/windows
 
 找到你要下载的版本：初学者，下载什么版本无所谓，对于开发来说都是选择稳定的版本比如3.6。当然，现在3.9也是稳定的了，有些特殊情况，某些包只在特定版本上能运行，但作为初学者，说这些就多余了，先把语法学会了，后面自己实战的时候，需要什么版本，重新安装一下就可以了，如果涉及到不同版本否需要使用，那后续了解一下Anaconda。
 
-**Note that Python 3.9+ *****cannot***** be used on Windows 7 or earlier. 当然，你是Windows 7系统，那么你就需要选择更老的版本了。**
+**Note that Python 3.9+ cannot be used on Windows 7 or earlier.** 当然，你是 Windows 7 系统，那么你就需要选择更老的版本了。
 
-**这里下载：Python 3.11.5和**[**Python 3.10.7 **](https://www.python.org/downloads/release/python-3107/)**的版本。**
+**这里下载：Python 3.11.5和**[**Python 3.10.7**](https://www.python.org/downloads/release/python-3107/)**的版本。**
 
 **快速找到这个版本的方法：在浏览器页面按Ctrl + F（和Excel和World一样，查找快捷键），输入版本号回车即可。**
 

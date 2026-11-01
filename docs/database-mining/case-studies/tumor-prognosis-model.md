@@ -20,9 +20,9 @@
 
 ➢ 数据整理
 
-➢ ****(比如m6A)相关基因表达
+➢ （比如 m6A）相关基因表达
 
-➢ ****(比如m6A)差异分析（[参考文章](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264493&idx=1&sn=2164cc4d202fc081551f8918c8cbd7a4&chksm=841ef190b36978866b9bd71a989960370614bf234453b3bd070a56fbe324deb4ecaea2305923&scene=21#wechat_redirect)）
+➢ （比如 m6A）差异分析（[参考文章](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264493&idx=1&sn=2164cc4d202fc081551f8918c8cbd7a4&chksm=841ef190b36978866b9bd71a989960370614bf234453b3bd070a56fbe324deb4ecaea2305923&scene=21#wechat_redirect)）
 
 ➢ 临床数据下载和整理（[参考文章](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264504&idx=1&sn=634bd925786a3193977342634b03acc3&chksm=841ef185b369789346bfbfbc315b9976bd14b9e25ed365c26522469e1ee102212c4b005bfb86&scene=21#wechat_redirect)）
 
@@ -102,7 +102,7 @@ ROC曲线
 
 ![1612611038785-0bdd4a5b-9f3c-4f2b-8fa9-138c8feb471b.png](./img/tumor-prognosis-model/1612611038785-0bdd4a5b-9f3c-4f2b-8fa9-138c8feb471b-929962.png)
 
-提取码：**2opw **
+提取码：**2opw**
 
 **代码出错的可能原因：**
 
@@ -123,10 +123,10 @@ FPKMDataPath <- ".\\01-RawData\\FPKM\\" # TCGA 下载的转录组数据
 jsonFilePath <- ".\\01-RawData\\FPKM-2020-03-09.json"# 转录组数据对应的json文件
 gtfFilesPath <- ".\\02-inputFiles\\human.v33lift37.annotation.gtf"#基因注释文件
 geneFilesPath <- ".\\02-inputFiles\\Genes.txt" #要分析的基因，比如m6A RNA甲基化相关基因
-​
+
 # 临床数据文件地址：TCGA下载的临床数据
 ClinicalDataPath <- ".\\01-RawData\\Clinical2020-03-09\\TSV\\clinical.tsv"
-​
+
 #############################上面代码地址注意修改
 setwd(".\\")
 dir.create("03-AnalysisResult")
@@ -222,7 +222,7 @@ get_map = function(input) {
                               stringsAsFactors = FALSE)
   return(EnsemblTOGene)
 }
-​
+
 ############一个函数，给一个Barcode向量，区分正常组织和肿瘤组织
 getSampleInfo <- function(Barcode){
   TumorBarcode <-c()
@@ -243,7 +243,7 @@ getSampleInfo <- function(Barcode){
               sampleNum = sampleNum ,sampleList = sampleList))
 }
 ############ 上面函数返回一个重新排序的Barcode列表
-​
+
 ############获取生存时间，clindataM应为读入的tsv文件
 getSurData <- function(clindataM){
   submitter_id <- c()
@@ -281,10 +281,10 @@ Files <-dir(path = ".\\",pattern="gz$") #查看满足条件文件
 library(R.utils)
 sapply(Files, gunzip) # 解压函数gunzip需要安装R.utils包
 setwd("..\\")
-​
+
 jsonFileInfo <- processingJsonFiles(jsonFile = jsonFilePath)
 write.table(jsonFileInfo,file = paste(outputPath[1],JsonFileInfoFM,sep = ""))
-​
+
 EnsemblTOGene <- get_map(gtfFilesPath)
 gtf_Ensembl_ID <- substr(EnsemblTOGene[,1],1,15)
 EnsemblTOGene <- data.frame(gtf_Ensembl_ID,EnsemblTOGene[,2])
@@ -314,7 +314,7 @@ for(txtFile in FileNames){
 }
 setwd("..\\") # 读完数据后返回工作目录
 print(paste("读取文件完毕,共读入",num,"个文件",sep = ""))
-​
+
 library(stringr)
 ids <- c(str_split(geneExpMatrix$Ensembl_ID,'[.]',simplify = T)[,1])
 # rownames(geneExpMatrix) <- geneExpMatrix$Ensembl_ID
@@ -324,7 +324,7 @@ Barcode <- colnames(geneExpMatrix)[3:length(colnames(geneExpMatrix))]
 print("开始数据整理排序")
 BarcodeSort <- getSampleInfo(Barcode)$BarcodeSort
 geneExpMatrix <- geneExpMatrix[,c("Ensembl_ID","gene_id",BarcodeSort)]
-​
+
 library(limma)
 geneNames<- geneExpMatrix[,"gene_id"]
 completeExpMatrix <- geneExpMatrix[,-c(1,2)]
@@ -335,24 +335,24 @@ completeExpMatrix <- as.data.frame(completeExpMatrix)
 completeExpMatrix <-t(completeExpMatrix)
 # 从数据集中删除零方差列，可以使用相同的apply 表达式，设置方差不等于零。completeExpMatrix <- completeExpMatrix[,which(apply(completeExpMatrix, 2, var)!=0)]
 completeExpMatrix <- t(completeExpMatrix)
-​
+
 #保存文件
 write.table(completeExpMatrix,file = paste(outputPath[1],completeExpMatrixFN,sep = ""),
             sep = "\t",row.names = T)
-​
+
 # 删除正常样本后的表达矩阵
 SampleInfo <- getSampleInfo(colnames(completeExpMatrix))
 conNum <- SampleInfo[["sampleNum"]][["NormalBarcode"]]#control组样品数目
 treatNum <- SampleInfo[["sampleNum"]][["TumorBarcode"]]#tumor组样品数目
-​
+
 SampleList <- SampleInfo[["sampleList"]]
 TumorSampleBarcode <- SampleList[which(SampleList$Type == "Tumor"),"ID"]
 onlyTumorExpMatrix <- completeExpMatrix[,TumorSampleBarcode]
-​
+
 onlyTumorExpMatrix <-t(onlyTumorExpMatrix)
 # 从数据集中删除零方差列，可以使用相同的apply 表达式，设置方差不等于零。onlyTumorExpMatrix <- onlyTumorExpMatrix[,which(apply(onlyTumorExpMatrix, 2, var)!=0)]
 onlyTumorExpMatrix <- t(onlyTumorExpMatrix)
-​
+
 write.table(onlyTumorExpMatrix,file = paste(outputPath[1],onlyTumorExpMatrixFN,sep = ""),
             sep = "\t",row.names = T)
 ######################################
@@ -365,22 +365,22 @@ gene <- read.table(geneFilesPath,header = F)
 yesgene <-intersect(gene[,1],as.vector(row.names(completeExpMatrix)))
 # 表达矩阵中没有的基因
 nogene <- setdiff(gene[,1],yesgene)
-​
+
 writeLines(c(paste("总共输入了",length(gene[,1]),"基因：",sep=""),
              paste("在表达矩阵中有的基因个数：",length(yesgene),sep=""),
              yesgene,paste("在表达矩阵中没有的基因个数：",length(nogene),sep=""),nogene),
            con=paste(outputPath[2],"filespec.txt",sep = ""),sep="\n")
-​
+
 inputGeneAllSampleExpMatrix <- as.matrix(completeExpMatrix[yesgene,])
 write.table(inputGeneAllSampleExpMatrix,
             file=paste(outputPath[2],inputGeneAllSampleExpMatrixFN,sep = ""),
             sep="\t",row.names=T,quote=F)
 inputGeneOnlyTumorExpMatrix <- inputGeneAllSampleExpMatrix[,TumorSampleBarcode]
-​
+
 write.table(inputGeneOnlyTumorExpMatrix,
             file=paste(outputPath[2],inputGeneOnlyTumorExpMatrixFN,sep = ""),
             sep="\t",row.names=T,quote=F)
-​
+
 #差异分析
 library("limma")
 grade <- c(rep(1,conNum),rep(2,treatNum))
@@ -412,19 +412,19 @@ sigDiffGeneExpResult[which(sigDiffGeneExpResult$logFC < 0), "up_down"] <- "Down"
 write.table(sigDiffGeneExpResult,
             file=paste(outputPath[2],sigDiffGeneExpResultFN,sep = ""),
             sep="\t",row.names=F,quote=F)
-​
+
 ###差异分析后相关基因的表达矩阵文件
 sigDiffGeneExpMatrix <- completeExpMatrix[sigDiffGeneExpResult$gene,]
 write.table(sigDiffGeneExpMatrix,
             file=paste(outputPath[2],sigDiffGeneExpMatrixFN,sep = ""),
             sep="\t",row.names=F,quote=F)
-​
+
 sigDiffGeneTumorExpMatrix <- completeExpMatrix[sigDiffGeneExpResult$gene,TumorSampleBarcode]
 write.table(sigDiffGeneTumorExpMatrix,
             file=paste(outputPath[2],sigDiffGeneTumorExpMatrixFN,sep = ""),
             sep="\t",row.names=F,quote=F)
 ###############
-​
+
 #####热图的绘制
 #install.packages("pheatmap")
 diffGeneExpHeatMapData=log2(sigDiffGeneExpMatrix+1)
@@ -432,7 +432,7 @@ library(pheatmap)
 Type=c(rep("N",conNum),rep("T",treatNum))
 names(Type)=colnames(diffGeneExpHeatMapData)
 Type=as.data.frame(Type)
-​
+
 pdf(paste(outputPath[2],diffgeneHeatMapFN,sep = ""),height=10,width=20)
 pheatmap(diffGeneExpHeatMapData,
          annotation=Type,
@@ -464,10 +464,10 @@ corrplot(corr=cor(cordata),
 )
 dev.off()
 ########################104
-​
+
 #######################肿瘤分型######################
 library(limma)
-​
+
 #聚类
 maxK=9
 library(ConsensusClusterPlus)
@@ -481,15 +481,15 @@ results <- ConsensusClusterPlus(sigDiffGeneTumorExpMatrix,
                                 distance="euclidean",
                                 seed=123456,
                                 plot="png")
-​
+
 #输出结果
 clusterNum <- 2                  #分几类，根据判断标准判断
 cluster <- results[[clusterNum]][["consensusClass"]]
 write.table(cluster,file=paste(outputPath[4],ClousterFN,sep = ""),
             sep="\t",quote=F,col.names=F)
-​
+
 ###################################105
-​
+
 ##############主成分分析#############
 #install.packages("ggplot2")
 #pca analysis
@@ -500,14 +500,14 @@ pcaData.class <- rownames(pcaData)
 pcaData.pca <- prcomp(pcaData, scale. = TRUE)                                  #PCA分析
 write.table(predict(pcaData.pca),file=paste(outputPath[5],PCAResultFN,sep = "")
             ,quote=F,sep="\t")        #输出新表
-​
+
 #可视化
 library(ggplot2)
 clusterInfo <- as.data.frame(cluster)
 group <- paste0("cluster",as.vector(clusterInfo[,1]))
 pcaPredict <- predict(pcaData.pca)
 PCA <- data.frame(PCA1 = pcaPredict[,1], PCA2 = pcaPredict[,2],group=group)
-​
+
 pdf(file=paste(outputPath[5],CloustePCAFigFN,sep = ""),height=10,width=13)#保存输入出文件
 ggplot(data = PCA, aes(PCA1, PCA2)) + geom_point(aes(color = group)) +
   theme_bw()+
@@ -515,11 +515,11 @@ ggplot(data = PCA, aes(PCA1, PCA2)) + geom_point(aes(color = group)) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 dev.off()
 ###################################106
-​
+
 options(stringsAsFactors = F)
 ClinicalData <- read.table(ClinicalDataPath,sep = "\t",header = T)
 ClinicalData <- ClinicalData[!duplicated(ClinicalData$submitter_id),]
-​
+
 pClinData <- ClinicalData[,c("submitter_id",
                              "gender",
                              "days_to_death",
@@ -529,7 +529,7 @@ pClinData <- ClinicalData[,c("submitter_id",
                              "ajcc_pathologic_t",
                              "ajcc_pathologic_n",
                              "ajcc_pathologic_m")]
-​
+
 surData <- getSurData(ClinicalData)
 clindata <- merge(surData,pClinData,by = "submitter_id")
 clindata$ajcc_pathologic_stage <- gsub("[A-D].*","",c(pClinData$ajcc_pathologic_stage))
@@ -541,7 +541,7 @@ clindata <- clindata[,c("submitter_id","SurvivalTime","VitalStatus",
                         "ajcc_pathologic_t",
                         "ajcc_pathologic_n",
                         "ajcc_pathologic_m")]
-​
+
 colnames(clindata) <- c("Barcode","SurvivalTime","VitalStatus","Stage","T","N","M")
 write.table(clindata,file=paste(outputPath[6],"clindata.txt",sep = ""),sep="\t",row.names=F,quote=F)
 #########
@@ -554,13 +554,13 @@ for(id in ClinBarcode){
 }
 ultiClindata <- data.frame(Barcodes=patientsID,clindata)
 ultiClindata <- ultiClindata[which(!is.na(ultiClindata$Barcodes)),]
-​
+
 write.csv(ultiClindata,
           file=paste(outputPath[6],ultiClinDataFN,sep = ""),
           row.names=F,quote=F)
 ##########
 options(stringsAsFactors = F)
-​
+
 clusterNum = clusterNum #聚类分为几类，可以更改
 SurD <- ultiClindata# read.csv(paste(outputPath[6],ultiClinDataFN,sep = ""),header = T)
 SurD <- SurD[which(SurD$SurvivalTime != "--"),]
@@ -577,7 +577,7 @@ Surdata$group <- classification
 #install.packages("survival")
 library(survival)
 diff <- survdiff(Surv(SurvivalTime, VitalStatus) ~ group,data = Surdata)
-​
+
 pValue <- 1-pchisq(diff$chisq,df=clusterNum-1)# df为自由度n-1
 if(pValue<0.001){
   pValue <- signif(pValue,4)
@@ -585,10 +585,10 @@ if(pValue<0.001){
 }else{
   pValue <- round(pValue,3)
 }
-​
+
 fit <- survfit(Surv(SurvivalTime, VitalStatus) ~ group, data = Surdata)
 summary(fit)# 查看5年生存率
-​
+
 pdf(file=paste(outputPath[7],"ClousterSurCurve.pdf",sep = ""),width = 5.5,height =5)
 plot(fit,
      lwd=2,
@@ -604,23 +604,23 @@ legend("topright",
 dev.off()
 ##############################108
 options(stringsAsFactors = F)
-​
+
 SurD <- ultiClindata# read.csv(paste(outputPath[6],ultiClinDataFN,sep = ""),header = T)
 SurD <- SurD[which(SurD$Stage != "--"),]
 SurD <- SurD[which(SurD$T != "--"),]
 SurD <- SurD[which(SurD$N != "--"),]
 SurD <- SurD[which(SurD$N != "NX"),]
 SurD <- SurD[which(SurD$M != "--"),]
-​
+
 if(length(grep("MX",SurD$M)) < nrow(SurD)/10){
   SurD <- SurD[which(SurD$M != "MX"),]
 }
-​
+
 rownames(SurD) <- SurD$Barcodes
 classification <- as.data.frame(cluster)
 classification <- classification[SurD$Barcodes,]
 classification <- paste0("Cluster",as.vector(classification))
-​
+
 SurD$Group <- classification
 ### 临床相关性检验：分型与临床症状的相关性检验
 trainFlag <- SurD[SurD[,"Group"]=="Cluster1",]
@@ -644,7 +644,7 @@ for(i in 5:(ncol(newTable)-1)){
   print(paste(colnames(newTable)[i],pvalue,sep=" "))
 }
 colnames(newTable) <- c(newLabels,"Group")
-​
+
 ######################################################
 #install.packages("pheatmap")
 library(pheatmap)
@@ -652,7 +652,7 @@ newTable <- newTable[order(newTable$Group),]
 row.names(newTable) <- newTable[,"Barcodes"]
 rt <- newTable[,-c(1:4)]
 ExpMatrix <- sigDiffGeneTumorExpMatrix[,rownames(rt)] #sigDiffGeneTumorExpMatrix来自102
-​
+
 pdf(paste(outputPath[8],"ClousterWithClinCor.pdf",sep = ""),height=6,width=10)
 pheatmap(ExpMatrix, annotation = rt,
          color = colorRampPalette(c("green", "white", "red"))(50),
@@ -675,22 +675,22 @@ coxSurdata <- data.matrix(SurD) ##因为数值是字符串类型
 coxSurdata <- as.data.frame(coxSurdata)
 coxSurdata$SurvivalTime <- coxSurdata$SurvivalTime/365
 coxSurdata <- data.frame(Barcodes=rownames(coxSurdata),coxSurdata)
-​
+
 coxExp <- sigDiffGeneTumorExpMatrix[,rownames(coxSurdata)]
 #sigDiffGeneTumorExpMatrix来自102
 coxExp <-t(coxExp)
 coxData <- data.frame(Barcodes = rownames(coxExp),coxExp)
 coxData <- merge(coxSurdata,coxData,by = "Barcodes")
-​
+
 ####开始单因素COX分析
 #install.packages('survival')
 #install.packages('forestplot')
-​
+
 library(survival)
 library(forestplot)
 options(forestplot_new_page = FALSE) # 在pdf文件中生成图形就在第一页，不声明会在第二页
 clrs <- fpColors(box="green",line="darkblue", summary="royalblue")   #定义森林图颜色
-​
+
 rt <- coxData[,-1]
 coxResult <- data.frame()
 for(i in colnames(rt[,3:ncol(rt)])){
@@ -705,7 +705,7 @@ for(i in colnames(rt[,3:ncol(rt)])){
                            pvalue=coxSummary$coefficients[,"Pr(>|z|)"])
   )
 }
-​
+
 write.table(coxResult,file =paste(outputPath[9],"coxResult.txt",sep = ""),sep = "\t")
 write.table(coxResult,file=paste(outputPath[9],"coxResult.xls",sep = ""),sep="\t",row.names=F,quote=F)
 #绘制森林图
@@ -744,7 +744,7 @@ library("survival")
 inputGene <-coxResult[which(coxResult$pvalue < 0.05),]$Gene
 lassoData <- coxData[,c("Barcodes","SurvivalTime","VitalStatus",inputGene)]
 row.names(lassoData) <-lassoData$Barcodes
-​
+
 rt <- lassoData[,-1]
 # x <- as.matrix(rt[,-c(1,2)]) # 这样转换后不能用于后面的分析，不是数字矩阵
 x <- data.matrix(rt[,c(3:ncol(rt))])#
@@ -759,14 +759,14 @@ pdf(paste0(outputPath[10],"cvfit.pdf"))
 plot(cvfit)
 abline(v=log(c(cvfit$lambda.min,cvfit$lambda.1se)),lty="dashed")
 dev.off()
-​
+
 coef <- coef(fit, s = cvfit$lambda.min)
 index <- which(coef != 0)
 actCoef <- coef[index]
 lassoGene <- row.names(coef)[index]# lassoGene=row.names(coef)[index]
 geneCoef <- cbind(Gene=lassoGene,Coef=actCoef)
 write.table(geneCoef,file=paste0(outputPath[10],"geneCoef.txt"),sep="\t",quote=F,row.names=F)
-​
+
 riskScore <- predict(cvfit, newx = x, s = "lambda.min",type="response")
 outCol <- c("SurvivalTime","VitalStatus",lassoGene)
 risk <- as.vector(ifelse(riskScore>median(riskScore),"high","low"))
@@ -785,7 +785,7 @@ pValue <- 1-pchisq(diff$chisq,df=1)
 pValue <- round(pValue,3)
 pValue <- signif(pValue,4)
 pValue <- format(pValue, scientific = TRUE)
-​
+
 fit <- survfit(Surv(SurvivalTime, VitalStatus) ~ risk, data = rt)
 summary(fit)    #查看五年生存率
 pdf(file=paste0(outputPath[11],"RiskSurvival.pdf"),width=5.5,height=5)
@@ -832,7 +832,7 @@ SurD <- SurD[which(SurD$T != "--"),]
 SurD <- SurD[which(SurD$N != "--"),]
 SurD <- SurD[which(SurD$N != "NX"),]
 SurD <- SurD[which(SurD$M != "--"),]
-​
+
 if(length(grep("MX",SurD$M)) < nrow(SurD)/10){
   SurD <- SurD[which(SurD$M != "MX"),]
 }
@@ -888,12 +888,12 @@ pheatmap(Exp, annotation=Type,
 dev.off()
 options(stringsAsFactors = F)
 ##############################################################
-​
+
 #读取lasso回归风险文件,lassoRisk.txt文件中 生存时间已经除了365
 lassoRisk <- read.table(paste0(outputPath[10],"lassoRisk.txt"),header=T,sep="\t",
                         check.names=F)    #读取lasso回归风险文件
 clinicalLassoRisk <- lassoRisk[,c("Barcodes","riskScore")]
-​
+
 #读取临床表型数据文件
 SurD <- ultiClindata# read.csv(paste(outputPath[6],ultiClinDataFN,sep = ""),header = T)
 SurD <- SurD[which(SurD$SurvivalTime != "--"),]
@@ -906,13 +906,13 @@ Surdata <- data.frame(Barcodes = rownames(Surdata),Surdata)
 TNMdata <- ultiClindata[,c("Barcodes","Stage","T","N","M")]
 clinIndeP <- merge(Surdata,TNMdata,by = "Barcodes")
 IndeProgData <- merge(clinIndeP,clinicalLassoRisk,by = "Barcodes")
-​
+
 IndeProgData <- IndeProgData[which(IndeProgData$Stage != "--"),]
 IndeProgData <- IndeProgData[which(IndeProgData$T != "--"),]
 IndeProgData <- IndeProgData[which(IndeProgData$N != "--"),]
 IndeProgData <- IndeProgData[which(IndeProgData$N != "NX"),]
 IndeProgData <- IndeProgData[which(IndeProgData$M != "--"),]
-​
+
 if(length(grep("MX",IndeProgData$M)) < nrow(IndeProgData)/10){
   IndeProgData <- IndeProgData[which(IndeProgData$M != "MX"),]
 }

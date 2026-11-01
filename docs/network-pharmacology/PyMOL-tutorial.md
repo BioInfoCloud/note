@@ -1108,7 +1108,7 @@ set
 
 安装方法2：
 
-**>>> **conda install -c menpo ffmpeg
+**>>>**conda install -c menpo ffmpeg
 
 #### 制作分子对接示例动画
 
@@ -1278,17 +1278,16 @@ PyMOL>distance saltbridge, (negative ), (positive ), 4.0, 0
 
 方法2 拓展成一个命令 saltbridge.py
 
-**frompymolimport** cmd
+```python
+from pymol import cmd
 
-**def** show_saltbridge(dist=4.0):
-
-cmd.select("negative","resn ASP+Glu and name OD\*+OE\*")
-
-cmd.select("positive","(resn Lys and name NZ) or (resn arg and name NE+NH\*)")
-
-cmd.distance("saltbridge","negative","positive",dist,0)
+def show_saltbridge(dist=4.0):
+    cmd.select("negative", "resn ASP+Glu and name OD*+OE*")
+    cmd.select("positive", "(resn Lys and name NZ) or (resn arg and name NE+NH*)")
+    cmd.distance("saltbridge", "negative", "positive", dist, 0)
 
 cmd.extend("show_saltbridge", show_saltbridge)
+```
 
 使用命令
 
@@ -1348,63 +1347,38 @@ PyMOL>loadxyzrgb test.xyzrgb
 
 #### 提取配体周围的位点
 
-**frompymolimport** cmd
+```python
+from pymol import cmd
+from pymol import util
 
-**frompymolimport** util
+# example 6SP6 KJK A
+def extractSiteByLig(pdbid, ligid, radius=4, chainid=None):
+    cmd.delete('all')
+    cmd.fetch(pdbid)
+    if not chainid:
+        cmd.select("ligall", "resn *%s*" % ligid)
+        atms_lig = cmd.get_model("ligall").atom
+        chains_lig = [atom.chain for atom in atms_lig]
+        chains_lig = list(set(chains_lig))
+        chainid = chains_lig[0]
+    cmd.select("lig_*%s*" % chainid, " chain *%s* and resn *%s* " % (chainid, ligid))
+    cmd.select("site", "byres (lig_*%s* expand *%s*)" % (chainid, radius))
+    cmd.create("pocket", "site")
+    cmd.disable("all")
+    cmd.enable("pocket")
+    cmd.do("as sticks,pocket")
+    util.cba(144, "pocket")
+    util.cba(120, "pocket and resn *%s*" % ligid)
+    newfile = "*%s*_*%s*_*%s*_*%s*.pdb" % (pdbid, ligid, chainid, radius)
+    cmd.save(newfile, "site")
 
-*# example 6SP6 KJK A*
-
-**def** extractSiteByLig(pdbid,ligid,radius=4,chainid=None):
-
-*'''*
-
-\_ '''\_
-
-cmd.delete('all')
-
-cmd.fetch(pdbid)
-
-**ifnot** chainid:
-
-cmd.select("ligall","resn *%s*"%ligid)
-
-atms_lig = cmd.get_model("ligall").atom
-
-chains_lig = \[ atom.chain **for** atom **in** atms_lig ]
-
-chains_lig = list(set(chains_lig))
-
-chainid = chains_lig\[0]
-
-cmd.select("lig\_*%s*"%chainid," chain *%s* and resn *%s* "%(chainid,ligid))
-
-cmd.select("site","byres (lig\_*%s* expand *%s*)"%(chainid,radius))
-
-cmd.create("pocket","site")
-
-cmd.disable("all")
-
-cmd.enable("pocket")
-
-cmd.do("as sticks,pocket")
-
-util.cba(144,"pocket")
-
-util.cba(120,"pocket and resn *%s*"%ligid)
-
-newfile="*%s***%s\_**%s\_**%s\_.pdb"%(pdbid,ligid,chainid,radius)
-
-cmd.save(newfile,"site")
-
-*# extractSiteByLig 6SP6, KJK*
-
-cmd.extend("extractSiteByLig",extractSiteByLig)
+# extractSiteByLig 6SP6, KJK
+cmd.extend("extractSiteByLig", extractSiteByLig)
 
 pdbid = '6SP6'
-
 ligid = 'KJK'
-
-extractSiteByLig(pdbid,ligid)
+extractSiteByLig(pdbid, ligid)
+```
 
 #### PyMol的宏录制
 

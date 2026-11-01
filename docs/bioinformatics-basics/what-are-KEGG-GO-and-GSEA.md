@@ -41,7 +41,7 @@ MSigDB（Molecular Signatures Database）数据库中定义了已知的基因集
 
 ![1704941697826-199bbfae-6fce-4a5b-881f-6e5485629828.png](./img/what-are-KEGG-GO-and-GSEA/1704941697826-199bbfae-6fce-4a5b-881f-6e5485629828-137024.png)
 
-**H: hallmark gene sets （效应）特征基因集合，共50组 ** ![1612588364735-ef7db912-fc27-4222-a5c9-5552432fcfe0.png](./img/what-are-KEGG-GO-and-GSEA/1612588364735-ef7db912-fc27-4222-a5c9-5552432fcfe0-667419.png)
+**H: hallmark gene sets （效应）特征基因集合，共50组** ![1612588364735-ef7db912-fc27-4222-a5c9-5552432fcfe0.png](./img/what-are-KEGG-GO-and-GSEA/1612588364735-ef7db912-fc27-4222-a5c9-5552432fcfe0-667419.png)
 
 点击相应的基因集就可以看到该基因集合的描述信息，如我们点击第一个：HALLMARK_ADIPOGENESIS，脂肪形成的基因集。我们可能要关注一下基因集合的数据文件，有很多种格式，grp，text，gmt，gmx以及xml格式。
 

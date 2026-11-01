@@ -312,7 +312,7 @@ OrgDb object:
 | UPSOURCENAME: Uniprot
 | UPSOURCEURL: http://www.UniProt.org/
 | UPSOURCEDATE: Thu Oct 18 05:22:10 2018
-​
+
 Please see: help('select') for usage information
 ```
 

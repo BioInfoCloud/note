@@ -1247,7 +1247,7 @@ Taobao     ==>          3
 Runoob: 2; Google: 1; Taobao: 3
 ```
 
-也可以通过在 table 变量前使用 ****** 来实现相同的功能：
+也可以通过在 table 变量前使用 `**` 来实现相同的功能：
 
 ```plain
 >>> table = {'Google': 1, 'Runoob': 2, 'Taobao': 3}
