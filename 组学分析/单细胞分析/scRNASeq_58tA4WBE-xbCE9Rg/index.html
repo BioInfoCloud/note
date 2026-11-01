@@ -9497,24 +9497,23 @@
 <p>单细胞测序技术以单个细胞作为对象，通过对单个细胞遗传物质均匀扩增，标记建库后进行测序，最后对单个细胞基因组或转录组展开数据分析，其技术原理主要包括单细胞分离、扩增测序和数据分析3方面。</p>
 <p>单细胞分离：主要包括荧光激活细胞分选法( flow- activated cell sorting ，FACS) 以及微流控分选法( microfluidics) 等。市场上，较成熟的商业单细胞测序公司主要有 10X Genomis 公司 的Chromium( 液滴法) 及 BD 公司的Ｒhapsody( 微孔法)。</p>
 <p><img alt="1650715301398-583322c5-222b-4ebc-bdfd-eae06ac16f8f.png" src="../img/58tA4WBE-xbCE9Rg/1650715301398-583322c5-222b-4ebc-bdfd-eae06ac16f8f-146047.png" /></p>
-<h3 id="1-10genomics">(1) <font style="color:rgb(18, 18, 18);">10×genomics技术</font><a class="headerlink" href="#1-10genomics" title="Permanent link">&para;</a></h3>
+<h3 id="1-10genomics">(1) 10×genomics技术<a class="headerlink" href="#1-10genomics" title="Permanent link">&para;</a></h3>
 <p><img alt="1650715398799-072b9eb2-cd03-4e93-b4af-1ec5d5ce45ff.png" src="../img/58tA4WBE-xbCE9Rg/1650715398799-072b9eb2-cd03-4e93-b4af-1ec5d5ce45ff-223725.png" /></p>
-<p><font style="color:rgb(18, 18, 18);">首先在凝胶微珠上种上特定的DNA片段，DNA片段由三部分组成：Barcode、UMI、PolyT组成。Barcode是16个碱基的长度。一共有400万种Barcode，一个微珠是对应于一种Barcode，通过这400万种Barcode，可以把凝胶微珠给区分开。UMI是一段随机序列，也就是说每一个DNA分子，都有自己的UMI序列。10个碱基长的UMI，有100万种序列的变化（4^10 = 1,048,576），UMI的作用是为了区分哪些哪些reads是来自于一个原始cDNA分子，区分基因片段重复还是duplication及区分是真实的SNP位点还是PCR产生的突变。</font></p>
+<p>首先在凝胶微珠上种上特定的DNA片段，DNA片段由三部分组成：Barcode、UMI、PolyT组成。Barcode是16个碱基的长度。一共有400万种Barcode，一个微珠是对应于一种Barcode，通过这400万种Barcode，可以把凝胶微珠给区分开。UMI是一段随机序列，也就是说每一个DNA分子，都有自己的UMI序列。10个碱基长的UMI，有100万种序列的变化（4^10 = 1,048,576），UMI的作用是为了区分哪些哪些reads是来自于一个原始cDNA分子，区分基因片段重复还是duplication及区分是真实的SNP位点还是PCR产生的突变。</p>
 <p><img alt="1650716254850-3916e61f-5b8a-4555-8def-b9dcec8aaf28.png" src="../img/58tA4WBE-xbCE9Rg/1650716254850-3916e61f-5b8a-4555-8def-b9dcec8aaf28-218835.png" /></p>
-<h4 id="3"><font style="color:rgb(18, 18, 18);">3'端文库的构建</font><a class="headerlink" href="#3" title="Permanent link">&para;</a></h4>
-<p><font style="color:rgb(18, 18, 18);">通过10×genomics仪器将单个细胞与单个凝胶微珠通过油相混在一起，形成油包水的小微滴，接下来把细胞膜破掉，让细胞当中的mRNA游离出来。游离出来的mRNA与小液滴中的水相混合，也就是和逆转录酶、结合在凝胶微珠上的核酸引物、以及dNTP底物相接触。接着，发生逆转录反应。mRNA与凝胶微珠上带标签的DNA分子相结合，在逆转录酶的作用下，逆转录出cDNA来。</font></p>
+<h4 id="3">3'端文库的构建<a class="headerlink" href="#3" title="Permanent link">&para;</a></h4>
+<p>通过10×genomics仪器将单个细胞与单个凝胶微珠通过油相混在一起，形成油包水的小微滴，接下来把细胞膜破掉，让细胞当中的mRNA游离出来。游离出来的mRNA与小液滴中的水相混合，也就是和逆转录酶、结合在凝胶微珠上的核酸引物、以及dNTP底物相接触。接着，发生逆转录反应。mRNA与凝胶微珠上带标签的DNA分子相结合，在逆转录酶的作用下，逆转录出cDNA来。</p>
 <p><img alt="1650719903977-60da27ca-09c5-4640-90d0-2794a45f9742.png" src="../img/58tA4WBE-xbCE9Rg/1650719903977-60da27ca-09c5-4640-90d0-2794a45f9742-266144.png" /></p>
 <p><img alt="1650719943046-b9188746-f30a-4418-87a9-12628964721d.png" src="../img/58tA4WBE-xbCE9Rg/1650719943046-b9188746-f30a-4418-87a9-12628964721d-654963.png" /></p>
 <p><img alt="1650719987086-0e52567d-beec-4fe7-8759-5513a1195d0d.png" src="../img/58tA4WBE-xbCE9Rg/1650719987086-0e52567d-beec-4fe7-8759-5513a1195d0d-373515.png" /></p>
 <p><img alt="1650720027867-db00de23-4746-4934-a798-4b34bd2ef97e.png" src="../img/58tA4WBE-xbCE9Rg/1650720027867-db00de23-4746-4934-a798-4b34bd2ef97e-824634.png" /></p>
-<p><font style="color:rgb(18, 18, 18);">把这个乳浊液当中所有的水相抽出来，也就是把所有带了标签的cDNA分子都抽出来，再把这些cDNA分子都加上接头，经过PCR扩增，做成illumina的测序文库，放到Illumina的测序仪上进行测序。</font></p>
+<p>把这个乳浊液当中所有的水相抽出来，也就是把所有带了标签的cDNA分子都抽出来，再把这些cDNA分子都加上接头，经过PCR扩增，做成illumina的测序文库，放到Illumina的测序仪上进行测序。</p>
 <p><img alt="1650720089204-56a23411-98f9-477c-8a95-c86452eb351b.png" src="../img/58tA4WBE-xbCE9Rg/1650720089204-56a23411-98f9-477c-8a95-c86452eb351b-135728.png" /></p>
 <p><img alt="1650720128929-b0f4a731-d222-4c8c-a287-572bafdfbd8c.png" src="../img/58tA4WBE-xbCE9Rg/1650720128929-b0f4a731-d222-4c8c-a287-572bafdfbd8c-205261.png" /></p>
-<p><font style="color:rgb(18, 18, 18);"></font></p>
-<h4 id="5"><font style="color:rgb(18, 18, 18);">5'端文库的构建</font><a class="headerlink" href="#5" title="Permanent link">&para;</a></h4>
-<p><font style="color:rgb(18, 18, 18);">与3’端文库的构建过程相似</font></p>
+<h4 id="5">5'端文库的构建<a class="headerlink" href="#5" title="Permanent link">&para;</a></h4>
+<p>与3’端文库的构建过程相似</p>
 <p><img alt="1650720197047-bd22c500-d426-4ba4-8f1a-2c0e0d9f56b5.png" src="../img/58tA4WBE-xbCE9Rg/1650720197047-bd22c500-d426-4ba4-8f1a-2c0e0d9f56b5-517573.png" /></p>
-<p>**<font style="color:#F5222D;">小提示：</font>**barcode和UMI是单细胞中常见的名词，barcode就像是每个凝胶微珠的身份证号码；而UMI则像是每个DNA标签分子的身份证号码。</p>
+<p>**小提示：**barcode和UMI是单细胞中常见的名词，barcode就像是每个凝胶微珠的身份证号码；而UMI则像是每个DNA标签分子的身份证号码。</p>
 <p>使用scRNA-seq，可以估计基因在细胞群的表达水平分布。</p>
 <p><img alt="1650716423508-d9c5aec5-055a-4160-9cf2-398cf1cd332e.png" src="../img/58tA4WBE-xbCE9Rg/1650716423508-d9c5aec5-055a-4160-9cf2-398cf1cd332e-463679.png" /></p>
 <p>scRNA-seq 非常适合研究细胞群的异质性。例如，识别组织的细胞类型，定义不同细胞类型的"转录指纹"，研究细胞分化，探索疾病或环境因素导致的细胞组成变化等。</p>
@@ -9524,7 +9523,7 @@
 <h1 id="rna">二. 如何开始单细胞RNA测序数据分析<a class="headerlink" href="#rna" title="Permanent link">&para;</a></h1>
 <p>在过去的 5 年中，单细胞方法能够在一次实验中监测数千个单个细胞的基因和蛋白质表达、遗传和表观遗传变化。随着测量的改进以及反应和测序成本的降低，这些数据集的大小正在迅速增加。关键瓶颈仍然是对单细胞实验产生的大量信息的分析。在这篇评论中，我们对分析管道进行了简化概述，因为它们通常在当今的现场使用。我们的目标是让研究人员从单细胞分析起步，以了解挑战和最常用的分析工具。此外，我们希望使其他人能够了解单细胞数据集的典型读数如何在已发表的文献中呈现。</p>
 <h2 id="1_1">1.背景<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h2>
-<p>基于下一代测序的单细胞基因表达分析在1992年首次被描述。2015年，开发了基于encapsulation和barcode的分析。在过去的5年里，单细胞分析变得大众化，大多数学术机构都有专门的核心设施来进行单细胞表达、表观基因组或其他分析。新的统计分析方法得到了迅速发展。一些分析平台也已经开发出来，如Seurat，它是用R 语言写的(<a href="https://satijalab.org/seurat/get_started.">https://satijalab.org/seurat/get_started.</a> html) ，用Python写的Scanpy (<a href="https://scanpy.readthedocs.io/en/">https://scanpy.readthedocs.io/en/</a> stable/tutorials.html)。在这里，我们回顾了基本的分析工具和概念。我们关注于<font style="color:rgb(18, 18, 18);">10×</font> Genomics数据，因为它们更常用(图1)。本文主要基于两个案例研究教程(<a href="https://www.">https://www.</a> github.com/theislab/single-cell-tutorial 和<a href="http://scrnaseqcourse.cog.sanger.">http://scrnaseqcourse.cog.sanger.</a>ac.uk/website/index.html)。</p>
+<p>基于下一代测序的单细胞基因表达分析在1992年首次被描述。2015年，开发了基于encapsulation和barcode的分析。在过去的5年里，单细胞分析变得大众化，大多数学术机构都有专门的核心设施来进行单细胞表达、表观基因组或其他分析。新的统计分析方法得到了迅速发展。一些分析平台也已经开发出来，如Seurat，它是用R 语言写的(<a href="https://satijalab.org/seurat/get_started.">https://satijalab.org/seurat/get_started.</a> html) ，用Python写的Scanpy (<a href="https://scanpy.readthedocs.io/en/">https://scanpy.readthedocs.io/en/</a> stable/tutorials.html)。在这里，我们回顾了基本的分析工具和概念。我们关注于10× Genomics数据，因为它们更常用(图1)。本文主要基于两个案例研究教程(<a href="https://www.">https://www.</a> github.com/theislab/single-cell-tutorial 和<a href="http://scrnaseqcourse.cog.sanger.">http://scrnaseqcourse.cog.sanger.</a>ac.uk/website/index.html)。</p>
 <p><img alt="1650869914724-993c95cd-f3a5-438e-91fe-c8a1d2fdeaac.png" src="../img/58tA4WBE-xbCE9Rg/1650869914724-993c95cd-f3a5-438e-91fe-c8a1d2fdeaac-871306.png" /></p>
 <h2 id="2_1">2.数据矩阵生成和质量控制<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h2>
 <p>单细胞分析的一个关键技术进步是barcode的发展，它允许大规模并行化，同时保持成本最低。barcode被添加到</p>
@@ -9746,7 +9745,7 @@ SraRunTable.txt： SRA文件描述。\
 <a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>bioconda/label/cf201901<span class="w"> </span>star
 </code></pre></div>
 <p>STAR比对需要索引， cellranger软件的索引包含基因组注释，这里可以直接使用这些数据来构建STAR</p>
-<p>比对的索引。<strong><font style="color:#E8323C;">注意：不同STAR软件版本构建的索引是不通用的，更换软件版本后需要重新构建索引。</font></strong></p>
+<p>比对的索引。<strong>注意：不同STAR软件版本构建的索引是不通用的，更换软件版本后需要重新构建索引。</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>STAR<span class="w"> </span>--runMode<span class="w"> </span>genomeGenerate<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>--genomeDir<span class="w"> </span>star_hg38_index<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>--genomeFastaFiles<span class="w"> </span>refdata-gexGRCh38-2020-A/fasta/genome.fa<span class="w"> </span><span class="se">\</span>
@@ -9766,13 +9765,13 @@ SraRunTable.txt： SRA文件描述。\
 <p><img alt="1651378437677-b0e64db3-d01d-4d81-bb10-fe7a403b4943.png" src="../img/58tA4WBE-xbCE9Rg/1651378437677-b0e64db3-d01d-4d81-bb10-fe7a403b4943-195202.png" /></p>
 <p>以SRR7722939为例</p>
 <p><img alt="1651378574114-6c5eb865-f216-488e-ac50-66493a27652a.png" src="../img/58tA4WBE-xbCE9Rg/1651378574114-6c5eb865-f216-488e-ac50-66493a27652a-015319.png" /></p>
-<p>• --genomeDir<font style="color:rgb(0,0,0);">： STAR索引所在目录\
-</font>• --readFilesCommand <font style="color:rgb(0,0,0);">zcat：使用zcat读取gz压缩格式文件\
-</font>• --readFilesIn<font style="color:rgb(0,0,0);">：读入fastq文件的路径，首先是R2，然后是R1\
-</font>• --soloOutFileNames<font style="color:rgb(0,0,0);">：输出文件夹名\
-</font>• --soloType CB_UMI_Simple<font style="color:rgb(0,0,0);">：文库类型\
-</font>• --soloCBwhitelist<font style="color:rgb(0,0,0);">：所有使用的barcode序列\
-</font>• --runThreadN<font style="color:rgb(0,0,0);">：服务器使用的线程数</font></p>
+<p>• --genomeDir： STAR索引所在目录\
+• --readFilesCommand zcat：使用zcat读取gz压缩格式文件\
+• --readFilesIn：读入fastq文件的路径，首先是R2，然后是R1\
+• --soloOutFileNames：输出文件夹名\
+• --soloType CB_UMI_Simple：文库类型\
+• --soloCBwhitelist：所有使用的barcode序列\
+• --runThreadN：服务器使用的线程数</p>
 <p>STARsolo的结果与cellranger count的结果相同， cellranger count也是调用STAR进行比对。STARsolo的运行速度比cellranger count快10倍。</p>
 <p><img alt="1651378743825-7871882b-5b60-497b-bfb0-eead68136aad.png" src="../img/58tA4WBE-xbCE9Rg/1651378743825-7871882b-5b60-497b-bfb0-eead68136aad-096378.png" /></p>
 <p>• Barcodes.stats：对Barcode代码的统计。</p>
@@ -9809,7 +9808,7 @@ SraRunTable.txt： SRA文件描述。\
 <p>下载好的文件名为mart_export.txt，内容如左图，修改mart_export.txt文件名为txp2gene.tsv。</p>
 <h1 id="_3">四.单细胞下游分析<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
 <h2 id="1_4">1.数据读入<a class="headerlink" href="#1_4" title="Permanent link">&para;</a></h2>
-<p>Cell Ranger生成的主要表格文件主要包括3个文件，分别是barcodes, features, matrix三个表格文件，其中barcodes文件存储的是细胞的信息，features存储的是基因的名称信息，matrix存储的是表达量的信息。还有一种数据是作者在GEO数据库<font style="color:rgb(43, 43, 43);">直接提供表达矩阵（csv或txt）</font></p>
+<p>Cell Ranger生成的主要表格文件主要包括3个文件，分别是barcodes, features, matrix三个表格文件，其中barcodes文件存储的是细胞的信息，features存储的是基因的名称信息，matrix存储的是表达量的信息。还有一种数据是作者在GEO数据库直接提供表达矩阵（csv或txt）</p>
 <h3 id="1csvseurat">(1).读入csv文件的表达矩阵构建Seurat对象<a class="headerlink" href="#1csvseurat" title="Permanent link">&para;</a></h3>
 <p>Seurat需要的输入信息为表达量矩阵，矩阵行为基因，列为细胞。使用Seurat提供的Read10X函数可以很方便的将10x结果读入到R矩阵中。使用CreateSeuratObject生成Seurat对象，后续分析都是在该对象上进行操作。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nf">rm</span><span class="p">(</span><span class="n">list</span><span class="o">=</span><span class="nf">ls</span><span class="p">())</span>
@@ -9857,13 +9856,13 @@ SraRunTable.txt： SRA文件描述。\
 <a id="__codelineno-31-19" name="__codelineno-31-19" href="#__codelineno-31-19"></a><span class="n">main_tiss_filtered</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">subset</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">main_tiss</span><span class="p">,</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nCount_RNA</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">50000</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">nFeature_RNA</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">500</span><span class="p">)</span>
 <a id="__codelineno-31-20" name="__codelineno-31-20" href="#__codelineno-31-20"></a><span class="n">main_tiss_filtered</span>
 </code></pre></div>
-<p><font style="color:rgb(0, 0, 0);">我们得到了main_tiss_filtered这个变量，是一个Seurat对象，就可以follow我们的教程后后续分析流程啦。参考代码仍然是：</font></p>
+<p>我们得到了main_tiss_filtered这个变量，是一个Seurat对象，就可以follow我们的教程后后续分析流程啦。参考代码仍然是：</p>
 <ul>
 <li><a href="https://mp.weixin.qq.com/s?__biz=MzAxMDkxODM1Ng==\&amp;mid=2247495635\&amp;idx=1\&amp;sn=b80a060573dfc266fe9d4c7773c88c7f\&amp;scene=21#wechat_redirect">祖传的单个10x样本的seurat标准代码</a></li>
 <li><a href="https://mp.weixin.qq.com/s?__biz=MzAxMDkxODM1Ng==\&amp;mid=2247495646\&amp;idx=1\&amp;sn=b24b77c21e99f11793ae8166be9ad02f\&amp;scene=21#wechat_redirect">祖传的单个10x样本的seurat标准代码（人和鼠需要区别对待）</a></li>
 <li><a href="https://mp.weixin.qq.com/s?__biz=MzAxMDkxODM1Ng==\&amp;mid=2247495874\&amp;idx=1\&amp;sn=1189c08b96ce1ea2c70964db93f480d6\&amp;scene=21#wechat_redirect">seurat标准流程实例之2个10x样本的项目（GSE135927数据集）</a></li>
 </ul>
-<h3 id="210x3">(2).读入<font style="color:rgb(43, 43, 43);">10X标准输出的3个文件和融合多个样本数据</font><a class="headerlink" href="#210x3" title="Permanent link">&para;</a></h3>
+<h3 id="210x3">(2).读入10X标准输出的3个文件和融合多个样本数据<a class="headerlink" href="#210x3" title="Permanent link">&para;</a></h3>
 <p>这三个文件指的是：barcodes.tsv, features.tsv, matrix.mtx。这个情况就比较好处理了，barcodes.tsv就是 cell id，features.tsv就是 gene id，matrix.mtx就是计数 counts 矩阵。</p>
 <p><img alt="1664708163120-297c2331-c7e1-405a-83a6-be8a19007552.png" src="../img/58tA4WBE-xbCE9Rg/1664708163120-297c2331-c7e1-405a-83a6-be8a19007552-622726.png" /></p>
 <p>例如：</p>
@@ -9964,7 +9963,7 @@ SraRunTable.txt： SRA文件描述。\
 <a id="__codelineno-33-33" name="__codelineno-33-33" href="#__codelineno-33-33"></a><span class="nf">library</span><span class="p">(</span><span class="n">stringr</span><span class="p">)</span><span class="w"> </span>
 <a id="__codelineno-33-34" name="__codelineno-33-34" href="#__codelineno-33-34"></a><span class="nf">table</span><span class="p">(</span><span class="n">sce.all</span><span class="o">$</span><span class="n">orig.ident</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="3h5">(3).读入<font style="color:rgb(43, 43, 43);">h5格式文件</font><a class="headerlink" href="#3h5" title="Permanent link">&para;</a></h3>
+<h3 id="3h5">(3).读入h5格式文件<a class="headerlink" href="#3h5" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="c1">############### h5格式文件 ##############</span>
 <a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="c1"># 读取单个</span>
 <a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="n">sce</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">Read10X_h5</span><span class="p">(</span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"GSM4107899_LH16.3814_raw_gene_bc_matrices_h5.h5"</span><span class="p">)</span>
@@ -9996,8 +9995,8 @@ SraRunTable.txt： SRA文件描述。\
 <a id="__codelineno-34-29" name="__codelineno-34-29" href="#__codelineno-34-29"></a><span class="c1"># 保存：</span>
 <a id="__codelineno-34-30" name="__codelineno-34-30" href="#__codelineno-34-30"></a><span class="nf">save</span><span class="p">(</span><span class="n">sce_big</span><span class="p">,</span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'sce_big.Rdata'</span><span class="p">)</span><span class="w"> </span><span class="c1"># 保存的数据</span>
 </code></pre></div>
-<h3 id="4-h5ad">(4)<font style="color:rgb(43, 43, 43);">. h5ad格式</font><a class="headerlink" href="#4-h5ad" title="Permanent link">&para;</a></h3>
-<p><font style="color:rgb(34, 34, 34);">需要安装</font><font style="color:rgb(53, 148, 247);">SeuratDisk</font><font style="color:rgb(34, 34, 34);">包，先将后</font><font style="color:rgb(53, 148, 247);">h5ad</font><font style="color:rgb(34, 34, 34);">格式转换为</font><font style="color:rgb(53, 148, 247);">h5seurat</font><font style="color:rgb(34, 34, 34);">格式，再使用</font><font style="color:rgb(53, 148, 247);">LoadH5Seurat()</font><font style="color:rgb(34, 34, 34);">函数读取Seurat对象。</font></p>
+<h3 id="4-h5ad">(4). h5ad格式<a class="headerlink" href="#4-h5ad" title="Permanent link">&para;</a></h3>
+<p>需要安装SeuratDisk包，先将后h5ad格式转换为h5seurat格式，再使用LoadH5Seurat()函数读取Seurat对象。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="c1">############### h5ad格式文件 ##############</span>
 <a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="nf">setwd</span><span class="p">(</span><span class="s">"../GSE153643_RAW/"</span><span class="p">)</span>
 <a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="c1"># remotes::install_github("mojaveazure/seurat-disk")</span>
@@ -10010,7 +10009,7 @@ SraRunTable.txt： SRA文件描述。\
 <a id="__codelineno-35-10" name="__codelineno-35-10" href="#__codelineno-35-10"></a><span class="c1"># 再使用`LoadH5Seurat()`函数读取Seurat对象。</span>
 <a id="__codelineno-35-11" name="__codelineno-35-11" href="#__codelineno-35-11"></a><span class="n">sce</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">LoadH5Seurat</span><span class="p">(</span><span class="s">"GSM4648565_liver_raw_counts.h5seurat"</span><span class="p">)</span>
 </code></pre></div>
-<h2 id="2_4"><font style="color:rgb(34, 34, 34);">2.数据质控</font><a class="headerlink" href="#2_4" title="Permanent link">&para;</a></h2>
+<h2 id="2_4">2.数据质控<a class="headerlink" href="#2_4" title="Permanent link">&para;</a></h2>
 <p>可参考：<a href="https://mp.weixin.qq.com/s/g_tAhFQfr2IhFyHxzcFRTg">https://mp.weixin.qq.com/s/g_tAhFQfr2IhFyHxzcFRTg</a></p>
 <p>质控的目的是去除掉低质量的数据，包括破损或死亡的细胞、没捕获到细胞的empty droplet和捕获到2个以上细胞的doublets。一般低质量的细胞或者empty droplet通常含有很少的基因，而doublets容易测到更多的基因。另一方面，低质量或者死亡细胞会测到更多的线粒体基因表达的RNA。</p>
 <p>使用PercentageFeatureSet函数评估每个细胞中的线粒体表达比例：</p>
@@ -10110,12 +10109,12 @@ SraRunTable.txt： SRA文件描述。\
 <p>pattern = "^MT-"表示线粒体基因的匹配模式，人的线粒体基因以MT-为前缀，小鼠的以Mt-为前缀。</p>
 <p>Seurat对象在生成时，已经将每个细胞表达的基因数和reads数记录在meta.data的nFeature_RNA和nCount_RNA中。我们使用VlnPlot函数将nFeature_RNA、nCount_RNA和percent.mt三个指标进行可视化。</p>
 <h2 id="3_2">3.数据标准化<a class="headerlink" href="#3_2" title="Permanent link">&para;</a></h2>
-<p><font style="color:rgb(34, 34, 34);">基因的表达矩阵需要经过标准化后才能进行后续的分析。使用NormalizeData函数进行标准化，</font>normalization.method：标准化方法，可选项，</p>
+<p>基因的表达矩阵需要经过标准化后才能进行后续的分析。使用NormalizeData函数进行标准化，normalization.method：标准化方法，可选项，</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>-  logNormalize： log(每个细胞的特征counts/细胞count总数*scale.factor)
 <a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>- CLR：中心化对数标准化
 <a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>- RC：相对计数，计算公式同logNormalize，不取log，计算CPM表达量，设置scale.factor=1e6
 </code></pre></div>
-<p><font style="color:rgb(34, 34, 34);">课选择LogNormalize：</font></p>
+<p>课选择LogNormalize：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="n">sce.all.filt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">NormalizeData</span><span class="p">(</span><span class="n">sce.all.filt</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="4_1">4.细胞周期分析<a class="headerlink" href="#4_1" title="Permanent link">&para;</a></h2>
@@ -10139,11 +10138,11 @@ SraRunTable.txt： SRA文件描述。\
 <p><img alt="1664718782483-6a1e1b42-ae8b-4d25-8d85-8c9c17e77bfd.png" src="../img/58tA4WBE-xbCE9Rg/1664718782483-6a1e1b42-ae8b-4d25-8d85-8c9c17e77bfd-454485.png" /></p>
 <p>如上是Seurat包提供的人的细胞中分别与S期、G2M期直接相关的marker基因。</p>
 <p>CellCycleScoring即根据此，对每个细胞的S期、G2M期可能性进行打分；具体如何计算的，暂时在Seurat官方文档中没有提及。在satijalab的github(<a href="https://github.com/satijalab/seurat/issues/728">https://github.com/satijalab/seurat/issues/728)</a>)中，作者这样回复类似的提问：</p>
-<p><font style="background-color:#BFBFBF;">As we say in the vignette, the scores are computed using an algorithm developed by Itay Tirosh, when he was a postdoc in the Regev Lab (Science et al., 2016). The gene sets are also taken from his work.</font></p>
-<p><font style="background-color:#BFBFBF;">You can read the methods section of </font><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4944528/"><font style="background-color:#BFBFBF;">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4944528/</font></a><font style="background-color:#BFBFBF;"> to see how the scoring works, but essentially the method scores cells based on the expression of each gene in a signature set - after controlling for the expected expression of genes with similar abundance. </font></p>
-<p><font style="color:rgb(0, 0, 0);">结合一些中文教程（</font><font style="color:rgb(255, 0, 0);">https://www.jianshu.com/p/e4a5b5c67de1</font><font style="color:rgb(0, 0, 0);">)的介绍，认为就是根据每个细胞的S期(或者G2/M期)基因集是否显著高表达，对应的score就是表示在该细胞中，S期(或者G2/M期)基因集高表达的程度(如果是负数，就认为不属于该phase)。</font></p>
+<p>As we say in the vignette, the scores are computed using an algorithm developed by Itay Tirosh, when he was a postdoc in the Regev Lab (Science et al., 2016). The gene sets are also taken from his work.</p>
+<p>You can read the methods section of <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4944528/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4944528/</a> to see how the scoring works, but essentially the method scores cells based on the expression of each gene in a signature set - after controlling for the expected expression of genes with similar abundance. </p>
+<p>结合一些中文教程（https://www.jianshu.com/p/e4a5b5c67de1)的介绍，认为就是根据每个细胞的S期(或者G2/M期)基因集是否显著高表达，对应的score就是表示在该细胞中，S期(或者G2/M期)基因集高表达的程度(如果是负数，就认为不属于该phase)。</p>
 <p><img alt="1664719053951-445ac683-7cb0-42d9-aee1-9037c3d134c0.jpeg" src="../img/58tA4WBE-xbCE9Rg/1664719053951-445ac683-7cb0-42d9-aee1-9037c3d134c0-827068.jpeg" /></p>
-<p>区别于scran包的另外重要的一点就是Seurat包仅提供了人类细胞有关的cell cycle related gene，没有小鼠的。对此，作者这样回复：<code><font style="color:rgb(0, 0, 0);">Thanks. We don't provide different capitalizations because this gene list was developed on a human dataset, and we don't want to create ambiguity by suggesting its created from a mouse reference dataset. </font><strong><font style="color:rgb(248, 57, 41);">In practice however, we've found it works quite well for mouse also, and recommend the solution above.</font></strong></code></p>
+<p>区别于scran包的另外重要的一点就是Seurat包仅提供了人类细胞有关的cell cycle related gene，没有小鼠的。对此，作者这样回复：<code>Thanks. We don't provide different capitalizations because this gene list was developed on a human dataset, and we don't want to create ambiguity by suggesting its created from a mouse reference dataset. <strong>In practice however, we've found it works quite well for mouse also, and recommend the solution above.</strong></code></p>
 <p>简言之，作者认为可以将对应人的cc.gene转换为鼠对应的基因名，当做后者的cell cycle related gene（因为鼠和人类基因的高度相似性）。提到的solution就是采用biomaRt包转换一下。这在我之前的教程中有介绍。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="n">convertHumanGeneList</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">x</span><span class="p">){</span>
 <a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="w">  </span><span class="nf">require</span><span class="p">(</span><span class="s">"biomaRt"</span><span class="p">)</span>
@@ -10273,7 +10272,7 @@ SraRunTable.txt： SRA文件描述。\
 <a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="nf">head</span><span class="p">(</span><span class="n">assigned</span><span class="o">$</span><span class="n">scores</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="1664771965079-21078d29-a04c-419d-84eb-f9101fa28b86.png" src="../img/58tA4WBE-xbCE9Rg/1664771965079-21078d29-a04c-419d-84eb-f9101fa28b86-274406.png" /></p>
-<p>根据每一个细胞对于三个周期阶段的scores，可进行判断；具体规则为 <strong><font style="color:rgb(42, 43, 46);">G1或G2M评分高于0.5的细胞分别被分配到G1期或G2M期</font></strong>。若G1 or G2M phases均小于0.5，则可判断为S期(虽然可以直接看S期的score)；若G1 or G2M phases均大于0.5，则 the higher score is used for assignment。</p>
+<p>根据每一个细胞对于三个周期阶段的scores，可进行判断；具体规则为 <strong>G1或G2M评分高于0.5的细胞分别被分配到G1期或G2M期</strong>。若G1 or G2M phases均小于0.5，则可判断为S期(虽然可以直接看S期的score)；若G1 or G2M phases均大于0.5，则 the higher score is used for assignment。</p>
 <h2 id="5doublets">5.检测doublets<a class="headerlink" href="#5doublets" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="c1">#检测doublets </span>
 <a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="n">sce.all.filt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">FindVariableFeatures</span><span class="p">(</span><span class="n">sce.all.filt</span><span class="p">)</span>

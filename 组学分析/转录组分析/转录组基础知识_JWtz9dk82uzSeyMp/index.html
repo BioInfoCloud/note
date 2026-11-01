@@ -4684,7 +4684,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
         与其他数据类型相结合
@@ -4695,7 +4695,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
         展望
@@ -9622,7 +9622,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
         与其他数据类型相结合
@@ -9633,7 +9633,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
         展望
@@ -9677,7 +9677,6 @@
 <p>其次：测序深度及文库大小。测序较深的到的转录组信息及转录本数量更加详细，但不是越深越好。5百万条比对序列对中岛高表达基因的量化分析足够，100万条序列足以分析低表达基因分析，单细胞转录组通常为1百万，高表达基因测序5万，脾组织只需2万。文库大小取决于目标转录组的复杂程度，测序深度有利于转录本的数量和鉴定，但同时增加了杂质信息和脱靶转录本。饱和曲线可以用来评估给定测序深度下转录组的覆盖度。</p>
 <p>最后：样本重复，包括测序时不同批次的差异及样本的差异。至少3个重复</p>
 <hr />
-<p>box2</p>
 <p>RNA-seq文库准备和测序过程中包扩：RNA大段，cDNA合成，接头，PCR扩增，bar-coding，lane loading，这些过程可能会增加测序结果的偏好性。外源参考转录组（exogenous reference transcripts，‘spike-ins’）可用来作为质控以及文库大小矫正。若测序量较大，降低技术误差：文库准备时不同批次及lane的样本完全随机，或每个样本单独进行barcoding，然后在多个illumina lane中，加入所有的样本进行测序。</p>
 <p><img alt="1612928520640-1244bf5f-1c89-4a71-86dc-58adb6d902e7.png" src="../img/JWtz9dk82uzSeyMp/1612928520640-1244bf5f-1c89-4a71-86dc-58adb6d902e7-070350.png" /></p>
 <h3 id="rna-seq">RNA-seq数据分析<a class="headerlink" href="#rna-seq" title="Permanent link">&para;</a></h3>
@@ -9694,13 +9693,12 @@
 <p><em><strong>1.4 重复</strong></em></p>
 <p>整个RNA-seq数据的可重复性检测来排除批次效应（技术重复系数Spearman R2 &gt; 0.9）。若相同条件下基因表达量有差异则主成分分析（principle component analysis，PCA）应聚在一支。</p>
 <p><img alt="1612928545076-0f86448f-2b08-49dd-9352-e9a17e21df94.png" src="../img/JWtz9dk82uzSeyMp/1612928545076-0f86448f-2b08-49dd-9352-e9a17e21df94-494746.png" /></p>
-<p>图2.png</p>
 <p><strong>2. 转录本</strong></p>
 <p><strong>有参</strong>分析时将序列比对到参考基因组或是转录组上获得表达转录本，比对到转录组上会屏蔽新的未注释的转录本，只对已知转录本进行定量分析。<strong>无参</strong>时先组装为长contigs后已contig作为表达转录组将reads比对上去进行定量分析，或者覆盖度可用于对转录本进行定量。区别在于转录和定量同时完成还是顺序完成。</p>
 <p><em><strong>2.1  比对</strong></em></p>
 <p>有参比对分两种：基因组比对和转录组比对（图2a，b），一条或多条序列（multireads）都可以比对在特定的位点。多比对由于重复序列或是有共同结构域的旁系同源基因而导致，在比对在基因组上会产生显著性的比对结果，在转录组为参考基因组时由于基因异构体含有共同的外显子而更显著，结果保留。在基因表达变化时转录本的发现和定量更加困难。</p>
 <hr />
-<p>box3 比对到参考序列</p>
+<h4 id="_5">比对到参考序列<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p>比对到参考基因组可发现新的转录本和基因，需要gap或剪接map由于序列可能跨越剪接区。要发现正确的剪接区尤其是参考基因组中存在错误或差异或者无保守区和融合转录本。Tophat分两步进行无剪接序列先比对到外显子，没比对的序列被分开比对来寻找外显子区。比对时参数设置取决于文库，错配数，reads的长度和类型及测序长度。</p>
 <hr />
 <p><em><strong>2.1 转录本发现</strong></em></p>
@@ -9729,7 +9727,7 @@
 <p><strong>9. RNA-seq功能注释</strong></p>
 <p>标准转录组分析最后一步：差异表达基因（differentially expressed genes，DEGs）的功能和通路分析。两个主要的方法：比较差异表达基因与剩余基因组，基因富集分析（gene set enrichment analysis, GSEA）基于差异表达转录本排序。</p>
 <p>功能分析需要对研究的材料有可用及丰富的功能注释。Gene Ontology，Bioconductor，DAVID或Babelomics包含多数模式物种的注释数据。从头组装所得到的新转录本缺乏注释信息，编码蛋白注释可以基于序列相似性用旁系同源功能注释（SwissProt），以及保守蛋白结构域用Pfam和InterPro。一般有50-80%的转录本可以被注释。缺少编码蛋白的转录本为长非编码RNA（long non-coding RNA）,相似性注释可用于短非编码RNA，而对于长非编码RNA还没有相应的注释。</p>
-<h3 id="_5">与其他数据类型相结合<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_6">与其他数据类型相结合<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p><strong>1. 与DNA测序结合</strong></p>
 <p>RNA与DNA测序相结合可用来发现单碱基多态性（single nucleotide polymorphism, SNP）RNA-编辑，表达数量性状位点（expression quantitative trait loci，eQTL）。经典的eQTL研究中，同一类型的组织基因型和转录组测序数量大于50，然后检测基因型和表达水平的关系，用来解释复杂性状基因偏好性。大量的eQTL研究表明基因变异影响多数基因的表达</p>
 <p>RNA-seq在检测eQTL方面有两个优势：发现影响转录过程的变异；杂合性SNP可以分布比对到父本和母本上，对个体内等位基因特异性表达进行定量分析。</p>
@@ -9743,7 +9741,7 @@
 <p>与蛋白组数据结合有争议由于两者的相关性低（～0.4）。然而仍可以用来发现新异构体。用RNA-seq预测未报道的肽键或事转录后编辑。与代谢组结合可用来发现基因表达和代谢水平的调控通路。</p>
 <p><strong>6.多数据类型联合及可视化</strong></p>
 <p>蛋白–蛋白, DNA–蛋白, miRNA–mRNA 互作网络来发现miRNA–基因调控模型。</p>
-<h3 id="_6">展望<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_7">展望<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>目前转录组分析主要方面：少量的供试材料和长序列中更好的发现转录本</p>
 <p><strong>1. 单细胞转录组（single-cell RNA-seq）</strong></p>
 <p>前沿和火热的研究区域。Smart-seq和Smart-seq2只需极少量的供试材料，可通过单个细胞的扩增得到。可用于发现组织中新的未分类的细胞类型。一类单细胞文库与细胞群相比，发现多细胞亚群与表达基因相结合。</p>
@@ -9753,8 +9751,8 @@
 <p><strong>2.长测序</strong></p>
 <p>短序列限制性在于不能精准的冲否完整的转录本。Pacific-Bioscience（PacBio）SMRT和Oxford Nanopore获得长序列。PacBio在cDNA分子上加接头形成一个环形结构，此单链用来多次测序。Nanopore GridION可直接用RNA合成酶和RNA特异性碱基进行测序。Moleculo技术准备文库时复合和限制DNA分子长度，将这些特定长度的链分开标记然后重新融合测序。PacBio最常见。</p>
 <p>缺点：测序错误率高，不能用于从头合成需要参考基因组；SMRT细胞数量较低阻碍了转录本定量分析。</p>
-<p><font style="color:#B2B2B2;">作者：dandanwu90</font></p>
-<p><font style="color:#B2B2B2;">来源：</font><a href="https://www.jianshu.com/p/2055db183907"><font style="color:#B2B2B2;">https://www.jianshu.com/p/2055db183907</font></a></p>
+<p>作者：dandanwu90</p>
+<p>来源：<a href="https://www.jianshu.com/p/2055db183907">https://www.jianshu.com/p/2055db183907</a></p>
 <blockquote>
 <p>更新: 2021-02-10 11:42:59<br />
 原文: <a href="https://www.yuque.com/doublehelix/bioinfonotes/rawux9">https://www.yuque.com/doublehelix/bioinfonotes/rawux9</a></p>
