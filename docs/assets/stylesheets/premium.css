@@ -70,14 +70,13 @@ html { scroll-behavior: smooth; }
 }
 .md-typeset .hero__title {
   margin: 0 0 .7rem; font-size: clamp(2.6rem, 6vw, 3.8rem); font-weight: 800; line-height: 1.1;
-  letter-spacing: .01em; color: #0b2824;
-}
-.md-typeset .hero__title span {
-  background: linear-gradient(100deg, #00b89a 0%, #1ca8e8 50%, #00b89a 100%);
+  letter-spacing: .01em;
+  background: linear-gradient(100deg, #00b89a 0%, #1ca8e8 45%, #00b89a 100%);
   background-size: 220% auto;
   -webkit-background-clip: text; background-clip: text; color: transparent;
   animation: bic-shimmer 4.5s linear infinite;
 }
+.md-typeset .hero__title span { color: inherit; }
 @keyframes bic-shimmer { to { background-position: 220% center; } }
 .md-typeset .hero__lead { margin: 0 0 1.7rem; max-width: 36rem; font-size: .82rem; line-height: 1.9; color: #3c5856; }
 .md-typeset .hero__actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 1.5rem; }
