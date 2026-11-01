@@ -190,7 +190,7 @@ hide:
     - [常用生物信息 ID 的介绍](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265423&idx=2&sn=288f3c8acaad8670d35a031cd9794d58&scene=21#wechat_redirect)
     - [生信中各种 ID 转换](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265466&idx=1&sn=021a10503d338e09abe07b578e734566&scene=21#wechat_redirect)
     - [RNA-seq 的 counts、RPM、RPKM、FPKM 值到底有什么区别？](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264575&idx=2&sn=69b45012dbfe61d7574446de00ec9a7b&scene=21#wechat_redirect)
-    - [《转录组基础知识》](https://www.yuque.com/docs/share/e9dbfaba-752e-4f89-a072-e95dc4fed0ef?#)（密码：um4i）
+    - [《转录组基础知识》](https://www.yuque.com/docs/share/e9dbfaba-752e-4f89-a072-e95dc4fed0ef)（密码：um4i）
 
     上游分析流程（基于 Linux）：
 
@@ -206,7 +206,7 @@ hide:
 
     普通分析一般从 counts / FPKM / TPM 开始。对于癌症方向，TCGA 是最好的数据资源。
 
-    - [TCGA 数据库介绍](https://www.yuque.com/docs/share/912e43c5-2b9d-4a31-982c-30d419bd1473?#)（密码：vtdx）
+    - [TCGA 数据库介绍](https://www.yuque.com/docs/share/912e43c5-2b9d-4a31-982c-30d419bd1473)（密码：vtdx）
     - [TCGA 数据库介绍（视频）](https://mp.weixin.qq.com/s/i5hLNXQiXoeqF-ogOxm8Uw)
     - [TCGA 重大更新后的教程](https://mp.weixin.qq.com/s/urGDqQh1L-FK8olpW20_iw)
     - [癌症在 TCGA 没有正常样本或正常样本少怎么办？](https://mp.weixin.qq.com/s/hi-Jy57tN15-o7VRjESDFg)
@@ -225,7 +225,7 @@ hide:
     - [GEO 数据库使用教程（视频）](https://mp.weixin.qq.com/s/Bb0r6s8HMT2hSZFrt7Rt0A)
     - [Bioconductor：GEOquery 包](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651266556&idx=1&sn=05fe660c9241f3a850584d73b5e8e665&scene=21#wechat_redirect)
     - [GEO 表达数据提取与 limma 差异分析](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651266701&idx=1&sn=23f3e83000c659abdbe045b9c18d3269&scene=21#wechat_redirect)
-    - [《基因芯片与 GEOquery 包》](https://www.yuque.com/docs/share/437c2f29-e88e-4c34-aed4-f14aebd330c6?#)（密码：wbso）
+    - [《基因芯片与 GEOquery 包》](https://www.yuque.com/docs/share/437c2f29-e88e-4c34-aed4-f14aebd330c6)（密码：wbso）
     - [biomaRt 包实现不同物种之间同源基因转换](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273598&idx=1&sn=391ef32ddddbf123624b04c08d1d4939&scene=21#wechat_redirect)
     - [生信基础 | 人-小鼠基因之间的比较](https://mp.weixin.qq.com/s/TupjY-l0Bux_uP_c5ZzOzQ)
 

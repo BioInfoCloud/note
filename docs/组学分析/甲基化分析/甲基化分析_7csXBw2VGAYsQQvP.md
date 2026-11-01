@@ -224,7 +224,7 @@ Genome-wide analysis of 5-hydroxymethylcytosine distribution reveals its dual fu
 
 ### 4.新技术——TAPS 测序
 
-**TAPS**[3](TET-assisted pyridine borane sequencing)，中文可译为 TET 辅助吡啶硼烷测序。
+**TAPS**（TET-assisted pyridine borane sequencing），中文可译为 TET 辅助吡啶硼烷测序。
 
 用 TET 酶将 5mC 和 5hmC 转化为 5caC。
 

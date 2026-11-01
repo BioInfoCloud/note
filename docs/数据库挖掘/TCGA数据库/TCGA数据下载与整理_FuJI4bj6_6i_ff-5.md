@@ -226,7 +226,7 @@ for(proj in project){##循环下载HTSeq - FPKM的数据，并装换成TPM
 
 TCGA官网：[<u>https://portal.gdc.cancer.gov/</u>](https://portal.gdc.cancer.gov/)
 
-关于miRNA的基础知识可参考文章：[生物学基础知识:非编码RNA](https://www.yuque.com/docs/share/701482fb-252b-4ce5-8490-1d6c952814fc?# 《非编码RNA》)。
+关于miRNA的基础知识可参考文章：[生物学基础知识:非编码RNA](https://www.yuque.com/docs/share/701482fb-252b-4ce5-8490-1d6c952814fc)。
 
 关于下载的方式很多，也可以参考[差异分析的视频](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264898&idx=1&sn=f6287d98fe0b0fb48a96d2905ca0bb4f&chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&scene=21#wechat_redirect)，特别是R包([R语言课程](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264971&idx=1&sn=3f97d49331809b1799a5d4a5019d94d0&chksm=841ef3b6b3697aa016626af76c3d7e80ceb269864362e1a59f2e927d2276a614d1693e00a1d6&scene=21#wechat_redirect)），后续会不段深入介绍，不过这里，我们介绍网页在线下载后自己处理数据。
 

@@ -492,7 +492,7 @@ DESeq2中默认是对reads数取以e为底的对数（但是也可能设置以2�
 
 在这一步中，我们要把原始的reads数除以这个标准化因子，以Sample #1为例，它的标准化因子为0.4，那么Gene 1，Gene2和Gene 3的reads数分别为0，2，33，它们分别除以0.4，结果为0，5，82.5，由于read不可能是小数，四舍五入，结果就是0，5，83，其余的样本均按此方法处理，如下所示：
 
-###            ![1612532013965-fabe7a0e-ec21-416c-9375-1e3c2579deb9.jpeg](./img/IiIzWKglDVISqhN8/1612532013965-fabe7a0e-ec21-416c-9375-1e3c2579deb9-997443.jpeg)
+![1612532013965-fabe7a0e-ec21-416c-9375-1e3c2579deb9.jpeg](./img/IiIzWKglDVISqhN8/1612532013965-fabe7a0e-ec21-416c-9375-1e3c2579deb9-997443.jpeg)
 ### DESeq2文库标准化因子总结
 
 log转换会剔除那些只在某个样本类型中的转录的所有基因（例如肝脏与脾脏），这种处理也会消除原始reads数的异常值（通过几何均数）。
@@ -635,7 +635,7 @@ gene 1，它在kidney 1和kidney 2这两个样本中的CPM值都大于1，因此
 
 ![1664261929086-9ac23da8-d10d-405d-9ce9-33d5aa347330.jpeg](./img/IiIzWKglDVISqhN8/1664261929086-9ac23da8-d10d-405d-9ce9-33d5aa347330-192373.jpeg)             总之，edgeR的主旨就是：仔细选择阈值（cutoff），你需要在计算了p值之后再尝试不同的CPM阈值，如下所示：
 
-#### ![1664261929079-f9f8e944-c3dc-4e41-b4f0-fd90429aa093.jpeg](./img/IiIzWKglDVISqhN8/1664261929079-f9f8e944-c3dc-4e41-b4f0-fd90429aa093-078980.jpeg)
+![1664261929079-f9f8e944-c3dc-4e41-b4f0-fd90429aa093.jpeg](./img/IiIzWKglDVISqhN8/1664261929079-f9f8e944-c3dc-4e41-b4f0-fd90429aa093-078980.jpeg)
 
   **DESeq2中CPM阈值的确认**
 
@@ -697,7 +697,7 @@ gene 1，它在kidney 1和kidney 2这两个样本中的CPM值都大于1，因此
 
            ![1612532014849-51836feb-6ffb-409f-93e6-77386f517654.jpeg](./img/IiIzWKglDVISqhN8/1612532014849-51836feb-6ffb-409f-93e6-77386f517654-985778.jpeg)  不过现在我们知道，我们可以同时联合使用这两种方法，如下所示：
 
-###            ![1612532014837-0cbe14b1-6cf3-4412-9f69-df4c6a10f192.jpeg](./img/IiIzWKglDVISqhN8/1612532014837-0cbe14b1-6cf3-4412-9f69-df4c6a10f192-205551.jpeg)
+![1612532014837-0cbe14b1-6cf3-4412-9f69-df4c6a10f192.jpeg](./img/IiIzWKglDVISqhN8/1612532014837-0cbe14b1-6cf3-4412-9f69-df4c6a10f192-205551.jpeg)
 ### 建议
 
 如果你使用edgeR，在计算出了p值之后，找到CPM的阈值。在edgeR的基因选择标准方面，使用DESeq2可以很容易地找到找到最优的CPM阈值。
@@ -917,3 +917,4 @@ head(diff_gene, 10)
 
 > 更新: 2022-09-27 15:45:33
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/qemw2a>
+
