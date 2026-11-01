@@ -7153,6 +7153,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pyTorch基础
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -7169,6 +7187,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.什么是张量
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.张量的基础
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.张量的基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1tensorvariable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        （1）Tensor与Variable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        （2）张量的创建
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10031" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        生成一个包含10个元素的张量，每个元素都独立地以0.3的概率取值为1
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -9466,6 +9564,75 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.什么是张量
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.张量的基础
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.张量的基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1tensorvariable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        （1）Tensor与Variable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        （2）张量的创建
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10031" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        生成一个包含10个元素的张量，每个元素都独立地以0.3的概率取值为1
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -9485,7 +9652,7 @@
 
 
 <h1 id="pytorch">pyTorch基础<a class="headerlink" href="#pytorch" title="Permanent link">&para;</a></h1>
-<h1 id="1">1.什么是张量<a class="headerlink" href="#1" title="Permanent link">&para;</a></h1>
+<h2 id="1">1.什么是张量<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <p>张量是一种多维数组，在数学概念中是标量、向量和矩阵的拓展。张量有多种创建方式,包括直接创建、依据数组创建以及依据概率分布创建。张量还与自动求导相关的变量(variable)有密切关系，variable包含了tensor的数据、梯度等属性。掌握张量的创建方法是学习PyTorch的基础。在PyTorch中，张量（Tensor）是一个核心的概念，它是多维数组的一个扩展，支持各种数学运算，并可以在GPU上加速计算。以下是如何在PyTorch中理解张量的几个关键点：</p>
 <p>**多维数组：**最基本的理解是张量就是一个多维数组。例如，一个标量是0维张量，向量是1维张量，矩阵是2维张量，更高维度的数组也是张量。</p>
 <p>**数据类型：**张量具有数据类型（如float32, int64等），这决定了张量中存储的数值的类型。</p>
@@ -9497,8 +9664,8 @@
 <p>**与NumPy的互操作性：**PyTorch的张量和NumPy的数组之间可以很容易地转换。这使得你可以利用NumPy的丰富生态系统和成熟的科学计算库。</p>
 <p>**命名张量（Named Tensor）：**虽然这不是PyTorch的核心特性，但PyTorch也支持命名张量，即带有维度名称的张量。这可以提高代码的可读性和可维护性。</p>
 <p>**动态图：**PyTorch使用动态图来计算梯度，这意味着你可以像编写普通的Python代码一样编写你的神经网络和计算图，然后PyTorch会自动为你处理所有的梯度计算。</p>
-<h1 id="2">2.张量的基础<a class="headerlink" href="#2" title="Permanent link">&para;</a></h1>
-<h2 id="1tensorvariable">（1）Tensor与Variable<a class="headerlink" href="#1tensorvariable" title="Permanent link">&para;</a></h2>
+<h2 id="2">2.张量的基础<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="1tensorvariable">（1）Tensor与Variable<a class="headerlink" href="#1tensorvariable" title="Permanent link">&para;</a></h3>
 <p>tensor类似numpy，是一个矩阵，数组或值，甚至更高维的数组。tensor可以和numpy对象随意转换，它们共享内存，转换很快。 Variable（变量）是Tensor的一种特殊形式，主要用于深度学习模型的训练过程中存储和更新参数（如权重和偏置），variable是torch.autograd 中的数据类型主要用于封装Tensor，进行自动求导。</p>
 <p>data : 被包装的Tensor</p>
 <p>grad : data的梯度</p>
@@ -9511,9 +9678,9 @@
 <p>shape：张量的形状，如(64，3，224，224)</p>
 <p>device：张量所在设备，GPU/CPU，是加速的关键。</p>
 <p><img alt="1717412981047-111beda0-4c70-48b6-ac25-39808898f77e.png" src="../img/rcehDcBdFPzJj-_H/1717412981047-111beda0-4c70-48b6-ac25-39808898f77e-409827.png" /></p>
-<h2 id="2_1">（2）张量的创建<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h2>
+<h3 id="2_1">（2）张量的创建<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h3>
 <p>在PyTorch中，你可以使用多种方式来创建张量（Tensor）。张量是PyTorch中用于存储多维数组的数据结构，并支持GPU加速计算。下面是一些常见的创建张量的方法：</p>
-<h3 id="torchtensor">使用torch.tensor()<a class="headerlink" href="#torchtensor" title="Permanent link">&para;</a></h3>
+<h4 id="torchtensor">使用torch.tensor()<a class="headerlink" href="#torchtensor" title="Permanent link">&para;</a></h4>
 <p>使用torch.tensor()可以基于已有的数据（如列表、元组、ndarray等）创建张量。相关参数介绍如下：</p>
 <ul>
 <li>data:数据，可以是list,numpy数据类型，</li>
@@ -9534,7 +9701,7 @@
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">tensor_np</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">data_np</span><span class="p">)</span>
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">tensor_np</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="torchfrom_numpy">使用torch.from_numpy创建<a class="headerlink" href="#torchfrom_numpy" title="Permanent link">&para;</a></h3>
+<h4 id="torchfrom_numpy">使用torch.from_numpy创建<a class="headerlink" href="#torchfrom_numpy" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">arr</span> <span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]])</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">t</span><span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
@@ -9546,9 +9713,9 @@
 </code></pre></div>
 <p>它们共享内存：</p>
 <p><img alt="1717420454297-4c6ff8d1-3657-469b-bef2-a1aacb1ac3e5.png" src="../img/rcehDcBdFPzJj-_H/1717420454297-4c6ff8d1-3657-469b-bef2-a1aacb1ac3e5-856408.png" /></p>
-<h3 id="torchtensor_1">使用torch.Tensor()（不推荐）<a class="headerlink" href="#torchtensor_1" title="Permanent link">&para;</a></h3>
+<h4 id="torchtensor_1">使用torch.Tensor()（不推荐）<a class="headerlink" href="#torchtensor_1" title="Permanent link">&para;</a></h4>
 <p>虽然torch.Tensor()也可以用来创建张量，但它通常与torch.tensor()有所区别。torch.Tensor()是一个基类构造函数，通常建议直接使用torch.tensor()或torch.empty(), torch.zeros(), torch.ones()等特定函数来创建张量。</p>
-<h3 id="_1">使用特定函数创建具有特定值的张量<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h4 id="_1">使用特定函数创建具有特定值的张量<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <p>torch.zeros(): 创建一个全为0的张量。</p>
 <ul>
 <li>size：张量的形状，如(3，3)、(3，224,224)</li>
@@ -9604,14 +9771,14 @@
 <p>在这种情况下，mean 和 std 都是形状与张量输出匹配的张量。</p>
 <p>每个输出位置都会从具有相应均值（来自 mean 张量）和标准差（来自 std 张量）的正态分布中抽取一个值。</p>
 <p>例如，<code>torch.normal(mean=torch.tensor([[0.0, 1.0], [2.0, 3.0]]), std=torch.tensor([[1.0, 2.0], [3.0, 4.0]]))</code>会生成一个 2x2 的张量，其左上角的元素是从均值为 0.0、标准差为 1.0 的正态分布中抽取的，右上角的元素是从均值为 1.0、标准差为 2.0 的正态分布中抽取的，以此类推。</p>
-<h1 id="10031">生成一个包含10个元素的张量，每个元素都独立地以0.3的概率取值为1<a class="headerlink" href="#10031" title="Permanent link">&para;</a></h1>
+<h2 id="10031">生成一个包含10个元素的张量，每个元素都独立地以0.3的概率取值为1<a class="headerlink" href="#10031" title="Permanent link">&para;</a></h2>
 <p>torch.bernoulli()：生成伯努利分布。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># 生成一个包含10个元素的张量，每个元素都独立地以0.3的概率取值为1</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">p</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">0.3</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># 或者简单地 p = 0.3，PyTorch会广播这个标量值</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">samples</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">bernoulli</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">samples</span>
 </code></pre></div>
-<h3 id="torcharangetorchlinspace">使用torch.arange()和torch.linspace()<a class="headerlink" href="#torcharangetorchlinspace" title="Permanent link">&para;</a></h3>
+<h4 id="torcharangetorchlinspace">使用torch.arange()和torch.linspace()<a class="headerlink" href="#torcharangetorchlinspace" title="Permanent link">&para;</a></h4>
 <p>torch.arange(): 类似于Python的range()函数，但返回的是一个一维张量。</p>
 <p>torch.linspace(): 在指定的间隔内均匀创建数值，返回一维张量。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># 创建一个从0到9（不包括10）的一维张量，步长为1</span>

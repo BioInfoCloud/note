@@ -9975,11 +9975,7 @@ even if you don't know where it will take you.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>
 </code></pre></div>
 <p>但这样，你就需要在和你现在写的<code>markdown</code>的同一目录下，放一个<code>media</code>文件夹，里面有这张<code>markdown_icon.png</code>的图片。</p>
-<p>有的时候，图片和代码相比起来，是个庞然大物（<code>1KB</code> vs <code>1MB</code>），这时我们不希望将图片加入到项目中（指不希望项目的体积很大，别人从<code>GitHub</code>上下载项目时花的时间过久），可是在项目说明中还需要加入图片进行说明，这时怎么办呢？
-最简单的，将图片压缩一下（<code>1MB-&gt;100KB</code>）扔进项目文件夹，这是最省心的…但要是图比较多，一般来说，我们会选择某些厂商的对象存储服务，将这些图片资源放到比如阿里云的服务器上，然后这个服务把图片的网络链接给你，你就可以在<code>markdown</code>中使用这个链接了。
-如果没有那么正式，那么这种服务叫做图床。
-比如我一直在用的<a href="https://www.superbed.cn">聚合图床</a>，你把图片丢进去，它帮你将图片转为一个链接。
-但是使用这种服务也有需要注意的地方，如果运营图床的工作室哪天跑路了，你放进去的图片可能就没了。</p>
+<p>有的时候，图片和代码相比起来，是个庞然大物（<code>1KB</code> vs <code>1MB</code>），这时我们不希望将图片加入到项目中（指不希望项目的体积很大，别人从<code>GitHub</code>上下载项目时花的时间过久），可是在项目说明中还需要加入图片进行说明，这时怎么办呢？最简单的，将图片压缩一下（<code>1MB-&gt;100KB</code>）扔进项目文件夹，这是最省心的…但要是图比较多，一般来说，我们会选择某些厂商的对象存储服务，将这些图片资源放到比如阿里云的服务器上，然后这个服务把图片的网络链接给你，你就可以在<code>markdown</code>中使用这个链接了。如果没有那么正式，那么这种服务叫做图床。比如我一直在用的<a href="https://www.superbed.cn">聚合图床</a>，你把图片丢进去，它帮你将图片转为一个链接。但是使用这种服务也有需要注意的地方，如果运营图床的工作室哪天跑路了，你放进去的图片可能就没了。</p>
 <h4 id="_4">添加目录<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>不少平台都支持使用<code>[toc]</code>来添加目录。你只需要输入<code>[toc]</code>，平台就会帮你自动渲染生成目录。</p>
 <p>但也有一些平台不支持这样，这时你需要使用VS Code中的<code>Markdown All in One</code>插件，使用这个插件提供的<code>自动生成目录</code>功能来添加目录。</p>

@@ -3732,6 +3732,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ggplot2绘图思想
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -3748,6 +3766,456 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#r" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一.R绘图系统
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一.R绘图系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.base系统
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.grid系统
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3lattice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.lattice系统
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4ggplot2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.ggplot2系统
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.常见的绘图参数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ggplot2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二.ggplot2绘图框架
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二.ggplot2绘图框架">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1geom_stat_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.geom_()与stat_()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.视觉通道
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.度量调整
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.坐标系
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.图例
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.分面系统
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.主题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.位置调整
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.学术文章图标配色
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.排版布局
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三.散点图
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三.散点图">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.利用plot()绘制散点图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2ggplot2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.ggplot2()绘制散点图
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四.柱状图
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四.柱状图">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01.单数据系列柱形图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02.双数据系列柱形图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03.堆积柱形图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04.百分比堆积柱形图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05.不等宽柱形图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06.棒棒糖图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07.克里兰夫点图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08dumbbellplot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        08.哑铃图（DumbbellPlot）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09.坡度图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.南丁格尔玫瑰图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.径向柱形图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.词云图
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        五.箱型图
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        六.热图绘制
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        七.生存曲线
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        八.火山图
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -9466,6 +9934,445 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#r" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一.R绘图系统
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一.R绘图系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.base系统
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.grid系统
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3lattice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.lattice系统
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4ggplot2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.ggplot2系统
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.常见的绘图参数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ggplot2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二.ggplot2绘图框架
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二.ggplot2绘图框架">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1geom_stat_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.geom_()与stat_()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.视觉通道
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.度量调整
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.坐标系
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.图例
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.分面系统
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.主题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.位置调整
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.学术文章图标配色
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.排版布局
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三.散点图
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三.散点图">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.利用plot()绘制散点图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2ggplot2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.ggplot2()绘制散点图
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四.柱状图
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四.柱状图">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01.单数据系列柱形图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02.双数据系列柱形图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03.堆积柱形图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04.百分比堆积柱形图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05.不等宽柱形图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06.棒棒糖图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07.克里兰夫点图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08dumbbellplot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        08.哑铃图（DumbbellPlot）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09.坡度图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.南丁格尔玫瑰图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.径向柱形图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.词云图
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        五.箱型图
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        六.热图绘制
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        七.生存曲线
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        八.火山图
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -9485,30 +10392,16 @@
 
 
 <h1 id="ggplot2">ggplot2绘图思想<a class="headerlink" href="#ggplot2" title="Permanent link">&para;</a></h1>
-<h1 id="r">一.R绘图系统<a class="headerlink" href="#r" title="Permanent link">&para;</a></h1>
+<h2 id="r">一.R绘图系统<a class="headerlink" href="#r" title="Permanent link">&para;</a></h2>
 <p>在 R 里，主要有两大底层图形系统，一是 base 图形系统，二是 grid 图形系统。 lattice 包与 ggplot2包正是基于 grid 图形系统构建的，它们都有自己独特的图形语法。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>install.packages("shiny")
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>install.packages("ggsci")
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>install.packages("esquisse")
 </code></pre></div>
-<p>在 R 里，主要有两大底层图形系统，一是 base 图形系统，二是 grid 图形系统。
- lattice 包与 ggplot2包正是基于 grid 图形系统构建的，它们都有自己独特的图形语法。
-grid 图形系统可以很容易地控制图形基础单元，给予编程者创作图形极大的灵活性。
- grid 图形系统还可以产生可编辑的图形组件，这些图形组件可以被复用和重组，并能通过 grid.layout()等函数，把图形输出到指定的位置上。
-但是因为 grid 包中没有提供生成统计图形及完整绘图的函数，因此很少直接采用 grid 包来分析与展示数据。
-lattice 包通过一维、二维或三维条件绘图，即所谓的栅栏（trellis）图来对多元变量关系进行直</p>
-<p>观展示。
- 相比于 base()函数是直接在图形设备上绘图的，lattice()函数是返回 trellis 对象。
-在命令执行的时候，栅栏图会被自动打印，所以看起来就像是 lattice()函数直接完成了绘图。
- 更多关于 base、grid 和 lattice 的语法可以参考 Murrell 和 Paul 所撰写的书籍 R graphics。
-ggplot2 包则基于一种全面的图形语法，提供了一种全新的图形创建方式，这套图形语法把绘图过程归纳为数据（data）、转换（transformation）、 度量（scale）、 坐标系（coordinate）、元素（element）、指引（guide）、显示（display）等一系列独立的步骤，通过将这些步骤搭配组合，来实现个性化的统计绘图。
-于是，得益于该图形语法，Hadley Wickham 所开发的 ggplot2 包是如此人性化，不同于 R base基础绘图和先前的 lattice 包那样参数繁多，而是摈弃了诸多烦琐细节，并以人性化的思维进行高质量作图。
-在 ggplot2 包中，加号（+）的引入是革命性的，这个神奇的符号完成了一系列图形语法叠加。
- 更多 ggplot2 的使用与学习可以参考两本关于 ggplot2 的经典书籍：ggplot2 Elegant Graphicsfor Data Analysis 和 R Graphics Cookbook。
-R 语言基础安装中就包含 base、 grid 和 lattice 三个包，无须另外下载。
-但是除了 base 包，其他包依旧需要使用 library()函数加载后，才能被使用。</p>
+<p>在 R 里，主要有两大底层图形系统，一是 base 图形系统，二是 grid 图形系统。 lattice 包与 ggplot2包正是基于 grid 图形系统构建的，它们都有自己独特的图形语法。grid 图形系统可以很容易地控制图形基础单元，给予编程者创作图形极大的灵活性。 grid 图形系统还可以产生可编辑的图形组件，这些图形组件可以被复用和重组，并能通过 grid.layout()等函数，把图形输出到指定的位置上。但是因为 grid 包中没有提供生成统计图形及完整绘图的函数，因此很少直接采用 grid 包来分析与展示数据。lattice 包通过一维、二维或三维条件绘图，即所谓的栅栏（trellis）图来对多元变量关系进行直</p>
+<p>观展示。 相比于 base()函数是直接在图形设备上绘图的，lattice()函数是返回 trellis 对象。在命令执行的时候，栅栏图会被自动打印，所以看起来就像是 lattice()函数直接完成了绘图。 更多关于 base、grid 和 lattice 的语法可以参考 Murrell 和 Paul 所撰写的书籍 R graphics。ggplot2 包则基于一种全面的图形语法，提供了一种全新的图形创建方式，这套图形语法把绘图过程归纳为数据（data）、转换（transformation）、 度量（scale）、 坐标系（coordinate）、元素（element）、指引（guide）、显示（display）等一系列独立的步骤，通过将这些步骤搭配组合，来实现个性化的统计绘图。于是，得益于该图形语法，Hadley Wickham 所开发的 ggplot2 包是如此人性化，不同于 R base基础绘图和先前的 lattice 包那样参数繁多，而是摈弃了诸多烦琐细节，并以人性化的思维进行高质量作图。在 ggplot2 包中，加号（+）的引入是革命性的，这个神奇的符号完成了一系列图形语法叠加。 更多 ggplot2 的使用与学习可以参考两本关于 ggplot2 的经典书籍：ggplot2 Elegant Graphicsfor Data Analysis 和 R Graphics Cookbook。R 语言基础安装中就包含 base、 grid 和 lattice 三个包，无须另外下载。但是除了 base 包，其他包依旧需要使用 library()函数加载后，才能被使用。</p>
 <p><img alt="1609075535563-69eabc81-7427-490d-b75e-80d3235eb734.png" src="../img/KnCuf_TQaNAuuoQH/1609075535563-69eabc81-7427-490d-b75e-80d3235eb734-213095.png" /></p>
-<h2 id="1base"><strong>1.base系统</strong><a class="headerlink" href="#1base" title="Permanent link">&para;</a></h2>
+<h3 id="1base"><strong>1.base系统</strong><a class="headerlink" href="#1base" title="Permanent link">&para;</a></h3>
 <p>• 由Ross Ihaka编写</p>
 <p>• base图形是最古老的系统，在R的初期就存在</p>
 <p>• 容易上手</p>
@@ -9528,9 +10421,9 @@ R 语言基础安装中就包含 base、 grid 和 lattice 三个包，无须另�
 <a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>abline(h=1,v=1,col="red")
 </code></pre></div>
 <p><img alt="1609075535535-0e68c3f8-ab71-4ab4-bd77-253a00d1a2c2.png" src="../img/KnCuf_TQaNAuuoQH/1609075535535-0e68c3f8-ab71-4ab4-bd77-253a00d1a2c2-345249.png" /></p>
-<h2 id="2grid"><strong>2.grid系统</strong><a class="headerlink" href="#2grid" title="Permanent link">&para;</a></h2>
+<h3 id="2grid"><strong>2.grid系统</strong><a class="headerlink" href="#2grid" title="Permanent link">&para;</a></h3>
 <p>grid 图形系统可以很容易地控制图形基础单元，由Paul Murrell（2006）编写，给予编程者创作图形极大的灵活性。 grid 图形系统还可以产生可编辑的图形组件，这些图形组件可以被复用和重组，并能通过 grid.layout()等函数，把图形输出到指定的位置上。但是因为 grid 包中没有提供生成统计图形及完整绘图的函数，因此很少直接采用 grid 包来分析与展示数据。</p>
-<h2 id="3lattice"><strong>3.lattice系统</strong><a class="headerlink" href="#3lattice" title="Permanent link">&para;</a></h2>
+<h3 id="3lattice"><strong>3.lattice系统</strong><a class="headerlink" href="#3lattice" title="Permanent link">&para;</a></h3>
 <p>lattice 包通过一维、二维或三维条件绘图，即所谓的栅栏（trellis）图来对多元变量关系进行直观展示。 相比于 base()函数是直接在图形设备上绘图的，lattice()函数是返回 trellis 对象。在命令执行的时候，栅栏图会被自动打印，所以看起来就像是 lattice()函数直接完成了绘图。 更多关于 base、grid 和 lattice 的语法可以参考 Murrell 和 Paul 所撰写的书籍 R graphics。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>###-------------2.利用lattice包xyplot函数绘制散点图
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>library(lattice)
@@ -9544,7 +10437,7 @@ R 语言基础安装中就包含 base、 grid 和 lattice 三个包，无须另�
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>histogram(~z,df,type = "count")
 </code></pre></div>
 <p><img alt="1609075535589-9f18788b-5301-4318-8bb4-0b576f120235.png" src="../img/KnCuf_TQaNAuuoQH/1609075535589-9f18788b-5301-4318-8bb4-0b576f120235-630205.png" /></p>
-<h2 id="4ggplot2"><strong>4.ggplot2系统</strong><a class="headerlink" href="#4ggplot2" title="Permanent link">&para;</a></h2>
+<h3 id="4ggplot2"><strong>4.ggplot2系统</strong><a class="headerlink" href="#4ggplot2" title="Permanent link">&para;</a></h3>
 <p>ggplot2 是一个功能强大且灵活的 R 包，由 Hadley Wickham 编写，它可以生成优雅而实用的图形。 ggplot2 中的 gg 表示图形语法（grammar of graphic），这是一个通过使用“语法” 来绘图的图形概念。 ggplot2 主张模块间的协调与分工，整个 ggplot2 的语法框架如下图所示，主要包括数据绘图部分与美化细节部分。 R ggplot2 图形语法的主要特点如下所示。</p>
 <p>（1）采用图层的设计方式，有利于结构化思维实现数据可视化。有明确的起始（ggplot()开始）与终止，图层之间的叠加是靠“+”实现的，越往后，其图层越在上方。通常一条 geom_xxx()函数或 stat_xxx()函数可以绘制一个图层。</p>
 <p>（2）将表征数据和图形细节分开，能快速将图形表现出来，使创造性的绘图更加容易实现。而且通过 stat_xxx()函数将常见的统计变换融入绘图中。</p>
@@ -9560,7 +10453,7 @@ R 语言基础安装中就包含 base、 grid 和 lattice 三个包，无须另�
 <p>（4）guides()：图例调整，主要包括连续型和离散型两种类型的图例。</p>
 <p>（5）theme()：主题设定，主要用于调整图表的细节，包括图表背景颜色、网格线的间隔与颜色等。</p>
 <p><img alt="1609075535516-a4b9c055-eeb3-4b79-a07d-c54c9bac1bcc.png" src="../img/KnCuf_TQaNAuuoQH/1609075535516-a4b9c055-eeb3-4b79-a07d-c54c9bac1bcc-735469.png" /></p>
-<h2 id="5"><strong>5.常见的绘图参数</strong><a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<h3 id="5"><strong>5.常见的绘图参数</strong><a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
 <p>低水平绘图函数</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>lines() 添加线
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>curve() 添加曲线
@@ -9623,8 +10516,8 @@ R 语言基础安装中就包含 base、 grid 和 lattice 三个包，无须另�
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>主标题可以使用函数title，格式为：
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a> title(main = " ", sub = " ", xlab = " ",  ylab = " ")
 </code></pre></div>
-<h1 id="ggplot2_1"><strong>二.ggplot2绘图框架</strong><a class="headerlink" href="#ggplot2_1" title="Permanent link">&para;</a></h1>
-<h2 id="1geom_stat_"><strong>1.geom_</strong>()与stat_<strong>()</strong><a class="headerlink" href="#1geom_stat_" title="Permanent link">&para;</a></h2>
+<h2 id="ggplot2_1"><strong>二.ggplot2绘图框架</strong><a class="headerlink" href="#ggplot2_1" title="Permanent link">&para;</a></h2>
+<h3 id="1geom_stat_"><strong>1.geom_</strong>()与stat_<strong>()</strong><a class="headerlink" href="#1geom_stat_" title="Permanent link">&para;</a></h3>
 <p>geom_**()相关函数如下：</p>
 <p><img alt="1609075535752-37f31826-7761-4d8e-ad5c-b88ba8611e49.png" src="../img/KnCuf_TQaNAuuoQH/1609075535752-37f31826-7761-4d8e-ad5c-b88ba8611e49-853561.png" /></p>
 <p>其他的可通过下面代码查看：</p>
@@ -9772,7 +10665,7 @@ R 语言基础安装中就包含 base、 grid 和 lattice 三个包，无须另�
 <a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>ggplot(data.frame(x = c(-5, 5)), aes(x))+
 <a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>  stat_function(fun = dnorm)
 </code></pre></div>
-<h2 id="2"><strong>2.视觉通道</strong><a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="2"><strong>2.视觉通道</strong><a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
 <p><img alt="1609075535843-1e001c50-244c-4960-a3f0-dc76dd3d6d3e.png" src="../img/KnCuf_TQaNAuuoQH/1609075535843-1e001c50-244c-4960-a3f0-dc76dd3d6d3e-607559.png" /></p>
 <p>绘制几个图看看：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>f1 &lt;- ggplot(df, aes(x=SOD,y=tau,size=age)) +
@@ -9790,33 +10683,32 @@ R 语言基础安装中就包含 base、 grid 和 lattice 三个包，无须另�
 <a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>grid.arrange(f1,f2,f3,f4, ncol = 2, nrow =2)
 </code></pre></div>
 <p><img alt="1609075535766-4314a6b2-1cfb-40a8-8560-0200dbdcdf92.png" src="../img/KnCuf_TQaNAuuoQH/1609075535766-4314a6b2-1cfb-40a8-8560-0200dbdcdf92-558764.png" /></p>
-<h2 id="3"><strong>3.度量调整</strong><a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h3 id="3"><strong>3.度量调整</strong><a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
 <p><img alt="1609075535929-b532353e-f659-470b-b645-6990fff79c44.png" src="../img/KnCuf_TQaNAuuoQH/1609075535929-b532353e-f659-470b-b645-6990fff79c44-230208.png" /></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>###4.度量调整-------------------
 <a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>head(df)
 <a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>ggplot(df, aes(x=SOD,y=tau,size=age)) +
 <a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>  geom_point(shape=21,color="black",fill="#E53F2F",stroke=0.25,alpha=0.8)+
-<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>  scale_size(range = c(1, 8))#range:长度为2的数字向量，指定转换后绘图符号的最小和最大大小。
-<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>ggplot(df, aes(SOD,tau,fill=age,size=age)) +
-<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>  geom_point(shape=21,colour="black",stroke=0.25,
-<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>             alpha=1)+
-<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>  scale_size(range = c(1,8))+
-<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>  scale_fill_distiller(palette="Reds")
-<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>ggplot(df, aes(x=SOD,y=tau,fill=Class,shape=Class)) +
-<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>  geom_point(size=3,colour="black",stroke=0.25)+
-<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>  scale_fill_manual(values=c("#36BED9","#FF0000","#FBAD01"))+
-<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>  scale_shape_manual(values=c(21,22,23))
-<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>ggplot(df, aes(SOD,tau,fill=Class,size=age)) +
-<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>  geom_point(shape=21,colour="black",stroke=0.25,
-<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a>             alpha=0.8) +
-<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a>  scale_fill_manual(values=c("#36BED9","#FF0000","#FBAD01"))+
-<a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a>  scale_size(range = c(1, 8))
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>  scale_size(range = c(1, 8))#range:长度为2的数字向量，指定转换后绘图符号的最小和最大大小。ggplot(df, aes(SOD,tau,fill=age,size=age)) +
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>  geom_point(shape=21,colour="black",stroke=0.25,
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>             alpha=1)+
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>  scale_size(range = c(1,8))+
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>  scale_fill_distiller(palette="Reds")
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>ggplot(df, aes(x=SOD,y=tau,fill=Class,shape=Class)) +
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>  geom_point(size=3,colour="black",stroke=0.25)+
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>  scale_fill_manual(values=c("#36BED9","#FF0000","#FBAD01"))+
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>  scale_shape_manual(values=c(21,22,23))
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>ggplot(df, aes(SOD,tau,fill=Class,size=age)) +
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>  geom_point(shape=21,colour="black",stroke=0.25,
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>             alpha=0.8) +
+<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a>  scale_fill_manual(values=c("#36BED9","#FF0000","#FBAD01"))+
+<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a>  scale_size(range = c(1, 8))
 </code></pre></div>
-<h2 id="4"><strong>4.坐标系</strong><a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<h3 id="4"><strong>4.坐标系</strong><a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
 <p>ggplot2的直角坐标系包括coord_cartesian()、coord_fixed()、coord.fip()和coord_ trans()四种类型。ggplot2中的默认类型为coord.cartesian() ,我们在绘制条形图或者水平箱形图时，需要使用coord_fip()翻转坐标系。它会将X轴和Y轴坐标对换，从而可以将竖直的柱形图转换成水平的条形图。</p>
-<h2 id="5_1"><strong>5.图例</strong><a class="headerlink" href="#5_1" title="Permanent link">&para;</a></h2>
+<h3 id="5_1"><strong>5.图例</strong><a class="headerlink" href="#5_1" title="Permanent link">&para;</a></h3>
 <p>图例作为图表背景信息的重要组成部分，对图表的完整与正确表达尤为重要。ggplot2 的guide_colorbar()/guide_colourbar()函数用于调整连续变量的图例; guide_legend()函数用于离散变量的图例，也可以用于连续变量。guides()函数将guide_colorbar()和guide_colourbar()两种图例嵌套进去，方面映射处理，如：guides(fill = guide_colourbar())，对多个图例共同处理尤为有效。</p>
-<h2 id="6"><strong>6.分面系统</strong><a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<h3 id="6"><strong>6.分面系统</strong><a class="headerlink" href="#6" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>##-------------6.分面系统
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>ls(pattern = "^facet_", env = as.environment("package:ggplot2"))
 <a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>head(mpg)
@@ -9847,16 +10739,13 @@ R 语言基础安装中就包含 base、 grid 和 lattice 三个包，无须另�
 <a id="__codelineno-17-28" name="__codelineno-17-28" href="#__codelineno-17-28"></a>  facet_wrap(vars(cyl, drv))
 <a id="__codelineno-17-29" name="__codelineno-17-29" href="#__codelineno-17-29"></a>View(mpg)
 </code></pre></div>
-<h2 id="7"><strong>7.主题</strong><a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
-<p>主题系统包括绘图区背景、网格线、坐标轴线条等图表的细节部分，而图表风格主要是指绘图区背景、网格线、坐标轴线条等的格式设定所展现的效果。
-ggplot2图表的主题系统的主要对象包括文本(text)、矩形(rect) 和线条(line )三大类，对应的函数包括element _text()、element_rect()、element_line()， 另外还有element_blank()表示该对象设置为无，具体如表所示。
-其中，我们使用比较多的系统对象是坐标轴的标签( axis.text.x、axis.text.y )、图例的位置与背景( legend.position 和legend.background)。
-X轴标签(axis.text.x)在绘制极坐标柱形图和径向柱形图时会用于调整X轴标签的旋转角度，Y轴标签( axis.text.y)也会用于时间序列峰峦图的Y轴标签的替换等，具体可见后面图表案例的讲解。</p>
+<h3 id="7"><strong>7.主题</strong><a class="headerlink" href="#7" title="Permanent link">&para;</a></h3>
+<p>主题系统包括绘图区背景、网格线、坐标轴线条等图表的细节部分，而图表风格主要是指绘图区背景、网格线、坐标轴线条等的格式设定所展现的效果。ggplot2图表的主题系统的主要对象包括文本(text)、矩形(rect) 和线条(line )三大类，对应的函数包括element _text()、element_rect()、element_line()， 另外还有element_blank()表示该对象设置为无，具体如表所示。其中，我们使用比较多的系统对象是坐标轴的标签( axis.text.x、axis.text.y )、图例的位置与背景( legend.position 和legend.background)。X轴标签(axis.text.x)在绘制极坐标柱形图和径向柱形图时会用于调整X轴标签的旋转角度，Y轴标签( axis.text.y)也会用于时间序列峰峦图的Y轴标签的替换等，具体可见后面图表案例的讲解。</p>
 <p><img alt="1609075535822-84e4bd8f-d33b-4b5b-84a9-72275e1533e7.png" src="../img/KnCuf_TQaNAuuoQH/1609075535822-84e4bd8f-d33b-4b5b-84a9-72275e1533e7-533488.png" /></p>
 <p>一些主题相关包:ggThemeAssist,ggthemes,ggtech,ggthemer,<strong>ggsci</strong>,cowplot等。</p>
-<h2 id="8"><strong>8.位置调整</strong><a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
+<h3 id="8"><strong>8.位置调整</strong><a class="headerlink" href="#8" title="Permanent link">&para;</a></h3>
 <p><img alt="1609075535919-a4ea2bff-f600-4d52-9775-a54af30a8e61.png" src="../img/KnCuf_TQaNAuuoQH/1609075535919-a4ea2bff-f600-4d52-9775-a54af30a8e61-405531.png" /></p>
-<h2 id="9"><strong>9.学术文章图标配色</strong><a class="headerlink" href="#9" title="Permanent link">&para;</a></h2>
+<h3 id="9"><strong>9.学术文章图标配色</strong><a class="headerlink" href="#9" title="Permanent link">&para;</a></h3>
 <p>RColorBrewer包是比较常用的调色板，来自网站:<a href="https://colorbrewer2.org/">https://colorbrewer2.org/</a></p>
 <p>brewer.pal()函数获取颜色</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>brewer.pal(n, name)#使颜色调色板；Name的值：Blues BuGn BuPu GnBu Greens Greys Oranges OrRd PuBu PuBuGn PuRd Purples RdPu Reds YlGn YlGnBu YlOrBr YlOrRd
@@ -9864,7 +10753,7 @@ X轴标签(axis.text.x)在绘制极坐标柱形图和径向柱形图时会用于
 <p>display.brewer.pal() 函数在图形窗口中显示选定的调色板，在图形窗口中同时显示一些调色板。有3种类型的调色板:sequential, diverging, and qualitative。display.brewer.all(n=NULL, type="all", select=NULL, exact.n=TRUE, colorblindFriendly=FALSE)。</p>
 <p>brewer.pal.info #将可用调色板的信息作为数据文件返回</p>
 <p>colorfavs工具链接：<a href="http://www.colorfavs.com/">http://www.colorfavs.com/</a></p>
-<h2 id="10"><strong>10.排版布局</strong><a class="headerlink" href="#10" title="Permanent link">&para;</a></h2>
+<h3 id="10"><strong>10.排版布局</strong><a class="headerlink" href="#10" title="Permanent link">&para;</a></h3>
 <p>ggplot2组合图形布局可以使用Rmisc包的multiplot()函数，也可以使用ggpubr包的ggarrange()函数。</p>
 <p>patchwork包中用来调整排版设置的函数有plot_annotation()函数、plot_layout()函数、plot_spacer()函数等，下面一个一个看。</p>
 <p>plot_annotation()函数</p>
@@ -9883,22 +10772,21 @@ X轴标签(axis.text.x)在绘制极坐标柱形图和径向柱形图时会用于
 <a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>#patchwork包的plot_layout()函数
 <a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>fig1 + fig3 + fig2 +
 <a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>  plot_layout(ncol = 2, byrow = TRUE)
-<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>#除了用+号运算来排版图形外，还可以使用/号来排版。
-<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>fig1/fig2
-<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>fig3 | (fig1/fig2)
-<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>(fig1 + fig3)/ fig5 +
-<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>  plot_annotation(tag_levels = "A",
-<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>                  title = "组合图形排版",
-<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>                  caption = "公众号:BioInfoNotes")
-<a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a>#图形设置为两列，默认按行填充，两列之间相对宽度比为1：2
-<a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a>fig1 + fig3 + fig2 + plot_layout(ncol = 2, widths = c(1, 2))
-<a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a>#plot_spacer()函数就是在前后图形中创建一个空的透明网格
-<a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a>fig1 + fig3 + plot_spacer()+fig2
-<a id="__codelineno-19-21" name="__codelineno-19-21" href="#__codelineno-19-21"></a>library(gridExtra)
-<a id="__codelineno-19-22" name="__codelineno-19-22" href="#__codelineno-19-22"></a>grid.arrange(fig1,fig2,fig5, ncol = 2, nrow =2,layout_matrix=matrix(c(1,2,3,3),ncol = 2,byrow = T))
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>#除了用+号运算来排版图形外，还可以使用/号来排版。fig1/fig2
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>fig3 | (fig1/fig2)
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>(fig1 + fig3)/ fig5 +
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>  plot_annotation(tag_levels = "A",
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>                  title = "组合图形排版",
+<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>                  caption = "公众号:BioInfoNotes")
+<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>#图形设置为两列，默认按行填充，两列之间相对宽度比为1：2
+<a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a>fig1 + fig3 + fig2 + plot_layout(ncol = 2, widths = c(1, 2))
+<a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a>#plot_spacer()函数就是在前后图形中创建一个空的透明网格
+<a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a>fig1 + fig3 + plot_spacer()+fig2
+<a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a>library(gridExtra)
+<a id="__codelineno-19-21" name="__codelineno-19-21" href="#__codelineno-19-21"></a>grid.arrange(fig1,fig2,fig5, ncol = 2, nrow =2,layout_matrix=matrix(c(1,2,3,3),ncol = 2,byrow = T))
 </code></pre></div>
-<h1 id="_1"><strong>三.散点图</strong><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="1plot"><strong>1.利用plot()绘制散点图</strong><a class="headerlink" href="#1plot" title="Permanent link">&para;</a></h2>
+<h2 id="_1"><strong>三.散点图</strong><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="1plot"><strong>1.利用plot()绘制散点图</strong><a class="headerlink" href="#1plot" title="Permanent link">&para;</a></h3>
 <p>R语言中plot()函数的基本格式如下：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>plot(x,y,...)
 </code></pre></div>
@@ -9940,7 +10828,7 @@ X轴标签(axis.text.x)在绘制极坐标柱形图和径向柱形图时会用于
 <a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>head(trees) # 预览数据集
 </code></pre></div>
 <p><img alt="1609075535741-bf03c4c6-d3e4-481b-bcaa-bfea140baaf4.png" src="../img/KnCuf_TQaNAuuoQH/1609075535741-bf03c4c6-d3e4-481b-bcaa-bfea140baaf4-609305.png" /></p>
-<h2 id="2ggplot2"><strong>2.ggplot2()绘制散点图</strong><a class="headerlink" href="#2ggplot2" title="Permanent link">&para;</a></h2>
+<h3 id="2ggplot2"><strong>2.ggplot2()绘制散点图</strong><a class="headerlink" href="#2ggplot2" title="Permanent link">&para;</a></h3>
 <p>利用ggplot2绘图，请记住下面这个格式，因为这个格式ggplot2绘制其他图形都是这一格式。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>ggplot(data, aes(x, y)) + geom_point()
 </code></pre></div>
@@ -9992,12 +10880,12 @@ X轴标签(axis.text.x)在绘制极坐标柱形图和径向柱形图时会用于
 <a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>                      limits=c(0,6000))
 </code></pre></div>
 <p><img alt="1609075535677-106ee198-cc98-4c07-935a-8ac47efdf9a8.png" src="../img/KnCuf_TQaNAuuoQH/1609075535677-106ee198-cc98-4c07-935a-8ac47efdf9a8-011036.png" /></p>
-<h1 id="_2"><strong>四.柱状图</strong><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<h2 id="_2"><strong>四.柱状图</strong><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>library(ggplot2)
 <a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>library(RColorBrewer)
 </code></pre></div>
 <p>我们可以通过将 geom_bar() 中的参数指定为 colour="black" 为条形添加黑色边框线；可以通过 scale_fill_brewer() 或者 scale_fill_manual() 函数对图形颜色进行设置。颜色的映射设定是在 aes() 内部完成的，而颜色的重新设定是在 aes() 外部完成的</p>
-<h2 id="01"><strong>01.单数据系列柱形图</strong><a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
+<h3 id="01"><strong>01.单数据系列柱形图</strong><a class="headerlink" href="#01" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>mydata&lt;-data.frame(Cut=c("Fair","Good","Very Good","Premium","Ideal"),
 <a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>                    Price=c(4300,3800,3950,4700,3500))
 <a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>#mydata$Cut &lt;- factor(mydata$Cut, levels = mydata$Cut[order(mydata$Order)])
@@ -10054,7 +10942,7 @@ X轴标签(axis.text.x)在绘制极坐标柱形图和径向柱形图时会用于
 <a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a>7  OECD_average        8      5      6              3
 <a id="__codelineno-36-10" name="__codelineno-36-10" href="#__codelineno-36-10"></a>8 United States        7      3      8              1
 </code></pre></div>
-<h2 id="02"><strong>02.双数据系列柱形图</strong><a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
+<h3 id="02"><strong>02.双数据系列柱形图</strong><a class="headerlink" href="#02" title="Permanent link">&para;</a></h3>
 <p>mydata的数据格式：</p>
 <p><img alt="1609075535600-14047654-e380-4722-bddd-032b4dc3e2d8.png" src="../img/KnCuf_TQaNAuuoQH/1609075535600-14047654-e380-4722-bddd-032b4dc3e2d8-826261.png" /></p>
 <p>下面是代码</p>
@@ -10118,7 +11006,7 @@ X轴标签(axis.text.x)在绘制极坐标柱形图和径向柱形图时会用于
 <a id="__codelineno-39-16" name="__codelineno-39-16" href="#__codelineno-39-16"></a>  )
 </code></pre></div>
 <p><img alt="1609075535650-110813b9-e0ae-4645-a9e0-97d6614db1f7.png" src="../img/KnCuf_TQaNAuuoQH/1609075535650-110813b9-e0ae-4645-a9e0-97d6614db1f7-185143.png" /></p>
-<h2 id="03"><strong>03.堆积柱形图</strong><a class="headerlink" href="#03" title="Permanent link">&para;</a></h2>
+<h3 id="03"><strong>03.堆积柱形图</strong><a class="headerlink" href="#03" title="Permanent link">&para;</a></h3>
 <p>madata数据格式</p>
 <p><img alt="1609075535616-de6628b3-b3d3-4c3d-9421-ae9981c333a7.png" src="../img/KnCuf_TQaNAuuoQH/1609075535616-de6628b3-b3d3-4c3d-9421-ae9981c333a7-207964.png" /></p>
 <p>代码：</p>
@@ -10226,7 +11114,7 @@ X轴标签(axis.text.x)在绘制极坐标柱形图和径向柱形图时会用于
 <a id="__codelineno-43-34" name="__codelineno-43-34" href="#__codelineno-43-34"></a>32 United States Other.services     1
 </code></pre></div>
 <p><img alt="1609075535639-fe2ea8fc-58dc-4f4a-bf4e-39a59397dc12.png" src="../img/KnCuf_TQaNAuuoQH/1609075535639-fe2ea8fc-58dc-4f4a-bf4e-39a59397dc12-914150.png" /></p>
-<h2 id="04"><strong>04.百分比堆积柱形图</strong><a class="headerlink" href="#04" title="Permanent link">&para;</a></h2>
+<h3 id="04"><strong>04.百分比堆积柱形图</strong><a class="headerlink" href="#04" title="Permanent link">&para;</a></h3>
 <p>数据同堆积柱形图，下面是代码</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>mydata &lt;- data.frame(Clarity = c("Fair","Good","Very_Good","Premium","Ideal"),
 <a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>                     I1 = c(150,1200,1300,2800,2000),
@@ -10328,7 +11216,7 @@ X轴标签(axis.text.x)在绘制极坐标柱形图和径向柱形图时会用于
 <a id="__codelineno-47-33" name="__codelineno-47-33" href="#__codelineno-47-33"></a>31  OECD_average Other.services     3
 <a id="__codelineno-47-34" name="__codelineno-47-34" href="#__codelineno-47-34"></a>32 United States Other.services     1
 </code></pre></div>
-<h2 id="05"><strong>05.不等宽柱形图</strong><a class="headerlink" href="#05" title="Permanent link">&para;</a></h2>
+<h3 id="05"><strong>05.不等宽柱形图</strong><a class="headerlink" href="#05" title="Permanent link">&para;</a></h3>
 <p>geom_rect()函数可以根据右下角坐标(xmin,ymin)和左上角坐标(xmax,ymax)绘制矩形，矩形宽度(width)为max<sub>xmin对应X轴变量的数值大小矩形的高度(height)为ymax</sub>ymin对应Y轴的数值大小。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>##不等宽柱形图
 <a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>library(ggplot2)
@@ -10370,7 +11258,7 @@ X轴标签(axis.text.x)在绘制极坐标柱形图和径向柱形图时会用于
 <a id="__codelineno-48-38" name="__codelineno-48-38" href="#__codelineno-48-38"></a>#dev.off()
 </code></pre></div>
 <p><img alt="1609075535661-c3d23b51-7333-4e8f-84cd-e991520fbb2d.png" src="../img/KnCuf_TQaNAuuoQH/1609075535661-c3d23b51-7333-4e8f-84cd-e991520fbb2d-628409.png" /></p>
-<h2 id="06"><strong>06.棒棒糖图</strong><a class="headerlink" href="#06" title="Permanent link">&para;</a></h2>
+<h3 id="06"><strong>06.棒棒糖图</strong><a class="headerlink" href="#06" title="Permanent link">&para;</a></h3>
 <p>就是一根柱子加上一个圆，其实类似传统的柱状图。但是它可以给我们更多的信息，因为圆和下面的棒子可以代表同一组数据，也可以代表两组数据。“糖”和“棒子”的颜色也一样，可以表示同一个信息也可以表示不同维度的信息。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>library(ggplot2)
 <a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a>library(reshape2)
@@ -10425,7 +11313,7 @@ X轴标签(axis.text.x)在绘制极坐标柱形图和径向柱形图时会用于
 <a id="__codelineno-51-14" name="__codelineno-51-14" href="#__codelineno-51-14"></a>           xlab="")
 </code></pre></div>
 <p><img alt="1609075535643-60a5363b-9547-4fa6-8d7e-262c444824d5.png" src="../img/KnCuf_TQaNAuuoQH/1609075535643-60a5363b-9547-4fa6-8d7e-262c444824d5-480686.png" /></p>
-<h2 id="07"><strong>07.克里兰夫点图</strong><a class="headerlink" href="#07" title="Permanent link">&para;</a></h2>
+<h3 id="07"><strong>07.克里兰夫点图</strong><a class="headerlink" href="#07" title="Permanent link">&para;</a></h3>
 <p>克利夫兰点图（Cleveland'sDot Plots）：也就是我们常用的滑珠散点图，非常类似于棒棒糖图，只是没有连接的线条，重点强调数据的排序展示以及互相之间的差距。克利夫兰点图一般都是横向展示，所以Y轴变量一般为类别型变量。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>###克里兰夫点图
 <a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a>mydata&lt;-read.csv("DotPlots_Data.csv",sep=",",na.strings="NA",stringsAsFactors=FALSE)
@@ -10441,7 +11329,7 @@ X轴标签(axis.text.x)在绘制极坐标柱形图和径向柱形图时会用于
 <a id="__codelineno-52-12" name="__codelineno-52-12" href="#__codelineno-52-12"></a>  )
 </code></pre></div>
 <p><img alt="1609075535739-ba47c921-17e8-44ef-9dd4-d474b1478e14.png" src="../img/KnCuf_TQaNAuuoQH/1609075535739-ba47c921-17e8-44ef-9dd4-d474b1478e14-358669.png" /></p>
-<h2 id="08dumbbellplot"><strong>08.哑铃图（DumbbellPlot）</strong><a class="headerlink" href="#08dumbbellplot" title="Permanent link">&para;</a></h2>
+<h3 id="08dumbbellplot"><strong>08.哑铃图（DumbbellPlot）</strong><a class="headerlink" href="#08dumbbellplot" title="Permanent link">&para;</a></h3>
 <p>可以看成多数据系列的克利夫兰点图，只是使用直线连接了两个数据系列的数据点。哑铃图可以主要用于：1.展示在同一时间段两个数据点的相对位置（增加或者减少），2.比较两个类别之间的数据值差别。如图所示，就是展示了男性（male）和女性（Female）两个类别的数值差别，以女性（Female）数据系列的数值排序显示。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>mydata&lt;-read.csv("DotPlots_Data.csv",sep=",",na.strings="NA",stringsAsFactors=FALSE)
 <a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a>mydata$City &lt;- factor(mydata$City, levels = mydata$City[order(mydata$Female)])
@@ -10459,7 +11347,7 @@ X轴标签(axis.text.x)在绘制极坐标柱形图和径向柱形图时会用于
 <a id="__codelineno-53-14" name="__codelineno-53-14" href="#__codelineno-53-14"></a>  )
 </code></pre></div>
 <p><img alt="1609075535746-0c25a83e-bb73-431f-aa44-e6197c186091.png" src="../img/KnCuf_TQaNAuuoQH/1609075535746-0c25a83e-bb73-431f-aa44-e6197c186091-518417.png" /></p>
-<h2 id="09"><strong>09.坡度图</strong><a class="headerlink" href="#09" title="Permanent link">&para;</a></h2>
+<h3 id="09"><strong>09.坡度图</strong><a class="headerlink" href="#09" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>library(ggplot2)
 <a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a>library(scales)
 <a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a>library(reshape)
@@ -10538,7 +11426,7 @@ X轴标签(axis.text.x)在绘制极坐标柱形图和径向柱形图时会用于
 <a id="__codelineno-55-50" name="__codelineno-55-50" href="#__codelineno-55-50"></a>p
 </code></pre></div>
 <p><img alt="1609075535673-38724fda-11f4-4735-bc7a-05e3c021fcfb.png" src="../img/KnCuf_TQaNAuuoQH/1609075535673-38724fda-11f4-4735-bc7a-05e3c021fcfb-016115.png" /></p>
-<h2 id="10_1"><strong>10.南丁格尔玫瑰图</strong><a class="headerlink" href="#10_1" title="Permanent link">&para;</a></h2>
+<h3 id="10_1"><strong>10.南丁格尔玫瑰图</strong><a class="headerlink" href="#10_1" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>library(ggplot2)
 <a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a>#----------------------------------单数据系列极坐标柱形图-----------------------------------------
 <a id="__codelineno-56-3" name="__codelineno-56-3" href="#__codelineno-56-3"></a>mydata &lt;- data.frame( a=c("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"),
@@ -10590,7 +11478,7 @@ X轴标签(axis.text.x)在绘制极坐标柱形图和径向柱形图时会用于
 <a id="__codelineno-57-30" name="__codelineno-57-30" href="#__codelineno-57-30"></a>         axis.text.x=element_text(size = 13,colour="black",angle = myAngle))
 </code></pre></div>
 <p><img alt="1609075535704-418d2efa-c17e-460f-9c0c-9973a9aa46ab.png" src="../img/KnCuf_TQaNAuuoQH/1609075535704-418d2efa-c17e-460f-9c0c-9973a9aa46ab-355027.png" /></p>
-<h2 id="11"><strong>11.径向柱形图</strong><a class="headerlink" href="#11" title="Permanent link">&para;</a></h2>
+<h3 id="11"><strong>11.径向柱形图</strong><a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>library(ggplot2)
 <a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a>library(RColorBrewer)
 <a id="__codelineno-58-3" name="__codelineno-58-3" href="#__codelineno-58-3"></a>df &lt;- data.frame(item=rep(LETTERS[1:10], 5),
@@ -10683,7 +11571,7 @@ X轴标签(axis.text.x)在绘制极坐标柱形图和径向柱形图时会用于
 <a id="__codelineno-60-34" name="__codelineno-60-34" href="#__codelineno-60-34"></a>        axis.ticks =  element_line(color="black"))
 </code></pre></div>
 <p><img alt="1609075535711-8cc89dcd-6a16-49bb-aad7-05858fd32189.png" src="../img/KnCuf_TQaNAuuoQH/1609075535711-8cc89dcd-6a16-49bb-aad7-05858fd32189-945736.png" /></p>
-<h2 id="12"><strong>12.词云图</strong><a class="headerlink" href="#12" title="Permanent link">&para;</a></h2>
+<h3 id="12"><strong>12.词云图</strong><a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
 <p>代码有错误</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a>#install.packages("tm")
 <a id="__codelineno-61-2" name="__codelineno-61-2" href="#__codelineno-61-2"></a>#install.packages("wordcloud")
@@ -10716,7 +11604,7 @@ X轴标签(axis.text.x)在绘制极坐标柱形图和径向柱形图时会用于
 <a id="__codelineno-61-29" name="__codelineno-61-29" href="#__codelineno-61-29"></a>#Colors&lt;-colorRampPalette(rev(brewer.pal(9,'RdBu')))(length(df$Paper1&gt;10))
 <a id="__codelineno-61-30" name="__codelineno-61-30" href="#__codelineno-61-30"></a>wordcloud(row.names(df) , df$Paper1 , min.freq=10,col=brewer.pal(8, "Dark2"), rot.per=0.3 )
 </code></pre></div>
-<h1 id="_3"><strong>五.箱型图</strong><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
+<h2 id="_3"><strong>五.箱型图</strong><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a>&gt; head(InsectSprays)
 <a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a>  count spray
 <a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a>1    10     A
@@ -10828,7 +11716,7 @@ X轴标签(axis.text.x)在绘制极坐标柱形图和径向柱形图时会用于
 </code></pre></div>
 <p><img alt="1609075535710-13a536ef-efb9-4ef9-8cdf-30a587b3ac1f.png" src="../img/KnCuf_TQaNAuuoQH/1609075535710-13a536ef-efb9-4ef9-8cdf-30a587b3ac1f-886349.png" /></p>
 <p><img alt="1609075535772-bad6d769-34b3-4fb9-9a92-02dd9fb8ea6e.png" src="../img/KnCuf_TQaNAuuoQH/1609075535772-bad6d769-34b3-4fb9-9a92-02dd9fb8ea6e-821360.png" /></p>
-<h1 id="_4"><strong>六.热图绘制</strong><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h1>
+<h2 id="_4"><strong>六.热图绘制</strong><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>数据20行，10列的数据如下：</p>
 <p><img alt="1609075535779-c3336357-c934-4e3e-b334-2194b47c80ae.png" src="../img/KnCuf_TQaNAuuoQH/1609075535779-c3336357-c934-4e3e-b334-2194b47c80ae-083849.png" /></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a>test = matrix(rnorm(200), 20, 10)
@@ -11038,7 +11926,7 @@ X轴标签(axis.text.x)在绘制极坐标柱形图和径向柱形图时会用于
 <a id="__codelineno-102-83" name="__codelineno-102-83" href="#__codelineno-102-83"></a>
 <a id="__codelineno-102-84" name="__codelineno-102-84" href="#__codelineno-102-84"></a><span class="nf">dev.off</span><span class="p">()</span>
 </code></pre></div>
-<h1 id="_5"><strong>七.生存曲线</strong><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
+<h2 id="_5"><strong>七.生存曲线</strong><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-103-1" name="__codelineno-103-1" href="#__codelineno-103-1"></a>require("survival")
 <a id="__codelineno-103-2" name="__codelineno-103-2" href="#__codelineno-103-2"></a>fit&lt;- survfit(Surv(time, status) ~ sex, data = lung)
 <a id="__codelineno-103-3" name="__codelineno-103-3" href="#__codelineno-103-3"></a># Basic survival curves
@@ -11077,7 +11965,7 @@ X轴标签(axis.text.x)在绘制极坐标柱形图和径向柱形图时会用于
 <a id="__codelineno-105-5" name="__codelineno-105-5" href="#__codelineno-105-5"></a>           font.tickslab = c(12, "plain", "darkgreen"))
 </code></pre></div>
 <p><img alt="1609075535918-389a2509-d3ce-4697-b7f5-1fef88d9213d.png" src="../img/KnCuf_TQaNAuuoQH/1609075535918-389a2509-d3ce-4697-b7f5-1fef88d9213d-483434.png" /></p>
-<h1 id="_6"><strong>八.火山图</strong><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h1>
+<h2 id="_6"><strong>八.火山图</strong><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-106-1" name="__codelineno-106-1" href="#__codelineno-106-1"></a>colr &lt;- brewer.pal(9,"Set1")[c(3,9,1)]
 <a id="__codelineno-106-2" name="__codelineno-106-2" href="#__codelineno-106-2"></a>ggplot(data = diff, aes(x = logFC, y = logP, color = Group)) +
 <a id="__codelineno-106-3" name="__codelineno-106-3" href="#__codelineno-106-3"></a>  geom_point(alpha=0.8, size = 2) +

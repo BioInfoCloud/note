@@ -1404,6 +1404,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RNA-seq的count,TPM, FPKM/RPKM值的区别与转换
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1420,6 +1438,113 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1count" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.Count值
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2rpkmfpkm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.RPKM/FPKM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3tpm-transcript-per-million" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.TPM (Transcript per million)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.三者之间的比较
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.数据之间的转换
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1countfpkm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        （1）count转FPKM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2counttpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        （2）count转TPM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3fpkmtpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        （3）FPKM转TPM
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -9468,6 +9593,102 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1count" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.Count值
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2rpkmfpkm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.RPKM/FPKM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3tpm-transcript-per-million" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.TPM (Transcript per million)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.三者之间的比较
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.数据之间的转换
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1countfpkm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        （1）count转FPKM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2counttpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        （2）count转TPM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3fpkmtpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        （3）FPKM转TPM
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -9492,10 +9713,10 @@
 <p>标准化的主要目的是去除测序数据的技术偏差：测序深度和基因长度。</p>
 <p>测序深度：同一条件下，测序深度越深，基因表达的read读数越多。</p>
 <p>基因长度：同一条件下，不同的基因长度产生不对等的read读数，基因越长，该基因的read读数越高。</p>
-<h1 id="1count"><strong>1.Count值</strong><a class="headerlink" href="#1count" title="Permanent link">&para;</a></h1>
+<h2 id="1count"><strong>1.Count值</strong><a class="headerlink" href="#1count" title="Permanent link">&para;</a></h2>
 <p>对给定的基因组参考区域，计算比对上的read数，又称为raw count（RC）。在RNAseq数据中，raw reads count一般是指mapped到基因外显子区域的reads数目。</p>
 <p><img alt="1702200828593-670569e4-1a85-47d8-a634-a394082fdac2.png" src="../img/08QLyEVmIYT1PuBG/1702200828593-670569e4-1a85-47d8-a634-a394082fdac2-485177.png" /></p>
-<h1 id="2rpkmfpkm">2.RPKM/FPKM<a class="headerlink" href="#2rpkmfpkm" title="Permanent link">&para;</a></h1>
+<h2 id="2rpkmfpkm">2.RPKM/FPKM<a class="headerlink" href="#2rpkmfpkm" title="Permanent link">&para;</a></h2>
 <p>FPKM(Fragment Per Kilobase of transcript, per Million mapped reads）：每千碱基片段每百万映射读取的 reads 数)，是针对双端测序的一个normalization方法。通常来讲，当paired reads同时匹配到一个位置，记为fragment(注：即便是双端测序，RPKM也不完全是FPKM的2倍)。</p>
 <p><img alt="1702200952554-98b7f09a-b8ef-4a5b-8f52-8883d204d129.png" src="../img/08QLyEVmIYT1PuBG/1702200952554-98b7f09a-b8ef-4a5b-8f52-8883d204d129-468776.png" /></p>
 <p><strong>RPKM: Reads Per Kilobase of exon model per Million mapped reads (每千个碱基的转录每百万映射读取的reads)</strong></p>
@@ -9503,20 +9724,18 @@
 <hr />
 <p><strong>RPKM/FPKM方法</strong>：10<sup>3标准化了基因长度的影响，10</sup>6标准化了测序深度的影响。FPKM方法与RPKM类似，主要针对双末端RNA-seq实验的转录本定量。在双末端RNA-seq实验中，有左右两个对应的read来自相同的DNA片段。在进行双末端read进行比对时，来自同一DNA片段的高质量的一对或单个read可以定位到参考序列上。为避免混淆或多次计数，统计一对或单个read比对上的参考序列片段（Fragment），来计算FPKM，计算方法同RPKM。</p>
 <p><strong>RPKM与FPKM的区别</strong>：RPKM值适用于单末端RNA-seq实验数据，FPKM适用于双末端RNA-seq测序数据。</p>
-<h1 id="3tpm-transcript-per-million"><strong>3.TPM (Transcript per million)</strong><a class="headerlink" href="#3tpm-transcript-per-million" title="Permanent link">&para;</a></h1>
+<h2 id="3tpm-transcript-per-million"><strong>3.TPM (Transcript per million)</strong><a class="headerlink" href="#3tpm-transcript-per-million" title="Permanent link">&para;</a></h2>
 <p>TPM（Transcripts Per Million） 是一种常用的基因表达量归一化方法，它将基因的表达量调整为每百万条转录本的数量。TPM 值考虑了基因的长度和测序深度，通过将每个基因的 Counts 值除以其长度，并进行适当的归一化，将基因的表达量转换为每百万转录本数，以便进行样本间的比较和分析。TPM 值消除了样本间测序深度的差异和基因长度的影响。</p>
 <p><img alt="1702201133439-8661f5aa-caab-4420-adb7-53589546960b.png" src="../img/08QLyEVmIYT1PuBG/1702201133439-8661f5aa-caab-4420-adb7-53589546960b-225671.png" /></p>
 <p>TPM的计算方法也同RPKM/FPKM类似，首先使用式2计算每个基因的表达值，去除基因长度的影响。随后计算每个基因的表达量的百分比，最后再乘以10^6，TPM可以看作是RPKM/FPKM值的百分比。</p>
-<p>直接说事情，我有一个基因A，它在这个样本的转录组数据中被测序而且mapping到基因组了 5000个的reads，而这个基因A长度是10K，我们总测序文库是50M，所以这个基因A的RPKM值是 5000除以10，再除以50，为10. 就是把基因的reads数量根据基因长度和样本测序文库来normalization 。
-那么它的TPM值是多少呢？
-这个时候这些信息已经不够了，需要知道该样本其它基因的RPKM值是多少，加上该样本有3个基因，另外两个基因的RPKM值是5和35，那么我们的基因A的RPKM值为10需要换算成TPM值就是 1,000,000 *10/(5+10+35)=200,000，看起来是不是有点大呀，其实主要是因为我们假设的基因太少了，一般个体里面都有两万多个基因的，总和会大大的增加，这样TPM值跟RPKM值差别不会这么恐怖的。</p>
+<p>直接说事情，我有一个基因A，它在这个样本的转录组数据中被测序而且mapping到基因组了 5000个的reads，而这个基因A长度是10K，我们总测序文库是50M，所以这个基因A的RPKM值是 5000除以10，再除以50，为10. 就是把基因的reads数量根据基因长度和样本测序文库来normalization 。那么它的TPM值是多少呢？这个时候这些信息已经不够了，需要知道该样本其它基因的RPKM值是多少，加上该样本有3个基因，另外两个基因的RPKM值是5和35，那么我们的基因A的RPKM值为10需要换算成TPM值就是 1,000,000 *10/(5+10+35)=200,000，看起来是不是有点大呀，其实主要是因为我们假设的基因太少了，一般个体里面都有两万多个基因的，总和会大大的增加，这样TPM值跟RPKM值差别不会这么恐怖的。</p>
 <p>相当于重新标准化的文库，保证每个样本中所有TPM的总和是相同的。</p>
 <p><strong>TPM与RPKM/FPKM的区别</strong>：从计算公式来说，唯一的不同是计算操作的顺序，TPM是先去除了基因长度的影响，而RPKM/FPKM是先去除测序深度的影响，具体可看这篇博文，有计算步骤的详细说明；TPM实际上改进了RPKM/FPKM方法在跨样品间定量的不准确性。</p>
 <p>TPM的使用范围与RPKM/FPKM相同。</p>
-<h1 id="4">4.三者之间的比较<a class="headerlink" href="#4" title="Permanent link">&para;</a></h1>
+<h2 id="4">4.三者之间的比较<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <p>raw count作为原始的read计数矩阵是一个绝对值，而绝对值的特点是规模不同（基因长度、测序深度），不可以比较。进行这些基因标准化方法的目的是将count矩阵转变为相对值，去除技术偏差的影响，使后续的差异分析具有统计学的意义。</p>
 <p><img alt="1612327456384-40358485-b080-42bf-8484-207f44081d88.png" src="../img/08QLyEVmIYT1PuBG/1612327456384-40358485-b080-42bf-8484-207f44081d88-381946.png" /></p>
-<h1 id="5">5.数据之间的转换<a class="headerlink" href="#5" title="Permanent link">&para;</a></h1>
+<h2 id="5">5.数据之间的转换<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
 <p>这里以一个案例来讲解，因为涉及到基因的长度，所以需要有每个基因的长度信息。对于有参考基因组的物种来说，可以从参考基因组的gtf文件中获取。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">GenomicFeatures</span><span class="p">)</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">txdb</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">makeTxDbFromGFF</span><span class="p">(</span><span class="s">"gencode.v22.annotation.gtf"</span><span class="p">,</span><span class="n">format</span><span class="o">=</span><span class="s">"gtf"</span><span class="p">)</span>
@@ -9557,7 +9776,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">effLen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hsaGeneInfo</span><span class="o">$</span><span class="n">gene_length</span>
 </code></pre></div>
 <p><img alt="1702203112684-fae6a5a5-89dd-45c6-8da0-e26b72bb7196.png" src="../img/08QLyEVmIYT1PuBG/1702203112684-fae6a5a5-89dd-45c6-8da0-e26b72bb7196-038461.png" /></p>
-<h1 id="1countfpkm">（1）count转FPKM<a class="headerlink" href="#1countfpkm" title="Permanent link">&para;</a></h1>
+<h2 id="1countfpkm">（1）count转FPKM<a class="headerlink" href="#1countfpkm" title="Permanent link">&para;</a></h2>
 <p>这里需要根据FPKM的公式定义一个函数：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># effLen基因长度，counts是基因的count数</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">Counts2FPKM</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span><span class="w"> </span><span class="n">effLen</span><span class="p">){</span>
@@ -9569,22 +9788,21 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>fpkms &lt;- apply(count, 2, Counts2FPKM, effLen = effLen)
 </code></pre></div>
 <p><img alt="1702203209824-db47bb8a-39f9-4f61-9ad2-6661575b1ecd.png" src="../img/08QLyEVmIYT1PuBG/1702203209824-db47bb8a-39f9-4f61-9ad2-6661575b1ecd-652471.png" /></p>
-<h1 id="2counttpm">（2）count转TPM<a class="headerlink" href="#2counttpm" title="Permanent link">&para;</a></h1>
+<h2 id="2counttpm">（2）count转TPM<a class="headerlink" href="#2counttpm" title="Permanent link">&para;</a></h2>
 <p>这里需要根据TPM的公式定义一个函数：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># counts:转录组的count矩阵，行为基因，列为样本</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1"># effLen：一个数值型向量，值是基因长度，顺序应该与count的列一致对应。</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">Counts2TPM</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span><span class="w"> </span><span class="n">effLen</span><span class="p">){</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span><span class="n">rate</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">log</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">log</span><span class="p">(</span><span class="n">effLen</span><span class="p">)</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">  </span><span class="n">denom</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">log</span><span class="p">(</span><span class="nf">sum</span><span class="p">(</span><span class="nf">exp</span><span class="p">(</span><span class="n">rate</span><span class="p">)))</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">  </span><span class="nf">exp</span><span class="p">(</span><span class="n">rate</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">denom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">log</span><span class="p">(</span><span class="m">1e6</span><span class="p">))</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="p">}</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1"># effLen：一个数值型向量，值是基因长度，顺序应该与count的列一致对应。Counts2TPM &lt;- function(counts, effLen){</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="n">rate</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">log</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">log</span><span class="p">(</span><span class="n">effLen</span><span class="p">)</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span><span class="n">denom</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">log</span><span class="p">(</span><span class="nf">sum</span><span class="p">(</span><span class="nf">exp</span><span class="p">(</span><span class="n">rate</span><span class="p">)))</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">  </span><span class="nf">exp</span><span class="p">(</span><span class="n">rate</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">denom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">log</span><span class="p">(</span><span class="m">1e6</span><span class="p">))</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="p">}</span>
 </code></pre></div>
 <p>使用上面函数进行转换：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">trans_tpm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">apply</span><span class="p">(</span><span class="n">count</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">Counts2TPM</span><span class="p">,</span><span class="w"> </span><span class="n">effLen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">effLen</span><span class="p">)</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nf">head</span><span class="p">(</span><span class="n">trans_tpm</span><span class="p">)[,</span><span class="m">1</span><span class="o">:</span><span class="m">2</span><span class="p">]</span>
 </code></pre></div>
 <p><img alt="1702203347246-29de2d0a-1305-4ddd-9213-e7dfd805b6af.png" src="../img/08QLyEVmIYT1PuBG/1702203347246-29de2d0a-1305-4ddd-9213-e7dfd805b6af-943013.png" /></p>
-<h1 id="3fpkmtpm">（3）FPKM转TPM<a class="headerlink" href="#3fpkmtpm" title="Permanent link">&para;</a></h1>
+<h2 id="3fpkmtpm">（3）FPKM转TPM<a class="headerlink" href="#3fpkmtpm" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">##3.FPKM转TPM</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">FPKM2TPM</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">fpkm</span><span class="p">){</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="nf">exp</span><span class="p">(</span><span class="nf">log</span><span class="p">(</span><span class="n">fpkm</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">log</span><span class="p">(</span><span class="nf">sum</span><span class="p">(</span><span class="n">fpkm</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">log</span><span class="p">(</span><span class="m">1e6</span><span class="p">))</span>

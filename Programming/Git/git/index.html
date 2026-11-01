@@ -10425,12 +10425,10 @@ It is not possible to re-include a file if a parent directory of that file is ex
 <p>假设我们现在本地已经有了一个Git仓库，我们现在希望将它上传到<code>GitHub</code>上，让别人也看到我这个仓库里面的文件：</p>
 <p>打开<code>GitHub</code>，创建一个新的仓库（Repository），什么都不添加，之后会弹出下面的一段话：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="c1">## push an existing repository from the command line:</span>
-<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="c1">## 在本地添加一个远程仓库，并且给这个远程仓库起名为`origin`。使用`git remote`命令查看本地仓库关联的远程仓库。</span>
-<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/Yang-Xijie/git_lecture.git
-<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="c1">## 将本地仓库的当前分支重命名为main（不本质）</span>
-<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>git<span class="w"> </span>branch<span class="w"> </span>-M<span class="w"> </span>main
-<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="c1">## 如果直接执行git push，会出现：fatal: The current branch main has no upstream branch. To push the current branch and set the remote as upstream, use `git push --set-upstream origin main`，这说明我们需要给当前的分支与一个远程的分支相对应。-u是--set-upstream的简写。</span>
-<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="c1">## 在本地添加一个远程仓库，并且给这个远程仓库起名为`origin`。使用`git remote`命令查看本地仓库关联的远程仓库。git remote add origin https://github.com/Yang-Xijie/git_lecture.git</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="c1">## 将本地仓库的当前分支重命名为main（不本质）</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>git<span class="w"> </span>branch<span class="w"> </span>-M<span class="w"> </span>main
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="c1">## 如果直接执行git push，会出现：fatal: The current branch main has no upstream branch. To push the current branch and set the remote as upstream, use `git push --set-upstream origin main`，这说明我们需要给当前的分支与一个远程的分支相对应。-u是--set-upstream的简写。git push -u origin main</span>
 </code></pre></div>
 <p>我们按照提示来做，会发现代码已经上传了上去。</p>
 <p>如果我们再在本地修改，提交，（由于我们已经设置了上游的分支）之后就可以使用<code>git push</code>将修改的内容同步到<code>GitHub</code>了！</p>

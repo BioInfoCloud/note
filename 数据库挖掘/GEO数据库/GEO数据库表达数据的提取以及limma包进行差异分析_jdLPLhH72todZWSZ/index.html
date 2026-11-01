@@ -9491,8 +9491,7 @@
 <p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1338047035672526848&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>TCGA</strong></a>** | <strong><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1385753371944239106&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>GEO</strong></a></strong> | <strong><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1338481272770953216&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>文献阅读</strong></a></strong> | <strong><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1338487030963142656&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>数据库</strong></a><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1338487030963142656&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect">** **</a></strong>| **<a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1338473418617946113&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>理论知识</strong></a></p>
 <p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1337050529440104449&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>R语言</strong></a>** | **<a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1369789283514761218&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>Bioconductor</strong></a></p>
 <hr />
-<p>关于GEO数据库认识和在线使用教程，参考文章:<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263601&amp;idx=1&amp;sn=443d0dddebb12f21cfd976d50473856b&amp;chksm=841ef60cb3697f1aecc6c310ee3a77e6182a728d5b6711a5cc8f49f0739feaba904f565ce176&amp;scene=21#wechat_redirect"><strong>G</strong><strong>EO数据库使用教程及在线数据分析工具</strong></a>。
-关于GEO数据库的R包：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651266556&amp;idx=1&amp;sn=05fe660c9241f3a850584d73b5e8e665&amp;chksm=841ef981b36970976f4310b412f53823afeda1e9a5be5c49c8213525db9cd0b852a96daba4cc&amp;scene=21#wechat_redirect"><strong>Bioconductor：GEOquery包</strong></a><strong>，</strong>我们前面已经介绍，当然是官方案例，我们这里实战一下。</p>
+<p>关于GEO数据库认识和在线使用教程，参考文章:<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263601&amp;idx=1&amp;sn=443d0dddebb12f21cfd976d50473856b&amp;chksm=841ef60cb3697f1aecc6c310ee3a77e6182a728d5b6711a5cc8f49f0739feaba904f565ce176&amp;scene=21#wechat_redirect"><strong>G</strong><strong>EO数据库使用教程及在线数据分析工具</strong></a>。关于GEO数据库的R包：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651266556&amp;idx=1&amp;sn=05fe660c9241f3a850584d73b5e8e665&amp;chksm=841ef981b36970976f4310b412f53823afeda1e9a5be5c49c8213525db9cd0b852a96daba4cc&amp;scene=21#wechat_redirect"><strong>Bioconductor：GEOquery包</strong></a><strong>，</strong>我们前面已经介绍，当然是官方案例，我们这里实战一下。</p>
 <p>大家可以先通过网页搜索GSE152509数据集，对该数据集有一个基本的认识：</p>
 <p><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE152509"><u>https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE152509</u></a></p>
 <p><img alt="1610771743406-40b6565c-07b5-4e33-a5d2-f6253250568e.png" src="../img/jdLPLhH72todZWSZ/1610771743406-40b6565c-07b5-4e33-a5d2-f6253250568e-851080.png" /></p>
@@ -9732,17 +9731,7 @@
 <a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a>PTPN21   135.289   100.369   353.498   229.589   230.143   340.561
 </code></pre></div>
 <p>好了，我们接着说，为什么要进行log2转换。</p>
-<p>GEO中的Series Matrix File(s)通常是经过了标准化和对数转换的数据。
-但不全是。
-在实际应用的时候需要根据情况判断一下。
-对于芯片数据，可能作者将.cel的文件处理成未标准化的数据直接上传。
-一般来说，在判断counts是否需要重新标准化以及是否需要log2时，可以根据数值大小粗略估计。
-如果表达量的数值在50以内，通常是经过log2转化后的。
-如果数字在几百几千，则是未经转化的。
-因为2的几十次方已经非常巨大，如果2的几百次方，则不符合实际情况。
-我们上面的矩阵，我们肉眼就能看到数值都是个位数字，最大上千，这就是没有经过log处理过的，所以我们需要处理。
-前面处理的时候为什么+1？
-就是避免有0的值，取不了log值，所以加1再取log值，这对整体影响不大，这是个中学数学问题。</p>
+<p>GEO中的Series Matrix File(s)通常是经过了标准化和对数转换的数据。但不全是。在实际应用的时候需要根据情况判断一下。对于芯片数据，可能作者将.cel的文件处理成未标准化的数据直接上传。一般来说，在判断counts是否需要重新标准化以及是否需要log2时，可以根据数值大小粗略估计。如果表达量的数值在50以内，通常是经过log2转化后的。如果数字在几百几千，则是未经转化的。因为2的几十次方已经非常巨大，如果2的几百次方，则不符合实际情况。我们上面的矩阵，我们肉眼就能看到数值都是个位数字，最大上千，这就是没有经过log处理过的，所以我们需要处理。前面处理的时候为什么+1？就是避免有0的值，取不了log值，所以加1再取log值，这对整体影响不大，这是个中学数学问题。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>eset &lt;- log2(eset +1)
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>&gt; head(eset)
@@ -9756,8 +9745,7 @@
 </code></pre></div>
 <p>可能肉眼估计你自己都不太相信，那就看看作者的处理方式。GSE数据下载界面中的SOFT文件和Series Matrix File(s)文件中均有描述该系列的数据是如何进行标准化处理的，常见的标准化处理方法有3种：RMA算法、GC-RMA算法、MAS5算法，其中前两中算法的返回值已经经过log2转换，可直接进行差异表达分析，第三种算法返回值未经过log2转换，需要自行进行log2转换。</p>
 <p><img alt="1610771743390-d38f7c67-ff03-4db4-ad99-84d3313ae4ad.png" src="../img/jdLPLhH72todZWSZ/1610771743390-d38f7c67-ff03-4db4-ad99-84d3313ae4ad-498947.png" /></p>
-<p>好了，我们提取数据后，就可以进行后续的分析了，比如<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264898&amp;idx=1&amp;sn=f6287d98fe0b0fb48a96d2905ca0bb4f&amp;chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&amp;scene=21#wechat_redirect"><strong>差异分析</strong></a>、<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264534&amp;idx=1&amp;sn=6d5ef1279972e730878d65742e56c855&amp;chksm=841ef26bb3697b7d426e76b16fbe0365aa6ad5da7f86ca7d14dcb72ca47ada25ffba021d9ba8&amp;scene=21#wechat_redirect"><strong>表达谱热图绘制</strong></a>了。
-但差异分析是不是还要分组，所以我们还得知道每个GSM是那一组，比如对照和实验组。</p>
+<p>好了，我们提取数据后，就可以进行后续的分析了，比如<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264898&amp;idx=1&amp;sn=f6287d98fe0b0fb48a96d2905ca0bb4f&amp;chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&amp;scene=21#wechat_redirect"><strong>差异分析</strong></a>、<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264534&amp;idx=1&amp;sn=6d5ef1279972e730878d65742e56c855&amp;chksm=841ef26bb3697b7d426e76b16fbe0365aa6ad5da7f86ca7d14dcb72ca47ada25ffba021d9ba8&amp;scene=21#wechat_redirect"><strong>表达谱热图绘制</strong></a>了。但差异分析是不是还要分组，所以我们还得知道每个GSM是那一组，比如对照和实验组。</p>
 <p>我们提取表型数据。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>pdata &lt;- pData(gset2[[1]])
 </code></pre></div>
@@ -9770,10 +9758,7 @@
 <a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a>GSM188020   DMSO treated MCF7 breast cancer cells [HG-U133A] Exp 3     GSM188020
 <a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a>GSM188022 Dioxin treated MCF7 breast cancer cells [HG-U133A] Exp 3     GSM188022
 </code></pre></div>
-<p>可以看的出来，DMSO处理组就是对照，Dioxin处理组就是实验组。
-就可以设计分组，进行差异分析了。
-如果我们获得的数据是原始的Counts数，可以利用<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264898&amp;idx=1&amp;sn=f6287d98fe0b0fb48a96d2905ca0bb4f&amp;chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&amp;scene=21#wechat_redirect"><strong>edgeR包和DESeq2包进行差异分析</strong></a>，可以参考我在TCGA数据库差异分析的文章，在哪里，我也说过，尽管那是TCGA数据库的教程，但仅仅是提取表达数据的方法不同，只要获取了表达矩阵，后面的分析都一样。
-下面是之前的文章：</p>
+<p>可以看的出来，DMSO处理组就是对照，Dioxin处理组就是实验组。就可以设计分组，进行差异分析了。如果我们获得的数据是原始的Counts数，可以利用<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264898&amp;idx=1&amp;sn=f6287d98fe0b0fb48a96d2905ca0bb4f&amp;chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&amp;scene=21#wechat_redirect"><strong>edgeR包和DESeq2包进行差异分析</strong></a>，可以参考我在TCGA数据库差异分析的文章，在哪里，我也说过，尽管那是TCGA数据库的教程，但仅仅是提取表达数据的方法不同，只要获取了表达矩阵，后面的分析都一样。下面是之前的文章：</p>
 <p><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264898&amp;idx=1&amp;sn=f6287d98fe0b0fb48a96d2905ca0bb4f&amp;chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&amp;scene=21#wechat_redirect"><strong>一文就会TCGA数据库基因表达差异分析</strong></a></p>
 <p>我们这里介绍limma包进行差异表达分析。</p>
 <p>首先，我们根据表型信息，设计好分组</p>

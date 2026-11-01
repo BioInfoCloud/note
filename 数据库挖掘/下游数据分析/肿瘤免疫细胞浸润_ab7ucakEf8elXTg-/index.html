@@ -9632,8 +9632,7 @@
 <p><img alt="1612608562319-23dbba1c-6a62-4f8a-9508-7b3e5612de0e.jpeg" src="../img/ab7ucakEf8elXTg-/1612608562319-23dbba1c-6a62-4f8a-9508-7b3e5612de0e-817069.jpeg" /></p>
 <p><strong>下面我们就介绍</strong><strong>肿瘤免疫浸润与临床相关性分析</strong></p>
 <h2 id="_2">一.表达数据准备<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>首先，我们需要准备一个表达矩阵，这里我们的案例用TCGA-LUAD的表达数据，已经上传到百度网盘，你可以去下载，也可以自己准备。
-差异表达分析的文章中也有介绍了从TCGA数据库下载数据的视频教程：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264493&amp;idx=1&amp;sn=2164cc4d202fc081551f8918c8cbd7a4&amp;chksm=841ef190b36978866b9bd71a989960370614bf234453b3bd070a56fbe324deb4ecaea2305923&amp;scene=21#wechat_redirect">一文就会TCGA数据库基因表达差异分析</a>。</p>
+<p>首先，我们需要准备一个表达矩阵，这里我们的案例用TCGA-LUAD的表达数据，已经上传到百度网盘，你可以去下载，也可以自己准备。差异表达分析的文章中也有介绍了从TCGA数据库下载数据的视频教程：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264493&amp;idx=1&amp;sn=2164cc4d202fc081551f8918c8cbd7a4&amp;chksm=841ef190b36978866b9bd71a989960370614bf234453b3bd070a56fbe324deb4ecaea2305923&amp;scene=21#wechat_redirect">一文就会TCGA数据库基因表达差异分析</a>。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>options(stringsAsFactors = F)
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>library(stringr)
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>library(limma)
@@ -9826,9 +9825,7 @@
 </code></pre></div>
 <p><img alt="1612608562563-97166283-438e-4565-aff7-bba104a545cb.jpeg" src="../img/ab7ucakEf8elXTg-/1612608562563-97166283-438e-4565-aff7-bba104a545cb-214364.jpeg" /></p>
 <h2 id="_5">四.免疫浸润与临床相关性分析<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<p>得到免疫浸润结果后，就需要探讨免疫浸润与临床相关性，比如与肿瘤分期什么关系，我们演示的临床数据之前也上传到了<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264583&amp;idx=1&amp;sn=f94bf8d77402677ee67f5d6336088254&amp;chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&amp;scene=21#wechat_redirect">网盘</a>，具体看文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264583&amp;idx=1&amp;sn=f94bf8d77402677ee67f5d6336088254&amp;chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&amp;scene=21#wechat_redirect">TCGA数据库33个Project的RNA-Seq转录组数据为你整理打包好了</a>。
-你也可以自己下载相应的TCGA-COAD临床数据，可参考文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264504&amp;idx=1&amp;sn=634bd925786a3193977342634b03acc3&amp;chksm=841ef185b369789346bfbfbc315b9976bd14b9e25ed365c26522469e1ee102212c4b005bfb86&amp;scene=21#wechat_redirect">一文解决TCGA数据库临床数据下载与整理</a>。
-这样演示的是TCGA-COAD的临床数据文件：TCGA-COAD-clinical.tsv</p>
+<p>得到免疫浸润结果后，就需要探讨免疫浸润与临床相关性，比如与肿瘤分期什么关系，我们演示的临床数据之前也上传到了<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264583&amp;idx=1&amp;sn=f94bf8d77402677ee67f5d6336088254&amp;chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&amp;scene=21#wechat_redirect">网盘</a>，具体看文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264583&amp;idx=1&amp;sn=f94bf8d77402677ee67f5d6336088254&amp;chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&amp;scene=21#wechat_redirect">TCGA数据库33个Project的RNA-Seq转录组数据为你整理打包好了</a>。你也可以自己下载相应的TCGA-COAD临床数据，可参考文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264504&amp;idx=1&amp;sn=634bd925786a3193977342634b03acc3&amp;chksm=841ef185b369789346bfbfbc315b9976bd14b9e25ed365c26522469e1ee102212c4b005bfb86&amp;scene=21#wechat_redirect">一文解决TCGA数据库临床数据下载与整理</a>。这样演示的是TCGA-COAD的临床数据文件：TCGA-COAD-clinical.tsv</p>
 <p><strong>1.临床数据的处理</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>############一个函数
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>getSurData &lt;- function(clindataM){###获取生存时间，clindataM应为读入的tsv文件

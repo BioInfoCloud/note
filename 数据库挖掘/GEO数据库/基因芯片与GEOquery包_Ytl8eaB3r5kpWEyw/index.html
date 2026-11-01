@@ -9554,23 +9554,9 @@
 
 
 <h1 id="geoquery">基因芯片与GEOquery包<a class="headerlink" href="#geoquery" title="Permanent link">&para;</a></h1>
-<p>关于芯片数据分析，我们之前的文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263385&amp;idx=1&amp;sn=63528ffd7901f36387cd4f484c99e188&amp;chksm=841ef5e4b3697cf28e4590d3509be675bc5d44fe1a1cb6f54fe6ad5cc419139c8720a5fb299d&amp;scene=21#wechat_redirect">基因芯片数据挖掘分析表达差异基因</a>中也介绍过芯片的基础知识，这里我们将使用R系统性的讲解芯片的数据分析。
-不想用R语言的可以阅读文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263601&amp;idx=1&amp;sn=443d0dddebb12f21cfd976d50473856b&amp;chksm=841ef60cb3697f1aecc6c310ee3a77e6182a728d5b6711a5cc8f49f0739feaba904f565ce176&amp;scene=21#wechat_redirect">GEO数据库使用教程及在线数据分析工具</a>，因为NCBI的GEO数据库(<a href="https://www.ncbi.nlm.nih.gov/geo/"><u>https://www.ncbi.nlm.nih.gov/geo/</u></a>)，ArrayExpress数据库(<a href="https://www.ebi.ac.uk/arrayexpress/"><u>https://www.ebi.ac.uk/arrayexpress/</u></a>)，和TCGA数据库(<a href="https://cancergenome.nih.gov/"><u>https://cancergenome.nih.gov/</u></a>)等等，记录和储存着大量芯片相关的数据，其中GEO数据库是目前最大最全的数据库，可供科研人员查询和下载相关数据。
-我们还有TCGA数据库的使用教程：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263330&amp;idx=1&amp;sn=ff440567bbacae48dd41fb3d1daa8751&amp;chksm=841ef51fb3697c098f2c84276930d46884bcb51663f11f2c1c01d822427fed9c4a5c7fe0cf2c&amp;scene=21#wechat_redirect">TCGA数据库使用教程</a>。
-可供初学者学习，我们之前也有TCGA数据挖掘的系列教程，读者可关注本公众号，通过菜单栏找到相应的课程学习，也可通过我们的网站查询（公众号后台有网址）。
-从本文开始，我们将系列性讲解基因芯片数据分析，下面简单对基因芯片的知识进行简单的概述，作为前面文章的一个补充。</p>
+<p>关于芯片数据分析，我们之前的文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263385&amp;idx=1&amp;sn=63528ffd7901f36387cd4f484c99e188&amp;chksm=841ef5e4b3697cf28e4590d3509be675bc5d44fe1a1cb6f54fe6ad5cc419139c8720a5fb299d&amp;scene=21#wechat_redirect">基因芯片数据挖掘分析表达差异基因</a>中也介绍过芯片的基础知识，这里我们将使用R系统性的讲解芯片的数据分析。不想用R语言的可以阅读文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263601&amp;idx=1&amp;sn=443d0dddebb12f21cfd976d50473856b&amp;chksm=841ef60cb3697f1aecc6c310ee3a77e6182a728d5b6711a5cc8f49f0739feaba904f565ce176&amp;scene=21#wechat_redirect">GEO数据库使用教程及在线数据分析工具</a>，因为NCBI的GEO数据库(<a href="https://www.ncbi.nlm.nih.gov/geo/"><u>https://www.ncbi.nlm.nih.gov/geo/</u></a>)，ArrayExpress数据库(<a href="https://www.ebi.ac.uk/arrayexpress/"><u>https://www.ebi.ac.uk/arrayexpress/</u></a>)，和TCGA数据库(<a href="https://cancergenome.nih.gov/"><u>https://cancergenome.nih.gov/</u></a>)等等，记录和储存着大量芯片相关的数据，其中GEO数据库是目前最大最全的数据库，可供科研人员查询和下载相关数据。我们还有TCGA数据库的使用教程：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263330&amp;idx=1&amp;sn=ff440567bbacae48dd41fb3d1daa8751&amp;chksm=841ef51fb3697c098f2c84276930d46884bcb51663f11f2c1c01d822427fed9c4a5c7fe0cf2c&amp;scene=21#wechat_redirect">TCGA数据库使用教程</a>。可供初学者学习，我们之前也有TCGA数据挖掘的系列教程，读者可关注本公众号，通过菜单栏找到相应的课程学习，也可通过我们的网站查询（公众号后台有网址）。从本文开始，我们将系列性讲解基因芯片数据分析，下面简单对基因芯片的知识进行简单的概述，作为前面文章的一个补充。</p>
 <h2 id="_1">基因芯片概述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>简单地讲，基因芯片就是一系列微小特征序列的（通常是DNA探针，也可能是蛋白质）的集合，它们可以被用于定性或者定量检查样品内特异分子的成份。
-比如说，基因芯片可以检测几十个gene marker在细胞样品中的表达量。
-现在最常见的是用于整个基因组的表达量分析。
-它的雏形来自于同位素杂交技术，又如Southern blots或者dot blots。
-在上世纪九十年代，2维的具有现代意义的基因芯片才在实验室里诞生。
-基因芯片自问世以来，已经有超过23年（至2014年）了。
-现在，世界上主流的芯片制造商有4家，分别是Affymetrix，Agilent，Nimblegen以及Illumina。
-下图为历年来提交至Gene Expression Omnibus数据库的主流芯片厂商的芯片数据统计分布图（数据截止日期为2014年3月1日）。
-从下图中可以看出，Affymetrix制造的基因芯片在2008年以前占据了市场的主流，在2008年，因为illumina BeadArray的推广，它的市场份额有较大的攀升，但是2年以后就下降至与Affymetrix公司类似的份额。
-而Agilent却在2010年以后成为芯片市场份额最大的一家。
-市场份额的变化有价格的因素，质量的因素，使用习惯的因素，也有受到第二代测序技术冲击的因素。</p>
+<p>简单地讲，基因芯片就是一系列微小特征序列的（通常是DNA探针，也可能是蛋白质）的集合，它们可以被用于定性或者定量检查样品内特异分子的成份。比如说，基因芯片可以检测几十个gene marker在细胞样品中的表达量。现在最常见的是用于整个基因组的表达量分析。它的雏形来自于同位素杂交技术，又如Southern blots或者dot blots。在上世纪九十年代，2维的具有现代意义的基因芯片才在实验室里诞生。基因芯片自问世以来，已经有超过23年（至2014年）了。现在，世界上主流的芯片制造商有4家，分别是Affymetrix，Agilent，Nimblegen以及Illumina。下图为历年来提交至Gene Expression Omnibus数据库的主流芯片厂商的芯片数据统计分布图（数据截止日期为2014年3月1日）。从下图中可以看出，Affymetrix制造的基因芯片在2008年以前占据了市场的主流，在2008年，因为illumina BeadArray的推广，它的市场份额有较大的攀升，但是2年以后就下降至与Affymetrix公司类似的份额。而Agilent却在2010年以后成为芯片市场份额最大的一家。市场份额的变化有价格的因素，质量的因素，使用习惯的因素，也有受到第二代测序技术冲击的因素。</p>
 <p><img alt="1612929683395-0ba54962-1a99-4e9b-8ff5-58c017ddac83.webp" src="../img/Ytl8eaB3r5kpWEyw/1612929683395-0ba54962-1a99-4e9b-8ff5-58c017ddac83-637789.webp" /></p>
 <p>基因芯片的原理大同小异，都是将生物分子固定在某种介质上，比如平面介质，微管，微槽以及微粒等，用于检测目标样品中一批生物分子的含量。使用玻璃介质的好处是经济，稳定，有利于杂交，并且背景荧光小。我们能够最直观想象的基因芯片制造方法就是象打印机印刷一样，通过将来自于不同墨盒里的DNA探针喷印或者吸印至玻璃平板上。在检测的时候，因为每组探针在介质上的位置是已知的，通过不同位置荧光强度与生物分子浓度的对应关系，就不难了解目的片断的表达强度了。这种方法其实就是基因芯片最初的制造方法。这种方法制造的芯片，密度不可能太高。</p>
 <p>Affymetrix公司在基因芯片的高密度生产上做出了里程碑式的贡献，它们首创了在石英介质上原位合成oligo短序的工艺，这一工艺极大地提高了基因芯片探针的排布密度。那么oligonucleotide是在原位如何合成的呢？首先，合成位点被对UV光敏感 的化学物质保护起来，当受到UV光照的时候，合成位点被打开，这时候可以把A, C, G或者T碱基连接在合成位点上。而后再去掉光源，位点关闭，洗脱。之后再UV光照打开。如此反复，oligonucleotide的原位合成就完成了。</p>

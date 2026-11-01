@@ -9777,8 +9777,7 @@
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>                keys=EntrezID,columns=c("SYMBOL","ENSEMBL","GENENAME"), #clolumns参数是你要转换的ID类型是什么，这里选择三个。
 <a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>                keytype="ENTREZID" )#函数里面的keytype与keys参数是对应的，keys是你输入的那些数据，keytype是指这些数据是属于什么类型的数据。
 </code></pre></div>
-<p>我们再看看将ENSEMBL转换整SYMBOL，在<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264583&amp;idx=1&amp;sn=f94bf8d77402677ee67f5d6336088254&amp;chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&amp;scene=21#wechat_redirect">TCGA中的转录组数据</a>的行名通常是ENSEMBL，我们经常要转换成SYMBOL。
-我们就读入一个病人的RNASeq的counts数据。</p>
+<p>我们再看看将ENSEMBL转换整SYMBOL，在<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264583&amp;idx=1&amp;sn=f94bf8d77402677ee67f5d6336088254&amp;chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&amp;scene=21#wechat_redirect">TCGA中的转录组数据</a>的行名通常是ENSEMBL，我们经常要转换成SYMBOL。我们就读入一个病人的RNASeq的counts数据。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>counts &lt;- read.table("TCGARNASeq.counts",header = F,sep = "\t")
 <a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>Ensembl &lt;- counts[,1]
 </code></pre></div>
@@ -9878,8 +9877,7 @@
 <p>这样就找到了"ENSEMBL"与"SYMBOL"的对应关系。</p>
 <p><img alt="1608895684526-9b665e60-081f-4f4f-8b79-a4b92cd56c30.png" src="../img/95-4_H9QUVG1RBIf/1608895684526-9b665e60-081f-4f4f-8b79-a4b92cd56c30-905582.png" /></p>
 <p>我们可以保存为R对象，以后就可以直接读入了，也不需要每次都处理一次。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="c1">#可以将其保存为R对象，以后每次都不需要进行转换啦。</span>
-<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="nf">save</span><span class="p">(</span><span class="n">ens2symInfo</span><span class="p">,</span><span class="s">"ens2symInfo.Rdata"</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="c1">#可以将其保存为R对象，以后每次都不需要进行转换啦。save(ens2symInfo,"ens2symInfo.Rdata")</span>
 </code></pre></div>
 <p>gtf注释文件下载：</p>
 <p><img alt="1608895684630-a4c801fb-1be1-400d-a533-32090ac1241c.png" src="../img/95-4_H9QUVG1RBIf/1608895684630-a4c801fb-1be1-400d-a533-32090ac1241c-206592.png" /></p>

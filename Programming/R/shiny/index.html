@@ -10037,11 +10037,7 @@
 
 <h2 id="1shiny-app">1.Shiny APP结构<a class="headerlink" href="#1shiny-app" title="Permanent link">&para;</a></h2>
 <h2 id="2ui">2.UI<a class="headerlink" href="#2ui" title="Permanent link">&para;</a></h2>
-<p>Shiny 提供的 HTML 输入和输出。
-这使您能够捕获多种类型的数据并显示多种类型的 R 输出。
-在这里，我将主要坚持 Shiny 本身内置的输入和输出。
- 但是，有一个丰富而充满活力的扩展包社区，如<a href="https://github.com/dreamRs/shinyWidgets">shinyWidgets</a>，<a href="https://github.com/daattali/colourpicker">colorpicker</a>和<a href="https://rstudio.github.io/sortable/">sorttable</a>。
- 您可以在 https://github.com/nanxstats/awesome-shiny-extensions 上找到由 <a href="https://nanx.me/">Nan Xiao</a> 维护的其他软件包的全面、积极维护的列表。</p>
+<p>Shiny 提供的 HTML 输入和输出。这使您能够捕获多种类型的数据并显示多种类型的 R 输出。在这里，我将主要坚持 Shiny 本身内置的输入和输出。 但是，有一个丰富而充满活力的扩展包社区，如<a href="https://github.com/dreamRs/shinyWidgets">shinyWidgets</a>，<a href="https://github.com/daattali/colourpicker">colorpicker</a>和<a href="https://rstudio.github.io/sortable/">sorttable</a>。 您可以在 https://github.com/nanxstats/awesome-shiny-extensions 上找到由 <a href="https://nanx.me/">Nan Xiao</a> 维护的其他软件包的全面、积极维护的列表。</p>
 <p>像往常一样，我们将从加载shiny包开始：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">shiny</span><span class="p">)</span>
 </code></pre></div>
@@ -10098,8 +10094,7 @@
 <a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="p">)</span>
 <a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">)</span>
 </code></pre></div>
-<p>如果您有一组非常大的可能选项，您可能需要使用“server-side” <code>selectInput()</code>，这样完整的一组可能选项就不会嵌入到UI中（这会导致加载速度变慢），而是根据服务器的需要发送。有关此高级主题的详细信息，请访问https://shiny.rstudio.com/articles/selectize.html#server-侧选择。
-无法使用单选按钮选择多个值，但有一个概念上类似的替代方法：<code>checkboxGroupInput()</code>。</p>
+<p>如果您有一组非常大的可能选项，您可能需要使用“server-side” <code>selectInput()</code>，这样完整的一组可能选项就不会嵌入到UI中（这会导致加载速度变慢），而是根据服务器的需要发送。有关此高级主题的详细信息，请访问https://shiny.rstudio.com/articles/selectize.html#server-侧选择。无法使用单选按钮选择多个值，但有一个概念上类似的替代方法：<code>checkboxGroupInput()</code>。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">ui</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">fluidPage</span><span class="p">(</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nf">checkboxGroupInput</span><span class="p">(</span><span class="s">"animal"</span><span class="p">,</span><span class="w"> </span><span class="s">"What animals do you like?"</span><span class="p">,</span><span class="w"> </span><span class="n">animals</span><span class="p">)</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">)</span>
@@ -10642,9 +10637,7 @@
 <a id="__codelineno-43-17" name="__codelineno-43-17" href="#__codelineno-43-17"></a>}
 </code></pre></div>
 <h3 id="46-under-the-hood">4.6 Under the hood<a class="headerlink" href="#46-under-the-hood" title="Permanent link">&para;</a></h3>
-<p>Shiny 的设计使得作为 R 用户的你不需要了解 HTML 的细节。
- 但是，如果您了解一些 HTML 和 CSS，则可以进一步自定义 Shiny。
- 不幸的是，教授 HTML 和 CSS 超出了本书的范围，但是 MDN 的  <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML</a> 和 <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS</a>基础教程是一个很好的起点。</p>
+<p>Shiny 的设计使得作为 R 用户的你不需要了解 HTML 的细节。 但是，如果您了解一些 HTML 和 CSS，则可以进一步自定义 Shiny。 不幸的是，教授 HTML 和 CSS 超出了本书的范围，但是 MDN 的  <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML</a> 和 <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS</a>基础教程是一个很好的起点。</p>
 <p>最重要的是要知道所有输入、输出和布局函数背后并没有魔法：它们只是生成 HTML。 您可以通过直接在控制台中执行 UI 函数来查看该 HTML：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="nf">fluidPage</span><span class="p">(</span>
 <a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="w">  </span><span class="nf">textInput</span><span class="p">(</span><span class="s">"name"</span><span class="p">,</span><span class="w"> </span><span class="s">"What's your name?"</span><span class="p">)</span>
@@ -10690,8 +10683,7 @@
 <a id="__codelineno-48-6" name="__codelineno-48-6" href="#__codelineno-48-6"></a><span class="w">  </span><span class="s">" days "</span>
 <a id="__codelineno-48-7" name="__codelineno-48-7" href="#__codelineno-48-7"></a><span class="p">)</span>
 </code></pre></div>
-<p>注意inline=TRUE的用法；textOutput（）默认值是生成一个完整的段落。
-要了解更多有关使用HTML、CSS和JavaScript制作引人注目的用户界面的信息，我强烈推荐David Granjon的《 <a href="https://unleash-shiny.rinterface.com/index.html">Outstanding User Interfaces with Shiny</a>》。</p>
+<p>注意inline=TRUE的用法；textOutput（）默认值是生成一个完整的段落。要了解更多有关使用HTML、CSS和JavaScript制作引人注目的用户界面的信息，我强烈推荐David Granjon的《 <a href="https://unleash-shiny.rinterface.com/index.html">Outstanding User Interfaces with Shiny</a>》。</p>
 <h2 id="5_2">5.图形<a class="headerlink" href="#5_2" title="Permanent link">&para;</a></h2>
 <h3 id="51-interactivity">5.1 Interactivity<a class="headerlink" href="#51-interactivity" title="Permanent link">&para;</a></h3>
 <p>plotOutput() 最酷的事情之一是，它不仅可以作为显示绘图的输出，还可以作为响应指针事件的输入。 这使您可以创建交互式图形，用户可以在其中直接与绘图上的数据进行交互。 交互式图形是一种功能强大的工具，具有广泛的应用范围。 我没有篇幅向您展示所有可能性，所以在这里我将重点介绍基础知识，然后为您指明资源以了解更多信息。</p>
@@ -10830,8 +10822,7 @@
 <a id="__codelineno-58-19" name="__codelineno-58-19" href="#__codelineno-58-19"></a><span class="p">}</span>
 </code></pre></div>
 <p>这里有两个重要的 ggplot2 技术需要注意：</p>
-<p>我在绘图之前将距离添加到数据框。 我认为在可视化之前将相关变量放在数据框中是一种很好的做法。
-我将限制设置为 scale_size_area() 以确保大小在点击之间具有可比性。 为了找到正确的范围，我做了一些交互式实验，但如果需要，您可以计算出确切的细节（请参阅本章末尾的练习）。
+<p>我在绘图之前将距离添加到数据框。 我认为在可视化之前将相关变量放在数据框中是一种很好的做法。我将限制设置为 scale_size_area() 以确保大小在点击之间具有可比性。 为了找到正确的范围，我做了一些交互式实验，但如果需要，您可以计算出确切的细节（请参阅本章末尾的练习）。
 这是一个更复杂的想法。 我想使用画笔逐步向选区添加点。 在这里，我使用不同的颜色显示选择，但您可以想象许多其他应用程序。 为了完成这项工作，我将 reactiveVal() 初始化为 FALSE 向量，然后使用 brushedPoints() 和 | 将画笔下的任何点添加到选区。 为了给用户一些重新开始的方式，我双击重置选择。 图 7.5 显示了正在运行的应用程序的几个屏幕截图。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="n">ui</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">fluidPage</span><span class="p">(</span>
 <a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a><span class="w">  </span><span class="nf">plotOutput</span><span class="p">(</span><span class="s">"plot"</span><span class="p">,</span><span class="w"> </span><span class="n">brush</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"plot_brush"</span><span class="p">,</span><span class="w"> </span><span class="n">dblclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"plot_reset"</span><span class="p">)</span>
@@ -10858,11 +10849,7 @@
 <p>同样，我设置了比例限制，以确保图例（和颜色）在第一次点击后不会改变。</p>
 <h4 id="6_1">(6) 交互限制<a class="headerlink" href="#6_1" title="Permanent link">&para;</a></h4>
 <p>在我们继续之前，重要的是要了解交互式图中的基本数据流，以便了解它们的局限性。 基本流程是这样的：</p>
-<p>JavaScript 捕获鼠标事件。
-Shiny 将鼠标事件数据发送回 R，告诉应用程序输入现在已过时。
-重新计算所有下游反应性消费者。
-plotOutput() 生成一个新的 PNG 并将其发送到浏览器。
-对于本地应用程序，瓶颈往往是绘制绘图所花费的时间。 根据情节的复杂程度，这可能需要几分之一秒。 但对于托管应用程序，您还必须考虑将事件从浏览器传输到 R，然后将渲染图从 R 返回到浏览器所需的时间。</p>
+<p>JavaScript 捕获鼠标事件。Shiny 将鼠标事件数据发送回 R，告诉应用程序输入现在已过时。重新计算所有下游反应性消费者。plotOutput() 生成一个新的 PNG 并将其发送到浏览器。对于本地应用程序，瓶颈往往是绘制绘图所花费的时间。 根据情节的复杂程度，这可能需要几分之一秒。 但对于托管应用程序，您还必须考虑将事件从浏览器传输到 R，然后将渲染图从 R 返回到浏览器所需的时间。</p>
 <p>一般来说，这意味着不可能创建闪亮的应用程序，其中的动作和响应被认为是即时的（即情节似乎与您的动作同步更新）。 如果您需要那种速度，则必须在 JavaScript 中执行更多计算。 一种方法是使用包含 JavaScript 图形库的 R 包。 现在，在我写这本书的时候，我认为你会得到 plotly 包的最佳体验，正如 Carson Sievert 所著的交互式基于网络的数据可视化与 R，plotly 和 shiny 书中所记录的那样。</p>
 <h3 id="52">5.2 动态高度和宽度<a class="headerlink" href="#52" title="Permanent link">&para;</a></h3>
 <p>本章的其余部分没有交互式图形那么令人兴奋，但包含了在某处涵盖的重要材料。</p>

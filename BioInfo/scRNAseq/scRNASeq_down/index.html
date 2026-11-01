@@ -9934,20 +9934,13 @@
 <h3 id="1seurat">(1).Seurat包<a class="headerlink" href="#1seurat" title="Permanent link">&para;</a></h3>
 <p>Seurat包CellCycleScoring较scran包cyclone函数最主要的区别是直接根据每个cycle，一组marker基因表达值判断。</p>
 <p><img alt="image.png" src="../Figure/scRNASeq_Down_004.jpg" /></p>
-<p>如上是Seurat包提供的人的细胞中分别与S期、G2M期直接相关的marker基因。
- CellCycleScoring即根据此，对每个细胞的S期、G2M期可能性进行打分；
-具体如何计算的，暂时在Seurat官方文档中没有提及。
-在satijalab的github(<a href="https://github.com/satijalab/seurat/issues/728">https://github.com/satijalab/seurat/issues/728)</a>)中，作者这样回复类似的提问： As we say in the vignette, the scores are computed using an algorithm developed by Itay Tirosh, when he was a postdoc in the Regev Lab (Science et al., 2016). The gene sets are also taken from his work. You can read the methods section of <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4944528/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4944528/</a> to see how the scoring works, but essentially the method scores cells based on the expression of each gene in a signature set - after controlling for the expected expression of genes with similar abundance. 结合一些中文教程（https://www.jianshu.com/p/e4a5b5c67de1)的介绍，认为就是根据每个细胞的S期(或者G2/M期)基因集是否显著高表达，对应的score就是表示在该细胞中，S期(或者G2/M期)基因集高表达的程度(如果是负数，就认为不属于该phase)。</p>
+<p>如上是Seurat包提供的人的细胞中分别与S期、G2M期直接相关的marker基因。 CellCycleScoring即根据此，对每个细胞的S期、G2M期可能性进行打分；具体如何计算的，暂时在Seurat官方文档中没有提及。在satijalab的github(<a href="https://github.com/satijalab/seurat/issues/728">https://github.com/satijalab/seurat/issues/728)</a>)中，作者这样回复类似的提问： As we say in the vignette, the scores are computed using an algorithm developed by Itay Tirosh, when he was a postdoc in the Regev Lab (Science et al., 2016). The gene sets are also taken from his work. You can read the methods section of <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4944528/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4944528/</a> to see how the scoring works, but essentially the method scores cells based on the expression of each gene in a signature set - after controlling for the expected expression of genes with similar abundance. 结合一些中文教程（https://www.jianshu.com/p/e4a5b5c67de1)的介绍，认为就是根据每个细胞的S期(或者G2/M期)基因集是否显著高表达，对应的score就是表示在该细胞中，S期(或者G2/M期)基因集高表达的程度(如果是负数，就认为不属于该phase)。</p>
 <p><img alt="" src="../Figure/scRNASeq_Down_005.jpg" /></p>
-<p>区别于scran包的另外重要的一点就是Seurat包仅提供了人类细胞有关的cell cycle related gene，没有小鼠的。
-对此，作者这样回复：<code>Thanks. We don't provide different capitalizations because this gene list was developed on a human dataset, and we don't want to create ambiguity by suggesting its created from a mouse reference dataset. **In practice however, we've found it works quite well for mouse also, and recommend the solution above.**</code> 简言之，作者认为可以将对应人的cc.gene转换为鼠对应的基因名，当做后者的cell cycle related gene（因为鼠和人类基因的高度相似性)。
-提到的solution就是采用biomaRt包转换一下。
-这在我之前的教程中有介绍。</p>
+<p>区别于scran包的另外重要的一点就是Seurat包仅提供了人类细胞有关的cell cycle related gene，没有小鼠的。对此，作者这样回复：<code>Thanks. We don't provide different capitalizations because this gene list was developed on a human dataset, and we don't want to create ambiguity by suggesting its created from a mouse reference dataset. **In practice however, we've found it works quite well for mouse also, and recommend the solution above.**</code> 简言之，作者认为可以将对应人的cc.gene转换为鼠对应的基因名，当做后者的cell cycle related gene（因为鼠和人类基因的高度相似性)。提到的solution就是采用biomaRt包转换一下。这在我之前的教程中有介绍。</p>
 <p>但是biomaRt包网络不是很稳定，有人也直接提供了转换后的结果（<a href="https://github.com/satijalab/seurat/issues/462">https://github.com/satijalab/seurat/issues/462</a>），直接下载导入到R里即可，下面演示的代码就是用的该结果。</p>
 <p><img alt="image.png" src="../Figure/scRNASeq_Down_006.jpg" /></p>
 <h3 id="2scran">(2).scran包<a class="headerlink" href="#2scran" title="Permanent link">&para;</a></h3>
-<p><a href="http://bioconductor.org/packages/release/bioc/manuals/scran/man/scran.pdf">http://bioconductor.org/packages/release/bioc/manuals/scran/man/scran.pdf</a> scran包cyclone函数是利用‘marker基因对’表达来对细胞所在周期阶段进行预测的方法Scialdone (2015) “maker基因对”由作者根据训练集细胞（已注释了cell cycle）的基因表达特征产生，我们可以直接使用。
-对于每一细胞周期阶段（人/鼠）都有一组“maker基因对”集合。</p>
+<p><a href="http://bioconductor.org/packages/release/bioc/manuals/scran/man/scran.pdf">http://bioconductor.org/packages/release/bioc/manuals/scran/man/scran.pdf</a> scran包cyclone函数是利用‘marker基因对’表达来对细胞所在周期阶段进行预测的方法Scialdone (2015) “maker基因对”由作者根据训练集细胞（已注释了cell cycle）的基因表达特征产生，我们可以直接使用。对于每一细胞周期阶段（人/鼠）都有一组“maker基因对”集合。</p>
 <p><img alt="image.png" src="../Figure/scRNASeq_Down_007.jpg" /></p>
 <p>如上图，具体来说，即比较某个细胞的ENSMUSG00000000001基因表达值是否大于ENSMUSG00000001785基因表达值。 如果对于所有G1期marker基因对，某个细胞的“first”列基因表达量大于对应的“second”基因的情况越多，则越有把握认为该细胞就是处于G1期（因为越符合训练集特征)。 而cyclone则是通过计算score，即对于某个细胞，符合上述比较关系的marker基因对数占全部marker基因对数的比值。 这里默认提供marker基因对是ensemble格式，如果表达数据提供的是其它类类型的基因ID，比如：SYMBOL，那么我们需要转化一下ID。</p>
 <p>下面是计算三个周期阶段的scores：</p>

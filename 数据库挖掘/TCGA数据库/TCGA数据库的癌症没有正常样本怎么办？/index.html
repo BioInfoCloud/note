@@ -9477,13 +9477,8 @@
 
 
 <h1 id="tcga">TCGA数据库的癌症没有正常样本怎么办？<a class="headerlink" href="#tcga" title="Permanent link">&para;</a></h1>
-<p>虽然在我公众号有介绍了TCGA数据库的好多文章【<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651276349&amp;idx=1&amp;sn=2d38c5081f3611386d8d979e905145a3&amp;chksm=841ea040b3692956f0a3804e10d4b7928a4d4f4ad2134b6c28cd89caf8edcc1dffd90a662801&amp;scene=21#wechat_redirect">TCGA数据库基础的数据分析</a>】，数据下载都是自己下载处理的。
-我也介绍过从UCSC数据库下载处理好的数据<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273247&amp;idx=1&amp;sn=008928dbfc6c6976d53369cd20c26f87&amp;chksm=841edc62b3695574739a6db6af267b279808c9ea82e9947a461da2e3bf02a8db215204cf65e9&amp;scene=21#wechat_redirect">UCSC数据库下载TCGA数据需要注意的细节</a>。
-但是TCGA数据库中有些癌症的数据是没有正常样本的，或者只有几个。
-但有时候我们又想进行癌症与正常样本的比较，怎么办呢？
-？</p>
-<p>如果你只是简单的看几个基因的话，很多在线工具就可以帮你解决了，最好用的当然是GEPIA【<u>http://gepia2.cancer-pku.cn/#index</u>】了，而且可以获取癌症与正常组织想比所有差异表达的结果。
-但如果我们想进行其他的分析，那么GTEx【<u>http://www.gtexportal.org/home/</u>】这个数据库里面的正常样本是可以作为对照的，但由于数据库来源不一样，数据处理流程不一样，所以也不是简单的合并使用，具体怎么处理可参考文献：Comprehensive analysis of normal adjacent to tumor transcriptomes ，里面有详细的处理流程介绍。
+<p>虽然在我公众号有介绍了TCGA数据库的好多文章【<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651276349&amp;idx=1&amp;sn=2d38c5081f3611386d8d979e905145a3&amp;chksm=841ea040b3692956f0a3804e10d4b7928a4d4f4ad2134b6c28cd89caf8edcc1dffd90a662801&amp;scene=21#wechat_redirect">TCGA数据库基础的数据分析</a>】，数据下载都是自己下载处理的。我也介绍过从UCSC数据库下载处理好的数据<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273247&amp;idx=1&amp;sn=008928dbfc6c6976d53369cd20c26f87&amp;chksm=841edc62b3695574739a6db6af267b279808c9ea82e9947a461da2e3bf02a8db215204cf65e9&amp;scene=21#wechat_redirect">UCSC数据库下载TCGA数据需要注意的细节</a>。但是TCGA数据库中有些癌症的数据是没有正常样本的，或者只有几个。但有时候我们又想进行癌症与正常样本的比较，怎么办呢？？</p>
+<p>如果你只是简单的看几个基因的话，很多在线工具就可以帮你解决了，最好用的当然是GEPIA【<u>http://gepia2.cancer-pku.cn/#index</u>】了，而且可以获取癌症与正常组织想比所有差异表达的结果。但如果我们想进行其他的分析，那么GTEx【<u>http://www.gtexportal.org/home/</u>】这个数据库里面的正常样本是可以作为对照的，但由于数据库来源不一样，数据处理流程不一样，所以也不是简单的合并使用，具体怎么处理可参考文献：Comprehensive analysis of normal adjacent to tumor transcriptomes ，里面有详细的处理流程介绍。
 <strong>不想处理，那就下载现成的</strong>。</p>
 <p>UCSC官网：<a href="https://xenabrowser.net/datapages/">https://xenabrowser.net/datapages/</a></p>
 <p>可以直接在UCSC下载:</p>

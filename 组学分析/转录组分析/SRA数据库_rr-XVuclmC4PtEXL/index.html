@@ -4533,6 +4533,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SRA数据库
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -4549,6 +4567,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prefetchhomencbi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        prefetch下载的数据在home目录下的ncbi目录里。
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fastq-dumpfastq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        也可以直接使用fastq-dump下载数据，下载之后直接即使fastq格式。
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prefetchsrafastqsra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        不过还是选择prefetch比较好，因为sra数据格式比fastq格式占用空间较小，下载速度快；另一方面，sra也方便断点续传。
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fastq-dump" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        直接利用fastq-dump下载数据
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -9468,6 +9549,58 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prefetchhomencbi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        prefetch下载的数据在home目录下的ncbi目录里。
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fastq-dumpfastq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        也可以直接使用fastq-dump下载数据，下载之后直接即使fastq格式。
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prefetchsrafastqsra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        不过还是选择prefetch比较好，因为sra数据格式比fastq格式占用空间较小，下载速度快；另一方面，sra也方便断点续传。
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fastq-dump" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        直接利用fastq-dump下载数据
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -9619,14 +9752,14 @@
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">prefetch</span><span class="w"> </span><span class="o">-</span><span class="n">h</span>
 </code></pre></div>
 <p>3) prefectch命令下载数据</p>
-<h1 id="prefetchhomencbi">prefetch下载的数据在home目录下的ncbi目录里。<a class="headerlink" href="#prefetchhomencbi" title="Permanent link">&para;</a></h1>
+<h2 id="prefetchhomencbi">prefetch下载的数据在home目录下的ncbi目录里。<a class="headerlink" href="#prefetchhomencbi" title="Permanent link">&para;</a></h2>
 <p>prefetch SRR5933808  &amp;     #下载单个SRA文件</p>
 <p>prefetch --option-file SRR_Acc_List.txt  #下载多个SRA文件</p>
 <p>默认下载的是sra格式数据，可以使用fastq-dump将sra转换为fastq了。</p>
 <p>fastq-dump --gzip --split-3 SRR5933808.sra</p>
-<h1 id="fastq-dumpfastq">也可以直接使用fastq-dump下载数据，下载之后直接即使fastq格式。<a class="headerlink" href="#fastq-dumpfastq" title="Permanent link">&para;</a></h1>
-<h1 id="prefetchsrafastqsra">不过还是选择prefetch比较好，因为sra数据格式比fastq格式占用空间较小，下载速度快；另一方面，sra也方便断点续传。<a class="headerlink" href="#prefetchsrafastqsra" title="Permanent link">&para;</a></h1>
-<h1 id="fastq-dump">直接利用fastq-dump下载数据<a class="headerlink" href="#fastq-dump" title="Permanent link">&para;</a></h1>
+<h2 id="fastq-dumpfastq">也可以直接使用fastq-dump下载数据，下载之后直接即使fastq格式。<a class="headerlink" href="#fastq-dumpfastq" title="Permanent link">&para;</a></h2>
+<h2 id="prefetchsrafastqsra">不过还是选择prefetch比较好，因为sra数据格式比fastq格式占用空间较小，下载速度快；另一方面，sra也方便断点续传。<a class="headerlink" href="#prefetchsrafastqsra" title="Permanent link">&para;</a></h2>
+<h2 id="fastq-dump">直接利用fastq-dump下载数据<a class="headerlink" href="#fastq-dump" title="Permanent link">&para;</a></h2>
 <p>fastq-dump --split-files SRR5933808 SRR5933808/</p>
 <p>4) 文件拆分及格式转换</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">fastq</span><span class="o">-</span><span class="n">dump</span><span class="w"> </span><span class="o">--</span><span class="n">split</span><span class="o">-</span><span class="n">files</span><span class="w"> </span><span class="n">SRR5933808.sra</span>

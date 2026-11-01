@@ -4561,6 +4561,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    一个转录组分析流程
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -4577,6 +4595,292 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fastqc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用fastqc质控
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用fastqc质控">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fastqc_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一.fastqc介绍
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trim-galorereadsadaptor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用trim-galore去除低质量的reads和adaptor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用trim-galore去除低质量的reads和adaptor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trim-galore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一.Trim Galore介绍
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trim-galorereadsadaptor_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二.使用trim-galore去除低质量的reads和adaptor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hisat2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用Hisat2进行序列比对
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用Hisat2进行序列比对">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一.index文件下载
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hisat2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二.hisat2介绍
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hisat2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三. 使用Hisat2进行序列比对
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四.结果解读
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hisat2_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        五.Hisat2自定义索引文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samtoolssambam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用SAMtools将SAM文件转换为BAM文件、排序、建立索引
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用SAMtools将SAM文件转换为BAM文件、排序、建立索引">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#samtools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一.SAMtools介绍
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#samtools_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二.SAMtools实战
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#samtools_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三. SAMtools报错解决
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rseqcbam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用RSeQC软件对生成的BAM文件进行质控
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用RSeQC软件对生成的BAM文件进行质控">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rseqc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一.RSeQC介绍
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bam_statpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二. 使用bam_stat.py命令查看比对的总体情况
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stringtie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用Stringtie对数据进行下游处理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用Stringtie对数据进行下游处理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stringtie_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一.StringTie介绍
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stringtie_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二.StringTie应用
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -9468,6 +9772,281 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fastqc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用fastqc质控
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用fastqc质控">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fastqc_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一.fastqc介绍
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trim-galorereadsadaptor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用trim-galore去除低质量的reads和adaptor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用trim-galore去除低质量的reads和adaptor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trim-galore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一.Trim Galore介绍
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trim-galorereadsadaptor_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二.使用trim-galore去除低质量的reads和adaptor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hisat2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用Hisat2进行序列比对
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用Hisat2进行序列比对">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一.index文件下载
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hisat2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二.hisat2介绍
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hisat2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三. 使用Hisat2进行序列比对
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四.结果解读
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hisat2_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        五.Hisat2自定义索引文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samtoolssambam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用SAMtools将SAM文件转换为BAM文件、排序、建立索引
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用SAMtools将SAM文件转换为BAM文件、排序、建立索引">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#samtools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一.SAMtools介绍
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#samtools_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二.SAMtools实战
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#samtools_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三. SAMtools报错解决
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rseqcbam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用RSeQC软件对生成的BAM文件进行质控
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用RSeQC软件对生成的BAM文件进行质控">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rseqc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一.RSeQC介绍
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bam_statpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二. 使用bam_stat.py命令查看比对的总体情况
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stringtie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用Stringtie对数据进行下游处理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用Stringtie对数据进行下游处理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stringtie_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一.StringTie介绍
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stringtie_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二.StringTie应用
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -9492,13 +10071,9 @@
 <p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1337050529440104449&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>R语言</strong></a>** |**** <strong><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1369789283514761218&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>Bioconductor</strong></a></strong> | 服务器与**<a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1410264757734817793&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>Linux</strong></a></p>
 <p><img alt="1612930518303-965dbae3-be6c-457f-b55d-29bdef8b8b07.jpeg" src="../img/np70NcqAn5EcHLFs/1612930518303-965dbae3-be6c-457f-b55d-29bdef8b8b07-902342.jpeg" /></p>
 <hr />
-<h1 id="fastqc">使用fastqc质控<a class="headerlink" href="#fastqc" title="Permanent link">&para;</a></h1>
-<p>做转录组测序，通常公司是不给分析的，分析也要自己多花钱，当然不同公司收费不一样，有的可能带有简单的分析。
-之前测序的第一家公司给了简单的分析，后面换了一家测序公司，不给分析。
-所以我得自己分析啦，在分析的时候顺便写一下教程。
-分享给大家，要分析转录组数据，首先得知道测序原理【参考文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651272832&amp;idx=1&amp;sn=7d208df1a65e3696c41c666ef78f5881&amp;chksm=841ed2fdb3695bebedbbc733b0bca112421a91647d2038266d0a24b8ce46ee19503a801fdd2b&amp;scene=21#wechat_redirect">illumina、Sanger、第三代和第四代测序技术原理</a>】，还有就是了解生信分析中一些文件格式【参考文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651272899&amp;idx=1&amp;sn=6779b2bd21f3b607a08227d31c7212c6&amp;chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&amp;scene=21#wechat_redirect">生信中常见的数据文件格式</a>】，当然，还有其他一些生物背景知识，除此以外，还需要会Linux，这个是一个漫长的学习过程。
-本文就介绍转录组数据分析的第一步分析：质控，主要就是fastqc这个软件的使用和结果解读。</p>
-<h2 id="fastqc_1">一.fastqc介绍<a class="headerlink" href="#fastqc_1" title="Permanent link">&para;</a></h2>
+<h2 id="fastqc">使用fastqc质控<a class="headerlink" href="#fastqc" title="Permanent link">&para;</a></h2>
+<p>做转录组测序，通常公司是不给分析的，分析也要自己多花钱，当然不同公司收费不一样，有的可能带有简单的分析。之前测序的第一家公司给了简单的分析，后面换了一家测序公司，不给分析。所以我得自己分析啦，在分析的时候顺便写一下教程。分享给大家，要分析转录组数据，首先得知道测序原理【参考文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651272832&amp;idx=1&amp;sn=7d208df1a65e3696c41c666ef78f5881&amp;chksm=841ed2fdb3695bebedbbc733b0bca112421a91647d2038266d0a24b8ce46ee19503a801fdd2b&amp;scene=21#wechat_redirect">illumina、Sanger、第三代和第四代测序技术原理</a>】，还有就是了解生信分析中一些文件格式【参考文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651272899&amp;idx=1&amp;sn=6779b2bd21f3b607a08227d31c7212c6&amp;chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&amp;scene=21#wechat_redirect">生信中常见的数据文件格式</a>】，当然，还有其他一些生物背景知识，除此以外，还需要会Linux，这个是一个漫长的学习过程。本文就介绍转录组数据分析的第一步分析：质控，主要就是fastqc这个软件的使用和结果解读。</p>
+<h3 id="fastqc_1">一.fastqc介绍<a class="headerlink" href="#fastqc_1" title="Permanent link">&para;</a></h3>
 <p>拿到原始数据后我们首先采用fastqc程序进行质控，看原始数据质量情况，fastqc会生成一个html结果报告，根据图形化界面，我们可以判断下机数据情况是否符合分析要求。我们测序得到的是带有质量值的碱基序列fastq格式。所以这里你需要先了解<a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651272899&amp;idx=1&amp;sn=6779b2bd21f3b607a08227d31c7212c6&amp;scene=21#wechat_redirect">生信中常见的数据文件格式 。</a></p>
 <p>FastQC的官网：<a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/"><u>http://www.bioinformatics.babraham.ac.uk/projects/fastqc/</u></a></p>
 <p>FastQC的下载地址：<a href="http://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc"><u>http://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc</u></a></p>
@@ -9549,7 +10124,7 @@
 <p>我们可以看到，一个数据文件处理后会得到2个文件，一个html格式文件和一个zip的压缩文件，zip解压后和html格式文件内容是一样的，只需要下载html格式文件到本地，用浏览器打开查看。</p>
 <p><strong>三.结果解读</strong></p>
 <p>FastqC有3种结果：绿色代表PASS；黄色代表WARN；红色代表FAIL。当出现黄色时说明需要查看结果。当然，我这里没有黄色的结果。</p>
-<h3 id="1basic-statistics"><strong>1.Basic Statistics</strong><a class="headerlink" href="#1basic-statistics" title="Permanent link">&para;</a></h3>
+<h4 id="1basic-statistics"><strong>1.Basic Statistics</strong><a class="headerlink" href="#1basic-statistics" title="Permanent link">&para;</a></h4>
 <p>Basic statistics是该fastq一些基本信息，主要有</p>
 <p>Filename:文件名</p>
 <p>File type: 文件类型</p>
@@ -9558,58 +10133,44 @@
 <p>Sequence length: 测序长度</p>
 <p>%GC: GC含量，表示整体序列的GC含量，由于二代测序GC偏好性高，且深度越高，GC含量会越高。</p>
 <p><img alt="1612930518252-8f547197-34cb-4b0d-b761-f29adb05c340.png" src="../img/np70NcqAn5EcHLFs/1612930518252-8f547197-34cb-4b0d-b761-f29adb05c340-322504.png" /></p>
-<h3 id="2per-base-sequence-quality"><strong>2.Per base sequence quality</strong><a class="headerlink" href="#2per-base-sequence-quality" title="Permanent link">&para;</a></h3>
-<p>横轴为read长度，纵轴为质量得分，Q = -10*log10（error P）。
-关于错误率计算，可参考文章【<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651272899&amp;idx=1&amp;sn=6779b2bd21f3b607a08227d31c7212c6&amp;chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&amp;scene=21#wechat_redirect">生信中常见的数据文件格式</a>】。
-柱状表示该位置所有序列的测序质量的统计，柱状是25%~75%区间质量分布，error bar是10%~90%区间质量分布，蓝线表示平均数。
-一般要求所有位置的10%分位数大于20，即大于最多允许该位置10%的序列低于Q20。
-当任何碱基质量低于10，或者任何中位数低于25报WARN,需注意；
-当任何碱基质量低于5或者任何中位数低于20报FAIL。</p>
+<h4 id="2per-base-sequence-quality"><strong>2.Per base sequence quality</strong><a class="headerlink" href="#2per-base-sequence-quality" title="Permanent link">&para;</a></h4>
+<p>横轴为read长度，纵轴为质量得分，Q = -10*log10（error P）。关于错误率计算，可参考文章【<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651272899&amp;idx=1&amp;sn=6779b2bd21f3b607a08227d31c7212c6&amp;chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&amp;scene=21#wechat_redirect">生信中常见的数据文件格式</a>】。柱状表示该位置所有序列的测序质量的统计，柱状是25%~75%区间质量分布，error bar是10%~90%区间质量分布，蓝线表示平均数。一般要求所有位置的10%分位数大于20，即大于最多允许该位置10%的序列低于Q20。当任何碱基质量低于10，或者任何中位数低于25报WARN,需注意；当任何碱基质量低于5或者任何中位数低于20报FAIL。</p>
 <p><img alt="1612930518381-a36a82ac-5534-4758-b9e4-c0856050d0c5.png" src="../img/np70NcqAn5EcHLFs/1612930518381-a36a82ac-5534-4758-b9e4-c0856050d0c5-605028.png" /></p>
-<h3 id="3per-tile-sequence-quality"><strong>3.Per tile sequence quality</strong><a class="headerlink" href="#3per-tile-sequence-quality" title="Permanent link">&para;</a></h3>
+<h4 id="3per-tile-sequence-quality"><strong>3.Per tile sequence quality</strong><a class="headerlink" href="#3per-tile-sequence-quality" title="Permanent link">&para;</a></h4>
 <p>每个tail测序情况，横轴表示碱基位置，纵轴表示tail的index编号，这个图主要是为了防止在测序过程中某些tail受到不可控因素的影响而出现测序质量偏低，蓝色表示测序质量很高，暖色表示测序质量不高。当某些tail出现暖色，在后续的分析种把该tail测序结果全部去除。我这里的样本测序质量还是不错的。</p>
 <p><img alt="1612930518312-6a8196fb-5be6-4100-b610-a8596124ef75.png" src="../img/np70NcqAn5EcHLFs/1612930518312-6a8196fb-5be6-4100-b610-a8596124ef75-852564.png" /></p>
-<h3 id="4per-sequence-quality-scores"><strong>4.Per sequence quality scores</strong><a class="headerlink" href="#4per-sequence-quality-scores" title="Permanent link">&para;</a></h3>
+<h4 id="4per-sequence-quality-scores"><strong>4.Per sequence quality scores</strong><a class="headerlink" href="#4per-sequence-quality-scores" title="Permanent link">&para;</a></h4>
 <p>横轴表示Q值，纵轴表示每个值对应的read数目，当测序结果主要集中在高分中，证明测序质量良好。</p>
 <p><img alt="1612930518264-b83b8170-0710-4805-85d5-a8a3d90c7d35.png" src="../img/np70NcqAn5EcHLFs/1612930518264-b83b8170-0710-4805-85d5-a8a3d90c7d35-678285.png" /></p>
-<h3 id="5per-base-sequence-content"><strong>5.Per base sequence content</strong><a class="headerlink" href="#5per-base-sequence-content" title="Permanent link">&para;</a></h3>
-<p>统计在序列中的每一个位置，四种不同碱基占总碱基数的比例，检测有无AT、GC分离的现象。
-横轴为位置，纵轴为百分比。
-正常情况下四种碱基出现的频率应是接近的，且没有位置差异，因此好的样品中四条线应该是平行且接近的，由于刚开始测序仪状态不稳定，造成前几个碱基有波动。
-在 reads 开头出现碱基组成偏离往往是我们的建库操作造成的，比如建 GBS 文库时在 reads 开头加了 barcode；
-barcode 的碱基组成不是均一的，酶切位点的碱基组成是固定不变的，这样会造成明显的碱基组成偏离；
-在 reads 结尾出现的碱基组成偏离，往往是测序接头的污染造成的。
-当所有位置的碱基比例一致现出偏差时，即四条线平行且分开，代表文库有偏差，或测序中的系统误差；
-当部分位置碱基的比例出现偏差时，即四条线在某些位置纷乱交织，则有overrepresented sequence的污染。
-当任一位置的A/T比例与G/C比例相差超过10%，报"WARN"；
-当任一位置的A/T比例与G/C比例相差超过20%，报"FAIL"。</p>
+<h4 id="5per-base-sequence-content"><strong>5.Per base sequence content</strong><a class="headerlink" href="#5per-base-sequence-content" title="Permanent link">&para;</a></h4>
+<p>统计在序列中的每一个位置，四种不同碱基占总碱基数的比例，检测有无AT、GC分离的现象。横轴为位置，纵轴为百分比。正常情况下四种碱基出现的频率应是接近的，且没有位置差异，因此好的样品中四条线应该是平行且接近的，由于刚开始测序仪状态不稳定，造成前几个碱基有波动。在 reads 开头出现碱基组成偏离往往是我们的建库操作造成的，比如建 GBS 文库时在 reads 开头加了 barcode；barcode 的碱基组成不是均一的，酶切位点的碱基组成是固定不变的，这样会造成明显的碱基组成偏离；在 reads 结尾出现的碱基组成偏离，往往是测序接头的污染造成的。当所有位置的碱基比例一致现出偏差时，即四条线平行且分开，代表文库有偏差，或测序中的系统误差；当部分位置碱基的比例出现偏差时，即四条线在某些位置纷乱交织，则有overrepresented sequence的污染。当任一位置的A/T比例与G/C比例相差超过10%，报"WARN"；当任一位置的A/T比例与G/C比例相差超过20%，报"FAIL"。</p>
 <p><img alt="1612930518262-d74fef7b-be6b-45ba-8703-5be4257baf1e.png" src="../img/np70NcqAn5EcHLFs/1612930518262-d74fef7b-be6b-45ba-8703-5be4257baf1e-458484.png" /></p>
-<h3 id="6per-sequence-gc-content"><strong>6.Per sequence GC content</strong><a class="headerlink" href="#6per-sequence-gc-content" title="Permanent link">&para;</a></h3>
+<h4 id="6per-sequence-gc-content"><strong>6.Per sequence GC content</strong><a class="headerlink" href="#6per-sequence-gc-content" title="Permanent link">&para;</a></h4>
 <p>横轴表示GC含量，纵轴表示不同GC含量对应的read数，蓝线是理论分布（正态分布，通过从所测数据计算并构建理论分布），红色是实际情况，两个比较接近判为好的。曲线形状的偏差往往是由于文库的污染或是部分reads构成的子集有偏差（overrepresented reads）；形状接近正态分布但偏离理论分布的情况提示我们可能有系统偏差；如果出现两个或多个峰值，表明测序数据里可能有其他来源的DNA序列污染，或者有接头序列的二聚体污染。偏离理论分布的reads超过15%时，报"WARN"；偏离理论分布的reads超过30%时，报"FAIL"。</p>
 <p><img alt="1612930518273-298f8f2f-48c4-4feb-95ab-c60847a2a4a0.png" src="../img/np70NcqAn5EcHLFs/1612930518273-298f8f2f-48c4-4feb-95ab-c60847a2a4a0-389130.png" /></p>
-<h3 id="7per-base-n-content"><strong>7.Per base N content</strong><a class="headerlink" href="#7per-base-n-content" title="Permanent link">&para;</a></h3>
+<h4 id="7per-base-n-content"><strong>7.Per base N content</strong><a class="headerlink" href="#7per-base-n-content" title="Permanent link">&para;</a></h4>
 <p>当出现测序仪不能分辨的碱基时会产生N，横轴为碱基分布，纵轴为N比率，当任一位置N的比率超过5%报WARN，超过20%报FAIL。我这里几乎没有。</p>
 <p><img alt="1612930518295-f04438b2-3320-468b-98d1-86df0ccfd7c9.png" src="../img/np70NcqAn5EcHLFs/1612930518295-f04438b2-3320-468b-98d1-86df0ccfd7c9-173578.png" /></p>
-<h3 id="8sequence-length-distribution"><strong>8.Sequence Length Distribution</strong><a class="headerlink" href="#8sequence-length-distribution" title="Permanent link">&para;</a></h3>
+<h4 id="8sequence-length-distribution"><strong>8.Sequence Length Distribution</strong><a class="headerlink" href="#8sequence-length-distribution" title="Permanent link">&para;</a></h4>
 <p>理论上每次测序仪测出的read长度是一致的，但是由于建库等因素通常会导致一些小片段，如果报FAIL，表明此次测序过程中产生的数据不可信。</p>
 <p><img alt="1612930518279-d2004595-c154-4d0a-953a-0f8575b7d3a4.png" src="../img/np70NcqAn5EcHLFs/1612930518279-d2004595-c154-4d0a-953a-0f8575b7d3a4-716778.png" /></p>
-<h3 id="9sequence-duplication-levels"><strong>9.Sequence Duplication Levels</strong><a class="headerlink" href="#9sequence-duplication-levels" title="Permanent link">&para;</a></h3>
+<h4 id="9sequence-duplication-levels"><strong>9.Sequence Duplication Levels</strong><a class="headerlink" href="#9sequence-duplication-levels" title="Permanent link">&para;</a></h4>
 <p>统计序列完全一致的reads的频率，横轴表示重复的次数，纵轴表示重复的reads的数目。一般测序深度越高，越容易产生一定程度的重复序列。           <img alt="1612930518298-d81d2509-319b-4f75-a335-d267d45b4069.png" src="../img/np70NcqAn5EcHLFs/1612930518298-d81d2509-319b-4f75-a335-d267d45b4069-470146.png" /></p>
-<h3 id="10overrepresented-sequences"><strong>10.Overrepresented sequences</strong><a class="headerlink" href="#10overrepresented-sequences" title="Permanent link">&para;</a></h3>
+<h4 id="10overrepresented-sequences"><strong>10.Overrepresented sequences</strong><a class="headerlink" href="#10overrepresented-sequences" title="Permanent link">&para;</a></h4>
 <p>当有某个序列大量出现时，超过总reads数的0.1%时报WARN，超过1%时报FAIL。</p>
 <p><img alt="1612930518404-1370c822-9b09-4675-8ef3-14413db603fc.png" src="../img/np70NcqAn5EcHLFs/1612930518404-1370c822-9b09-4675-8ef3-14413db603fc-073137.png" /></p>
-<h3 id="11adapter-content"><strong>11.Adapter Content</strong><a class="headerlink" href="#11adapter-content" title="Permanent link">&para;</a></h3>
+<h4 id="11adapter-content"><strong>11.Adapter Content</strong><a class="headerlink" href="#11adapter-content" title="Permanent link">&para;</a></h4>
 <p>横轴表示碱基位置，纵轴表示百分比。当fastqc分析时没有选择参数-a adapter list时，默认使用图例中的4种通用adapter序列进行统计。若有adapter残留，后续必须去接头。</p>
 <p><img alt="1612930518533-0c60a932-fc72-4e56-92b5-86fe56e5c35b.png" src="../img/np70NcqAn5EcHLFs/1612930518533-0c60a932-fc72-4e56-92b5-86fe56e5c35b-634514.png" /></p>
 <p>以上就是一个完整的fastqC结果报告的简单说明，更多信息可参考：<a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/">http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/</a></p>
 <p>结果解读部分来自文章：<a href="https://blog.csdn.net/gateswell/article/details/78858579"><u>https://blog.csdn.net/gateswell/article/details/78858579</u></a>  ，对此感谢原作者。</p>
-<h1 id="trim-galorereadsadaptor">使用trim-galore去除低质量的reads和adaptor<a class="headerlink" href="#trim-galorereadsadaptor" title="Permanent link">&para;</a></h1>
+<h2 id="trim-galorereadsadaptor">使用trim-galore去除低质量的reads和adaptor<a class="headerlink" href="#trim-galorereadsadaptor" title="Permanent link">&para;</a></h2>
 <p><img alt="1612930686925-5e3f5773-3e78-4d6d-80a3-d059cbf03942.gif" src="../img/np70NcqAn5EcHLFs/1612930686925-5e3f5773-3e78-4d6d-80a3-d059cbf03942-227678.gif" /></p>
 <p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1338047035672526848&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>TCGA</strong></a>** | <strong><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1385753371944239106&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>GEO</strong></a></strong> | <strong><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1338481272770953216&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>文献阅读</strong></a></strong> | <strong><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1338487030963142656&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>数据库</strong></a><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1338487030963142656&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect">** **</a></strong>| **<a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1338473418617946113&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>理论知识</strong></a></p>
 <p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1337050529440104449&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>R语言</strong></a>** |**** <strong><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1369789283514761218&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>Bioconductor</strong></a></strong> | 服务器与**<a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1410264757734817793&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>Linux</strong></a></p>
 <p><img alt="1612930686809-6c6e41d3-beab-4d13-b3a8-d6e87c80330a.jpeg" src="../img/np70NcqAn5EcHLFs/1612930686809-6c6e41d3-beab-4d13-b3a8-d6e87c80330a-684857.jpeg" /></p>
 <p>我前面已经介绍了转录组分析中利用fastqc这个软件来查看测序质量【文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273374&amp;idx=1&amp;sn=dfac9e82a09fbb18cd8b2c8179afcad8&amp;chksm=841edce3b36955f5ef17ae96b03c11b9d0052cd3490f1d6b91e3600a5d2eafa77ad79d4a40ff&amp;scene=21#wechat_redirect">转录组分析 | fastqc进行质控与结果解读</a>】，通过分析结果报告，我测序的数据还是可以的，但不管怎样，还是要清除一些不好的reads。这里我用trim-galore去除低质量的reads和adaptor。</p>
-<h2 id="trim-galore">一.Trim Galore介绍<a class="headerlink" href="#trim-galore" title="Permanent link">&para;</a></h2>
+<h3 id="trim-galore">一.Trim Galore介绍<a class="headerlink" href="#trim-galore" title="Permanent link">&para;</a></h3>
 <p>Trim Galore是对FastQC和Cutadapt的包装。适用于所有高通量测序，包括RRBS(Reduced Representation Bisulfite-Seq ), Illumina、Nextera 和smallRNA测序平台的双端和单端数据。主要功能包括两步：</p>
 <p>首先去除低质量碱基，然后去除3' 末端的adapter, 如果没有指定具体的adapter，程序会自动检测前1million的序列，然后对比前12-13bp的序列是否符合以下类型的adapter:</p>
 <p>● Illumina:   AGATCGGAAGAGC</p>
@@ -9630,7 +10191,7 @@ barcode 的碱基组成不是均一的，酶切位点的碱基组成是固定不
 <p>--gzip和--dont_gzip：清洗后的数据zip打包或者不打包。</p>
 <p>--output_dir：输入目录。需要提前建立目录，否则运行会报错。</p>
 <p>-- trim-n : 移除read一端的reads</p>
-<h2 id="trim-galorereadsadaptor_1">二.使用trim-galore去除低质量的reads和adaptor<a class="headerlink" href="#trim-galorereadsadaptor_1" title="Permanent link">&para;</a></h2>
+<h3 id="trim-galorereadsadaptor_1">二.使用trim-galore去除低质量的reads和adaptor<a class="headerlink" href="#trim-galorereadsadaptor_1" title="Permanent link">&para;</a></h3>
 <p>首先，创建保存输出数据的文件夹。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mkdir cleandata mkdir ./cleandata/trim_galoredata
 </code></pre></div>
@@ -9906,12 +10467,12 @@ barcode 的碱基组成不是均一的，酶切位点的碱基组成是固定不
 <a id="__codelineno-11-201" name="__codelineno-11-201" href="#__codelineno-11-201"></a>23985482 sequences processed in total
 </code></pre></div>
 <p>这一部分就介绍到这里，本公众号文章目录可查看文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273306&amp;idx=1&amp;sn=d92056ee1fde1ff12b1506e02f8eb56f&amp;chksm=841edc27b36955310bac7e1b4e5e4ab7e26e669c192926dbee3efc4f6d185cf3509a8fc87696&amp;scene=21#wechat_redirect">公众号文章目录</a>，快速浏览相应文章。</p>
-<h1 id="hisat2"><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273450&amp;idx=1&amp;sn=efab631b255e12cf5ffd259dd53fb2b3&amp;chksm=841edc97b3695581de924856b0e6901c67b87648f85bd491729eaa2ee0592271d84042b9eb76&amp;token=108642787&amp;lang=zh_CN#rd">使用Hisat2进行序列比对</a><a class="headerlink" href="#hisat2" title="Permanent link">&para;</a></h1>
+<h2 id="hisat2"><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273450&amp;idx=1&amp;sn=efab631b255e12cf5ffd259dd53fb2b3&amp;chksm=841edc97b3695581de924856b0e6901c67b87648f85bd491729eaa2ee0592271d84042b9eb76&amp;token=108642787&amp;lang=zh_CN#rd">使用Hisat2进行序列比对</a><a class="headerlink" href="#hisat2" title="Permanent link">&para;</a></h2>
 <p>我前面已经对数据进行了质控：</p>
 <p><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273374&amp;idx=1&amp;sn=dfac9e82a09fbb18cd8b2c8179afcad8&amp;chksm=841edce3b36955f5ef17ae96b03c11b9d0052cd3490f1d6b91e3600a5d2eafa77ad79d4a40ff&amp;scene=21#wechat_redirect"><strong>转录组分析 | fastqc进行质控与结果解读</strong></a></p>
 <p><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273401&amp;idx=1&amp;sn=ff9e3478309d805950c40d0ebae74296&amp;chksm=841edcc4b36955d2a5bf8c85429114b5b83ec4e5afe869378b42ec4f659d4953d5f6c8e9e379&amp;scene=21#wechat_redirect"><strong>转录组分析 | 使用trim-galore去除低质量的reads和adaptor</strong></a></p>
 <p>接下来我们进行序列比对，利用的软件是Hisat2。</p>
-<h2 id="index">一.index文件下载<a class="headerlink" href="#index" title="Permanent link">&para;</a></h2>
+<h3 id="index">一.index文件下载<a class="headerlink" href="#index" title="Permanent link">&para;</a></h3>
 <p>index文件直接去官网下载</p>
 <p>(<a href="http://daehwankimlab.github.io/hisat2/download/"><u>http://daehwankimlab.github.io/hisat2/download/</u></a>)，我测序的组织来自小鼠，所以我这里下载的是小鼠的。</p>
 <p><img alt="1612932193936-1f3d7dab-999d-4af7-84dc-7ba1b91fdfd2.png" src="../img/np70NcqAn5EcHLFs/1612932193936-1f3d7dab-999d-4af7-84dc-7ba1b91fdfd2-799116.png" /></p>
@@ -9927,26 +10488,20 @@ barcode 的碱基组成不是均一的，酶切位点的碱基组成是固定不
 </code></pre></div>
 <p><img alt="1612932193888-827fcfaa-a61c-4589-ba61-1a16f699bb29.png" src="../img/np70NcqAn5EcHLFs/1612932193888-827fcfaa-a61c-4589-ba61-1a16f699bb29-593147.png" /></p>
 <p>总共8个ht2格式文件，一个sh格式文件。</p>
-<h2 id="hisat2_1">二.hisat2介绍<a class="headerlink" href="#hisat2_1" title="Permanent link">&para;</a></h2>
+<h3 id="hisat2_1">二.hisat2介绍<a class="headerlink" href="#hisat2_1" title="Permanent link">&para;</a></h3>
 <p>Hisat是一种高效的RNA-seq实验比对工具。它使用了基于BWT和Ferragina-manzini (Fm) index 两种算法的索引框架。使用了两类索引去比对，一类是全基因组范围的FM索引来锚定每一个比对，另一类是大量的局部索引对这些比对做快速的扩展。比对原理可阅读文献原文：HISAT: a fast spliced aligner with low memory requirements.</p>
-<h3 id="_2">（一）背景<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h4 id="_2">（一）背景<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <p>自2008年起，RNAseq已经成为研究基因表达、转录本结构、长链非编码RNA确定以及融合转录本的重要手段。随着测序深度的加深和read读长的延长，给比对工作带来很多困难。目前的工具如Tophat2和GSNAP等在对单个转录组实验的比对中耗时几天，而新型的STAR虽然很快，但是会吃掉大量的内存空间，如基于人类基因组的比对需要消耗28G左右，而hisat2是4.3G，小鼠3.8G左右。</p>
-<h3 id="hisat">（二）Hisat设计原则<a class="headerlink" href="#hisat" title="Permanent link">&para;</a></h3>
+<h4 id="hisat">（二）Hisat设计原则<a class="headerlink" href="#hisat" title="Permanent link">&para;</a></h4>
 <p><strong>1.优化了索引建立策略</strong></p>
 <p>hisat应用了基于bowtie2的方法去处理很多低水平的用于构建和查询FM索引的操作。但是与其它比对器不同的是，该软件应用了两类不同的索引类型：代表全基因组的全局FM索引和大量的局部小索引，每个索引代表64000bp。以人类基因组为例，创建了48000个局部索引，每一个覆盖1024bp，最终可以覆盖这个3 billion 的碱基的基因组。这种存在交叉（overlap）的边界可以轻松的比对那些跨区域的read（可变剪切体）。尽管有很多索引，但是hisat会把他们使用合适方法压缩，最终只占4gb左右的内存。</p>
 <p><strong>2.采用了新的比对策略</strong></p>
-<p>RNA-seq产生的reads可能跨长度比较大的内含子，哺乳动物中甚至最长能达到1MB，同时外显子比较短，read也比较短，会有很多read（模拟数据中大概34%）跨两个外显子的情况。
-为了更好的比对，将跨外显子的reads分成了三类：1）长锚定read，至少有16bp在两个外显子的每一个上 2）中间锚定read，有8-15bp在一个外显子上 3）短锚定read，只有1-7bp在一个外显子上。
-所以总的reads可以被划分为五类：1）不跨外显子的read 2）长锚定read 3）中间锚定read 4）短锚定read 5）跨两个外显子以上的read。
-在模拟的数据中，有25%左右的read是长锚定read，这种read在大多数情况下可以被唯一的定位到人的基因组上。
-5%为中间锚定read，对于这类，很多依赖于全局索引的算法就很难执行下去（需要比对很多次），而hisat，可以先将read中的长片段实现唯一比对，之后再使用局部索引对剩下的小片段进行比对（局部索引可以实现快速检索）。
-4.2%为短锚定read，因为这些序列特别短，因此只能通过在hisat比对其它read时发现的剪切位点或者用户自己提供的剪切位点来辅助比对。
-最后还有3%的是跨多个外显子的read，比对策略在hisat的online method中有介绍，文章中没有详解。
-比对过程中，中间锚定read、短锚定read、跨多个外显子read的比对占总比对时长的30%-60%，而且比对错误率很高！
+<p>RNA-seq产生的reads可能跨长度比较大的内含子，哺乳动物中甚至最长能达到1MB，同时外显子比较短，read也比较短，会有很多read（模拟数据中大概34%）跨两个外显子的情况。为了更好的比对，将跨外显子的reads分成了三类：1）长锚定read，至少有16bp在两个外显子的每一个上 2）中间锚定read，有8-15bp在一个外显子上 3）短锚定read，只有1-7bp在一个外显子上。所以总的reads可以被划分为五类：1）不跨外显子的read 2）长锚定read 3）中间锚定read 4）短锚定read 5）跨两个外显子以上的read。在模拟的数据中，有25%左右的read是长锚定read，这种read在大多数情况下可以被唯一的定位到人的基因组上。5%为中间锚定read，对于这类，很多依赖于全局索引的算法就很难执行下去（需要比对很多次），而hisat，可以先将read中的长片段实现唯一比对，之后再使用局部索引对剩下的小片段进行比对（局部索引可以实现快速检索）。
+4.2%为短锚定read，因为这些序列特别短，因此只能通过在hisat比对其它read时发现的剪切位点或者用户自己提供的剪切位点来辅助比对。最后还有3%的是跨多个外显子的read，比对策略在hisat的online method中有介绍，文章中没有详解。比对过程中，中间锚定read、短锚定read、跨多个外显子read的比对占总比对时长的30%-60%，而且比对错误率很高！
 <strong>【引用：1】</strong></p>
 <hr />
 <p>官方手册：<a href="https://daehwankimlab.github.io/hisat2/manual/"><u>https://daehwankimlab.github.io/hisat2/manual/</u></a></p>
-<h3 id="hisat2-2">（三）.HiSat2进行比对的参数设置 【引用：2】<a class="headerlink" href="#hisat2-2" title="Permanent link">&para;</a></h3>
+<h4 id="hisat2-2">（三）.HiSat2进行比对的参数设置 【引用：2】<a class="headerlink" href="#hisat2-2" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>HISAT2 version 2.1.0 by Daehwan Kim (infphilo@gmail.com, www.ccb.jhu.edu/people/infphilo)
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>Usage:
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>  hisat2 [options]* -x &lt;ht2-idx&gt; {-1 &lt;m1&gt; -2 &lt;m2&gt; | -U &lt;r&gt;} [-S &lt;sam&gt;]
@@ -10177,7 +10732,7 @@ barcode 的碱基组成不是均一的，酶切位点的碱基组成是固定不
 <a id="__codelineno-15-36" name="__codelineno-15-36" href="#__codelineno-15-36"></a>    --usage                 print this usage message
 <a id="__codelineno-15-37" name="__codelineno-15-37" href="#__codelineno-15-37"></a>    --version               print version information and quit
 </code></pre></div>
-<h2 id="hisat2_2">三. 使用Hisat2进行序列比对<a class="headerlink" href="#hisat2_2" title="Permanent link">&para;</a></h2>
+<h3 id="hisat2_2">三. 使用Hisat2进行序列比对<a class="headerlink" href="#hisat2_2" title="Permanent link">&para;</a></h3>
 <p>创建输出数据的文件夹</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>mkdir cleandata/hisat2_mm10data
 </code></pre></div>
@@ -10219,9 +10774,9 @@ barcode 的碱基组成不是均一的，酶切位点的碱基组成是固定不
 </code></pre></div>
 <p>原本22G的数据，运行结束后155G，所以自己用本地计算机跑的话，数据多注意一下内存。</p>
 <p><img alt="1612932194033-bb32bdd1-4b55-4208-99fb-75245895e485.png" src="../img/np70NcqAn5EcHLFs/1612932194033-bb32bdd1-4b55-4208-99fb-75245895e485-843901.png" /></p>
-<h2 id="_3">四.结果解读<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="_3">四.结果解读<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>我们比对后得到的是sam文件，关于sam文件是一个什么样的文件，参考文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651272899&amp;idx=1&amp;sn=6779b2bd21f3b607a08227d31c7212c6&amp;chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&amp;scene=21#wechat_redirect"><strong>生信中常见的数据文件格式</strong></a>。</p>
-<h2 id="hisat2_3">五.Hisat2自定义索引文件<a class="headerlink" href="#hisat2_3" title="Permanent link">&para;</a></h2>
+<h3 id="hisat2_3">五.Hisat2自定义索引文件<a class="headerlink" href="#hisat2_3" title="Permanent link">&para;</a></h3>
 <p>已有index的物种文件：<a href="http://daehwankimlab.github.io/hisat2/download/">Download | HISAT2 (daehwankimlab.github.io)</a></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>extract_splice_sites.py<span class="w"> </span>tRNA.fragments.hg19.gtf<span class="w"> </span>&gt;<span class="w"> </span>tsRNA.ss
 </code></pre></div>
@@ -10236,34 +10791,21 @@ barcode 的碱基组成不是均一的，酶切位点的碱基组成是固定不
 <p><u>【1】</u><a href="https://www.jianshu.com/p/ce3f4afb9b60"><u>https://www.jianshu.com/p/ce3f4afb9b60</u></a>。</p>
 <p><u>【2】</u><a href="https://github.com/ricket-sjtu/bioinformatics/wiki/HiSat2%25E5%25BA%2594%25E7%2594%25A8%25E4%25BB%258B%25E7%25BB%258D"><u>https://github.com/ricket-sjtu/bioinformatics/wiki/HiSat2%E5%BA%94%E7%94%A8%E4%BB%8B%E7%BB%8D</u></a></p>
 <p>对原作者表示感谢！</p>
-<h1 id="samtoolssambam"><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273488&amp;idx=1&amp;sn=f5ed53f20164b19720d31f0a2cfcd268&amp;chksm=841edd6db369547bc04ae15a2a8a7661fefa1193cabbe05d7e2f9e2fa986211603537cf8fbd0&amp;token=108642787&amp;lang=zh_CN#rd">使用SAMtools将SAM文件转换为BAM文件、排序、建立索引</a><a class="headerlink" href="#samtoolssambam" title="Permanent link">&para;</a></h1>
+<h2 id="samtoolssambam"><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273488&amp;idx=1&amp;sn=f5ed53f20164b19720d31f0a2cfcd268&amp;chksm=841edd6db369547bc04ae15a2a8a7661fefa1193cabbe05d7e2f9e2fa986211603537cf8fbd0&amp;token=108642787&amp;lang=zh_CN#rd">使用SAMtools将SAM文件转换为BAM文件、排序、建立索引</a><a class="headerlink" href="#samtoolssambam" title="Permanent link">&para;</a></h2>
 <p>我们前面经过质控，比对得到sam文件：</p>
 <p><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273374&amp;idx=1&amp;sn=dfac9e82a09fbb18cd8b2c8179afcad8&amp;chksm=841edce3b36955f5ef17ae96b03c11b9d0052cd3490f1d6b91e3600a5d2eafa77ad79d4a40ff&amp;scene=21#wechat_redirect"><strong>转录组分析 | fastqc进行质控与结果解读</strong></a></p>
 <p><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273401&amp;idx=1&amp;sn=ff9e3478309d805950c40d0ebae74296&amp;chksm=841edcc4b36955d2a5bf8c85429114b5b83ec4e5afe869378b42ec4f659d4953d5f6c8e9e379&amp;scene=21#wechat_redirect"><strong>转录组分析 | 使用trim-galore去除低质量的reads和adaptor</strong></a></p>
 <p><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273450&amp;idx=1&amp;sn=efab631b255e12cf5ffd259dd53fb2b3&amp;chksm=841edc97b3695581de924856b0e6901c67b87648f85bd491729eaa2ee0592271d84042b9eb76&amp;scene=21#wechat_redirect"><strong>转录组分析 | 使用Hisat2进行序列比对</strong></a></p>
-<p>接下来为什么要进行格式转换？
-为了让计算机好处理。
-SAM（sequence Alignment/mapping)数据格式是目前高通量测序中存放比对数据的标准格式。
-bam是sam的二进制格式，减少了sam文件的储存量。
-这在我之前的文章【<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651272899&amp;idx=1&amp;sn=6779b2bd21f3b607a08227d31c7212c6&amp;chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&amp;scene=21#wechat_redirect"><strong>生信中常见的数据文件格式</strong></a>】中也有介绍。</p>
+<p>接下来为什么要进行格式转换？为了让计算机好处理。SAM（sequence Alignment/mapping)数据格式是目前高通量测序中存放比对数据的标准格式。bam是sam的二进制格式，减少了sam文件的储存量。这在我之前的文章【<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651272899&amp;idx=1&amp;sn=6779b2bd21f3b607a08227d31c7212c6&amp;chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&amp;scene=21#wechat_redirect"><strong>生信中常见的数据文件格式</strong></a>】中也有介绍。</p>
 <p>接下来，我们要做的事情就是使用SAMtools将SAM文件转换为BAM文件、排序、建立索引。</p>
-<h2 id="samtools">一.SAMtools介绍<a class="headerlink" href="#samtools" title="Permanent link">&para;</a></h2>
+<h3 id="samtools">一.SAMtools介绍<a class="headerlink" href="#samtools" title="Permanent link">&para;</a></h3>
 <p>SAMtools是一个用于操作sam和bam文件的工具合集。能够实现二进制查看、格式转换、排序及合并等功能，结合sam格式中的flag、tag等信息，还可以完成比对结果的统计汇总。同时利用linux中的grep、awk等操作命令，还可以大大扩展samtools的使用范围与功能。包含有许多命令。我这里主要介绍几个，重点是samtools view。</p>
 <p>samtools更多信息：<a href="http://www.htslib.org/"><strong><u>http://www.htslib.org/</u></strong></a></p>
 <p>**1.samtools **<strong>view</strong></p>
-<p>samtools view主要用来转换SAM/BAM/CRAM文件。
-将sam文件与bam文件互换；
-然后对bam文件进行各种操作，比如数据的排序(sort)和提取(这些操作 是对bam文件进行的，因而当输入为sam文件的时候，不能进行该操作)；
-最后将排序或提取得到的数据输出为bam或sam（默认的）格式。
-如果没有指定选项或区域，则将指定的输入对齐文件(SAM、BAM或CRAM格式)中的所有对齐打印到SAM格式的标准输出(没有标头)。
-可以在输入文件名后指定一个或多个空格分隔的区域规范，以将输出限制为仅覆盖指定区域的那些对齐。
-使用区域规范需要一个协调排序和索引的输入文件(BAM或CRAM格式)。
-samtools view的参数很多，-b、-C、-1、-u、-h、-H和-C选项将更改缺省的无header SAM的输出格式，而-o和-u选项将设置输出文件名。
--t和-T选项提供了额外的参考数据。
-当SAM输入不包含@SQ headers时，这两个选项中的一个是必需的，当编写CRAM输出时，-T选项是必需的。
+<p>samtools view主要用来转换SAM/BAM/CRAM文件。将sam文件与bam文件互换；然后对bam文件进行各种操作，比如数据的排序(sort)和提取(这些操作 是对bam文件进行的，因而当输入为sam文件的时候，不能进行该操作)；最后将排序或提取得到的数据输出为bam或sam（默认的）格式。如果没有指定选项或区域，则将指定的输入对齐文件(SAM、BAM或CRAM格式)中的所有对齐打印到SAM格式的标准输出(没有标头)。可以在输入文件名后指定一个或多个空格分隔的区域规范，以将输出限制为仅覆盖指定区域的那些对齐。使用区域规范需要一个协调排序和索引的输入文件(BAM或CRAM格式)。samtools view的参数很多，-b、-C、-1、-u、-h、-H和-C选项将更改缺省的无header SAM的输出格式，而-o和-u选项将设置输出文件名。
+-t和-T选项提供了额外的参考数据。当SAM输入不包含@SQ headers时，这两个选项中的一个是必需的，当编写CRAM输出时，-T选项是必需的。
 -L、-M、-r、-R、-d、-D、-s、-q、-L、-M、-f、-F和-G选项过滤将包含在输出中的对齐，只筛选那些匹配特定条件的对齐。
--x和-B选项修改包含在每次对齐中的数据。
-如果数据文件夹不包含任何索引文件，可以使用-X选项允许用户指定定制的索引文件位置。</p>
+-x和-B选项修改包含在每次对齐中的数据。如果数据文件夹不包含任何索引文件，可以使用-X选项允许用户指定定制的索引文件位置。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>samtools view [options] &lt;in.bam&gt;|&lt;in.sam&gt;|&lt;in.cram&gt; [region ...]
 </code></pre></div>
 <p>参数介绍：</p>
@@ -10335,7 +10877,7 @@ samtools view的参数很多，-b、-C、-1、-u、-h、-H和-C选项将更改�
 <hr />
 <p>关于SAMtools工具的用法还很多，我就介绍上面几个，其他更多用法，阅读：<a href="http://www.htslib.org/doc/samtools.html"><u>http://www.htslib.org/doc/samtools.html</u></a></p>
 <p>参考：<a href="https://blog.csdn.net/sinat_38163598/article/details/72910115"><u>https://blog.csdn.net/sinat_38163598/article/details/72910115</u></a></p>
-<h2 id="samtools_1">二.SAMtools实战<a class="headerlink" href="#samtools_1" title="Permanent link">&para;</a></h2>
+<h3 id="samtools_1">二.SAMtools实战<a class="headerlink" href="#samtools_1" title="Permanent link">&para;</a></h3>
 <p><strong>1.格式转换(samtools view)</strong></p>
 <p>我们先查看一下上一篇文章【<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273450&amp;idx=1&amp;sn=efab631b255e12cf5ffd259dd53fb2b3&amp;chksm=841edc97b3695581de924856b0e6901c67b87648f85bd491729eaa2ee0592271d84042b9eb76&amp;scene=21#wechat_redirect"><strong>转录组分析 | 使用Hisat2进行序列比对</strong></a>】中产生的sam文件。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>ll -h ./cleandata/hisat2_mm10data/
@@ -10418,17 +10960,16 @@ samtools view的参数很多，-b、-C、-1、-u、-h、-H和-C选项将更改�
 <a id="__codelineno-49-17" name="__codelineno-49-17" href="#__codelineno-49-17"></a>46308722 + 0 with itself and mate mapped
 <a id="__codelineno-49-18" name="__codelineno-49-18" href="#__codelineno-49-18"></a>#paired reads中两条都比对到参考序列上的reads数
 <a id="__codelineno-49-19" name="__codelineno-49-19" href="#__codelineno-49-19"></a>596990 + 0 singletons (1.25% : N/A)
-<a id="__codelineno-49-20" name="__codelineno-49-20" href="#__codelineno-49-20"></a>#单独一条匹配到参考序列上的reads数，和上一个相加，则是总的匹配上的reads数。
-<a id="__codelineno-49-21" name="__codelineno-49-21" href="#__codelineno-49-21"></a>232008 + 0 with mate mapped to a different chr
-<a id="__codelineno-49-22" name="__codelineno-49-22" href="#__codelineno-49-22"></a>#paired reads中两条分别比对到两条不同的参考序列的reads数
-<a id="__codelineno-49-23" name="__codelineno-49-23" href="#__codelineno-49-23"></a>210169 + 0 with mate mapped to a different chr (mapQ&gt;=5)
-<a id="__codelineno-49-24" name="__codelineno-49-24" href="#__codelineno-49-24"></a>#同上一个，只是其中比对质量&gt;=5的reads的数量
+<a id="__codelineno-49-20" name="__codelineno-49-20" href="#__codelineno-49-20"></a>#单独一条匹配到参考序列上的reads数，和上一个相加，则是总的匹配上的reads数。232008 + 0 with mate mapped to a different chr
+<a id="__codelineno-49-21" name="__codelineno-49-21" href="#__codelineno-49-21"></a>#paired reads中两条分别比对到两条不同的参考序列的reads数
+<a id="__codelineno-49-22" name="__codelineno-49-22" href="#__codelineno-49-22"></a>210169 + 0 with mate mapped to a different chr (mapQ&gt;=5)
+<a id="__codelineno-49-23" name="__codelineno-49-23" href="#__codelineno-49-23"></a>#同上一个，只是其中比对质量&gt;=5的reads的数量
 </code></pre></div>
 <p>参考：</p>
 <p>【1】<a href="https://blog.csdn.net/sinat_38163598/article/details/72910115"><u>https://blog.csdn.net/sinat_38163598/article/details/72910115</u></a></p>
 <p>【2】<a href="http://www.htslib.org/doc/samtools.html"><u>http://www.htslib.org/doc/samtools.html</u></a></p>
 <p>这一部分就介绍到这里，本公众号文章目录可查看文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273306&amp;idx=1&amp;sn=d92056ee1fde1ff12b1506e02f8eb56f&amp;chksm=841edc27b36955310bac7e1b4e5e4ab7e26e669c192926dbee3efc4f6d185cf3509a8fc87696&amp;scene=21#wechat_redirect"><strong>公众号文章目录</strong></a>，快速浏览相应文章。</p>
-<h2 id="samtools_2">三. SAMtools报错解决<a class="headerlink" href="#samtools_2" title="Permanent link">&para;</a></h2>
+<h3 id="samtools_2">三. SAMtools报错解决<a class="headerlink" href="#samtools_2" title="Permanent link">&para;</a></h3>
 <p><u>如果</u>SAMtools报下面错误：</p>
 <p><img alt="1672116397459-896014b9-dafc-415e-ae73-07159adf99ea.png" src="../img/np70NcqAn5EcHLFs/1672116397459-896014b9-dafc-415e-ae73-07159adf99ea-721524.png" /></p>
 <p>查看安装环境下的的文件libcrypto.so版本：这里的conda环境是tsRNA</p>
@@ -10438,7 +10979,7 @@ samtools view的参数很多，-b、-C、-1、-u、-h、-H和-C选项将更改�
 <div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>ln<span class="w"> </span>-s<span class="w"> </span>/home/chens/miniconda3/envs/tsRNA/lib/libcrypto.so.1.1<span class="w"> </span>/home/chens/miniconda3/envs/tsRNA/lib/libcrypto.so.1.0.0
 </code></pre></div>
 <p><u></u></p>
-<h1 id="rseqcbam"><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273531&amp;idx=1&amp;sn=8a9b12fe030f6c0f8bb1d6c8abbf622d&amp;chksm=841edd46b36954501a57801f8149301d1bbb7b2d62a6f0d73b8a4795071e2aace94e02c2f392&amp;token=108642787&amp;lang=zh_CN#rd">使用RSeQC软件对生成的BAM文件进行质控</a><a class="headerlink" href="#rseqcbam" title="Permanent link">&para;</a></h1>
+<h2 id="rseqcbam"><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273531&amp;idx=1&amp;sn=8a9b12fe030f6c0f8bb1d6c8abbf622d&amp;chksm=841edd46b36954501a57801f8149301d1bbb7b2d62a6f0d73b8a4795071e2aace94e02c2f392&amp;token=108642787&amp;lang=zh_CN#rd">使用RSeQC软件对生成的BAM文件进行质控</a><a class="headerlink" href="#rseqcbam" title="Permanent link">&para;</a></h2>
 <p>接前面文章：</p>
 <p><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273374&amp;idx=1&amp;sn=dfac9e82a09fbb18cd8b2c8179afcad8&amp;chksm=841edce3b36955f5ef17ae96b03c11b9d0052cd3490f1d6b91e3600a5d2eafa77ad79d4a40ff&amp;scene=21#wechat_redirect">转录组分析 | fastqc进行质控与结果解读</a></p>
 <p><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273401&amp;idx=1&amp;sn=ff9e3478309d805950c40d0ebae74296&amp;chksm=841edcc4b36955d2a5bf8c85429114b5b83ec4e5afe869378b42ec4f659d4953d5f6c8e9e379&amp;scene=21#wechat_redirect">转录组分析 | 使用trim-galore去除低质量的reads和adaptor</a></p>
@@ -10446,7 +10987,7 @@ samtools view的参数很多，-b、-C、-1、-u、-h、-H和-C选项将更改�
 <p><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273488&amp;idx=1&amp;sn=f5ed53f20164b19720d31f0a2cfcd268&amp;chksm=841edd6db369547bc04ae15a2a8a7661fefa1193cabbe05d7e2f9e2fa986211603537cf8fbd0&amp;scene=21#wechat_redirect">转录组分析 | 使用SAMtools将SAM文件转换为BAM文件、排序、建立索引</a></p>
 <p>本文接着介绍：使用RSeQC软件对生成的BAM文件进行质控。也就是看看前面数据的质量怎么样。</p>
 <p>首先介绍一下RSeQC这个软件</p>
-<h2 id="rseqc">一.RSeQC介绍<a class="headerlink" href="#rseqc" title="Permanent link">&para;</a></h2>
+<h3 id="rseqc">一.RSeQC介绍<a class="headerlink" href="#rseqc" title="Permanent link">&para;</a></h3>
 <p>RSeQC是发表于2012年的一个RNA-Seq质控工具，属于python包。它提供了一系列有用的小工具能够评估高通量测序尤其是RNA-seq数据，比如一些基本模块，检查序列质量, 核酸组分偏性, PCR偏性, GC含量偏性,还有RNA-seq特异性模块: 评估测序饱和度， 映射读数分布， 覆盖均匀性， 链特异性， 转录水平RNA完整性等。该软件的使用命令非常多，但很多功能并不是用来诊断转录组测序的，所以不在我们的考虑范围内。你可以参考官方教程文档：</p>
 <p><a href="https://pythonhosted.org/RSeQC/#bam2fq-py"><u>https://pythonhosted.org/RSeQC/#bam2fq-py</u></a></p>
 <p>RSeQC接受4种文件格式:</p>
@@ -10456,7 +10997,7 @@ samtools view的参数很多，-b、-C、-1、-u、-h、-H和-C选项将更改�
 <li>染色体大小文件: 只有两列的纯文本文</li>
 <li>Fasta文件的参考基因组</li>
 </ul>
-<h2 id="bam_statpy">二. 使用bam_stat.py命令查看比对的总体情况<a class="headerlink" href="#bam_statpy" title="Permanent link">&para;</a></h2>
+<h3 id="bam_statpy">二. 使用bam_stat.py命令查看比对的总体情况<a class="headerlink" href="#bam_statpy" title="Permanent link">&para;</a></h3>
 <p>用 bam_stat.py来统计总比对记录, PCR重复数, Non Primary Hits表示多匹配位点, 不匹配的reads数, 比对到+链的reads, 比对到-链的reads, 有剪切位点的reads等。</p>
 <p><img alt="1612932844663-3fe73cc3-950b-425c-80eb-b4243a1830c0.png" src="../img/np70NcqAn5EcHLFs/1612932844663-3fe73cc3-950b-425c-80eb-b4243a1830c0-729263.png" /></p>
 <p>我们查看前面产生的文件CK-4_sort.bam【文章:<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273488&amp;idx=1&amp;sn=f5ed53f20164b19720d31f0a2cfcd268&amp;chksm=841edd6db369547bc04ae15a2a8a7661fefa1193cabbe05d7e2f9e2fa986211603537cf8fbd0&amp;scene=21#wechat_redirect">转录组分析 | 使用SAMtools将SAM文件转换为BAM文件、排序、建立索引</a>】。</p>
@@ -10466,8 +11007,7 @@ samtools view的参数很多，-b、-C、-1、-u、-h、-H和-C选项将更改�
 <p><strong>三.使用read_distribution.py命令查看基因组覆盖率</strong></p>
 <p>该命令需要输入两个文件， -i为BAM或SAM文件；-r为参考的bed文件。</p>
 <p><img alt="1612932844707-bb084cbf-7205-472b-9409-3b4c0dd2fe7d.png" src="../img/np70NcqAn5EcHLFs/1612932844707-bb084cbf-7205-472b-9409-3b4c0dd2fe7d-377163.png" /></p>
-<p>bed文件参考文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651272899&amp;idx=1&amp;sn=6779b2bd21f3b607a08227d31c7212c6&amp;chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&amp;scene=21#wechat_redirect">生信中常见的数据文件格式</a>。
-bed文件下载地址RSeQC官网：<a href="https://sourceforge.net/projects/rseqc/files/BED/"><u>https://sourceforge.net/projects/rseqc/files/BED/</u></a>，我这里下载的是小鼠的：<a href="https://sourceforge.net/projects/rseqc/files/BED/Mouse_Mus_musculus/"><u>https://sourceforge.net/projects/rseqc/files/BED/Mouse_Mus_musculus/</u></a></p>
+<p>bed文件参考文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651272899&amp;idx=1&amp;sn=6779b2bd21f3b607a08227d31c7212c6&amp;chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&amp;scene=21#wechat_redirect">生信中常见的数据文件格式</a>。bed文件下载地址RSeQC官网：<a href="https://sourceforge.net/projects/rseqc/files/BED/"><u>https://sourceforge.net/projects/rseqc/files/BED/</u></a>，我这里下载的是小鼠的：<a href="https://sourceforge.net/projects/rseqc/files/BED/Mouse_Mus_musculus/"><u>https://sourceforge.net/projects/rseqc/files/BED/Mouse_Mus_musculus/</u></a></p>
 <p><img alt="1612932844722-33d023b1-68f7-4d07-8d06-5e6934e9c901.png" src="../img/np70NcqAn5EcHLFs/1612932844722-33d023b1-68f7-4d07-8d06-5e6934e9c901-000103.png" /></p>
 <p>下载后解压上传到Linux服务器中，我的bed文件在 /data/mouse_RefSeq/  这个目录下。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>ll -h /data/mouse_RefSeq/
@@ -10480,7 +11020,7 @@ bed文件下载地址RSeQC官网：<a href="https://sourceforge.net/projects/rse
 <p>为了快速查看本公众号文章，可阅读文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273306&amp;idx=1&amp;sn=d92056ee1fde1ff12b1506e02f8eb56f&amp;chksm=841edc27b36955310bac7e1b4e5e4ab7e26e669c192926dbee3efc4f6d185cf3509a8fc87696&amp;scene=21#wechat_redirect">公众号文章目录</a></p>
 <hr />
 <p>参考：<a href="https://mp.weixin.qq.com/s/KpQwwDm_aIvIbxXHiaNrLg"><u>https://mp.weixin.qq.com/s/KpQwwDm_aIvIbxXHiaNrLg</u></a></p>
-<h1 id="stringtie"><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273566&amp;idx=1&amp;sn=947e61eb19a63943f8c56bfcad81cc82&amp;chksm=841edd23b36954359fe559dc4a832ffd66a0792868d2d2ea65123765cc0b7dc4424ca4344549#rd">使用Stringtie对数据进行下游处理</a><a class="headerlink" href="#stringtie" title="Permanent link">&para;</a></h1>
+<h2 id="stringtie"><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273566&amp;idx=1&amp;sn=947e61eb19a63943f8c56bfcad81cc82&amp;chksm=841edd23b36954359fe559dc4a832ffd66a0792868d2d2ea65123765cc0b7dc4424ca4344549#rd">使用Stringtie对数据进行下游处理</a><a class="headerlink" href="#stringtie" title="Permanent link">&para;</a></h2>
 <p>接前文：</p>
 <p><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273374&amp;idx=1&amp;sn=dfac9e82a09fbb18cd8b2c8179afcad8&amp;chksm=841edce3b36955f5ef17ae96b03c11b9d0052cd3490f1d6b91e3600a5d2eafa77ad79d4a40ff&amp;scene=21#wechat_redirect">转录组分析 | fastqc进行质控与结果解读</a></p>
 <p><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273401&amp;idx=1&amp;sn=ff9e3478309d805950c40d0ebae74296&amp;chksm=841edcc4b36955d2a5bf8c85429114b5b83ec4e5afe869378b42ec4f659d4953d5f6c8e9e379&amp;scene=21#wechat_redirect">转录组分析 | 使用trim-galore去除低质量的reads和adaptor</a></p>
@@ -10488,7 +11028,7 @@ bed文件下载地址RSeQC官网：<a href="https://sourceforge.net/projects/rse
 <p><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273488&amp;idx=1&amp;sn=f5ed53f20164b19720d31f0a2cfcd268&amp;chksm=841edd6db369547bc04ae15a2a8a7661fefa1193cabbe05d7e2f9e2fa986211603537cf8fbd0&amp;scene=21#wechat_redirect">转录组分析 | 使用SAMtools将SAM文件转换为BAM文件、排序、建立索引</a></p>
 <p><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273531&amp;idx=1&amp;sn=8a9b12fe030f6c0f8bb1d6c8abbf622d&amp;chksm=841edd46b36954501a57801f8149301d1bbb7b2d62a6f0d73b8a4795071e2aace94e02c2f392&amp;scene=21#wechat_redirect">转录组分析 | 使用RSeQC软件对生成的BAM文件进行质控</a></p>
 <p>我们接下来使用Stringtie对数据进行下游处理。</p>
-<h2 id="stringtie_1">一.StringTie介绍<a class="headerlink" href="#stringtie_1" title="Permanent link">&para;</a></h2>
+<h3 id="stringtie_1">一.StringTie介绍<a class="headerlink" href="#stringtie_1" title="Permanent link">&para;</a></h3>
 <p>StringTie 是用于 RNA-seq 的转录本组装和定量软件，StringTie 可以看做是cufflinks软件的升级版本，其功能和Cufflinks是一样的，包括下面两个主要功能：转录本组装和定量；相比Cuffinks, 其运行速度更快。该软件的官网：<a href="https://ccb.jhu.edu/software/stringtie/index.shtml"><u>https://ccb.jhu.edu/software/stringtie/index.shtml</u></a>。</p>
 <p>1、Stringtie通过使用genome指导的组装的方法与从头组装的概念结合的新方法来改善转录组组装。</p>
 <p>2、Stringtie的输入不仅可以是经过比对的结果，也可以是Stringtie通过从头组装read所得到的contig，当这两种输入都用到的时候，我们下面称之为stringtie+SR。</p>
@@ -10521,13 +11061,9 @@ bed文件下载地址RSeQC官网：<a href="https://sourceforge.net/projects/rse
 <a id="__codelineno-55-18" name="__codelineno-55-18" href="#__codelineno-55-18"></a>-i                     #合并后，保留含retained introns的转录本 (默认值: 除非有强有力的证据，否则不予保留)
 <a id="__codelineno-55-19" name="__codelineno-55-19" href="#__codelineno-55-19"></a>-l &lt;label&gt;             #输出转录本的名称前缀 (默认值: MSTRG)
 </code></pre></div>
-<h2 id="stringtie_2">二.StringTie应用<a class="headerlink" href="#stringtie_2" title="Permanent link">&para;</a></h2>
+<h3 id="stringtie_2">二.StringTie应用<a class="headerlink" href="#stringtie_2" title="Permanent link">&para;</a></h3>
 <p><strong>1.单样本转录本组装</strong></p>
-<p>输入文档是BAM格式的比对结果文档，该文档必需经过排序。
-这些文档可以是来源于Tophat比对的结果文档，也可以是hisat2的结果文档经过转换和排序的文档(使用samtools)。
-我们前面使用的就是hisat2比对后用samtools排序后的bam文件。
-除此以外，我们还需要gtf注释文件。
-关于gtf注释文件格式参考文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651272899&amp;idx=1&amp;sn=6779b2bd21f3b607a08227d31c7212c6&amp;chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&amp;scene=21#wechat_redirect">生信中常见的数据文件格式</a>。</p>
+<p>输入文档是BAM格式的比对结果文档，该文档必需经过排序。这些文档可以是来源于Tophat比对的结果文档，也可以是hisat2的结果文档经过转换和排序的文档(使用samtools)。我们前面使用的就是hisat2比对后用samtools排序后的bam文件。除此以外，我们还需要gtf注释文件。关于gtf注释文件格式参考文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651272899&amp;idx=1&amp;sn=6779b2bd21f3b607a08227d31c7212c6&amp;chksm=841ed2beb3695ba8bee23563c28caa005447b2298785719964732b16cafe3a15d7d4937b95c1&amp;scene=21#wechat_redirect">生信中常见的数据文件格式</a>。</p>
 <p>gtf注释文件可以去genecode下载你需要的gtf文件，我这里下载的是小鼠的。</p>
 <p>genecode官网：<a href="https://www.gencodegenes.org/"><u>https://www.gencodegenes.org/</u></a></p>
 <p>我的gtf文件在/data/mouse_annotation/ 目录下：</p>

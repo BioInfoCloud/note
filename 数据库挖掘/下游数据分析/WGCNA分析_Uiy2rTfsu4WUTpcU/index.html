@@ -5827,6 +5827,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WGCNA分析
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -5843,6 +5861,108 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.基本原理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2wgcna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.WGCNA术语
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.分析流程
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.分析流程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. 数据预处理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. 识别modules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. 筛选和表型相关的module
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. 生成网络，筛选核心基因
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -9468,6 +9588,97 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.基本原理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2wgcna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.WGCNA术语
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.分析流程
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.分析流程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. 数据预处理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. 识别modules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. 筛选和表型相关的module
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. 生成网络，筛选核心基因
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -9487,11 +9698,11 @@
 
 
 <h1 id="wgcna">WGCNA分析<a class="headerlink" href="#wgcna" title="Permanent link">&para;</a></h1>
-<h1 id="1"><strong>1.基本原理</strong><a class="headerlink" href="#1" title="Permanent link">&para;</a></h1>
+<h2 id="1"><strong>1.基本原理</strong><a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <p>WGCNA其译为加权基因共表达网络分析。该分析方法旨在寻找协同表达的基因模块(module)，并探索基因网络与关注的表型之间的关联关系，以及网络中的核心基因。从方法上来讲，WGCNA分为表达量聚类分析和表型关联两部分，主要包括基因之间相关系数计算、基因模块的确定、共表达网络、模块与性状关联四个步骤。</p>
 <p>第一步计算任意两个基因之间的相关系数（Person Coefficient）。为了衡量两个基因是否具有相似表达模式，一般需要设置阈值来筛选，高于阈值的则认为是相似的。但是这样如果将阈值设为0.8，那么很难说明0.8和0.79两个是有显著差别的。因此，WGCNA分析时采用相关系数加权值，即对基因相关系数取N次幂，使得网络中的基因之间的连接服从无尺度网络分布(scale-freenetworks)，这种算法更具生物学意义。</p>
 <p>第二步通过基因之间的相关系数构建分层聚类树，聚类树的不同分支代表不同的基因模块，不同颜色代表不同的模块。基于基因的加权相关系数，将基因按照表达模式进行分类，将模式相似的基因归为一个模块。这样就可以将几万个基因通过基因表达模式被分成了几十个模块，是一个提取归纳信息的过程。</p>
-<h1 id="2wgcna"><strong>2.WGCNA术语</strong><a class="headerlink" href="#2wgcna" title="Permanent link">&para;</a></h1>
+<h2 id="2wgcna"><strong>2.WGCNA术语</strong><a class="headerlink" href="#2wgcna" title="Permanent link">&para;</a></h2>
 <p><strong>权重(weghted) ：</strong>基因之间不仅仅是相关与否，还记录着它们的相关性数值，数值就是基因之间的联系的权重(相关性)。</p>
 <p><img alt="1664939290583-f0dd9ab4-9b6d-439f-a34c-cbfeb90414c4.png" src="../img/Uiy2rTfsu4WUTpcU/1664939290583-f0dd9ab4-9b6d-439f-a34c-cbfeb90414c4-742867.png" /></p>
 <p><img alt="1650615619766-78d17742-430c-4d93-9d7d-e8af4efb7d6f.png" src="../img/Uiy2rTfsu4WUTpcU/1650615619766-78d17742-430c-4d93-9d7d-e8af4efb7d6f-147115.png" /></p>
@@ -9504,9 +9715,9 @@
 <p>**Hub gene: **关键基因 (连接度最多或连接多个模块的基因)。</p>
 <p><strong>邻近矩阵：</strong>是图的一种存储形式，用一个一维数组存放图中所有顶点数据；用一个二维数组存放顶点间关系（边或弧）的数据，这个二维数组称为邻接矩阵；在WGCNA分析里面指的是基因与基因之间的相关性系数矩阵。 如果用了阈值来判断基因相关与否，那么这个邻近矩阵就是0/1矩阵，只记录基因相关与否。但是WGCNA没有用阈值来卡基因的相关性，而是记录了所有基因之间的相关性。</p>
 <p><strong>Topological Overlap Matrix (TOM) ：</strong>WGNA认为基因之间的简单的相关性不足以计算共表达，所以它利用上面的邻近矩阵，又计算了一个新的邻近矩阵。一般来说，TOM就是WGCNA分析的最终结果，后续的只是对TOM的下游注释。</p>
-<h1 id="3"><strong>3.分析流程</strong><a class="headerlink" href="#3" title="Permanent link">&para;</a></h1>
+<h2 id="3"><strong>3.分析流程</strong><a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <p><img alt="1650675968716-c3c280da-33a4-4bd0-ac3f-a0b3081ee491.jpeg" src="../img/Uiy2rTfsu4WUTpcU/1650675968716-c3c280da-33a4-4bd0-ac3f-a0b3081ee491-946001.jpeg" /></p>
-<h2 id="31"><strong>3.1. 数据预处理</strong><a class="headerlink" href="#31" title="Permanent link">&para;</a></h2>
+<h3 id="31"><strong>3.1. 数据预处理</strong><a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
 <p>这部分内容包括以下部分：</p>
 <ul>
 <li>读取和过滤基因表达数据</li>
@@ -9515,7 +9726,7 @@
 </ul>
 <p>官方的示例数据是一个小鼠的芯片表达谱数据，包含了135个雌性小鼠的数据，在提供的表达谱数据中，除了探针ID和样本表达量之外，还有额外的探针注释信息，在读取原始数据时，需要把多余注释信息去除。</p>
 <p>对于基因的表达量数据，需要进行过滤，对于基因而言，可以过滤缺失值或者低表达的基因，对于样本而言，如果该样本中基因缺失值很多，也需要过滤，WGCNA内置了一个检验基因和样本的函数，通过该函数可以进行一个基本过滤。基础过滤之后，还可以看下是否存在离群值的样本，通过样本的聚类树进行判断，生成的图片如下。</p>
-<h3 id="1_1"><strong>（1）表达数据处理</strong><a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
+<h4 id="1_1"><strong>（1）表达数据处理</strong><a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>library(WGCNA);
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a># The following setting is important, do not omit.
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>options(stringsAsFactors = FALSE);
@@ -9575,19 +9786,18 @@
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a># Plot a line to show the cut
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>abline(h = 15, col = "red");
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a># Determine cluster under the line
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>#cutreeStatic模块检测在分层树状图使用恒定高度树切割。只有其大小至少为minSize的分支被保留。
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>clust = cutreeStatic(sampleTree, cutHeight = 15, minSize = 10)
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>table(clust)
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a># clust 1 contains the samples we want to keep.
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>keepSamples = (clust==1)
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>datExpr = datExpr0[keepSamples, ]
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>nGenes = ncol(datExpr)
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>nSamples = nrow(datExpr)
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>#cutreeStatic模块检测在分层树状图使用恒定高度树切割。只有其大小至少为minSize的分支被保留。clust = cutreeStatic(sampleTree, cutHeight = 15, minSize = 10)
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>table(clust)
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a># clust 1 contains the samples we want to keep.
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>keepSamples = (clust==1)
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>datExpr = datExpr0[keepSamples, ]
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>nGenes = ncol(datExpr)
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>nSamples = nrow(datExpr)
 </code></pre></div>
 <p>cutreeStatic函数用来切枝。模块检测在分层树状图使用恒定高度树切割（这里是15）。只有其大小至少为minSize的分支被保留。具体的说，这个函数直接执行由cutree实现的等高剪切，然后计算每个分支上的对象数量，并且只保留那些至少有minSize对象的分支。table(clust)查看切枝统计，0表示我们切除的1个样本，剩下的134个是正常的样本。具体统计还与切枝高度有关。</p>
 <p><img alt="1612609004739-6140670f-cc57-4c25-9444-ae00be641003.png" src="../img/Uiy2rTfsu4WUTpcU/1612609004739-6140670f-cc57-4c25-9444-ae00be641003-742528.png" /></p>
 <p><img alt="1612609004755-c2916543-8a10-4b12-9df7-5d44fa73535e.png" src="../img/Uiy2rTfsu4WUTpcU/1612609004755-c2916543-8a10-4b12-9df7-5d44fa73535e-320500.png" /></p>
-<h3 id="2"><strong>（2）临床数据处理</strong><a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<h4 id="2"><strong>（2）临床数据处理</strong><a class="headerlink" href="#2" title="Permanent link">&para;</a></h4>
 <p>表型数据中也包含了不需要的列，而且其样本比表达谱的样本多，需要根据表达谱的样本提取对应的表型数据。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>#=====================================================================================
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>#  Code chunk 7
@@ -9611,8 +9821,7 @@
 <p>得到的数据类似于表达矩阵。</p>
 <p><img alt="1612609004755-51fd3cc5-f480-43e2-854b-89b7250d8a9f.png" src="../img/Uiy2rTfsu4WUTpcU/1612609004755-51fd3cc5-f480-43e2-854b-89b7250d8a9f-929766.png" /></p>
 <p>执行垃圾收集，直到空闲内存标识符没有变化为止。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>##执行垃圾收集，直到空闲内存标识符没有变化为止。
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>collectGarbage();
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>##执行垃圾收集，直到空闲内存标识符没有变化为止。collectGarbage();
 </code></pre></div>
 <p>表达谱数据和表型数据准备好之后，可以绘制样本聚类树和表型的热图。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>#=====================================================================================
@@ -9636,8 +9845,8 @@
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>#=====================================================================================
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>save(datExpr, datTraits, file = "FemaleLiver-01-dataInput.RData")
 </code></pre></div>
-<h2 id="32-modules"><strong>3.2. 识别modules</strong><a class="headerlink" href="#32-modules" title="Permanent link">&para;</a></h2>
-<h3 id="1_2"><strong>（1）选择软阈值指数：拓扑网络分析</strong><a class="headerlink" href="#1_2" title="Permanent link">&para;</a></h3>
+<h3 id="32-modules"><strong>3.2. 识别modules</strong><a class="headerlink" href="#32-modules" title="Permanent link">&para;</a></h3>
+<h4 id="1_2"><strong>（1）选择软阈值指数：拓扑网络分析</strong><a class="headerlink" href="#1_2" title="Permanent link">&para;</a></h4>
 <p>在构建共表达网络时，将基因间的相关系数进行乘方运算来表征其相关性，首先需要确定乘方的值，也就是软阈值或者我们叫power值、beta值。这个power值至关重要！至关重要！至关重要！那怎么选呢？在WGCNA作者的官方介绍中，一般选6就可以。作者基于无尺度网络的理念提出一种选择软阈值指数的方法，来使得基因表达网络达到无尺度网络的状态。使用函数pickSoftThreshold来进行网络拓扑分析，该函数可以帮助使用者选择合适的软阈值指数。使用者选择一系列的待定指数，然后函数返回一系列的即将被检测到的网络指数。</p>
 <p><img alt="1612609004743-a096f856-1a87-4729-8475-f5015a5efef0.png" src="../img/Uiy2rTfsu4WUTpcU/1612609004743-a096f856-1a87-4729-8475-f5015a5efef0-443384.png" /></p>
 <p>不过因为大家用的表达值都不一样，每次计算出来的阈值也不一样，所以，为了挑选出最佳的阈值，在示例代码中，我们将从1到20所有的整数作为阈值进行计算，去测试最优的阈值。具体怎么测试呢？其中powerEstimate就是最佳的power值，fitIndices保存了每个power对应的网络的特征，也就是每个power构建的相关性网络中的连接度的统计值，k就是连接度值，可以看到，对于每个power值，提供了max, median, max3种连接度的统计量，这里对连接度的均值进行可视化，</p>
@@ -9648,8 +9857,7 @@
 <a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>lnames
 <a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>powers = c(c(1:10), seq(from = 12, to=20, by=2))
 <a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a># Call the network topology analysis function
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>#多软阈值函数的无尺度拓扑分析。目的是为了帮助用户选择一个合适的软阈值权值用于网络构建。
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>sft = pickSoftThreshold(datExpr, powerVector = powers, verbose = 5)
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>#多软阈值函数的无尺度拓扑分析。目的是为了帮助用户选择一个合适的软阈值权值用于网络构建。sft = pickSoftThreshold(datExpr, powerVector = powers, verbose = 5)
 </code></pre></div>
 <p>可以明显看到powerEstimate是6，就是最佳的power值。</p>
 <p><img alt="1612609004746-39efbe57-ce24-4311-b3c0-23efc39afff5.png" src="../img/Uiy2rTfsu4WUTpcU/1612609004746-39efbe57-ce24-4311-b3c0-23efc39afff5-013164.png" /></p>
@@ -9676,16 +9884,15 @@
 </code></pre></div>
 <p><img alt="1612609004744-88eda84c-11d2-41a7-8765-5c4eca802e4a.png" src="../img/Uiy2rTfsu4WUTpcU/1612609004744-88eda84c-11d2-41a7-8765-5c4eca802e4a-408216.png" /></p>
 <p>从这个图片中怎么选择power值？最直接的方法：看y轴等于0.9的时候，与曲线的交点，在这个示例数据中，刚好等于6，那我们就选6作为power值。切记：在分析自己数据的时候，power值肯定在6的附近，4-10之内都是可以的，如果离的太远，那就有问题了。之后，就可以用6作为beta值去构建基因module了。</p>
-<h3 id="2_1"><strong>（2）网络构建和模块检测</strong><a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h3>
-<h4 id="a"><strong>a.方法一：自动化构建基因网络和识别模块</strong><a class="headerlink" href="#a" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>#跨多个数据集进行网络构建和一致性模块检测。
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>net = blockwiseModules(datExpr, power = 6,
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>                       TOMType = "unsigned", minModuleSize = 30,
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>                       reassignThreshold = 0, mergeCutHeight = 0.25,
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>                       numericLabels = TRUE, pamRespectsDendro = FALSE,
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>                       saveTOMs = TRUE,
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>                       saveTOMFileBase = "femaleMouseTOM",
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>                       verbose = 3)
+<h4 id="2_1"><strong>（2）网络构建和模块检测</strong><a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h4>
+<h5 id="a"><strong>a.方法一：自动化构建基因网络和识别模块</strong><a class="headerlink" href="#a" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>#跨多个数据集进行网络构建和一致性模块检测。net = blockwiseModules(datExpr, power = 6,
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>                       TOMType = "unsigned", minModuleSize = 30,
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>                       reassignThreshold = 0, mergeCutHeight = 0.25,
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>                       numericLabels = TRUE, pamRespectsDendro = FALSE,
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>                       saveTOMs = TRUE,
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>                       saveTOMFileBase = "femaleMouseTOM",
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>                       verbose = 3)
 </code></pre></div>
 <p>在这里，选择软阈值指数为6，一个相对较大的最小模块size为30，一个中等灵敏度deepSplit=2来进行聚类拆分，参数mergeCutHeight是合并模块的阈值，我们指定这个函数返回模块数值而非颜色或者标签并保存TOM。TopologicalOverlapMatrix,这个函数的输出看似神秘却非常好用，例如net<span class="arithmatex">\(colors保存着模块的分配，net\)</span>MEs保存着模块的eigegenes。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a># open a graphics window
@@ -9713,7 +9920,7 @@
 <a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>save(MEs, moduleLabels, moduleColors, geneTree,
 <a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>     file = "FemaleLiver-02-networkConstruction-auto.RData")
 </code></pre></div>
-<h4 id="bstep-by-step"><strong>b.方法二：Step-by-step网络构建和模块识别</strong><a class="headerlink" href="#bstep-by-step" title="Permanent link">&para;</a></h4>
+<h5 id="bstep-by-step"><strong>b.方法二：Step-by-step网络构建和模块识别</strong><a class="headerlink" href="#bstep-by-step" title="Permanent link">&para;</a></h5>
 <p>下面利用adjacency 函数计算邻近值，datExp是表达数据的数据框。列对应基因，行对应样本。</p>
 <p><img alt="1612609004798-ae431f38-740f-4f40-b1e5-625f085273ba.png" src="../img/Uiy2rTfsu4WUTpcU/1612609004798-ae431f38-740f-4f40-b1e5-625f085273ba-504264.png" /></p>
 <p>在第一部分我们已经确定了 power 为6。</p>
@@ -9807,7 +10014,7 @@
 <a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a># Save module colors and labels for use in subsequent parts
 <a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>save(MEs, moduleLabels, moduleColors, geneTree, file = "FemaleLiver-02-networkConstruction-stepByStep.RData")
 </code></pre></div>
-<h2 id="33-module"><strong>3.3. 筛选和表型相关的module</strong><a class="headerlink" href="#33-module" title="Permanent link">&para;</a></h2>
+<h3 id="33-module"><strong>3.3. 筛选和表型相关的module</strong><a class="headerlink" href="#33-module" title="Permanent link">&para;</a></h3>
 <p>加载前面分析好的数据</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a># Load the expression and trait data saved in the first part
 <a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>lnames = load(file = "FemaleLiver-01-dataInput.RData");
@@ -9817,7 +10024,7 @@
 <a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>lnames = load(file = "FemaleLiver-02-networkConstruction-auto.RData");
 <a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>lnames
 </code></pre></div>
-<h3 id="1-"><strong>（1）定量模块-临床关系</strong><a class="headerlink" href="#1-" title="Permanent link">&para;</a></h3>
+<h4 id="1-"><strong>（1）定量模块-临床关系</strong><a class="headerlink" href="#1-" title="Permanent link">&para;</a></h4>
 <p>在这个分析中，我们将识别出和临床表征相关的模块。我们已经有了每个模块总结性的数据eigengeneeigengene，我们将eigengenes和临床数据关联来查看最重要的联系。本质上是计算module的ME值与表型的相关系数，可以对module和表型间的系数的结果进行可视化。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a># 定义基因和样本的数量
 <a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>nGenes = ncol(datExpr);
@@ -9850,11 +10057,8 @@
 </code></pre></div>
 <p><img alt="1612609004976-b6a9bbde-535c-47f7-8433-1c6dae87c93d.png" src="../img/Uiy2rTfsu4WUTpcU/1612609004976-b6a9bbde-535c-47f7-8433-1c6dae87c93d-891190.png" /></p>
 <p>指定一个我们感兴趣的表型，可以得到与其相关性最高的module。在这个图中，红色表示正相关，绿色表示负相关，颜色越深表示相关性越强。比如，以上结果中，和weight这个表型最相关的为module为red和brown，当然也可以自己指定一个阈值，筛选出多个候选的modules。</p>
-<h3 id="2gene"><strong>（2）基因和临床表征和重要模块的关系：gene显著性和模块关系</strong><a class="headerlink" href="#2gene" title="Permanent link">&para;</a></h3>
-<p>在定量每个基因和感兴趣的临床表征（体重）的联系时，WGCNA定义了基因显著性（Gene Significance，GS）作为基因和表征之间的相关性绝对值。
-对于每一个模块，WGCNA也定义了模块成员关系（module membership MM）作为模块的engengene和基因表达谱的相关性。
-这样我们可以对每个模块定量所有基因的相似度。
-在WGCNA（Weighted Gene Co-Expression Network Analysis，加权基因共表达网络分析）分析中，模块内分析的一个关键步骤是识别那些具有高GS（Gene Significance）和MM（Module Membership）的基因。</p>
+<h4 id="2gene"><strong>（2）基因和临床表征和重要模块的关系：gene显著性和模块关系</strong><a class="headerlink" href="#2gene" title="Permanent link">&para;</a></h4>
+<p>在定量每个基因和感兴趣的临床表征（体重）的联系时，WGCNA定义了基因显著性（Gene Significance，GS）作为基因和表征之间的相关性绝对值。对于每一个模块，WGCNA也定义了模块成员关系（module membership MM）作为模块的engengene和基因表达谱的相关性。这样我们可以对每个模块定量所有基因的相似度。在WGCNA（Weighted Gene Co-Expression Network Analysis，加权基因共表达网络分析）分析中，模块内分析的一个关键步骤是识别那些具有高GS（Gene Significance）和MM（Module Membership）的基因。</p>
 <p>GS（Gene Significance）：这是一个衡量基因与特定表型或性状关联程度的指标。GS值越高，说明该基因与所研究的表型或性状之间的关联度越高。</p>
 <p>MM（Module Membership）：这是一个衡量基因与其所在模块内其他基因关联程度的指标。MM值越高，说明该基因在模块内的代表性或中心性越强，即该基因与模块内其他基因的共表达关系越强。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a># Define variable weight containing the weight column of datTrait
@@ -9878,7 +10082,7 @@
 <a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>names(geneTraitSignificance) = paste("GS.", names(weight), sep="");
 <a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>names(GSPvalue) = paste("p.GS.", names(weight), sep="");
 </code></pre></div>
-<h3 id="3gsmmgene"><strong>（3）模块内分析：识别具有高GS和MM的gene</strong><a class="headerlink" href="#3gsmmgene" title="Permanent link">&para;</a></h3>
+<h4 id="3gsmmgene"><strong>（3）模块内分析：识别具有高GS和MM的gene</strong><a class="headerlink" href="#3gsmmgene" title="Permanent link">&para;</a></h4>
 <p>使用GS和MM，我们可以识别一些基因既对体重有重要意义，其所在模块也有高的模块成员关系.例如，我们观测到棕色模块和体重有较高的联系，我们在棕色模块内绘制GS vs. MM的散点图。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>module = "brown"
 <a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>column = match(module, modNames);
@@ -9894,7 +10098,7 @@
 </code></pre></div>
 <p><img alt="1612609005164-eaf88bcd-0595-4a41-ba69-a390925c296d.png" src="../img/Uiy2rTfsu4WUTpcU/1612609005164-eaf88bcd-0595-4a41-ba69-a390925c296d-879053.png" /></p>
 <p>在图中可以看到，GS和MM是高度协相关的，也就是对表征有重要意义的基因就在和该表征关系最密切的模块内。</p>
-<h2 id="34"><strong>3.4. 生成网络，筛选核心基因</strong><a class="headerlink" href="#34" title="Permanent link">&para;</a></h2>
+<h3 id="34"><strong>3.4. 生成网络，筛选核心基因</strong><a class="headerlink" href="#34" title="Permanent link">&para;</a></h3>
 <p>找到和表型关联的module之后，就可以导出指定modules对应的基因共表达网络，方便可视化。所谓WGCNA（共表达网络）分析，说到底还是要构建一个网络的。那么，既然说到网络，就不得不说最厉害的网络图分析软件Cytoscape。它能够帮我们去实现网络图的可视化和深层次的挖掘。在WGCNA中，也可以直接对接Cytoscape，生成的文件可以导入cytoscape进行绘图。</p>
 <p>前面的表达数据的基因名并没有注释，这里先注释：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>annot = read.csv(file = "GeneAnnotation.csv");
