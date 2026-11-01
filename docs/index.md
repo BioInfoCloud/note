@@ -15,7 +15,6 @@ hide:
     <div class="hero__actions">
       <a class="hero__btn hero__btn--primary" href="getting-started/introduction/preface/">开始学习 →</a>
       <a class="hero__btn" href="Programming/">编程入门</a>
-      <a class="hero__btn" href="https://github.com/BioInfoCloud/note" target="_blank" rel="noopener">GitHub 仓库</a>
     </div>
     <ul class="hero__tags">
       <li>R</li>
@@ -244,7 +243,7 @@ hide:
 
 ### 关注「生物信息云」
 
-公众号持续更新生信教程与实战笔记，欢迎在 B 站、GitHub 一起交流。
+公众号持续更新生信教程与实战笔记，欢迎在 B 站、公众号一起交流。
 
-[:fontawesome-brands-bilibili: B 站](https://space.bilibili.com/434318322){ target=_blank } &nbsp; [:fontawesome-brands-weixin: 微信公众号](https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA4NDAzODkzMA==){ target=_blank } &nbsp; [:fontawesome-brands-github: GitHub](https://github.com/BioInfoCloud){ target=_blank } &nbsp; [:material-newspaper-variant-outline: 文章索引](WeChatOfficialAccount/articleIndex.md)
+[:fontawesome-brands-bilibili: B 站](https://space.bilibili.com/434318322){ target=_blank } &nbsp; [:fontawesome-brands-weixin: 微信公众号](https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA4NDAzODkzMA==){ target=_blank } &nbsp; [:material-newspaper-variant-outline: 文章索引](WeChatOfficialAccount/articleIndex.md)
 </div>

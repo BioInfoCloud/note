@@ -39,12 +39,8 @@ theme:
     - content.tabs.link # 多语言/多方案 Tab 联动
     - content.tooltips # 脚注/缩写悬浮提示
   language: zh # 一些提示性的文字会变成中文
-  icon:
-    repo: fontawesome/brands/github
-edit_uri: edit/main/docs # 编辑按钮跳转的链接
-## [top-right corner]
-repo_url: https://github.com/BioInfoCloud/note # 右上角点击跳转的链接
-repo_name: BioInfoCloud # 右上角的名字
+# [已移除] 右上角仓库入口：repo_url / repo_name / icon.repo / edit_uri 全部删除，
+# 页面上不再出现任何指向源码仓库的图标或「编辑此页」链接。
 ## [bottom-left corner]
 copyright: Copyright &copy; 2022 - 2026 DoubleHelix · 生物信息云
 ## [bottom-right corner]
@@ -53,9 +49,6 @@ extra:
     - icon: fontawesome/brands/bilibili
       link: https://space.bilibili.com/434318322
       name: Bilibili | BioInfoCloud # 鼠标悬浮提示
-    - icon: fontawesome/brands/github
-      link: https://github.com/BioInfoCloud
-      name: GitHub | BioInfoCloud
     - icon: fontawesome/brands/weixin
       link: "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA4NDAzODkzMA=="
       name: 微信公众号 | 生物信息云
