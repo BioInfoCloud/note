@@ -9489,9 +9489,9 @@
 <h1 id="tcga">TCGA数据库介绍<a class="headerlink" href="#tcga" title="Permanent link">&para;</a></h1>
 <h1 id="tcga_1">一.TCGA基本介绍<a class="headerlink" href="#tcga_1" title="Permanent link">&para;</a></h1>
 <p>肿瘤基因组图谱（TCGA）计划是由美国National Cancer Institute（NCI）和National Human Genome Research Institute（NHGRI）于2006年联合启动的项目，研究的癌症类型从最开始的多形性成胶质细胞瘤（GBM）到现在为止共有39种，涉及29种癌症器官，1万多个肿瘤样本，27万多份文件，当然其项目也将于2017年接近尾声。</p>
-<p>网址：<a href="https://portal.gdc.cancer.gov/"><font style="color:#0052FF;">https://portal.gdc.cancer.gov/</font></a></p>
+<p>网址：<a href="https://portal.gdc.cancer.gov/">https://portal.gdc.cancer.gov/</a></p>
 <p>对于肿瘤研究者来说，TCGA数据库就是一个资源宝库，里面有很多有价值的信息可以挖掘，关于TCGA数据挖掘的工具很多，包括在线工具和R包。这里我们主要是通过R语言进行挖掘，所以需要有一点R语言基础。</p>
-<p>关于利用R包下载，我主要用过TCGAbiolinks和GDCRNATools，<strong><font style="color:#F5222D;">但是这2个包有些函数现在好像有些问题</font></strong>，所以这部分你自己关注，这里主要是自己下载后从头整理，只需要关注官网在线下载部分。</p>
+<p>关于利用R包下载，我主要用过TCGAbiolinks和GDCRNATools，<strong>但是这2个包有些函数现在好像有些问题</strong>，所以这部分你自己关注，这里主要是自己下载后从头整理，只需要关注官网在线下载部分。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>缩写<span class="w">  </span>英文名称<span class="w">    </span>中文名称
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">ACC</span><span class="w"> </span><span class="n">Adrenocortical</span><span class="w"> </span><span class="n">carcinoma</span><span class="w">    </span>肾上腺皮质癌
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">BLCA</span><span class="w">    </span><span class="n">Bladder</span><span class="w"> </span><span class="n">Urothelial</span><span class="w"> </span><span class="n">Carcinoma</span><span class="w">    </span>膀胱尿路上皮癌
@@ -9541,56 +9541,56 @@
 <table>
 <thead>
 <tr>
-<th style="text-align: left;"><br/><font style="color:#333333;">Label</font></th>
-<th style="text-align: left;"><br/><font style="color:#333333;">Identifier for</font></th>
-<th style="text-align: left;"><br/><font style="color:#333333;">解释</font></th>
+<th style="text-align: left;"><br/>Label</th>
+<th style="text-align: left;"><br/>Identifier for</th>
+<th style="text-align: left;"><br/>解释</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><br/><font style="color:#333333;">Project</font></td>
-<td style="text-align: left;"><br/><font style="color:#333333;">Project name</font></td>
-<td style="text-align: left;"><br/><font style="color:#333333;">来自哪个项目: 如TCGA、TARGET等等</font></td>
+<td style="text-align: left;"><br/>Project</td>
+<td style="text-align: left;"><br/>Project name</td>
+<td style="text-align: left;"><br/>来自哪个项目: 如TCGA、TARGET等等</td>
 </tr>
 <tr>
-<td style="text-align: left;"><br/><font style="color:#333333;">TSS</font></td>
-<td style="text-align: left;"><br/><font style="color:#333333;">Tissue source site</font></td>
-<td style="text-align: left;"><br/><font style="color:#333333;">样品来自哪个组织机构：01 代表International Genomics Consortium, 更多见：</font><a href="https://www.omicsclass.com/article/1079"><u>TSS</u></a></td>
+<td style="text-align: left;"><br/>TSS</td>
+<td style="text-align: left;"><br/>Tissue source site</td>
+<td style="text-align: left;"><br/>样品来自哪个组织机构：01 代表International Genomics Consortium, 更多见：<a href="https://www.omicsclass.com/article/1079"><u>TSS</u></a></td>
 </tr>
 <tr>
-<td style="text-align: left;"><br/><font style="color:#333333;">Participant</font></td>
-<td style="text-align: left;"><br/><font style="color:#333333;">Study participant</font></td>
-<td style="text-align: left;"><br/><font style="color:#333333;">样品唯一编号(可以理解为一个病人唯一编号）</font></td>
+<td style="text-align: left;"><br/>Participant</td>
+<td style="text-align: left;"><br/>Study participant</td>
+<td style="text-align: left;"><br/>样品唯一编号(可以理解为一个病人唯一编号）</td>
 </tr>
 <tr>
-<td style="text-align: left;"><br/><font style="color:#333333;">Sample</font></td>
-<td style="text-align: left;"><br/><font style="color:#333333;">Sample type</font></td>
-<td style="text-align: left;"><br/><font style="color:#333333;">样品来自人体组织类型，如：01代表Primary Solid Tumor， 更多见：</font><a href="https://www.omicsclass.com/article/1080"><u>SampleType</u></a></td>
+<td style="text-align: left;"><br/>Sample</td>
+<td style="text-align: left;"><br/>Sample type</td>
+<td style="text-align: left;"><br/>样品来自人体组织类型，如：01代表Primary Solid Tumor， 更多见：<a href="https://www.omicsclass.com/article/1080"><u>SampleType</u></a></td>
 </tr>
 <tr>
-<td style="text-align: left;"><br/><font style="color:#333333;">Vial</font></td>
-<td style="text-align: left;"><br/><font style="color:#333333;">Order of sample in a sequence of samples</font></td>
-<td style="text-align: left;"><br/><font style="color:#333333;">一份样品被分割成好几份，表示第几份，通常是A-Z编号</font></td>
+<td style="text-align: left;"><br/>Vial</td>
+<td style="text-align: left;"><br/>Order of sample in a sequence of samples</td>
+<td style="text-align: left;"><br/>一份样品被分割成好几份，表示第几份，通常是A-Z编号</td>
 </tr>
 <tr>
-<td style="text-align: left;"><br/><font style="color:#333333;">Portion</font></td>
-<td style="text-align: left;"><br/><font style="color:#333333;">Order of portion in a sequence of 100-120 mg sample portions</font></td>
-<td style="text-align: left;"><br/><font style="color:#333333;">每份样品再分割成不同的小样品：01-99等等编号，代表第几份</font></td>
+<td style="text-align: left;"><br/>Portion</td>
+<td style="text-align: left;"><br/>Order of portion in a sequence of 100-120 mg sample portions</td>
+<td style="text-align: left;"><br/>每份样品再分割成不同的小样品：01-99等等编号，代表第几份</td>
 </tr>
 <tr>
-<td style="text-align: left;"><br/><font style="color:#333333;">Analyte</font></td>
-<td style="text-align: left;"><br/><font style="color:#333333;">Molecular type of analyte for analysis</font></td>
-<td style="text-align: left;"><br/><font style="color:#333333;">实验数据来源分子类型，如R代表 RNA，D代表DNA等等，更多见：</font><a href="https://gdc.cancer.gov/resources-tcga-users/tcga-code-tables/portion-analyte-codes"><u>Portion / Analyte Codes</u></a></td>
+<td style="text-align: left;"><br/>Analyte</td>
+<td style="text-align: left;"><br/>Molecular type of analyte for analysis</td>
+<td style="text-align: left;"><br/>实验数据来源分子类型，如R代表 RNA，D代表DNA等等，更多见：<a href="https://gdc.cancer.gov/resources-tcga-users/tcga-code-tables/portion-analyte-codes"><u>Portion / Analyte Codes</u></a></td>
 </tr>
 <tr>
-<td style="text-align: left;"><br/><font style="color:#333333;">Plate</font></td>
-<td style="text-align: left;"><br/><font style="color:#333333;">Order of plate in a sequence of 96-well plates</font></td>
-<td style="text-align: left;"><br/><font style="color:#333333;">96孔序列中板的顺序，4个数字组成</font></td>
+<td style="text-align: left;"><br/>Plate</td>
+<td style="text-align: left;"><br/>Order of plate in a sequence of 96-well plates</td>
+<td style="text-align: left;"><br/>96孔序列中板的顺序，4个数字组成</td>
 </tr>
 <tr>
-<td style="text-align: left;"><br/><font style="color:#333333;">Center</font></td>
-<td style="text-align: left;"><br/><font style="color:#333333;">Sequencing or characterization center that will receive the aliquot for analysis</font></td>
-<td style="text-align: left;"><br/><font style="color:#333333;">数据由哪个机构分析：如 01代表The Broad Institute GCC,更多见：</font><a href="https://www.omicsclass.com/article/1081"><u>Center</u></a></td>
+<td style="text-align: left;"><br/>Center</td>
+<td style="text-align: left;"><br/>Sequencing or characterization center that will receive the aliquot for analysis</td>
+<td style="text-align: left;"><br/>数据由哪个机构分析：如 01代表The Broad Institute GCC,更多见：<a href="https://www.omicsclass.com/article/1081"><u>Center</u></a></td>
 </tr>
 </tbody>
 </table>
@@ -9598,7 +9598,7 @@
 <p>1.Oncomine：<a href="https://www.oncomine.org/resource/main.html">https://www.oncomine.org/resource/main.html</a></p>
 <p>2.GEPIA：<a href="http://gepia.cancer-pku.cn/">http://gepia.cancer-pku.cn/</a></p>
 <blockquote>
-<p>更新: 2021-02-04 20:48:55<br />
+<p>更新: 2021-02-04 20:48:55
 原文: <a href="https://www.yuque.com/doublehelix/bioinfonotes/uehobs">https://www.yuque.com/doublehelix/bioinfonotes/uehobs</a></p>
 </blockquote>
 

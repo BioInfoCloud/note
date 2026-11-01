@@ -9487,32 +9487,31 @@
 
 
 <h1 id="github">github搭建静态网页<a class="headerlink" href="#github" title="Permanent link">&para;</a></h1>
-<p><font style="color:rgb(24, 25, 28);">Material for MkDocs官方文档</font></p>
-<p><a href="https://www.mkdocs.org/getting-started/">https://www.mkdocs.org/getting-started/</a><br />
-<font style="color:rgb(24, 25, 28);">https://squidfunk.github.io/mkdocs-material/getting-started/</font><br />
-<font style="color:rgb(24, 25, 28);">GitHub Pages 简介</font><br />
-<font style="color:rgb(24, 25, 28);">https://yang-xijie.github.io/BLOG/</font>Markdown<font style="color:rgb(24, 25, 28);">/github-pages/ </font><br />
-<font style="color:rgb(24, 25, 28);">mdBook构建示例</font><br />
-<font style="color:rgb(24, 25, 28);">https://yang-xijie.github.io/BLOG/Markdown/mdbook-site/</font><br />
-<font style="color:rgb(24, 25, 28);">mdBook官方文档</font><br />
-<font style="color:rgb(24, 25, 28);">https://rust-lang.github.io/mdBook/</font><br />
-<font style="color:rgb(24, 25, 28);">MkDocs构建示例</font><br />
-<font style="color:rgb(24, 25, 28);">https://yang-xijie.github.io/BLOG/Markdown/mkdocs-site</font></p>
-<p><font style="color:rgb(24, 25, 28);"></font></p>
-<h1 id="1mkdocs"><font style="color:rgb(24, 25, 28);">1.安装MKdocs</font><a class="headerlink" href="#1mkdocs" title="Permanent link">&para;</a></h1>
+<p>Material for MkDocs官方文档</p>
+<p><a href="https://www.mkdocs.org/getting-started/">https://www.mkdocs.org/getting-started/</a>
+https://squidfunk.github.io/mkdocs-material/getting-started/
+GitHub Pages 简介
+https://yang-xijie.github.io/BLOG/Markdown/github-pages/
+mdBook构建示例
+https://yang-xijie.github.io/BLOG/Markdown/mdbook-site/
+mdBook官方文档
+https://rust-lang.github.io/mdBook/
+MkDocs构建示例
+https://yang-xijie.github.io/BLOG/Markdown/mkdocs-site</p>
+<h1 id="1mkdocs">1.安装MKdocs<a class="headerlink" href="#1mkdocs" title="Permanent link">&para;</a></h1>
 <p><a href="https://www.mkdocs.org/user-guide/installation/">https://www.mkdocs.org/user-guide/installation/</a></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">mkdocs</span>
 </code></pre></div>
-<h1 id="2creating-a-new-project">2.<font style="color:rgb(68, 68, 68);">Creating a new project</font><a class="headerlink" href="#2creating-a-new-project" title="Permanent link">&para;</a></h1>
+<h1 id="2creating-a-new-project">2.Creating a new project<a class="headerlink" href="#2creating-a-new-project" title="Permanent link">&para;</a></h1>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">mkdocs</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">bioinfocloud</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">cd</span><span class="w"> </span><span class="n">bioinfocloud</span>
 </code></pre></div>
 <p><img alt="1664599059098-129b629f-28eb-4a0a-a681-b473ffc28200.png" src="../img/D3_hUBm-B4WYcQbg/1664599059098-129b629f-28eb-4a0a-a681-b473ffc28200-667607.png" /></p>
-<p><font style="color:rgb(73, 80, 87);">There's a single configuration file named</font><font style="color:rgb(73, 80, 87);"> </font><font style="color:rgb(51, 51, 51);">mkdocs.yml</font><font style="color:rgb(73, 80, 87);">, and a folder named</font><font style="color:rgb(73, 80, 87);"> </font><font style="color:rgb(51, 51, 51);">docs</font><font style="color:rgb(73, 80, 87);"> </font><font style="color:rgb(73, 80, 87);">that will contain your documentation source files (</font><font style="color:rgb(51, 51, 51);">docs</font><font style="color:rgb(73, 80, 87);"> </font><font style="color:rgb(73, 80, 87);">is the default value for the</font><font style="color:rgb(73, 80, 87);"> </font><a href="https://www.mkdocs.org/user-guide/configuration/#docs_dir">docs_dir</a><font style="color:rgb(73, 80, 87);"> </font><font style="color:rgb(73, 80, 87);">configuration setting). Right now the</font><font style="color:rgb(73, 80, 87);"> </font><font style="color:rgb(51, 51, 51);">docs</font><font style="color:rgb(73, 80, 87);"> </font><font style="color:rgb(73, 80, 87);">folder just contains a single documentation page, named</font><font style="color:rgb(73, 80, 87);"> </font><font style="color:rgb(51, 51, 51);">index.md</font><font style="color:rgb(73, 80, 87);">.</font></p>
-<p><font style="color:rgb(73, 80, 87);">MkDocs comes with a built-in dev-server that lets you preview your documentation as you work on it. Make sure you're in the same directory as the </font><font style="color:rgb(51, 51, 51);">mkdocs.yml</font><font style="color:rgb(73, 80, 87);"> configuration file, and then start the server by running the </font><font style="color:rgb(51, 51, 51);">mkdocs serve</font><font style="color:rgb(73, 80, 87);"> command:</font></p>
+<p>There's a single configuration file named mkdocs.yml, and a folder named docs that will contain your documentation source files (docs is the default value for the <a href="https://www.mkdocs.org/user-guide/configuration/#docs_dir">docs_dir</a> configuration setting). Right now the docs folder just contains a single documentation page, named index.md.</p>
+<p>MkDocs comes with a built-in dev-server that lets you preview your documentation as you work on it. Make sure you're in the same directory as the mkdocs.yml configuration file, and then start the server by running the mkdocs serve command:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">mkdocs</span><span class="w"> </span><span class="n">serve</span>
 </code></pre></div>
-<p><strong><font style="color:rgb(42, 43, 46);">现在尝试编辑配置文件:mkdocs.yml。将site_name设置更改为BioInfoCloud并保存文件。</font></strong></p>
+<p><strong>现在尝试编辑配置文件:mkdocs.yml。将site_name设置更改为BioInfoCloud并保存文件。</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">site_name</span><span class="o">:</span><span class="w"> </span><span class="n">BioInfoCloud</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">site_url</span><span class="o">:</span><span class="w"> </span><span class="n">https</span><span class="o">://</span><span class="n">example.com</span><span class="o">/</span>
 </code></pre></div>
@@ -9546,18 +9545,18 @@
 <p>Now add a second page to your documentation:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">curl</span><span class="w"> </span><span class="s">'https://jaspervdj.be/lorem-markdownum/markdown.txt'</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">docs</span><span class="o">/</span><span class="n">about.md</span>
 </code></pre></div>
-<h1 id="3git-and-github"><font style="color:rgba(0, 0, 0, 0.87);">3.Git and GitHub</font><a href="https://yang-xijie.github.io/BLOG/Markdown/mkdocs-site/#git-and-github">¶</a><a class="headerlink" href="#3git-and-github" title="Permanent link">&para;</a></h1>
+<h1 id="3git-and-github">3.Git and GitHub<a href="https://yang-xijie.github.io/BLOG/Markdown/mkdocs-site/#git-and-github">¶</a><a class="headerlink" href="#3git-and-github" title="Permanent link">&para;</a></h1>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="o">$</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">init</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="o">$</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="n">.</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="o">$</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">commit</span><span class="w"> </span><span class="o">-</span><span class="n">m</span><span class="w"> </span><span class="s">"init"</span>
 </code></pre></div>
-<p><strong><font style="color:rgba(0, 0, 0, 0.87);">GitHub - New Repository</font></strong><a href="https://yang-xijie.github.io/BLOG/Markdown/mkdocs-site/#github-new-repository"><strong>¶</strong></a></p>
-<p><font style="color:rgba(0, 0, 0, 0.87);">GitHub &gt; New Repository</font></p>
-<p><font style="color:rgba(0, 0, 0, 0.87);">GitHub &gt; Repository &gt; Settings &gt; Actions &gt; General &gt;</font></p>
+<p><strong>GitHub - New Repository</strong><a href="https://yang-xijie.github.io/BLOG/Markdown/mkdocs-site/#github-new-repository"><strong>¶</strong></a></p>
+<p>GitHub &gt; New Repository</p>
+<p>GitHub &gt; Repository &gt; Settings &gt; Actions &gt; General &gt;</p>
 <ul>
-<li><font style="color:rgba(0, 0, 0, 0.87);">Actions permissions: Allow all actions and reusable workflows</font></li>
-<li><font style="color:rgba(0, 0, 0, 0.87);">Workflow permissions: Read and write permissions</font></li>
-<li><font style="color:rgba(0, 0, 0, 0.87);">Click Save</font></li>
+<li>Actions permissions: Allow all actions and reusable workflows</li>
+<li>Workflow permissions: Read and write permissions</li>
+<li>Click Save</li>
 </ul>
 <p>设置Page</p>
 <p><img alt="1664630874491-42193745-9385-44c6-892c-1766c0a75fcd.png" src="../img/D3_hUBm-B4WYcQbg/1664630874491-42193745-9385-44c6-892c-1766c0a75fcd-767741.png" /></p>
@@ -9574,7 +9573,7 @@
 <p>5.其他发布平台</p>
 <p><a href="https://www.netlify.com/">https://www.netlify.com/</a></p>
 <blockquote>
-<p>更新: 2022-10-02 09:45:12<br />
+<p>更新: 2022-10-02 09:45:12
 原文: <a href="https://www.yuque.com/doublehelix/bioinfonotes/lf2277">https://www.yuque.com/doublehelix/bioinfonotes/lf2277</a></p>
 </blockquote>
 

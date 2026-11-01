@@ -9488,13 +9488,13 @@
 
 <h1 id="id">生信中各种ID转换<a class="headerlink" href="#id" title="Permanent link">&para;</a></h1>
 <p><img alt="1608895684520-00d6804b-c413-4734-88a8-f5c1f384db15.gif" src="../img/95-4_H9QUVG1RBIf/1608895684520-00d6804b-c413-4734-88a8-f5c1f384db15-692954.gif" /></p>
-<p>我在文章<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651265423&amp;idx=2&amp;sn=288f3c8acaad8670d35a031cd9794d58&amp;chksm=841efdf2b36974e40e29d906fe4f3a46528ea5a84d17f656ad6119f612059489b9df1416c337&amp;scene=21#wechat_redirect"><strong><font style="color:#021EAA;">常用生物信息ID的介绍</font></strong></a>中介绍了常见的ID，也提到一些常见的ID转换工具。</p>
+<p>我在文章<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651265423&amp;idx=2&amp;sn=288f3c8acaad8670d35a031cd9794d58&amp;chksm=841efdf2b36974e40e29d906fe4f3a46528ea5a84d17f656ad6119f612059489b9df1416c337&amp;scene=21#wechat_redirect"><strong>常用生物信息ID的介绍</strong></a>中介绍了常见的ID，也提到一些常见的ID转换工具。</p>
 <p>1.Uniprot ID mapping 可以很方便地把 ID 转换为其他 ID 类型, 所包含的类型十分全面【<a href="https://www.uniprot.org/uploadlists/"><u>https://www.uniprot.org/uploadlists/</u></a>】</p>
 <p>2.bioDBnet 网站提供了常见的 ID 转换的选项, 类型全面【<a href="https://biodbnet-abcc.ncifcrf.gov/"><u>https://biodbnet-abcc.ncifcrf.gov/</u></a>】.</p>
 <p>3.DAVID Gene ID Conversion Tool 可以把 Gene ID 转换为多种常用类型和 DAVID ID, 方便进一步用 DAVID 做 GO 分析，常做富集分析的同学估计常用到这个工具【<a href="https://david.ncifcrf.gov/"><u>https://david.ncifcrf.gov/</u></a>】。</p>
 <p>4.sangerbox：<a href="http://sangerbox.com/IdConversion"><u>http://sangerbox.com/IdConversion</u></a></p>
 <p>5.biomart工具：<a href="http://www.biomart.org/"><u>http://www.biomart.org/</u></a></p>
-<p>6.FunRich软件，在我之前的文章就有介绍，<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651265340&amp;idx=1&amp;sn=5c3608661698d2332b992269a8721833&amp;chksm=841efd41b3697457f96ace4eecc682cbbbe3fdf3955f0060d3aafcdff0a2d85c225d5ce3f784&amp;scene=21#wechat_redirect"><font style="color:#021EAA;">FunRich数据库：一个主要用于基因和蛋白质的功能富集以及相互作用网络分析的独立的软件工具</font></a>。</p>
+<p>6.FunRich软件，在我之前的文章就有介绍，<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651265340&amp;idx=1&amp;sn=5c3608661698d2332b992269a8721833&amp;chksm=841efd41b3697457f96ace4eecc682cbbbe3fdf3955f0060d3aafcdff0a2d85c225d5ce3f784&amp;scene=21#wechat_redirect">FunRich数据库：一个主要用于基因和蛋白质的功能富集以及相互作用网络分析的独立的软件工具</a>。</p>
 <p><strong>还有org序列的R包</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>1   org.Ag.eg.db    Anopheles   aga eg
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2   org.At.tair.db  Arabidopsis ath tair
@@ -9573,53 +9573,53 @@
 </code></pre></div>
 <p>我们可以通过org.Hs.egMAPCOUNTS查看各个对象中的条目数目。org.Hs.egENSEMBL就有27161个Entrez ID与ENSEMBL对应关系。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&gt; org.Hs.egMAPCOUNTS
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>         org.Hs.egACCNUM       org.Hs.egACCNUM2EG        org.Hs.egALIAS2EG 
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>                   40183                   789529                   123135 
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>            org.Hs.egCHR      org.Hs.egCHRLENGTHS          org.Hs.egCHRLOC 
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>                   60951                      455                    28065 
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>      org.Hs.egCHRLOCEND         org.Hs.egENSEMBL      org.Hs.egENSEMBL2EG 
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>                   28065                    27161                    30292 
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    org.Hs.egENSEMBLPROT  org.Hs.egENSEMBLPROT2EG    org.Hs.egENSEMBLTRANS 
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>                    7651                    25422                     8280 
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>org.Hs.egENSEMBLTRANS2EG          org.Hs.egENZYME       org.Hs.egENZYME2EG 
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>                   39379                     2230                      975 
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>       org.Hs.egGENENAME              org.Hs.egGO       org.Hs.egGO2ALLEGS 
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>                   61119                    20408                    22792 
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>          org.Hs.egGO2EG             org.Hs.egMAP          org.Hs.egMAP2EG 
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>                   17983                    57875                     2045 
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>           org.Hs.egOMIM         org.Hs.egOMIM2EG            org.Hs.egPATH 
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>                   15815                    21093                     5869 
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>        org.Hs.egPATH2EG            org.Hs.egPFAM            org.Hs.egPMID 
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>                     229                     5104                    37627 
-<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>        org.Hs.egPMID2EG         org.Hs.egPROSITE          org.Hs.egREFSEQ 
-<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>                  600981                     5104                    38868 
-<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>      org.Hs.egREFSEQ2EG          org.Hs.egSYMBOL       org.Hs.egSYMBOL2EG 
-<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>                  280529                    61119                    61050 
-<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>         org.Hs.egUCSCKG         org.Hs.egUNIGENE      org.Hs.egUNIGENE2EG 
-<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>                   25164                    26083                    29270 
-<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>        org.Hs.egUNIPROT 
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>         org.Hs.egACCNUM       org.Hs.egACCNUM2EG        org.Hs.egALIAS2EG
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>                   40183                   789529                   123135
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>            org.Hs.egCHR      org.Hs.egCHRLENGTHS          org.Hs.egCHRLOC
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>                   60951                      455                    28065
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>      org.Hs.egCHRLOCEND         org.Hs.egENSEMBL      org.Hs.egENSEMBL2EG
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>                   28065                    27161                    30292
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    org.Hs.egENSEMBLPROT  org.Hs.egENSEMBLPROT2EG    org.Hs.egENSEMBLTRANS
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>                    7651                    25422                     8280
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>org.Hs.egENSEMBLTRANS2EG          org.Hs.egENZYME       org.Hs.egENZYME2EG
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>                   39379                     2230                      975
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>       org.Hs.egGENENAME              org.Hs.egGO       org.Hs.egGO2ALLEGS
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>                   61119                    20408                    22792
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>          org.Hs.egGO2EG             org.Hs.egMAP          org.Hs.egMAP2EG
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>                   17983                    57875                     2045
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>           org.Hs.egOMIM         org.Hs.egOMIM2EG            org.Hs.egPATH
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>                   15815                    21093                     5869
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>        org.Hs.egPATH2EG            org.Hs.egPFAM            org.Hs.egPMID
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>                     229                     5104                    37627
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>        org.Hs.egPMID2EG         org.Hs.egPROSITE          org.Hs.egREFSEQ
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>                  600981                     5104                    38868
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>      org.Hs.egREFSEQ2EG          org.Hs.egSYMBOL       org.Hs.egSYMBOL2EG
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>                  280529                    61119                    61050
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>         org.Hs.egUCSCKG         org.Hs.egUNIGENE      org.Hs.egUNIGENE2EG
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>                   25164                    26083                    29270
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>        org.Hs.egUNIPROT
 <a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>                   19262
 </code></pre></div>
 <p>该包总共有37个对象</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>&gt; names(org.Hs.egMAPCOUNTS)
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a> [1] "org.Hs.egACCNUM"          "org.Hs.egACCNUM2EG"      
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a> [3] "org.Hs.egALIAS2EG"        "org.Hs.egCHR"            
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a> [5] "org.Hs.egCHRLENGTHS"      "org.Hs.egCHRLOC"         
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a> [7] "org.Hs.egCHRLOCEND"       "org.Hs.egENSEMBL"        
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a> [9] "org.Hs.egENSEMBL2EG"      "org.Hs.egENSEMBLPROT"    
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>[11] "org.Hs.egENSEMBLPROT2EG"  "org.Hs.egENSEMBLTRANS"   
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>[13] "org.Hs.egENSEMBLTRANS2EG" "org.Hs.egENZYME"         
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>[15] "org.Hs.egENZYME2EG"       "org.Hs.egGENENAME"       
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>[17] "org.Hs.egGO"              "org.Hs.egGO2ALLEGS"      
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>[19] "org.Hs.egGO2EG"           "org.Hs.egMAP"            
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>[21] "org.Hs.egMAP2EG"          "org.Hs.egOMIM"           
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>[23] "org.Hs.egOMIM2EG"         "org.Hs.egPATH"           
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>[25] "org.Hs.egPATH2EG"         "org.Hs.egPFAM"           
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>[27] "org.Hs.egPMID"            "org.Hs.egPMID2EG"        
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>[29] "org.Hs.egPROSITE"         "org.Hs.egREFSEQ"         
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>[31] "org.Hs.egREFSEQ2EG"       "org.Hs.egSYMBOL"         
-<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>[33] "org.Hs.egSYMBOL2EG"       "org.Hs.egUCSCKG"         
-<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>[35] "org.Hs.egUNIGENE"         "org.Hs.egUNIGENE2EG"     
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a> [1] "org.Hs.egACCNUM"          "org.Hs.egACCNUM2EG"
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a> [3] "org.Hs.egALIAS2EG"        "org.Hs.egCHR"
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a> [5] "org.Hs.egCHRLENGTHS"      "org.Hs.egCHRLOC"
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a> [7] "org.Hs.egCHRLOCEND"       "org.Hs.egENSEMBL"
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a> [9] "org.Hs.egENSEMBL2EG"      "org.Hs.egENSEMBLPROT"
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>[11] "org.Hs.egENSEMBLPROT2EG"  "org.Hs.egENSEMBLTRANS"
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>[13] "org.Hs.egENSEMBLTRANS2EG" "org.Hs.egENZYME"
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>[15] "org.Hs.egENZYME2EG"       "org.Hs.egGENENAME"
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>[17] "org.Hs.egGO"              "org.Hs.egGO2ALLEGS"
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>[19] "org.Hs.egGO2EG"           "org.Hs.egMAP"
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>[21] "org.Hs.egMAP2EG"          "org.Hs.egOMIM"
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>[23] "org.Hs.egOMIM2EG"         "org.Hs.egPATH"
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>[25] "org.Hs.egPATH2EG"         "org.Hs.egPFAM"
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>[27] "org.Hs.egPMID"            "org.Hs.egPMID2EG"
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>[29] "org.Hs.egPROSITE"         "org.Hs.egREFSEQ"
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>[31] "org.Hs.egREFSEQ2EG"       "org.Hs.egSYMBOL"
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>[33] "org.Hs.egSYMBOL2EG"       "org.Hs.egUCSCKG"
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>[35] "org.Hs.egUNIGENE"         "org.Hs.egUNIGENE2EG"
 <a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>[37] "org.Hs.egUNIPROT"
 </code></pre></div>
 <p>关于这37个对象，我也不一一介绍啦，就简单说一部分。</p>
@@ -9693,7 +9693,7 @@
 <p><strong>3.select函数快速玩转各种转换</strong></p>
 <p>上面我们介绍的2个对象，转换都是以Entrez ID作为输入，我们以其他ID转换会报错。org.Hs.egSYMBOL这个对象是Entrez ID转换为gene SYMBOL，你以为输入SYMBOL会出Entrez ID，结果不是的。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>&gt; org.Hs.egSYMBOL[symbol]
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Error in .checkKeys(value, Lkeys(x), x@ifnotfound) : 
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Error in .checkKeys(value, Lkeys(x), x@ifnotfound) :
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>  value for "SSTR2" not found
 </code></pre></div>
 <p>当然我们可以通过继续通过toTable()函数提取所有的Entrez ID与 SYMBOL对应关系的数据框，然后通过索引取值，匹配。</p>
@@ -9732,7 +9732,7 @@
 <a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a>| KEGGSOURCEURL: ftp://ftp.genome.jp/pub/kegg/genomes
 <a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a>| KEGGSOURCEDATE: 2011-Mar15
 <a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>| GPSOURCENAME: UCSC Genome Bioinformatics (Homo sapiens)
-<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a>| GPSOURCEURL: 
+<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a>| GPSOURCEURL:
 <a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a>| GPSOURCEDATE: 2018-Oct2
 <a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a>| ENSOURCEDATE: 2018-Oct05
 <a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a>| ENSOURCENAME: Ensembl
@@ -9749,18 +9749,18 @@
 <p>keytypes ：哪些类型可以使用函数select或keys以及keytype参数，如下所示：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>&gt; keytypes(org.Hs.eg.db)
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a> [1] "ACCNUM"       "ALIAS"        "ENSEMBL"      "ENSEMBLPROT"  "ENSEMBLTRANS"
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a> [6] "ENTREZID"     "ENZYME"       "EVIDENCE"     "EVIDENCEALL"  "GENENAME"    
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>[11] "GO"           "GOALL"        "IPI"          "MAP"          "OMIM"        
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>[16] "ONTOLOGY"     "ONTOLOGYALL"  "PATH"         "PFAM"         "PMID"        
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>[21] "PROSITE"      "REFSEQ"       "SYMBOL"       "UCSCKG"       "UNIGENE"     
-<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>[26] "UNIPROT"  
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a> [6] "ENTREZID"     "ENZYME"       "EVIDENCE"     "EVIDENCEALL"  "GENENAME"
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>[11] "GO"           "GOALL"        "IPI"          "MAP"          "OMIM"
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>[16] "ONTOLOGY"     "ONTOLOGYALL"  "PATH"         "PFAM"         "PMID"
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>[21] "PROSITE"      "REFSEQ"       "SYMBOL"       "UCSCKG"       "UNIGENE"
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>[26] "UNIPROT"
 </code></pre></div>
 <p>keys：返回AnnotationDb 中数据库的keys，通常是某个基因的ENSEMBL的编号，ENTREZID 的编号等，经常与select配合使用，通常情况下会返回数据库的关键词，如下所示：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>&gt; head(keys(org.Hs.eg.db))
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>[1] "1"  "2"  "3"  "9"  "10" "11
 </code></pre></div>
 <p>假设我们将Entrez ID 转换成SYMBOL：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>ens2ent &lt;- select(org.Hs.eg.db,keys = EntrezID, 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>ens2ent &lt;- select(org.Hs.eg.db,keys = EntrezID,
 <a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>                  columns = 'SYMBOL', keytype = 'ENTREZID') # 见下图
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>&gt; head(ens2ent)
@@ -9777,7 +9777,8 @@
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>                keys=EntrezID,columns=c("SYMBOL","ENSEMBL","GENENAME"), #clolumns参数是你要转换的ID类型是什么，这里选择三个。
 <a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>                keytype="ENTREZID" )#函数里面的keytype与keys参数是对应的，keys是你输入的那些数据，keytype是指这些数据是属于什么类型的数据。
 </code></pre></div>
-<p>我们再看看将ENSEMBL转换整SYMBOL，在<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264583&amp;idx=1&amp;sn=f94bf8d77402677ee67f5d6336088254&amp;chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&amp;scene=21#wechat_redirect">TCGA中的转录组数据</a>的行名通常是ENSEMBL，我们经常要转换成SYMBOL。我们就读入一个病人的RNASeq的counts数据。</p>
+<p>我们再看看将ENSEMBL转换整SYMBOL，在<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264583&amp;idx=1&amp;sn=f94bf8d77402677ee67f5d6336088254&amp;chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&amp;scene=21#wechat_redirect">TCGA中的转录组数据</a>的行名通常是ENSEMBL，我们经常要转换成SYMBOL。
+我们就读入一个病人的RNASeq的counts数据。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>counts &lt;- read.table("TCGARNASeq.counts",header = F,sep = "\t")
 <a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>Ensembl &lt;- counts[,1]
 </code></pre></div>
@@ -9785,7 +9786,7 @@
 <p>我们去掉版本号：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>library(stringr)
 <a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>splitEnsembl &lt;- function(Ensembl){
-<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>  return(str_split(Ensembl[1],'[.]',simplify = T)[1]) 
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>  return(str_split(Ensembl[1],'[.]',simplify = T)[1])
 <a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>}
 <a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>Ensembl &lt;- sapply(Ensembl,splitEnsembl,simplify = T)
 <a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>head(Ensembl)
@@ -9794,8 +9795,8 @@
 <a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>[1] "ENSG00000000003" "ENSG00000000005" "ENSG00000000419" "ENSG00000000457"
 <a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>[5] "ENSG00000000460" "ENSG00000000938"
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>ens2sym &lt;- select(org.Hs.eg.db, 
-<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>                 keys=Ensembl,columns=c("SYMBOL","GENENAME"), 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>ens2sym &lt;- select(org.Hs.eg.db,
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>                 keys=Ensembl,columns=c("SYMBOL","GENENAME"),
 <a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>                 keytype="ENSEMBL" )
 </code></pre></div>
 <p>转换后：</p>
@@ -9871,7 +9872,7 @@
 <a id="__codelineno-28-22" name="__codelineno-28-22" href="#__codelineno-28-22"></a><span class="p">}</span>
 <a id="__codelineno-28-23" name="__codelineno-28-23" href="#__codelineno-28-23"></a><span class="c1">#gtf文件路径，注意更改</span>
 <a id="__codelineno-28-24" name="__codelineno-28-24" href="#__codelineno-28-24"></a><span class="n">gtfpath</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">"F:/MedBioInfoCloud/human.v33lift37.annotation.gtf"</span>
-<a id="__codelineno-28-25" name="__codelineno-28-25" href="#__codelineno-28-25"></a><span class="n">ens2symInfo</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">get_IDinfo</span><span class="p">(</span><span class="n">gtfpath</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-28-25" name="__codelineno-28-25" href="#__codelineno-28-25"></a><span class="n">ens2symInfo</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">get_IDinfo</span><span class="p">(</span><span class="n">gtfpath</span><span class="p">)</span>
 <a id="__codelineno-28-26" name="__codelineno-28-26" href="#__codelineno-28-26"></a><span class="n">ens2symInfo</span><span class="o">$</span><span class="n">Ensembl</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">substr</span><span class="p">(</span><span class="n">ens2symInfo</span><span class="p">[,</span><span class="s">"Ensembl"</span><span class="p">],</span><span class="m">1</span><span class="p">,</span><span class="m">15</span><span class="p">)</span><span class="c1">#去掉版本号</span>
 </code></pre></div>
 <p>这样就找到了"ENSEMBL"与"SYMBOL"的对应关系。</p>
@@ -9887,11 +9888,11 @@
 <p>也可以从官网下载：<a href="https://www.gencodegenes.org/human/"><u>https://www.gencodegenes.org/human/</u></a></p>
 <p>下面是本文代码：</p>
 <p><img alt="1608895684564-290b5b45-3d1a-4e3c-b21d-5e17de82f677.png" src="../img/95-4_H9QUVG1RBIf/1608895684564-290b5b45-3d1a-4e3c-b21d-5e17de82f677-999002.png" /></p>
-<p>链接：<a href="https://pan.baidu.com/s/15hx5-wElRjGfZrVcdyhLzw">https://pan.baidu.com/s/15hx5-wElRjGfZrVcdyhLzw</a> </p>
+<p>链接：<a href="https://pan.baidu.com/s/15hx5-wElRjGfZrVcdyhLzw">https://pan.baidu.com/s/15hx5-wElRjGfZrVcdyhLzw</a></p>
 <p>提取码：23hr</p>
-<p>如果失效，后台回复：<strong><font style="color:#021EAA;">geneID转换</font></strong></p>
+<p>如果失效，后台回复：<strong>geneID转换</strong></p>
 <blockquote>
-<p>更新: 2021-02-03 16:21:12<br />
+<p>更新: 2021-02-03 16:21:12
 原文: <a href="https://www.yuque.com/doublehelix/bioinfonotes/ey6aby">https://www.yuque.com/doublehelix/bioinfonotes/ey6aby</a></p>
 </blockquote>
 

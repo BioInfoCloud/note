@@ -11656,9 +11656,22 @@
 
 
 <h2 id="r">**一.与R的一次相亲  **<a class="headerlink" href="#r" title="Permanent link">&para;</a></h2>
-<p>MedBioInfoCloud：对于生物信息学专业的同学来说，R，Python，perl，Linux估计都不陌生，感觉都很难，不知如何入手，这里给点个人意见，生物信息学专业的同学大多数都是生物学或者医学专业出身，对计算机可能会产生一种恐惧，感觉会很难，那是一开始别人告诉你要学的太多了。我建议刚起步的同学就先学习R，其他的先放一边，生物信息学专业的同学，学会了R，再了解Linux系统，学习了Linux后，再学Python，至于perl，个人觉得可以放弃了，用Python就行。老一辈的前辈们估计用perl比较多。但随着大数据时代的来临，Python的位置已经很重要了，所以建议学习Python，而对于非生信专业的同学，想自己分析数据，挖掘数据，其实只要不是大数据计算，一般的分析，R已经足够了。当然，无论学什么，这一过程中要不断的丰富自己的生物学背景知识，没有知识背景，学这些很难用的上，那时候不是你不会写程序，是你生物学知识不够。</p>
+<p>MedBioInfoCloud：对于生物信息学专业的同学来说，R，Python，perl，Linux估计都不陌生，感觉都很难，不知如何入手，这里给点个人意见，生物信息学专业的同学大多数都是生物学或者医学专业出身，对计算机可能会产生一种恐惧，感觉会很难，那是一开始别人告诉你要学的太多了。
+我建议刚起步的同学就先学习R，其他的先放一边，生物信息学专业的同学，学会了R，再了解Linux系统，学习了Linux后，再学Python，至于perl，个人觉得可以放弃了，用Python就行。
+老一辈的前辈们估计用perl比较多。
+但随着大数据时代的来临，Python的位置已经很重要了，所以建议学习Python，而对于非生信专业的同学，想自己分析数据，挖掘数据，其实只要不是大数据计算，一般的分析，R已经足够了。
+当然，无论学什么，这一过程中要不断的丰富自己的生物学背景知识，没有知识背景，学这些很难用的上，那时候不是你不会写程序，是你生物学知识不够。</p>
 <h2 id="1r"><strong>1.R语言发展历史</strong><a class="headerlink" href="#1r" title="Permanent link">&para;</a></h2>
-<p>R是统计领域广泛使用的诞生于1980年左右的S语言的一个分支。可以认为R是S语言的一种实现。而S语言是由AT&amp;T贝尔实验室开发的一种用来进行数据探索、统计分析和作图的解释型语言。最初S语言的实现版本主要是S-PLUS。S-PLUS是一个商业软件，它基于S语言，并由MathSoft公司的统计科学部进一步完善。后来新西兰奥克兰大学的Robert Gentleman和Ross Ihaka及其他志愿人员开发了一个R系统。由“R开发核心团队”负责开发。R可以看作贝尔实验室（AT&amp;T BellLaboratories）的RickBecker，JohnChambers和AllanWilks开发的S语言的一种实现。当然,S语言也是S-Plus的基础。所以,两者在程序语法上可以说是几乎一样的,可能只是在函数方面有细微差别,程序十分容易地就能移植到一程序中,而很多一的程序只要稍加修改也能运用于R【引用百度百科】。</p>
+<p>R是统计领域广泛使用的诞生于1980年左右的S语言的一个分支。
+可以认为R是S语言的一种实现。
+而S语言是由AT&amp;T贝尔实验室开发的一种用来进行数据探索、统计分析和作图的解释型语言。
+最初S语言的实现版本主要是S-PLUS。
+S-PLUS是一个商业软件，它基于S语言，并由MathSoft公司的统计科学部进一步完善。
+后来新西兰奥克兰大学的Robert Gentleman和Ross Ihaka及其他志愿人员开发了一个R系统。
+由“R开发核心团队”负责开发。
+R可以看作贝尔实验室（AT&amp;T BellLaboratories）的RickBecker，JohnChambers和AllanWilks开发的S语言的一种实现。
+当然,S语言也是S-Plus的基础。
+所以,两者在程序语法上可以说是几乎一样的,可能只是在函数方面有细微差别,程序十分容易地就能移植到一程序中,而很多一的程序只要稍加修改也能运用于R【引用百度百科】。</p>
 <h2 id="2r"><strong>2.R语言的特点</strong><a class="headerlink" href="#2r" title="Permanent link">&para;</a></h2>
 <p>R作为一种统计分析软件，是集统计分析与图形显示于一体的。它可以运行于UNIX,Windows和Macintosh的操作系统上，而且嵌入了一个非常方便实用的帮助系统，相比于其他统计分析软件，R还有以下特点：</p>
 <h3 id="r_1">R是自由软件<a class="headerlink" href="#r_1" title="Permanent link">&para;</a></h3>
@@ -11689,7 +11702,9 @@ R的功能能够通过由用户撰写的套件增强。增加的功能有特殊�
 通过R可以使用绝大多数的经典或者最新的统计方法，不过用户需要花一些功夫来找出这种方法。
 S（和R）与其他主流的统计系统在本质上有一个很重要的不同。在S中，统计分析通常由一系列的步骤完成，同时将交互的结果存储在对象中。所以，尽管SAS和SPSS在一个回归或者判别分析中会给出丰富的输出结果，R只是给出一个最小的输出，而将结果保存在一个适当的对象中由R函数进行后续查询。</p>
 <h2 id="6r"><strong>6.R语言与生物信息学</strong><a class="headerlink" href="#6r" title="Permanent link">&para;</a></h2>
-<p>生物信息学(Bioinformatics)是研究生物信息的采集、处理、存储、传播，分析和解释等各方面的学科，也是随着生命科学和计算机科学的迅猛发展，生命科学和计算机科学相结合形成的一门新学科。它通过综合利用生物学，计算机科学和信息技术而揭示大量而复杂的生物数据所赋有的生物学奥秘。R语言是一个很优秀的统计分析软件，生物信息工作者，是需要这样的一个工具的，矩诞生了一个专门为生物科学领域科学研究的R包库Bioconductor(<a href="https://www.bioconductor.org/">https://www.bioconductor.org/</a>)就诞生了，为生物科研工作者提供了很大帮助，尤其在这个大数据的时代，各种组学技术和计算机的发展，生物科研工作者会离不开计算机科学的辅助的工具的。</p>
+<p>生物信息学(Bioinformatics)是研究生物信息的采集、处理、存储、传播，分析和解释等各方面的学科，也是随着生命科学和计算机科学的迅猛发展，生命科学和计算机科学相结合形成的一门新学科。
+它通过综合利用生物学，计算机科学和信息技术而揭示大量而复杂的生物数据所赋有的生物学奥秘。
+R语言是一个很优秀的统计分析软件，生物信息工作者，是需要这样的一个工具的，矩诞生了一个专门为生物科学领域科学研究的R包库Bioconductor(<a href="https://www.bioconductor.org/">https://www.bioconductor.org/</a>)就诞生了，为生物科研工作者提供了很大帮助，尤其在这个大数据的时代，各种组学技术和计算机的发展，生物科研工作者会离不开计算机科学的辅助的工具的。</p>
 <h1 id="r_5"><strong>二.与R语言的第一次约会</strong><a class="headerlink" href="#r_5" title="Permanent link">&para;</a></h1>
 <h2 id="1r_1"><strong>1.R的下载和安装</strong><a class="headerlink" href="#1r_1" title="Permanent link">&para;</a></h2>
 <p>官网链接：<a href="https://www.r-project.org/">https://www.r-project.org/</a>
@@ -11718,13 +11733,18 @@ RStudio是一款比较好用的R语言开发环境（IDE）。提供很好的编
 官网：<a href="https://rstudio.com/">https://rstudio.com/</a>
 <strong>RStudio界面</strong><img alt="" src="https://cdn.nlark.com/yuque/0/2020/jpeg/1234840/1608900539713-17dc2448-1263-461c-9241-f5382dbfa91a.jpeg#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=608&amp;id=YMN34&amp;originHeight=608&amp;originWidth=1080&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=1080" />
 A区域：这个区域主要负责代码的撰写。刚安装的RStudio，启动时，可能会看不到这个A区域。
-<img alt="" src="https://cdn.nlark.com/yuque/0/2020/jpeg/1234840/1608900539686-232e1e8b-917d-485b-b463-2cbcf2b38e28.jpeg#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=578&amp;id=uii4B&amp;originHeight=578&amp;originWidth=1080&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=1080" />而是B区域全部占据了A区域，可点击左上角的【File】→【New File】→【R Script】，即可看见。如果之前打开过R脚本，再打开RStudio会出现之前打开过的R脚本。
+<img alt="" src="https://cdn.nlark.com/yuque/0/2020/jpeg/1234840/1608900539686-232e1e8b-917d-485b-b463-2cbcf2b38e28.jpeg#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=578&amp;id=uii4B&amp;originHeight=578&amp;originWidth=1080&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=1080" />而是B区域全部占据了A区域，可点击左上角的【File】→【New File】→【R Script】，即可看见。
+如果之前打开过R脚本，再打开RStudio会出现之前打开过的R脚本。
 <img alt="" src="https://cdn.nlark.com/yuque/0/2020/jpeg/1234840/1608900539694-38b90a5c-06be-4a1c-a30e-194e5cd7775d.jpeg#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=704&amp;id=O1jbb&amp;originHeight=704&amp;originWidth=684&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=684" />
 上面步骤将新建一个名为“Untitled1”的R代码文件（后缀名默认为.R）。你可在文件内撰写代码，然后可按快捷键
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Ctrl + S
 </code></pre></div></p>
 <p>保存文件。也可点击左上角的【File】→【Save】进行保存。接着会跳出“Save File”弹出框，然后可将“Untitled1”文件重命名。这里重命名为“test”，然后点“Save”保存文件。文件将保存在你想保存的工作路径下。接着会跳出“Save File”弹出框，然后可将“Untitled1”文件重命名。这里重命名为“test”，然后点“Save”保存文件。文件将保存在当前工作路径下。
-<img alt="" src="https://cdn.nlark.com/yuque/0/2020/jpeg/1234840/1608900539723-0221e0fa-1d70-4741-905c-4cdbbc83c2c3.jpeg#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=575&amp;id=CZOh9&amp;originHeight=575&amp;originWidth=1080&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=1080" />B区域：Console区这里是执行代码的地方，执行结果也会显示在这里。在A区域输入代码，没执行一行都会在这里显示。也可在这个区域直接输入代码，然后按回车键执行代码，输出结果。在这个区域直接输入代码，执行，和RGUI界面差不多。所有我们就不介绍RGUI。
+<img alt="" src="https://cdn.nlark.com/yuque/0/2020/jpeg/1234840/1608900539723-0221e0fa-1d70-4741-905c-4cdbbc83c2c3.jpeg#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=575&amp;id=CZOh9&amp;originHeight=575&amp;originWidth=1080&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=1080" />B区域：Console区这里是执行代码的地方，执行结果也会显示在这里。
+在A区域输入代码，没执行一行都会在这里显示。
+也可在这个区域直接输入代码，然后按回车键执行代码，输出结果。
+在这个区域直接输入代码，执行，和RGUI界面差不多。
+所有我们就不介绍RGUI。
 在A区域输入的代码，可通过点击Run运行光标所在行的代码，点一次运行一行，也可通过【Crtl +Enter】运行。运行的代码会在B区域显示，如果代码有错，也会出现相应的报错提示。B区域随着代码的运行，会越来越多
 ，可通过掃把按钮清空，想要清除Console上的内容，还可按【Ctrl + L】快捷键或者在Console输入cat('\f')。
 <img alt="" src="https://cdn.nlark.com/yuque/0/2020/jpeg/1234840/1608900539764-540a91d2-f2ef-4e85-b627-94c9b6877627.jpeg#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=608&amp;id=i3MBg&amp;originHeight=608&amp;originWidth=1080&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=1080" />C区域 Environment：是用来记录当前变量的数值，方便查看当前变量的状况。
@@ -11737,7 +11757,8 @@ D区域：Files, Plots, Packages, Help, ViewerFiles：这里会显示当前工�
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>getwd()
 </code></pre></div></p>
 <p>函数来获取当前工作路径：
-<img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1608900539708-b879a776-12cb-483a-a477-c7e1ba1073be.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=138&amp;id=jbzmk&amp;originHeight=138&amp;originWidth=1080&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=1080" />如果Files下显示的不是当前工作路径，那是由于没及时更新视图所导致的。可点击Console字符串旁边箭头的来更新，如下图。
+<img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1608900539708-b879a776-12cb-483a-a477-c7e1ba1073be.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=138&amp;id=jbzmk&amp;originHeight=138&amp;originWidth=1080&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=1080" />如果Files下显示的不是当前工作路径，那是由于没及时更新视图所导致的。
+可点击Console字符串旁边箭头的来更新，如下图。
 <img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1608900539722-7f980513-254f-4f79-9d66-8804402fdb7d.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=141&amp;id=limmt&amp;originHeight=141&amp;originWidth=789&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=789" />
 Plots：画好的图将在这里显示。
 <img alt="" src="https://cdn.nlark.com/yuque/0/2020/jpeg/1234840/1608900539688-aff6825f-7f0f-4960-84eb-254ef85a9423.jpeg#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=608&amp;id=j9n8Q&amp;originHeight=608&amp;originWidth=1080&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=1080" />Packages：显示已经安装好了的包，打勾代表已经加载。
@@ -11748,11 +11769,15 @@ Plots：画好的图将在这里显示。
 <img alt="" src="https://cdn.nlark.com/yuque/0/2020/jpeg/1234840/1608900539757-094c34a6-8310-4a7a-b2fa-5f1615d815d4.jpeg#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=608&amp;id=H55lt&amp;originHeight=608&amp;originWidth=1080&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=1080" />Viewer：是用来显示本地网页文件，用得比较少。
 2RStudio的相关设置切换不同R版本R允许多个版本共存，比如我在电脑上同时安装了2个版本（如下图）。通过RStudio可以很方便在各个R版本间进行切换。</p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2020/jpeg/1234840/1608900539717-e1b1a770-d8ca-48e4-851c-2b09e4b98947.jpeg#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=569&amp;id=bNATX&amp;originHeight=569&amp;originWidth=1080&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=1080" />点击【Tools】→【Global Options...】
-<img alt="" src="https://cdn.nlark.com/yuque/0/2020/jpeg/1234840/1608900539707-97f1caf1-2d06-480e-9715-b60482ce0b34.jpeg#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=707&amp;id=KIdwP&amp;originHeight=707&amp;originWidth=1002&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=1002" />接着点【General】→【Change...】→【Choose a specific version of R】→选中切换的R版本→【OK】→【OK】；下次启动RStudio后，R将切换到相应版本。这里需要注意的是，在Choose a specific version of R中出现的R版本是已经配置了环境变量的。没有配置环境变量不会自动显示，需要点击Browse去选择你安装的版本。
+<img alt="" src="https://cdn.nlark.com/yuque/0/2020/jpeg/1234840/1608900539707-97f1caf1-2d06-480e-9715-b60482ce0b34.jpeg#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=707&amp;id=KIdwP&amp;originHeight=707&amp;originWidth=1002&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=1002" />接着点【General】→【Change...】→【Choose a specific version of R】→选中切换的R版本→【OK】→【OK】；
+下次启动RStudio后，R将切换到相应版本。
+这里需要注意的是，在Choose a specific version of R中出现的R版本是已经配置了环境变量的。
+没有配置环境变量不会自动显示，需要点击Browse去选择你安装的版本。
 <img alt="" src="https://cdn.nlark.com/yuque/0/2020/jpeg/1234840/1608900539735-3f516225-c322-4828-9d8d-2528553dbb04.jpeg#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=743&amp;id=aPOFN&amp;originHeight=743&amp;originWidth=765&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=765" />
 包安装镜像切换由于网速慢的原因，有时安装包会安装失败。
 此时可以通过将包安装切换至中国镜像来解决：点【Tools】→【Global Options...】，接着点【Packages】→【Change...】→【选中一个中国镜像】→【OK】→【OK】。如下图，以后安装包都会通过这个镜像。
-<img alt="" src="https://cdn.nlark.com/yuque/0/2020/jpeg/1234840/1608900539780-5c3b108c-b1a2-4b69-8c54-3c05e2cf168b.jpeg#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=608&amp;id=zQKgh&amp;originHeight=608&amp;originWidth=1080&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=1080" />界面样式的修改这里，我的RStudio背景是黑色，不同人喜欢不同背景。可通过【Tools】→【Global Options...】，接着点【Appearance】进行设置。
+<img alt="" src="https://cdn.nlark.com/yuque/0/2020/jpeg/1234840/1608900539780-5c3b108c-b1a2-4b69-8c54-3c05e2cf168b.jpeg#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=608&amp;id=zQKgh&amp;originHeight=608&amp;originWidth=1080&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=1080" />界面样式的修改这里，我的RStudio背景是黑色，不同人喜欢不同背景。
+可通过【Tools】→【Global Options...】，接着点【Appearance】进行设置。
 <img alt="" src="https://cdn.nlark.com/yuque/0/2020/jpeg/1234840/1608900539728-32e3896c-fab1-4832-b709-035121585d3c.jpeg#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=754&amp;id=UCgqU&amp;originHeight=754&amp;originWidth=769&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=769" />
 代码编译格式有时候打开别人给你发的代码，里边的中文注释换乱码，可通过【Tools】→【Global Options...】，接着点【Code】→【Saving】进行设置。一般选择UTF-8.
 <img alt="" src="https://cdn.nlark.com/yuque/0/2020/jpeg/1234840/1608900539726-cdc933ff-77b3-4f22-be8f-94c02c35364f.jpeg#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=608&amp;id=lmIqW&amp;originHeight=608&amp;originWidth=1080&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=1080" /></p>
@@ -11849,7 +11874,7 @@ rep()函数可以用来重复复制元素。
 <a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>&gt; c2
 <a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>[1] 5 6 7 8
 <a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>&gt; c3 &lt;- c(c1,c2)
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>&gt; c3 
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>&gt; c3
 <a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>[1] 1 2 3 4 5 6 7 8
 </code></pre></div></p>
 <p><strong>（4）向量拼接</strong>
@@ -11912,8 +11937,8 @@ rep()函数可以用来重复复制元素。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>&gt; mat[1,3] #取第一行，第三列元素
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>[1] 3
 <a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>&gt; mat[2,] #取第二行，所有列
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>a b c d 
-<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>5 6 7 8 
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>a b c d
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>5 6 7 8
 <a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>&gt; mat[,3:4]#取第三列到第四列，所有行
 <a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>c  d
 <a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>e  3  4
@@ -12070,11 +12095,19 @@ rep()函数可以用来重复复制元素。
 <h3 id="24"><strong>2.4.数据框</strong><a class="headerlink" href="#24" title="Permanent link">&para;</a></h3>
 <p>由于不同的列可以包含不同模式（数值型、字符型等）的数据，数据框的概念较矩阵来说更为一般。它与你通常在SAS、SPSS和Stata中看到的数据集类似。数据框将是你在R中最常处理的数据结构。
 每一列数据的模式必须唯一，不过你却可以将多个模式的不同列放到一起组成数据框。由于数据框与分析人员通常设想的数据集的形态较为接近，我们在讨论数据框时将交替使用术语列和变量。
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>data.frame(data, row.names = NULL, check.rows = FALSE,           
-<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>            check.names = TRUE, fix.empty.names = TRUE,           
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>data.frame(data, row.names = NULL, check.rows = FALSE,
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>            check.names = TRUE, fix.empty.names = TRUE,
 <a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>            stringsAsFactors = default.stringsAsFactors())
 </code></pre></div></p>
-<p>data参数的形式要么是value，要么是tag=value。基于标记(如果存在)或离开的参数本身创建组件名称。row.names参数为NULL或单个整数或字符串，指定要用作行名称的列，或给出数据框行名称的字符或整数向量。check.rows如果为真，则检查行长度和名称的一致性。check.names 如果为真，则检查数据框中变量的名称，以确保它们是语法上有效的变量名称，并且不重复。如果有必要，可以(通过make.name)对它们进行调整。fix.empty.names：逻辑指示“未命名”的参数(在未被正式调用为someName = arg的意义上)是否得到自动构造的名称，或者更确切地说是名称“”。需要设置为FALSE，即使在检查时也是如此。stringsAsFactors字符向量应该转换为因子吗?“factory-fresh”默认值为TRUE，但是可以通过设置选项来更改(stringsAsFactors = FALSE)。
+<p>data参数的形式要么是value，要么是tag=value。
+基于标记(如果存在)或离开的参数本身创建组件名称。
+row.names参数为NULL或单个整数或字符串，指定要用作行名称的列，或给出数据框行名称的字符或整数向量。
+check.rows如果为真，则检查行长度和名称的一致性。
+check.names 如果为真，则检查数据框中变量的名称，以确保它们是语法上有效的变量名称，并且不重复。
+如果有必要，可以(通过make.name)对它们进行调整。
+fix.empty.names：逻辑指示“未命名”的参数(在未被正式调用为someName = arg的意义上)是否得到自动构造的名称，或者更确切地说是名称“”。
+需要设置为FALSE，即使在检查时也是如此。
+stringsAsFactors字符向量应该转换为因子吗?“factory-fresh”默认值为TRUE，但是可以通过设置选项来更改(stringsAsFactors = FALSE)。
 <strong>（1）创建一个数据框</strong>
 使用data.frame函数就可以初始化一个数据框。比如我们要初始化一个student的Data Frame其中包含ID和Name还有Gender以及Birthdate，那么代码为：
 <div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>&gt; Birthdate &lt;-c("1984-12-29","1983-5-6","1986-8-8")
@@ -12100,7 +12133,7 @@ rep()函数可以用来重复复制元素。
 <a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>[1] 11 12 13
 <a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a>#由于Gender列是字符串，默认情况下转化为了因子，所以出现了Levels: F M
 <a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a>[1] M M F
-<a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a>&gt; student$Gender 
+<a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a>&gt; student$Gender
 <a id="__codelineno-27-13" name="__codelineno-27-13" href="#__codelineno-27-13"></a>Levels: F M
 </code></pre></div></p>
 <h3 id="25"><strong>2.5.列表</strong><a class="headerlink" href="#25" title="Permanent link">&para;</a></h3>
@@ -12113,7 +12146,7 @@ rep()函数可以用来重复复制元素。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>&gt; glist = list( gene = c("TP53","GAPDH","EGFR"),ID = c(1,2,3))
 <a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>&gt; glist
 <a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>$gene
-<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>[1] "TP53"  "GAPDH" "EGFR" 
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>[1] "TP53"  "GAPDH" "EGFR"
 <a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>$ID
 <a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>[1] 1 2 3
 </code></pre></div>
@@ -12124,7 +12157,7 @@ rep()函数可以用来重复复制元素。
 <strong>（2）访问列表中组件</strong>
 访问列表中组件的方法，用$符号或者[[]]。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>&gt; glist$gene
-<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>[1] "TP53"  "GAPDH" "EGFR" 
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>[1] "TP53"  "GAPDH" "EGFR"
 <a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>&gt; glist[["ID"]]
 <a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>[1] 1 2 3
 </code></pre></div></p>
@@ -12132,7 +12165,7 @@ rep()函数可以用来重复复制元素。
 <strong>（3）增加或删除列表中的元素</strong>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>&gt; glist
 <a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>$gene
-<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>[1] "TP53"  "GAPDH" "EGFR" 
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>[1] "TP53"  "GAPDH" "EGFR"
 <a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>$ID
 <a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>[1] 1 2 3
 <a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>$expValue
@@ -12140,7 +12173,7 @@ rep()函数可以用来重复复制元素。
 <a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>&gt; glist[["ID"]] =NULL
 <a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a>&gt; glist
 <a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a>$gene
-<a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a>[1] "TP53"  "GAPDH" "EGFR" 
+<a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a>[1] "TP53"  "GAPDH" "EGFR"
 <a id="__codelineno-32-12" name="__codelineno-32-12" href="#__codelineno-32-12"></a>$expValue
 <a id="__codelineno-32-13" name="__codelineno-32-13" href="#__codelineno-32-13"></a>[1]   56 3454  245
 </code></pre></div></p>
@@ -12151,13 +12184,20 @@ rep()函数可以用来重复复制元素。
 </code></pre></div></p>
 <p>可以用unlist()函数获取值，unlist()返回值就是一个向量，向量名来自标签。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>&gt; unlist(glist)
-<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>    gene1     gene2     gene3 expValue1 expValue2 expValue3 
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>    gene1     gene2     gene3 expValue1 expValue2 expValue3
 <a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>   "TP53"   "GAPDH"    "EGFR"      "56"    "3454"     "245"
 </code></pre></div>
 <p><strong>（5）递归型列表</strong>
 列表是可以递归的，意思是列表的组件可以是列表。</p>
 <h3 id="26"><strong>2.6.因子</strong><a class="headerlink" href="#26" title="Permanent link">&para;</a></h3>
-<p>变量可归结为名义型、有序型或连续型变量。名义型变量是没有顺序之分的类别变量。类别（名义型）变量和有序类别（有序型）变量在R中称为因子（factor）。因子在<strong>R中非常重要</strong>，因为它决定了数据的分析方式以及如何进行视觉呈现。因子（factor)是R语言中比较特殊的一个数据类型， 它是一个用于存储类别的类型，举个例子，从性别上，可以把人分为：男人和女人，从年龄上划分，又可以把人分为：未成年人（&lt;18岁），成年人（&gt;=18）。R把表示分类的数据称为因子，因子的行为有时像字符串，有时像整数。因子是一个向量，通常情况下，每个元素都是字符类型，也有其他数据类型的元素。因子具有因子水平（Levels），用于限制因子的元素的取值范围，R强制：因子水平是字符类型，因子的元素只能从因子水平中取值，这意味着，因子的每个元素要么是因子水平中的字符（或转换为其他数据类型），要么是缺失值，这是因子的约束，是语法上的规则。
+<p>变量可归结为名义型、有序型或连续型变量。
+名义型变量是没有顺序之分的类别变量。
+类别（名义型）变量和有序类别（有序型）变量在R中称为因子（factor）。
+因子在<strong>R中非常重要</strong>，因为它决定了数据的分析方式以及如何进行视觉呈现。
+因子（factor)是R语言中比较特殊的一个数据类型， 它是一个用于存储类别的类型，举个例子，从性别上，可以把人分为：男人和女人，从年龄上划分，又可以把人分为：未成年人（&lt;18岁），成年人（&gt;=18）。
+R把表示分类的数据称为因子，因子的行为有时像字符串，有时像整数。
+因子是一个向量，通常情况下，每个元素都是字符类型，也有其他数据类型的元素。
+因子具有因子水平（Levels），用于限制因子的元素的取值范围，R强制：因子水平是字符类型，因子的元素只能从因子水平中取值，这意味着，因子的每个元素要么是因子水平中的字符（或转换为其他数据类型），要么是缺失值，这是因子的约束，是语法上的规则。
 通常情况下，在创建数据框变量时，R隐式把数据类型为字符的列创建为因子，这是因为R会把文本类型默认为类别数据，并自动转换为因子。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>&gt; patient &lt;-c("patient1","patient2","patient3")
 <a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>&gt; Name &lt;-c("Devin","Edward","Wenli")
@@ -12228,7 +12268,7 @@ nmax：水平的上限数量
 <div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>&gt; sex &lt;-factor(c('f','m','f','f','m'),levels=c('f','m'),
 <a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>               labels=c('female','male'),ordered=TRUE)
 <a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>&gt; sex
-<a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a>[1] female male   female female male  
+<a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a>[1] female male   female female male
 <a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a>Levels: female &lt; male
 </code></pre></div></p>
 <p><strong>（3）有序因子</strong>
@@ -12254,7 +12294,7 @@ ordered()函数不能指定特定因子水平的顺序，通常情况下，因�
 例如，把heights数据框的gender，按照指定的levels，转换成有序因子。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>&gt; heights &lt;- data.frame(height_cm=c(156,182,170),
 <a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>                        gender=c('f','m','f'))
-<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>&gt; heights 
+<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>&gt; heights
 <a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a>height_cm gender
 <a id="__codelineno-47-5" name="__codelineno-47-5" href="#__codelineno-47-5"></a>1       156      f
 <a id="__codelineno-47-6" name="__codelineno-47-6" href="#__codelineno-47-6"></a>2       182      m
@@ -12262,7 +12302,7 @@ ordered()函数不能指定特定因子水平的顺序，通常情况下，因�
 <a id="__codelineno-47-8" name="__codelineno-47-8" href="#__codelineno-47-8"></a>&gt; heights$gender
 <a id="__codelineno-47-9" name="__codelineno-47-9" href="#__codelineno-47-9"></a>[1] f m f
 <a id="__codelineno-47-10" name="__codelineno-47-10" href="#__codelineno-47-10"></a>Levels: f m
-<a id="__codelineno-47-11" name="__codelineno-47-11" href="#__codelineno-47-11"></a>&gt; heights$gender &lt;- factor(heights$gender, 
+<a id="__codelineno-47-11" name="__codelineno-47-11" href="#__codelineno-47-11"></a>&gt; heights$gender &lt;- factor(heights$gender,
 <a id="__codelineno-47-12" name="__codelineno-47-12" href="#__codelineno-47-12"></a>                           levels=c('m','f'),ordered=TRUE)
 <a id="__codelineno-47-13" name="__codelineno-47-13" href="#__codelineno-47-13"></a>&gt; heights
 <a id="__codelineno-47-14" name="__codelineno-47-14" href="#__codelineno-47-14"></a>height_cm gender
@@ -12312,7 +12352,7 @@ labels：每一个分组的标签
 <a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a>mydata$Category &lt;- as.factor(mydata$Category)
 </code></pre></div></p>
 <p>当需要把因子转换为有序因子时，要注意因子水平的顺序.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>mydata$Category &lt;- as.factor(mydata$Category, 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>mydata$Category &lt;- as.factor(mydata$Category,
 <a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a>                             levels=c('your ordered'), ordered=TRUE)
 </code></pre></div></p>
 <h1 id="3_1"><strong>3.数据之间的转换</strong><a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h1>
@@ -12335,7 +12375,7 @@ labels：每一个分组的标签
 <p>处理文本是每一种计算机语言都应该具备的功能，但不是每一种语言都侧重于处理文本。R语言是统计的语言，处理文本不是它的强项，perl语言这方面的功能比R不知要强多少倍。幸运的是R语言的可扩展能力很强，DNA/RNA/AA等生物序列现在已经可以使用R来处理。
 方括号表示选择方括号中的任意一个（如[a-z] 表示任意一个小写字符）；^ 放在表达式开始处表示匹配文本开始位置，放在方括号内开始处表示非方括号内的任一字符；大括号{}表示前面的字符或表达式的重复次数；| 表示可选项，即 | 前后的表达式任选一个。
 如果要在正则表达式中表示元字符本身，比如我就要在文本中查找问号‘?’， 那么就要使用引用符号（或称换码符号），一般是反斜杠 '\'。需要注意的是，在R语言中得用两个反斜杠即 ‘\’，如要匹配括号就要写成 '\(\)'。
- \d 表示数字0-9， 
+ \d 表示数字0-9，
 \D 表示非数字，
 \s 表示空白字符（包括空格、制表符、换行符等），
 \S 表示非空白字符，
@@ -12343,12 +12383,12 @@ labels：每一个分组的标签
 \W 表示非字，
 \&lt; 和 &gt; 分别表示以空白字符开始和结束的文本。
 正则表达式符号运算顺序：圆括号括起来的表达式最优先，然后是表示重复次数的操作（即：* + {} ），接下来是连接运算（其实就是几个字符放在一起，如abc），最后是表示可选项的运算（|）。所以 'foot|bar' 可以匹配’foot‘或者’bar‘，但是 'foot|ba{2}r'匹配的是’foot‘或者’baar‘。</p>
-<p>| </p>
-<p>元字符 | </p>
+<p>|</p>
+<p>元字符 |</p>
 <p>描述 |
 | --- | --- |
-| </p>
-<p>\ | </p>
+|</p>
+<p>\ |</p>
 <table>
 <thead>
 <tr>
@@ -12361,7 +12401,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>^ | </p>
+<p>^ |</p>
 <table>
 <thead>
 <tr>
@@ -12374,7 +12414,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>$ | </p>
+<p>$ |</p>
 <table>
 <thead>
 <tr>
@@ -12388,7 +12428,7 @@ labels：每一个分组的标签
 </tbody>
 </table>
 <ul>
-<li>| </li>
+<li>|</li>
 </ul>
 <table>
 <thead>
@@ -12403,7 +12443,7 @@ labels：每一个分组的标签
 </tbody>
 </table>
 <ul>
-<li>| </li>
+<li>|</li>
 </ul>
 <table>
 <thead>
@@ -12417,7 +12457,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>? | </p>
+<p>? |</p>
 <table>
 <thead>
 <tr>
@@ -12430,7 +12470,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>{n} | </p>
+<p>{n} |</p>
 <table>
 <thead>
 <tr>
@@ -12443,7 +12483,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>{n,} | </p>
+<p>{n,} |</p>
 <table>
 <thead>
 <tr>
@@ -12456,7 +12496,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>{n,m} | </p>
+<p>{n,m} |</p>
 <table>
 <thead>
 <tr>
@@ -12469,7 +12509,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>? | </p>
+<p>? |</p>
 <table>
 <thead>
 <tr>
@@ -12482,7 +12522,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>.点 | </p>
+<p>.点 |</p>
 <table>
 <thead>
 <tr>
@@ -12495,7 +12535,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>(pattern) | </p>
+<p>(pattern) |</p>
 <table>
 <thead>
 <tr>
@@ -12508,7 +12548,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>(?:pattern) | </p>
+<p>(?:pattern) |</p>
 <table>
 <thead>
 <tr>
@@ -12521,7 +12561,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>(?=pattern) | </p>
+<p>(?=pattern) |</p>
 <table>
 <thead>
 <tr>
@@ -12534,7 +12574,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>(?!pattern) | </p>
+<p>(?!pattern) |</p>
 <table>
 <thead>
 <tr>
@@ -12547,7 +12587,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>(?&lt;=pattern) | </p>
+<p>(?&lt;=pattern) |</p>
 <table>
 <thead>
 <tr>
@@ -12560,11 +12600,11 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>(?&lt;!pattern) | </p>
+<p>(?&lt;!pattern) |</p>
 <p>非获取匹配，反向否定预查，与正向否定预查类似，只是方向相反。例如“(?&lt;!95&#124;98&#124;NT&#124;2000)Windows”能匹配“3.1Windows”中的“Windows”，但不能匹配“2000Windows”中的“Windows”。这个地方不正确，有问题
 此处用或任意一项都不能超过2位，如“(?&lt;!95&#124;98&#124;NT&#124;20)Windows正确，“(?&lt;!95&#124;980&#124;NT&#124;20)Windows 报错，若是单独使用则无限制，如(?&lt;!2000)Windows 正确匹配 |
-| </p>
-<p>x&#124;y | </p>
+|</p>
+<p>x&#124;y |</p>
 <table>
 <thead>
 <tr>
@@ -12577,7 +12617,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>[xyz] | </p>
+<p>[xyz] |</p>
 <table>
 <thead>
 <tr>
@@ -12590,7 +12630,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>[^xyz] | </p>
+<p>[^xyz] |</p>
 <table>
 <thead>
 <tr>
@@ -12603,11 +12643,11 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>[a-z] | </p>
+<p>[a-z] |</p>
 <p>字符范围。匹配指定范围内的任意字符。例如，“[a-z]”可以匹配“a”到“z”范围内的任意小写字母字符。
 注意:只有连字符在字符组内部时,并且出现在两个字符之间时,才能表示字符的范围; 如果出字符组的开头,则只能表示连字符本身. |
-| </p>
-<p>[^a-z] | </p>
+|</p>
+<p>[^a-z] |</p>
 <table>
 <thead>
 <tr>
@@ -12620,7 +12660,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>\b | </p>
+<p>\b |</p>
 <table>
 <thead>
 <tr>
@@ -12633,7 +12673,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>\B | </p>
+<p>\B |</p>
 <table>
 <thead>
 <tr>
@@ -12646,7 +12686,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>\cx | </p>
+<p>\cx |</p>
 <table>
 <thead>
 <tr>
@@ -12659,7 +12699,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>\d | </p>
+<p>\d |</p>
 <table>
 <thead>
 <tr>
@@ -12672,7 +12712,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>\D | </p>
+<p>\D |</p>
 <table>
 <thead>
 <tr>
@@ -12685,7 +12725,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>\f | </p>
+<p>\f |</p>
 <table>
 <thead>
 <tr>
@@ -12698,7 +12738,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>\n | </p>
+<p>\n |</p>
 <table>
 <thead>
 <tr>
@@ -12711,7 +12751,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>\r | </p>
+<p>\r |</p>
 <table>
 <thead>
 <tr>
@@ -12724,7 +12764,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>\s | </p>
+<p>\s |</p>
 <table>
 <thead>
 <tr>
@@ -12737,7 +12777,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>\S | </p>
+<p>\S |</p>
 <table>
 <thead>
 <tr>
@@ -12750,7 +12790,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>\t | </p>
+<p>\t |</p>
 <table>
 <thead>
 <tr>
@@ -12763,7 +12803,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>\v | </p>
+<p>\v |</p>
 <table>
 <thead>
 <tr>
@@ -12776,7 +12816,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>\w | </p>
+<p>\w |</p>
 <table>
 <thead>
 <tr>
@@ -12789,7 +12829,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>\W | </p>
+<p>\W |</p>
 <table>
 <thead>
 <tr>
@@ -12802,7 +12842,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>\xn | </p>
+<p>\xn |</p>
 <table>
 <thead>
 <tr>
@@ -12815,7 +12855,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>\num | </p>
+<p>\num |</p>
 <table>
 <thead>
 <tr>
@@ -12828,7 +12868,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>\n | </p>
+<p>\n |</p>
 <table>
 <thead>
 <tr>
@@ -12841,7 +12881,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>\nm | </p>
+<p>\nm |</p>
 <table>
 <thead>
 <tr>
@@ -12854,7 +12894,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>\nml | </p>
+<p>\nml |</p>
 <table>
 <thead>
 <tr>
@@ -12867,7 +12907,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>\un | </p>
+<p>\un |</p>
 <table>
 <thead>
 <tr>
@@ -12880,7 +12920,7 @@ labels：每一个分组的标签
 </tr>
 </tbody>
 </table>
-<p>\p{P} | </p>
+<p>\p{P} |</p>
 <p>小写 p 是 property 的意思，表示 Unicode 属性，用于 Unicode 正表达式的前缀。中括号内的“P”表示Unicode 字符集七个字符属性之一：标点字符。
 其他六个属性：
 L：字母；
@@ -12890,8 +12930,8 @@ S：符号（比如数学符号、货币符号等）；
 N：数字（比如阿拉伯数字、罗马数字等）；
 C：其他字符。
 *注：此语法部分语言不支持，例：javascript。 |
-| </p>
-<p>&lt; &gt; | </p>
+|</p>
+<p>&lt; &gt; |</p>
 <table>
 <thead>
 <tr>
@@ -12904,7 +12944,7 @@ C：其他字符。
 </tr>
 </tbody>
 </table>
-<p>( ) | </p>
+<p>( ) |</p>
 <table>
 <thead>
 <tr>
@@ -12917,7 +12957,7 @@ C：其他字符。
 </tr>
 </tbody>
 </table>
-<p>&#124; | </p>
+<p>&#124; |</p>
 <table>
 <thead>
 <tr>
@@ -12931,7 +12971,7 @@ C：其他字符。
 </tbody>
 </table>
 <ul>
-<li>| </li>
+<li>|</li>
 </ul>
 <table>
 <thead>
@@ -12945,7 +12985,7 @@ C：其他字符。
 </tr>
 </tbody>
 </table>
-<p>? | </p>
+<p>? |</p>
 <table>
 <thead>
 <tr>
@@ -12958,20 +12998,39 @@ C：其他字符。
 </tr>
 </tbody>
 </table>
-<p>{i} {i,j} | </p>
+<p>{i} {i,j} |</p>
 <p>匹配指定数目的字符，这些字符是在它之前的表达式定义的。例如正则表达式A[0-9]{3} 能够匹配字符"A"后面跟着正好3个数字字符的串，例如A123、A348等，但是不匹配A1234。而正则表达式[0-9]{4,6} 匹配连续的任意4个、5个或者6个数字 |</p>
 <h2 id="2_1"><strong>2.字符串操作函数</strong><a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h2>
-<p>R通常被用来进行数值计算比较多，字符串处理相对较少，而且关于字符串的函数也不多，用得多的就是substr、strsplit、paste、regexpr这几个了。实际上R关于字符串处理的功能是非常强大的，因为它甚至可以直接使用Perl的正则表达式，这也是R的一个理念，作为语言就把向量计算做到极致，作为环境，就在各领域都集成最好的。R中有grep系列的函数，可以用最强大的方式处理字符串的所有问题。grep的全称是global search regular expression and print out the line，是Unix下一种强大的文本搜索工具，可以通过正则表达式搜索文本，并把匹配的行打印出来，包括grep、egrep和fgrep（egrep是扩展的grep，fgrep是快速的搜寻方式并没有真正利用正则表达式）。Linux下使用GNU版的grep，该套规范也被广泛地使用，R中的grep函数就是其中之一。
-grep的核心就是正则表达式（Regular Expressions，通常缩写为regex），R中的正则表达式非常专业，从grep系列函数的参数就可以看出，有个参数“extended”，默认为T，表示使用扩展grep，也就是egrep，如果选择为F就表示基础的grep，不过该种方式不被R推荐，即使使用了也会出现警告，实际上grep能做的egrep也都能做，而且还要简单不少。我刚开始在egrep中使用总是不能通过，后来发现其实egrep中更简单，很多时候直接写在[]内就行。还有一个参数“perl”，默认为F，如果选择T表示使用Perl的正则表达式规则，功能更加强大，不过如果没有专门学过Perl语言的话用egrep也就够了。另一个参数“fixed”虽然描述的不是同一个东西，但是也很相关，选择之后就会进行精确的匹配，不再使用正则表达式的规则，在效率上会快很多，我觉得这个可能就是fgrep。R的帮助文档中也明确说明了这三个参数实际上代表了四种模式，常规grep、扩展grep、Perl正则表达式、精确匹配，使用者可以根据具体的含义选择自己需要的，如果参数设置互有冲突，会自动忽略后面的参数，并会在Warning中明确指出。
-　　grep系列函数其实包括grep、grepl、sub、gsub、regexpr、gregexpr，他们的参数很类似，在R中也是把帮助文档集成在了一起，查找任意一个都会得到一个统一的文档。里面对各个参数也是一起介绍的，除了刚才说的三个以外，第一个参数就是最重要的“pattern”，这是一个字符串，直接表示正则表达式，根据模式的不同注意规则就行，另外有个“x”表示要查找的向量，这也是R中的独特之处，不是查找文件，而是查找向量，该处也可以只输入一个字符串，就成了基础的字符串处理函数。对于grep函数，结果只有匹配或者不匹配，因此匹配时输出向量中该元素的下标，如果是单个字符就输出1，对于grepl，和grep其实一样，不过输出的是逻辑值，匹配就是T，不匹配就是F。参数“value”默认为F，输出的值就是刚才说的元素下标或者逻辑值，如果改成T，就会输出查找的字符串。还有一个参数“ignore.case”，默认是F，表示大小写敏感，可以改为T，表示大小写不敏感。参数“useBytes”默认是F，表示按字符查找，如果是T则表示按字节查找，对于中文字符影响还是很大的。参数“invert ”默认为F，表示正常的查找，如果为T则查找模式的补集。像sub和gsub这样的替换函数，还多一个参数“replacement”，用来表示替换的字符。
-这些函数的参数都比较类似，但是输出各不一样，grep输出向量的下标，实际上就是找到与没找到，grepl返回的逻辑值更能说明问题。sub是一个很强大的替换函数，远胜过substr，正则表达式中可以设置非常灵活的规则，然后返回被替换后的字符串，如果正则表达式写得好，基本可以解决所有子字符串的问题。sub函数和gsub函数唯一的差别在于前者匹配第一次符合模式的字符串，后者匹配所有符合模式的字符串，也就是说在替换的时候前者只替换第一次符合的，后者替换所有符合的。regexpr和gregexpr被使用的似乎比较多，因为它们很像其他语言中的instr函数，可以查找到某些字符在字符串中出现的位置，不过我觉得用处并不是很大，因为通常情况下寻找某字符位置的目的就是为了做相关处理，而sub都能搞定。regexpr和gregexpr的关系和sub与gsub差不多，gregexpr操作向量时会返回列表。
+<p>R通常被用来进行数值计算比较多，字符串处理相对较少，而且关于字符串的函数也不多，用得多的就是substr、strsplit、paste、regexpr这几个了。
+实际上R关于字符串处理的功能是非常强大的，因为它甚至可以直接使用Perl的正则表达式，这也是R的一个理念，作为语言就把向量计算做到极致，作为环境，就在各领域都集成最好的。
+R中有grep系列的函数，可以用最强大的方式处理字符串的所有问题。
+grep的全称是global search regular expression and print out the line，是Unix下一种强大的文本搜索工具，可以通过正则表达式搜索文本，并把匹配的行打印出来，包括grep、egrep和fgrep（egrep是扩展的grep，fgrep是快速的搜寻方式并没有真正利用正则表达式）。
+Linux下使用GNU版的grep，该套规范也被广泛地使用，R中的grep函数就是其中之一。
+grep的核心就是正则表达式（Regular Expressions，通常缩写为regex），R中的正则表达式非常专业，从grep系列函数的参数就可以看出，有个参数“extended”，默认为T，表示使用扩展grep，也就是egrep，如果选择为F就表示基础的grep，不过该种方式不被R推荐，即使使用了也会出现警告，实际上grep能做的egrep也都能做，而且还要简单不少。
+我刚开始在egrep中使用总是不能通过，后来发现其实egrep中更简单，很多时候直接写在[]内就行。
+还有一个参数“perl”，默认为F，如果选择T表示使用Perl的正则表达式规则，功能更加强大，不过如果没有专门学过Perl语言的话用egrep也就够了。
+另一个参数“fixed”虽然描述的不是同一个东西，但是也很相关，选择之后就会进行精确的匹配，不再使用正则表达式的规则，在效率上会快很多，我觉得这个可能就是fgrep。
+R的帮助文档中也明确说明了这三个参数实际上代表了四种模式，常规grep、扩展grep、Perl正则表达式、精确匹配，使用者可以根据具体的含义选择自己需要的，如果参数设置互有冲突，会自动忽略后面的参数，并会在Warning中明确指出。
+grep系列函数其实包括grep、grepl、sub、gsub、regexpr、gregexpr，他们的参数很类似，在R中也是把帮助文档集成在了一起，查找任意一个都会得到一个统一的文档。
+里面对各个参数也是一起介绍的，除了刚才说的三个以外，第一个参数就是最重要的“pattern”，这是一个字符串，直接表示正则表达式，根据模式的不同注意规则就行，另外有个“x”表示要查找的向量，这也是R中的独特之处，不是查找文件，而是查找向量，该处也可以只输入一个字符串，就成了基础的字符串处理函数。
+对于grep函数，结果只有匹配或者不匹配，因此匹配时输出向量中该元素的下标，如果是单个字符就输出1，对于grepl，和grep其实一样，不过输出的是逻辑值，匹配就是T，不匹配就是F。
+参数“value”默认为F，输出的值就是刚才说的元素下标或者逻辑值，如果改成T，就会输出查找的字符串。
+还有一个参数“ignore.case”，默认是F，表示大小写敏感，可以改为T，表示大小写不敏感。
+参数“useBytes”默认是F，表示按字符查找，如果是T则表示按字节查找，对于中文字符影响还是很大的。
+参数“invert ”默认为F，表示正常的查找，如果为T则查找模式的补集。
+像sub和gsub这样的替换函数，还多一个参数“replacement”，用来表示替换的字符。
+这些函数的参数都比较类似，但是输出各不一样，grep输出向量的下标，实际上就是找到与没找到，grepl返回的逻辑值更能说明问题。
+sub是一个很强大的替换函数，远胜过substr，正则表达式中可以设置非常灵活的规则，然后返回被替换后的字符串，如果正则表达式写得好，基本可以解决所有子字符串的问题。
+sub函数和gsub函数唯一的差别在于前者匹配第一次符合模式的字符串，后者匹配所有符合模式的字符串，也就是说在替换的时候前者只替换第一次符合的，后者替换所有符合的。
+regexpr和gregexpr被使用的似乎比较多，因为它们很像其他语言中的instr函数，可以查找到某些字符在字符串中出现的位置，不过我觉得用处并不是很大，因为通常情况下寻找某字符位置的目的就是为了做相关处理，而sub都能搞定。
+regexpr和gregexpr的关系和sub与gsub差不多，gregexpr操作向量时会返回列表。
 以上就是grep系列函数的一些用法，根据例子可以很方便地使用，个人建议使用参数“pattern”和“x”就行（sub和gsub当然还有replacement），其他的都用默认的。在pattern中按照egrep的规则写正则表达式，基本上可以解决所有的字符串处理问题。只需要对正则表达式有简单的了解，就可以得到R中这些强大的功能。</p>
-<p>| </p>
-<p>nchar | </p>
+<p>|</p>
+<p>nchar |</p>
 <p>字符的个数 |
 | --- | --- |
-| </p>
-<p>toupper | </p>
+|</p>
+<p>toupper |</p>
 <table>
 <thead>
 <tr>
@@ -12984,7 +13043,7 @@ grep的核心就是正则表达式（Regular Expressions，通常缩写为regex�
 </tr>
 </tbody>
 </table>
-<p>tolower | </p>
+<p>tolower |</p>
 <table>
 <thead>
 <tr>
@@ -12997,7 +13056,7 @@ grep的核心就是正则表达式（Regular Expressions，通常缩写为regex�
 </tr>
 </tbody>
 </table>
-<p>substr | </p>
+<p>substr |</p>
 <table>
 <thead>
 <tr>
@@ -13010,7 +13069,7 @@ grep的核心就是正则表达式（Regular Expressions，通常缩写为regex�
 </tr>
 </tbody>
 </table>
-<p>grep | </p>
+<p>grep |</p>
 <table>
 <thead>
 <tr>
@@ -13023,7 +13082,7 @@ grep的核心就是正则表达式（Regular Expressions，通常缩写为regex�
 </tr>
 </tbody>
 </table>
-<p>sub | </p>
+<p>sub |</p>
 <table>
 <thead>
 <tr>
@@ -13036,7 +13095,7 @@ grep的核心就是正则表达式（Regular Expressions，通常缩写为regex�
 </tr>
 </tbody>
 </table>
-<p>strsplit | </p>
+<p>strsplit |</p>
 <table>
 <thead>
 <tr>
@@ -13049,7 +13108,7 @@ grep的核心就是正则表达式（Regular Expressions，通常缩写为regex�
 </tr>
 </tbody>
 </table>
-<p>paste | </p>
+<p>paste |</p>
 <table>
 <thead>
 <tr>
@@ -13062,7 +13121,7 @@ grep的核心就是正则表达式（Regular Expressions，通常缩写为regex�
 </tr>
 </tbody>
 </table>
-<p>match | </p>
+<p>match |</p>
 <p>匹配元素位置组成的向量 |</p>
 <p>下面是一些案例代码：
 <div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>&gt; char = "MedBioInfoCloud"
@@ -13104,9 +13163,9 @@ grep的核心就是正则表达式（Regular Expressions，通常缩写为regex�
 </code></pre></div>
 <p>这些函数的参数都比较类似，但是输出各不一样，grep输出向量的下标，实际上就是找到与没找到，grepl返回的逻辑值更能说明问题。sub是一个很强大的替换函数，远胜过substr，正则表达式中可以设置非常灵活的规则，然后返回被替换后的字符串，如果正则表达式写得好，基本可以解决所有子字符串的问题。sub函数和gsub函数唯一的差别在于前者匹配第一次符合模式的字符串，后者匹配所有符合模式的字符串，也就是说在替换的时候前者只替换第一次符合的，后者替换所有符合的。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>&gt; sub("bio","Bio",web)
-<a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a>[1] "www"         ".medBioinfo" ".cloud"  
+<a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a>[1] "www"         ".medBioinfo" ".cloud"
 <a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a>&gt; sub("[a-c]","123",web)
-<a id="__codelineno-60-4" name="__codelineno-60-4" href="#__codelineno-60-4"></a>[1] "www"           ".med123ioinfo" ".123loud"     
+<a id="__codelineno-60-4" name="__codelineno-60-4" href="#__codelineno-60-4"></a>[1] "www"           ".med123ioinfo" ".123loud"
 <a id="__codelineno-60-5" name="__codelineno-60-5" href="#__codelineno-60-5"></a>&gt; sub("[a-z]","123",web)
 <a id="__codelineno-60-6" name="__codelineno-60-6" href="#__codelineno-60-6"></a>[1] "123ww"         ".123edbioinfo" ".123loud"
 </code></pre></div></p>
@@ -13122,7 +13181,7 @@ grep的核心就是正则表达式（Regular Expressions，通常缩写为regex�
 </code></pre></div></p>
 <p>“<sup>”匹配一个字符串的开始，比如sub("</sup>a","",c("abcd","dcba"))，表示将开头为a的字符串中的a替换成空，在返回值中可以发现后面出现的a并没有被替换。如果要将开头的一个字符串替换，简单地写成“^ab”就行。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a>&gt; gsub("bio","Bio",web)
-<a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a>[1] "www"         ".medBioinfo" ".cloud" 
+<a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a>[1] "www"         ".medBioinfo" ".cloud"
 <a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a>&gt; gsub("[a-d]","123",web)
 <a id="__codelineno-62-4" name="__codelineno-62-4" href="#__codelineno-62-4"></a>[1] "www"             ".me123123ioinfo" ".123lou123"
 </code></pre></div></p>
@@ -13139,13 +13198,13 @@ grep的核心就是正则表达式（Regular Expressions，通常缩写为regex�
 <p>字符串的分割：strsplit()分割函数，返回的值是一个列表。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a>&gt; strsplit(pID,"-")
 <a id="__codelineno-64-2" name="__codelineno-64-2" href="#__codelineno-64-2"></a>[[1]]
-<a id="__codelineno-64-3" name="__codelineno-64-3" href="#__codelineno-64-3"></a>[1] "TCGA" "OR"   "A5KT" "01A"  "11R"  "A29S" "07"  
+<a id="__codelineno-64-3" name="__codelineno-64-3" href="#__codelineno-64-3"></a>[1] "TCGA" "OR"   "A5KT" "01A"  "11R"  "A29S" "07"
 <a id="__codelineno-64-4" name="__codelineno-64-4" href="#__codelineno-64-4"></a>[[2]]
-<a id="__codelineno-64-5" name="__codelineno-64-5" href="#__codelineno-64-5"></a>[1] "TCGA" "P6"   "A5OF" "01A"  "11R"  "A29S" "07"  
+<a id="__codelineno-64-5" name="__codelineno-64-5" href="#__codelineno-64-5"></a>[1] "TCGA" "P6"   "A5OF" "01A"  "11R"  "A29S" "07"
 <a id="__codelineno-64-6" name="__codelineno-64-6" href="#__codelineno-64-6"></a>[[3]]
-<a id="__codelineno-64-7" name="__codelineno-64-7" href="#__codelineno-64-7"></a>[1] "TCGA" "OU"   "A5PI" "11A"  "12R"  "A29S" "07"  
+<a id="__codelineno-64-7" name="__codelineno-64-7" href="#__codelineno-64-7"></a>[1] "TCGA" "OU"   "A5PI" "11A"  "12R"  "A29S" "07"
 <a id="__codelineno-64-8" name="__codelineno-64-8" href="#__codelineno-64-8"></a>[[4]]
-<a id="__codelineno-64-9" name="__codelineno-64-9" href="#__codelineno-64-9"></a>[1] "TCGA" "OR"   "A5JQ" "01A"  "11R"  "A29S" "07"  
+<a id="__codelineno-64-9" name="__codelineno-64-9" href="#__codelineno-64-9"></a>[1] "TCGA" "OR"   "A5JQ" "01A"  "11R"  "A29S" "07"
 <a id="__codelineno-64-10" name="__codelineno-64-10" href="#__codelineno-64-10"></a>[[5]]
 <a id="__codelineno-64-11" name="__codelineno-64-11" href="#__codelineno-64-11"></a>[1] "TCGA" "PK"   "A5HB" "11A"  "11R"  "A29S" "07"
 </code></pre></div></p>
@@ -13153,7 +13212,7 @@ grep的核心就是正则表达式（Regular Expressions，通常缩写为regex�
 <div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a>&gt; unlist(strsplit(pID,"-"))
 <a id="__codelineno-65-2" name="__codelineno-65-2" href="#__codelineno-65-2"></a> [1] "TCGA" "OR"   "A5KT" "01A"  "11R"  "A29S" "07"   "TCGA" "P6"   "A5OF"
 <a id="__codelineno-65-3" name="__codelineno-65-3" href="#__codelineno-65-3"></a>[11] "01A"  "11R"  "A29S" "07"   "TCGA" "OU"   "A5PI" "11A"  "12R"  "A29S"
-<a id="__codelineno-65-4" name="__codelineno-65-4" href="#__codelineno-65-4"></a>[21] "07"   "TCGA" "OR"   "A5JQ" "01A"  "11R"  "A29S" "07"   "TCGA" "PK"  
+<a id="__codelineno-65-4" name="__codelineno-65-4" href="#__codelineno-65-4"></a>[21] "07"   "TCGA" "OR"   "A5JQ" "01A"  "11R"  "A29S" "07"   "TCGA" "PK"
 <a id="__codelineno-65-5" name="__codelineno-65-5" href="#__codelineno-65-5"></a>[31] "A5HB" "11A"  "11R"  "A29S" "07"
 </code></pre></div></p>
 <p>字符串的拼接函数：paste(),paste0()。
@@ -13178,11 +13237,11 @@ grep的核心就是正则表达式（Regular Expressions，通常缩写为regex�
 <p>下面是一个案例：
 <div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a>&gt; web = c("www.","medbioinfo.","cloud")
 <a id="__codelineno-68-2" name="__codelineno-68-2" href="#__codelineno-68-2"></a>&gt; web
-<a id="__codelineno-68-3" name="__codelineno-68-3" href="#__codelineno-68-3"></a>[1] "www."        "medbioinfo." "cloud"      
+<a id="__codelineno-68-3" name="__codelineno-68-3" href="#__codelineno-68-3"></a>[1] "www."        "medbioinfo." "cloud"
 <a id="__codelineno-68-4" name="__codelineno-68-4" href="#__codelineno-68-4"></a>&gt; order(web)
 <a id="__codelineno-68-5" name="__codelineno-68-5" href="#__codelineno-68-5"></a>[1] 3 2 1
 <a id="__codelineno-68-6" name="__codelineno-68-6" href="#__codelineno-68-6"></a>&gt; web[order(web)]
-<a id="__codelineno-68-7" name="__codelineno-68-7" href="#__codelineno-68-7"></a>[1] "cloud"       "medbioinfo." "www."       
+<a id="__codelineno-68-7" name="__codelineno-68-7" href="#__codelineno-68-7"></a>[1] "cloud"       "medbioinfo." "www."
 <a id="__codelineno-68-8" name="__codelineno-68-8" href="#__codelineno-68-8"></a>&gt; web[order(web,decreasing = T)]
 <a id="__codelineno-68-9" name="__codelineno-68-9" href="#__codelineno-68-9"></a>[1] "www."        "medbioinfo." "cloud"
 </code></pre></div></p>
@@ -13331,8 +13390,8 @@ R编程语言提供的几种类的循环来处理循环需求：
 <img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1608900539745-54b575b4-ec32-4cf6-83c8-a9405c0e3d7b.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=203&amp;id=musBF&amp;originHeight=193&amp;originWidth=866&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=911" /></p>
 <h2 id="1repeat"><strong>1.repeat循环</strong><a class="headerlink" href="#1repeat" title="Permanent link">&para;</a></h2>
 <p>重复(repeat)循环一次又一次执行相同的代码，直到满足停止条件，来看下在R语言中创建重复(repeat)循环的基本语法：
-<div class="highlight"><pre><span></span><code><a id="__codelineno-89-1" name="__codelineno-89-1" href="#__codelineno-89-1"></a>repeat { 
-<a id="__codelineno-89-2" name="__codelineno-89-2" href="#__codelineno-89-2"></a>   commands 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-89-1" name="__codelineno-89-1" href="#__codelineno-89-1"></a>repeat {
+<a id="__codelineno-89-2" name="__codelineno-89-2" href="#__codelineno-89-2"></a>   commands
 <a id="__codelineno-89-3" name="__codelineno-89-3" href="#__codelineno-89-3"></a>   if(condition) {
 <a id="__codelineno-89-4" name="__codelineno-89-4" href="#__codelineno-89-4"></a>      break
 <a id="__codelineno-89-5" name="__codelineno-89-5" href="#__codelineno-89-5"></a>   }
@@ -13341,7 +13400,7 @@ R编程语言提供的几种类的循环来处理循环需求：
 <p>commands就是要重复执行的代码，condition就是给定重复条件。
 示例：
 <div class="highlight"><pre><span></span><code><a id="__codelineno-90-1" name="__codelineno-90-1" href="#__codelineno-90-1"></a>bio = 1
-<a id="__codelineno-90-2" name="__codelineno-90-2" href="#__codelineno-90-2"></a>repeat { 
+<a id="__codelineno-90-2" name="__codelineno-90-2" href="#__codelineno-90-2"></a>repeat {
 <a id="__codelineno-90-3" name="__codelineno-90-3" href="#__codelineno-90-3"></a>   print("WeChat Official Acount ：MedBioInfoCloud")
 <a id="__codelineno-90-4" name="__codelineno-90-4" href="#__codelineno-90-4"></a>   bio = bio +1
 <a id="__codelineno-90-5" name="__codelineno-90-5" href="#__codelineno-90-5"></a>   if(bio&gt;5) {
@@ -13371,9 +13430,9 @@ while循环一个关键问题是循环可能不会运行，并且当条件被测
 <a id="__codelineno-93-6" name="__codelineno-93-6" href="#__codelineno-93-6"></a>  }
 </code></pre></div></p>
 <p>代码运行结果：
-<div class="highlight"><pre><span></span><code><a id="__codelineno-94-1" name="__codelineno-94-1" href="#__codelineno-94-1"></a>[1] "WeChat Official Acount" ":"                      "MedBioInfoCloud"       
-<a id="__codelineno-94-2" name="__codelineno-94-2" href="#__codelineno-94-2"></a>[1] "WeChat Official Acount" ":"                      "MedBioInfoCloud"       
-<a id="__codelineno-94-3" name="__codelineno-94-3" href="#__codelineno-94-3"></a>[1] "WeChat Official Acount" ":"                      "MedBioInfoCloud"       
+<div class="highlight"><pre><span></span><code><a id="__codelineno-94-1" name="__codelineno-94-1" href="#__codelineno-94-1"></a>[1] "WeChat Official Acount" ":"                      "MedBioInfoCloud"
+<a id="__codelineno-94-2" name="__codelineno-94-2" href="#__codelineno-94-2"></a>[1] "WeChat Official Acount" ":"                      "MedBioInfoCloud"
+<a id="__codelineno-94-3" name="__codelineno-94-3" href="#__codelineno-94-3"></a>[1] "WeChat Official Acount" ":"                      "MedBioInfoCloud"
 <a id="__codelineno-94-4" name="__codelineno-94-4" href="#__codelineno-94-4"></a>[1] "WeChat Official Acount" ":"                      "MedBioInfoCloud"
 </code></pre></div></p>
 <h2 id="3for"><strong>3.for循环</strong><a class="headerlink" href="#3for" title="Permanent link">&para;</a></h2>
@@ -13396,31 +13455,31 @@ R编程中的for循环特别灵活，因为它们不限于整数，甚至不限�
 <h1 id="r_7"><strong>七.利用R操作系统文件</strong><a class="headerlink" href="#r_7" title="Permanent link">&para;</a></h1>
 <p>Windows系统下的文件操作，包括创建文件夹，创建文件，删除文件，复制文件等操作。可通过getwd()获取当前工作路径，setwd()设置工作路径。需要注意的是，在R中，工作路径中的"\"得用"\"或"/"。"."代表当前工作目录，".."代表上一级工作目录。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-97-1" name="__codelineno-97-1" href="#__codelineno-97-1"></a>#创建一个文件fileA.txt,文件内容是:微信公众号,\n相当于回车
-<a id="__codelineno-97-2" name="__codelineno-97-2" href="#__codelineno-97-2"></a>cat("微信公众号\n",file="fileA.txt") 
+<a id="__codelineno-97-2" name="__codelineno-97-2" href="#__codelineno-97-2"></a>cat("微信公众号\n",file="fileA.txt")
 <a id="__codelineno-97-3" name="__codelineno-97-3" href="#__codelineno-97-3"></a>#创建一个文件fileB.txt,文件内容是MedBioInfoCloud,\n相当于回车
-<a id="__codelineno-97-4" name="__codelineno-97-4" href="#__codelineno-97-4"></a>cat("MedBioInfoCloud\n",file="fileB.txt") 
+<a id="__codelineno-97-4" name="__codelineno-97-4" href="#__codelineno-97-4"></a>cat("MedBioInfoCloud\n",file="fileB.txt")
 <a id="__codelineno-97-5" name="__codelineno-97-5" href="#__codelineno-97-5"></a>#创建一个文件folder.txt, 注意会覆盖原来的文件
-<a id="__codelineno-97-6" name="__codelineno-97-6" href="#__codelineno-97-6"></a>file.create("folder.txt") 
+<a id="__codelineno-97-6" name="__codelineno-97-6" href="#__codelineno-97-6"></a>file.create("folder.txt")
 <a id="__codelineno-97-7" name="__codelineno-97-7" href="#__codelineno-97-7"></a>#将文件B的内容附到A内容的后面，注意没有空行
-<a id="__codelineno-97-8" name="__codelineno-97-8" href="#__codelineno-97-8"></a>file.append("fileA.txt", "fileB.txt") 
-<a id="__codelineno-97-9" name="__codelineno-97-9" href="#__codelineno-97-9"></a>dir.create("BioInfo") #创建名为BioInfo的文件夹,如果文件夹存在，会发出警告 
-<a id="__codelineno-97-10" name="__codelineno-97-10" href="#__codelineno-97-10"></a>file.show("fileA.txt") #新开工作窗口显示文件A的内容 
+<a id="__codelineno-97-8" name="__codelineno-97-8" href="#__codelineno-97-8"></a>file.append("fileA.txt", "fileB.txt")
+<a id="__codelineno-97-9" name="__codelineno-97-9" href="#__codelineno-97-9"></a>dir.create("BioInfo") #创建名为BioInfo的文件夹,如果文件夹存在，会发出警告
+<a id="__codelineno-97-10" name="__codelineno-97-10" href="#__codelineno-97-10"></a>file.show("fileA.txt") #新开工作窗口显示文件A的内容
 <a id="__codelineno-97-11" name="__codelineno-97-11" href="#__codelineno-97-11"></a>#复制文件A保存为C文件，同一个文件夹
 <a id="__codelineno-97-12" name="__codelineno-97-12" href="#__codelineno-97-12"></a>file.copy("fileA.txt", "fileC.txt") #fileC.txt存在，无法复制
 <a id="__codelineno-97-13" name="__codelineno-97-13" href="#__codelineno-97-13"></a>file.copy("fileA.txt", "fileC.txt",overwrite = T) #如果文件覆盖文件
-<a id="__codelineno-97-14" name="__codelineno-97-14" href="#__codelineno-97-14"></a>dir.create("med") #创建名为med的文件夹 
-<a id="__codelineno-97-15" name="__codelineno-97-15" href="#__codelineno-97-15"></a>file.copy(c("fileA.txt", "fileB.txt"), "med") #将文件夹拷贝到med文件夹中 
-<a id="__codelineno-97-16" name="__codelineno-97-16" href="#__codelineno-97-16"></a>list.files("med") #查看文件夹med中的文件名 
+<a id="__codelineno-97-14" name="__codelineno-97-14" href="#__codelineno-97-14"></a>dir.create("med") #创建名为med的文件夹
+<a id="__codelineno-97-15" name="__codelineno-97-15" href="#__codelineno-97-15"></a>file.copy(c("fileA.txt", "fileB.txt"), "med") #将文件夹拷贝到med文件夹中
+<a id="__codelineno-97-16" name="__codelineno-97-16" href="#__codelineno-97-16"></a>list.files("med") #查看文件夹med中的文件名
 <a id="__codelineno-97-17" name="__codelineno-97-17" href="#__codelineno-97-17"></a>dir()
 <a id="__codelineno-97-18" name="__codelineno-97-18" href="#__codelineno-97-18"></a>dir(path = ".\\",pattern="txt$")#查看特定格式的文件
-<a id="__codelineno-97-19" name="__codelineno-97-19" href="#__codelineno-97-19"></a>unlink("med", recursive=F) #如果文件夹med为空，删除文件夹med 
-<a id="__codelineno-97-20" name="__codelineno-97-20" href="#__codelineno-97-20"></a>unlink("med", recursive=T) #删除文件夹med，如果其中有文件一并删除 
+<a id="__codelineno-97-19" name="__codelineno-97-19" href="#__codelineno-97-19"></a>unlink("med", recursive=F) #如果文件夹med为空，删除文件夹med
+<a id="__codelineno-97-20" name="__codelineno-97-20" href="#__codelineno-97-20"></a>unlink("med", recursive=T) #删除文件夹med，如果其中有文件一并删除
 <a id="__codelineno-97-21" name="__codelineno-97-21" href="#__codelineno-97-21"></a>file.remove("fileA.txt","fileB.txt","fileC.txt") #移除三个文件
 </code></pre></div></p>
 <p>我们还可以通过rm()和remove()函数移除当前环境中所有的数据：
 <div class="highlight"><pre><span></span><code><a id="__codelineno-98-1" name="__codelineno-98-1" href="#__codelineno-98-1"></a>char = "MedBioInfoCloud"
 <a id="__codelineno-98-2" name="__codelineno-98-2" href="#__codelineno-98-2"></a>ls()
-<a id="__codelineno-98-3" name="__codelineno-98-3" href="#__codelineno-98-3"></a>rm(list=ls()) 
+<a id="__codelineno-98-3" name="__codelineno-98-3" href="#__codelineno-98-3"></a>rm(list=ls())
 <a id="__codelineno-98-4" name="__codelineno-98-4" href="#__codelineno-98-4"></a>char = "MedBioInfoCloud"
 <a id="__codelineno-98-5" name="__codelineno-98-5" href="#__codelineno-98-5"></a>remove(list=ls())
 </code></pre></div></p>
@@ -13467,7 +13526,7 @@ header：一个表示文件是否在第一行包含了变量的逻辑型变量�
 sep：sep分开数据的分隔符。默认sep=""
 stringsAsFactors ：逻辑值，标记字符向量是否需要转化为因子，默认是TRUE。
 下面是视频中案例代码：
-<div class="highlight"><pre><span></span><code><a id="__codelineno-103-1" name="__codelineno-103-1" href="#__codelineno-103-1"></a>rm(list=ls()) 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-103-1" name="__codelineno-103-1" href="#__codelineno-103-1"></a>rm(list=ls())
 <a id="__codelineno-103-2" name="__codelineno-103-2" href="#__codelineno-103-2"></a>#设置工作路径
 <a id="__codelineno-103-3" name="__codelineno-103-3" href="#__codelineno-103-3"></a>setwd("F:\\Rcourse\\files")
 <a id="__codelineno-103-4" name="__codelineno-103-4" href="#__codelineno-103-4"></a>COAD_Exp1 = read.table("TCGA-COAD-Exp.txt",header = T,
@@ -13508,12 +13567,12 @@ stringsAsFactors ：逻辑值，标记字符向量是否需要转化为因子，
 </code></pre></div></p>
 <p>下面是提取TCGA数据库中xml文件中临床数据的代码：
 <div class="highlight"><pre><span></span><code><a id="__codelineno-108-1" name="__codelineno-108-1" href="#__codelineno-108-1"></a>#处理XML文件
-<a id="__codelineno-108-2" name="__codelineno-108-2" href="#__codelineno-108-2"></a>#install.packages("XML") 
+<a id="__codelineno-108-2" name="__codelineno-108-2" href="#__codelineno-108-2"></a>#install.packages("XML")
 <a id="__codelineno-108-3" name="__codelineno-108-3" href="#__codelineno-108-3"></a>library("XML")
 <a id="__codelineno-108-4" name="__codelineno-108-4" href="#__codelineno-108-4"></a>library("methods")
 <a id="__codelineno-108-5" name="__codelineno-108-5" href="#__codelineno-108-5"></a>xmlFil = dir("XML",full.names = T)
-<a id="__codelineno-108-6" name="__codelineno-108-6" href="#__codelineno-108-6"></a>result &lt;- xmlParse(file = xmlFil[1]) 
-<a id="__codelineno-108-7" name="__codelineno-108-7" href="#__codelineno-108-7"></a>rootnode &lt;- xmlRoot(result)  
+<a id="__codelineno-108-6" name="__codelineno-108-6" href="#__codelineno-108-6"></a>result &lt;- xmlParse(file = xmlFil[1])
+<a id="__codelineno-108-7" name="__codelineno-108-7" href="#__codelineno-108-7"></a>rootnode &lt;- xmlRoot(result)
 <a id="__codelineno-108-8" name="__codelineno-108-8" href="#__codelineno-108-8"></a>xmldataframe &lt;- xmlToDataFrame( rootnode[2])
 </code></pre></div></p>
 <p>xml文件是一个病人数据一个文件，我们可通过一个循环，就可以不断读取了。</p>
@@ -13640,7 +13699,7 @@ defaultMethod:一个向量，用于指定每个数据集采用的插补建模方
 <a id="__codelineno-127-2" name="__codelineno-127-2" href="#__codelineno-127-2"></a>install.packages("reshape2")
 <a id="__codelineno-127-3" name="__codelineno-127-3" href="#__codelineno-127-3"></a>library(reshape2)
 <a id="__codelineno-127-4" name="__codelineno-127-4" href="#__codelineno-127-4"></a>data =  data.frame(Patient=c('Patient1','Patient2','Patient3','Patient4'),
-<a id="__codelineno-127-5" name="__codelineno-127-5" href="#__codelineno-127-5"></a>                  t0=c(189,170,135,145), t1=c(160,140,137,120), 
+<a id="__codelineno-127-5" name="__codelineno-127-5" href="#__codelineno-127-5"></a>                  t0=c(189,170,135,145), t1=c(160,140,137,120),
 <a id="__codelineno-127-6" name="__codelineno-127-6" href="#__codelineno-127-6"></a>                  t2=c(156,145,133,140),  t3=c(160,155,140,120))
 </code></pre></div></p>
 <p>melt()函数融合数据，依次对各个维度的名称进行组合，将数据进行向量化。melt是数据融合的意思，它做的工作其实就是把数据由“宽”转“长”。melt则可以根据不同的数据结构，进行不同的数据融合操作。 如果数据是array或者matrix，melt函数会将其索引拆分为不同的变量，其中的数值为索引对应的取值。
@@ -13718,7 +13777,7 @@ tidry包是把需要用的数据处理成标准而统一的数据框:
 </code></pre></div></p>
 <p>gather和spread函数将数据在长格式和宽格式之间相互转化，应用在比如稀疏矩阵和稠密矩阵之间的转化;separate和union方法提供了数据分组拆分、合并的功能，应用在nominal数据的转化上。
 R将整洁数据定义为：每个变量的数据存储在自身的列中，每个观测值的数据存储在其自身的行中。整洁数据是进行数据再加工的基础。
-tidyr包主要涉及： 
+tidyr包主要涉及：
 1)缺失值的简单补齐
 2)长形表变宽形表与宽形表变长形表
 　　gather-把宽度较大的数据转换成一个更长的形式，它类比于从reshape2包中融合函数的功能。
@@ -13730,7 +13789,7 @@ tidyr包主要涉及： 
 tidyr包：（gather（宽数据转为长数据）、spread（长数据转为宽数据）、unit（多列合并为一列）、separate（将一列分离为多列））
 <strong>宽数据转为长数据gather()函数：</strong>首先我们通过一个数据集来解释什么是宽数据。医学研究宽数据和长数据都很常见，最常见的是医学随访的数据，往往在随访期内，多次策略。比如，测量Patient1、Patient2、Patient3、Patient4四人用某种治疗药物之后，治疗前、治疗后1周、治疗后2周，治疗后3周的收缩压值。可以得到两种结构的数据库。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-136-1" name="__codelineno-136-1" href="#__codelineno-136-1"></a>data&lt;- data.frame(Patient=c('Patient1','Patient2','Patient3','Patient4'),
-<a id="__codelineno-136-2" name="__codelineno-136-2" href="#__codelineno-136-2"></a>                 t0=c(189,170,135,145), t1=c(160,140,137,120), 
+<a id="__codelineno-136-2" name="__codelineno-136-2" href="#__codelineno-136-2"></a>                 t0=c(189,170,135,145), t1=c(160,140,137,120),
 <a id="__codelineno-136-3" name="__codelineno-136-3" href="#__codelineno-136-3"></a>                 t2=c(156,145,133,140),  t3=c(160,155,140,120))
 </code></pre></div></p>
 <p>像data这样的我们将其称为宽数据
@@ -13910,7 +13969,7 @@ pivot_longer()用于把宽格式数据转换为长格式。</p>
 <p>前面一直提到函数，但是并没有说R中的函数是什么，这一章就讲解函数。一个函数是组合在一起以执行特定任务的一组语句。R具有大量内置函数，当然用户也可以创建自己的功能。在R中，函数是一个对象，所以R解释器能够将控制传递给函数，以将参数传递函数完成操作。该函数又执行其任务并将控制权返回给解释器以及可存储在其他对象中的任何结果。R语言的各种包或第三方包中提供了大量的函数帮助我们解决实际中的各种问题。有时，我们还需要自己编写函数来实现自己的实际需求。
 使用关键字function来创建一个R函数。R函数定义的基本语法如下：
 <div class="highlight"><pre><span></span><code><a id="__codelineno-150-1" name="__codelineno-150-1" href="#__codelineno-150-1"></a>function_name &lt;- function(arg_1, arg_2, ...) {
-<a id="__codelineno-150-2" name="__codelineno-150-2" href="#__codelineno-150-2"></a>   Function body 
+<a id="__codelineno-150-2" name="__codelineno-150-2" href="#__codelineno-150-2"></a>   Function body
 <a id="__codelineno-150-3" name="__codelineno-150-3" href="#__codelineno-150-3"></a>}
 </code></pre></div></p>
 <p>函数组件函数中有许多不同的部分，它们是：
@@ -13922,14 +13981,14 @@ R具有许多内置函数，可以直接在程序中调用，而不必定义它�
 <h2 id="1_4"><strong>1.内置函数和用户自定义的函数</strong><a class="headerlink" href="#1_4" title="Permanent link">&para;</a></h2>
 <p>内置函数的简单示例有：seq()，mean()，max()，sum(x)和paste(...)等。它们可在用户编写的程序直接调用。我们可以在R中创建用户定义的函数。它们用于实现用户想要的功能，当创建了这些用户自定义函数后，就可以像内置函数那样使用。这里就给大家写一个函数，大家就知道函数怎么创建，怎么调用了。我们知道TCGA数据库中病人的Barcode条码：
 <img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1608900539827-8c402108-e0c9-4ac0-9a8a-9df1b5a7d3f4.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=266&amp;id=xgcrM&amp;originHeight=181&amp;originWidth=454&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=668" /></p>
-<p>| </p>
-<p>Label | </p>
-<p>Identifier for | </p>
+<p>|</p>
+<p>Label |</p>
+<p>Identifier for |</p>
 <p>解释 |
 | --- | --- | --- |
-| </p>
-<p>Project | </p>
-<p>Project name | </p>
+|</p>
+<p>Project |</p>
+<p>Project name |</p>
 <table>
 <thead>
 <tr>
@@ -13942,8 +14001,8 @@ R具有许多内置函数，可以直接在程序中调用，而不必定义它�
 </tr>
 </tbody>
 </table>
-<p>TSS | </p>
-<p>Tissue source site | </p>
+<p>TSS |</p>
+<p>Tissue source site |</p>
 <table>
 <thead>
 <tr>
@@ -13956,8 +14015,8 @@ R具有许多内置函数，可以直接在程序中调用，而不必定义它�
 </tr>
 </tbody>
 </table>
-<p>Participant | </p>
-<p>Study participant | </p>
+<p>Participant |</p>
+<p>Study participant |</p>
 <table>
 <thead>
 <tr>
@@ -13970,8 +14029,8 @@ R具有许多内置函数，可以直接在程序中调用，而不必定义它�
 </tr>
 </tbody>
 </table>
-<p>Sample | </p>
-<p>Sample type | </p>
+<p>Sample |</p>
+<p>Sample type |</p>
 <table>
 <thead>
 <tr>
@@ -13984,8 +14043,8 @@ R具有许多内置函数，可以直接在程序中调用，而不必定义它�
 </tr>
 </tbody>
 </table>
-<p>Vial | </p>
-<p>Order of sample in a sequence of samples | </p>
+<p>Vial |</p>
+<p>Order of sample in a sequence of samples |</p>
 <table>
 <thead>
 <tr>
@@ -13998,8 +14057,8 @@ R具有许多内置函数，可以直接在程序中调用，而不必定义它�
 </tr>
 </tbody>
 </table>
-<p>Portion | </p>
-<p>Order of portion in a sequence of 100-120 mg sample portions | </p>
+<p>Portion |</p>
+<p>Order of portion in a sequence of 100-120 mg sample portions |</p>
 <table>
 <thead>
 <tr>
@@ -14012,8 +14071,8 @@ R具有许多内置函数，可以直接在程序中调用，而不必定义它�
 </tr>
 </tbody>
 </table>
-<p>Analyte | </p>
-<p>Molecular type of analyte for analysis | </p>
+<p>Analyte |</p>
+<p>Molecular type of analyte for analysis |</p>
 <table>
 <thead>
 <tr>
@@ -14026,8 +14085,8 @@ R具有许多内置函数，可以直接在程序中调用，而不必定义它�
 </tr>
 </tbody>
 </table>
-<p>Plate | </p>
-<p>Order of plate in a sequence of 96-well plates | </p>
+<p>Plate |</p>
+<p>Order of plate in a sequence of 96-well plates |</p>
 <table>
 <thead>
 <tr>
@@ -14040,8 +14099,8 @@ R具有许多内置函数，可以直接在程序中调用，而不必定义它�
 </tr>
 </tbody>
 </table>
-<p>Center | </p>
-<p>Sequencing or characterization center that will receive the aliquot for analysis | </p>
+<p>Center |</p>
+<p>Sequencing or characterization center that will receive the aliquot for analysis |</p>
 <p>数据由哪个机构分析：如 01代表The Broad Institute GCC,更多见：<a href="https://www.omicsclass.com/article/1081">Center</a> |</p>
 <p>Sample位置的，01-09表示肿瘤组织，10-19表示对照样本，我们写一个函数用来区分肿瘤和对照样本的Barcode。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-151-1" name="__codelineno-151-1" href="#__codelineno-151-1"></a>stringAsFactors=FALSE
@@ -14066,7 +14125,13 @@ R具有许多内置函数，可以直接在程序中调用，而不必定义它�
 <a id="__codelineno-151-20" name="__codelineno-151-20" href="#__codelineno-151-20"></a>}
 </code></pre></div></p>
 <h2 id="2r_2"><strong>2.提升R的运算速度的一些函数</strong><a class="headerlink" href="#2r_2" title="Permanent link">&para;</a></h2>
-<p>当我们利用 R 语言处理大型数据集时，for 循环语句的运算效率非常低。有许多种方法可以提升你的代码运算效率，R对常见的运算如矩阵乘积，进行过专门的优化。那么，我们应当有意识将算法中的相关部分转用R优化过的内置函数处理，从而降低计算成本。因此在实际应用中，数据处理人员常常利用apply族函数替代for循环以便于在一定程度上提升R语言数据处理速度，除此之外，该方法还可以在一定程度上简化代码。虽然该方法非常有用，但是当你面对复杂的情形时，你需要灵活运用该函数。apply族函数包括apply(), lapply(), sapply(), vapply(),mapply(),rapply(), tapply()。在实际应用中，常常需要数据处理人员依据不同数据结构及数据处理目的采用不同apply族函数。</p>
+<p>当我们利用 R 语言处理大型数据集时，for 循环语句的运算效率非常低。
+有许多种方法可以提升你的代码运算效率，R对常见的运算如矩阵乘积，进行过专门的优化。
+那么，我们应当有意识将算法中的相关部分转用R优化过的内置函数处理，从而降低计算成本。
+因此在实际应用中，数据处理人员常常利用apply族函数替代for循环以便于在一定程度上提升R语言数据处理速度，除此之外，该方法还可以在一定程度上简化代码。
+虽然该方法非常有用，但是当你面对复杂的情形时，你需要灵活运用该函数。
+apply族函数包括apply(), lapply(), sapply(), vapply(),mapply(),rapply(), tapply()。
+在实际应用中，常常需要数据处理人员依据不同数据结构及数据处理目的采用不同apply族函数。</p>
 <h3 id="21-apply"><img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1608900539771-99eec8dc-689f-4b40-803e-9931a350b327.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=779&amp;id=SgETu&amp;originHeight=779&amp;originWidth=1022&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=1022" /><strong>2.1 apply</strong><a class="headerlink" href="#21-apply" title="Permanent link">&para;</a></h3>
 <p>apply函数只能用于处理矩阵类型的数据，也就是说所有的数据必须是同一类型。因此要使用apply函数的话，需要将数据类型转换成矩阵类型。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-152-1" name="__codelineno-152-1" href="#__codelineno-152-1"></a>apply(X, MARGIN, FUN, …)
@@ -14076,7 +14141,7 @@ MARGIN：表示以行为单位进行计算还是以列为单位：1表示以行�
 FUN：在行或者列上进行运算的函数。
 ...：运算函数的参数。
 我们首先读入上一章中的表达数据，并进行预处理，当复习前面的内容啦：
-<div class="highlight"><pre><span></span><code><a id="__codelineno-153-1" name="__codelineno-153-1" href="#__codelineno-153-1"></a>rm(list=ls()) 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-153-1" name="__codelineno-153-1" href="#__codelineno-153-1"></a>rm(list=ls())
 <a id="__codelineno-153-2" name="__codelineno-153-2" href="#__codelineno-153-2"></a>stringsAsFactors = F
 <a id="__codelineno-153-3" name="__codelineno-153-3" href="#__codelineno-153-3"></a>#
 <a id="__codelineno-153-4" name="__codelineno-153-4" href="#__codelineno-153-4"></a>exp = read.table("F:\\Rcourse\\files\\pExp.txt",header = T,
@@ -14102,7 +14167,7 @@ FUN：在行或者列上进行运算的函数。
 </code></pre></div></p>
 <p>我们用apply函数，速度就提升了好多
 <div class="highlight"><pre><span></span><code><a id="__codelineno-155-1" name="__codelineno-155-1" href="#__codelineno-155-1"></a>#用apply函数
-<a id="__codelineno-155-2" name="__codelineno-155-2" href="#__codelineno-155-2"></a>apExpmean &lt;- apply(expdf,1,mean) 
+<a id="__codelineno-155-2" name="__codelineno-155-2" href="#__codelineno-155-2"></a>apExpmean &lt;- apply(expdf,1,mean)
 <a id="__codelineno-155-3" name="__codelineno-155-3" href="#__codelineno-155-3"></a>apExpmean = as.data.frame(apExpmean)
 </code></pre></div></p>
 <h3 id="22-lapplysapply"><strong>2.2 lapply()函数和sapply()函数</strong><a class="headerlink" href="#22-lapplysapply" title="Permanent link">&para;</a></h3>
@@ -14168,7 +14233,14 @@ eapply函数平时很难被用到，但对于R包开发来说，环境空间的�
 <strong>下面是对apply家族函数的总结：</strong>
 <img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1608900539807-36adc399-81d1-4aa9-b5cb-58b47409d5a5.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=506&amp;id=W0vHE&amp;originHeight=506&amp;originWidth=923&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=923" /></p>
 <h3 id="28"><strong>2.8 管道的运用</strong><a class="headerlink" href="#28" title="Permanent link">&para;</a></h3>
-<p>使用R语言处理数据或者分析，很多时候免不了要写连续输入输出的代码，按照传统书写方式或者习惯，初学者往往会引入一大堆中介变量，或者使用函数嵌套进行一次性输出。以上两种方法虽然从结果上来看，同样可以达到我们预期的效果，但是无论是代码效率还是内存占用上都存在巨大劣势。使用中介变量会使得内存开销成倍增长，特别是你的原始数据量非常大而内存又有限，在一个处理过程中引入太多中介对象，不仅代码冗余，内存也会迅速透支。使用函数嵌套则避免了内存占用的问题，但是嵌套太多层函数，会造成代码难以理解，阅读困难，甚至给今后的项目复用造成很大的困扰。而R语言大佬们很早就已经意识到这个问题，开始在R语言中引入管道操作符函数，进行连续传参，实现了内存节省、代码优化的需求。通常我们使用最多的管道函数来自于magrittr包，该包中管道操作函数写作%&gt;%，这是一个在R语言中使用非常频繁的函数，很多比较成熟的项目扩展包都已经实现了管道操作函数的内置。（比如dplyr、rvest、leaflet等都实现了默认调用）。在大多数并没有默认加载magrittr包的扩展包函数中使用管道操作符，需要先加载该包之后才能使用该函数。</p>
+<p>使用R语言处理数据或者分析，很多时候免不了要写连续输入输出的代码，按照传统书写方式或者习惯，初学者往往会引入一大堆中介变量，或者使用函数嵌套进行一次性输出。
+以上两种方法虽然从结果上来看，同样可以达到我们预期的效果，但是无论是代码效率还是内存占用上都存在巨大劣势。
+使用中介变量会使得内存开销成倍增长，特别是你的原始数据量非常大而内存又有限，在一个处理过程中引入太多中介对象，不仅代码冗余，内存也会迅速透支。
+使用函数嵌套则避免了内存占用的问题，但是嵌套太多层函数，会造成代码难以理解，阅读困难，甚至给今后的项目复用造成很大的困扰。
+而R语言大佬们很早就已经意识到这个问题，开始在R语言中引入管道操作符函数，进行连续传参，实现了内存节省、代码优化的需求。
+通常我们使用最多的管道函数来自于magrittr包，该包中管道操作函数写作%&gt;%，这是一个在R语言中使用非常频繁的函数，很多比较成熟的项目扩展包都已经实现了管道操作函数的内置。
+（比如dplyr、rvest、leaflet等都实现了默认调用）。
+在大多数并没有默认加载magrittr包的扩展包函数中使用管道操作符，需要先加载该包之后才能使用该函数。</p>
 <p>magrittr包被定义为一个高效的管道操作工具包，通过管道的连接方式，让数据或表达式的传递更高效，使用操作符%&gt;%，可以直接把数据传递给下一个函数调用或表达式。magrittr包的主要目标有2个，第一是减少代码开发时间，提高代码的可读性和维护性；第二是让你的代码更短，再短，短短短…
 magrittr包，主要定义了4个管道操作符，分别是%&gt;%, %T&gt;%, %$% 和 %&lt;&gt;%。其中，操作符%&gt;%是最常用的，其他3个操作符，与%&gt;%类似，在特殊的使用场景会起到更好的作用。
 <img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1608900539805-e031826f-06a1-4134-8357-6eb5a6f59ecc.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=135&amp;id=L5Wny&amp;originHeight=135&amp;originWidth=623&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=623" />
@@ -14189,7 +14261,7 @@ magrittr包，主要定义了4个管道操作符，分别是%&gt;%, %T&gt;%, %$%
 <a id="__codelineno-163-6" name="__codelineno-163-6" href="#__codelineno-163-6"></a>t(data) %&gt;% as.data.frame()%$% cor(TSPAN6, TNMD)
 <a id="__codelineno-163-7" name="__codelineno-163-7" href="#__codelineno-163-7"></a>t(data) %&gt;% as.data.frame()%$% plot(TSPAN6, TNMD)
 <a id="__codelineno-163-8" name="__codelineno-163-8" href="#__codelineno-163-8"></a>
-<a id="__codelineno-163-9" name="__codelineno-163-9" href="#__codelineno-163-9"></a>TM &lt;- rowMeans(data[,IDinfo[["TumorBarcode"]]]) 
+<a id="__codelineno-163-9" name="__codelineno-163-9" href="#__codelineno-163-9"></a>TM &lt;- rowMeans(data[,IDinfo[["TumorBarcode"]]])
 <a id="__codelineno-163-10" name="__codelineno-163-10" href="#__codelineno-163-10"></a>TM %&lt;&gt;% sort()
 </code></pre></div>
 <h1 id="r_8"><strong>十一.R中的网络爬虫</strong><a class="headerlink" href="#r_8" title="Permanent link">&para;</a></h1>
@@ -14229,7 +14301,7 @@ forward()用来模拟浏览器前进按钮
 submit_form()用来提交表单
 str_trim() 删除字符串2端的空格，转义字符也能删掉。
 我们以<a href="http://www.chemfaces.com/">http://www.chemfaces.com/</a> 进行介绍，爬取该网站所有天然产物的药物信息。
-<a href="http://www.chemfaces.com/natural/">http://www.chemfaces.com/natural/</a> </p>
+<a href="http://www.chemfaces.com/natural/">http://www.chemfaces.com/natural/</a></p>
 <h3 id="21-read_html"><strong>2.1 read_html函数</strong><a class="headerlink" href="#21-read_html" title="Permanent link">&para;</a></h3>
 <p>read_html函数用于获取指定链接的网页信息，因此需要制定URL地址以及网页编码格式，默认为UTF－8即可。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-164-1" name="__codelineno-164-1" href="#__codelineno-164-1"></a>stringAsFactors=FALSE
@@ -14272,7 +14344,7 @@ css参数xpath参数功能一致，两者选择一种即可。
 <a id="__codelineno-166-20" name="__codelineno-166-20" href="#__codelineno-166-20"></a>for(i in 1:nrow(ALLurl)){
 <a id="__codelineno-166-21" name="__codelineno-166-21" href="#__codelineno-166-21"></a>  drug_web &lt;- read_html(ALLurl[i,1], encoding = "utf-8")
 <a id="__codelineno-166-22" name="__codelineno-166-22" href="#__codelineno-166-22"></a>  library(stringr)
-<a id="__codelineno-166-23" name="__codelineno-166-23" href="#__codelineno-166-23"></a>  drug_name &lt;- html_nodes(drug_web,"div div.pro_info_left div.pi_title") %&gt;% html_text() %&gt;% str_trim() 
+<a id="__codelineno-166-23" name="__codelineno-166-23" href="#__codelineno-166-23"></a>  drug_name &lt;- html_nodes(drug_web,"div div.pro_info_left div.pi_title") %&gt;% html_text() %&gt;% str_trim()
 <a id="__codelineno-166-24" name="__codelineno-166-24" href="#__codelineno-166-24"></a>  Drug_Name &lt;- c(Drug_Name,drug_name)
 <a id="__codelineno-166-25" name="__codelineno-166-25" href="#__codelineno-166-25"></a>  drugimginfo &lt;- as.character(html_nodes(drug_web,"div div.pro_info_left img")[1] %&gt;% html_attr("src"))
 <a id="__codelineno-166-26" name="__codelineno-166-26" href="#__codelineno-166-26"></a>
@@ -14310,41 +14382,41 @@ css参数xpath参数功能一致，两者选择一种即可。
 类用在泛型函数中，泛型函数是一个函数族，其中的每个函数都有相似的功能，但是适用于某个特定的类。比如summary（），它是生成摘要的函数族，R会为要处理的类寻找合适的摘要函数，并使用比列表更加合理的方式来展示。因此对于hist（）和lm（）它会调用不同的摘要函数。（lm是linear model的缩写）。同样的plot（）也是这样的。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-167-1" name="__codelineno-167-1" href="#__codelineno-167-1"></a>&gt; a &lt;- hist(Nile)
 <a id="__codelineno-167-2" name="__codelineno-167-2" href="#__codelineno-167-2"></a>&gt; summary(a)
-<a id="__codelineno-167-3" name="__codelineno-167-3" href="#__codelineno-167-3"></a>         Length Class  Mode     
-<a id="__codelineno-167-4" name="__codelineno-167-4" href="#__codelineno-167-4"></a>breaks   11     -none- numeric  
-<a id="__codelineno-167-5" name="__codelineno-167-5" href="#__codelineno-167-5"></a>counts   10     -none- numeric  
-<a id="__codelineno-167-6" name="__codelineno-167-6" href="#__codelineno-167-6"></a>density  10     -none- numeric  
-<a id="__codelineno-167-7" name="__codelineno-167-7" href="#__codelineno-167-7"></a>mids     10     -none- numeric  
+<a id="__codelineno-167-3" name="__codelineno-167-3" href="#__codelineno-167-3"></a>         Length Class  Mode
+<a id="__codelineno-167-4" name="__codelineno-167-4" href="#__codelineno-167-4"></a>breaks   11     -none- numeric
+<a id="__codelineno-167-5" name="__codelineno-167-5" href="#__codelineno-167-5"></a>counts   10     -none- numeric
+<a id="__codelineno-167-6" name="__codelineno-167-6" href="#__codelineno-167-6"></a>density  10     -none- numeric
+<a id="__codelineno-167-7" name="__codelineno-167-7" href="#__codelineno-167-7"></a>mids     10     -none- numeric
 <a id="__codelineno-167-8" name="__codelineno-167-8" href="#__codelineno-167-8"></a>xname     1     -none- character
-<a id="__codelineno-167-9" name="__codelineno-167-9" href="#__codelineno-167-9"></a>equidist  1     -none- logical  
+<a id="__codelineno-167-9" name="__codelineno-167-9" href="#__codelineno-167-9"></a>equidist  1     -none- logical
 <a id="__codelineno-167-10" name="__codelineno-167-10" href="#__codelineno-167-10"></a>&gt; plot(a)
 <a id="__codelineno-167-11" name="__codelineno-167-11" href="#__codelineno-167-11"></a>&gt; b &lt;- lm(Nile~c(1:100))
 <a id="__codelineno-167-12" name="__codelineno-167-12" href="#__codelineno-167-12"></a>&gt; plot(b)
-<a id="__codelineno-167-13" name="__codelineno-167-13" href="#__codelineno-167-13"></a>Hit &lt;Return&gt; to see next plot: 
-<a id="__codelineno-167-14" name="__codelineno-167-14" href="#__codelineno-167-14"></a>Hit &lt;Return&gt; to see next plot: 
-<a id="__codelineno-167-15" name="__codelineno-167-15" href="#__codelineno-167-15"></a>Hit &lt;Return&gt; to see next plot: 
-<a id="__codelineno-167-16" name="__codelineno-167-16" href="#__codelineno-167-16"></a>Hit &lt;Return&gt; to see next plot: 
+<a id="__codelineno-167-13" name="__codelineno-167-13" href="#__codelineno-167-13"></a>Hit &lt;Return&gt; to see next plot:
+<a id="__codelineno-167-14" name="__codelineno-167-14" href="#__codelineno-167-14"></a>Hit &lt;Return&gt; to see next plot:
+<a id="__codelineno-167-15" name="__codelineno-167-15" href="#__codelineno-167-15"></a>Hit &lt;Return&gt; to see next plot:
+<a id="__codelineno-167-16" name="__codelineno-167-16" href="#__codelineno-167-16"></a>Hit &lt;Return&gt; to see next plot:
 <a id="__codelineno-167-17" name="__codelineno-167-17" href="#__codelineno-167-17"></a>&gt; summary(b)
 <a id="__codelineno-167-18" name="__codelineno-167-18" href="#__codelineno-167-18"></a>Call:
 <a id="__codelineno-167-19" name="__codelineno-167-19" href="#__codelineno-167-19"></a>lm(formula = Nile ~ c(1:100))
 <a id="__codelineno-167-20" name="__codelineno-167-20" href="#__codelineno-167-20"></a>Residuals:
-<a id="__codelineno-167-21" name="__codelineno-167-21" href="#__codelineno-167-21"></a>    Min      1Q  Median      3Q 
-<a id="__codelineno-167-22" name="__codelineno-167-22" href="#__codelineno-167-22"></a>-483.71  -98.17  -23.21  111.40 
-<a id="__codelineno-167-23" name="__codelineno-167-23" href="#__codelineno-167-23"></a>    Max 
-<a id="__codelineno-167-24" name="__codelineno-167-24" href="#__codelineno-167-24"></a> 368.72 
+<a id="__codelineno-167-21" name="__codelineno-167-21" href="#__codelineno-167-21"></a>    Min      1Q  Median      3Q
+<a id="__codelineno-167-22" name="__codelineno-167-22" href="#__codelineno-167-22"></a>-483.71  -98.17  -23.21  111.40
+<a id="__codelineno-167-23" name="__codelineno-167-23" href="#__codelineno-167-23"></a>    Max
+<a id="__codelineno-167-24" name="__codelineno-167-24" href="#__codelineno-167-24"></a> 368.72
 <a id="__codelineno-167-25" name="__codelineno-167-25" href="#__codelineno-167-25"></a>Coefficients:
 <a id="__codelineno-167-26" name="__codelineno-167-26" href="#__codelineno-167-26"></a>             Estimate Std. Error
 <a id="__codelineno-167-27" name="__codelineno-167-27" href="#__codelineno-167-27"></a>(Intercept) 1056.4224    30.3377
 <a id="__codelineno-167-28" name="__codelineno-167-28" href="#__codelineno-167-28"></a>c(1:100)      -2.7143     0.5216
-<a id="__codelineno-167-29" name="__codelineno-167-29" href="#__codelineno-167-29"></a>            t value Pr(&gt;|t|)    
+<a id="__codelineno-167-29" name="__codelineno-167-29" href="#__codelineno-167-29"></a>            t value Pr(&gt;|t|)
 <a id="__codelineno-167-30" name="__codelineno-167-30" href="#__codelineno-167-30"></a>(Intercept)  34.822  &lt; 2e-16 ***
 <a id="__codelineno-167-31" name="__codelineno-167-31" href="#__codelineno-167-31"></a>c(1:100)     -5.204 1.07e-06 ***
 <a id="__codelineno-167-32" name="__codelineno-167-32" href="#__codelineno-167-32"></a>---
-<a id="__codelineno-167-33" name="__codelineno-167-33" href="#__codelineno-167-33"></a>Signif. codes:  
+<a id="__codelineno-167-33" name="__codelineno-167-33" href="#__codelineno-167-33"></a>Signif. codes:
 <a id="__codelineno-167-34" name="__codelineno-167-34" href="#__codelineno-167-34"></a>  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05
 <a id="__codelineno-167-35" name="__codelineno-167-35" href="#__codelineno-167-35"></a>  ‘.’ 0.1 ‘ ’ 1
 <a id="__codelineno-167-36" name="__codelineno-167-36" href="#__codelineno-167-36"></a>Residual standard error: 150.6 on 98 degrees of freedom
-<a id="__codelineno-167-37" name="__codelineno-167-37" href="#__codelineno-167-37"></a>Multiple R-squared:  0.2165,  Adjusted R-squared:  0.2085 
+<a id="__codelineno-167-37" name="__codelineno-167-37" href="#__codelineno-167-37"></a>Multiple R-squared:  0.2165,  Adjusted R-squared:  0.2085
 <a id="__codelineno-167-38" name="__codelineno-167-38" href="#__codelineno-167-38"></a>F-statistic: 27.08 on 1 and 98 DF,  p-value: 1.072e-06
 </code></pre></div></p>
 <h2 id="2s3"><strong>2.S3类</strong><a class="headerlink" href="#2s3" title="Permanent link">&para;</a></h2>
@@ -14476,7 +14548,7 @@ S3类内部是一个list，append某个list类名称，就能成为该类。list
 <a id="__codelineno-176-8" name="__codelineno-176-8" href="#__codelineno-176-8"></a>  class(me) &lt;- append(class(me), "DNAseq")
 <a id="__codelineno-176-9" name="__codelineno-176-9" href="#__codelineno-176-9"></a>  return(me)
 <a id="__codelineno-176-10" name="__codelineno-176-10" href="#__codelineno-176-10"></a>}
-<a id="__codelineno-176-11" name="__codelineno-176-11" href="#__codelineno-176-11"></a>#inheritance 
+<a id="__codelineno-176-11" name="__codelineno-176-11" href="#__codelineno-176-11"></a>#inheritance
 <a id="__codelineno-176-12" name="__codelineno-176-12" href="#__codelineno-176-12"></a>Primer &lt;- function(seq = "ATGCATGCATGCATGCATGCGGCC"){
 <a id="__codelineno-176-13" name="__codelineno-176-13" href="#__codelineno-176-13"></a>  pr &lt;- strtrim(seq, 20)
 <a id="__codelineno-176-14" name="__codelineno-176-14" href="#__codelineno-176-14"></a>  me &lt;- DNAseq(pr)
@@ -14492,7 +14564,7 @@ S3类内部是一个list，append某个list类名称，就能成为该类。list
 <a id="__codelineno-176-24" name="__codelineno-176-24" href="#__codelineno-176-24"></a>[1] "list"   "DNAseq" "Primer"
 </code></pre></div></p>
 <p>调用方法的时候会按照从左到右的顺序，再这个例子中，默认先调用DNAseq的方法，如果想要调用Primer类的方法，首先写一个Primer的reverseComplement方法。
-<div class="highlight"><pre><span></span><code><a id="__codelineno-177-1" name="__codelineno-177-1" href="#__codelineno-177-1"></a># Creating methods 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-177-1" name="__codelineno-177-1" href="#__codelineno-177-1"></a># Creating methods
 <a id="__codelineno-177-2" name="__codelineno-177-2" href="#__codelineno-177-2"></a>reverseComplement.Primer &lt;- function(object){
 <a id="__codelineno-177-3" name="__codelineno-177-3" href="#__codelineno-177-3"></a>  print("Running reverseComplement of Primer class")
 <a id="__codelineno-177-4" name="__codelineno-177-4" href="#__codelineno-177-4"></a>}
@@ -14537,16 +14609,16 @@ S3类内部是一个list，append某个list类名称，就能成为该类。list
 <p><strong>寻找泛型函数的实现方法</strong>
 可以调用methods()来找到泛型函数的所有实现方法，比如：
 <div class="highlight"><pre><span></span><code><a id="__codelineno-181-1" name="__codelineno-181-1" href="#__codelineno-181-1"></a>&gt; methods(print)
-<a id="__codelineno-181-2" name="__codelineno-181-2" href="#__codelineno-181-2"></a>  [1] print.acf*                                        
-<a id="__codelineno-181-3" name="__codelineno-181-3" href="#__codelineno-181-3"></a>  [2] print.anova*                                      
-<a id="__codelineno-181-4" name="__codelineno-181-4" href="#__codelineno-181-4"></a>  [3] print.aov*                                        
-<a id="__codelineno-181-5" name="__codelineno-181-5" href="#__codelineno-181-5"></a>  [4] print.aovlist*                                    
-<a id="__codelineno-181-6" name="__codelineno-181-6" href="#__codelineno-181-6"></a>  [5] print.ar*                                         
-<a id="__codelineno-181-7" name="__codelineno-181-7" href="#__codelineno-181-7"></a>  [6] print.Arima*                                      
-<a id="__codelineno-181-8" name="__codelineno-181-8" href="#__codelineno-181-8"></a>  [7] print.arima0*                                     
-<a id="__codelineno-181-9" name="__codelineno-181-9" href="#__codelineno-181-9"></a>  [8] print.AsIs                                        
-<a id="__codelineno-181-10" name="__codelineno-181-10" href="#__codelineno-181-10"></a>  [9] print.aspell*                                     
-<a id="__codelineno-181-11" name="__codelineno-181-11" href="#__codelineno-181-11"></a> [10] print.aspell_inspect_context*                     
+<a id="__codelineno-181-2" name="__codelineno-181-2" href="#__codelineno-181-2"></a>  [1] print.acf*
+<a id="__codelineno-181-3" name="__codelineno-181-3" href="#__codelineno-181-3"></a>  [2] print.anova*
+<a id="__codelineno-181-4" name="__codelineno-181-4" href="#__codelineno-181-4"></a>  [3] print.aov*
+<a id="__codelineno-181-5" name="__codelineno-181-5" href="#__codelineno-181-5"></a>  [4] print.aovlist*
+<a id="__codelineno-181-6" name="__codelineno-181-6" href="#__codelineno-181-6"></a>  [5] print.ar*
+<a id="__codelineno-181-7" name="__codelineno-181-7" href="#__codelineno-181-7"></a>  [6] print.Arima*
+<a id="__codelineno-181-8" name="__codelineno-181-8" href="#__codelineno-181-8"></a>  [7] print.arima0*
+<a id="__codelineno-181-9" name="__codelineno-181-9" href="#__codelineno-181-9"></a>  [8] print.AsIs
+<a id="__codelineno-181-10" name="__codelineno-181-10" href="#__codelineno-181-10"></a>  [9] print.aspell*
+<a id="__codelineno-181-11" name="__codelineno-181-11" href="#__codelineno-181-11"></a> [10] print.aspell_inspect_context*
 <a id="__codelineno-181-12" name="__codelineno-181-12" href="#__codelineno-181-12"></a> [11] print.bibentry*
 </code></pre></div></p>
 <h2 id="2s4"><strong>2.S4类</strong><a class="headerlink" href="#2s4" title="Permanent link">&para;</a></h2>
@@ -14692,7 +14764,7 @@ setMethod的参数包括:泛型函数的名字，与该方法关联起来的类�
 <a id="__codelineno-191-12" name="__codelineno-191-12" href="#__codelineno-191-12"></a> hasMethod("work", "Person")
 </code></pre></div>
 <h1 id="r_10"><strong>十三.高效R语言编程</strong><a class="headerlink" href="#r_10" title="Permanent link">&para;</a></h1>
-<p><a href="https://github.com/csgillespie/efficientR">https://github.com/csgillespie/efficientR</a><br />
+<p><a href="https://github.com/csgillespie/efficientR">https://github.com/csgillespie/efficientR</a>
 R运行的时候先运行D:\Program Files\R\R-3.6.3\library\base\R下的Rprofile文件，然后再运行D:\Program Files\R\R-3.6.3\etc下的Rprofile.site文件，最后是当前目录下面的.Rprofile文件
 可以修改：D:\Program Files\R\R-3.6.3\library\base\R下的Rprofile文件，或者D:\Program Files\R\R-3.6.3\etc下的Rprofile.site文件
 优先级：

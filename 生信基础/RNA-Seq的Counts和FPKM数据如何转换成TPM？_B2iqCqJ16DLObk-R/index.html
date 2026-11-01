@@ -9487,14 +9487,19 @@
 
 
 <h1 id="rna-seqcountsfpkmtpm">RNA-Seq的Counts和FPKM数据如何转换成TPM？<a class="headerlink" href="#rna-seqcountsfpkmtpm" title="Permanent link">&para;</a></h1>
-<p>我们做转录组分析，得到的数据通常是raw counts 的数据，raw counts 的数据有很多R包进行归一化。在TCGA数据库中下载的RNA-Seq的数据就有2种形式，raw counts 和FPKM，<strong>尽管有很多文章是直接利用FPKM进行分析的</strong>，但是FPKM存在不准确性，通常我们会使用TPM。关于什么是FPKM？什么是TPM？我在前面的文章中就有介绍：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264575&amp;idx=2&amp;sn=69b45012dbfe61d7574446de00ec9a7b&amp;chksm=841ef242b3697b54484a64f82bba4372a8fb2b4d411b1c1fc2bc68d12aa44756f96c3b8e48f5&amp;scene=21#wechat_redirect"><strong><font style="color:#0052FF;">RNA-seq的counts,RPM, RPKM, FPK值到底有什么区别？</font></strong></a>。这里再简单回归一下：</p>
+<p>我们做转录组分析，得到的数据通常是raw counts 的数据，raw counts 的数据有很多R包进行归一化。
+在TCGA数据库中下载的RNA-Seq的数据就有2种形式，raw counts 和FPKM，<strong>尽管有很多文章是直接利用FPKM进行分析的</strong>，但是FPKM存在不准确性，通常我们会使用TPM。
+关于什么是FPKM？
+什么是TPM？
+我在前面的文章中就有介绍：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264575&amp;idx=2&amp;sn=69b45012dbfe61d7574446de00ec9a7b&amp;chksm=841ef242b3697b54484a64f82bba4372a8fb2b4d411b1c1fc2bc68d12aa44756f96c3b8e48f5&amp;scene=21#wechat_redirect"><strong>RNA-seq的counts,RPM, RPKM, FPK值到底有什么区别？</strong></a>。
+这里再简单回归一下：</p>
 <p><strong>count：</strong>原始测序得到的count数就是比对到某个基因i上的总数目；不知道大家是否了解测序的简单过程？在测序分析过程中，我们首先是将测得的短reads比对到参考基因组上，然后通过软件来计算该片段上比对到reads的数量，也就是说呢，count是一个整数值。</p>
 <p><strong>FPKM：</strong>我们把比对到的某个基因i的Fragment数目，除以基因的长度，其比值再除以所有基因的总长度。注意，严格来讲，这里的基因长度是指基因i外显子的总长度。</p>
 <p><strong>TPM：</strong>与FPKM不同的地方在于，其基因的比值是再除以（基因的总数目/基因的总长度）。因此，其得到的结果是一个相对的比值。</p>
 <p>如果从原始的下机数据开始分析，那就根据自己需要进行转换，但通常我们大多数拿到的是raw counts数据，一般送测序，也会要求返回raw counts的数据，从数据库下载的数据我们通常也是选择raw counts数据或者FPKM的数据。那么我们如何将这些数据进行转换成TPM的数据呢？read count和FPKM结果都可以转成TPM，但是因为FPKM跟TPM的计算都考虑了基因长度，所以从FPKM转TPM最方便快捷。只需要按照下面公式就可以计算：</p>
-<p>具体可参考前面的文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264575&amp;idx=2&amp;sn=69b45012dbfe61d7574446de00ec9a7b&amp;chksm=841ef242b3697b54484a64f82bba4372a8fb2b4d411b1c1fc2bc68d12aa44756f96c3b8e48f5&amp;scene=21#wechat_redirect"><strong><font style="color:#0052FF;">RNA-seq的counts,RPM, RPKM, FPK值到底有什么区别？</font></strong></a>，这里提供的是R代码。</p>
+<p>具体可参考前面的文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264575&amp;idx=2&amp;sn=69b45012dbfe61d7574446de00ec9a7b&amp;chksm=841ef242b3697b54484a64f82bba4372a8fb2b4d411b1c1fc2bc68d12aa44756f96c3b8e48f5&amp;scene=21#wechat_redirect"><strong>RNA-seq的counts,RPM, RPKM, FPK值到底有什么区别？</strong></a>，这里提供的是R代码。</p>
 <p>首先我们得有FPKM的数据，这里我以之前TCGA数据库的数据为例。</p>
-<p>链接：<a href="https://pan.baidu.com/s/1rsRPgcdB9tCK7oGRWQLxYw">https://pan.baidu.com/s/1rsRPgcdB9tCK7oGRWQLxYw</a>  提取码：molg </p>
+<p>链接：<a href="https://pan.baidu.com/s/1rsRPgcdB9tCK7oGRWQLxYw">https://pan.baidu.com/s/1rsRPgcdB9tCK7oGRWQLxYw</a>  提取码：molg</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">load</span><span class="p">(</span><span class="s">"F:/TCGA/HTSeq-FPKM/Rdata/data/TCGA-COAD-Exp.Rdata"</span><span class="p">)</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">exp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">transomeData</span><span class="p">[[</span><span class="s">"proteinCodingExpData"</span><span class="p">]][[</span><span class="s">"Exp"</span><span class="p">]]</span>
 </code></pre></div>
@@ -9508,15 +9513,14 @@
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nf">exp</span><span class="p">(</span><span class="nf">log</span><span class="p">(</span><span class="n">fpkm</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">log</span><span class="p">(</span><span class="nf">sum</span><span class="p">(</span><span class="n">fpkm</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">log</span><span class="p">(</span><span class="m">1e6</span><span class="p">))</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span>
 </code></pre></div>
-<p><font style="color:#333333;">然后我们利用apply函数进行遍历，就可以转换啦。</font></p>
+<p>然后我们利用apply函数进行遍历，就可以转换啦。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">TPMs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">apply</span><span class="p">(</span><span class="n">exp</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="n">FPKM2TPM</span><span class="p">)</span>
 </code></pre></div>
-<p><font style="color:#333333;">上面是FPKM转TPM，但是如果是count转TPM就比较麻烦一下，虽然我在文章【</font><a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651272981&amp;idx=1&amp;sn=d5ef893cb6a61210ae765ae2cf0f93c4&amp;scene=21#wechat_redirect">RNA-Seq的Counts和FPKM数据如何转换成TPM？</a><font style="color:#333333;">】中有给出函数，但是，并每天给出里面一个参数的计算，那就基因长度的计算。这里，我们来看一下基因Length的计算方法。</font></p>
-<p><font style="color:#333333;">相信大家必然听说过可变剪切的概念，也正是因为可变剪切的存在，同一个基因会产生不同的转录本。在这里呢，又会产生两种不同的分析思路：</font></p>
-<p><font style="color:#333333;">思路1:计算基因在染色体的起始和结束之差；</font></p>
-<p><font style="color:#333333;">思路2：计算每个基因的最长转录本或所有外显子之和；</font></p>
-<p><font style="color:#333333;">那么，又有一个问题产生了，如何去获取基因在染色体上的位置信息呢？对基因组测序或分析有些了解的小伙伴应该对这几个文件类型有所接触，想fasta文件是保存基因DNA或RNA的测序信息，gtf、gff以及gf3文件则都是保存基因注释的文件。我在</font><a href="https://www.yuque.com/doublehelix/bioinfonotes/ey6aby">各种基因ID装换</a><font style="color:#333333;">的文章中就用到这个文件。不过这里用的是人的基因注释文件，如果你的是其他物种，需要下载相应物种的注释文件。</font></p>
-<p><font style="color:#333333;"></font></p>
+<p>上面是FPKM转TPM，但是如果是count转TPM就比较麻烦一下，虽然我在文章【<a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651272981&amp;idx=1&amp;sn=d5ef893cb6a61210ae765ae2cf0f93c4&amp;scene=21#wechat_redirect">RNA-Seq的Counts和FPKM数据如何转换成TPM？</a>】中有给出函数，但是，并每天给出里面一个参数的计算，那就基因长度的计算。这里，我们来看一下基因Length的计算方法。</p>
+<p>相信大家必然听说过可变剪切的概念，也正是因为可变剪切的存在，同一个基因会产生不同的转录本。在这里呢，又会产生两种不同的分析思路：</p>
+<p>思路1:计算基因在染色体的起始和结束之差；</p>
+<p>思路2：计算每个基因的最长转录本或所有外显子之和；</p>
+<p>那么，又有一个问题产生了，如何去获取基因在染色体上的位置信息呢？对基因组测序或分析有些了解的小伙伴应该对这几个文件类型有所接触，想fasta文件是保存基因DNA或RNA的测序信息，gtf、gff以及gf3文件则都是保存基因注释的文件。我在<a href="https://www.yuque.com/doublehelix/bioinfonotes/ey6aby">各种基因ID装换</a>的文章中就用到这个文件。不过这里用的是人的基因注释文件，如果你的是其他物种，需要下载相应物种的注释文件。</p>
 <p>我们读入gtf注释文件</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">GenomicFeatures</span><span class="p">)</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">txdb</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">makeTxDbFromGFF</span><span class="p">(</span><span class="s">"gencode.v22.annotation.gtf"</span><span class="p">,</span><span class="n">format</span><span class="o">=</span><span class="s">"gtf"</span><span class="p">)</span>
@@ -9528,7 +9532,7 @@
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1">#生成的geneID为ensemble编号</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">eff_length</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">do.call</span><span class="p">(</span><span class="n">rbind</span><span class="p">,</span><span class="nf">lapply</span><span class="p">(</span><span class="n">exonic.gene.sizes</span><span class="p">,</span><span class="w"> </span><span class="n">data.frame</span><span class="p">))</span>
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">eff_length</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">gene_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">rownames</span><span class="p">(</span><span class="n">eff_length</span><span class="p">),</span><span class="n">effLen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eff_length</span><span class="p">[,</span><span class="m">1</span><span class="p">])</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="nf">rownames</span><span class="p">(</span><span class="n">eff_length</span><span class="p">)</span><span class="o">&lt;-</span><span class="n">eff_length</span><span class="o">$</span><span class="n">gene_id</span><span class="w"> </span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="nf">rownames</span><span class="p">(</span><span class="n">eff_length</span><span class="p">)</span><span class="o">&lt;-</span><span class="n">eff_length</span><span class="o">$</span><span class="n">gene_id</span>
 <a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="nf">rownames</span><span class="p">(</span><span class="n">eff_length</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">do.call</span><span class="p">(</span><span class="n">rbind</span><span class="p">,</span><span class="nf">strsplit</span><span class="p">(</span><span class="nf">as.character</span><span class="p">(</span><span class="n">eff_length</span><span class="o">$</span><span class="n">gene_id</span><span class="p">),</span><span class="s">'\\.'</span><span class="p">))[,</span><span class="m">1</span><span class="p">]</span>
 <a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="nf">head</span><span class="p">(</span><span class="n">eff_length</span><span class="p">)</span>
 </code></pre></div>
@@ -9573,7 +9577,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">tpms2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">apply</span><span class="p">(</span><span class="n">fpkms</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="n">FPKM2TPM</span><span class="p">)</span>
 </code></pre></div>
 <blockquote>
-<p>更新: 2021-02-03 15:19:22<br />
+<p>更新: 2021-02-03 15:19:22
 原文: <a href="https://www.yuque.com/doublehelix/bioinfonotes/codpdc">https://www.yuque.com/doublehelix/bioinfonotes/codpdc</a></p>
 </blockquote>
 

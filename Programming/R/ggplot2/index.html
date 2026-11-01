@@ -10374,13 +10374,27 @@
 
 
 <h2 id="r">一.R绘图系统<a class="headerlink" href="#r" title="Permanent link">&para;</a></h2>
-<p>在 R 里，主要有两大底层图形系统，一是 base 图形系统，二是 grid 图形系统。 lattice 包与 ggplot2包正是基于 grid 图形系统构建的，它们都有自己独特的图形语法。 
+<p>在 R 里，主要有两大底层图形系统，一是 base 图形系统，二是 grid 图形系统。 lattice 包与 ggplot2包正是基于 grid 图形系统构建的，它们都有自己独特的图形语法。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>install.packages("shiny")
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>install.packages("ggsci")
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>install.packages("esquisse")
 </code></pre></div></p>
-<p>在 R 里，主要有两大底层图形系统，一是 base 图形系统，二是 grid 图形系统。 lattice 包与 ggplot2包正是基于 grid 图形系统构建的，它们都有自己独特的图形语法。grid 图形系统可以很容易地控制图形基础单元，给予编程者创作图形极大的灵活性。 grid 图形系统还可以产生可编辑的图形组件，这些图形组件可以被复用和重组，并能通过 grid.layout()等函数，把图形输出到指定的位置上。但是因为 grid 包中没有提供生成统计图形及完整绘图的函数，因此很少直接采用 grid 包来分析与展示数据。lattice 包通过一维、二维或三维条件绘图，即所谓的栅栏（trellis）图来对多元变量关系进行直
-观展示。 相比于 base()函数是直接在图形设备上绘图的，lattice()函数是返回 trellis 对象。在命令执行的时候，栅栏图会被自动打印，所以看起来就像是 lattice()函数直接完成了绘图。 更多关于 base、grid 和 lattice 的语法可以参考 Murrell 和 Paul 所撰写的书籍 R graphics。ggplot2 包则基于一种全面的图形语法，提供了一种全新的图形创建方式，这套图形语法把绘图过程归纳为数据（data）、转换（transformation）、 度量（scale）、 坐标系（coordinate）、元素（element）、指引（guide）、显示（display）等一系列独立的步骤，通过将这些步骤搭配组合，来实现个性化的统计绘图。于是，得益于该图形语法，Hadley Wickham 所开发的 ggplot2 包是如此人性化，不同于 R base基础绘图和先前的 lattice 包那样参数繁多，而是摈弃了诸多烦琐细节，并以人性化的思维进行高质量作图。在 ggplot2 包中，加号（+）的引入是革命性的，这个神奇的符号完成了一系列图形语法叠加。 更多 ggplot2 的使用与学习可以参考两本关于 ggplot2 的经典书籍：ggplot2 Elegant Graphicsfor Data Analysis 和 R Graphics Cookbook。R 语言基础安装中就包含 base、 grid 和 lattice 三个包，无须另外下载。但是除了 base 包，其他包依旧需要使用 library()函数加载后，才能被使用。 
+<p>在 R 里，主要有两大底层图形系统，一是 base 图形系统，二是 grid 图形系统。
+ lattice 包与 ggplot2包正是基于 grid 图形系统构建的，它们都有自己独特的图形语法。
+grid 图形系统可以很容易地控制图形基础单元，给予编程者创作图形极大的灵活性。
+ grid 图形系统还可以产生可编辑的图形组件，这些图形组件可以被复用和重组，并能通过 grid.layout()等函数，把图形输出到指定的位置上。
+但是因为 grid 包中没有提供生成统计图形及完整绘图的函数，因此很少直接采用 grid 包来分析与展示数据。
+lattice 包通过一维、二维或三维条件绘图，即所谓的栅栏（trellis）图来对多元变量关系进行直
+观展示。
+ 相比于 base()函数是直接在图形设备上绘图的，lattice()函数是返回 trellis 对象。
+在命令执行的时候，栅栏图会被自动打印，所以看起来就像是 lattice()函数直接完成了绘图。
+ 更多关于 base、grid 和 lattice 的语法可以参考 Murrell 和 Paul 所撰写的书籍 R graphics。
+ggplot2 包则基于一种全面的图形语法，提供了一种全新的图形创建方式，这套图形语法把绘图过程归纳为数据（data）、转换（transformation）、 度量（scale）、 坐标系（coordinate）、元素（element）、指引（guide）、显示（display）等一系列独立的步骤，通过将这些步骤搭配组合，来实现个性化的统计绘图。
+于是，得益于该图形语法，Hadley Wickham 所开发的 ggplot2 包是如此人性化，不同于 R base基础绘图和先前的 lattice 包那样参数繁多，而是摈弃了诸多烦琐细节，并以人性化的思维进行高质量作图。
+在 ggplot2 包中，加号（+）的引入是革命性的，这个神奇的符号完成了一系列图形语法叠加。
+ 更多 ggplot2 的使用与学习可以参考两本关于 ggplot2 的经典书籍：ggplot2 Elegant Graphicsfor Data Analysis 和 R Graphics Cookbook。
+R 语言基础安装中就包含 base、 grid 和 lattice 三个包，无须另外下载。
+但是除了 base 包，其他包依旧需要使用 library()函数加载后，才能被使用。
 <img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1609075535563-69eabc81-7427-490d-b75e-80d3235eb734.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=330&amp;id=e4RK7&amp;originHeight=330&amp;originWidth=960&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=960" /></p>
 <h2 id="1base"><strong>1.base系统</strong><a class="headerlink" href="#1base" title="Permanent link">&para;</a></h2>
 <p>• 由Ross Ihaka编写
@@ -10388,12 +10402,12 @@
 • 容易上手
 • 修改方便，使用灵活
 • 不一定非常美观，需要调整参数修改
-• 使用较多 
+• 使用较多
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>###-------------1.基础绘图函数plot绘制散点图
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>rm(list = ls())
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>x &lt;- runif(100,0,2)
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>y &lt;- runif(100,0,2)
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>plot(x, y, type="n", xlab="", ylab="", axes=F) 
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>plot(x, y, type="n", xlab="", ylab="", axes=F)
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>points(x,y) #添加坐标点
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>axis(1) #添加横轴
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>axis(at=seq(0,2,0.5), side=2) #添加纵轴
@@ -10403,7 +10417,7 @@
 </code></pre></div></p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1609075535535-0e68c3f8-ab71-4ab4-bd77-253a00d1a2c2.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=643&amp;id=cm6cH&amp;originHeight=643&amp;originWidth=786&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=786" /></p>
 <h2 id="2grid"><strong>2.grid系统</strong><a class="headerlink" href="#2grid" title="Permanent link">&para;</a></h2>
-<p>grid 图形系统可以很容易地控制图形基础单元，由Paul Murrell（2006）编写，给予编程者创作图形极大的灵活性。 grid 图形系统还可以产生可编辑的图形组件，这些图形组件可以被复用和重组，并能通过 grid.layout()等函数，把图形输出到指定的位置上。但是因为 grid 包中没有提供生成统计图形及完整绘图的函数，因此很少直接采用 grid 包来分析与展示数据。 </p>
+<p>grid 图形系统可以很容易地控制图形基础单元，由Paul Murrell（2006）编写，给予编程者创作图形极大的灵活性。 grid 图形系统还可以产生可编辑的图形组件，这些图形组件可以被复用和重组，并能通过 grid.layout()等函数，把图形输出到指定的位置上。但是因为 grid 包中没有提供生成统计图形及完整绘图的函数，因此很少直接采用 grid 包来分析与展示数据。</p>
 <h2 id="3lattice"><strong>3.lattice系统</strong><a class="headerlink" href="#3lattice" title="Permanent link">&para;</a></h2>
 <p>lattice 包通过一维、二维或三维条件绘图，即所谓的栅栏（trellis）图来对多元变量关系进行直观展示。 相比于 base()函数是直接在图形设备上绘图的，lattice()函数是返回 trellis 对象。在命令执行的时候，栅栏图会被自动打印，所以看起来就像是 lattice()函数直接完成了绘图。 更多关于 base、grid 和 lattice 的语法可以参考 Murrell 和 Paul 所撰写的书籍 R graphics。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>###-------------2.利用lattice包xyplot函数绘制散点图
@@ -10422,18 +10436,18 @@
 <p>ggplot2 是一个功能强大且灵活的 R 包，由 Hadley Wickham 编写，它可以生成优雅而实用的图形。 ggplot2 中的 gg 表示图形语法（grammar of graphic），这是一个通过使用“语法” 来绘图的图形概念。 ggplot2 主张模块间的协调与分工，整个 ggplot2 的语法框架如下图所示，主要包括数据绘图部分与美化细节部分。 R ggplot2 图形语法的主要特点如下所示。
 （1）采用图层的设计方式，有利于结构化思维实现数据可视化。有明确的起始（ggplot()开始）与终止，图层之间的叠加是靠“+”实现的，越往后，其图层越在上方。通常一条 geom_xxx()函数或 stat_xxx()函数可以绘制一个图层。
 （2）将表征数据和图形细节分开，能快速将图形表现出来，使创造性的绘图更加容易实现。而且通过 stat_xxx()函数将常见的统计变换融入绘图中。
-（3）图形美观，扩展包（extension package）丰富，有专门调整颜色（color）、字体（font）和主题（theme）等辅助包。可以帮助用户快读定制个性化的图表。 
+（3）图形美观，扩展包（extension package）丰富，有专门调整颜色（color）、字体（font）和主题（theme）等辅助包。可以帮助用户快读定制个性化的图表。
 <img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1609075535553-8def2ded-039b-4451-b11d-564bcec1ffdf.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=512&amp;id=R2FXu&amp;originHeight=512&amp;originWidth=1075&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=1075" />
-ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入信息如下所示。 
+ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入信息如下所示。
 （1）ggplot()：底层绘图函数。 DATA 为数据集，主要是数据框（data.frame）格式的数据集；MAPPINGS 变量的视觉通道映射，用来表示变量 x 和 y，还可以用来控制颜色（color）、大小（size）或形状（shape）等视觉通道；STAT 表示统计变换，与 stat_xxx()相对应，默认为"identity"（无数据变换）；POSITION 表示绘图数据系列的位置调整，默认为"identity"（无位置调整）。
 （2）geom_xxx() | stat_xxx()：几何图层或统计变换，比如常见的 geom_point()（散点图）、geom_bar()（柱形图）、 geom_histogram()（统计直方图）、 geom_ boxplot()（箱形图）、 geom_line()（折线图）等。我们通常使用 geom_xxx()函数就可以绘制大部分图表，有时候通过设定 stat 参数可以先实现统计变换。
 可选的图表输入信息包括如下 5 个部分，主要是实现图表的美化与变换等。
 （1）scale_xxx()：度量调整，调整具体的度量，包括颜色（color）、大小（size）或形状（shape）等，跟 MAPPINGS 的映射变量相对应；
 （2）coord_xxx()：坐标变换，默认笛卡儿坐标系，还包括极坐标系、地理空间坐标系等；
 （3）facet_xxx()：分面系统，将某个变量进行分面变换，包括按行、列和网格等形式分面绘图。
-（4）guides()：图例调整，主要包括连续型和离散型两种类型的图例。 
+（4）guides()：图例调整，主要包括连续型和离散型两种类型的图例。
 （5）theme()：主题设定，主要用于调整图表的细节，包括图表背景颜色、网格线的间隔与颜色等。
-<img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1609075535516-a4b9c055-eeb3-4b79-a07d-c54c9bac1bcc.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=301&amp;id=cKEZa&amp;originHeight=301&amp;originWidth=651&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=651" /> </p>
+<img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1609075535516-a4b9c055-eeb3-4b79-a07d-c54c9bac1bcc.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=301&amp;id=cKEZa&amp;originHeight=301&amp;originWidth=651&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=651" /></p>
 <h2 id="5"><strong>5.常见的绘图参数</strong><a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
 <p>低水平绘图函数
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>lines() 添加线
@@ -10509,12 +10523,12 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 <p>stat_**()相关函数如下：
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>ls(pattern = "^stat_", env = as.environment("package:ggplot2"))
 </code></pre></div></p>
-<p>| </p>
-<p>函数 | </p>
+<p>|</p>
+<p>函数 |</p>
 <p>函数说明 |
 | --- | --- |
-| </p>
-<p>stat_bin | </p>
+|</p>
+<p>stat_bin |</p>
 <table>
 <thead>
 <tr>
@@ -10527,7 +10541,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_bin2d | </p>
+<p>stat_bin2d |</p>
 <table>
 <thead>
 <tr>
@@ -10540,7 +10554,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_binhex | </p>
+<p>stat_binhex |</p>
 <table>
 <thead>
 <tr>
@@ -10553,7 +10567,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_bin_2d | </p>
+<p>stat_bin_2d |</p>
 <table>
 <thead>
 <tr>
@@ -10566,7 +10580,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_bin_hex | </p>
+<p>stat_bin_hex |</p>
 <table>
 <thead>
 <tr>
@@ -10579,7 +10593,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_boxplot | </p>
+<p>stat_boxplot |</p>
 <table>
 <thead>
 <tr>
@@ -10592,7 +10606,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_contour | </p>
+<p>stat_contour |</p>
 <table>
 <thead>
 <tr>
@@ -10605,7 +10619,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_count | </p>
+<p>stat_count |</p>
 <table>
 <thead>
 <tr>
@@ -10618,7 +10632,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_density | </p>
+<p>stat_density |</p>
 <table>
 <thead>
 <tr>
@@ -10631,7 +10645,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_density2d | </p>
+<p>stat_density2d |</p>
 <table>
 <thead>
 <tr>
@@ -10644,7 +10658,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_density_2d | </p>
+<p>stat_density_2d |</p>
 <table>
 <thead>
 <tr>
@@ -10657,7 +10671,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_ecdf | </p>
+<p>stat_ecdf |</p>
 <table>
 <thead>
 <tr>
@@ -10670,7 +10684,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_ellipse | </p>
+<p>stat_ellipse |</p>
 <table>
 <thead>
 <tr>
@@ -10683,7 +10697,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_function | </p>
+<p>stat_function |</p>
 <table>
 <thead>
 <tr>
@@ -10696,7 +10710,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_identity | </p>
+<p>stat_identity |</p>
 <table>
 <thead>
 <tr>
@@ -10709,7 +10723,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_qq | </p>
+<p>stat_qq |</p>
 <table>
 <thead>
 <tr>
@@ -10722,7 +10736,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_qq_line | </p>
+<p>stat_qq_line |</p>
 <table>
 <thead>
 <tr>
@@ -10735,7 +10749,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_quantile | </p>
+<p>stat_quantile |</p>
 <table>
 <thead>
 <tr>
@@ -10748,7 +10762,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_sf | </p>
+<p>stat_sf |</p>
 <table>
 <thead>
 <tr>
@@ -10761,7 +10775,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_sf_coordinates | </p>
+<p>stat_sf_coordinates |</p>
 <table>
 <thead>
 <tr>
@@ -10774,7 +10788,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_smooth | </p>
+<p>stat_smooth |</p>
 <table>
 <thead>
 <tr>
@@ -10787,7 +10801,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_spoke | </p>
+<p>stat_spoke |</p>
 <table>
 <thead>
 <tr>
@@ -10800,7 +10814,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_sum | </p>
+<p>stat_sum |</p>
 <table>
 <thead>
 <tr>
@@ -10813,7 +10827,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_summary | </p>
+<p>stat_summary |</p>
 <table>
 <thead>
 <tr>
@@ -10826,7 +10840,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_summary2d | </p>
+<p>stat_summary2d |</p>
 <table>
 <thead>
 <tr>
@@ -10839,7 +10853,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_summary_2d | </p>
+<p>stat_summary_2d |</p>
 <table>
 <thead>
 <tr>
@@ -10852,7 +10866,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_summary_bin | </p>
+<p>stat_summary_bin |</p>
 <table>
 <thead>
 <tr>
@@ -10865,7 +10879,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_summary_hex | </p>
+<p>stat_summary_hex |</p>
 <table>
 <thead>
 <tr>
@@ -10878,7 +10892,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_unique | </p>
+<p>stat_unique |</p>
 <table>
 <thead>
 <tr>
@@ -10891,30 +10905,30 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 </tr>
 </tbody>
 </table>
-<p>stat_ydensity | </p>
+<p>stat_ydensity |</p>
 <p>Violin   plot |</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>set.seed(1492)
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>ggplot(data.frame(x = rnorm(100)), aes(x)) +
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>  geom_density() +
 <a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>  stat_function(fun = dnorm, colour = "red")
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>ggplot(data.frame(x = c(-5, 5)), aes(x))+ 
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>ggplot(data.frame(x = c(-5, 5)), aes(x))+
 <a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>  stat_function(fun = dnorm)
 </code></pre></div>
 <h2 id="2"><strong>2.视觉通道</strong><a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1609075535843-1e001c50-244c-4960-a3f0-dc76dd3d6d3e.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=236&amp;id=NoUIk&amp;originHeight=236&amp;originWidth=644&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=644" />
 绘制几个图看看：
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>f1 &lt;- ggplot(df, aes(x=SOD,y=tau,size=age)) + 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>f1 &lt;- ggplot(df, aes(x=SOD,y=tau,size=age)) +
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>  geom_point(shape=21,color="black",fill="#336A97",stroke=0.25)
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>f2 &lt;- ggplot(df, aes(SOD,tau,fill=age,size=age)) + 
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>f2 &lt;- ggplot(df, aes(SOD,tau,fill=age,size=age)) +
 <a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>  geom_point(shape=21,colour="black",stroke=0.25,
-<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>             alpha=0.8) 
-<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>f3 &lt;- ggplot(df, aes(x=SOD,y=tau,fill=Class)) + 
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>             alpha=0.8)
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>f3 &lt;- ggplot(df, aes(x=SOD,y=tau,fill=Class)) +
 <a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>  geom_point(shape=21,size=3,colour="black",stroke=0.25)
-<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>f4 &lt;- ggplot(df, aes(SOD,tau,fill=Class,size=age)) + 
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>f4 &lt;- ggplot(df, aes(SOD,tau,fill=Class,size=age)) +
 <a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>  geom_point(shape=21,colour="black",stroke=0.5,
 <a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>             alpha=0.8)
-<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>f1 + f2 + f3 + f4 
-<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>library(gridExtra) 
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>f1 + f2 + f3 + f4
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>library(gridExtra)
 <a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>grid.arrange(f1,f2,f3,f4, ncol = 2, nrow =2)
 </code></pre></div></p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1609075535766-4314a6b2-1cfb-40a8-8560-0200dbdcdf92.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=497&amp;id=PuafR&amp;originHeight=991&amp;originWidth=1912&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=958" /></p>
@@ -10922,19 +10936,19 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1609075535929-b532353e-f659-470b-b645-6990fff79c44.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=428&amp;id=SloRz&amp;originHeight=428&amp;originWidth=692&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=692" />
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>###4.度量调整-------------------
 <a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>head(df)
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>ggplot(df, aes(x=SOD,y=tau,size=age)) + 
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>ggplot(df, aes(x=SOD,y=tau,size=age)) +
 <a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>  geom_point(shape=21,color="black",fill="#E53F2F",stroke=0.25,alpha=0.8)+
 <a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>  scale_size(range = c(1, 8))#range:长度为2的数字向量，指定转换后绘图符号的最小和最大大小。
-<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>ggplot(df, aes(SOD,tau,fill=age,size=age)) + 
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>ggplot(df, aes(SOD,tau,fill=age,size=age)) +
 <a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>  geom_point(shape=21,colour="black",stroke=0.25,
 <a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>             alpha=1)+
 <a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>  scale_size(range = c(1,8))+
-<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>  scale_fill_distiller(palette="Reds") 
-<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>ggplot(df, aes(x=SOD,y=tau,fill=Class,shape=Class)) + 
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>  scale_fill_distiller(palette="Reds")
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>ggplot(df, aes(x=SOD,y=tau,fill=Class,shape=Class)) +
 <a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>  geom_point(size=3,colour="black",stroke=0.25)+
 <a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>  scale_fill_manual(values=c("#36BED9","#FF0000","#FBAD01"))+
 <a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>  scale_shape_manual(values=c(21,22,23))
-<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>ggplot(df, aes(SOD,tau,fill=Class,size=age)) + 
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>ggplot(df, aes(SOD,tau,fill=Class,size=age)) +
 <a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>  geom_point(shape=21,colour="black",stroke=0.25,
 <a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a>             alpha=0.8) +
 <a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a>  scale_fill_manual(values=c("#36BED9","#FF0000","#FBAD01"))+
@@ -10949,7 +10963,7 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>ls(pattern = "^facet_", env = as.environment("package:ggplot2"))
 <a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>head(mpg)
 <a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>ggplot(mpg, aes(displ, cty)) + geom_point()
-<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>ggplot(mpg, aes(displ, cty)) + 
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>ggplot(mpg, aes(displ, cty)) +
 <a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>  geom_point()+
 <a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>  facet_grid(rows = vars(drv))
 <a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>ggplot(mpg, aes(drv, model)) +
@@ -10958,15 +10972,15 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 <a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>  theme(strip.text.y = element_text(angle = 0))
 <a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>ggplot(mpg, aes(displ, hwy)) + geom_point()
 <a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a># Use vars() to supply faceting variables:
-<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>ggplot(mpg, aes(displ, hwy)) + 
-<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>  geom_point() + 
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>ggplot(mpg, aes(displ, hwy)) +
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>  geom_point() +
 <a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>  facet_wrap(vars(class))
 <a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a># The historical interface with formulas is also available:
-<a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a>ggplot(mpg, aes(displ, hwy)) + 
-<a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a>  geom_point() + 
+<a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a>ggplot(mpg, aes(displ, hwy)) +
+<a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a>  geom_point() +
 <a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a>  facet_wrap(~class)
 <a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a># Control the number of rows and columns with nrow and ncol
-<a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a>ggplot(mpg, aes(displ, hwy)) + 
+<a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a>ggplot(mpg, aes(displ, hwy)) +
 <a id="__codelineno-17-23" name="__codelineno-17-23" href="#__codelineno-17-23"></a>  geom_point() +
 <a id="__codelineno-17-24" name="__codelineno-17-24" href="#__codelineno-17-24"></a>  facet_wrap(vars(class), nrow = 4)
 <a id="__codelineno-17-25" name="__codelineno-17-25" href="#__codelineno-17-25"></a># You can facet by multiple variables
@@ -10976,13 +10990,16 @@ ggplot2 的绘图基本语法结构如上图所示。其中所需的图表输入
 <a id="__codelineno-17-29" name="__codelineno-17-29" href="#__codelineno-17-29"></a>View(mpg)
 </code></pre></div>
 <h2 id="7"><strong>7.主题</strong><a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
-<p>主题系统包括绘图区背景、网格线、坐标轴线条等图表的细节部分，而图表风格主要是指绘图区背景、网格线、坐标轴线条等的格式设定所展现的效果。ggplot2图表的主题系统的主要对象包括文本(text)、矩形(rect) 和线条(line )三大类，对应的函数包括element _text()、element_rect()、element_line()， 另外还有element_blank()表示该对象设置为无，具体如表所示。其中，我们使用比较多的系统对象是坐标轴的标签( axis.text.x、axis.text.y )、图例的位置与背景( legend.position 和legend.background)。X轴标签(axis.text.x)在绘制极坐标柱形图和径向柱形图时会用于调整X轴标签的旋转角度，Y轴标签( axis.text.y)也会用于时间序列峰峦图的Y轴标签的替换等，具体可见后面图表案例的讲解。
+<p>主题系统包括绘图区背景、网格线、坐标轴线条等图表的细节部分，而图表风格主要是指绘图区背景、网格线、坐标轴线条等的格式设定所展现的效果。
+ggplot2图表的主题系统的主要对象包括文本(text)、矩形(rect) 和线条(line )三大类，对应的函数包括element _text()、element_rect()、element_line()， 另外还有element_blank()表示该对象设置为无，具体如表所示。
+其中，我们使用比较多的系统对象是坐标轴的标签( axis.text.x、axis.text.y )、图例的位置与背景( legend.position 和legend.background)。
+X轴标签(axis.text.x)在绘制极坐标柱形图和径向柱形图时会用于调整X轴标签的旋转角度，Y轴标签( axis.text.y)也会用于时间序列峰峦图的Y轴标签的替换等，具体可见后面图表案例的讲解。
 <img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1609075535822-84e4bd8f-d33b-4b5b-84a9-72275e1533e7.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=407&amp;id=QIPH7&amp;originHeight=407&amp;originWidth=950&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=950" />
 一些主题相关包:ggThemeAssist,ggthemes,ggtech,ggthemer,<strong>ggsci</strong>,cowplot等。</p>
 <h2 id="8"><strong>8.位置调整</strong><a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1609075535919-a4ea2bff-f600-4d52-9775-a54af30a8e61.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=352&amp;id=zmEFA&amp;originHeight=352&amp;originWidth=941&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=941" /></p>
 <h2 id="9"><strong>9.学术文章图标配色</strong><a class="headerlink" href="#9" title="Permanent link">&para;</a></h2>
-<p>RColorBrewer包是比较常用的调色板，来自网站:<a href="https://colorbrewer2.org/">https://colorbrewer2.org/</a><br />
+<p>RColorBrewer包是比较常用的调色板，来自网站:<a href="https://colorbrewer2.org/">https://colorbrewer2.org/</a>
 brewer.pal()函数获取颜色
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>brewer.pal(n, name)#使颜色调色板；Name的值：Blues BuGn BuPu GnBu Greens Greys Oranges OrRd PuBu PuBuGn PuRd Purples RdPu Reds YlGn YlGnBu YlOrBr YlOrRd
 </code></pre></div></p>
@@ -11006,20 +11023,20 @@ library(easyGgplot2) 包的ggplot2.multiplot函数
 <a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>ggarrange(fig1,fig2,fig3,fig2,# 要布局的图形
 <a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>          ncol = 2,nrow = 2) # 图形排版为2列
 <a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>#patchwork包的plot_layout()函数
-<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>fig1 + fig3 + fig2 + 
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>fig1 + fig3 + fig2 +
 <a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>  plot_layout(ncol = 2, byrow = TRUE)
 <a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>#除了用+号运算来排版图形外，还可以使用/号来排版。
 <a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>fig1/fig2
 <a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>fig3 | (fig1/fig2)
-<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>(fig1 + fig3)/ fig5 + 
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>(fig1 + fig3)/ fig5 +
 <a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>  plot_annotation(tag_levels = "A",
 <a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>                  title = "组合图形排版",
 <a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>                  caption = "公众号:BioInfoNotes")
 <a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a>#图形设置为两列，默认按行填充，两列之间相对宽度比为1：2
 <a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a>fig1 + fig3 + fig2 + plot_layout(ncol = 2, widths = c(1, 2))
 <a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a>#plot_spacer()函数就是在前后图形中创建一个空的透明网格
-<a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a>fig1 + fig3 + plot_spacer()+fig2 
-<a id="__codelineno-19-21" name="__codelineno-19-21" href="#__codelineno-19-21"></a>library(gridExtra) 
+<a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a>fig1 + fig3 + plot_spacer()+fig2
+<a id="__codelineno-19-21" name="__codelineno-19-21" href="#__codelineno-19-21"></a>library(gridExtra)
 <a id="__codelineno-19-22" name="__codelineno-19-22" href="#__codelineno-19-22"></a>grid.arrange(fig1,fig2,fig5, ncol = 2, nrow =2,layout_matrix=matrix(c(1,2,3,3),ncol = 2,byrow = T))
 </code></pre></div></p>
 <p>绘图经典案例:<a href="http://www.sthda.com/english/wiki/ggplot2-essentials">ggplot2 - Essentials - Easy Guides - Wiki - STHDA</a></p>
@@ -11059,7 +11076,7 @@ plot函数默认的使用格式如下：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>####第二个图
 <a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>x &lt;- runif(50,0,2)
 <a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>y &lt;- runif(50,0,2)
-<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>plot(x, y, type="n", xlab="", ylab="", axes=F) 
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>plot(x, y, type="n", xlab="", ylab="", axes=F)
 <a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>points(x,y) #添加坐标点
 <a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>axis(1) #添加横轴
 <a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>axis(at=seq(0,2,0.5), side=2) #添加纵轴
@@ -11119,7 +11136,7 @@ plot函数默认的使用格式如下：</p>
 <a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>library(hexbin)
 <a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>ggplot(data, aes(x=carat,y=price)) +
 <a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>  stat_binhex() +
-<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>  scale_fill_gradient(low="lightblue", high="red", 
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>  scale_fill_gradient(low="lightblue", high="red",
 <a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>                      breaks=c(0, 250, 500, 1000, 2000, 4000, 6000),
 <a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>                      limits=c(0,6000))
 </code></pre></div>
@@ -11128,13 +11145,13 @@ plot函数默认的使用格式如下：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>library(ggplot2)
 <a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>library(RColorBrewer)
 </code></pre></div>
-<p>我们可以通过将 geom_bar() 中的参数指定为 colour="black" 为条形添加黑色边框线；可以通过 scale_fill_brewer() 或者 scale_fill_manual() 函数对图形颜色进行设置。颜色的映射设定是在 aes() 内部完成的，而颜色的重新设定是在 aes() 外部完成的 </p>
+<p>我们可以通过将 geom_bar() 中的参数指定为 colour="black" 为条形添加黑色边框线；可以通过 scale_fill_brewer() 或者 scale_fill_manual() 函数对图形颜色进行设置。颜色的映射设定是在 aes() 内部完成的，而颜色的重新设定是在 aes() 外部完成的</p>
 <h2 id="01"><strong>01.单数据系列柱形图</strong><a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>mydata&lt;-data.frame(Cut=c("Fair","Good","Very Good","Premium","Ideal"),
 <a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>                    Price=c(4300,3800,3950,4700,3500))
 <a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>#mydata$Cut &lt;- factor(mydata$Cut, levels = mydata$Cut[order(mydata$Order)])
 <a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>ggplot(data=mydata,aes(x=Cut,y=Price))+
-<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>  geom_bar(stat = "identity", 
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>  geom_bar(stat = "identity",
 <a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>           width = 0.8,colour="black",size=0.25,
 <a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a>           fill="#FC4E07",alpha=1)+
 <a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>  ylim(0, 6000)+
@@ -11149,13 +11166,13 @@ plot函数默认的使用格式如下：</p>
 <a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>library(dplyr)
 <a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>mydata2&lt;-arrange(mydata,desc(Price))
 <a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>mydata$Cut &lt;- factor(mydata$Cut, levels = mydata2$Cut)
-<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>ggplot(data=mydata,aes(Cut,Price))+ 
+<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>ggplot(data=mydata,aes(Cut,Price))+
 <a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a>  geom_bar(stat = "identity", width = 0.8,
 <a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a>           colour="black",size=0.25,fill="#FC4E07",alpha=1)
 <a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a>#排序方法2：基于向量vector
-<a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a>order&lt;-sort(mydata$Price,index.return=TRUE,decreasing = TRUE) 
-<a id="__codelineno-34-10" name="__codelineno-34-10" href="#__codelineno-34-10"></a>mydata$Cut &lt;- factor(mydata$Cut, levels = mydata$Cut[order$ix]) 
-<a id="__codelineno-34-11" name="__codelineno-34-11" href="#__codelineno-34-11"></a>ggplot(data=mydata,aes(Cut,Price))+ 
+<a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a>order&lt;-sort(mydata$Price,index.return=TRUE,decreasing = TRUE)
+<a id="__codelineno-34-10" name="__codelineno-34-10" href="#__codelineno-34-10"></a>mydata$Cut &lt;- factor(mydata$Cut, levels = mydata$Cut[order$ix])
+<a id="__codelineno-34-11" name="__codelineno-34-11" href="#__codelineno-34-11"></a>ggplot(data=mydata,aes(Cut,Price))+
 <a id="__codelineno-34-12" name="__codelineno-34-12" href="#__codelineno-34-12"></a>  geom_bar(stat = "identity", width = 0.8,
 <a id="__codelineno-34-13" name="__codelineno-34-13" href="#__codelineno-34-13"></a>           colour="black",size=0.25,fill="#FC4E07",alpha=1)
 </code></pre></div></p>
@@ -11391,12 +11408,12 @@ plot函数默认的使用格式如下：</p>
 <a id="__codelineno-45-8" name="__codelineno-45-8" href="#__codelineno-45-8"></a>                     S2 = c(100,1300,1900,1800,2700),
 <a id="__codelineno-45-9" name="__codelineno-45-9" href="#__codelineno-45-9"></a>                     s1 = c(100,1200,1700,1600,2100),
 <a id="__codelineno-45-10" name="__codelineno-45-10" href="#__codelineno-45-10"></a>                     IF = c(150,1100,1300,1280,1300),stringsAsFactors=FALSE)
-<a id="__codelineno-45-11" name="__codelineno-45-11" href="#__codelineno-45-11"></a>Per&lt;-(as.matrix(mydata[5,2:ncol(mydata)])) / t(as.matrix(colSums(mydata[,2:ncol(mydata)]))) 
-<a id="__codelineno-45-12" name="__codelineno-45-12" href="#__codelineno-45-12"></a>Ideal&lt;-sort(as.numeric(Per),index.return=TRUE,decreasing = TRUE) 
-<a id="__codelineno-45-13" name="__codelineno-45-13" href="#__codelineno-45-13"></a>mydata&lt;-mydata[,c(1,Ideal$ix+1)] 
-<a id="__codelineno-45-14" name="__codelineno-45-14" href="#__codelineno-45-14"></a>mydata$Clarity &lt;- factor(mydata$Clarity, levels = mydata$Clarity[c(1:5)]) 
-<a id="__codelineno-45-15" name="__codelineno-45-15" href="#__codelineno-45-15"></a>mydata&lt;-melt(mydata,id.vars='Clarity') 
-<a id="__codelineno-45-16" name="__codelineno-45-16" href="#__codelineno-45-16"></a>ggplot(data=mydata,aes(variable,value,fill=Clarity))+ 
+<a id="__codelineno-45-11" name="__codelineno-45-11" href="#__codelineno-45-11"></a>Per&lt;-(as.matrix(mydata[5,2:ncol(mydata)])) / t(as.matrix(colSums(mydata[,2:ncol(mydata)])))
+<a id="__codelineno-45-12" name="__codelineno-45-12" href="#__codelineno-45-12"></a>Ideal&lt;-sort(as.numeric(Per),index.return=TRUE,decreasing = TRUE)
+<a id="__codelineno-45-13" name="__codelineno-45-13" href="#__codelineno-45-13"></a>mydata&lt;-mydata[,c(1,Ideal$ix+1)]
+<a id="__codelineno-45-14" name="__codelineno-45-14" href="#__codelineno-45-14"></a>mydata$Clarity &lt;- factor(mydata$Clarity, levels = mydata$Clarity[c(1:5)])
+<a id="__codelineno-45-15" name="__codelineno-45-15" href="#__codelineno-45-15"></a>mydata&lt;-melt(mydata,id.vars='Clarity')
+<a id="__codelineno-45-16" name="__codelineno-45-16" href="#__codelineno-45-16"></a>ggplot(data=mydata,aes(variable,value,fill=Clarity))+
 <a id="__codelineno-45-17" name="__codelineno-45-17" href="#__codelineno-45-17"></a>  geom_bar(stat="identity", position="fill",color="black", width=0.8,size=0.25)+
 <a id="__codelineno-45-18" name="__codelineno-45-18" href="#__codelineno-45-18"></a>  scale_fill_manual(values=brewer.pal(9,"GnBu")[c(7:2)])+
 <a id="__codelineno-45-19" name="__codelineno-45-19" href="#__codelineno-45-19"></a>  theme(
@@ -11512,9 +11529,9 @@ plot函数默认的使用格式如下：</p>
 <a id="__codelineno-49-6" name="__codelineno-49-6" href="#__codelineno-49-6"></a>order&lt;-sort(mydata$sum,index.return=TRUE,decreasing = FALSE)
 <a id="__codelineno-49-7" name="__codelineno-49-7" href="#__codelineno-49-7"></a>mydata$City&lt;- factor(mydata$City, levels = mydata$City[order$ix])
 <a id="__codelineno-49-8" name="__codelineno-49-8" href="#__codelineno-49-8"></a>ggplot(mydata, aes(sum, City)) +
-<a id="__codelineno-49-9" name="__codelineno-49-9" href="#__codelineno-49-9"></a>  geom_segment(aes(x=0, 
+<a id="__codelineno-49-9" name="__codelineno-49-9" href="#__codelineno-49-9"></a>  geom_segment(aes(x=0,
 <a id="__codelineno-49-10" name="__codelineno-49-10" href="#__codelineno-49-10"></a>                   xend=sum,
-<a id="__codelineno-49-11" name="__codelineno-49-11" href="#__codelineno-49-11"></a>                   y=City, 
+<a id="__codelineno-49-11" name="__codelineno-49-11" href="#__codelineno-49-11"></a>                   y=City,
 <a id="__codelineno-49-12" name="__codelineno-49-12" href="#__codelineno-49-12"></a>                   yend=City))+
 <a id="__codelineno-49-13" name="__codelineno-49-13" href="#__codelineno-49-13"></a>  geom_point(shape=21,size=3,colour="black",fill="#FC4E07")+
 <a id="__codelineno-49-14" name="__codelineno-49-14" href="#__codelineno-49-14"></a>  theme(
@@ -11534,7 +11551,7 @@ plot函数默认的使用格式如下：</p>
 <a id="__codelineno-50-7" name="__codelineno-50-7" href="#__codelineno-50-7"></a>ggdotchart(dfm, x = "name", y = "mpg",
 <a id="__codelineno-50-8" name="__codelineno-50-8" href="#__codelineno-50-8"></a>           color = "cyl",                                # 按照cyl填充颜色
 <a id="__codelineno-50-9" name="__codelineno-50-9" href="#__codelineno-50-9"></a>           palette = c("#00AFBB", "#E7B800", "#FC4E07"), # 修改颜色
-<a id="__codelineno-50-10" name="__codelineno-50-10" href="#__codelineno-50-10"></a>           sorting = "ascending",                        
+<a id="__codelineno-50-10" name="__codelineno-50-10" href="#__codelineno-50-10"></a>           sorting = "ascending",
 <a id="__codelineno-50-11" name="__codelineno-50-11" href="#__codelineno-50-11"></a>           add = "segments",                             # 添加棒子
 <a id="__codelineno-50-12" name="__codelineno-50-12" href="#__codelineno-50-12"></a>           ggtheme = theme_pubr(),                        # 改变主题
 <a id="__codelineno-50-13" name="__codelineno-50-13" href="#__codelineno-50-13"></a>           xlab=""
@@ -11544,14 +11561,14 @@ plot函数默认的使用格式如下：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>ggdotchart(dfm, x = "name", y = "mpg",
 <a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a>           color = "cyl",                                # 按照cyl填充颜色
 <a id="__codelineno-51-3" name="__codelineno-51-3" href="#__codelineno-51-3"></a>           palette = c("#00AFBB", "#E7B800", "#FC4E07"), # 修改颜色
-<a id="__codelineno-51-4" name="__codelineno-51-4" href="#__codelineno-51-4"></a>           sorting = "descending",                      
+<a id="__codelineno-51-4" name="__codelineno-51-4" href="#__codelineno-51-4"></a>           sorting = "descending",
 <a id="__codelineno-51-5" name="__codelineno-51-5" href="#__codelineno-51-5"></a>           add = "segments",                             # 添加棒子
 <a id="__codelineno-51-6" name="__codelineno-51-6" href="#__codelineno-51-6"></a>           add.params = list(color = "lightgray", size = 1.5),#改变棒子参数
 <a id="__codelineno-51-7" name="__codelineno-51-7" href="#__codelineno-51-7"></a>           rotate = TRUE,                                # 方向转为垂直
-<a id="__codelineno-51-8" name="__codelineno-51-8" href="#__codelineno-51-8"></a>           group = "cyl",                                
+<a id="__codelineno-51-8" name="__codelineno-51-8" href="#__codelineno-51-8"></a>           group = "cyl",
 <a id="__codelineno-51-9" name="__codelineno-51-9" href="#__codelineno-51-9"></a>           dot.size = 6,                                 # 改变点的大小
 <a id="__codelineno-51-10" name="__codelineno-51-10" href="#__codelineno-51-10"></a>           label = round(dfm$mpg),                       # 添加label
-<a id="__codelineno-51-11" name="__codelineno-51-11" href="#__codelineno-51-11"></a>           font.label = list(color = "white", size = 9, 
+<a id="__codelineno-51-11" name="__codelineno-51-11" href="#__codelineno-51-11"></a>           font.label = list(color = "white", size = 9,
 <a id="__codelineno-51-12" name="__codelineno-51-12" href="#__codelineno-51-12"></a>                             vjust = 0.5),               # 设置label参数
 <a id="__codelineno-51-13" name="__codelineno-51-13" href="#__codelineno-51-13"></a>           ggtheme = theme_pubr(),                        # 改变主题
 <a id="__codelineno-51-14" name="__codelineno-51-14" href="#__codelineno-51-14"></a>           xlab="")
@@ -11601,19 +11618,19 @@ plot函数默认的使用格式如下：</p>
 <a id="__codelineno-54-7" name="__codelineno-54-7" href="#__codelineno-54-7"></a>left_label &lt;- paste(df$continent, round(df$`1952`),sep=", ")
 <a id="__codelineno-54-8" name="__codelineno-54-8" href="#__codelineno-54-8"></a>right_label &lt;- paste(df$continent, round(df$`1957`),sep=", ")
 <a id="__codelineno-54-9" name="__codelineno-54-9" href="#__codelineno-54-9"></a>df$class &lt;- ifelse((df$`1957` - df$`1952`) &lt; 0, "red", "green")
-<a id="__codelineno-54-10" name="__codelineno-54-10" href="#__codelineno-54-10"></a>p &lt;- ggplot(df) + 
+<a id="__codelineno-54-10" name="__codelineno-54-10" href="#__codelineno-54-10"></a>p &lt;- ggplot(df) +
 <a id="__codelineno-54-11" name="__codelineno-54-11" href="#__codelineno-54-11"></a>  geom_segment(aes(x=1, xend=2, y=`1952`, yend=`1957`, col=class), size=.75, show.legend=F) +  #连接线
 <a id="__codelineno-54-12" name="__codelineno-54-12" href="#__codelineno-54-12"></a>  geom_vline(xintercept=1, linetype="solid", size=.1) + # 1952年的垂直直线
 <a id="__codelineno-54-13" name="__codelineno-54-13" href="#__codelineno-54-13"></a>  geom_vline(xintercept=2, linetype="solid", size=.1) + # 1957年的垂直直线
 <a id="__codelineno-54-14" name="__codelineno-54-14" href="#__codelineno-54-14"></a>  geom_point(aes(x=1, y=`1952`), size=3,shape=21,fill="grey80",color="black") + # 1952年的数据点
 <a id="__codelineno-54-15" name="__codelineno-54-15" href="#__codelineno-54-15"></a>  geom_point(aes(x=2, y=`1957`), size=3,shape=21,fill="grey80",color="black") + # 1957年的数据点
-<a id="__codelineno-54-16" name="__codelineno-54-16" href="#__codelineno-54-16"></a>  scale_color_manual(labels = c("Up", "Down"), values = c("green"="#A6D854","red"="#FC4E07")) +  
-<a id="__codelineno-54-17" name="__codelineno-54-17" href="#__codelineno-54-17"></a>  xlim(.5, 2.5) 
+<a id="__codelineno-54-16" name="__codelineno-54-16" href="#__codelineno-54-16"></a>  scale_color_manual(labels = c("Up", "Down"), values = c("green"="#A6D854","red"="#FC4E07")) +
+<a id="__codelineno-54-17" name="__codelineno-54-17" href="#__codelineno-54-17"></a>  xlim(.5, 2.5)
 <a id="__codelineno-54-18" name="__codelineno-54-18" href="#__codelineno-54-18"></a># 添加文本信息
 <a id="__codelineno-54-19" name="__codelineno-54-19" href="#__codelineno-54-19"></a>p &lt;- p + geom_text(label=left_label, y=df$`1952`, x=rep(1, NROW(df)), hjust=1.1, size=3.5)
 <a id="__codelineno-54-20" name="__codelineno-54-20" href="#__codelineno-54-20"></a>p &lt;- p + geom_text(label=right_label, y=df$`1957`, x=rep(2, NROW(df)), hjust=-0.1, size=3.5)
-<a id="__codelineno-54-21" name="__codelineno-54-21" href="#__codelineno-54-21"></a>p &lt;- p + geom_text(label="1952", x=1, y=1.02*(max(df$`1952`, df$`1957`)), hjust=1.2, size=5)   
-<a id="__codelineno-54-22" name="__codelineno-54-22" href="#__codelineno-54-22"></a>p &lt;- p + geom_text(label="1957", x=2, y=1.02*(max(df$`1952`, df$`1957`)), hjust=-0.1, size=5) 
+<a id="__codelineno-54-21" name="__codelineno-54-21" href="#__codelineno-54-21"></a>p &lt;- p + geom_text(label="1952", x=1, y=1.02*(max(df$`1952`, df$`1957`)), hjust=1.2, size=5)
+<a id="__codelineno-54-22" name="__codelineno-54-22" href="#__codelineno-54-22"></a>p &lt;- p + geom_text(label="1957", x=2, y=1.02*(max(df$`1952`, df$`1957`)), hjust=-0.1, size=5)
 <a id="__codelineno-54-23" name="__codelineno-54-23" href="#__codelineno-54-23"></a>p&lt;-p+theme_void()
 <a id="__codelineno-54-24" name="__codelineno-54-24" href="#__codelineno-54-24"></a>p
 </code></pre></div>
@@ -11653,14 +11670,14 @@ plot函数默认的使用格式如下：</p>
 <a id="__codelineno-55-33" name="__codelineno-55-33" href="#__codelineno-55-33"></a>  }
 <a id="__codelineno-55-34" name="__codelineno-55-34" href="#__codelineno-55-34"></a>
 <a id="__codelineno-55-35" name="__codelineno-55-35" href="#__codelineno-55-35"></a>}
-<a id="__codelineno-55-36" name="__codelineno-55-36" href="#__codelineno-55-36"></a>p &lt;- ggplot(df2) + 
-<a id="__codelineno-55-37" name="__codelineno-55-37" href="#__codelineno-55-37"></a>  geom_xspline(aes(x=variable, y=value,group=continent, colour=class),size=.75) + 
-<a id="__codelineno-55-38" name="__codelineno-55-38" href="#__codelineno-55-38"></a>  geom_vline(xintercept=1, linetype="solid", size=.1) + 
+<a id="__codelineno-55-36" name="__codelineno-55-36" href="#__codelineno-55-36"></a>p &lt;- ggplot(df2) +
+<a id="__codelineno-55-37" name="__codelineno-55-37" href="#__codelineno-55-37"></a>  geom_xspline(aes(x=variable, y=value,group=continent, colour=class),size=.75) +
+<a id="__codelineno-55-38" name="__codelineno-55-38" href="#__codelineno-55-38"></a>  geom_vline(xintercept=1, linetype="solid", size=.1) +
 <a id="__codelineno-55-39" name="__codelineno-55-39" href="#__codelineno-55-39"></a>  geom_vline(xintercept=7, linetype="solid", size=.1) +
-<a id="__codelineno-55-40" name="__codelineno-55-40" href="#__codelineno-55-40"></a>  geom_point(aes(x=variable, y=left_point), size=3,shape=21,fill="grey80",color="black") + 
-<a id="__codelineno-55-41" name="__codelineno-55-41" href="#__codelineno-55-41"></a>  geom_point(aes(x=variable, y=right_point), size=3,shape=21,fill="grey80",color="black") + 
-<a id="__codelineno-55-42" name="__codelineno-55-42" href="#__codelineno-55-42"></a>  scale_color_manual(labels = c("Up", "Down"), values = c("green"="#FC4E07",  "red"="#A6D854")) +  
-<a id="__codelineno-55-43" name="__codelineno-55-43" href="#__codelineno-55-43"></a>  xlim(-4, 12) 
+<a id="__codelineno-55-40" name="__codelineno-55-40" href="#__codelineno-55-40"></a>  geom_point(aes(x=variable, y=left_point), size=3,shape=21,fill="grey80",color="black") +
+<a id="__codelineno-55-41" name="__codelineno-55-41" href="#__codelineno-55-41"></a>  geom_point(aes(x=variable, y=right_point), size=3,shape=21,fill="grey80",color="black") +
+<a id="__codelineno-55-42" name="__codelineno-55-42" href="#__codelineno-55-42"></a>  scale_color_manual(labels = c("Up", "Down"), values = c("green"="#FC4E07",  "red"="#A6D854")) +
+<a id="__codelineno-55-43" name="__codelineno-55-43" href="#__codelineno-55-43"></a>  xlim(-4, 12)
 <a id="__codelineno-55-44" name="__codelineno-55-44" href="#__codelineno-55-44"></a>p &lt;- p + geom_text(label=left_label, y=df2$value, x=rep(1, NROW(df2)), hjust=1.1, size=3.5)
 <a id="__codelineno-55-45" name="__codelineno-55-45" href="#__codelineno-55-45"></a>p &lt;- p + geom_text(label=right_label, y=df2$value, x=rep(7, NROW(df2)), hjust=-0.1, size=3.5)
 <a id="__codelineno-55-46" name="__codelineno-55-46" href="#__codelineno-55-46"></a>p &lt;- p + geom_text(label="2007", x=1, y=1.02*(max(df2$value)), hjust=1.2, size=5)  # title
@@ -11725,8 +11742,8 @@ plot函数默认的使用格式如下：</p>
 <h2 id="11"><strong>11.径向柱形图</strong><a class="headerlink" href="#11" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>library(ggplot2)
 <a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a>library(RColorBrewer)
-<a id="__codelineno-58-3" name="__codelineno-58-3" href="#__codelineno-58-3"></a>df &lt;- data.frame(item=rep(LETTERS[1:10], 5), 
-<a id="__codelineno-58-4" name="__codelineno-58-4" href="#__codelineno-58-4"></a>                 score=rep(letters[1:5], each=10), 
+<a id="__codelineno-58-3" name="__codelineno-58-3" href="#__codelineno-58-3"></a>df &lt;- data.frame(item=rep(LETTERS[1:10], 5),
+<a id="__codelineno-58-4" name="__codelineno-58-4" href="#__codelineno-58-4"></a>                 score=rep(letters[1:5], each=10),
 <a id="__codelineno-58-5" name="__codelineno-58-5" href="#__codelineno-58-5"></a>                 value=rep((1:5), each=10) + rnorm(50, 0, .5))
 <a id="__codelineno-58-6" name="__codelineno-58-6" href="#__codelineno-58-6"></a>myAng &lt;-seq(-20,-340,length.out =10)
 <a id="__codelineno-58-7" name="__codelineno-58-7" href="#__codelineno-58-7"></a>ggplot(data=df,aes(item,value,fill=score))+
@@ -11746,12 +11763,12 @@ plot函数默认的使用格式如下：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a>library(ggplot2)
 <a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a>#--------------------------------------------雷达图实现原理-------------------------------------------------------
 <a id="__codelineno-59-3" name="__codelineno-59-3" href="#__codelineno-59-3"></a>#Reference:https://github.com/cardiomoon/ggplot2new/blob/4e50b7dcfee3246a169702f88f7dd46cbf933f4b/coord_radar.R
-<a id="__codelineno-59-4" name="__codelineno-59-4" href="#__codelineno-59-4"></a>coord_radar &lt;- function (theta = "x", start = 0, direction = 1) 
+<a id="__codelineno-59-4" name="__codelineno-59-4" href="#__codelineno-59-4"></a>coord_radar &lt;- function (theta = "x", start = 0, direction = 1)
 <a id="__codelineno-59-5" name="__codelineno-59-5" href="#__codelineno-59-5"></a>{  theta &lt;- match.arg(theta, c("x", "y"))
-<a id="__codelineno-59-6" name="__codelineno-59-6" href="#__codelineno-59-6"></a>r &lt;- if (theta == "x") 
+<a id="__codelineno-59-6" name="__codelineno-59-6" href="#__codelineno-59-6"></a>r &lt;- if (theta == "x")
 <a id="__codelineno-59-7" name="__codelineno-59-7" href="#__codelineno-59-7"></a>  "y"
 <a id="__codelineno-59-8" name="__codelineno-59-8" href="#__codelineno-59-8"></a>else "x"
-<a id="__codelineno-59-9" name="__codelineno-59-9" href="#__codelineno-59-9"></a>ggproto("CoordRadar", CoordPolar, theta = theta, r = r, start = start, 
+<a id="__codelineno-59-9" name="__codelineno-59-9" href="#__codelineno-59-9"></a>ggproto("CoordRadar", CoordPolar, theta = theta, r = r, start = start,
 <a id="__codelineno-59-10" name="__codelineno-59-10" href="#__codelineno-59-10"></a>        direction = sign(direction),
 <a id="__codelineno-59-11" name="__codelineno-59-11" href="#__codelineno-59-11"></a>        is_linear = function(coord) TRUE)}
 <a id="__codelineno-59-12" name="__codelineno-59-12" href="#__codelineno-59-12"></a>#----------------------------------------单数据系列--------------------------------------------------------------
@@ -11760,15 +11777,15 @@ plot函数默认的使用格式如下：</p>
 <a id="__codelineno-59-15" name="__codelineno-59-15" href="#__codelineno-59-15"></a>                       value=c(12 , 2 ,14 ,20, 18))
 <a id="__codelineno-59-16" name="__codelineno-59-16" href="#__codelineno-59-16"></a>AddRow&lt;-c(NA,nrow(label_data)+1,label_data[1,ncol(label_data)])
 <a id="__codelineno-59-17" name="__codelineno-59-17" href="#__codelineno-59-17"></a>mydata&lt;-rbind(label_data,AddRow)
-<a id="__codelineno-59-18" name="__codelineno-59-18" href="#__codelineno-59-18"></a>myAngle&lt;- 360- 360 * (label_data$id-1) /nrow(label_data)  
-<a id="__codelineno-59-19" name="__codelineno-59-19" href="#__codelineno-59-19"></a>ggplot() + 
+<a id="__codelineno-59-18" name="__codelineno-59-18" href="#__codelineno-59-18"></a>myAngle&lt;- 360- 360 * (label_data$id-1) /nrow(label_data)
+<a id="__codelineno-59-19" name="__codelineno-59-19" href="#__codelineno-59-19"></a>ggplot() +
 <a id="__codelineno-59-20" name="__codelineno-59-20" href="#__codelineno-59-20"></a>  geom_polygon(data=mydata,aes(x=id, y=value),color = "black", fill=brewer.pal(7,"Set1")[1],alpha=0.1)+
 <a id="__codelineno-59-21" name="__codelineno-59-21" href="#__codelineno-59-21"></a>  geom_point(data=mydata,aes(x=id, y=value),size=5,shape=21,color = 'black', fill=brewer.pal(7,"Set1")[1])+
 <a id="__codelineno-59-22" name="__codelineno-59-22" href="#__codelineno-59-22"></a>  coord_polar() + #实现为图3-8-1(c) 的圆形雷达图
 <a id="__codelineno-59-23" name="__codelineno-59-23" href="#__codelineno-59-23"></a>  ylim(0,22)+
 <a id="__codelineno-59-24" name="__codelineno-59-24" href="#__codelineno-59-24"></a>  theme_light()+
 <a id="__codelineno-59-25" name="__codelineno-59-25" href="#__codelineno-59-25"></a>  theme(axis.text.x=element_text(size = 11,colour="black"))
-<a id="__codelineno-59-26" name="__codelineno-59-26" href="#__codelineno-59-26"></a>ggplot() + 
+<a id="__codelineno-59-26" name="__codelineno-59-26" href="#__codelineno-59-26"></a>ggplot() +
 <a id="__codelineno-59-27" name="__codelineno-59-27" href="#__codelineno-59-27"></a>  geom_polygon(data=mydata,aes(x=id, y=value),color = "black", fill=brewer.pal(7,"Set1")[1],alpha=0.1)+
 <a id="__codelineno-59-28" name="__codelineno-59-28" href="#__codelineno-59-28"></a>  geom_point(data=mydata,aes(x=id, y=value),size=5,shape=21,color = 'black', fill=brewer.pal(7,"Set1")[1])+
 <a id="__codelineno-59-29" name="__codelineno-59-29" href="#__codelineno-59-29"></a>  coord_polar() + #实现为图3-8-1(c) 的圆形雷达图
@@ -11780,12 +11797,12 @@ plot函数默认的使用格式如下：</p>
 </code></pre></div>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1609075535703-a669ed80-15bc-4533-ad1f-0ae5c9ef6ea4.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=546&amp;id=CD0Hs&amp;originHeight=546&amp;originWidth=584&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=584" />
 <div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>###---------------多序列数据雷达图
-<a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a>coord_radar &lt;- function (theta = "x", start = 0, direction = 1) 
+<a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a>coord_radar &lt;- function (theta = "x", start = 0, direction = 1)
 <a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a>{  theta &lt;- match.arg(theta, c("x", "y"))
-<a id="__codelineno-60-4" name="__codelineno-60-4" href="#__codelineno-60-4"></a>r &lt;- if (theta == "x") 
+<a id="__codelineno-60-4" name="__codelineno-60-4" href="#__codelineno-60-4"></a>r &lt;- if (theta == "x")
 <a id="__codelineno-60-5" name="__codelineno-60-5" href="#__codelineno-60-5"></a>  "y"
 <a id="__codelineno-60-6" name="__codelineno-60-6" href="#__codelineno-60-6"></a>else "x"
-<a id="__codelineno-60-7" name="__codelineno-60-7" href="#__codelineno-60-7"></a>ggproto("CoordRadar", CoordPolar, theta = theta, r = r, start = start, 
+<a id="__codelineno-60-7" name="__codelineno-60-7" href="#__codelineno-60-7"></a>ggproto("CoordRadar", CoordPolar, theta = theta, r = r, start = start,
 <a id="__codelineno-60-8" name="__codelineno-60-8" href="#__codelineno-60-8"></a>        direction = sign(direction),
 <a id="__codelineno-60-9" name="__codelineno-60-9" href="#__codelineno-60-9"></a>        is_linear = function(coord) TRUE)}
 <a id="__codelineno-60-10" name="__codelineno-60-10" href="#__codelineno-60-10"></a>#--------------------------------------------多数据系列-------------------------------------------------------
@@ -11797,9 +11814,9 @@ plot函数默认的使用格式如下：</p>
 <a id="__codelineno-60-16" name="__codelineno-60-16" href="#__codelineno-60-16"></a>)
 <a id="__codelineno-60-17" name="__codelineno-60-17" href="#__codelineno-60-17"></a>AddRow&lt;-c(NA,nrow(label_data)+1,label_data[1,ncol(label_data)-1],label_data[1,ncol(label_data)])
 <a id="__codelineno-60-18" name="__codelineno-60-18" href="#__codelineno-60-18"></a>mydata&lt;-rbind(label_data,AddRow)
-<a id="__codelineno-60-19" name="__codelineno-60-19" href="#__codelineno-60-19"></a>myAngle&lt;- 360- 360 * (label_data$id-1) /nrow(label_data)  
+<a id="__codelineno-60-19" name="__codelineno-60-19" href="#__codelineno-60-19"></a>myAngle&lt;- 360- 360 * (label_data$id-1) /nrow(label_data)
 <a id="__codelineno-60-20" name="__codelineno-60-20" href="#__codelineno-60-20"></a>mydata&lt;-melt(mydata,id=c("car", "id"))
-<a id="__codelineno-60-21" name="__codelineno-60-21" href="#__codelineno-60-21"></a>ggplot(data=mydata,aes(x=id, y=value,group=variable,fill=variable)) + 
+<a id="__codelineno-60-21" name="__codelineno-60-21" href="#__codelineno-60-21"></a>ggplot(data=mydata,aes(x=id, y=value,group=variable,fill=variable)) +
 <a id="__codelineno-60-22" name="__codelineno-60-22" href="#__codelineno-60-22"></a>  geom_polygon(colour="black",alpha=0.1)+
 <a id="__codelineno-60-23" name="__codelineno-60-23" href="#__codelineno-60-23"></a>  geom_point(size=4,shape=21,color = 'black')+
 <a id="__codelineno-60-24" name="__codelineno-60-24" href="#__codelineno-60-24"></a>  coord_radar()+
@@ -11821,8 +11838,8 @@ plot函数默认的使用格式如下：</p>
 <a id="__codelineno-61-2" name="__codelineno-61-2" href="#__codelineno-61-2"></a>#install.packages("wordcloud")
 <a id="__codelineno-61-3" name="__codelineno-61-3" href="#__codelineno-61-3"></a>library(tm)
 <a id="__codelineno-61-4" name="__codelineno-61-4" href="#__codelineno-61-4"></a>library(wordcloud)
-<a id="__codelineno-61-5" name="__codelineno-61-5" href="#__codelineno-61-5"></a>Paper1&lt;-paste(scan("Paper1.txt", what = character(0),sep = ""), collapse = " ")  
-<a id="__codelineno-61-6" name="__codelineno-61-6" href="#__codelineno-61-6"></a>Paper2&lt;-paste(scan("Paper2.txt", what = character(0),sep = ""), collapse = " ")  
+<a id="__codelineno-61-5" name="__codelineno-61-5" href="#__codelineno-61-5"></a>Paper1&lt;-paste(scan("Paper1.txt", what = character(0),sep = ""), collapse = " ")
+<a id="__codelineno-61-6" name="__codelineno-61-6" href="#__codelineno-61-6"></a>Paper2&lt;-paste(scan("Paper2.txt", what = character(0),sep = ""), collapse = " ")
 <a id="__codelineno-61-7" name="__codelineno-61-7" href="#__codelineno-61-7"></a>tmpText&lt;- data.frame(c(Paper1, Paper2),row.names=c("Text1","Text2"))
 <a id="__codelineno-61-8" name="__codelineno-61-8" href="#__codelineno-61-8"></a>df_title &lt;- data.frame(doc_id=row.names(tmpText),
 <a id="__codelineno-61-9" name="__codelineno-61-9" href="#__codelineno-61-9"></a>                       text=tmpText$c.Paper1..Paper2.)
@@ -11840,7 +11857,7 @@ plot函数默认的使用格式如下：</p>
 <a id="__codelineno-61-21" name="__codelineno-61-21" href="#__codelineno-61-21"></a>comparison.cloud(term.matrix,max.words=300,random.order=FALSE,colors=c("#00B2FF", "red"))
 <a id="__codelineno-61-22" name="__codelineno-61-22" href="#__codelineno-61-22"></a>commonality.cloud(term.matrix,max.words=100,random.order=FALSE,color="#E7298A")
 <a id="__codelineno-61-23" name="__codelineno-61-23" href="#__codelineno-61-23"></a># comparison cloud
-<a id="__codelineno-61-24" name="__codelineno-61-24" href="#__codelineno-61-24"></a>comparison.cloud(term.matrix, random.order=FALSE, 
+<a id="__codelineno-61-24" name="__codelineno-61-24" href="#__codelineno-61-24"></a>comparison.cloud(term.matrix, random.order=FALSE,
 <a id="__codelineno-61-25" name="__codelineno-61-25" href="#__codelineno-61-25"></a>                 colors = c("#00B2FF", "red", "#FF0099", "#6600CC"),
 <a id="__codelineno-61-26" name="__codelineno-61-26" href="#__codelineno-61-26"></a>                 title.size=1.5, max.words=500)
 <a id="__codelineno-61-27" name="__codelineno-61-27" href="#__codelineno-61-27"></a>#------------------------------------------------------------------------------------------------------
@@ -12010,17 +12027,17 @@ number_format参数可以设置数值格式，比如保留几位小数。
 </code></pre></div></p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1609075535856-e19faba6-0e8c-4bc2-8eb5-4197c7379678.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=669&amp;id=b3hKf&amp;originHeight=669&amp;originWidth=679&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=679" />
 legend_breaks 和legend_labels指定图例数值和标签
-<div class="highlight"><pre><span></span><code><a id="__codelineno-87-1" name="__codelineno-87-1" href="#__codelineno-87-1"></a>pheatmap(test, cluster_row = FALSE, legend_breaks = -1:4, 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-87-1" name="__codelineno-87-1" href="#__codelineno-87-1"></a>pheatmap(test, cluster_row = FALSE, legend_breaks = -1:4,
 <a id="__codelineno-87-2" name="__codelineno-87-2" href="#__codelineno-87-2"></a>         legend_labels = c("0","1e-4", "1e-3", "1e-2", "1e-1", "1"))
 </code></pre></div></p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1609075535815-a500220a-9f8e-47fa-9098-ee4433f2bc52.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=671&amp;id=VI7Bq&amp;originHeight=671&amp;originWidth=682&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=682" />
-cellwidth和cellheight指定小方块的宽和高，main指定图的标题，fontsize指定字体大小。 
+cellwidth和cellheight指定小方块的宽和高，main指定图的标题，fontsize指定字体大小。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-88-1" name="__codelineno-88-1" href="#__codelineno-88-1"></a>pheatmap(test, cellwidth = 15, cellheight = 12, main = "Example heatmap")
 </code></pre></div></p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1609075535801-5f25ab82-9f3e-4af3-95cc-06bd4ab27789.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=619&amp;id=qf4GC&amp;originHeight=619&amp;originWidth=498&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=498" />
 为行和列生成注释，说白了就是分组信息
 <div class="highlight"><pre><span></span><code><a id="__codelineno-89-1" name="__codelineno-89-1" href="#__codelineno-89-1"></a>annotation_col = data.frame(
-<a id="__codelineno-89-2" name="__codelineno-89-2" href="#__codelineno-89-2"></a>  CellType = factor(rep(c("CT1", "CT2"), 5)), 
+<a id="__codelineno-89-2" name="__codelineno-89-2" href="#__codelineno-89-2"></a>  CellType = factor(rep(c("CT1", "CT2"), 5)),
 <a id="__codelineno-89-3" name="__codelineno-89-3" href="#__codelineno-89-3"></a>  Time = 1:5
 <a id="__codelineno-89-4" name="__codelineno-89-4" href="#__codelineno-89-4"></a>)
 <a id="__codelineno-89-5" name="__codelineno-89-5" href="#__codelineno-89-5"></a>rownames(annotation_col) = paste("Test", 1:10, sep = "")
@@ -12054,7 +12071,7 @@ angle_col指定列标签角度。
 <a id="__codelineno-95-4" name="__codelineno-95-4" href="#__codelineno-95-4"></a>  GeneClass = c(Path1 = "#7570B3", Path2 = "#E7298A", Path3 = "#66A61E")
 <a id="__codelineno-95-5" name="__codelineno-95-5" href="#__codelineno-95-5"></a>)
 </code></pre></div></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-96-1" name="__codelineno-96-1" href="#__codelineno-96-1"></a>pheatmap(test, annotation_col = annotation_col, annotation_row = annotation_row, 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-96-1" name="__codelineno-96-1" href="#__codelineno-96-1"></a>pheatmap(test, annotation_col = annotation_col, annotation_row = annotation_row,
 <a id="__codelineno-96-2" name="__codelineno-96-2" href="#__codelineno-96-2"></a>         annotation_colors = ann_colors)
 </code></pre></div>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1609075535905-c49f0f34-828b-4132-b134-53d0ded0411e.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=559&amp;id=ThbCh&amp;originHeight=559&amp;originWidth=676&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=676" /></p>
@@ -12066,12 +12083,12 @@ angle_col指定列标签角度。
 </code></pre></div>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1609075535823-05be52da-67c4-4b54-bff6-ec84c0dc5572.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=560&amp;id=By518&amp;originHeight=560&amp;originWidth=680&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=680" />
 cutree_col和cutree_rows根据层次聚类(使用cutree)将行划分为多少个集群，如果没有对行进行聚类，则忽略参数。
-<div class="highlight"><pre><span></span><code><a id="__codelineno-99-1" name="__codelineno-99-1" href="#__codelineno-99-1"></a>pheatmap(test, annotation_col = annotation_col, cluster_rows = FALSE, gaps_row = c(10, 14), 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-99-1" name="__codelineno-99-1" href="#__codelineno-99-1"></a>pheatmap(test, annotation_col = annotation_col, cluster_rows = FALSE, gaps_row = c(10, 14),
 <a id="__codelineno-99-2" name="__codelineno-99-2" href="#__codelineno-99-2"></a>         cutree_col = 2)
 </code></pre></div></p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1609075535848-75794b50-3e90-4cf6-a82b-88d7a9b31c09.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=555&amp;id=XpnWD&amp;originHeight=555&amp;originWidth=668&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=668" />
 labels_row和labels_col重新定义行/列标签。
-<div class="highlight"><pre><span></span><code><a id="__codelineno-100-1" name="__codelineno-100-1" href="#__codelineno-100-1"></a>labels_row = c("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-100-1" name="__codelineno-100-1" href="#__codelineno-100-1"></a>labels_row = c("", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
 <a id="__codelineno-100-2" name="__codelineno-100-2" href="#__codelineno-100-2"></a>               "", "", "Il10", "Il15", "Il1b")
 <a id="__codelineno-100-3" name="__codelineno-100-3" href="#__codelineno-100-3"></a>pheatmap(test, annotation_col = annotation_col, labels_row = labels_row)
 </code></pre></div></p>
@@ -12089,7 +12106,7 @@ labels_row和labels_col重新定义行/列标签。
 <a id="__codelineno-102-2" name="__codelineno-102-2" href="#__codelineno-102-2"></a>
 <a id="__codelineno-102-3" name="__codelineno-102-3" href="#__codelineno-102-3"></a><span class="nf">set.seed</span><span class="p">(</span><span class="m">123</span><span class="p">)</span>
 <a id="__codelineno-102-4" name="__codelineno-102-4" href="#__codelineno-102-4"></a><span class="n">mat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">matrix</span><span class="p">(</span>
-<a id="__codelineno-102-5" name="__codelineno-102-5" href="#__codelineno-102-5"></a><span class="w">  </span><span class="nf">rnorm</span><span class="p">(</span><span class="m">50</span><span class="o">*</span><span class="m">50</span><span class="p">),</span><span class="w"> </span>
+<a id="__codelineno-102-5" name="__codelineno-102-5" href="#__codelineno-102-5"></a><span class="w">  </span><span class="nf">rnorm</span><span class="p">(</span><span class="m">50</span><span class="o">*</span><span class="m">50</span><span class="p">),</span>
 <a id="__codelineno-102-6" name="__codelineno-102-6" href="#__codelineno-102-6"></a><span class="w">  </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span>
 <a id="__codelineno-102-7" name="__codelineno-102-7" href="#__codelineno-102-7"></a><span class="w">  </span><span class="p">)</span>
 <a id="__codelineno-102-8" name="__codelineno-102-8" href="#__codelineno-102-8"></a>
@@ -12106,15 +12123,15 @@ labels_row和labels_col重新定义行/列标签。
 <a id="__codelineno-102-19" name="__codelineno-102-19" href="#__codelineno-102-19"></a><span class="n">ha</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">HeatmapAnnotation</span><span class="p">(</span>
 <a id="__codelineno-102-20" name="__codelineno-102-20" href="#__codelineno-102-20"></a><span class="w">  </span><span class="n">empty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">anno_empty</span><span class="p">(</span><span class="n">border</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">),</span>
 <a id="__codelineno-102-21" name="__codelineno-102-21" href="#__codelineno-102-21"></a><span class="w">  </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">anno_block</span><span class="p">(</span>
-<a id="__codelineno-102-22" name="__codelineno-102-22" href="#__codelineno-102-22"></a><span class="w">    </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">gpar</span><span class="p">(</span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="o">:</span><span class="m">6</span><span class="p">),</span><span class="w"> </span>
+<a id="__codelineno-102-22" name="__codelineno-102-22" href="#__codelineno-102-22"></a><span class="w">    </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">gpar</span><span class="p">(</span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="o">:</span><span class="m">6</span><span class="p">),</span>
 <a id="__codelineno-102-23" name="__codelineno-102-23" href="#__codelineno-102-23"></a><span class="w">    </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">group</span>
 <a id="__codelineno-102-24" name="__codelineno-102-24" href="#__codelineno-102-24"></a><span class="w">    </span><span class="p">)</span>
 <a id="__codelineno-102-25" name="__codelineno-102-25" href="#__codelineno-102-25"></a><span class="p">)</span>
 <a id="__codelineno-102-26" name="__codelineno-102-26" href="#__codelineno-102-26"></a>
 <a id="__codelineno-102-27" name="__codelineno-102-27" href="#__codelineno-102-27"></a><span class="nf">Heatmap</span><span class="p">(</span>
-<a id="__codelineno-102-28" name="__codelineno-102-28" href="#__codelineno-102-28"></a><span class="w">  </span><span class="n">mat</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"mat"</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-102-29" name="__codelineno-102-29" href="#__codelineno-102-29"></a><span class="w">  </span><span class="n">column_split</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">split</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-102-30" name="__codelineno-102-30" href="#__codelineno-102-30"></a><span class="w">  </span><span class="n">top_annotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ha</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-102-28" name="__codelineno-102-28" href="#__codelineno-102-28"></a><span class="w">  </span><span class="n">mat</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"mat"</span><span class="p">,</span>
+<a id="__codelineno-102-29" name="__codelineno-102-29" href="#__codelineno-102-29"></a><span class="w">  </span><span class="n">column_split</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">split</span><span class="p">,</span>
+<a id="__codelineno-102-30" name="__codelineno-102-30" href="#__codelineno-102-30"></a><span class="w">  </span><span class="n">top_annotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ha</span><span class="p">,</span>
 <a id="__codelineno-102-31" name="__codelineno-102-31" href="#__codelineno-102-31"></a><span class="w">  </span><span class="n">column_title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NULL</span>
 <a id="__codelineno-102-32" name="__codelineno-102-32" href="#__codelineno-102-32"></a><span class="w">  </span><span class="p">)</span>
 <a id="__codelineno-102-33" name="__codelineno-102-33" href="#__codelineno-102-33"></a>
@@ -12123,24 +12140,24 @@ labels_row和labels_col重新定义行/列标签。
 <a id="__codelineno-102-36" name="__codelineno-102-36" href="#__codelineno-102-36"></a><span class="w">                             </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">label_gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">gpar</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-102-37" name="__codelineno-102-37" href="#__codelineno-102-37"></a><span class="w">  </span><span class="c1"># 获取最左侧 viewport</span>
 <a id="__codelineno-102-38" name="__codelineno-102-38" href="#__codelineno-102-38"></a><span class="w">  </span><span class="nf">seekViewport</span><span class="p">(</span><span class="nf">glue</span><span class="p">(</span>
-<a id="__codelineno-102-39" name="__codelineno-102-39" href="#__codelineno-102-39"></a><span class="w">    </span><span class="s">'annotation_{anno}_{slice}'</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-102-39" name="__codelineno-102-39" href="#__codelineno-102-39"></a><span class="w">    </span><span class="s">'annotation_{anno}_{slice}'</span><span class="p">,</span>
 <a id="__codelineno-102-40" name="__codelineno-102-40" href="#__codelineno-102-40"></a><span class="w">    </span><span class="n">slice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">min</span><span class="p">(</span><span class="n">group</span><span class="p">),</span>
 <a id="__codelineno-102-41" name="__codelineno-102-41" href="#__codelineno-102-41"></a><span class="w">    </span><span class="n">anno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">empty_anno</span><span class="p">)</span>
 <a id="__codelineno-102-42" name="__codelineno-102-42" href="#__codelineno-102-42"></a><span class="w">    </span><span class="p">)</span>
 <a id="__codelineno-102-43" name="__codelineno-102-43" href="#__codelineno-102-43"></a><span class="w">  </span><span class="c1"># 获取左下角坐标点</span>
 <a id="__codelineno-102-44" name="__codelineno-102-44" href="#__codelineno-102-44"></a><span class="w">  </span><span class="n">loc1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">deviceLoc</span><span class="p">(</span>
-<a id="__codelineno-102-45" name="__codelineno-102-45" href="#__codelineno-102-45"></a><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">unit</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="s">"npc"</span><span class="p">),</span><span class="w"> </span>
+<a id="__codelineno-102-45" name="__codelineno-102-45" href="#__codelineno-102-45"></a><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">unit</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="s">"npc"</span><span class="p">),</span>
 <a id="__codelineno-102-46" name="__codelineno-102-46" href="#__codelineno-102-46"></a><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">unit</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="s">"npc"</span><span class="p">)</span>
 <a id="__codelineno-102-47" name="__codelineno-102-47" href="#__codelineno-102-47"></a><span class="w">  </span><span class="p">)</span>
 <a id="__codelineno-102-48" name="__codelineno-102-48" href="#__codelineno-102-48"></a><span class="w">  </span><span class="c1"># 获取最右侧 viewport</span>
 <a id="__codelineno-102-49" name="__codelineno-102-49" href="#__codelineno-102-49"></a><span class="w">  </span><span class="nf">seekViewport</span><span class="p">(</span><span class="nf">glue</span><span class="p">(</span>
-<a id="__codelineno-102-50" name="__codelineno-102-50" href="#__codelineno-102-50"></a><span class="w">    </span><span class="s">'annotation_{anno}_{slice}'</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-102-50" name="__codelineno-102-50" href="#__codelineno-102-50"></a><span class="w">    </span><span class="s">'annotation_{anno}_{slice}'</span><span class="p">,</span>
 <a id="__codelineno-102-51" name="__codelineno-102-51" href="#__codelineno-102-51"></a><span class="w">    </span><span class="n">slice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="n">group</span><span class="p">),</span>
 <a id="__codelineno-102-52" name="__codelineno-102-52" href="#__codelineno-102-52"></a><span class="w">    </span><span class="n">anno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">empty_anno</span><span class="p">)</span>
 <a id="__codelineno-102-53" name="__codelineno-102-53" href="#__codelineno-102-53"></a><span class="w">  </span><span class="p">)</span>
 <a id="__codelineno-102-54" name="__codelineno-102-54" href="#__codelineno-102-54"></a><span class="w">  </span><span class="c1"># 获取右上角坐标点</span>
 <a id="__codelineno-102-55" name="__codelineno-102-55" href="#__codelineno-102-55"></a><span class="w">  </span><span class="n">loc2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">deviceLoc</span><span class="p">(</span>
-<a id="__codelineno-102-56" name="__codelineno-102-56" href="#__codelineno-102-56"></a><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">unit</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="s">"npc"</span><span class="p">),</span><span class="w"> </span>
+<a id="__codelineno-102-56" name="__codelineno-102-56" href="#__codelineno-102-56"></a><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">unit</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="s">"npc"</span><span class="p">),</span>
 <a id="__codelineno-102-57" name="__codelineno-102-57" href="#__codelineno-102-57"></a><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">unit</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="s">"npc"</span><span class="p">)</span>
 <a id="__codelineno-102-58" name="__codelineno-102-58" href="#__codelineno-102-58"></a><span class="w">  </span><span class="p">)</span>
 <a id="__codelineno-102-59" name="__codelineno-102-59" href="#__codelineno-102-59"></a><span class="w">  </span><span class="c1"># 切换到全局 viewport</span>
@@ -12148,16 +12165,16 @@ labels_row和labels_col重新定义行/列标签。
 <a id="__codelineno-102-61" name="__codelineno-102-61" href="#__codelineno-102-61"></a><span class="w">  </span><span class="c1"># 绘制矩形</span>
 <a id="__codelineno-102-62" name="__codelineno-102-62" href="#__codelineno-102-62"></a><span class="w">  </span><span class="nf">grid.rect</span><span class="p">(</span>
 <a id="__codelineno-102-63" name="__codelineno-102-63" href="#__codelineno-102-63"></a><span class="w">    </span><span class="n">loc1</span><span class="o">$</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">loc1</span><span class="o">$</span><span class="n">y</span><span class="p">,</span>
-<a id="__codelineno-102-64" name="__codelineno-102-64" href="#__codelineno-102-64"></a><span class="w">    </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loc2</span><span class="o">$</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">loc1</span><span class="o">$</span><span class="n">x</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-102-65" name="__codelineno-102-65" href="#__codelineno-102-65"></a><span class="w">    </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loc2</span><span class="o">$</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">loc1</span><span class="o">$</span><span class="n">y</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-102-66" name="__codelineno-102-66" href="#__codelineno-102-66"></a><span class="w">    </span><span class="n">just</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"left"</span><span class="p">,</span><span class="w"> </span><span class="s">"bottom"</span><span class="p">),</span><span class="w"> </span>
+<a id="__codelineno-102-64" name="__codelineno-102-64" href="#__codelineno-102-64"></a><span class="w">    </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loc2</span><span class="o">$</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">loc1</span><span class="o">$</span><span class="n">x</span><span class="p">,</span>
+<a id="__codelineno-102-65" name="__codelineno-102-65" href="#__codelineno-102-65"></a><span class="w">    </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loc2</span><span class="o">$</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">loc1</span><span class="o">$</span><span class="n">y</span><span class="p">,</span>
+<a id="__codelineno-102-66" name="__codelineno-102-66" href="#__codelineno-102-66"></a><span class="w">    </span><span class="n">just</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"left"</span><span class="p">,</span><span class="w"> </span><span class="s">"bottom"</span><span class="p">),</span>
 <a id="__codelineno-102-67" name="__codelineno-102-67" href="#__codelineno-102-67"></a><span class="w">    </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gp</span>
 <a id="__codelineno-102-68" name="__codelineno-102-68" href="#__codelineno-102-68"></a><span class="w">  </span><span class="p">)</span>
 <a id="__codelineno-102-69" name="__codelineno-102-69" href="#__codelineno-102-69"></a><span class="w">  </span><span class="c1"># 如果传递了标签，则添加标签</span>
 <a id="__codelineno-102-70" name="__codelineno-102-70" href="#__codelineno-102-70"></a><span class="w">  </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nf">is.null</span><span class="p">(</span><span class="n">label</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-102-71" name="__codelineno-102-71" href="#__codelineno-102-71"></a><span class="w">    </span><span class="nf">grid.text</span><span class="p">(</span>
-<a id="__codelineno-102-72" name="__codelineno-102-72" href="#__codelineno-102-72"></a><span class="w">      </span><span class="n">label</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-102-73" name="__codelineno-102-73" href="#__codelineno-102-73"></a><span class="w">      </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">loc1</span><span class="o">$</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">loc2</span><span class="o">$</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-102-72" name="__codelineno-102-72" href="#__codelineno-102-72"></a><span class="w">      </span><span class="n">label</span><span class="p">,</span>
+<a id="__codelineno-102-73" name="__codelineno-102-73" href="#__codelineno-102-73"></a><span class="w">      </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">loc1</span><span class="o">$</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">loc2</span><span class="o">$</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span>
 <a id="__codelineno-102-74" name="__codelineno-102-74" href="#__codelineno-102-74"></a><span class="w">      </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">loc1</span><span class="o">$</span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">loc2</span><span class="o">$</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span>
 <a id="__codelineno-102-75" name="__codelineno-102-75" href="#__codelineno-102-75"></a><span class="w">      </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">label_gp</span>
 <a id="__codelineno-102-76" name="__codelineno-102-76" href="#__codelineno-102-76"></a><span class="w">    </span><span class="p">)</span>
@@ -12211,13 +12228,13 @@ labels_row和labels_col重新定义行/列标签。
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2020/png/1234840/1609075535918-389a2509-d3ce-4697-b7f5-1fef88d9213d.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=651&amp;id=xwToG&amp;originHeight=651&amp;originWidth=690&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=690" /></p>
 <h1 id="_6"><strong>八.火山图</strong><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h1>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-106-1" name="__codelineno-106-1" href="#__codelineno-106-1"></a>colr &lt;- brewer.pal(9,"Set1")[c(3,9,1)]
-<a id="__codelineno-106-2" name="__codelineno-106-2" href="#__codelineno-106-2"></a>ggplot(data = diff, aes(x = logFC, y = logP, color = Group)) +  
-<a id="__codelineno-106-3" name="__codelineno-106-3" href="#__codelineno-106-3"></a>  geom_point(alpha=0.8, size = 2) +  
-<a id="__codelineno-106-4" name="__codelineno-106-4" href="#__codelineno-106-4"></a>  theme_bw(base_size = 15) +  
+<a id="__codelineno-106-2" name="__codelineno-106-2" href="#__codelineno-106-2"></a>ggplot(data = diff, aes(x = logFC, y = logP, color = Group)) +
+<a id="__codelineno-106-3" name="__codelineno-106-3" href="#__codelineno-106-3"></a>  geom_point(alpha=0.8, size = 2) +
+<a id="__codelineno-106-4" name="__codelineno-106-4" href="#__codelineno-106-4"></a>  theme_bw(base_size = 15) +
 <a id="__codelineno-106-5" name="__codelineno-106-5" href="#__codelineno-106-5"></a>  theme(panel.grid.minor = element_blank(),
-<a id="__codelineno-106-6" name="__codelineno-106-6" href="#__codelineno-106-6"></a>        panel.grid.major = element_blank()) +  
+<a id="__codelineno-106-6" name="__codelineno-106-6" href="#__codelineno-106-6"></a>        panel.grid.major = element_blank()) +
 <a id="__codelineno-106-7" name="__codelineno-106-7" href="#__codelineno-106-7"></a>  scale_color_manual(values=colr)+
-<a id="__codelineno-106-8" name="__codelineno-106-8" href="#__codelineno-106-8"></a>  scale_fill_manual(values =colr)+ 
+<a id="__codelineno-106-8" name="__codelineno-106-8" href="#__codelineno-106-8"></a>  scale_fill_manual(values =colr)+
 <a id="__codelineno-106-9" name="__codelineno-106-9" href="#__codelineno-106-9"></a>  labs(x="log(Fold change)",y="-log(P value)")+
 <a id="__codelineno-106-10" name="__codelineno-106-10" href="#__codelineno-106-10"></a>  theme(legend.title = element_blank(),
 <a id="__codelineno-106-11" name="__codelineno-106-11" href="#__codelineno-106-11"></a>        legend.text = element_text(size = 8, face = "bold"),

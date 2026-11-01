@@ -9477,11 +9477,17 @@
 
 
 <h1 id="tcga">TCGA数据库的癌症没有正常样本怎么办？<a class="headerlink" href="#tcga" title="Permanent link">&para;</a></h1>
-<p><font style="color:rgb(51, 51, 51);">虽然在我公众号有介绍了TCGA数据库的好多文章【</font><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651276349&amp;idx=1&amp;sn=2d38c5081f3611386d8d979e905145a3&amp;chksm=841ea040b3692956f0a3804e10d4b7928a4d4f4ad2134b6c28cd89caf8edcc1dffd90a662801&amp;scene=21#wechat_redirect">TCGA数据库基础的数据分析</a><font style="color:rgb(51, 51, 51);">】，数据下载都是自己下载处理的。我也介绍过从UCSC数据库下载处理好的数据</font><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273247&amp;idx=1&amp;sn=008928dbfc6c6976d53369cd20c26f87&amp;chksm=841edc62b3695574739a6db6af267b279808c9ea82e9947a461da2e3bf02a8db215204cf65e9&amp;scene=21#wechat_redirect">UCSC数据库下载TCGA数据需要注意的细节</a><font style="color:rgb(51, 51, 51);">。但是TCGA数据库中有些癌症的数据是没有正常样本的，或者只有几个。但有时候我们又想进行癌症与正常样本的比较，怎么办呢？？</font></p>
-<p><font style="color:rgb(51, 51, 51);">如果你只是简单的看几个基因的话，很多在线工具就可以帮你解决了，最好用的当然是GEPIA【</font><u><font style="color:rgb(2, 30, 170);">http://gepia2.cancer-pku.cn/#index</font></u><font style="color:rgb(51, 51, 51);">】了，而且可以获取癌症与正常组织想比所有差异表达的结果。但如果我们想进行其他的分析，那么GTEx【</font><u><font style="color:rgb(2, 30, 170);">http://www.gtexportal.org/home/</font></u><font style="color:rgb(51, 51, 51);">】这个数据库里面的正常样本是可以作为对照的，但由于数据库来源不一样，数据处理流程不一样，所以也不是简单的合并使用，具体怎么处理可参考文献：Comprehensive analysis of normal adjacent to tumor transcriptomes ，里面有详细的处理流程介绍。</font><strong><font style="color:rgb(217, 33, 66);">不想处理，那就下载现成的</font></strong><font style="color:rgb(51, 51, 51);">。</font></p>
-<p><font style="color:rgb(51, 51, 51);">UCSC官网</font>：<a href="https://xenabrowser.net/datapages/">https://xenabrowser.net/datapages/</a></p>
-<p><font style="color:rgb(51, 51, 51);">可以直接在UCSC下载:</font></p>
-<p><u><font style="color:rgb(2, 30, 170);">https://xenabrowser.net/datapages/?cohort=TCGA%20TARGET%20GTEx&amp;removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443</font></u></p>
+<p>虽然在我公众号有介绍了TCGA数据库的好多文章【<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651276349&amp;idx=1&amp;sn=2d38c5081f3611386d8d979e905145a3&amp;chksm=841ea040b3692956f0a3804e10d4b7928a4d4f4ad2134b6c28cd89caf8edcc1dffd90a662801&amp;scene=21#wechat_redirect">TCGA数据库基础的数据分析</a>】，数据下载都是自己下载处理的。
+我也介绍过从UCSC数据库下载处理好的数据<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651273247&amp;idx=1&amp;sn=008928dbfc6c6976d53369cd20c26f87&amp;chksm=841edc62b3695574739a6db6af267b279808c9ea82e9947a461da2e3bf02a8db215204cf65e9&amp;scene=21#wechat_redirect">UCSC数据库下载TCGA数据需要注意的细节</a>。
+但是TCGA数据库中有些癌症的数据是没有正常样本的，或者只有几个。
+但有时候我们又想进行癌症与正常样本的比较，怎么办呢？
+？</p>
+<p>如果你只是简单的看几个基因的话，很多在线工具就可以帮你解决了，最好用的当然是GEPIA【<u>http://gepia2.cancer-pku.cn/#index</u>】了，而且可以获取癌症与正常组织想比所有差异表达的结果。
+但如果我们想进行其他的分析，那么GTEx【<u>http://www.gtexportal.org/home/</u>】这个数据库里面的正常样本是可以作为对照的，但由于数据库来源不一样，数据处理流程不一样，所以也不是简单的合并使用，具体怎么处理可参考文献：Comprehensive analysis of normal adjacent to tumor transcriptomes ，里面有详细的处理流程介绍。
+<strong>不想处理，那就下载现成的</strong>。</p>
+<p>UCSC官网：<a href="https://xenabrowser.net/datapages/">https://xenabrowser.net/datapages/</a></p>
+<p>可以直接在UCSC下载:</p>
+<p><u>https://xenabrowser.net/datapages/?cohort=TCGA%20TARGET%20GTEx&amp;removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443</u></p>
 <p><img alt="1634044373173-2d511362-ea4b-4a86-a43a-e3d547eb031e.png" src="img/P-gkCSRV7ebePaLL/1634044373173-2d511362-ea4b-4a86-a43a-e3d547eb031e-578183.png" /></p>
 <p>这里有标准化后的和没有标准化的数据都有。你可以直接下载标准化后的数据，就可以直接进行下游的数据分析了。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">##数据下载地址</span>
@@ -9523,7 +9529,7 @@
 <a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">     </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"K:/database.data/TCGA_TARGET_GTEx/TcgaTargetGtex_RSEM_Hugo_lung_cancer_count.Rdata"</span><span class="p">)</span>
 </code></pre></div>
 <blockquote>
-<p>更新: 2021-10-12 21:15:03<br />
+<p>更新: 2021-10-12 21:15:03
 原文: <a href="https://www.yuque.com/doublehelix/bioinfonotes/gszak3">https://www.yuque.com/doublehelix/bioinfonotes/gszak3</a></p>
 </blockquote>
 

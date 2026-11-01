@@ -9497,7 +9497,7 @@
 <p><img alt="1702200828593-670569e4-1a85-47d8-a634-a394082fdac2.png" src="../img/08QLyEVmIYT1PuBG/1702200828593-670569e4-1a85-47d8-a634-a394082fdac2-485177.png" /></p>
 <h1 id="2rpkmfpkm">2.RPKM/FPKM<a class="headerlink" href="#2rpkmfpkm" title="Permanent link">&para;</a></h1>
 <p>FPKM(Fragment Per Kilobase of transcript, per Million mapped reads）：每千碱基片段每百万映射读取的 reads 数)，是针对双端测序的一个normalization方法。通常来讲，当paired reads同时匹配到一个位置，记为fragment(注：即便是双端测序，RPKM也不完全是FPKM的2倍)。</p>
-<p><img alt="1702200952554-98b7f09a-b8ef-4a5b-8f52-8883d204d129.png" src="../img/08QLyEVmIYT1PuBG/1702200952554-98b7f09a-b8ef-4a5b-8f52-8883d204d129-468776.png" />    </p>
+<p><img alt="1702200952554-98b7f09a-b8ef-4a5b-8f52-8883d204d129.png" src="../img/08QLyEVmIYT1PuBG/1702200952554-98b7f09a-b8ef-4a5b-8f52-8883d204d129-468776.png" /></p>
 <p><strong>RPKM: Reads Per Kilobase of exon model per Million mapped reads (每千个碱基的转录每百万映射读取的reads)</strong></p>
 <p><img alt="1702201038662-0fbf47c7-2cd4-4466-8e05-d288688bb3f7.png" src="../img/08QLyEVmIYT1PuBG/1702201038662-0fbf47c7-2cd4-4466-8e05-d288688bb3f7-056435.png" /></p>
 <hr />
@@ -9505,9 +9505,11 @@
 <p><strong>RPKM与FPKM的区别</strong>：RPKM值适用于单末端RNA-seq实验数据，FPKM适用于双末端RNA-seq测序数据。</p>
 <h1 id="3tpm-transcript-per-million"><strong>3.TPM (Transcript per million)</strong><a class="headerlink" href="#3tpm-transcript-per-million" title="Permanent link">&para;</a></h1>
 <p>TPM（Transcripts Per Million） 是一种常用的基因表达量归一化方法，它将基因的表达量调整为每百万条转录本的数量。TPM 值考虑了基因的长度和测序深度，通过将每个基因的 Counts 值除以其长度，并进行适当的归一化，将基因的表达量转换为每百万转录本数，以便进行样本间的比较和分析。TPM 值消除了样本间测序深度的差异和基因长度的影响。</p>
-<p><img alt="1702201133439-8661f5aa-caab-4420-adb7-53589546960b.png" src="../img/08QLyEVmIYT1PuBG/1702201133439-8661f5aa-caab-4420-adb7-53589546960b-225671.png" />            </p>
+<p><img alt="1702201133439-8661f5aa-caab-4420-adb7-53589546960b.png" src="../img/08QLyEVmIYT1PuBG/1702201133439-8661f5aa-caab-4420-adb7-53589546960b-225671.png" /></p>
 <p>TPM的计算方法也同RPKM/FPKM类似，首先使用式2计算每个基因的表达值，去除基因长度的影响。随后计算每个基因的表达量的百分比，最后再乘以10^6，TPM可以看作是RPKM/FPKM值的百分比。</p>
-<p>直接说事情，我有一个基因A，它在这个样本的转录组数据中被测序而且mapping到基因组了 5000个的reads，而这个基因A长度是10K，我们总测序文库是50M，所以这个基因A的RPKM值是 5000除以10，再除以50，为10. 就是把基因的reads数量根据基因长度和样本测序文库来normalization 。那么它的TPM值是多少呢？这个时候这些信息已经不够了，需要知道该样本其它基因的RPKM值是多少，加上该样本有3个基因，另外两个基因的RPKM值是5和35，那么我们的基因A的RPKM值为10需要换算成TPM值就是 1,000,000 *10/(5+10+35)=200,000，看起来是不是有点大呀，其实主要是因为我们假设的基因太少了，一般个体里面都有两万多个基因的，总和会大大的增加，这样TPM值跟RPKM值差别不会这么恐怖的。</p>
+<p>直接说事情，我有一个基因A，它在这个样本的转录组数据中被测序而且mapping到基因组了 5000个的reads，而这个基因A长度是10K，我们总测序文库是50M，所以这个基因A的RPKM值是 5000除以10，再除以50，为10. 就是把基因的reads数量根据基因长度和样本测序文库来normalization 。
+那么它的TPM值是多少呢？
+这个时候这些信息已经不够了，需要知道该样本其它基因的RPKM值是多少，加上该样本有3个基因，另外两个基因的RPKM值是5和35，那么我们的基因A的RPKM值为10需要换算成TPM值就是 1,000,000 *10/(5+10+35)=200,000，看起来是不是有点大呀，其实主要是因为我们假设的基因太少了，一般个体里面都有两万多个基因的，总和会大大的增加，这样TPM值跟RPKM值差别不会这么恐怖的。</p>
 <p>相当于重新标准化的文库，保证每个样本中所有TPM的总和是相同的。</p>
 <p><strong>TPM与RPKM/FPKM的区别</strong>：从计算公式来说，唯一的不同是计算操作的顺序，TPM是先去除了基因长度的影响，而RPKM/FPKM是先去除测序深度的影响，具体可看这篇博文，有计算步骤的详细说明；TPM实际上改进了RPKM/FPKM方法在跨样品间定量的不准确性。</p>
 <p>TPM的使用范围与RPKM/FPKM相同。</p>
@@ -9526,7 +9528,7 @@
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">#生成的geneID为ensemble编号</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">eff_length</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">do.call</span><span class="p">(</span><span class="n">rbind</span><span class="p">,</span><span class="nf">lapply</span><span class="p">(</span><span class="n">exonic.gene.sizes</span><span class="p">,</span><span class="w"> </span><span class="n">data.frame</span><span class="p">))</span>
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">eff_length</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">gene_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">rownames</span><span class="p">(</span><span class="n">eff_length</span><span class="p">),</span><span class="n">effLen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eff_length</span><span class="p">[,</span><span class="m">1</span><span class="p">])</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nf">rownames</span><span class="p">(</span><span class="n">eff_length</span><span class="p">)</span><span class="o">&lt;-</span><span class="n">eff_length</span><span class="o">$</span><span class="n">gene_id</span><span class="w"> </span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nf">rownames</span><span class="p">(</span><span class="n">eff_length</span><span class="p">)</span><span class="o">&lt;-</span><span class="n">eff_length</span><span class="o">$</span><span class="n">gene_id</span>
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="nf">rownames</span><span class="p">(</span><span class="n">eff_length</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">do.call</span><span class="p">(</span><span class="n">rbind</span><span class="p">,</span><span class="nf">strsplit</span><span class="p">(</span><span class="nf">as.character</span><span class="p">(</span><span class="n">eff_length</span><span class="o">$</span><span class="n">gene_id</span><span class="p">),</span><span class="s">'\\.'</span><span class="p">))[,</span><span class="m">1</span><span class="p">]</span>
 <a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="nf">head</span><span class="p">(</span><span class="n">eff_length</span><span class="p">)</span>
 </code></pre></div>
@@ -9597,7 +9599,7 @@
 <p><img alt="1702203646238-8f9c26fb-7008-4b6f-9dbc-c57fb1c2f5cc.png" src="../img/08QLyEVmIYT1PuBG/1702203646238-8f9c26fb-7008-4b6f-9dbc-c57fb1c2f5cc-545605.png" /></p>
 <p>整体来说，差别不是很大。</p>
 <blockquote>
-<p>更新: 2023-12-10 19:50:05<br />
+<p>更新: 2023-12-10 19:50:05
 原文: <a href="https://www.yuque.com/doublehelix/bioinfonotes/gpiwl9">https://www.yuque.com/doublehelix/bioinfonotes/gpiwl9</a></p>
 </blockquote>
 

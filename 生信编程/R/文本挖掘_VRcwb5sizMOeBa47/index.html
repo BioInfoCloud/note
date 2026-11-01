@@ -9494,7 +9494,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Install</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nf">install.packages</span><span class="p">(</span><span class="s">"tm"</span><span class="p">)</span><span class="w">  </span><span class="c1"># for text mining</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nf">install.packages</span><span class="p">(</span><span class="s">"SnowballC"</span><span class="p">)</span><span class="w"> </span><span class="c1"># for text stemming</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nf">install.packages</span><span class="p">(</span><span class="s">"wordcloud"</span><span class="p">)</span><span class="w"> </span><span class="c1"># word-cloud generator </span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nf">install.packages</span><span class="p">(</span><span class="s">"wordcloud"</span><span class="p">)</span><span class="w"> </span><span class="c1"># word-cloud generator</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nf">install.packages</span><span class="p">(</span><span class="s">"RColorBrewer"</span><span class="p">)</span><span class="w"> </span><span class="c1"># color palettes</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># Load</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nf">library</span><span class="p">(</span><span class="s">"tm"</span><span class="p">)</span>
@@ -9514,8 +9514,8 @@
 <p>VectorSource(x)函数：向量源将向量x的每个元素解释为一个文档。</p>
 <p>其他读入函数：</p>
 <ul>
-<li><strong><font style="color:rgb(55, 55, 55);">read.csv() is</font></strong><font style="color:rgb(55, 55, 55);"> </font><font style="color:rgb(55, 55, 55);">used for reading comma-separated value (csv) files, where a comma “,” is used a field separator</font></li>
-<li><strong><font style="color:rgb(55, 55, 55);">read.delim()</font></strong><font style="color:rgb(55, 55, 55);"> is used for reading tab-separated values (.txt) files</font></li>
+<li><strong>read.csv() is</strong> used for reading comma-separated value (csv) files, where a comma “,” is used a field separator</li>
+<li><strong>read.delim()</strong> is used for reading tab-separated values (.txt) files</li>
 </ul>
 <p>Inspect the content of the document</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nf">inspect</span><span class="p">(</span><span class="n">docs</span><span class="p">)</span>
@@ -9539,7 +9539,7 @@
 <a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">docs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">tm_map</span><span class="p">(</span><span class="n">docs</span><span class="p">,</span><span class="w"> </span><span class="n">removeWords</span><span class="p">,</span><span class="w"> </span><span class="nf">stopwords</span><span class="p">(</span><span class="s">"english"</span><span class="p">))</span>
 <a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># Remove your own stop word</span>
 <a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1"># specify your stopwords as a character vector</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">docs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">tm_map</span><span class="p">(</span><span class="n">docs</span><span class="p">,</span><span class="w"> </span><span class="n">removeWords</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"blabla1"</span><span class="p">,</span><span class="w"> </span><span class="s">"blabla2"</span><span class="p">))</span><span class="w"> </span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">docs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">tm_map</span><span class="p">(</span><span class="n">docs</span><span class="p">,</span><span class="w"> </span><span class="n">removeWords</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"blabla1"</span><span class="p">,</span><span class="w"> </span><span class="s">"blabla2"</span><span class="p">))</span>
 <a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="c1"># Remove punctuations</span>
 <a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="n">docs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">tm_map</span><span class="p">(</span><span class="n">docs</span><span class="p">,</span><span class="w"> </span><span class="n">removePunctuation</span><span class="p">)</span>
 <a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="c1"># Eliminate extra white spaces</span>
@@ -9560,13 +9560,13 @@
 <p>单词的重要性可以用单词云来说明，如下所示:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nf">set.seed</span><span class="p">(</span><span class="m">1234</span><span class="p">)</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nf">wordcloud</span><span class="p">(</span><span class="n">words</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="o">$</span><span class="n">word</span><span class="p">,</span><span class="w"> </span><span class="n">freq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="o">$</span><span class="n">freq</span><span class="p">,</span><span class="w"> </span><span class="n">min.freq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">          </span><span class="n">max.words</span><span class="o">=</span><span class="m">200</span><span class="p">,</span><span class="w"> </span><span class="n">random.order</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">rot.per</span><span class="o">=</span><span class="m">0.35</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">          </span><span class="n">max.words</span><span class="o">=</span><span class="m">200</span><span class="p">,</span><span class="w"> </span><span class="n">random.order</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">rot.per</span><span class="o">=</span><span class="m">0.35</span><span class="p">,</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">          </span><span class="n">colors</span><span class="o">=</span><span class="nf">brewer.pal</span><span class="p">(</span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="s">"Dark2"</span><span class="p">))</span>
 </code></pre></div>
 <p>Step 6 :Word Association</p>
 <p>相关性是一种统计技术，它可以证明成对的变量是否以及多大程度上是相关的。这种技术可以有效地用于分析哪些单词与调查回答中最频繁出现的单词联系在一起，这有助于查看这些单词周围的上下文。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Find associations </span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nf">findAssocs</span><span class="p">(</span><span class="n">TextDoc_dtm</span><span class="p">,</span><span class="w"> </span><span class="n">terms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"good"</span><span class="p">,</span><span class="s">"work"</span><span class="p">,</span><span class="s">"health"</span><span class="p">),</span><span class="w"> </span><span class="n">corlimit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.25</span><span class="p">)</span><span class="w">         </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Find associations</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nf">findAssocs</span><span class="p">(</span><span class="n">TextDoc_dtm</span><span class="p">,</span><span class="w"> </span><span class="n">terms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"good"</span><span class="p">,</span><span class="s">"work"</span><span class="p">,</span><span class="s">"health"</span><span class="p">),</span><span class="w"> </span><span class="n">corlimit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.25</span><span class="p">)</span>
 </code></pre></div>
 <p>您可以修改上述脚本，以查找与出现至少50次或以上的单词相关的术语，而不必在脚本中硬编码这些术语。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Find associations for words that occur at least 50 times</span>
@@ -9692,10 +9692,10 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nf">findAssocs</span><span class="p">(</span><span class="n">dtm</span><span class="p">,</span><span class="w"> </span><span class="n">terms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">findFreqTerms</span><span class="p">(</span><span class="n">dtm</span><span class="p">,</span><span class="w"> </span><span class="n">lowfreq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">),</span><span class="w"> </span><span class="n">corlimit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.25</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="o">$</span><span class="n">cancer</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">             </span><span class="n">cervical</span><span class="w">             </span><span class="n">apoptosis</span><span class="w">            </span><span class="n">colorectal</span><span class="w">            </span><span class="n">metastasis</span><span class="w"> </span>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">                 </span><span class="m">0.56</span><span class="w">                  </span><span class="m">0.36</span><span class="w">                  </span><span class="m">0.36</span><span class="w">                  </span><span class="m">0.29</span><span class="w"> </span>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="n">epithelialmesenchymal</span><span class="w">             </span><span class="n">functions</span><span class="w">                 </span><span class="n">liver</span><span class="w"> </span>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">                 </span><span class="m">0.29</span><span class="w">                  </span><span class="m">0.29</span><span class="w">                  </span><span class="m">0.29</span><span class="w"> </span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">             </span><span class="n">cervical</span><span class="w">             </span><span class="n">apoptosis</span><span class="w">            </span><span class="n">colorectal</span><span class="w">            </span><span class="n">metastasis</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">                 </span><span class="m">0.56</span><span class="w">                  </span><span class="m">0.36</span><span class="w">                  </span><span class="m">0.36</span><span class="w">                  </span><span class="m">0.29</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="n">epithelialmesenchymal</span><span class="w">             </span><span class="n">functions</span><span class="w">                 </span><span class="n">liver</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">                 </span><span class="m">0.29</span><span class="w">                  </span><span class="m">0.29</span><span class="w">                  </span><span class="m">0.29</span>
 </code></pre></div>
 <h1 id="tcga">三. 作业二：TCGA计划官方文章<a class="headerlink" href="#tcga" title="Permanent link">&para;</a></h1>
 <p>TCGA计划官方文章在：<a href="https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/publications">https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/publications</a></p>
@@ -9873,7 +9873,7 @@
 <p>用已有R包：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">RISmed</span><span class="p">)</span>
 <a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="c1">##限定下检索主题</span>
-<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="n">search_topic</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">'DNA methylation in plant'</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="n">search_topic</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">'DNA methylation in plant'</span><span class="p">)</span>
 <a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="n">search_query</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">EUtilsSummary</span><span class="p">(</span><span class="n">search_topic</span><span class="p">,</span><span class="n">db</span><span class="o">=</span><span class="s">"pubmed"</span><span class="p">,</span><span class="w"> </span><span class="n">retmax</span><span class="o">=</span><span class="m">10000</span><span class="p">,</span><span class="n">datetype</span><span class="o">=</span><span class="s">'pdat'</span><span class="p">,</span><span class="w"> </span><span class="n">mindate</span><span class="o">=</span><span class="m">2000</span><span class="p">,</span><span class="w"> </span><span class="n">maxdate</span><span class="o">=</span><span class="m">2018</span><span class="p">)</span>
 <a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="c1">##查查看下检索内容</span>
 <a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="nf">summary</span><span class="p">(</span><span class="n">search_query</span><span class="p">)</span>
@@ -9907,10 +9907,14 @@
 <a id="__codelineno-22-34" name="__codelineno-22-34" href="#__codelineno-22-34"></a><span class="w">  </span><span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span><span class="o">=</span><span class="s">"bottom"</span><span class="p">)</span>
 </code></pre></div>
 <h1 id="_5">五. 作业四：研究的基因信息统计<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
-<p><font style="color:rgb(51, 51, 51);"></font><font style="color:rgb(51, 51, 51);">前面文章</font><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651276465&amp;idx=1&amp;sn=46b0f163152672dd1ae4ee9acfa554fb&amp;chksm=841ea0ccb36929daa8696264983ce3b1aba9074c6be368cc662fd011dcbc31beea34d00d90d9&amp;scene=21#wechat_redirect">什么基因研究最多？？</a><font style="color:rgb(51, 51, 51);">中下载的gene与pubmed的文献ID的文件，统计了研究基因与出版文献的对应关系。这里来探索一下你研究的基因，发表的文献，可以看看都发表在什么期刊，对题目进行文本挖掘，可以统计每年的发表文献数量等等。。。。</font></p>
-<p><font style="color:rgb(51, 51, 51);">下面是探索ADORA1这个基因的研究情况。</font></p>
-<p><font style="color:rgb(51, 51, 51);">信息是通过网络爬虫的形式获取，中间可能会断，所以下面代码是爬取一个就写入一个到本地文件</font><font style="color:rgb(221, 17, 68);">ADORA1.txt</font><font style="color:rgb(51, 51, 51);">中，如果中断，可以修改一下代码，接着爬，但这还只是适用于数量小的情况。</font></p>
-<p><font style="color:rgb(51, 51, 51);">接着文章【</font><a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651276465&amp;idx=1&amp;sn=46b0f163152672dd1ae4ee9acfa554fb&amp;chksm=841ea0ccb36929daa8696264983ce3b1aba9074c6be368cc662fd011dcbc31beea34d00d90d9&amp;scene=21#wechat_redirect">什么基因研究最多？？</a><font style="color:rgb(51, 51, 51);">】的g2p数据框。</font></p>
+<p>前面文章<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651276465&amp;idx=1&amp;sn=46b0f163152672dd1ae4ee9acfa554fb&amp;chksm=841ea0ccb36929daa8696264983ce3b1aba9074c6be368cc662fd011dcbc31beea34d00d90d9&amp;scene=21#wechat_redirect">什么基因研究最多？？</a>中下载的gene与pubmed的文献ID的文件，统计了研究基因与出版文献的对应关系。
+这里来探索一下你研究的基因，发表的文献，可以看看都发表在什么期刊，对题目进行文本挖掘，可以统计每年的发表文献数量等等。
+。
+。
+。</p>
+<p>下面是探索ADORA1这个基因的研究情况。</p>
+<p>信息是通过网络爬虫的形式获取，中间可能会断，所以下面代码是爬取一个就写入一个到本地文件ADORA1.txt中，如果中断，可以修改一下代码，接着爬，但这还只是适用于数量小的情况。</p>
+<p>接着文章【<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651276465&amp;idx=1&amp;sn=46b0f163152672dd1ae4ee9acfa554fb&amp;chksm=841ea0ccb36929daa8696264983ce3b1aba9074c6be368cc662fd011dcbc31beea34d00d90d9&amp;scene=21#wechat_redirect">什么基因研究最多？？</a>】的g2p数据框。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">pid</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">g2p</span><span class="o">$</span><span class="n">PubMed_ID</span><span class="p">[</span><span class="n">g2p</span><span class="o">$</span><span class="n">GeneID</span><span class="o">==</span><span class="n">tbs</span><span class="o">$</span><span class="n">gene_id</span><span class="p">[</span><span class="n">tbs</span><span class="o">$</span><span class="n">symbol</span><span class="o">==</span><span class="s">"ADORA1"</span><span class="p">]]</span>
 <a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="c1">#### 网络爬虫</span>
 <a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="n">url</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">"https://pubmed.ncbi.nlm.nih.gov/"</span>
@@ -9953,10 +9957,10 @@
 <a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="w">  </span><span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"identity"</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="1633141992195-8ed64632-c962-4122-9351-9186c9f64484.png" src="../img/VRcwb5sizMOeBa47/1633141992195-8ed64632-c962-4122-9351-9186c9f64484-070086.png" /></p>
-<p><font style="color:rgb(51, 51, 51);">这里就可以看见基本的信息了。<br />
-</font><font style="color:rgb(51, 51, 51);">先看看每一年发表的文章。</font></p>
+<p>这里就可以看见基本的信息了。
+先看看每一年发表的文章。</p>
 <p><img alt="1633142041498-9352568e-b268-4982-be2a-7341ae58b239.png" src="../img/VRcwb5sizMOeBa47/1633142041498-9352568e-b268-4982-be2a-7341ae58b239-541366.png" /></p>
-<p><font style="color:rgb(51, 51, 51);">有一个R包RISmed是可以用来探索pubmed数据库的数据的，像上面这种还是会挂。你可以尝试一下。下面代码，所以每一个循环设置了睡眠2s。</font></p>
+<p>有一个R包RISmed是可以用来探索pubmed数据库的数据的，像上面这种还是会挂。你可以尝试一下。下面代码，所以每一个循环设置了睡眠2s。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">RISmed</span><span class="p">)</span>
 <a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="n">linfo</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lapply</span><span class="p">(</span><span class="n">APOE2pubmed</span><span class="p">,</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">uid</span><span class="p">){</span>
 <a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">  </span><span class="nf">message</span><span class="p">(</span><span class="n">uid</span><span class="p">)</span>
@@ -9973,7 +9977,7 @@
 <a id="__codelineno-25-14" name="__codelineno-25-14" href="#__codelineno-25-14"></a><span class="n">ADORA1_pubmeddata</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">do.call</span><span class="p">(</span><span class="n">rbind</span><span class="p">,</span><span class="n">linfo</span><span class="p">)</span>
 <a id="__codelineno-25-15" name="__codelineno-25-15" href="#__codelineno-25-15"></a><span class="nf">save</span><span class="p">(</span><span class="n">ADORA1_pubmeddata</span><span class="p">,</span><span class="n">file</span><span class="o">=</span><span class="w"> </span><span class="s">"data/NCBI/pubmeddata.Rdata"</span><span class="p">)</span>
 </code></pre></div>
-<p><font style="color:rgb(51, 51, 51);">下面就看看这些文章的词云图</font></p>
+<p>下面就看看这些文章的词云图</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nf">library</span><span class="p">(</span><span class="s">"tm"</span><span class="p">)</span>
 <a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="nf">library</span><span class="p">(</span><span class="s">"SnowballC"</span><span class="p">)</span>
 <a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="n">docs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">Corpus</span><span class="p">(</span><span class="nf">VectorSource</span><span class="p">(</span><span class="n">pubmed_Info</span><span class="o">$</span><span class="n">Title</span><span class="p">))</span>
@@ -10011,10 +10015,9 @@
 <a id="__codelineno-26-35" name="__codelineno-26-35" href="#__codelineno-26-35"></a><span class="w">          </span><span class="n">colors</span><span class="o">=</span><span class="nf">brewer.pal</span><span class="p">(</span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="s">"Dark2"</span><span class="p">))</span>
 </code></pre></div>
 <p><img alt="1633141941365-76f6131d-cc2c-43db-8a66-b2587702e061.png" src="../img/VRcwb5sizMOeBa47/1633141941365-76f6131d-cc2c-43db-8a66-b2587702e061-783448.png" /></p>
-<p><font style="color:rgb(51, 51, 51);">上面2种方式，获取文献信息，对于文献个数多，总是会挂的，比较是基于网络请求的方法。在NCBI上，是有所有文献的信息数据的，可以直接下载，唯一的缺点就是数据量不小，而且是xml的文件，需要全部整理统计出来。下面是下载地址：<br />
-</font></p>
+<p>上面2种方式，获取文献信息，对于文献个数多，总是会挂的，比较是基于网络请求的方法。在NCBI上，是有所有文献的信息数据的，可以直接下载，唯一的缺点就是数据量不小，而且是xml的文件，需要全部整理统计出来。下面是下载地址：</p>
 <blockquote>
-<p>更新: 2021-10-05 09:54:40<br />
+<p>更新: 2021-10-05 09:54:40
 原文: <a href="https://www.yuque.com/doublehelix/bioinfonotes/tvfggw">https://www.yuque.com/doublehelix/bioinfonotes/tvfggw</a></p>
 </blockquote>
 

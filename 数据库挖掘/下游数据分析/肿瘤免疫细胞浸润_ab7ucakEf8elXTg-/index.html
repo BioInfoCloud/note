@@ -9621,18 +9621,19 @@
 
 <h1 id="_1">肿瘤免疫细胞浸润<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p><img alt="1612608562315-ecdadfa0-f751-423f-9b56-211c6970c0cf.gif" src="../img/ab7ucakEf8elXTg-/1612608562315-ecdadfa0-f751-423f-9b56-211c6970c0cf-188515.gif" /></p>
-<p>在公众号上有一篇付费文章【<a href="https://mp.weixin.qq.com/s/S7kg3jjVZ2ZZwK6qJZYXBQ">肿瘤免疫细胞浸润与临床相关性分析 </a>】就介绍了肿瘤免疫细胞浸润的计算，用的是CIBERSORT这个工具，这里我们利用<font style="color:#333333;">TIMER这个工具</font><a href="http://timer.cistrome.org/">http://timer.cistrome.org/</a></p>
+<p>在公众号上有一篇付费文章【<a href="https://mp.weixin.qq.com/s/S7kg3jjVZ2ZZwK6qJZYXBQ">肿瘤免疫细胞浸润与临床相关性分析 </a>】就介绍了肿瘤免疫细胞浸润的计算，用的是CIBERSORT这个工具，这里我们利用TIMER这个工具<a href="http://timer.cistrome.org/">http://timer.cistrome.org/</a></p>
 <p>下面是付费文章【<a href="https://mp.weixin.qq.com/s/S7kg3jjVZ2ZZwK6qJZYXBQ">肿瘤免疫细胞浸润与临床相关性分析 </a>】的内容。</p>
-<p><font style="color:#2F2F2F;">Profiles of immune infiltration in colorectal cancer and theirclinical significant: A gene expression- based study</font></p>
+<p>Profiles of immune infiltration in colorectal cancer and theirclinical significant: A gene expression- based study</p>
 <hr />
 <p>肿瘤免疫细胞浸润是指免疫细胞从血液中移向肿瘤组织，开始发挥它的作用，可以从肿瘤组织中分离出的浸润免疫细胞。</p>
 <p>肿瘤中免疫细胞的浸润与临床结果密切相关，肿瘤中浸润的免疫细胞最有可能作为药物靶标来提高患者的生存率。</p>
 <p>分析用到的软件是CIBERSORT，这个软件的原理就是把我们输入的基因矩阵转换为免疫细胞的矩阵，这个矩阵的列名是细胞名称，行名是样品。当然我们需要根据p值对样品进行筛选。</p>
 <p>CIBERSORT，是由Binder G等开发的反卷积算法，可以基于标准化的基因表达数据来计算复杂组织的细胞组成，改方法能量化特定细胞类型的丰度。通过流式细胞分选术很好地验证并成功评估了乳腺癌及肝癌组织中免疫细胞的组成。具体可浏览官网：<a href="https://cibersortx.stanford.edu/"><u>https://cibersortx.stanford.edu/</u></a></p>
 <p><img alt="1612608562319-23dbba1c-6a62-4f8a-9508-7b3e5612de0e.jpeg" src="../img/ab7ucakEf8elXTg-/1612608562319-23dbba1c-6a62-4f8a-9508-7b3e5612de0e-817069.jpeg" /></p>
-<p><strong>下面我们就介绍</strong><strong><font style="color:#FF0000;">肿瘤免疫浸润与临床相关性分析</font></strong></p>
+<p><strong>下面我们就介绍</strong><strong>肿瘤免疫浸润与临床相关性分析</strong></p>
 <h2 id="_2">一.表达数据准备<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>首先，我们需要准备一个表达矩阵，这里我们的案例用TCGA-LUAD的表达数据，已经上传到百度网盘，你可以去下载，也可以自己准备。差异表达分析的文章中也有介绍了从TCGA数据库下载数据的视频教程：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264493&amp;idx=1&amp;sn=2164cc4d202fc081551f8918c8cbd7a4&amp;chksm=841ef190b36978866b9bd71a989960370614bf234453b3bd070a56fbe324deb4ecaea2305923&amp;scene=21#wechat_redirect">一文就会TCGA数据库基因表达差异分析</a>。</p>
+<p>首先，我们需要准备一个表达矩阵，这里我们的案例用TCGA-LUAD的表达数据，已经上传到百度网盘，你可以去下载，也可以自己准备。
+差异表达分析的文章中也有介绍了从TCGA数据库下载数据的视频教程：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264493&amp;idx=1&amp;sn=2164cc4d202fc081551f8918c8cbd7a4&amp;chksm=841ef190b36978866b9bd71a989960370614bf234453b3bd070a56fbe324deb4ecaea2305923&amp;scene=21#wechat_redirect">一文就会TCGA数据库基因表达差异分析</a>。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>options(stringsAsFactors = F)
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>library(stringr)
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>library(limma)
@@ -9669,7 +9670,7 @@
 <a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>#写出作为免疫浸润的输入文件
 <a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>write.table(expdata,file = "as.ImmueInputExp.txt",row.names = F,sep = "\t")
 </code></pre></div>
-<p>上面代码中<font style="background-color:rgba(0, 0, 0, 0.03);">TCGA-COAD-Exp.txt</font>文件，没有去掉重复的基因，所以我们需要处理一下，也同时删除没有表达的基因。输出的<font style="color:#DD1144;background-color:rgba(0, 0, 0, 0.03);">as.Imm</font><font style="color:#DD1144;background-color:rgba(0, 0, 0, 0.03);">ueInputExp.txt</font>文件就作为计算免疫细胞浸润的比例文件，第一列是基因名称，其他列是样本名称。</p>
+<p>上面代码中TCGA-COAD-Exp.txt文件，没有去掉重复的基因，所以我们需要处理一下，也同时删除没有表达的基因。输出的as.ImmueInputExp.txt文件就作为计算免疫细胞浸润的比例文件，第一列是基因名称，其他列是样本名称。</p>
 <h2 id="_3"><strong>二.免疫浸润计算</strong><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p><strong>登录网址，没有账号得先注册</strong></p>
 <p><a href="https://cibersortx.stanford.edu/"><u>https://cibersortx.stanford.edu/</u></a></p>
@@ -9762,8 +9763,8 @@
 <a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>names(Type)=colnames(heatmapdata)
 <a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>Type=as.data.frame(Type)
 <a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>pdf(paste0(outputPath,"heatmap.pdf"),height=8,width=50)
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>pheatmap(heatmapdata, 
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>         annotation=Type, 
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>pheatmap(heatmapdata,
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>         annotation=Type,
 <a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>         color = colorRampPalette(c("green", "black", "red"))(50),
 <a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>         cluster_cols =F,
 <a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>         fontsize = 8,
@@ -9825,7 +9826,9 @@
 </code></pre></div>
 <p><img alt="1612608562563-97166283-438e-4565-aff7-bba104a545cb.jpeg" src="../img/ab7ucakEf8elXTg-/1612608562563-97166283-438e-4565-aff7-bba104a545cb-214364.jpeg" /></p>
 <h2 id="_5">四.免疫浸润与临床相关性分析<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<p>得到免疫浸润结果后，就需要探讨免疫浸润与临床相关性，比如与肿瘤分期什么关系，我们演示的临床数据之前也上传到了<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264583&amp;idx=1&amp;sn=f94bf8d77402677ee67f5d6336088254&amp;chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&amp;scene=21#wechat_redirect">网盘</a>，具体看文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264583&amp;idx=1&amp;sn=f94bf8d77402677ee67f5d6336088254&amp;chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&amp;scene=21#wechat_redirect">TCGA数据库33个Project的RNA-Seq转录组数据为你整理打包好了</a>。你也可以自己下载相应的TCGA-COAD临床数据，可参考文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264504&amp;idx=1&amp;sn=634bd925786a3193977342634b03acc3&amp;chksm=841ef185b369789346bfbfbc315b9976bd14b9e25ed365c26522469e1ee102212c4b005bfb86&amp;scene=21#wechat_redirect">一文解决TCGA数据库临床数据下载与整理</a>。这样演示的是TCGA-COAD的临床数据文件：<font style="color:#FF0000;">TCGA-COAD-clinical.tsv</font></p>
+<p>得到免疫浸润结果后，就需要探讨免疫浸润与临床相关性，比如与肿瘤分期什么关系，我们演示的临床数据之前也上传到了<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264583&amp;idx=1&amp;sn=f94bf8d77402677ee67f5d6336088254&amp;chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&amp;scene=21#wechat_redirect">网盘</a>，具体看文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264583&amp;idx=1&amp;sn=f94bf8d77402677ee67f5d6336088254&amp;chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&amp;scene=21#wechat_redirect">TCGA数据库33个Project的RNA-Seq转录组数据为你整理打包好了</a>。
+你也可以自己下载相应的TCGA-COAD临床数据，可参考文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264504&amp;idx=1&amp;sn=634bd925786a3193977342634b03acc3&amp;chksm=841ef185b369789346bfbfbc315b9976bd14b9e25ed365c26522469e1ee102212c4b005bfb86&amp;scene=21#wechat_redirect">一文解决TCGA数据库临床数据下载与整理</a>。
+这样演示的是TCGA-COAD的临床数据文件：TCGA-COAD-clinical.tsv</p>
 <p><strong>1.临床数据的处理</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>############一个函数
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>getSurData &lt;- function(clindataM){###获取生存时间，clindataM应为读入的tsv文件
@@ -9927,16 +9930,16 @@
 <a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>       compression="lzw",
 <a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>       bg="white",
 <a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a>       res=600)
-<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a>  plot(fit, 
+<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a>  plot(fit,
 <a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a>       lwd=2,
 <a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a>       col=c("red","blue"),
 <a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a>       xlab="Time (year)",
 <a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a>       mark.time=T,
 <a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a>       ylab="Survival rate",
 <a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a>       main=paste(gene,"(p=", pValue ,")",sep="") )
-<a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a>  legend("topright", 
-<a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a>         c("High","Low"), 
-<a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a>         lwd=2, 
+<a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a>  legend("topright",
+<a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a>         c("High","Low"),
+<a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a>         lwd=2,
 <a id="__codelineno-9-37" name="__codelineno-9-37" href="#__codelineno-9-37"></a>         col=c("red","blue"))
 <a id="__codelineno-9-38" name="__codelineno-9-38" href="#__codelineno-9-38"></a>  dev.off()
 <a id="__codelineno-9-39" name="__codelineno-9-39" href="#__codelineno-9-39"></a>}
@@ -9958,7 +9961,7 @@
 <a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>row.names(mergeImmuCorClin) = mergeImmuCorClin$Barcodes
 <a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>mergeImmuCorClin = mergeImmuCorClin[,-1]
 </code></pre></div>
-<p>我们选择的临床数据有<font style="color:#DD1144;background-color:rgba(0, 0, 0, 0.03);">"S</font><font style="color:#DD1144;background-color:rgba(0, 0, 0, 0.03);">tage"</font><font style="background-color:rgba(0, 0, 0, 0.03);">,</font><font style="color:#DD1144;background-color:rgba(0, 0, 0, 0.03);">"T"</font><font style="background-color:rgba(0, 0, 0, 0.03);">,</font><font style="color:#DD1144;background-color:rgba(0, 0, 0, 0.03);">"N"</font><font style="background-color:rgba(0, 0, 0, 0.03);">,</font><font style="color:#DD1144;background-color:rgba(0, 0, 0, 0.03);">"M"</font>，我们下面就只选择<font style="color:#DD1144;background-color:rgba(0, 0, 0, 0.03);">S</font><font style="color:#DD1144;background-color:rgba(0, 0, 0, 0.03);">tage</font>作为分析，TNM分期也是一样的道理，其他临床指标的话，前面的提取临床数据的代码都要变的，不要学的太死。</p>
+<p>我们选择的临床数据有"Stage","T","N","M"，我们下面就只选择Stage作为分析，TNM分期也是一样的道理，其他临床指标的话，前面的提取临床数据的代码都要变的，不要学的太死。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>####Stage
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>setwd(outputPath)
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>dir.create("immueStageFig")#设置图片输出目录的名字
@@ -10002,7 +10005,7 @@
 <a id="__codelineno-11-41" name="__codelineno-11-41" href="#__codelineno-11-41"></a>    pval=round(pValue,3)
 <a id="__codelineno-11-42" name="__codelineno-11-42" href="#__codelineno-11-42"></a>  }
 <a id="__codelineno-11-43" name="__codelineno-11-43" href="#__codelineno-11-43"></a>
-<a id="__codelineno-11-44" name="__codelineno-11-44" href="#__codelineno-11-44"></a>  b = boxplot(expression ~ clin, data = Simmuedata1,outline = FALSE, plot=F) 
+<a id="__codelineno-11-44" name="__codelineno-11-44" href="#__codelineno-11-44"></a>  b = boxplot(expression ~ clin, data = Simmuedata1,outline = FALSE, plot=F)
 <a id="__codelineno-11-45" name="__codelineno-11-45" href="#__codelineno-11-45"></a>  yMin=min(b$stats)
 <a id="__codelineno-11-46" name="__codelineno-11-46" href="#__codelineno-11-46"></a>  yMax = max(b$stats/5+b$stats)
 <a id="__codelineno-11-47" name="__codelineno-11-47" href="#__codelineno-11-47"></a>  ySeg = max(b$stats/10+b$stats)
@@ -10032,10 +10035,10 @@
 <p><img alt="1612608562588-251ca6b6-386e-46a7-af1f-4e183e52c44a.png" src="../img/ab7ucakEf8elXTg-/1612608562588-251ca6b6-386e-46a7-af1f-4e183e52c44a-351474.png" /></p>
 <p>链接：<a href="https://pan.baidu.com/s/1uEhnIA4sCFr8RKX_LpkcSA"><u>https://pan.baidu.com/s/1uEhnIA4sCFr8RKX_LpkcSA</u></a><u> </u></p>
 <p>提取码：**v9tx **</p>
-<p>如果失效，后台回复：<strong><font style="color:#FF0000;">TCGA-ImmuneInfiltration</font></strong></p>
-<p><strong><font style="color:#FF0000;">温馨提示：代码是死的，人是活的，还有，代码禁止传播，想别人和你一起发文章，我也拦不住。</font></strong></p>
+<p>如果失效，后台回复：<strong>TCGA-ImmuneInfiltration</strong></p>
+<p><strong>温馨提示：代码是死的，人是活的，还有，代码禁止传播，想别人和你一起发文章，我也拦不住。</strong></p>
 <blockquote>
-<p>更新: 2021-02-06 19:56:28<br />
+<p>更新: 2021-02-06 19:56:28
 原文: <a href="https://www.yuque.com/doublehelix/bioinfonotes/anfqfn">https://www.yuque.com/doublehelix/bioinfonotes/anfqfn</a></p>
 </blockquote>
 

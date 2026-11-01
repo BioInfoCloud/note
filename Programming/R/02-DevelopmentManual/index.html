@@ -9487,11 +9487,11 @@
 <p><img alt="image.png" src="https://cdn.nlark.com/yuque/0/2022/png/1234840/1658125901289-76527173-1bf0-4ddb-a050-569e11659913.png#clientId=ub4751717-1738-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;errorMessage=unknown%20error&amp;from=paste&amp;height=1125&amp;id=ub5c8804a&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=1406&amp;originWidth=1820&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=763918&amp;status=error&amp;style=none&amp;taskId=uba288409-37b1-4bbf-807e-ccacd3008fa&amp;title=&amp;width=1456" />
 <img alt="image.png" src="https://cdn.nlark.com/yuque/0/2022/png/1234840/1658125918742-33f28a9c-00f9-4736-9638-d85ed2c7bf8a.png#clientId=ub4751717-1738-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;errorMessage=unknown%20error&amp;from=paste&amp;height=1125&amp;id=u901c5b1d&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=1406&amp;originWidth=1820&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=760643&amp;status=error&amp;style=none&amp;taskId=u346d877d-4fd3-4dd4-a9a9-72da5351c72&amp;title=&amp;width=1456" /></p>
 <p>一个R包本质上就是一系列函数的集合，通过调用R包的函数从而实现相应的功能。R包开发对R语言编程能力提升有极大帮助，更能方便理解他人编写的包，而不仅仅调参。
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">install.packages</span><span class="p">(</span><span class="s">"usethis"</span><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">install.packages</span><span class="p">(</span><span class="s">"usethis"</span><span class="p">)</span>
 </code></pre></div>
 或者
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># install.packages("devtools") </span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">devtools</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="s">"r-lib/usethis"</span><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># install.packages("devtools")</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">devtools</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="s">"r-lib/usethis"</span><span class="p">)</span>
 </code></pre></div>
 相关函数：<a href="https://usethis.r-lib.org/reference/index.html">https://usethis.r-lib.org/reference/index.html</a></p>
 <h1 id="r"><strong>一.创建一个R包</strong><a class="headerlink" href="#r" title="Permanent link">&para;</a></h1>
@@ -9500,7 +9500,7 @@
 <img alt="" src="https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108473624-728a1087-17bc-4a88-a83d-5e6364b8340a.png#clientId=ub4751717-1738-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;errorMessage=unknown%20error&amp;from=paste&amp;id=u7ef78d94&amp;margin=%5Bobject%20Object%5D&amp;originHeight=384&amp;originWidth=532&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=error&amp;style=none&amp;taskId=u10e07513-5b54-42fc-bc8b-60cae47202c&amp;title=" />
 <img alt="" src="https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108473609-d2e1897b-8177-4dc4-acf1-063e6a8180c9.png#clientId=ub4751717-1738-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;errorMessage=unknown%20error&amp;from=paste&amp;id=u557d619b&amp;margin=%5Bobject%20Object%5D&amp;originHeight=380&amp;originWidth=527&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=error&amp;style=none&amp;taskId=u6427bcd4-af3c-474c-916f-ec0d25ca594&amp;title=" />
 通过代码创建
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">devtools</span><span class="o">::</span><span class="nf">create</span><span class="p">(</span><span class="s">"F:/Rpkgs/YunSen"</span><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">devtools</span><span class="o">::</span><span class="nf">create</span><span class="p">(</span><span class="s">"F:/Rpkgs/YunSen"</span><span class="p">)</span>
 </code></pre></div>
 <img alt="" src="https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108473599-c51aebfb-7085-4359-a057-93c15fb4c136.png#clientId=ub4751717-1738-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;errorMessage=unknown%20error&amp;from=paste&amp;id=u3c9d64e3&amp;margin=%5Bobject%20Object%5D&amp;originHeight=277&amp;originWidth=683&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=error&amp;style=none&amp;taskId=u66944d74-8bda-405b-9f64-c54a60e1586&amp;title=" />
 在包的文件下会生成5个文件和一个R文件夹
@@ -9513,7 +9513,7 @@ NAMESPACE(用来规定可以调用的R函数功能,如果这里没有写明，�
 .gitignore和.Rbuildgnore</p>
 <h1 id="r_1"><strong>二.创建R脚本</strong><a class="headerlink" href="#r_1" title="Permanent link">&para;</a></h1>
 <p>R脚本是存放在R这个文件夹下，但我们通常usethis工具创建。自动在R文件夹下生成脚本文件。
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">usethis</span><span class="o">::</span><span class="nf">use_r</span><span class="p">(</span><span class="s">"getSamInfo"</span><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">usethis</span><span class="o">::</span><span class="nf">use_r</span><span class="p">(</span><span class="s">"getSamInfo"</span><span class="p">)</span>
 </code></pre></div>
 <img alt="" src="https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108474743-ccbf8223-59a1-47e7-b4ba-9985a66a67ff.png#clientId=ub4751717-1738-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;errorMessage=unknown%20error&amp;from=paste&amp;id=u7a624b76&amp;margin=%5Bobject%20Object%5D&amp;originHeight=1026&amp;originWidth=1920&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=error&amp;style=none&amp;taskId=u17e74a56-cf17-49b1-82f1-e11de77fa2e&amp;title=" />
 开始写脚本，代码一般全是函数。
@@ -9538,7 +9538,7 @@ LazyData: true(R包内置数据时选中)
 先修改作者信息。
 <img alt="" src="https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108476042-2eaeea09-50e3-4d45-9a1d-0d084506d268.png#clientId=ub4751717-1738-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;errorMessage=unknown%20error&amp;from=paste&amp;id=u4d186b2d&amp;margin=%5Bobject%20Object%5D&amp;originHeight=480&amp;originWidth=1015&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=error&amp;style=none&amp;taskId=u9c33c1c4-1105-4378-8c2a-2986682b30c&amp;title=" />
 生成许可协议
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">usethis</span><span class="o">::</span><span class="nf">use_mit_license</span><span class="p">(</span><span class="s">"Yun Sen"</span><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">usethis</span><span class="o">::</span><span class="nf">use_mit_license</span><span class="p">(</span><span class="s">"Yun Sen"</span><span class="p">)</span>
 </code></pre></div>
 <img alt="" src="https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108476031-334c41c0-6546-40bc-8689-198f85624189.png#clientId=ub4751717-1738-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;errorMessage=unknown%20error&amp;from=paste&amp;id=u4e7f0303&amp;margin=%5Bobject%20Object%5D&amp;originHeight=153&amp;originWidth=936&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=error&amp;style=none&amp;taskId=u789b8e61-c02f-44bb-82ab-4cfa31427a4&amp;title=" />
 然后我们就会看见DESCRIPTION文件里的License处发生了变化
@@ -9560,21 +9560,21 @@ LazyData: true(R包内置数据时选中)
 开始写参数介绍。
 <img alt="" src="https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108478976-ae94855d-770c-4e2e-93be-031952d31ec0.png#clientId=ub4751717-1738-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;errorMessage=unknown%20error&amp;from=paste&amp;id=ubce28dbe&amp;margin=%5Bobject%20Object%5D&amp;originHeight=486&amp;originWidth=1225&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=error&amp;style=none&amp;taskId=ueb76c071-1abd-495e-abc5-4dcc2e40a7a&amp;title=" />
 document()函数生成帮助文档，执行devtools::document()后，会生成一个man文件夹，man文件夹下会生成相应的Rd文件，文件名就是函数名。
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">devtools</span><span class="o">::</span><span class="nf">document</span><span class="p">()</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">devtools</span><span class="o">::</span><span class="nf">document</span><span class="p">()</span>
 </code></pre></div>
 <img alt="" src="https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108479226-5bb30a5e-4dc2-4621-92e2-8f8f77c6dcfc.png#clientId=ub4751717-1738-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;errorMessage=unknown%20error&amp;from=paste&amp;id=u1e71176c&amp;margin=%5Bobject%20Object%5D&amp;originHeight=1026&amp;originWidth=1920&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=error&amp;style=none&amp;taskId=u1e25f84c-cc82-4f0a-aa26-6b00825fb9f&amp;title=" />
 然后我们就可以像平时一样通过问号?getSamInfo查看帮助文档了。
 <img alt="" src="https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108479203-97d37cc6-acb7-45e2-b3f4-5ee4b35aa2f5.png#clientId=ub4751717-1738-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;errorMessage=unknown%20error&amp;from=paste&amp;id=u2c4e09f6&amp;margin=%5Bobject%20Object%5D&amp;originHeight=525&amp;originWidth=674&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=error&amp;style=none&amp;taskId=u6d61e563-7504-4651-a3d7-76d14233618&amp;title=" /></p>
 <h1 id="_2"><strong>五.添加测试代码</strong><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
 <p>当我们写好一个函数后，需要验证函数是否能正确执行，结果是否正确，需要进行测试。
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">usethis</span><span class="o">::</span><span class="nf">use_testthat</span><span class="p">()</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">usethis</span><span class="o">::</span><span class="nf">use_testthat</span><span class="p">()</span>
 </code></pre></div>
 通过usethis::use_testthat()创建测试文件，会生成一个tests文件夹，里面有一个文件夹和一个R脚本。
 <img alt="" src="https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108479478-903dcfa8-f6cb-4f79-80d9-5c23c0fc23b6.png#clientId=ub4751717-1738-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;errorMessage=unknown%20error&amp;from=paste&amp;id=u241888a8&amp;margin=%5Bobject%20Object%5D&amp;originHeight=148&amp;originWidth=675&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=error&amp;style=none&amp;taskId=u5988865b-1c30-4f0a-8a26-fe8cc59ca02&amp;title=" />
 test_check.文件里面的代码如下，就是加载我们自己的包和testthat包，和测试检查我们的包，这里先不管。
 <img alt="" src="https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108479752-705e0bf5-bcc6-4a52-b82f-95e7f50c9fda.png#clientId=ub4751717-1738-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;errorMessage=unknown%20error&amp;from=paste&amp;id=u4b73d7e7&amp;margin=%5Bobject%20Object%5D&amp;originHeight=189&amp;originWidth=1228&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=error&amp;style=none&amp;taskId=u4b740065-18a3-49ba-aba0-9a512d9fe67&amp;title=" />
 我们要测试函数，需要自己创建一个R脚本，这里通过use_test函数创建，参数是包名
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">usethis</span><span class="o">::</span><span class="nf">use_test</span><span class="p">(</span><span class="s">"YunSen"</span><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">usethis</span><span class="o">::</span><span class="nf">use_test</span><span class="p">(</span><span class="s">"YunSen"</span><span class="p">)</span>
 </code></pre></div>
 testthat文件夹下会自动生成测试的R脚本，打开后默认有3行代码。
 <img alt="" src="https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108480046-45c2a372-bc66-44a6-bd4f-aacf8c071b97.png#clientId=ub4751717-1738-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;errorMessage=unknown%20error&amp;from=paste&amp;id=u297e026e&amp;margin=%5Bobject%20Object%5D&amp;originHeight=754&amp;originWidth=1583&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=error&amp;style=none&amp;taskId=uf9710c90-8f40-40b5-8cf5-71eba68277f&amp;title=" />
@@ -9584,33 +9584,40 @@ expect_match检测一个字符串向量是否与一个正则表达式匹配。
 expect_output()检测打印输出，expect_message()检查信息，expect_warning()检查警告，expect_error()检查错误。
 <img alt="" src="https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108480079-11cb4ff2-24ee-4cfc-b4c8-2a7bc1c3cf4c.png#clientId=ub4751717-1738-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;errorMessage=unknown%20error&amp;from=paste&amp;id=u6aa867ab&amp;margin=%5Bobject%20Object%5D&amp;originHeight=187&amp;originWidth=1233&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=error&amp;style=none&amp;taskId=uf985d409-ca69-4c6f-b4b0-bdd20ab20ce&amp;title=" />
 然后执行devtools::test()进行检查
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">devtools</span><span class="o">::</span><span class="nf">test</span><span class="p">()</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">devtools</span><span class="o">::</span><span class="nf">test</span><span class="p">()</span>
 </code></pre></div>
 <img alt="" src="https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108480693-bb575335-ba0f-495e-8f20-72442d7ff2ea.png#clientId=ub4751717-1738-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;errorMessage=unknown%20error&amp;from=paste&amp;id=ufec1e665&amp;margin=%5Bobject%20Object%5D&amp;originHeight=238&amp;originWidth=1181&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=error&amp;style=none&amp;taskId=u16621f39-98da-4853-bb95-b93ada22c22&amp;title=" />
 如果这些函数不能满足我们的需要，我们需要用expect_true或者expect_false函数来抓取其他的期望。这里的期望是我自己去构造的，也就是构造一个返回值为true或者false的期望表达式。还有，有时候结果太复杂，不容易通过代码重建，在这种情况下，可以检查结果是否与上次相同，expect_equal_to_reference()会缓存第一次结果，然后将其与随后的运行进行比较。</p>
 <h1 id="_3"><strong>六.依赖包</strong><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
-<p>如果我们开发包过程中用到一些已有的包，或者其中的某个函数，那么我们需要引入，我们平时使用包是通过library或者source来加载包，但在开发时不能使用这种方式。R有很多种方式来描述这种潜在的依赖关系。通过imports（输入）、suggests（建议）、Depends（依赖）、LinkingTo（链接到）和Enhances（增强）来描述。imports里的包必须被安装，也就是在安装自己包的时候，imports申明的包也会被安装。suggests中的包，我们可以使用他，但不是必须的，比如我们可以退使用建议包中的数据来运行测试，编译使用指南，或者只有一个函数需要这个包，suggests中的包是不会随我们的包的安装而安装的。Depends用来指定特定的R版本，例如Depends：R（&gt;=3.0.1)。LinkingTo用于列出依赖于另一个包中的C或者C++代码。Enhances列出你的包增强了的包，通常，你的包为其他包里的类提供了方法。
+<p>如果我们开发包过程中用到一些已有的包，或者其中的某个函数，那么我们需要引入，我们平时使用包是通过library或者source来加载包，但在开发时不能使用这种方式。
+R有很多种方式来描述这种潜在的依赖关系。
+通过imports（输入）、suggests（建议）、Depends（依赖）、LinkingTo（链接到）和Enhances（增强）来描述。
+imports里的包必须被安装，也就是在安装自己包的时候，imports申明的包也会被安装。
+suggests中的包，我们可以使用他，但不是必须的，比如我们可以退使用建议包中的数据来运行测试，编译使用指南，或者只有一个函数需要这个包，suggests中的包是不会随我们的包的安装而安装的。
+Depends用来指定特定的R版本，例如Depends：R（&gt;=3.0.1)。
+LinkingTo用于列出依赖于另一个包中的C或者C++代码。
+Enhances列出你的包增强了的包，通常，你的包为其他包里的类提供了方法。
 我们通过use_package()函数来申明依赖包。
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nf">use_package</span><span class="p">(</span><span class="n">package</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Imports"</span><span class="p">,</span><span class="w"> </span><span class="n">min_version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NULL</span><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nf">use_package</span><span class="p">(</span><span class="n">package</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Imports"</span><span class="p">,</span><span class="w"> </span><span class="n">min_version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NULL</span><span class="p">)</span>
 </code></pre></div>
 package 包的名称
 type 就是依赖类型，必须是 "Imports", "Depends", "Suggests", "Enhances"或者 "LinkingTo"中的一个，默认"Imports"。
 关于TCGA分析的包有很多，我么这里可以用。
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">usethis</span><span class="o">::</span><span class="nf">use_package</span><span class="p">(</span><span class="s">"GDCRNATools"</span><span class="p">,</span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Imports"</span><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">usethis</span><span class="o">::</span><span class="nf">use_package</span><span class="p">(</span><span class="s">"GDCRNATools"</span><span class="p">,</span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Imports"</span><span class="p">)</span>
 </code></pre></div>
 我们会看见描述文件会发生更新。
 <img alt="" src="https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108482532-05e64427-730d-4277-9056-981c3576179c.png#clientId=ub4751717-1738-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;errorMessage=unknown%20error&amp;from=paste&amp;id=u40d63994&amp;margin=%5Bobject%20Object%5D&amp;originHeight=937&amp;originWidth=1222&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=error&amp;style=none&amp;taskId=ue185163c-2266-4c5a-b5e1-d102466be60&amp;title=" />
 use_package()向DESCRIPTION添加了一个CRAN包依赖关系，并提供了一些关于如何最好地使用它的建议。use_dev_package()在一个正在开发的GitHub包上添加了一个版本化的依赖，将repo添加到Remotes，这样它就会从正确的位置自动安装。
 我们这里创建一个新的R脚本
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">usethis</span><span class="o">::</span><span class="nf">use_r</span><span class="p">(</span><span class="s">"getTCGAData"</span><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">usethis</span><span class="o">::</span><span class="nf">use_r</span><span class="p">(</span><span class="s">"getTCGAData"</span><span class="p">)</span>
 </code></pre></div>
 导入非标准计算
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">usethis</span><span class="o">::</span><span class="nf">use_tidy_eval</span><span class="p">()</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">usethis</span><span class="o">::</span><span class="nf">use_tidy_eval</span><span class="p">()</span>
 </code></pre></div></p>
 <h1 id="_4"><strong>七. 外部数据</strong><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h1>
 <h2 id="1"><strong>1.导出的数据</strong><a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <p>包中数据最常用的位置是在data/目录下，数据格式一般是.Rdata。其中包含单个对象和文件的名称相同，使用这个规则最简单的方法是使用：
-usethis::use_data() 
+usethis::use_data()
 <img alt="" src="https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108482539-ca01b82c-c81d-4671-a72b-2ede7bddd1ec.png#clientId=ub4751717-1738-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;errorMessage=unknown%20error&amp;from=paste&amp;id=uc655244a&amp;margin=%5Bobject%20Object%5D&amp;originHeight=206&amp;originWidth=877&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=error&amp;style=none&amp;taskId=ua698a8f7-4170-41f6-9166-2367c009a5d&amp;title=" />
 会在包的目录下产生一个data文件夹，data目录下就会生成对应的Rda格式的文件。
 <img alt="" src="https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108482620-89655ff4-5ac0-47c6-9495-c5f185ad8006.png#clientId=ub4751717-1738-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;errorMessage=unknown%20error&amp;from=paste&amp;id=u79e63a50&amp;margin=%5Bobject%20Object%5D&amp;originHeight=424&amp;originWidth=1136&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=error&amp;style=none&amp;taskId=u504275fc-2fa1-4f53-a37b-897c23800b3&amp;title=" />
@@ -9622,9 +9629,9 @@ usethis::use_data()
 <p>有时候函数需要预先计算的数据表，如果把这些数据放在data/目录下，这些数据也将会被提供给包的用户，这是不恰当的，正确的做法是把他保存在R、sysdata.Rda。我们在使用usethis::use_data()保存数据的时候，可以加上internal=TRUE来创建文件。
 <img alt="" src="https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108482964-1dd512ff-1743-42d9-b626-aefff3e0d6ba.png#clientId=ub4751717-1738-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;errorMessage=unknown%20error&amp;from=paste&amp;id=u6ef7616a&amp;margin=%5Bobject%20Object%5D&amp;originHeight=478&amp;originWidth=736&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=error&amp;style=none&amp;taskId=u02832db9-e984-4680-818f-86de0d38d10&amp;title=" /></p>
 <h2 id="3"><strong>3.原始数据</strong><a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<p>如果想展示加载/解析原始数据的例子，就将原始文件放在inst/extdata。安装包时，inst/中所有文件和文件夹都会移动到顶层目录，所以它们不能有R/description这样的名字，要引用inst/extdata（无论是否安装）中是文件，使用system.file()。 
+<p>如果想展示加载/解析原始数据的例子，就将原始文件放在inst/extdata。安装包时，inst/中所有文件和文件夹都会移动到顶层目录，所以它们不能有R/description这样的名字，要引用inst/extdata（无论是否安装）中是文件，使用system.file()。
 <img alt="" src="https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108483440-0eefd13a-e65a-4b4f-8613-ca34390c7a36.png#clientId=ub4751717-1738-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;errorMessage=unknown%20error&amp;from=paste&amp;id=u12f1671f&amp;margin=%5Bobject%20Object%5D&amp;originHeight=151&amp;originWidth=695&amp;originalType=url&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=error&amp;style=none&amp;taskId=ucfbce8cd-ea79-463b-a496-b46b57f0cec&amp;title=" />
-BioinfoNotes @use_data_table() √ Adding 'data.table' to Imports field in DESCRIPTION √ Writing 'R/utils-data-table.R' * Run <code>devtools::document()</code> </p>
+BioinfoNotes @use_data_table() √ Adding 'data.table' to Imports field in DESCRIPTION √ Writing 'R/utils-data-table.R' * Run <code>devtools::document()</code></p>
 <h1 id="build">八.Build包<a class="headerlink" href="#build" title="Permanent link">&para;</a></h1>
 <p>检查包
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nf">install.packages</span><span class="p">(</span><span class="s">"rhub"</span><span class="p">)</span>
@@ -9655,36 +9662,36 @@ CMD窗口，输入命令：rundll32.exe keymgr.dll,KRShowKeyMgr，出现「存�
 <h2 id="1use_package"><strong>1.use_package()</strong><a class="headerlink" href="#1use_package" title="Permanent link">&para;</a></h2>
 <p>use_package()向DESCRIPTION添加了一个CRAN包依赖关系，并提供了一些关于如何最好地使用它的建议。
 use_dev_package()添加了一个对正在开发的包的依赖，将dev repo添加到Remotes，这样它就会从正确的位置自动安装。
-use_package(package, type = "Imports", min_version = NULL) use_dev_package(package, type = "Imports", remote = NULL) 
+use_package(package, type = "Imports", min_version = NULL) use_dev_package(package, type = "Imports", remote = NULL)
 package：要依赖的包的名称。
 type：依赖类型:必须是 "Imports", "Depends", "Suggests", "Enhances"h或者 "LinkingTo" 之一。匹配不区分大小写。
 min_version：还可以为包提供一个最小版本。设置为TRUE以使用当前安装的版本。
 remote：默认情况下，插入一个OWNER/REPO GitHub远程服务器。您可以选择提供一个字符串来指定远程，例如。"gitlab::jimhester/covr"，使用远程包支持的任何语法。</p>
 <h2 id="2use_import_from"><strong>2.use_import_from()</strong><a class="headerlink" href="#2use_import_from" title="Permanent link">&para;</a></h2>
-<p>use_import_from(package, fun, load = is_interactive()) 
+<p>use_import_from(package, fun, load = is_interactive())
 use_import_from()通过将roxygen2 @importFrom标记添加到包级文档(可以使用use_package_doc()创建)来从另一个包中导入函数。从另一个包中导入一个函数允许你在没有命名空间的情况下引用它(例如，fun()而不是package::fun())。use_import_from()也会重新记录命名空间，并重新加载当前包。这能够确保你的开发过程中能够立即获得乐趣。
 package：Package name
 fun：A vector of function names
 load：Logical. Re-load with pkgload::load_all()?</p>
 <h2 id="3use_r"><strong>3.use_r()</strong><a class="headerlink" href="#3use_r" title="Permanent link">&para;</a></h2>
-<p>use_r(name = NULL, open = rlang::is_interactive()) use_test(name = NULL, open = rlang::is_interactive()) 
+<p>use_r(name = NULL, open = rlang::is_interactive()) use_test(name = NULL, open = rlang::is_interactive())
 name：可以使用没有扩展名的名称，也可以使用NULL来根据脚本编辑器中当前打开的文件创建成对的文件。如果R文件是打开的，use_test()将创建/打开相应的测试文件;如果测试文件打开，use_r()将创建/打开相应的R文件。</p>
 <h2 id="4use_rmarkdown_template"><strong>4.use_rmarkdown_template()</strong><a class="headerlink" href="#4use_rmarkdown_template" title="Permanent link">&para;</a></h2>
-<p>use_rmarkdown_template(   template_name ="Template Name",   template_dir =NULL,   template_description ="A description of the template",   template_create_dir =FALSE) </p>
+<p>use_rmarkdown_template(   template_name ="Template Name",   template_dir =NULL,   template_description ="A description of the template",   template_create_dir =FALSE)</p>
 <h2 id="5use_data"><strong>5.Use_data()</strong><a class="headerlink" href="#5use_data" title="Permanent link">&para;</a></h2>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nf">use_data</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span><span class="w">   </span><span class="n">internal</span><span class="w"> </span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span><span class="w">   </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span><span class="w">   </span><span class="n">compress</span><span class="w"> </span><span class="o">=</span><span class="s">"bzip2"</span><span class="p">,</span><span class="w">   </span><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="m">2</span><span class="p">)</span><span class="w"> </span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nf">use_data</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span><span class="w">   </span><span class="n">internal</span><span class="w"> </span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span><span class="w">   </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span><span class="w">   </span><span class="n">compress</span><span class="w"> </span><span class="o">=</span><span class="s">"bzip2"</span><span class="p">,</span><span class="w">   </span><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="m">2</span><span class="p">)</span>
 </code></pre></div>
 参数：
 internal ：如果为FALSE，则将每个对象保存在data/目录中自己的.rda文件中。这些数据文件绕过通常的导出机制，在加载包时可用(如果LazyData不为TRUE，则通过data()可以使用)。如果为TRUE，则将所有对象存储在单个R/sysdata中.rda文件。此文件中的对象遵循通常的导出规则。请注意，这意味着如果您使用通用 exportPattern() 规则导出所有对象，除了以 .
 overwrite : 默认情况下，use_data()不会覆盖现有文件。如果您真的想这样做，请将此设置为TRUE。
 **compress : **选择save()使用的压缩类型。应该是"gzip"， "bzip2"，或"xz"之一。
 version : 要使用的序列化格式版本。默认的2是从R 1.4.0到3.5.3。版本3从R 3.6.0开始成为默认版本，只能由R版本3.5.0及更高版本读取。
-use_data_raw(name = "DATASET", open = rlang::is_interactive()) 
+use_data_raw(name = "DATASET", open = rlang::is_interactive())
 name : 要准备包含在包中的数据集的名称。
 open : 打开新创建的文件进行编辑?发生在RStudio，如果适用，或通过utils::file.edit()否则。</p>
 <p>library(GDCRNATools)
- samInfo &lt;- gdcParseMetadata(project.id="TCGA-COAD", data.type='RNAseq') 
-colnames(samInfo) </p>
+ samInfo &lt;- gdcParseMetadata(project.id="TCGA-COAD", data.type='RNAseq')
+colnames(samInfo)</p>
 <h1 id="entity_submitter_id">entity_submitter_id<a class="headerlink" href="#entity_submitter_id" title="Permanent link">&para;</a></h1>
 <h1 id="tcga-5m-aat5-01a-21r-a41b-07">TCGA-5M-AAT5-01A-21R-A41B-07<a class="headerlink" href="#tcga-5m-aat5-01a-21r-a41b-07" title="Permanent link">&para;</a></h1>
 <p>编写DESCRIPTION文件

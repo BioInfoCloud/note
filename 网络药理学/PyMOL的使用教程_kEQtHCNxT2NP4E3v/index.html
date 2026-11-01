@@ -9484,8 +9484,8 @@
 
 <h1 id="pymol">PyMOL的使用教程<a class="headerlink" href="#pymol" title="Permanent link">&para;</a></h1>
 <p>文章来源：<a href="http://pymol.chenzhaoqiang.com/intro/startManual.html">http://pymol.chenzhaoqiang.com/intro/startManual.html</a></p>
-<h1 id="_1"><font style="background-color:#FCFCFC;">入门教程</font><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p><font style="background-color:#FCFCFC;">主要讲述PyMOL中常见的图形界面（鼠标）操作</font></p>
+<h1 id="_1">入门教程<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>主要讲述PyMOL中常见的图形界面（鼠标）操作</p>
 <h2 id="pymol_1">PyMOL软件界面介绍<a href="http://pymol.chenzhaoqiang.com/intro/startManual.html#pymol"></a><a class="headerlink" href="#pymol_1" title="Permanent link">&para;</a></h2>
 <p>PyMOL 软件界面如下图所示，主要由2部分组成。第一部分是菜单窗口和第二部分是显示窗口。 PyMOL2 和PyMOL1一个明显区别: 在PyMOL2中，这2部分默认是一个整体，在PyMOL1中这2部分是分开的。 在Display-&gt;Toggle Floating 可以拆分这2个窗口，快捷键是Ctrl+E, 刚开始PyMOL的界面主要是通过tkinter实现的，在PyMOL2中逐渐采用PyQT技术实现。 和PyMOL1 相比，PyMOL2 表现能力更强，功能更多，本教程以PyMOL2为例进行讲解，大部分 内容也适用于PyMOL1.</p>
 <p>窗口1：整合了PyMOL的各个功能，主要包含如下部分</p>
@@ -9887,7 +9887,7 @@
 </table>
 <p>完全不想要雾化处理，可以点击 Display-&gt;Depth cue (Fogging) 取消。</p>
 <p>或者使用命令关闭。</p>
-<p><font style="color:#333333;">set depth_cue, 0</font></p>
+<p>set depth_cue, 0</p>
 <h2 id="_16">设置不同的光照模式<a href="http://pymol.chenzhaoqiang.com/intro/startManual.html#id20"></a><a class="headerlink" href="#_16" title="Permanent link">&para;</a></h2>
 <p>PyMOL2 中内置5种不同的光照模式：default, metal(金属), plastic(塑料), rubber(橡胶), X-ray。</p>
 <p>点击Plugin-&gt;lighting Settings进行设置不同的光照,如下图所示图。</p>
@@ -9973,13 +9973,13 @@
 <blockquote>
 <p>设置pse的版本号，建议版本为0.99， 这样PyMOL 和 PyMOL2都可以打开pse 文件</p>
 </blockquote>
-<p><font style="color:#333333;">set export_pse_version,0.99</font></p>
+<p>set export_pse_version,0.99</p>
 <h2 id="pdb">删除蛋白的一条链，然后保存为pdb<a href="http://pymol.chenzhaoqiang.com/intro/startManual.html#pdb"></a><a class="headerlink" href="#pdb" title="Permanent link">&para;</a></h2>
-<p><font style="color:#333333;">step1. 切换到chain模式</font></p>
-<p><font style="color:#333333;">step2. 点击需要需要删除的Chain就可以选中chain</font></p>
-<p><font style="color:#333333;">step3. 对新产生的sele object进行删除。</font></p>
-<h1 id="_19"><font style="background-color:#FCFCFC;">基础教程</font><a href="http://pymol.chenzhaoqiang.com/intro/basicManual.html#intro-basicmanual"></a><a class="headerlink" href="#_19" title="Permanent link">&para;</a></h1>
-<p><font style="background-color:#FCFCFC;">主要讲述PyMOL常见的命令操作。</font></p>
+<p>step1. 切换到chain模式</p>
+<p>step2. 点击需要需要删除的Chain就可以选中chain</p>
+<p>step3. 对新产生的sele object进行删除。</p>
+<h1 id="_19">基础教程<a href="http://pymol.chenzhaoqiang.com/intro/basicManual.html#intro-basicmanual"></a><a class="headerlink" href="#_19" title="Permanent link">&para;</a></h1>
+<p>主要讲述PyMOL常见的命令操作。</p>
 <p>注解</p>
 <p>1.本节教程是有顺序的。 2.建议先阅读入门教程，再阅读基础教程。 3.所有的命令都支持tab键补全，提高效率。 4. 主要的示例以Bace-1蛋白6EQM为例，里面含有配体小分子BUH。</p>
 <h2 id="_20">命令输入窗口<a href="http://pymol.chenzhaoqiang.com/intro/basicManual.html#id2"></a><a class="headerlink" href="#_20" title="Permanent link">&para;</a></h2>
@@ -10018,24 +10018,24 @@
 <p>bg_color white</p>
 <h2 id="surfacecartoon_color">设置surface的颜色（cartoon_color）<a href="http://pymol.chenzhaoqiang.com/intro/basicManual.html#surface-cartoon-color"></a><a class="headerlink" href="#surfacecartoon_color" title="Permanent link">&para;</a></h2>
 <p>设置surface的颜色为red</p>
-<p><font style="color:#333333;">set surface_color,red</font></p>
+<p>set surface_color,red</p>
 <p>注解</p>
 <p>注意颜色是有优先级的，默认设置的是atom的颜色，如果没有设置surface的颜色，则继承atom的颜色</p>
 <p>体验下</p>
-<p><font style="color:#333333;">set surface_color,red</font></p>
-<p><font style="color:#333333;">color blue</font></p>
-<p><font style="color:#333333;">unset surface_color</font></p>
+<p>set surface_color,red</p>
+<p>color blue</p>
+<p>unset surface_color</p>
 <h2 id="clip">绘制蛋白截面图clip<a href="http://pymol.chenzhaoqiang.com/intro/basicManual.html#clip"></a><a class="headerlink" href="#clip" title="Permanent link">&para;</a></h2>
 <p>需要ray后才能看到截面的效果。</p>
-<p><font style="color:#333333;">as surface</font></p>
-<p><font style="color:#333333;">clip near,-10</font></p>
-<p><font style="color:#333333;">ray</font></p>
+<p>as surface</p>
+<p>clip near,-10</p>
+<p>ray</p>
 <p>注解</p>
 <p>为了获得想要的效果，多次尝试clip的数值。 也可以通过滚动数据获得切面</p>
 <p><img alt="1612063966668-e724ebed-9560-4dbc-b0d7-dd53a7e6ec40.png" src="../img/kEQtHCNxT2NP4E3v/1612063966668-e724ebed-9560-4dbc-b0d7-dd53a7e6ec40-398898.png" /></p>
 <h2 id="_21">设置截面的颜色<a href="http://pymol.chenzhaoqiang.com/intro/basicManual.html#id3"></a><a class="headerlink" href="#_21" title="Permanent link">&para;</a></h2>
-<p><font style="color:#333333;">set ray_interior_color, grey</font></p>
-<p><font style="color:#333333;">set ray_interior_color, grey,obj01</font></p>
+<p>set ray_interior_color, grey</p>
+<p>set ray_interior_color, grey,obj01</p>
 <h2 id="valence">开关单双键模式 valence<a href="http://pymol.chenzhaoqiang.com/intro/basicManual.html#valence"></a><a class="headerlink" href="#valence" title="Permanent link">&para;</a></h2>
 <p>set valence,1 开启双键模式。</p>
 <p>set valence,0 关闭双键模式。</p>
@@ -10069,22 +10069,22 @@
 <ol>
 <li>怎么像这样把相互作用的线调粗？</li>
 </ol>
-<p><font style="color:#333333;">set dash_radius, 0.3</font></p>
+<p>set dash_radius, 0.3</p>
 <ol>
 <li>把虚线变成实线？</li>
 </ol>
-<p><font style="color:#333333;">set dash_gap,0</font></p>
+<p>set dash_gap,0</p>
 <ol>
 <li>设置实线区域的长度</li>
 </ol>
-<p><font style="color:#333333;">set dash_length, 0.8</font></p>
+<p>set dash_length, 0.8</p>
 <h2 id="png">保存图片（png)<a href="http://pymol.chenzhaoqiang.com/intro/basicManual.html#png"></a><a class="headerlink" href="#png" title="Permanent link">&para;</a></h2>
 <p>png filename.png 我建议使用该命令进行快捷保存图片</p>
 <p>下面我将以Bace-1蛋白6EQM为例，里面含有配体小分子BUH。</p>
 <h2 id="ray">高清图片（ray）<a href="http://pymol.chenzhaoqiang.com/intro/basicManual.html#ray"></a><a class="headerlink" href="#ray" title="Permanent link">&para;</a></h2>
 <p>制作高清图片， 制作完图片后输入ray命令，然后保存图片。</p>
 <h2 id="two_sided_lighting">设置两个光源 two_sided_lighting<a href="http://pymol.chenzhaoqiang.com/intro/basicManual.html#two-sided-lighting"></a><a class="headerlink" href="#two_sided_lighting" title="Permanent link">&para;</a></h2>
-<p><font style="color:#333333;">set two_sided_lighting,1</font></p>
+<p>set two_sided_lighting,1</p>
 <p>当蛋白表面有破损的时候，ray的时候可能会出现黑洞现象，如下图所示。</p>
 <p><img alt="1612063967429-47ccb8ce-ccd7-4846-b13a-8adaea215bf6.png" src="../img/kEQtHCNxT2NP4E3v/1612063967429-47ccb8ce-ccd7-4846-b13a-8adaea215bf6-454906.png" /></p>
 <p>使用上述命令，设置两个光源就可以消除黑洞现象。</p>
@@ -10131,15 +10131,15 @@
 <p>默认的object name是all。</p>
 <p>示例讲解： 打开pymol, 依次执行下面命令。 1. cd d:PyMOLstartedManualpse 切换到工作路径 2. fetch 6EQM 下载蛋白 3.</p>
 <h2 id="mesh">调整 mesh 粗细<a href="http://pymol.chenzhaoqiang.com/intro/basicManual.html#mesh"></a><a class="headerlink" href="#mesh" title="Permanent link">&para;</a></h2>
-<p><font style="color:#333333;">set mesh_radius,0.2</font></p>
-<p><font style="color:#333333;">ray</font></p>
+<p>set mesh_radius,0.2</p>
+<p>ray</p>
 <p>ray 方可看到调整后的状态。</p>
 <h2 id="valence_1">设置双键的显示形式 valence<a href="http://pymol.chenzhaoqiang.com/intro/basicManual.html#id10"></a><a class="headerlink" href="#valence_1" title="Permanent link">&para;</a></h2>
-<p><font style="color:#333333;">set valence, 0  #关闭双键显示</font></p>
-<p><font style="color:#333333;">set valence, 1  #开启双键显示</font></p>
+<p>set valence, 0  #关闭双键显示</p>
+<p>set valence, 1  #开启双键显示</p>
 <h2 id="sphere_scale">设置小球的大小 sphere_scale<a href="http://pymol.chenzhaoqiang.com/intro/basicManual.html#sphere-scale"></a><a class="headerlink" href="#sphere_scale" title="Permanent link">&para;</a></h2>
 <p>默认sphere_scale 是1，通过调整sphere_scale来调整 小球的大小</p>
-<p><font style="color:#333333;">set sphere_scale,0.5</font></p>
+<p>set sphere_scale,0.5</p>
 <p><img alt="1612063967419-8b129ec1-16f6-4004-a94e-3d3d461fd4bf.png" src="../img/kEQtHCNxT2NP4E3v/1612063967419-8b129ec1-16f6-4004-a94e-3d3d461fd4bf-727381.png" /></p>
 <h2 id="dss">重新计算二级结构(dss)<a href="http://pymol.chenzhaoqiang.com/intro/basicManual.html#dss"></a><a class="headerlink" href="#dss" title="Permanent link">&para;</a></h2>
 <p>dss</p>
@@ -10186,21 +10186,21 @@
 <li>Cylindrical Helices 模式 圆柱体</li>
 </ol>
 <p>开启 Fancy 模式</p>
-<p><font style="color:#333333;">set cartoon_fancy_helices, 1</font></p>
+<p>set cartoon_fancy_helices, 1</p>
 <p>开启 cylindrcal 模式</p>
-<p><font style="color:#333333;">set cartoon_cylindrical_helices, 1</font></p>
+<p>set cartoon_cylindrical_helices, 1</p>
 <p>设置圆柱的粗细：</p>
-<p><font style="color:#333333;">set cartoon_helix_radius,0.9</font></p>
-<p><font style="color:#333333;">set cartoon_helix_radius,2.5</font></p>
+<p>set cartoon_helix_radius,0.9</p>
+<p>set cartoon_helix_radius,2.5</p>
 <p><img alt="1612063966928-16c8ff21-e761-4426-ba62-9f8b23e5445a.png" src="../img/kEQtHCNxT2NP4E3v/1612063966928-16c8ff21-e761-4426-ba62-9f8b23e5445a-992528.png" /></p>
 <p>启用默认 default 模式</p>
-<p><font style="color:#333333;">set cartoon_fancy_helices, 0</font></p>
-<p><font style="color:#333333;">set cartoon_cylindrical_helices, 0</font></p>
+<p>set cartoon_fancy_helices, 0</p>
+<p>set cartoon_cylindrical_helices, 0</p>
 <p><img alt="1612063967429-2fd0c391-c19c-4c26-b919-45460c48fb2b.png" src="../img/kEQtHCNxT2NP4E3v/1612063967429-2fd0c391-c19c-4c26-b919-45460c48fb2b-912898.png" /></p>
 <h2 id="fancy-default-helix">定义fancy 和default模式下的α-helix<a href="http://pymol.chenzhaoqiang.com/intro/basicManual.html#fancy-default-helix"></a><a class="headerlink" href="#fancy-default-helix" title="Permanent link">&para;</a></h2>
 <p>命令：</p>
-<p><font style="color:#333333;">set cartoon_oval_length , 0.8 # default is 1.20</font></p>
-<p><font style="color:#333333;">set cartoon_oval_width , 0.2  # default is 0.25</font></p>
+<p>set cartoon_oval_length , 0.8 # default is 1.20</p>
+<p>set cartoon_oval_width , 0.2  # default is 0.25</p>
 <p>示例：</p>
 <p><img alt="1612063966955-5181c859-aa0e-4e5a-83a9-b7c7ff3f9133.png" src="../img/kEQtHCNxT2NP4E3v/1612063966955-5181c859-aa0e-4e5a-83a9-b7c7ff3f9133-014098.png" /></p>
 <h2 id="color">着色(color)<a href="http://pymol.chenzhaoqiang.com/intro/basicManual.html#color"></a><a class="headerlink" href="#color" title="Permanent link">&para;</a></h2>
@@ -10214,17 +10214,17 @@
 <p>选择RNA: select rna, (byres polymer &amp; name O2’)</p>
 <p>选择DNA: select dna, (nucleic &amp; !rna)</p>
 <h2 id="_26">查看蛋白中的二硫键<a href="http://pymol.chenzhaoqiang.com/intro/basicManual.html#id12"></a><a class="headerlink" href="#_26" title="Permanent link">&para;</a></h2>
-<p><font style="color:#333333;">show sticks, (cys/ca+cb+sg) and byres (cys/sg and bound_to cys/sg)</font></p>
+<p>show sticks, (cys/ca+cb+sg) and byres (cys/sg and bound_to cys/sg)</p>
 <h2 id="_27">显示蛋白的口袋的静电势表面<a href="http://pymol.chenzhaoqiang.com/intro/basicManual.html#id13"></a><a class="headerlink" href="#_27" title="Permanent link">&para;</a></h2>
-<p><font style="color:#333333;">step1. 显示整个蛋白蛋白的静电势表面；A-&gt;generate-&gt;vacuum electrostatic-&gt;potential</font></p>
-<p><font style="color:#333333;">step2  设置口袋的中心，一般以其中的配体作为中心；</font></p>
-<p><font style="color:#333333;">set surface_carve_selection, ligand</font></p>
-<p><font style="color:#333333;">step3  设置口袋的大小</font></p>
-<p><font style="color:#333333;">set surface_carve_cutoff, 5</font></p>
-<p><font style="color:#333333;">step4 设置口袋的表面的透明度</font></p>
-<p><font style="color:#333333;">set transparency,0.3, 1azm_e_chg</font></p>
-<p><font style="color:#333333;">step5 切换为溶剂可接触表面</font></p>
-<p><font style="color:#333333;">set surface_solvent, 1</font></p>
+<p>step1. 显示整个蛋白蛋白的静电势表面；A-&gt;generate-&gt;vacuum electrostatic-&gt;potential</p>
+<p>step2  设置口袋的中心，一般以其中的配体作为中心；</p>
+<p>set surface_carve_selection, ligand</p>
+<p>step3  设置口袋的大小</p>
+<p>set surface_carve_cutoff, 5</p>
+<p>step4 设置口袋的表面的透明度</p>
+<p>set transparency,0.3, 1azm_e_chg</p>
+<p>step5 切换为溶剂可接触表面</p>
+<p>set surface_solvent, 1</p>
 <h2 id="5a">删除配体分子5A以外的水分子<a href="http://pymol.chenzhaoqiang.com/intro/basicManual.html#a"></a><a class="headerlink" href="#5a" title="Permanent link">&para;</a></h2>
 <p>remove resn hoh and (resi 307 gap 5)</p>
 <h2 id="objectsuper">叠合两个object(super)<a href="http://pymol.chenzhaoqiang.com/intro/basicManual.html#object-super"></a><a class="headerlink" href="#objectsuper" title="Permanent link">&para;</a></h2>
@@ -10236,78 +10236,78 @@
 <li>align 主要是基于序列进行叠合。</li>
 </ol>
 <p>当两个蛋白的序列相似度较低的时候，使用super叠合的效果比align叠合的效果好。</p>
-<p><font style="color:#333333;">super p1, p2</font></p>
+<p>super p1, p2</p>
 <p>指定叠合部分</p>
-<p><font style="color:#333333;">super p1 &amp; alt A+'', p2 &amp; alt B+''</font></p>
+<p>super p1 &amp; alt A+'', p2 &amp; alt B+''</p>
 <p>实战</p>
-<p><font style="color:#333333;">super obj03  &amp; resi 2-191 &amp; chain K, obj04  &amp; resi 2-191 &amp; chain C</font></p>
+<p>super obj03  &amp; resi 2-191 &amp; chain K, obj04  &amp; resi 2-191 &amp; chain C</p>
 <h2 id="group">分组（group)<a href="http://pymol.chenzhaoqiang.com/intro/basicManual.html#group"></a><a class="headerlink" href="#group" title="Permanent link">&para;</a></h2>
 <p>group efHand, 1cll 1ggz 1sra</p>
 <p>group efHand, open</p>
 <p>group efHand, close</p>
 <p>创建嵌套的组</p>
-<p><font style="color:#333333;">group target,pdbid</font></p>
-<p><font style="color:#333333;">group surf, <em><em>e</em></em></font></p>
-<p><font style="color:#333333;">group target,surf</font></p>
+<p>group target,pdbid</p>
+<p>group surf, <em><em>e</em></em></p>
+<p>group target,surf</p>
 <h2 id="object-order">排序object (order)<a href="http://pymol.chenzhaoqiang.com/intro/basicManual.html#object-order"></a><a class="headerlink" href="#object-order" title="Permanent link">&para;</a></h2>
 <p>order object</p>
 <h2 id="_28">颜色的名字<a href="http://pymol.chenzhaoqiang.com/intro/basicManual.html#id14"></a><a class="headerlink" href="#_28" title="Permanent link">&para;</a></h2>
 <p>PyMOL 中内置超过<code>100种颜色 &lt;<a href="https://pymolwiki.org/index.php/Color_Values">https://pymolwiki.org/index.php/Color_Values</a>&gt;</code>_，</p>
-<p><font style="color:#333333;">aquamarine    0.5     1.0     1.0</font></p>
-<p><font style="color:#333333;">      black   0.0     0.0     0.0</font></p>
-<p><font style="color:#333333;">      blue    0.0     0.0     1.0</font></p>
-<p><font style="color:#333333;">      bluewhite       0.85    0.85    1.00</font></p>
-<p><font style="color:#333333;">      br0     0.1     0.1     1.0</font></p>
-<p><font style="color:#333333;">      br1     0.2     0.1     0.9</font></p>
-<p><font style="color:#333333;">      br2     0.3     0.1     0.8</font></p>
-<p><font style="color:#333333;">      br3     0.4     0.1     0.7</font></p>
-<p><font style="color:#333333;">      br4     0.5     0.1     0.6</font></p>
-<p><font style="color:#333333;">      br5     0.6     0.1     0.5</font></p>
-<p><font style="color:#333333;">      br6     0.7     0.1     0.4</font></p>
-<p><font style="color:#333333;">      br7     0.8     0.1     0.3</font></p>
-<p><font style="color:#333333;">      br8     0.9     0.1     0.2</font></p>
-<p><font style="color:#333333;">      br9     1.0     0.1     0.1</font></p>
-<p><font style="color:#333333;">      brightorange    1.0     0.7     0.2</font></p>
-<p><font style="color:#333333;">      brown   0.65    0.32    0.17</font></p>
-<p><font style="color:#333333;">      carbon  0.2     1.0     0.2</font></p>
-<p><font style="color:#333333;">      chartreuse      0.5     1.0     0.0</font></p>
-<p><font style="color:#333333;">      chocolate       0.555   0.222   0.111</font></p>
-<p><font style="color:#333333;">      cyan    0.0     1.0     1.0</font></p>
-<p><font style="color:#333333;">      darksalmon      0.73    0.55    0.52</font></p>
-<p><font style="color:#333333;">      dash    1.0     1.0     0.0</font></p>
-<p><font style="color:#333333;">      deepblue        0.25    0.25    0.65    deep</font></p>
-<p><font style="color:#333333;">      deepolive       0.6     0.6     0.1</font></p>
-<p><font style="color:#333333;">      deeppurple      0.6     0.1     0.6</font></p>
-<p><font style="color:#333333;">      deepsalmon      1.0     0.5     0.5     duplicated?</font></p>
-<p><font style="color:#333333;">      deepsalmon      1.00    0.42    0.42</font></p>
-<p><font style="color:#333333;">      ... ...</font></p>
-<p><font style="color:#333333;">violetpurple  0.55    0.25    0.60</font></p>
-<p><font style="color:#333333;">warmpink      0.85    0.20    0.50</font></p>
-<p><font style="color:#333333;">wheat         0.99    0.82    0.65</font></p>
-<p><font style="color:#333333;">white         1.0     1.0     1.0</font></p>
-<p><font style="color:#333333;">yellow        1.0     1.0     0.0</font></p>
-<p><font style="color:#333333;">yelloworange  1.0     0.87    0.37</font></p>
+<p>aquamarine    0.5     1.0     1.0</p>
+<p>black   0.0     0.0     0.0</p>
+<p>blue    0.0     0.0     1.0</p>
+<p>bluewhite       0.85    0.85    1.00</p>
+<p>br0     0.1     0.1     1.0</p>
+<p>br1     0.2     0.1     0.9</p>
+<p>br2     0.3     0.1     0.8</p>
+<p>br3     0.4     0.1     0.7</p>
+<p>br4     0.5     0.1     0.6</p>
+<p>br5     0.6     0.1     0.5</p>
+<p>br6     0.7     0.1     0.4</p>
+<p>br7     0.8     0.1     0.3</p>
+<p>br8     0.9     0.1     0.2</p>
+<p>br9     1.0     0.1     0.1</p>
+<p>brightorange    1.0     0.7     0.2</p>
+<p>brown   0.65    0.32    0.17</p>
+<p>carbon  0.2     1.0     0.2</p>
+<p>chartreuse      0.5     1.0     0.0</p>
+<p>chocolate       0.555   0.222   0.111</p>
+<p>cyan    0.0     1.0     1.0</p>
+<p>darksalmon      0.73    0.55    0.52</p>
+<p>dash    1.0     1.0     0.0</p>
+<p>deepblue        0.25    0.25    0.65    deep</p>
+<p>deepolive       0.6     0.6     0.1</p>
+<p>deeppurple      0.6     0.1     0.6</p>
+<p>deepsalmon      1.0     0.5     0.5     duplicated?</p>
+<p>deepsalmon      1.00    0.42    0.42</p>
+<p>... ...</p>
+<p>violetpurple  0.55    0.25    0.60</p>
+<p>warmpink      0.85    0.20    0.50</p>
+<p>wheat         0.99    0.82    0.65</p>
+<p>white         1.0     1.0     1.0</p>
+<p>yellow        1.0     1.0     0.0</p>
+<p>yelloworange  1.0     0.87    0.37</p>
 <h2 id="_29">设置二级结构的颜色<a href="http://pymol.chenzhaoqiang.com/intro/basicManual.html#id15"></a><a class="headerlink" href="#_29" title="Permanent link">&para;</a></h2>
 <p>PyMOL中内置了3种二级结构着色策略。</p>
-<p><font style="color:#333333;">helix       sheet   loop</font></p>
-<p><font style="color:#333333;">red         yellow  green   （策略1）</font></p>
-<p><font style="color:#333333;">cyan        magenta         salmon （策略2）</font></p>
-<p><font style="color:#333333;">cyan        red     magenta     （策略3）</font></p>
+<p>helix       sheet   loop</p>
+<p>red         yellow  green   （策略1）</p>
+<p>cyan        magenta         salmon （策略2）</p>
+<p>cyan        red     magenta     （策略3）</p>
 <p>除了上述内置的着色策略，我们还可以自定义二级结构的颜色。</p>
 <p>方法一：</p>
 <p>选定二级结构对应的氨基酸残基，然后设置颜色。</p>
 <p>方法二（推荐）：</p>
-<p><font style="color:#333333;">color red, ss h</font></p>
-<p><font style="color:#333333;">color yellow, ss s</font></p>
-<p><font style="color:#333333;">color green, ss l+''</font></p>
+<p>color red, ss h</p>
+<p>color yellow, ss s</p>
+<p>color green, ss l+''</p>
 <p>推荐一套配色策略，感觉比内置的好看一点。</p>
-<p><font style="color:#333333;">PyMOL&gt;color yellow,ss s</font></p>
-<p><font style="color:#333333;">PyMOL&gt;color grey,ss l+''</font></p>
-<p><font style="color:#333333;">PyMOL&gt;color teal,ss h</font></p>
+<p>PyMOL&gt;color yellow,ss s</p>
+<p>PyMOL&gt;color grey,ss l+''</p>
+<p>PyMOL&gt;color teal,ss h</p>
 <h2 id="set-xx_color">设置颜色 (set xx_color)<a href="http://pymol.chenzhaoqiang.com/intro/basicManual.html#set-xx-color"></a><a class="headerlink" href="#set-xx_color" title="Permanent link">&para;</a></h2>
 <p>set</p>
-<h1 id="_30"><font style="background-color:#FCFCFC;">进阶教程</font><a href="http://pymol.chenzhaoqiang.com/intro/mediaManual.html#intro-startmanual"></a><a class="headerlink" href="#_30" title="Permanent link">&para;</a></h1>
-<p><font style="background-color:#FCFCFC;">主要讲述如何用PyMOL 绘制精美图片的案例，以及制作动画。</font></p>
+<h1 id="_30">进阶教程<a href="http://pymol.chenzhaoqiang.com/intro/mediaManual.html#intro-startmanual"></a><a class="headerlink" href="#_30" title="Permanent link">&para;</a></h1>
+<p>主要讲述如何用PyMOL 绘制精美图片的案例，以及制作动画。</p>
 <p>注解</p>
 <p>动画更加形象生动，做PPT的时候加入一些动画，更能引起听众的兴趣和注意力！</p>
 <h2 id="_31">简单规则<a href="http://pymol.chenzhaoqiang.com/intro/mediaManual.html#id2"></a><a class="headerlink" href="#_31" title="Permanent link">&para;</a></h2>
@@ -10321,7 +10321,7 @@
 <li>step3 打开PyMOL,File-&gt;save move movie 选择ffmpeg 就可以保存动画。</li>
 </ol>
 <p>安装方法2：</p>
-<p>**&gt;&gt;&gt; **conda install <font style="color:#666666;">-</font>c menpo ffmpeg</p>
+<p>**&gt;&gt;&gt; **conda install -c menpo ffmpeg</p>
 <h3 id="_32">制作分子对接示例动画<a href="http://pymol.chenzhaoqiang.com/intro/mediaManual.html#id3"></a><a class="headerlink" href="#_32" title="Permanent link">&para;</a></h3>
 <ol>
 <li>准备材料(选定蛋白体系，配体)</li>
@@ -10332,9 +10332,9 @@
 <p>3.1 导入蛋白，</p>
 <p>3.2 通过命令导入小分子，并设置object的名字为lig</p>
 </blockquote>
-<p>load conf1name<font style="color:#666666;">.</font>mol2, lig</p>
-<p>load conf2name<font style="color:#666666;">.</font>mol2,lig</p>
-<p><font style="color:#666666;">...</font> <font style="color:#666666;">...</font></p>
+<p>load conf1name.mol2, lig</p>
+<p>load conf2name.mol2,lig</p>
+<p>... ...</p>
 <blockquote>
 <p>3.3 美化，调整角度，颜色，显示模式，动画速度等</p>
 <p>3.4 mplay 播放动画</p>
@@ -10345,18 +10345,18 @@
 <p>这里我以蛋白 <strong>1ki2</strong> 为例制作动画，免费下载 <a href="http://pymol.chenzhaoqiang.com/_static/material_demo1.zip">素材</a> 。</p>
 <p>素材包含： 1. 蛋白构象；2. 小分子10个构象；3. mov.pml</p>
 <p>打开pymol,执行如下命令，就可以创建动画了</p>
-<p>load <font style="color:#208050;">1</font>ki2_rec<font style="color:#666666;">.</font>pdb,rec</p>
-<p>load ligconf01<font style="color:#666666;">.</font>mol2,lig</p>
-<p>load ligconf02<font style="color:#666666;">.</font>mol2,lig</p>
-<p>load ligconf03<font style="color:#666666;">.</font>mol2,lig</p>
-<p>load ligconf04<font style="color:#666666;">.</font>mol2,lig</p>
-<p>load ligconf05<font style="color:#666666;">.</font>mol2,lig</p>
-<p>load ligconf06<font style="color:#666666;">.</font>mol2,lig</p>
-<p>load ligconf07<font style="color:#666666;">.</font>mol2,lig</p>
-<p>load ligconf08<font style="color:#666666;">.</font>mol2,lig</p>
-<p>load ligconf09<font style="color:#666666;">.</font>mol2,lig</p>
-<p>load ligconf10<font style="color:#666666;">.</font>mol2,lig</p>
-<p><font style="color:#007020;">set</font> movie_fps, <font style="color:#208050;">3</font></p>
+<p>load 1ki2_rec.pdb,rec</p>
+<p>load ligconf01.mol2,lig</p>
+<p>load ligconf02.mol2,lig</p>
+<p>load ligconf03.mol2,lig</p>
+<p>load ligconf04.mol2,lig</p>
+<p>load ligconf05.mol2,lig</p>
+<p>load ligconf06.mol2,lig</p>
+<p>load ligconf07.mol2,lig</p>
+<p>load ligconf08.mol2,lig</p>
+<p>load ligconf09.mol2,lig</p>
+<p>load ligconf10.mol2,lig</p>
+<p>set movie_fps, 3</p>
 <p>mplay</p>
 <p>或者将上述命令写入到mov.pml 文件中，双击mov.pml 就可以。</p>
 <p>我制作的动画如下</p>
@@ -10366,17 +10366,25 @@
 <p>这次我主要通过保存关键的frame 进行制作。</p>
 <p>首先我们在脑海中构建几个关键图像，</p>
 </blockquote>
-<p><font style="color:#333333;">1. 蛋白是空的。</font></p>
-<p><font style="color:#333333;">2. 在蛋白外部出现小分子</font></p>
-<p><font style="color:#333333;">4. 小分子慢慢进入口袋</font></p>
+<ol>
+<li>
+<p>蛋白是空的。</p>
+</li>
+<li>
+<p>在蛋白外部出现小分子</p>
+</li>
+<li>
+<p>小分子慢慢进入口袋</p>
+</li>
+</ol>
 <p>帧和帧之间PYMOL会自动平滑过渡。 设置所有的帧的数目： mset 1 x300;</p>
 <p>设置第一帧的图像，frame 1; 调整得到自己想要的视角；mview store；</p>
 <p>在frame 100设置第二副图像，frame 100; 调整得到自己想要的视角；mview store；</p>
 <p>在frame 200设置第二副图像，frame 200; 调整得到自己想要的视角；mview store；</p>
 <p>mplay 播放动画。</p>
 <p>注意： 这种方法不能改变蛋白的形态。</p>
-<h1 id="_34"><font style="background-color:#FCFCFC;">高级教程</font><a href="http://pymol.chenzhaoqiang.com/intro/advanceManual.html#intro-startmanual"></a><a class="headerlink" href="#_34" title="Permanent link">&para;</a></h1>
-<p><font style="background-color:#FCFCFC;">主要讲述PyMOL中脚本的编写、命令的自定义、插件的编写。</font></p>
+<h1 id="_34">高级教程<a href="http://pymol.chenzhaoqiang.com/intro/advanceManual.html#intro-startmanual"></a><a class="headerlink" href="#_34" title="Permanent link">&para;</a></h1>
+<p>主要讲述PyMOL中脚本的编写、命令的自定义、插件的编写。</p>
 <h2 id="pymol_3">PyMOL脚本、命令、插件<a href="http://pymol.chenzhaoqiang.com/intro/advanceManual.html#pymol"></a><a class="headerlink" href="#pymol_3" title="Permanent link">&para;</a></h2>
 <p>PyMOL支持Python 编程语言，故可以借助python让pymol无所不能，pymol除了显示软件，也能成为计算软件。</p>
 <p>脚本：把pymol作为一个模块，实现一些计算功能。 命令：pymol中内置了一些命令，如color、dist等，我们也可以自定义新的命令。 插件：pymol中内置了一些插件，如apbs-pdb2pqr等，我们也可以自定义插件。</p>
@@ -10406,7 +10414,7 @@
 <thead>
 <tr>
 <th>1 2 3 4</th>
-<th><strong>from</strong> <strong>pymol</strong> <strong>import</strong> cmd <strong>def</strong> <font style="color:#06287E;">dist_center</font>(obj1<font style="color:#666666;">=</font><font style="color:#4070A0;">"obj01"</font>,obj2<font style="color:#666666;">=</font><font style="color:#4070A0;">"obj02"</font>,showflag<font style="color:#666666;">=</font><font style="color:#007020;">True</font>):     <strong>pass</strong> cmd<font style="color:#666666;">.</font>extend(<font style="color:#4070A0;">"dist_center"</font>, dist_center)</th>
+<th><strong>from</strong> <strong>pymol</strong> <strong>import</strong> cmd <strong>def</strong> dist_center(obj1="obj01",obj2="obj02",showflag=True):     <strong>pass</strong> cmd.extend("dist_center", dist_center)</th>
 </tr>
 </thead>
 <tbody>
@@ -10421,7 +10429,7 @@
 <thead>
 <tr>
 <th>1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66</th>
-<th><em>"""</em> <em>DESCRIPTION</em> <em>measure the distance between the centers of two objects</em> <em>the object usually is  benzene, pyridine and other cyclo object</em> <em>more information at: _ <a href="http://pymol.chenzhaoqiang.com/intro/advanceManual.html"><em>http://pymol.chenzhaoqiang.com/intro/advanceManual.html</em></a><br/> <em>AUTHOR</em> <em>Zhaoqiang Chen, 2017</em> <em>Please inform me if you use/improve/like/dislike/publish with this script.</em> <em>email: 744891290@qq.com</em> <em>"""</em> <strong>from</strong> <strong>pymol</strong> <strong>import</strong> cmd,math  <strong>def</strong> <font style="color:#06287E;">getcenterofatoms</font>(atoms):     <em>'''</em> _    '''</em>     x<font style="color:#666666;">=</font><font style="color:#208050;">0</font>     y<font style="color:#666666;">=</font><font style="color:#208050;">0</font>     z<font style="color:#666666;">=</font><font style="color:#208050;">0</font>     <strong>for</strong> atm <strong>in</strong> atoms:         x<font style="color:#666666;">+=</font>atm<font style="color:#666666;">.</font>coord[<font style="color:#208050;">0</font>]         y<font style="color:#666666;">+=</font>atm<font style="color:#666666;">.</font>coord[<font style="color:#208050;">1</font>]         z<font style="color:#666666;">+=</font>atm<font style="color:#666666;">.</font>coord[<font style="color:#208050;">2</font>]     numatm<font style="color:#666666;">=</font><font style="color:#007020;">float</font>(<font style="color:#007020;">len</font>(atoms))     x<font style="color:#666666;">=</font>x<font style="color:#666666;">/</font>numatm     y<font style="color:#666666;">=</font>y<font style="color:#666666;">/</font>numatm     z<font style="color:#666666;">=</font>z<font style="color:#666666;">/</font>numatm     <strong>return</strong> [x,y,z] <strong>def</strong> <font style="color:#06287E;">getdist</font>(cen1,cen2):     <em>'''</em> _    '''_     dx<font style="color:#666666;">=</font>cen1[<font style="color:#208050;">0</font>]<font style="color:#666666;">-</font>cen2[<font style="color:#208050;">0</font>]     dy<font style="color:#666666;">=</font>cen1[<font style="color:#208050;">1</font>]<font style="color:#666666;">-</font>cen2[<font style="color:#208050;">1</font>]     dz<font style="color:#666666;">=</font>cen1[<font style="color:#208050;">2</font>]<font style="color:#666666;">-</font>cen2[<font style="color:#208050;">2</font>]     dist<font style="color:#666666;">=</font>dx<font style="color:#666666;"><em></font>dx<font style="color:#666666;">+</font>dy<font style="color:#666666;"></em></font>dy<font style="color:#666666;">+</font>dz<font style="color:#666666;">*</font>dz     <strong>return</strong> math<font style="color:#666666;">.</font>sqrt(dist) <strong>def</strong> <font style="color:#06287E;">dist_center</font>(obj1<font style="color:#666666;">=</font><font style="color:#4070A0;">"obj01"</font>,obj2<font style="color:#666666;">=</font><font style="color:#4070A0;">"obj02"</font>,showflag<font style="color:#666666;">=</font><font style="color:#007020;">True</font>):     <em>'''</em> _    usage1:_ _    dist_center obj01,obj02 _ _    usage2:_ _    dist_center obj01,obj02,1 _ _    usage3:_ _    dist_center obj01,obj02,0_ _    usage1 is equal to usage2!_ _    '''_     obj1atoms<font style="color:#666666;">=</font>cmd<font style="color:#666666;">.</font>get_model(obj1)<font style="color:#666666;">.</font>atom     obj2atoms<font style="color:#666666;">=</font>cmd<font style="color:#666666;">.</font>get_model(obj2)<font style="color:#666666;">.</font>atom     obj1center<font style="color:#666666;">=</font>getcenterofatoms(obj1atoms)     obj2center<font style="color:#666666;">=</font>getcenterofatoms(obj2atoms)     dist <font style="color:#666666;">=</font> getdist(obj1center,obj2center)     <strong>print</strong>(<font style="color:#4070A0;">"distance: </font><em>%.2f</em><font style="color:#4070A0;">"</font><font style="color:#666666;">%</font>(dist ))     <strong>if</strong> showflag:         cmd<font style="color:#666666;">.</font>pseudoatom(<font style="color:#4070A0;">'cen1'</font>, pos<font style="color:#666666;">=</font>obj1center)         cmd<font style="color:#666666;">.</font>pseudoatom(<font style="color:#4070A0;">'cen2'</font>, pos<font style="color:#666666;">=</font>obj2center)         cmd<font style="color:#666666;">.</font>distance(<font style="color:#4070A0;">"dist"</font>,<font style="color:#4070A0;">"cen1"</font>,<font style="color:#4070A0;">"cen2"</font>)          cmd<font style="color:#666666;">.</font>extend(<font style="color:#4070A0;">"dist_center"</font>, dist_center)</th>
+<th><em>"""</em> <em>DESCRIPTION</em> <em>measure the distance between the centers of two objects</em> <em>the object usually is  benzene, pyridine and other cyclo object</em> <em>more information at: _ <a href="http://pymol.chenzhaoqiang.com/intro/advanceManual.html"><em>http://pymol.chenzhaoqiang.com/intro/advanceManual.html</em></a><br/> <em>AUTHOR</em> <em>Zhaoqiang Chen, 2017</em> <em>Please inform me if you use/improve/like/dislike/publish with this script.</em> <em>email: 744891290@qq.com</em> <em>"""</em> <strong>from</strong> <strong>pymol</strong> <strong>import</strong> cmd,math  <strong>def</strong> getcenterofatoms(atoms):     <em>'''</em> _    '''</em>     x=0     y=0     z=0     <strong>for</strong> atm <strong>in</strong> atoms:         x+=atm.coord[0]         y+=atm.coord[1]         z+=atm.coord[2]     numatm=float(len(atoms))     x=x/numatm     y=y/numatm     z=z/numatm     <strong>return</strong> [x,y,z] <strong>def</strong> getdist(cen1,cen2):     <em>'''</em> _    '''_     dx=cen1[0]-cen2[0]     dy=cen1[1]-cen2[1]     dz=cen1[2]-cen2[2]     dist=dx<em>dx+dy</em>dy+dz*dz     <strong>return</strong> math.sqrt(dist) <strong>def</strong> dist_center(obj1="obj01",obj2="obj02",showflag=True):     <em>'''</em> _    usage1:_ _    dist_center obj01,obj02 _ _    usage2:_ _    dist_center obj01,obj02,1 _ _    usage3:_ _    dist_center obj01,obj02,0_ _    usage1 is equal to usage2!_ _    '''_     obj1atoms=cmd.get_model(obj1).atom     obj2atoms=cmd.get_model(obj2).atom     obj1center=getcenterofatoms(obj1atoms)     obj2center=getcenterofatoms(obj2atoms)     dist = getdist(obj1center,obj2center)     <strong>print</strong>("distance: <em>%.2f</em>"%(dist ))     <strong>if</strong> showflag:         cmd.pseudoatom('cen1', pos=obj1center)         cmd.pseudoatom('cen2', pos=obj2center)         cmd.distance("dist","cen1","cen2")          cmd.extend("dist_center", dist_center)</th>
 </tr>
 </thead>
 <tbody>
@@ -10446,80 +10454,80 @@
 <p>PyMOL&gt;select negative, (resn ASP+Glu and name OD*+OE*)</p>
 <p>PyMOL&gt;select positive, (resn Lys and name NZ) or (resn arg and name NE+NH*)</p>
 <p>PyMOL&gt;distance saltbridge, (negative ), (positive ), 4.0, 0</p>
-<p><font style="color:#333333;">PyMOL&gt;select negative, (resn ASP+Glu and name OD*+OE*)</font></p>
-<p><font style="color:#333333;">PyMOL&gt;select positive, (resn Lys and name NZ) or (resn arg and name NE+NH*)</font></p>
-<p><font style="color:#333333;">PyMOL&gt;distance saltbridge, (negative ), (positive ), 4.0, 0</font></p>
+<p>PyMOL&gt;select negative, (resn ASP+Glu and name OD*+OE*)</p>
+<p>PyMOL&gt;select positive, (resn Lys and name NZ) or (resn arg and name NE+NH*)</p>
+<p>PyMOL&gt;distance saltbridge, (negative ), (positive ), 4.0, 0</p>
 <p>方法2 拓展成一个命令 saltbridge.py</p>
 <p><strong>from</strong> <strong>pymol</strong> <strong>import</strong> cmd</p>
-<p><strong>def</strong> <font style="color:#06287E;">show_saltbridge</font>(dist<font style="color:#666666;">=</font><font style="color:#208050;">4.0</font>):</p>
-<p>cmd<font style="color:#666666;">.</font>select(<font style="color:#4070A0;">"negative"</font>,<font style="color:#4070A0;">"resn ASP+Glu and name OD*+OE*"</font>)</p>
-<p>cmd<font style="color:#666666;">.</font>select(<font style="color:#4070A0;">"positive"</font>,<font style="color:#4070A0;">"(resn Lys and name NZ) or (resn arg and name NE+NH*)"</font>)</p>
-<p>cmd<font style="color:#666666;">.</font>distance(<font style="color:#4070A0;">"saltbridge"</font>,<font style="color:#4070A0;">"negative"</font>,<font style="color:#4070A0;">"positive"</font>,dist,<font style="color:#208050;">0</font>)</p>
-<p>cmd<font style="color:#666666;">.</font>extend(<font style="color:#4070A0;">"show_saltbridge"</font>, show_saltbridge)</p>
+<p><strong>def</strong> show_saltbridge(dist=4.0):</p>
+<p>cmd.select("negative","resn ASP+Glu and name OD*+OE*")</p>
+<p>cmd.select("positive","(resn Lys and name NZ) or (resn arg and name NE+NH*)")</p>
+<p>cmd.distance("saltbridge","negative","positive",dist,0)</p>
+<p>cmd.extend("show_saltbridge", show_saltbridge)</p>
 <p>使用命令</p>
-<p><font style="color:#333333;">PyMOL&gt;run saltbridge.py</font></p>
-<p><font style="color:#333333;">PyMOL&gt;show_saltbridge 3</font></p>
-<p><font style="color:#333333;">PyMOL&gt;show_saltbridge</font></p>
+<p>PyMOL&gt;run saltbridge.py</p>
+<p>PyMOL&gt;show_saltbridge 3</p>
+<p>PyMOL&gt;show_saltbridge</p>
 <p>用法如图所示：</p>
 <p><img alt="1612064412654-f342cd7b-7ab5-4ade-aa3d-baad155954c0.png" src="../img/kEQtHCNxT2NP4E3v/1612064412654-f342cd7b-7ab5-4ade-aa3d-baad155954c0-314870.png" /></p>
 <p>两个氨基酸之间存在黄色虚线，说明这个氨基酸存在盐桥。</p>
 <h3 id="_37">把蛋白装入盒子中，并可视化长宽高<a href="http://pymol.chenzhaoqiang.com/intro/advanceManual.html#id4"></a><a class="headerlink" href="#_37" title="Permanent link">&para;</a></h3>
 <p>计算蛋白的长宽高，并可视化。 下载脚本(右击另存为) <code><a href="http://pymol.chenzhaoqiang.com/_downloads/addproteinBox2020-05-12_232157.616761.py">addproteinBox.py</a></code> 。</p>
 <p>在PyMOL 命令行，运行下述命令，就可以该蛋白添加盒子，并显示长宽高。</p>
-<p><font style="color:#333333;">PyMOL&gt;run addproteinBox.py</font></p>
-<p><font style="color:#333333;">PyMOL&gt;add_proteinbox 4hbk</font></p>
+<p>PyMOL&gt;run addproteinBox.py</p>
+<p>PyMOL&gt;add_proteinbox 4hbk</p>
 <p><img alt="1612064412670-1acc95cd-1f63-4b8a-be24-10a53d4954ad.png" src="../img/kEQtHCNxT2NP4E3v/1612064412670-1acc95cd-1f63-4b8a-be24-10a53d4954ad-407730.png" /></p>
 <h3 id="xyz">左下角显示XYZ坐标<a href="http://pymol.chenzhaoqiang.com/intro/advanceManual.html#xyz"></a><a class="headerlink" href="#xyz" title="Permanent link">&para;</a></h3>
 <p>VMD左下角默认会显示XYZ坐标，PyMOL也可以做到。 下载脚本(右击另存为) <code><a href="http://pymol.chenzhaoqiang.com/_downloads/axes.py">axes.py</a></code> 。</p>
 <p>在PyMOL 命令行，运行下述命令，就可以添加XYZ坐标了。</p>
-<p><font style="color:#333333;">PyMOL&gt;run axes.py</font></p>
-<p><font style="color:#333333;">PyMOL&gt;axes</font></p>
+<p>PyMOL&gt;run axes.py</p>
+<p>PyMOL&gt;axes</p>
 <p><img alt="1612064412485-57f8e9f6-ce17-41d6-930f-e7ba01b516ec.png" src="../img/kEQtHCNxT2NP4E3v/1612064412485-57f8e9f6-ce17-41d6-930f-e7ba01b516ec-401721.png" /></p>
 <h3 id="_38">加载坐标颜色文件<a href="http://pymol.chenzhaoqiang.com/intro/advanceManual.html#id5"></a><a class="headerlink" href="#_38" title="Permanent link">&para;</a></h3>
 <p>文件(test.xyzrgb)格式如下</p>
 <blockquote>
 <p><code><a href="http://pymol.chenzhaoqiang.com/_downloads/axes.py">test.xyzrgb</a></code></p>
 </blockquote>
-<p><font style="color:#333333;">x y z r g b</font></p>
+<p>x y z r g b</p>
 <p>下载笔者编写的脚本 <code><a href="http://pymol.chenzhaoqiang.com/_downloads/loadxyzrgb_sub.py">loadxyzrgb_sub.py</a></code></p>
 <p>在 PyMOL 命令行，运行下述命令，就可以可视化坐标颜色文件了。</p>
-<p><font style="color:#333333;">PyMOL&gt;run loadxyzrgb_sub.py</font></p>
-<p><font style="color:#333333;">PyMOL&gt;loadxyzrgb test.xyzrgb</font></p>
+<p>PyMOL&gt;run loadxyzrgb_sub.py</p>
+<p>PyMOL&gt;loadxyzrgb test.xyzrgb</p>
 <p><img alt="1612064412714-5ecda3bf-3997-45dc-8937-a784b380575b.png" src="../img/kEQtHCNxT2NP4E3v/1612064412714-5ecda3bf-3997-45dc-8937-a784b380575b-304239.png" /></p>
 <h3 id="_39">提取配体周围的位点<a href="http://pymol.chenzhaoqiang.com/intro/advanceManual.html#id6"></a><a class="headerlink" href="#_39" title="Permanent link">&para;</a></h3>
 <p><strong>from</strong> <strong>pymol</strong> <strong>import</strong> cmd</p>
 <p><strong>from</strong> <strong>pymol</strong> <strong>import</strong> util</p>
 <p><em># example 6SP6 KJK    A</em></p>
-<p><strong>def</strong> <font style="color:#06287E;">extractSiteByLig</font>(pdbid,ligid,radius<font style="color:#666666;">=</font><font style="color:#208050;">4</font>,chainid<font style="color:#666666;">=</font><font style="color:#007020;">None</font>):</p>
+<p><strong>def</strong> extractSiteByLig(pdbid,ligid,radius=4,chainid=None):</p>
 <p><em>'''</em></p>
 <p>_    '''_</p>
-<p>cmd<font style="color:#666666;">.</font>delete(<font style="color:#4070A0;">'all'</font>)</p>
-<p>cmd<font style="color:#666666;">.</font>fetch(pdbid)</p>
+<p>cmd.delete('all')</p>
+<p>cmd.fetch(pdbid)</p>
 <p><strong>if</strong> <strong>not</strong>  chainid:</p>
-<p>cmd<font style="color:#666666;">.</font>select(<font style="color:#4070A0;">"ligall"</font>,<font style="color:#4070A0;">"resn </font><em>%s</em><font style="color:#4070A0;">"</font><font style="color:#666666;">%</font>ligid)</p>
-<p>atms_lig <font style="color:#666666;">=</font> cmd<font style="color:#666666;">.</font>get_model(<font style="color:#4070A0;">"ligall"</font>)<font style="color:#666666;">.</font>atom</p>
-<p>chains_lig <font style="color:#666666;">=</font> [    atom<font style="color:#666666;">.</font>chain     <strong>for</strong> atom <strong>in</strong> atms_lig ]</p>
-<p>chains_lig <font style="color:#666666;">=</font> <font style="color:#007020;">list</font>(<font style="color:#007020;">set</font>(chains_lig))</p>
-<p>chainid <font style="color:#666666;">=</font> chains_lig[<font style="color:#208050;">0</font>]</p>
-<p>cmd<font style="color:#666666;">.</font>select(<font style="color:#4070A0;">"lig_</font><em>%s</em><font style="color:#4070A0;">"</font><font style="color:#666666;">%</font>chainid,<font style="color:#4070A0;">" chain </font><em>%s</em><font style="color:#4070A0;"> and resn </font><em>%s</em><font style="color:#4070A0;"> "</font><font style="color:#666666;">%</font>(chainid,ligid))</p>
-<p>cmd<font style="color:#666666;">.</font>select(<font style="color:#4070A0;">"site"</font>,<font style="color:#4070A0;">"byres (lig_</font><em>%s</em><font style="color:#4070A0;"> expand </font><em>%s</em><font style="color:#4070A0;">)"</font><font style="color:#666666;">%</font>(chainid,radius))</p>
-<p>cmd<font style="color:#666666;">.</font>create(<font style="color:#4070A0;">"pocket"</font>,<font style="color:#4070A0;">"site"</font>)</p>
-<p>cmd<font style="color:#666666;">.</font>disable(<font style="color:#4070A0;">"all"</font>)</p>
-<p>cmd<font style="color:#666666;">.</font>enable(<font style="color:#4070A0;">"pocket"</font>)</p>
-<p>cmd<font style="color:#666666;">.</font>do(<font style="color:#4070A0;">"as sticks,pocket"</font>)</p>
-<p>util<font style="color:#666666;">.</font>cba(<font style="color:#208050;">144</font>,<font style="color:#4070A0;">"pocket"</font>)</p>
-<p>util<font style="color:#666666;">.</font>cba(<font style="color:#208050;">120</font>,<font style="color:#4070A0;">"pocket and resn </font><em>%s</em><font style="color:#4070A0;">"</font><font style="color:#666666;">%</font>ligid)</p>
-<p>newfile<font style="color:#666666;">=</font><font style="color:#4070A0;">"</font><em>%s</em><font style="color:#4070A0;"><em></font></em>%s_<font style="color:#4070A0;"><em></font></em>%s_<font style="color:#4070A0;"><em></font></em>%s_<font style="color:#4070A0;">.pdb"</font><font style="color:#666666;">%</font>(pdbid,ligid,chainid,radius)</p>
-<p>cmd<font style="color:#666666;">.</font>save(newfile,<font style="color:#4070A0;">"site"</font>)</p>
+<p>cmd.select("ligall","resn <em>%s</em>"%ligid)</p>
+<p>atms_lig = cmd.get_model("ligall").atom</p>
+<p>chains_lig = [    atom.chain     <strong>for</strong> atom <strong>in</strong> atms_lig ]</p>
+<p>chains_lig = list(set(chains_lig))</p>
+<p>chainid = chains_lig[0]</p>
+<p>cmd.select("lig_<em>%s</em>"%chainid," chain <em>%s</em> and resn <em>%s</em> "%(chainid,ligid))</p>
+<p>cmd.select("site","byres (lig_<em>%s</em> expand <em>%s</em>)"%(chainid,radius))</p>
+<p>cmd.create("pocket","site")</p>
+<p>cmd.disable("all")</p>
+<p>cmd.enable("pocket")</p>
+<p>cmd.do("as sticks,pocket")</p>
+<p>util.cba(144,"pocket")</p>
+<p>util.cba(120,"pocket and resn <em>%s</em>"%ligid)</p>
+<p>newfile="<em>%s</em><strong>%s_</strong>%s_**%s_.pdb"%(pdbid,ligid,chainid,radius)</p>
+<p>cmd.save(newfile,"site")</p>
 <p><em># extractSiteByLig 6SP6, KJK</em></p>
-<p>cmd<font style="color:#666666;">.</font>extend(<font style="color:#4070A0;">"extractSiteByLig"</font>,extractSiteByLig)</p>
-<p>pdbid <font style="color:#666666;">=</font> <font style="color:#4070A0;">'6SP6'</font></p>
-<p>ligid <font style="color:#666666;">=</font> <font style="color:#4070A0;">'KJK'</font></p>
+<p>cmd.extend("extractSiteByLig",extractSiteByLig)</p>
+<p>pdbid = '6SP6'</p>
+<p>ligid = 'KJK'</p>
 <p>extractSiteByLig(pdbid,ligid)</p>
 <h3 id="pymol_4">PyMol的宏录制<a href="http://pymol.chenzhaoqiang.com/intro/advanceManual.html#id7"></a><a class="headerlink" href="#pymol_4" title="Permanent link">&para;</a></h3>
 <p>点击 File-&gt;Log File-&gt; Open File 填写宏的名字 xxx.pml 然后操作PyMOL， 操作完成后点击 File-&gt;Log File-&gt; close; 文本编辑器（如vscode）打开宏文件就可以查看里面的命令。</p>
 <blockquote>
-<p>更新: 2021-01-31 11:41:30<br />
+<p>更新: 2021-01-31 11:41:30
 原文: <a href="https://www.yuque.com/doublehelix/bioinfonotes/zbzrds">https://www.yuque.com/doublehelix/bioinfonotes/zbzrds</a></p>
 </blockquote>
 

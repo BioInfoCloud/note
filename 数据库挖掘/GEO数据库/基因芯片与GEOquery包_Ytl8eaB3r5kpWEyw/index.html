@@ -9554,19 +9554,33 @@
 
 
 <h1 id="geoquery">基因芯片与GEOquery包<a class="headerlink" href="#geoquery" title="Permanent link">&para;</a></h1>
-<p>关于芯片数据分析，我们之前的文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263385&amp;idx=1&amp;sn=63528ffd7901f36387cd4f484c99e188&amp;chksm=841ef5e4b3697cf28e4590d3509be675bc5d44fe1a1cb6f54fe6ad5cc419139c8720a5fb299d&amp;scene=21#wechat_redirect">基因芯片数据挖掘分析表达差异基因</a>中也介绍过芯片的基础知识，这里我们将使用R系统性的讲解芯片的数据分析。不想用R语言的可以阅读文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263601&amp;idx=1&amp;sn=443d0dddebb12f21cfd976d50473856b&amp;chksm=841ef60cb3697f1aecc6c310ee3a77e6182a728d5b6711a5cc8f49f0739feaba904f565ce176&amp;scene=21#wechat_redirect">GEO数据库使用教程及在线数据分析工具</a>，因为NCBI的GEO数据库(<a href="https://www.ncbi.nlm.nih.gov/geo/"><u>https://www.ncbi.nlm.nih.gov/geo/</u></a>)，ArrayExpress数据库(<a href="https://www.ebi.ac.uk/arrayexpress/"><u>https://www.ebi.ac.uk/arrayexpress/</u></a>)，和TCGA数据库(<a href="https://cancergenome.nih.gov/"><u>https://cancergenome.nih.gov/</u></a>)等等，记录和储存着大量芯片相关的数据，其中GEO数据库是目前最大最全的数据库，可供科研人员查询和下载相关数据。我们还有TCGA数据库的使用教程：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263330&amp;idx=1&amp;sn=ff440567bbacae48dd41fb3d1daa8751&amp;chksm=841ef51fb3697c098f2c84276930d46884bcb51663f11f2c1c01d822427fed9c4a5c7fe0cf2c&amp;scene=21#wechat_redirect">TCGA数据库使用教程</a>。可供初学者学习，我们之前也有TCGA数据挖掘的系列教程，读者可关注本公众号，通过菜单栏找到相应的课程学习，也可通过我们的网站查询（公众号后台有网址）。从本文开始，我们将系列性讲解基因芯片数据分析，下面简单对基因芯片的知识进行简单的概述，作为前面文章的一个补充。</p>
+<p>关于芯片数据分析，我们之前的文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263385&amp;idx=1&amp;sn=63528ffd7901f36387cd4f484c99e188&amp;chksm=841ef5e4b3697cf28e4590d3509be675bc5d44fe1a1cb6f54fe6ad5cc419139c8720a5fb299d&amp;scene=21#wechat_redirect">基因芯片数据挖掘分析表达差异基因</a>中也介绍过芯片的基础知识，这里我们将使用R系统性的讲解芯片的数据分析。
+不想用R语言的可以阅读文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263601&amp;idx=1&amp;sn=443d0dddebb12f21cfd976d50473856b&amp;chksm=841ef60cb3697f1aecc6c310ee3a77e6182a728d5b6711a5cc8f49f0739feaba904f565ce176&amp;scene=21#wechat_redirect">GEO数据库使用教程及在线数据分析工具</a>，因为NCBI的GEO数据库(<a href="https://www.ncbi.nlm.nih.gov/geo/"><u>https://www.ncbi.nlm.nih.gov/geo/</u></a>)，ArrayExpress数据库(<a href="https://www.ebi.ac.uk/arrayexpress/"><u>https://www.ebi.ac.uk/arrayexpress/</u></a>)，和TCGA数据库(<a href="https://cancergenome.nih.gov/"><u>https://cancergenome.nih.gov/</u></a>)等等，记录和储存着大量芯片相关的数据，其中GEO数据库是目前最大最全的数据库，可供科研人员查询和下载相关数据。
+我们还有TCGA数据库的使用教程：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263330&amp;idx=1&amp;sn=ff440567bbacae48dd41fb3d1daa8751&amp;chksm=841ef51fb3697c098f2c84276930d46884bcb51663f11f2c1c01d822427fed9c4a5c7fe0cf2c&amp;scene=21#wechat_redirect">TCGA数据库使用教程</a>。
+可供初学者学习，我们之前也有TCGA数据挖掘的系列教程，读者可关注本公众号，通过菜单栏找到相应的课程学习，也可通过我们的网站查询（公众号后台有网址）。
+从本文开始，我们将系列性讲解基因芯片数据分析，下面简单对基因芯片的知识进行简单的概述，作为前面文章的一个补充。</p>
 <h2 id="_1">基因芯片概述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>简单地讲，基因芯片就是一系列微小特征序列的（通常是DNA探针，也可能是蛋白质）的集合，它们可以被用于定性或者定量检查样品内特异分子的成份。比如说，基因芯片可以检测几十个gene marker在细胞样品中的表达量。现在最常见的是用于整个基因组的表达量分析。它的雏形来自于同位素杂交技术，又如Southern blots或者dot blots。在上世纪九十年代，2维的具有现代意义的基因芯片才在实验室里诞生。基因芯片自问世以来，已经有超过23年（至2014年）了。现在，世界上主流的芯片制造商有4家，分别是Affymetrix，Agilent，Nimblegen以及Illumina。下图为历年来提交至Gene Expression Omnibus数据库的主流芯片厂商的芯片数据统计分布图（数据截止日期为2014年3月1日）。从下图中可以看出，Affymetrix制造的基因芯片在2008年以前占据了市场的主流，在2008年，因为illumina BeadArray的推广，它的市场份额有较大的攀升，但是2年以后就下降至与Affymetrix公司类似的份额。而Agilent却在2010年以后成为芯片市场份额最大的一家。市场份额的变化有价格的因素，质量的因素，使用习惯的因素，也有受到第二代测序技术冲击的因素。</p>
+<p>简单地讲，基因芯片就是一系列微小特征序列的（通常是DNA探针，也可能是蛋白质）的集合，它们可以被用于定性或者定量检查样品内特异分子的成份。
+比如说，基因芯片可以检测几十个gene marker在细胞样品中的表达量。
+现在最常见的是用于整个基因组的表达量分析。
+它的雏形来自于同位素杂交技术，又如Southern blots或者dot blots。
+在上世纪九十年代，2维的具有现代意义的基因芯片才在实验室里诞生。
+基因芯片自问世以来，已经有超过23年（至2014年）了。
+现在，世界上主流的芯片制造商有4家，分别是Affymetrix，Agilent，Nimblegen以及Illumina。
+下图为历年来提交至Gene Expression Omnibus数据库的主流芯片厂商的芯片数据统计分布图（数据截止日期为2014年3月1日）。
+从下图中可以看出，Affymetrix制造的基因芯片在2008年以前占据了市场的主流，在2008年，因为illumina BeadArray的推广，它的市场份额有较大的攀升，但是2年以后就下降至与Affymetrix公司类似的份额。
+而Agilent却在2010年以后成为芯片市场份额最大的一家。
+市场份额的变化有价格的因素，质量的因素，使用习惯的因素，也有受到第二代测序技术冲击的因素。</p>
 <p><img alt="1612929683395-0ba54962-1a99-4e9b-8ff5-58c017ddac83.webp" src="../img/Ytl8eaB3r5kpWEyw/1612929683395-0ba54962-1a99-4e9b-8ff5-58c017ddac83-637789.webp" /></p>
 <p>基因芯片的原理大同小异，都是将生物分子固定在某种介质上，比如平面介质，微管，微槽以及微粒等，用于检测目标样品中一批生物分子的含量。使用玻璃介质的好处是经济，稳定，有利于杂交，并且背景荧光小。我们能够最直观想象的基因芯片制造方法就是象打印机印刷一样，通过将来自于不同墨盒里的DNA探针喷印或者吸印至玻璃平板上。在检测的时候，因为每组探针在介质上的位置是已知的，通过不同位置荧光强度与生物分子浓度的对应关系，就不难了解目的片断的表达强度了。这种方法其实就是基因芯片最初的制造方法。这种方法制造的芯片，密度不可能太高。</p>
 <p>Affymetrix公司在基因芯片的高密度生产上做出了里程碑式的贡献，它们首创了在石英介质上原位合成oligo短序的工艺，这一工艺极大地提高了基因芯片探针的排布密度。那么oligonucleotide是在原位如何合成的呢？首先，合成位点被对UV光敏感 的化学物质保护起来，当受到UV光照的时候，合成位点被打开，这时候可以把A, C, G或者T碱基连接在合成位点上。而后再去掉光源，位点关闭，洗脱。之后再UV光照打开。如此反复，oligonucleotide的原位合成就完成了。</p>
-<p><font style="color:#007AAA;">参考文献:</font><font style="color:#007AAA;">[PMID: 19822891]</font></p>
+<p>参考文献:[PMID: 19822891]</p>
 <p><img alt="1612929683449-7b53daf1-0e48-49f1-aeab-0d9eaa363243.webp" src="../img/Ytl8eaB3r5kpWEyw/1612929683449-7b53daf1-0e48-49f1-aeab-0d9eaa363243-276526.webp" /></p>
 <p><img alt="1612929861038-5a052d88-f277-4b76-ab16-136b66224352.gif" src="../img/Ytl8eaB3r5kpWEyw/1612929861038-5a052d88-f277-4b76-ab16-136b66224352-601537.gif" /></p>
-<p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1338047035672526848&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>TCGA</strong></a><strong><font style="color:#021EAA;"> | </font></strong><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1385753371944239106&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong><font style="color:#021EAA;">GEO</font></strong></a><strong><font style="color:#021EAA;"> | </font></strong><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1338481272770953216&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>文献阅读</strong></a><strong><font style="color:#021EAA;"> | </font></strong><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1338487030963142656&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>数据库</strong></a><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1338487030963142656&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect">** **</a><strong><font style="color:#021EAA;">| </font></strong><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1338473418617946113&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>理论知识</strong></a></p>
-<p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1337050529440104449&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>R语言</strong></a><strong><font style="color:#021EAA;"> | </font></strong><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1369789283514761218&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong><font style="color:#021EAA;">Bioconductor</font></strong></a></p>
+<p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1338047035672526848&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>TCGA</strong></a>** | <strong><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1385753371944239106&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>GEO</strong></a></strong> | <strong><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1338481272770953216&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>文献阅读</strong></a></strong> | <strong><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1338487030963142656&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>数据库</strong></a><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1338487030963142656&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect">** **</a></strong>| **<a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1338473418617946113&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>理论知识</strong></a></p>
+<p><a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1337050529440104449&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>R语言</strong></a>** | **<a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1369789283514761218&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>Bioconductor</strong></a></p>
 <hr />
-<p>关于GEO数据库的基本认识和在线使用，可阅读文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263601&amp;idx=1&amp;sn=443d0dddebb12f21cfd976d50473856b&amp;chksm=841ef60cb3697f1aecc6c310ee3a77e6182a728d5b6711a5cc8f49f0739feaba904f565ce176&amp;scene=21#wechat_redirect"><strong><font style="color:#021EAA;">GEO数据库使用教程及在线数据分析工具</font></strong></a>。本文介绍GEOquery这个包，官方教程地址：</p>
+<p>关于GEO数据库的基本认识和在线使用，可阅读文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263601&amp;idx=1&amp;sn=443d0dddebb12f21cfd976d50473856b&amp;chksm=841ef60cb3697f1aecc6c310ee3a77e6182a728d5b6711a5cc8f49f0739feaba904f565ce176&amp;scene=21#wechat_redirect"><strong>GEO数据库使用教程及在线数据分析工具</strong></a>。本文介绍GEOquery这个包，官方教程地址：</p>
 <p><a href="http://www.bioconductor.org/packages/release/bioc/vignettes/GEOquery/inst/doc/GEOquery.html"><u>http://www.bioconductor.org/packages/release/bioc/vignettes/GEOquery/inst/doc/GEOquery.html</u></a></p>
 <p>本文相当于官方教程的译文吧，再加上我个人的理解，可能翻译不是那么准确。请多多指教！！</p>
 <p><strong>1 GEO概述</strong></p>
@@ -9608,7 +9622,7 @@
 <p><strong>3.GEOquery数据结构</strong></p>
 <p>GEOquery数据结构实际上有两种形式。第一种，包括GDS、GPL和GSM，这三种数据结构比较类似，getGEO对他们请求是也类似。第四个GEOquery数据结构是GSE，GSE是由GSM和GPL对象组合而成的复合数据类型。</p>
 <p><strong>3.1 GDS、GSM和GPL类</strong></p>
-<p>这些类中的每一个都由元数据标头（几乎从SOFT格式标头中逐字获取）和GEODataTable组成。GEODataTable有两个简单的部分，一个Columns部分，它描述Table部分的列标题。<strong><font style="color:#021EAA;">show</font></strong>每个类都有一个方法。例如，使用上面的gsm：</p>
+<p>这些类中的每一个都由元数据标头（几乎从SOFT格式标头中逐字获取）和GEODataTable组成。GEODataTable有两个简单的部分，一个Columns部分，它描述Table部分的列标题。<strong>show</strong>每个类都有一个方法。例如，使用上面的gsm：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>&gt; head(Meta(gsm))
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>$channel_count
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>[1] "1"
@@ -9642,7 +9656,7 @@
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2    VALUE
 <a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>3 ABS_CALL
 <a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>                                                                 Description
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>1                                                                           
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>1
 <a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2                         MAS 5.0 Statistical Algorithm (mean scaled to 500)
 <a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>3 MAS 5.0 Absent, Marginal, Present call  with Alpha1 = 0.05, Alpha2 = 0.065
 </code></pre></div>
@@ -9709,8 +9723,8 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>&gt; show(gse2553)
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>$GSE2553_series_matrix.txt.gz
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>ExpressionSet (storageMode: lockedEnvironment)
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>assayData: 12600 features, 181 samples 
-<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>  element names: exprs 
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>assayData: 12600 features, 181 samples
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>  element names: exprs
 <a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>protocolData: none
 <a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>phenoData
 <a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>  sampleNames: GSM48681 GSM48682 ... GSM48861 (181 total)
@@ -9721,8 +9735,8 @@
 <a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>  fvarLabels: ID PenAt ... Chimeric_Cluster_IDs (13 total)
 <a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>  fvarMetadata: Column Description labelDescription
 <a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>experimentData: use 'experimentData(object)'
-<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>  pubMedIds: 16230383 
-<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>Annotation: GPL1977 
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>  pubMedIds: 16230383
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>Annotation: GPL1977
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>&gt; show(pData(phenoData(gse2553[[1]]))[1:5,c(1,6,8)])
 <a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>                                                                 title
@@ -9810,7 +9824,7 @@
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>&gt; Columns(gsmlist[[1]])[1:5,]
 <a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>       Column                                                                Description
-<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>1      ID_REF                                                                           
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>1      ID_REF
 <a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>2       VALUE                         MAS 5.0 Statistical Algorithm (mean scaled to 500)
 <a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>3    ABS_CALL MAS 5.0 Absent, Marginal, Present call  with Alpha1 = 0.05, Alpha2 = 0.065
 <a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>NA       &lt;NA&gt;                                                                       &lt;NA&gt;
@@ -9822,7 +9836,7 @@
 <a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a># make the data matrix from the VALUE columns from each GSM
 <a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a># being careful to match the order of the probesets in the platform
 <a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a># with those in the GSMs
-<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>data.matrix &lt;- do.call('cbind',lapply(gsmlist,function(x) 
+<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>data.matrix &lt;- do.call('cbind',lapply(gsmlist,function(x)
 <a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>{tab &lt;- Table(x)
 <a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>mymatch &lt;- match(probesets,tab$ID_REF)
 <a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a>return(tab$VALUE[mymatch])
@@ -9848,13 +9862,13 @@
 <a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>eset2 &lt;- new('ExpressionSet',exprs=data.matrix,phenoData=pheno)
 <a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a>eset2
 </code></pre></div>
-<p><font style="color:#AB1942;">注意，我们要做的match是确保值和平台信息的顺序相同。最后，制作ExpressionSet对象。</font></p>
+<p>注意，我们要做的match是确保值和平台信息的顺序相同。最后，制作ExpressionSet对象。</p>
 <p><strong>5.从GEO获取原始数据</strong></p>
 <p>NCBI GEO接受（但并非总是需要）原始数据，例如.CEL文件，.CDF文件，图像等。有时，快速访问此类数据很有用。单个函数getGEOSuppFiles可以将GEO加入作为参数，并将下载与该加入相关的所有原始数据。默认情况下，该函数将在当前工作目录中创建一个目录，以存储所选GEO入藏的原始数据。结合使用简单的sapply语句或其他循环结构，getGEOSuppFiles可以以一种非常简单的方式快速轻松地获取原始数据，而无需了解GEO原始数据URL的细节。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>a &lt;- getGEOSuppFiles('GSM1137', fetch_files = FALSE)
 </code></pre></div>
 <hr />
-<p>上面内容来自官方文档的教程，加上我个人的理解，后续我们在<a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1385753371944239106&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong><font style="color:#0052FF;">GEO专辑</font></strong></a>实战中进行应用。</p>
+<p>上面内容来自官方文档的教程，加上我个人的理解，后续我们在<a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&amp;album_id=1385753371944239106&amp;__biz=MzA4NDAzODkzMA==#wechat_redirect"><strong>GEO专辑</strong></a>实战中进行应用。</p>
 <p>原文地址：</p>
 <p><a href="http://www.bioconductor.org/packages/release/bioc/vignettes/GEOquery/inst/doc/GEOquery.html"><u>http://www.bioconductor.org/packages/release/bioc/vignettes/GEOquery/inst/doc/GEOquery.html</u></a></p>
 <p><u></u></p>
@@ -9863,7 +9877,7 @@
 <p><u></u></p>
 <p><u></u></p>
 <blockquote>
-<p>更新: 2022-03-27 14:29:16<br />
+<p>更新: 2022-03-27 14:29:16
 原文: <a href="https://www.yuque.com/doublehelix/bioinfonotes/it6bra">https://www.yuque.com/doublehelix/bioinfonotes/it6bra</a></p>
 </blockquote>
 

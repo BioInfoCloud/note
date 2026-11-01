@@ -12586,133 +12586,133 @@
 <h2 id="_1"><strong>一.常见的统计函数</strong><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>**</p>
 <h2 id="1"><strong>1.数学函数</strong><a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<p>| 
-函数 | 
+<p>|
+函数 |
 作用 |
 | --- | --- |
-| 
-abs() | 
+|
+abs() |
 绝对值 |
-| 
-sqrt() | 
+|
+sqrt() |
 平方根 |
-| 
-ceiling(x) | 
+|
+ceiling(x) |
 不小于x的最小整数 |
-| 
-floor(x) | 
+|
+floor(x) |
 不大于x的最大整数 |
-| 
-round(x, digits=n) | 
+|
+round(x, digits=n) |
 将x舍入为指定位的小数 |
-| 
-signif(x, digits=n) | 
+|
+signif(x, digits=n) |
 将X舍入为指定的有效数字位数 |</p>
 <h2 id="2"><strong>2.统计函数</strong><a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<p>| 
-** | 
+<p>|
+** |
 ** |
 | --- | --- |
-| 
-mean(x) | 
+|
+mean(x) |
 平均值 |
-| 
-median(x) | 
+|
+median(x) |
 中位数 |
-| 
-sd(x) | 
+|
+sd(x) |
 标准差 |
-| 
-var(x) | 
+|
+var(x) |
 方差 |
-| 
-quantile(x, probs) | 
+|
+quantile(x, probs) |
 求分位数，x为待求分位数的数值型向量，probs是一个由[0，1]的概率值组成的数值型向量 |
-| 
-range(x) | 
+|
+range(x) |
 求值域 |
-| 
-sum(x) | 
+|
+sum(x) |
 求和 |
-| 
-min(x) | 
+|
+min(x) |
 求最小值 |
-| 
-max(x) | 
+|
+max(x) |
 求最大值 |
-| 
-scale(x, center=TRUE,scale=TRUE) | 
+|
+scale(x, center=TRUE,scale=TRUE) |
 以数据对象x按列进行中心化或标准化，center=TRUE表示数据中心化，scale=TRUE表示数据标准化 |
-| 
-diff(x, lag=n) | 
+|
+diff(x, lag=n) |
 滞后差分，lag用以指定滞后几项，默认为1 |
-| 
-difftime(time1,time2,units=c(“auto”,”secs”,”mins”,”hours”,”days”,”weeks”)) | 
+|
+difftime(time1,time2,units=c(“auto”,”secs”,”mins”,”hours”,”days”,”weeks”)) |
 计算时间间隔，并以星期，天，时，分，秒来表示 |</p>
 <h2 id="3"><strong>3.分布函数</strong><a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<p>| 
-** | 
+<p>|
+** |
 ** |
 | --- | --- |
-| 
-beta分布 | 
+|
+beta分布 |
 beta |
-| 
-二项分布 | 
+|
+二项分布 |
 binom |
-| 
-柯西分布 | 
+|
+柯西分布 |
 Cauchy |
-| 
-卡方分布 | 
+|
+卡方分布 |
 chisp |
-| 
-指数分布 | 
+|
+指数分布 |
 exp |
-| 
-F分布 | 
+|
+F分布 |
 f |
-| 
-gamma分布 | 
+|
+gamma分布 |
 gamma |
-| 
-几何分布 | 
+|
+几何分布 |
 geom |
-| 
-超几何分布 | 
+|
+超几何分布 |
 hyper |
-| 
-对数正态分布 | 
+|
+对数正态分布 |
 lnorm |
-| 
-logistics分布 | 
+|
+logistics分布 |
 logis |
-| 
-多项分布 | 
+|
+多项分布 |
 multinom |
-| 
-负二项分布 | 
+|
+负二项分布 |
 nbinom |
-| 
-正态分布 | 
+|
+正态分布 |
 norm |
-| 
-泊松分布 | 
+|
+泊松分布 |
 pois |
-| 
-Wilcoxon分布 | 
+|
+Wilcoxon分布 |
 signrank |
-| 
-t分布 | 
+|
+t分布 |
 t |
-| 
-均匀分布 | 
+|
+均匀分布 |
 unif |
-| 
-weibull分布 | 
+|
+weibull分布 |
 weibull |
-| 
-Wilcoxon秩和分布 | 
+|
+Wilcoxon秩和分布 |
 Wilcox
  |</p>
 <p>在R中，函数函数行如：[x][function]。其中x表示指分布的某一方面，function表示分布名称的缩写。
@@ -12787,7 +12787,13 @@ rbinom():该函数从给定样本产生给定概率的所需数量的随机值�
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nf">rbinom</span><span class="p">(</span><span class="m">100000</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">0.65</span><span class="p">)</span>
 </code></pre></div>
 接下来介绍负二项分布。
-负二项分布是统计学上一种离散概率分布。满足以下条件的称为负二项分布：实验包含一系列独立的实验， 每个实验都有成功、失败两种结果，成功的概率是恒定的，实验持续到r次不成功，r为正整数。Binomial分布和Negative Binomial分布，都是多次重复Bernoulli实验。Binomial关注的是，重复Bernoulli实验成功概率为p，条件为总共实验N次，随机变量为N次实验中成功实验次数k（k∈Z,k∈[0,N]），该随机变量的概率分布为Binomial分布。Negative Binomial关注的是，重复Bernoulli实验成功概率为p，条件为累计出现r次失败，随机变量为成功实验次数k（k∈Z,k∈[0,+∞)），该随机变量的概率分布为Negative Binomial分布。Binomial和Negative Binomial分布的随机变量都是成功实验次数，条件不同。从定义上来看，”负“可以理解为站在失败次数的角度看成功。</p>
+负二项分布是统计学上一种离散概率分布。
+满足以下条件的称为负二项分布：实验包含一系列独立的实验， 每个实验都有成功、失败两种结果，成功的概率是恒定的，实验持续到r次不成功，r为正整数。
+Binomial分布和Negative Binomial分布，都是多次重复Bernoulli实验。
+Binomial关注的是，重复Bernoulli实验成功概率为p，条件为总共实验N次，随机变量为N次实验中成功实验次数k（k∈Z,k∈[0,N]），该随机变量的概率分布为Binomial分布。
+Negative Binomial关注的是，重复Bernoulli实验成功概率为p，条件为累计出现r次失败，随机变量为成功实验次数k（k∈Z,k∈[0,+∞)），该随机变量的概率分布为Negative Binomial分布。
+Binomial和Negative Binomial分布的随机变量都是成功实验次数，条件不同。
+从定义上来看，”负“可以理解为站在失败次数的角度看成功。</p>
 <h3 id="4"><strong>(4) 泊松分布</strong><a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
 <p>泊松分布（Poisson distribution），台译卜瓦松分布（法语：loi de Poisson，英语：Poisson distribution，译名有泊松分布、普阿松分布、卜瓦松分布、布瓦松分布、布阿松分布、波以松分布、卜氏分配等），是一种统计与概率学里常见到的离散机率分布（discrete probability distribution）。泊松分布是以18～19 世纪的法国数学家西莫恩·德尼·泊松（Siméon-Denis Poisson）命名的，他在1838年时发表。这个分布在更早些时候由贝努里家族的一个人描述过。泊松分布的概率函数为：
 <img alt="" src="https://cdn.nlark.com/yuque/0/2021/png/1234840/1609671109085-2496eed2-84f6-4fcd-aabb-ef273dbc16a2.png#align=left&amp;display=inline&amp;height=51&amp;margin=%5Bobject%20Object%5D&amp;originHeight=51&amp;originWidth=290&amp;size=0&amp;status=done&amp;style=none&amp;width=290" />
@@ -12818,15 +12824,22 @@ rpois(n,lambda)：返回每组发生随机事件的次数
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">BioinfoNotes</span><span class="w"> </span><span class="o">@</span><span class="n">ns</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rpois</span><span class="p">(</span><span class="m">10000</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">BioinfoNotes</span><span class="w"> </span><span class="o">@</span><span class="nf">table</span><span class="p">(</span><span class="n">ns</span><span class="p">)</span>
 <a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="n">ns</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">   </span><span class="m">0</span><span class="w">    </span><span class="m">1</span><span class="w">    </span><span class="m">2</span><span class="w">    </span><span class="m">3</span><span class="w">    </span><span class="m">4</span><span class="w">    </span><span class="m">5</span><span class="w">    </span><span class="m">6</span><span class="w">    </span><span class="m">7</span><span class="w"> </span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">   </span><span class="m">0</span><span class="w">    </span><span class="m">1</span><span class="w">    </span><span class="m">2</span><span class="w">    </span><span class="m">3</span><span class="w">    </span><span class="m">4</span><span class="w">    </span><span class="m">5</span><span class="w">    </span><span class="m">6</span><span class="w">    </span><span class="m">7</span>
 <a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="m">3652</span><span class="w"> </span><span class="m">3757</span><span class="w"> </span><span class="m">1831</span><span class="w">  </span><span class="m">580</span><span class="w">  </span><span class="m">145</span><span class="w">   </span><span class="m">26</span><span class="w">    </span><span class="m">8</span><span class="w">    </span><span class="m">1</span>
 </code></pre></div></p>
 <p>模拟1万组，3652组没有发生洪水，与理论上36.78%不发生洪水很接近。此外均值和方差也与理论值 (λ=1)很接近。</p>
 <h3 id="5"><strong>(5) 正态分布</strong><a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
-<p>正态分布（Normal distribution），也称“常态分布”，又名高斯分布（Gaussian distribution），最早由棣莫弗（Abraham de Moivre）在求二项分布的渐近公式中得到。C.F.高斯在研究测量误差时从另一个角度导出了它。P.S.拉普拉斯和高斯研究了它的性质。是一个在数学、物理及工程等领域都非常重要的概率分布，在统计学的许多方面有着重大的影响力。正态曲线呈钟型，两头低，中间高，左右对称因其曲线呈钟形，因此人们又经常称之为钟形曲线。若随机变量X服从一个数学期望为μ、方差为σ<sup>2的正态分布，记为N(μ，σ</sup>2)。其概率密度函数为正态分布的期望值μ决定了其位置，其标准差σ决定了分布的幅度。当μ = 0,σ = 1时的正态分布是标准正态分布。
+<p>正态分布（Normal distribution），也称“常态分布”，又名高斯分布（Gaussian distribution），最早由棣莫弗（Abraham de Moivre）在求二项分布的渐近公式中得到。
+C.F.高斯在研究测量误差时从另一个角度导出了它。
+P.S.拉普拉斯和高斯研究了它的性质。
+是一个在数学、物理及工程等领域都非常重要的概率分布，在统计学的许多方面有着重大的影响力。
+正态曲线呈钟型，两头低，中间高，左右对称因其曲线呈钟形，因此人们又经常称之为钟形曲线。
+若随机变量X服从一个数学期望为μ、方差为σ<sup>2的正态分布，记为N(μ，σ</sup>2)。
+其概率密度函数为正态分布的期望值μ决定了其位置，其标准差σ决定了分布的幅度。
+当μ = 0,σ = 1时的正态分布是标准正态分布。
 若随机变量 _X _服从一个位置参数为 <em>μ</em>、尺度参数为_σ _的概率分布，且其概率密度函数为：
 <img alt="" src="https://cdn.nlark.com/yuque/0/2021/png/1234840/1609671109205-02de9a81-29ef-4532-9f54-9f86ef41ab82.png#align=left&amp;display=inline&amp;height=57&amp;margin=%5Bobject%20Object%5D&amp;originHeight=57&amp;originWidth=293&amp;size=0&amp;status=done&amp;style=none&amp;width=293" /></p>
-<p>则这个随机变量就称为正态随机变量，正态随机变量服从的分布就称为正态分布，记作 
+<p>则这个随机变量就称为正态随机变量，正态随机变量服从的分布就称为正态分布，记作
 <img alt="" src="https://cdn.nlark.com/yuque/0/2021/png/1234840/1609671109150-c5f828b0-0fa9-4bc7-b6fb-2949d52c4706.png#align=left&amp;display=inline&amp;height=29&amp;margin=%5Bobject%20Object%5D&amp;originHeight=29&amp;originWidth=130&amp;size=0&amp;status=done&amp;style=none&amp;width=130" />
 读作_X_服从 <em>N</em>(<em>μ,σ2</em>)，或_X_服从正态分布。
 当 μ=0,σ=1时，正态分布就成为标准正态分布。
@@ -12867,7 +12880,7 @@ b.两类错误
 c.差异是否有方向
 单尾检验:  原假设A&lt;=B,备择假设：A&gt;B;    原假设：A&gt;=B,备择假设：A&lt;B.
 双尾检验：原假设：A=B,备择假设：A~=B
-d.p值:  原假设成立的概率值。 
+d.p值:  原假设成立的概率值。
     P&lt;0.05:  原假设成立的可能性不足5%，此时拒绝原假设，接受备择假设。
     p&gt;=0.05: 原假设成立的可能性超过5%，我们没有充足的理由拒绝原价设，此时接受原假设。</p>
 <h3 id="3_2"><strong>(3).常用假设检验方法概述</strong><a class="headerlink" href="#3_2" title="Permanent link">&para;</a></h3>
@@ -12918,7 +12931,7 @@ d.p值:  原假设成立的概率值。
 <p>注意此种方法能够检验的样本大小必需在3和5000之间
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>#  Shapiro-Wilk(W检验)
 <a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>x &lt;- rnorm(4500)
-<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>shapiro.test(x) 
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>shapiro.test(x)
 <a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>x &lt;- rnorm(6000)
 <a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>shapiro.test(x)
 </code></pre></div></p>
@@ -12971,46 +12984,46 @@ t.test():调用格式：</p>
 <h2 id="4_2"><strong>4. 方差分析</strong><a class="headerlink" href="#4_2" title="Permanent link">&para;</a></h2>
 <h3 id="1_5">(1) 方差分析中的基本概念<a class="headerlink" href="#1_5" title="Permanent link">&para;</a></h3>
 <p>因素：对用户分组的依据，比如：药物A,药物B等不；</p>
-<p>| </p>
-<p>小鼠 | 
-药物A | 
+<p>|</p>
+<p>小鼠 |
+药物A |
 肿瘤重量(g) |
 | --- | --- | --- |
-| 
-M1 | 
-浓度1 | 
+|
+M1 |
+浓度1 |
 3.1 |
-| 
-M2 | 
-浓度1 | 
+|
+M2 |
+浓度1 |
 3.6 |
-| 
-M3 | 
-浓度1 | 
+|
+M3 |
+浓度1 |
 3.9 |
-| 
-M4 | 
-浓度2 | 
+|
+M4 |
+浓度2 |
 2.4 |
-| 
-M5 | 
-浓度2 | 
+|
+M5 |
+浓度2 |
 2.8 |
-| 
-M6 | 
-浓度2 | 
+|
+M6 |
+浓度2 |
 2.6 |
-| 
-M7 | 
-浓度3 | 
+|
+M7 |
+浓度3 |
 1.6 |
-| 
-M8 | 
-浓度3 | 
+|
+M8 |
+浓度3 |
 1.4 |
-| 
-M9 | 
-浓度3 | 
+|
+M9 |
+浓度3 |
 0.9 |</p>
 <p>水平：因素的取值，比如：每种药物有不同浓度。
 组内方差：同一水平下，观测值的方差。
@@ -13027,7 +13040,7 @@ M9 |
 <li>如果各组之间均值差别明显，那么组间方差就会很大，就会得到一个很小的P值。P值很小，代表各组的均值有明显差别。</li>
 </ul>
 <h3 id="2_5"><strong>(2) 单因素方差分析</strong><a class="headerlink" href="#2_5" title="Permanent link">&para;</a></h3>
-<p>aov()函数用法：aov(y~x,data) 
+<p>aov()函数用法：aov(y~x,data)
 <div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>aov(formula,data=NULL,projections=FALSE,qr=TRUE,contrasts=NULL,...)
 </code></pre></div></p>
 <p>其中的参数formula表示方差分析的公式，在单因素方差分析中即为X~A；data表示做方差分析的数据框；projections为逻辑值，表示是否返回预测结果；qr同样是逻辑值，表示是否返回QR分解结果，默认为TRUE；contrasts是公式中的一些因子的对比列表。通过summary()可列出分析表的详细结果。
@@ -13037,7 +13050,7 @@ aov()函数举例：multcomp包cholesterol数据
 </code></pre></div></p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2021/png/1234840/1609671109294-43ca1dab-c4ed-4f4f-a702-3e8acec5b0a7.png#align=left&amp;display=inline&amp;height=324&amp;margin=%5Bobject%20Object%5D&amp;originHeight=324&amp;originWidth=801&amp;size=0&amp;status=done&amp;style=none&amp;width=801" /></p>
 <h3 id="3_4"><strong>(3).多因素方差分析</strong><a class="headerlink" href="#3_4" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>y~A+B+A:B 
+<div class="highlight"><pre><span></span><code>y~A+B+A:B
 aov()函数：A不做调整，B根据A做调整，A:B根据A和B做调整。
 </code></pre></div>
 <p>```r</p>
@@ -13082,7 +13095,15 @@ summary(fitt)
 <a id="__codelineno-32-12" name="__codelineno-32-12" href="#__codelineno-32-12"></a><span class="nf">t.test</span><span class="p">(</span><span class="n">after</span><span class="p">,</span><span class="n">before</span><span class="p">,</span><span class="w"> </span><span class="n">paired</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="n">alternative</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"greater"</span><span class="p">)</span>
 </code></pre></div></p>
 <h3 id="3f"><strong>(3).两总体方差比较：F检验</strong><a class="headerlink" href="#3f" title="Permanent link">&para;</a></h3>
-<p>F检验（F-test），最常用的别名叫做联合假设检验（英语：joint hypotheses test），此外也称方差比率检验、方差齐性检验。它是一种在零假设（null hypothesis, H0）之下，统计值服从F-分布的检验。其通常是用来分析用了超过一个参数的统计模型，以判断该模型中的全部或一部分参数是否适合用来估计母体。主要通过比较两组数据的方差，以确定他们的密度是否有显著性差异。至于两组数据之间是否存在系统误差，则在进行F检验并确定它们的密度没有显著性差异之后，再进行T检验。T检验用来检测数据的准确度(系统误差)，F检验用来检测数据的精密度(偶然误差)。在定量分析过程中，常遇到两种情况：一种是样本测量的平均值与真值不一致；另一种是两组测量的平均值不一致。上述不一致是由于定量分析中的系统误差和偶然误差引起的，因此必须对两组分析结果的准确度或精密度是否存在显著性差异做出判断，两组数据的显著性检验顺序是先F检验后T检验。
+<p>F检验（F-test），最常用的别名叫做联合假设检验（英语：joint hypotheses test），此外也称方差比率检验、方差齐性检验。
+它是一种在零假设（null hypothesis, H0）之下，统计值服从F-分布的检验。
+其通常是用来分析用了超过一个参数的统计模型，以判断该模型中的全部或一部分参数是否适合用来估计母体。
+主要通过比较两组数据的方差，以确定他们的密度是否有显著性差异。
+至于两组数据之间是否存在系统误差，则在进行F检验并确定它们的密度没有显著性差异之后，再进行T检验。
+T检验用来检测数据的准确度(系统误差)，F检验用来检测数据的精密度(偶然误差)。
+在定量分析过程中，常遇到两种情况：一种是样本测量的平均值与真值不一致；
+另一种是两组测量的平均值不一致。
+上述不一致是由于定量分析中的系统误差和偶然误差引起的，因此必须对两组分析结果的准确度或精密度是否存在显著性差异做出判断，两组数据的显著性检验顺序是先F检验后T检验。
 T检验是检查两组均值的差异，而F检验是检查多组均值之间的差异。
 通常的F检验例子包括：</p>
 <ul>
@@ -13090,7 +13111,7 @@ T检验是检查两组均值的差异，而F检验是检查多组均值之间的
 <li>假设一个回归模型很好地符合其数据集要求，检验多元线性回归模型中被解释变量与解释变量之间线性关系在总体上是否显著。</li>
 </ul>
 <p>在R中，利用函数var.test()实现:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>var.test(x, y, ratio = 1, alternative = c(“two.sided”,“less”,“greater”), 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>var.test(x, y, ratio = 1, alternative = c(“two.sided”,“less”,“greater”),
 <a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>        conf.level = 0.95,…)
 </code></pre></div></p>
 <p>x,y为样本数据；ratio为原假设的方差比值，进行两样本比较时可以使用默认值1；alternative设置检验类型为双尾或是单尾；conf.level为置信水平。
@@ -13184,12 +13205,13 @@ Intercept就是截距项，Multiple R-squared是拟合优度，Adjusted R-square
 <div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="nf">lm</span><span class="p">(</span><span class="n">mpg</span><span class="o">~</span><span class="n">wt</span><span class="o">+</span><span class="n">drat</span><span class="o">+</span><span class="n">hp</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">mtcars</span><span class="p">)</span>
 </code></pre></div></p>
 <h3 id="1_10"><strong>(1) 多重共线性</strong><a class="headerlink" href="#1_10" title="Permanent link">&para;</a></h3>
-<p>多重共线性是指线性回归模型中的解释变量之间由于存在精确相关关系或高度相关关系而使模型估计失真或难以估计准确。对线性回归模型<img alt="" src="https://cdn.nlark.com/yuque/0/2021/png/1234840/1609671109260-3c7e27cc-f4f1-41b2-8d2d-bed73201a12d.png#align=left&amp;display=inline&amp;height=25&amp;margin=%5Bobject%20Object%5D&amp;originHeight=25&amp;originWidth=283&amp;size=0&amp;status=done&amp;style=none&amp;width=283" />
+<p>多重共线性是指线性回归模型中的解释变量之间由于存在精确相关关系或高度相关关系而使模型估计失真或难以估计准确。
+对线性回归模型<img alt="" src="https://cdn.nlark.com/yuque/0/2021/png/1234840/1609671109260-3c7e27cc-f4f1-41b2-8d2d-bed73201a12d.png#align=left&amp;display=inline&amp;height=25&amp;margin=%5Bobject%20Object%5D&amp;originHeight=25&amp;originWidth=283&amp;size=0&amp;status=done&amp;style=none&amp;width=283" />
 基本假设之一是自变量，_ X1,X2,...,Xp_之间不存在严格的线性关系。如不然，则会对回归参数估计带来严重影响。
 如何理解多重共线性？
 肿瘤组织中CD8+T 细胞的数量Y与肿瘤组织中P53，Ptpn14，PTEN基因的表达量之间有关系。只考虑单因素(某个基因），也就是一元回归。可以简单写成：Y = A<em>P53 + ε ; Y = B</em>Ptpn14 + ε；Y = C<em>PTEN + ε
 如果把3个基因都带入，多元线性回归就写成如下：
-Y = a</em>P53 + b<em>Ptpn14 + c</em>EGFR 
+Y = a</em>P53 + b<em>Ptpn14 + c</em>EGFR
 如果这三个基因直接存在某种线性关系，那么abc这三个系数就很难确定。这也就是多个自变量之间存在强相关，使得某些变量的系数解释起来困难。我们看一个案例：
 <div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="c1">#一元</span>
 <a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="n">lm2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">mpg</span><span class="o">~</span><span class="n">drat</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">mtcars</span><span class="p">)</span>
@@ -13221,6 +13243,8 @@ Y = a</em>P53 + b<em>Ptpn14 + c</em>EGFR
 <p>前向回归：每次添加一个预测变量到模型中，一直到模型不再改进为止。
  后向回归：最初所有的变量全放入模型中，然后每次删除一个变量，一直到会降低模型的质量为止。
  逐步回归：结合了前向回归和后向回归，每次进入一个变量，然后对模型进行评价，对模型没有贡献的变量会被删除，直到获得最有模型为止。</p>
+</li>
+</ul>
 <h3 id="3_5">(3) 逐步回归<a class="headerlink" href="#3_5" title="Permanent link">&para;</a></h3>
 <p>逐步回归的方法用MASS包中的stepAIC()函数。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="nf">stepAIC</span><span class="p">(</span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="n">scope</span><span class="p">,</span><span class="w"> </span><span class="n">scale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span>
@@ -13251,10 +13275,17 @@ Steps: 指定算法终止的最大迭代次数，默认值为1000;
 K:惩罚计算中自由度的倍数，默认值为2。
 swiss数据集共有47行观测值，每行有7个变量。
 模拟练习的话，阅读文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264150&amp;idx=1&amp;sn=ba1346620ca86957ec8091e92accc9d2&amp;chksm=841ef0ebb36979fdea6e98cdc03671514f9837230fccc2e99d3651f98621de86e75ec0da8798&amp;scene=21#wechat_redirect">第4章:回归分析(3)——变量的选择</a></p>
-</li>
-</ul>
 <h2 id="3_6">3.非线性回归<a class="headerlink" href="#3_6" title="Permanent link">&para;</a></h2>
-<p>在处理许多实际问题时，变量间的关系并非直线关系,例如细菌生长曲线、药物动力学、毒物剂量与动物死亡率的关系等等。此时，若采用线性回归分析将丢失大量信息,甚至得出错误结论。因此，就需要我们采用非线性回归模型来处理此类问题。非线性回归是回归函数关于未知回归系数具有非线性结构的回归。简单来说就是自变量和因变量之间的关系不能用线性方程表示。常用的处理方法有回归函数的线性迭代法、分段回归法、迭代最小二乘法等。非线性回归分析的主要内容与线性回归分析相似。非线性回归有多种形式，包括双曲线、二次曲线、三次曲线、幂函数曲线、指数函数曲线、S形曲线、对数曲线、指数曲线等。非线性回归分析的关键是确定函数的具体形式。通常需要根据科学研究或生产实际中的具体问题或试验数据的特征做出合适的选择。
+<p>在处理许多实际问题时，变量间的关系并非直线关系,例如细菌生长曲线、药物动力学、毒物剂量与动物死亡率的关系等等。
+此时，若采用线性回归分析将丢失大量信息,甚至得出错误结论。
+因此，就需要我们采用非线性回归模型来处理此类问题。
+非线性回归是回归函数关于未知回归系数具有非线性结构的回归。
+简单来说就是自变量和因变量之间的关系不能用线性方程表示。
+常用的处理方法有回归函数的线性迭代法、分段回归法、迭代最小二乘法等。
+非线性回归分析的主要内容与线性回归分析相似。
+非线性回归有多种形式，包括双曲线、二次曲线、三次曲线、幂函数曲线、指数函数曲线、S形曲线、对数曲线、指数曲线等。
+非线性回归分析的关键是确定函数的具体形式。
+通常需要根据科学研究或生产实际中的具体问题或试验数据的特征做出合适的选择。
 自变量和因变量之间的关系不能用线性方程表示，比如指数，对数关系都属于非线性回归。</p>
 <ul>
 <li>y=x^3</li>
@@ -13262,29 +13293,40 @@ swiss数据集共有47行观测值，每行有7个变量。
 <li>y=x+x<sup>2+x</sup>3</li>
 </ul>
 <h3 id="1_11">(1) 常见的非线性回归<a class="headerlink" href="#1_11" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>多项式回归：回归函数是回归变量多项式的回归。多项式回归模型是线性回归模型的一种，此时回归函数关于回归系数是线性的。由于任一函数都可以用多项式逼近，因此多项式回归有着广泛应用。比如物理学中匀加速直线运动中，路程s与时间t的关系 ：S=V0t+(at^2)/2    
+<div class="highlight"><pre><span></span><code>多项式回归：回归函数是回归变量多项式的回归。多项式回归模型是线性回归模型的一种，此时回归函数关于回归系数是线性的。由于任一函数都可以用多项式逼近，因此多项式回归有着广泛应用。比如物理学中匀加速直线运动中，路程s与时间t的关系 ：S=V0t+(at^2)/2
 指数回归:     如细菌的增殖曲线，细菌数量n与时间t之间的关系简单点就是n=at。
 Logistic回归：数据挖掘里面的一种最基本的分类算法【后面介绍】。
 </code></pre></div>
 <h3 id="2_9">(2).非线性回归求解<a class="headerlink" href="#2_9" title="Permanent link">&para;</a></h3>
 <p>其思想是对数据进行各种转化，将非线性关系转换成线性关系，然后用线性回归求解。比如，n =  xt ，我们可以把两边取对数，ln(n) = t*ln(x), 这样我们就知道ln(n)和t之间是线性关系。除了取对数，还可以平方、开根号、三次方等，最终的目的还是转换成线性模型。</p>
 <h2 id="4logistic">4.Logistic回归<a class="headerlink" href="#4logistic" title="Permanent link">&para;</a></h2>
-<p>logistic回归又称logistic回归分析，是一种广义的线性回归分析模型，常用于数据挖掘，疾病自动诊断，经济预测等领域。例如，探讨引发疾病的危险因素，并根据危险因素预测疾病发生的概率等。以胃癌病情分析为例，选择两组人群，一组是胃癌组，一组是非胃癌组，两组人群必定具有不同的体征与生活方式等。因此因变量就为是否胃癌，值为“是”或“否”，自变量就可以包括很多了，如年龄、性别、饮食习惯、幽门螺杆菌感染等。自变量既可以是连续的，也可以是分类的。然后通过logistic回归分析，可以得到自变量的权重，从而可以大致了解到底哪些因素是胃癌的危险因素。同时根据该权值可以根据危险因素预测一个人患癌症的可能性。应用场景：二因素变量的预测，如某药物治疗某种疾病是否有效/缓解</p>
+<p>logistic回归又称logistic回归分析，是一种广义的线性回归分析模型，常用于数据挖掘，疾病自动诊断，经济预测等领域。
+例如，探讨引发疾病的危险因素，并根据危险因素预测疾病发生的概率等。
+以胃癌病情分析为例，选择两组人群，一组是胃癌组，一组是非胃癌组，两组人群必定具有不同的体征与生活方式等。
+因此因变量就为是否胃癌，值为“是”或“否”，自变量就可以包括很多了，如年龄、性别、饮食习惯、幽门螺杆菌感染等。
+自变量既可以是连续的，也可以是分类的。
+然后通过logistic回归分析，可以得到自变量的权重，从而可以大致了解到底哪些因素是胃癌的危险因素。
+同时根据该权值可以根据危险因素预测一个人患癌症的可能性。
+应用场景：二因素变量的预测，如某药物治疗某种疾病是否有效/缓解</p>
 <h3 id="1_12">(1).逻辑回归与普通回归的区别：<a class="headerlink" href="#1_12" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code> 普通回归：因变量是连续属性的值，
  逻辑回归：因变量要么是0，要么是1。
 </code></pre></div>
 <h3 id="2_10">(2) 原理<a class="headerlink" href="#2_10" title="Permanent link">&para;</a></h3>
-<p>我们通过鸢尾花这个数据集iris来讲解，物种有三种，setosa，versicolor和virginica ，我们只要后面这2种。我们是否可以根据我们是否可以根据萼片和花瓣的长宽来判断是versicolor还是virginica，virginica 的替换为1,versicolor为0，逻辑回归分析首先根据4个参数（萼片和花瓣的长宽）进行分组，并且保证每一个组的4个参数值接近，相差不大。接下来就是对因变量进行变换，也称逻辑变换，假如某一组中有10个数据，3个versicolor，7个virginica，所占比例分别是0.3和0.7，,逻辑转换值是ln(0.7/0.3)，经过逻辑转换后，因变量就不在是0或者1，而是连续型变量，如果数据分为20组，那么就最后就有20行的数据。4组参数的值取该组的均值。然后就可以进行回归分析了。
+<p>我们通过鸢尾花这个数据集iris来讲解，物种有三种，setosa，versicolor和virginica ，我们只要后面这2种。
+我们是否可以根据我们是否可以根据萼片和花瓣的长宽来判断是versicolor还是virginica，virginica 的替换为1,versicolor为0，逻辑回归分析首先根据4个参数（萼片和花瓣的长宽）进行分组，并且保证每一个组的4个参数值接近，相差不大。
+接下来就是对因变量进行变换，也称逻辑变换，假如某一组中有10个数据，3个versicolor，7个virginica，所占比例分别是0.3和0.7，,逻辑转换值是ln(0.7/0.3)，经过逻辑转换后，因变量就不在是0或者1，而是连续型变量，如果数据分为20组，那么就最后就有20行的数据。
+4组参数的值取该组的均值。
+然后就可以进行回归分析了。
 <img alt="image.png" src="https://cdn.nlark.com/yuque/0/2021/png/1234840/1609746303273-c8f2bece-ac25-45d8-8e5d-2e8c7718372d.png#align=left&amp;display=inline&amp;height=134&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=267&amp;originWidth=948&amp;size=40683&amp;status=done&amp;style=none&amp;width=474" />
 ln(p(virginica)/(1-p(virginica)))=a0 + a1<em>Sepal.Length + a2</em>Sepal.Width + a3<em>Petal.Length +a4</em>Petal.Width</p>
 <h3 id="2r">(2).R语言实现<a class="headerlink" href="#2r" title="Permanent link">&para;</a></h3>
 <p>R语言中用于实现logistic回归的函数是glm()，其基本书写格式为:
-<code>r
-glm(formula, family = gaussian, data, weights, subset,
-    na.action, start = NULL, etastart, mustart, offset,
-    control = list(...), model = TRUE, method = "glm.fit",
-    x = FALSE, y = TRUE, singular.ok = TRUE, contrasts = NULL, ...)</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="nf">glm</span><span class="p">(</span><span class="n">formula</span><span class="p">,</span><span class="w"> </span><span class="n">family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gaussian</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">weights</span><span class="p">,</span><span class="w"> </span><span class="n">subset</span><span class="p">,</span>
+<a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a><span class="w">    </span><span class="n">na.action</span><span class="p">,</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">etastart</span><span class="p">,</span><span class="w"> </span><span class="n">mustart</span><span class="p">,</span><span class="w"> </span><span class="n">offset</span><span class="p">,</span>
+<a id="__codelineno-51-3" name="__codelineno-51-3" href="#__codelineno-51-3"></a><span class="w">    </span><span class="n">control</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="kc">...</span><span class="p">),</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"glm.fit"</span><span class="p">,</span>
+<a id="__codelineno-51-4" name="__codelineno-51-4" href="#__codelineno-51-4"></a><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">singular.ok</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">contrasts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NULL</span><span class="p">,</span><span class="w"> </span><span class="kc">...</span><span class="p">)</span>
+</code></pre></div>
 参数介绍:
 Formula:指定用于拟合的模型公式，类似于Im中的用法:
 Family: 指定描述干扰项的概率分 布和模型的连接函数， 默认值为gaussian, 若需进行logistic同归，则需设置为binomial(link = "logit");
@@ -13303,13 +13345,18 @@ X:逻辑值，指定是否返回“横型矩阵”，默认值为FALSE:
 Y:逻辑值，制度是否能够返回响应变量，默认值为TRUE;
 Contrasts:模型中因子对照的列表。
   下面利用iris 数据集进行操作演练，由于iris数据集中的分类变量Specics中有三种元素:setosa、versicolor 和virginica，即鸢尾花的有三个不同的种类，在建模之前，先对数据集进行处理，将数据集中Species属于setosa类的数据剔除，然后利用剩余的数据进行建模分析，具体操作如下:
-<code>iris&lt;-iris[51:150,]
-head(iris)
-iris$Species&lt;-ifelse(iris$Species=="virginica",1,0)
-log1&lt;-glm(Species~.,family=binomial(link='logit'),data=iris)
-summary(log1)</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>iris&lt;-iris[51:150,]
+<a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a>head(iris)
+<a id="__codelineno-52-3" name="__codelineno-52-3" href="#__codelineno-52-3"></a>iris$Species&lt;-ifelse(iris$Species=="virginica",1,0)
+<a id="__codelineno-52-4" name="__codelineno-52-4" href="#__codelineno-52-4"></a>log1&lt;-glm(Species~.,family=binomial(link='logit'),data=iris)
+<a id="__codelineno-52-5" name="__codelineno-52-5" href="#__codelineno-52-5"></a>summary(log1)
+</code></pre></div>
 <img alt="image.png" src="https://cdn.nlark.com/yuque/0/2021/png/1234840/1609749597865-6466be19-2582-4037-98df-0001caf89380.png#align=left&amp;display=inline&amp;height=398&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=795&amp;originWidth=1064&amp;size=106583&amp;status=done&amp;style=none&amp;width=532" /></p>
-<p>上述代码表示:选择iris数据集中第51行到150行的数据，将该数据集中变量Species列中记录为virginica 的替换为1,否则替换为0，然后利用清洗好的数据进行logistic回归；模型的输出结果显示:解释变量Sepal.Length和Sepal.Width没能通过显著性水平为0.05的检验。因此，我们可以通过逐步回归分析后选择合适的变量。再回过来进行重新建立模型。step进行逐步回归，阅读文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264157&amp;idx=1&amp;sn=c3bdeeada958392b1b605a4da348c3a6&amp;chksm=841ef0e0b36979f6874a0b51e29a33a24ff9ecb2c68aaaff11aa382241c2650502f4e48cf843&amp;scene=21#wechat_redirect">第4章:回归分析(4)——logistic回归</a>。</p>
+<p>上述代码表示:选择iris数据集中第51行到150行的数据，将该数据集中变量Species列中记录为virginica 的替换为1,否则替换为0，然后利用清洗好的数据进行logistic回归；
+模型的输出结果显示:解释变量Sepal.Length和Sepal.Width没能通过显著性水平为0.05的检验。
+因此，我们可以通过逐步回归分析后选择合适的变量。
+再回过来进行重新建立模型。
+step进行逐步回归，阅读文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264157&amp;idx=1&amp;sn=c3bdeeada958392b1b605a4da348c3a6&amp;chksm=841ef0e0b36979f6874a0b51e29a33a24ff9ecb2c68aaaff11aa382241c2650502f4e48cf843&amp;scene=21#wechat_redirect">第4章:回归分析(4)——logistic回归</a>。</p>
 <h2 id="5poisson">5.Poisson回归分析<a class="headerlink" href="#5poisson" title="Permanent link">&para;</a></h2>
 <h3 id="1_13">(1) 用途<a class="headerlink" href="#1_13" title="Permanent link">&para;</a></h3>
 <p>稀有事件的发生次数，常服从Poisson分布。如某病患者术后并发症发生次数、某病患者达到临床缓解所需的治疗次数、某病患者在一年内住院次数等，这些都是通过计数得到的资料，而且发病率低，这类事件的发生常服从Poisson分布。分析这类事件的影响因素，需要用到Poisson回归。Poisson回归主要用于单位时间、单位面积、单位空间内某事件的发生数的影响因素分析。</p>
@@ -13336,11 +13383,16 @@ summary(log1)</code>
 <a id="__codelineno-53-17" name="__codelineno-53-17" href="#__codelineno-53-17"></a><span class="nf">write.csv</span><span class="p">(</span><span class="nf">idr.display</span><span class="p">(</span><span class="n">fit</span><span class="p">)</span><span class="o">$</span><span class="n">table</span><span class="p">,</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"poisson.csv"</span><span class="p">)</span>
 </code></pre></div></p>
 <h3 id="4_3">(4) 过度离散的判断即处理<a class="headerlink" href="#4_3" title="Permanent link">&para;</a></h3>
-<p>qcc包提供了对poisson回归模型过度离散的检验方法。显著性检验的p值很小，表明存在过度离散，处理qcc包，epiDisplay包里面的函数poisgof()对模型进行拟合优度检验。拟合优度检验的p值很小，表明模型拟合得较差，poisson回归的假设条件很可能不满足，即存在过度离散等问题。解决办法：一种是实验拟合poisson回归，另一种是指定误差项服从<a href="https://www.zhihu.com/question/24253978">负二项分布</a>。，使用负二项回归。这2种模型的结果的介绍与poisson回归类似，建立你poisson回归模型只需要将glm()函数的Family设置为quasipoisson。
+<p>qcc包提供了对poisson回归模型过度离散的检验方法。
+显著性检验的p值很小，表明存在过度离散，处理qcc包，epiDisplay包里面的函数poisgof()对模型进行拟合优度检验。
+拟合优度检验的p值很小，表明模型拟合得较差，poisson回归的假设条件很可能不满足，即存在过度离散等问题。
+解决办法：一种是实验拟合poisson回归，另一种是指定误差项服从<a href="https://www.zhihu.com/question/24253978">负二项分布</a>。
+，使用负二项回归。
+这2种模型的结果的介绍与poisson回归类似，建立你poisson回归模型只需要将glm()函数的Family设置为quasipoisson。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">qcc</span><span class="p">)</span>
 <a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a><span class="nf">qcc.overdispersion.test</span><span class="p">(</span><span class="n">breslow</span><span class="o">$</span><span class="n">Ysum</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"poisson"</span><span class="p">)</span>
 <a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a><span class="nf">poisgof</span><span class="p">(</span><span class="n">fit</span><span class="p">)</span>
-<a id="__codelineno-54-4" name="__codelineno-54-4" href="#__codelineno-54-4"></a><span class="n">fit.od</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">glm</span><span class="p">(</span><span class="n">Ysum</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">Base</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Age</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Trt</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-54-4" name="__codelineno-54-4" href="#__codelineno-54-4"></a><span class="n">fit.od</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">glm</span><span class="p">(</span><span class="n">Ysum</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">Base</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Age</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Trt</span><span class="p">,</span>
 <a id="__codelineno-54-5" name="__codelineno-54-5" href="#__codelineno-54-5"></a><span class="w">              </span><span class="n">family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">quasipoisson</span><span class="p">,</span>
 <a id="__codelineno-54-6" name="__codelineno-54-6" href="#__codelineno-54-6"></a><span class="w">              </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">breslow</span><span class="p">)</span>
 <a id="__codelineno-54-7" name="__codelineno-54-7" href="#__codelineno-54-7"></a><span class="nf">summary</span><span class="p">(</span><span class="n">fit.od</span><span class="p">)</span>
@@ -13368,8 +13420,8 @@ summary(log1)</code>
 <a id="__codelineno-55-12" name="__codelineno-55-12" href="#__codelineno-55-12"></a><span class="n">ovarian</span><span class="o">$</span><span class="n">ecog.ps</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">ovarian</span><span class="o">$</span><span class="n">ecog.ps</span><span class="p">,</span>
 <a id="__codelineno-55-13" name="__codelineno-55-13" href="#__codelineno-55-13"></a><span class="w">                          </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"1"</span><span class="p">,</span><span class="w"> </span><span class="s">"2"</span><span class="p">),</span>
 <a id="__codelineno-55-14" name="__codelineno-55-14" href="#__codelineno-55-14"></a><span class="w">                          </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"good"</span><span class="p">,</span><span class="w"> </span><span class="s">"bad"</span><span class="p">))</span>
-<a id="__codelineno-55-15" name="__codelineno-55-15" href="#__codelineno-55-15"></a><span class="nf">hist</span><span class="p">(</span><span class="n">ovarian</span><span class="o">$</span><span class="n">age</span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-55-16" name="__codelineno-55-16" href="#__codelineno-55-16"></a><span class="n">ovarian</span><span class="o">$</span><span class="n">agegr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">cut</span><span class="p">(</span><span class="n">ovarian</span><span class="o">$</span><span class="n">age</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-55-15" name="__codelineno-55-15" href="#__codelineno-55-15"></a><span class="nf">hist</span><span class="p">(</span><span class="n">ovarian</span><span class="o">$</span><span class="n">age</span><span class="p">)</span>
+<a id="__codelineno-55-16" name="__codelineno-55-16" href="#__codelineno-55-16"></a><span class="n">ovarian</span><span class="o">$</span><span class="n">agegr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">cut</span><span class="p">(</span><span class="n">ovarian</span><span class="o">$</span><span class="n">age</span><span class="p">,</span>
 <a id="__codelineno-55-17" name="__codelineno-55-17" href="#__codelineno-55-17"></a><span class="w">                     </span><span class="n">breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">50</span><span class="p">,</span><span class="w"> </span><span class="m">75</span><span class="p">),</span>
 <a id="__codelineno-55-18" name="__codelineno-55-18" href="#__codelineno-55-18"></a><span class="w">                     </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"&lt;=50"</span><span class="p">,</span><span class="w"> </span><span class="s">"&gt;50"</span><span class="p">))</span>
 <a id="__codelineno-55-19" name="__codelineno-55-19" href="#__codelineno-55-19"></a><span class="nf">table</span><span class="p">(</span><span class="n">ovarian</span><span class="o">$</span><span class="n">agegr</span><span class="p">)</span>
@@ -13390,9 +13442,9 @@ summary(log1)</code>
 <a id="__codelineno-55-34" name="__codelineno-55-34" href="#__codelineno-55-34"></a><span class="n">surv.treat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">survfit</span><span class="p">(</span><span class="n">surv.obj</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">rx</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ovarian</span><span class="p">)</span>
 <a id="__codelineno-55-35" name="__codelineno-55-35" href="#__codelineno-55-35"></a><span class="nf">summary</span><span class="p">(</span><span class="n">surv.treat</span><span class="p">)</span>
 <a id="__codelineno-55-36" name="__codelineno-55-36" href="#__codelineno-55-36"></a>
-<a id="__codelineno-55-37" name="__codelineno-55-37" href="#__codelineno-55-37"></a><span class="nf">plot</span><span class="p">(</span><span class="n">surv.treat</span><span class="p">,</span><span class="w"> </span><span class="n">mark.time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">T</span><span class="p">,</span><span class="w"> </span><span class="n">conf.int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-55-37" name="__codelineno-55-37" href="#__codelineno-55-37"></a><span class="nf">plot</span><span class="p">(</span><span class="n">surv.treat</span><span class="p">,</span><span class="w"> </span><span class="n">mark.time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">T</span><span class="p">,</span><span class="w"> </span><span class="n">conf.int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span>
 <a id="__codelineno-55-38" name="__codelineno-55-38" href="#__codelineno-55-38"></a><span class="w">     </span><span class="n">lty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"blue"</span><span class="p">,</span><span class="w"> </span><span class="s">"red"</span><span class="p">))</span>
-<a id="__codelineno-55-39" name="__codelineno-55-39" href="#__codelineno-55-39"></a><span class="nf">legend</span><span class="p">(</span><span class="m">60</span><span class="p">,</span><span class="w"> </span><span class="n">.</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">legend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"A"</span><span class="p">,</span><span class="w"> </span><span class="s">"B"</span><span class="p">),</span><span class="w"> </span>
+<a id="__codelineno-55-39" name="__codelineno-55-39" href="#__codelineno-55-39"></a><span class="nf">legend</span><span class="p">(</span><span class="m">60</span><span class="p">,</span><span class="w"> </span><span class="n">.</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">legend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"A"</span><span class="p">,</span><span class="w"> </span><span class="s">"B"</span><span class="p">),</span>
 <a id="__codelineno-55-40" name="__codelineno-55-40" href="#__codelineno-55-40"></a><span class="w">       </span><span class="n">lty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"blue"</span><span class="p">,</span><span class="w"> </span><span class="s">"red"</span><span class="p">))</span>
 <a id="__codelineno-55-41" name="__codelineno-55-41" href="#__codelineno-55-41"></a>
 <a id="__codelineno-55-42" name="__codelineno-55-42" href="#__codelineno-55-42"></a><span class="nf">library</span><span class="p">(</span><span class="n">survminer</span><span class="p">)</span>
@@ -13402,9 +13454,17 @@ summary(log1)</code>
 </code></pre></div></p>
 <h2 id="2cox">2.Cox回归<a class="headerlink" href="#2cox" title="Permanent link">&para;</a></h2>
 <h3 id="1_15">(1).概述<a class="headerlink" href="#1_15" title="Permanent link">&para;</a></h3>
-<p>COX回归模型，又称“比例风险回归模型(proportional hazards model，简称Cox模型)”，是由英国统计学家D.R.Cox(1972)年提出的一种半参数回归模型。该模型以生存结局和生存时间为因变量，可同时分析众多因素对生存期的影响，能分析带有截尾生存时间的资料，且不要求估计资料的生存分布类型。由于上述优良性质，该模型自问世以来，在医学随访研究中得到广泛的应用，是迄今生存分析中应用最多的多因素分析方法。从分析的因素上看，有单因素分析和多因素分析。正如连续资料的单因素分析常用t检验、方差分析，对应的多因素分析是多重线性回归，分类资料的单因素分析方法卡方分析，对应的多因素分析有logistic回归，生存分析的常用单因素（或少数因素）的分析有Life Tables法、<strong>Kaplan-Meier法</strong>，对应的多因素模型则常用Cox回归模型（Cox风险比例模型）。从采取的分析方法上看，生存分析有非参数法（如Wilcoxon法、Log-rank法）、参数法（如Weibull回归、lognormal回归等）和半参数分析（Cox回归）。Cox回归要求满足比例风险假定(proportional-hazards assumption)的前提条件。所谓比例风险假定，就是假定风险比(HR，Hazard Ratio)不随时间t变化而变化。在进行生存分析前，你最好对以下的一些概念及其意义有所了解：起始事件、失效事件(Failure Event)/终点事件(Endpoint Event)、生存时间(Survival Time)/失效时间(Failure Time)、中位生存时间(Median Survival Time)、平均生存时间(Mean Survival Time)、删失值/截尾值(censored values)、生存概率(Survival Probability)、生存率(Survival Rate)/积累生存概率/生存函数/积累生存函数(Cumulative Survival Function)、风险函数(Hazard Function)、累积风险函数……风险函数h(t)=概率密度函数f(t)/生存函数S(t)，概率密度函数f(t)为累积分布函数F(t)的导数，而F(t)=1-S(t)。</p>
+<p>COX回归模型，又称“比例风险回归模型(proportional hazards model，简称Cox模型)”，是由英国统计学家D.R.Cox(1972)年提出的一种半参数回归模型。
+该模型以生存结局和生存时间为因变量，可同时分析众多因素对生存期的影响，能分析带有截尾生存时间的资料，且不要求估计资料的生存分布类型。
+由于上述优良性质，该模型自问世以来，在医学随访研究中得到广泛的应用，是迄今生存分析中应用最多的多因素分析方法。
+从分析的因素上看，有单因素分析和多因素分析。
+正如连续资料的单因素分析常用t检验、方差分析，对应的多因素分析是多重线性回归，分类资料的单因素分析方法卡方分析，对应的多因素分析有logistic回归，生存分析的常用单因素（或少数因素）的分析有Life Tables法、<strong>Kaplan-Meier法</strong>，对应的多因素模型则常用Cox回归模型（Cox风险比例模型）。
+从采取的分析方法上看，生存分析有非参数法（如Wilcoxon法、Log-rank法）、参数法（如Weibull回归、lognormal回归等）和半参数分析（Cox回归）。
+Cox回归要求满足比例风险假定(proportional-hazards assumption)的前提条件。
+所谓比例风险假定，就是假定风险比(HR，Hazard Ratio)不随时间t变化而变化。
+在进行生存分析前，你最好对以下的一些概念及其意义有所了解：起始事件、失效事件(Failure Event)/终点事件(Endpoint Event)、生存时间(Survival Time)/失效时间(Failure Time)、中位生存时间(Median Survival Time)、平均生存时间(Mean Survival Time)、删失值/截尾值(censored values)、生存概率(Survival Probability)、生存率(Survival Rate)/积累生存概率/生存函数/积累生存函数(Cumulative Survival Function)、风险函数(Hazard Function)、累积风险函数……风险函数h(t)=概率密度函数f(t)/生存函数S(t)，概率密度函数f(t)为累积分布函数F(t)的导数，而F(t)=1-S(t)。</p>
 <h3 id="2cox_1">(2).建立cox回归模型<a class="headerlink" href="#2cox_1" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="n">cox1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">coxph</span><span class="p">(</span><span class="n">surv.obj</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">rx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resid.ds</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">agegr</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ecog.ps</span><span class="p">,</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="n">cox1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">coxph</span><span class="p">(</span><span class="n">surv.obj</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">rx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resid.ds</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">agegr</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ecog.ps</span><span class="p">,</span>
 <a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a><span class="w">              </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ovarian</span><span class="p">)</span>
 <a id="__codelineno-56-3" name="__codelineno-56-3" href="#__codelineno-56-3"></a><span class="nf">summary</span><span class="p">(</span><span class="n">cox1</span><span class="p">)</span>
 <a id="__codelineno-56-4" name="__codelineno-56-4" href="#__codelineno-56-4"></a><span class="nf">drop1</span><span class="p">(</span><span class="n">cox1</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Chisq"</span><span class="p">)</span>
@@ -13413,7 +13473,7 @@ summary(log1)</code>
 <a id="__codelineno-56-7" name="__codelineno-56-7" href="#__codelineno-56-7"></a><span class="nf">cox.zph</span><span class="p">(</span><span class="n">cox2</span><span class="p">)</span><span class="c1">##比例风险假定的检验</span>
 <a id="__codelineno-56-8" name="__codelineno-56-8" href="#__codelineno-56-8"></a><span class="nf">summary</span><span class="p">(</span><span class="n">cox2</span><span class="p">)</span>
 <a id="__codelineno-56-9" name="__codelineno-56-9" href="#__codelineno-56-9"></a>
-<a id="__codelineno-56-10" name="__codelineno-56-10" href="#__codelineno-56-10"></a><span class="n">newdata</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">rx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"A"</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s">"B"</span><span class="p">),</span><span class="w"> </span>
+<a id="__codelineno-56-10" name="__codelineno-56-10" href="#__codelineno-56-10"></a><span class="n">newdata</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">rx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"A"</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s">"B"</span><span class="p">),</span>
 <a id="__codelineno-56-11" name="__codelineno-56-11" href="#__codelineno-56-11"></a><span class="w">                      </span><span class="n">resid.ds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"no"</span><span class="p">,</span><span class="w"> </span><span class="s">"no"</span><span class="p">),</span>
 <a id="__codelineno-56-12" name="__codelineno-56-12" href="#__codelineno-56-12"></a><span class="w">                      </span><span class="n">agegr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"&gt;50"</span><span class="p">,</span><span class="w"> </span><span class="s">"&gt;50"</span><span class="p">))</span>
 <a id="__codelineno-56-13" name="__codelineno-56-13" href="#__codelineno-56-13"></a><span class="n">newdata</span>
@@ -13426,15 +13486,30 @@ summary(log1)</code>
 <a id="__codelineno-56-20" name="__codelineno-56-20" href="#__codelineno-56-20"></a><span class="nf">plot</span><span class="p">(</span><span class="n">cox.fit</span><span class="p">,</span><span class="w"> </span><span class="n">lty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">))</span>
 <a id="__codelineno-56-21" name="__codelineno-56-21" href="#__codelineno-56-21"></a><span class="nf">title</span><span class="p">(</span><span class="n">main</span><span class="o">=</span><span class="s">"Cox survival curves by treatment</span>
 <a id="__codelineno-56-22" name="__codelineno-56-22" href="#__codelineno-56-22"></a><span class="s">      for age &gt; 50, no residual disease patients"</span><span class="p">,</span>
-<a id="__codelineno-56-23" name="__codelineno-56-23" href="#__codelineno-56-23"></a><span class="w">      </span><span class="n">xlab</span><span class="o">=</span><span class="s">"Duration in days"</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-56-23" name="__codelineno-56-23" href="#__codelineno-56-23"></a><span class="w">      </span><span class="n">xlab</span><span class="o">=</span><span class="s">"Duration in days"</span><span class="p">,</span>
 <a id="__codelineno-56-24" name="__codelineno-56-24" href="#__codelineno-56-24"></a><span class="w">      </span><span class="n">ylab</span><span class="o">=</span><span class="s">"Survival probability"</span><span class="p">,</span>
 <a id="__codelineno-56-25" name="__codelineno-56-25" href="#__codelineno-56-25"></a><span class="w">      </span><span class="n">las</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
-<a id="__codelineno-56-26" name="__codelineno-56-26" href="#__codelineno-56-26"></a><span class="nf">legend</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">0.3</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"Treatment A"</span><span class="p">,</span><span class="w"> </span><span class="s">"Treatment B"</span><span class="p">),</span><span class="w"> </span>
+<a id="__codelineno-56-26" name="__codelineno-56-26" href="#__codelineno-56-26"></a><span class="nf">legend</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">0.3</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"Treatment A"</span><span class="p">,</span><span class="w"> </span><span class="s">"Treatment B"</span><span class="p">),</span>
 <a id="__codelineno-56-27" name="__codelineno-56-27" href="#__codelineno-56-27"></a><span class="w">       </span><span class="n">lty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">))</span>
 </code></pre></div>
 <h1 id="_4">五.相关性分析<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h1>
 <h2 id="1_16">1.概述<a class="headerlink" href="#1_16" title="Permanent link">&para;</a></h2>
-<p>在医学研究过程中，除了检验不同组的数据之间是否存在差异之外，还常需要用到相关性分析，用于分析两个变量之间是否存在关联、关联的方向以及关联的强度。如空腹血糖与胰岛素的关系，患者血药浓度与时间的关系等等。进行相关性分析，需要理解相关性，相关性可以显示两个变量是否相关以及如何相关。例如，身高和体重是相关的; 较高的人往往有更大的体重。那么这种关系就是正相关。那么再例如汽车排量与每升汽油的里程，是负相关的，汽车排量越大，每升汽油跑的里程就越短。尽管这种相关性非常明显，但您的数据可能包含未预料到的相关性。您可能还会产生怀疑，怀疑两个变量之间是否存在相关性，或者不知道两者之间的依赖和联系程度。这个时候，就需要一种可以量化的指数分析。相关分析可以帮助我们更好地理解数据。但是，使用相关性分析的时候，我们需要记住的一个关键事项是：永远不要假设相关性就一定意味着A变量的变化会导致B变量的变化。多年来个人电脑和运动鞋的销售都急剧增长，并且它们之间存在高度相关性，但你不能认为购买电脑会导致人们购买运动鞋（反之亦然）。但可能还是可能存在相同的调节因素，比如社会生产力的提高和经济状况的改善。另外，在进行相关分析时，需要根据数据的类型和分布特征选择合适的相关系数，对于两连续型正态分布的资料，选择Pearson相关系数；等级资料或不满足正态分布的变量，应当选择Spearman相关系数；对于有序分类变量，应当选择Kendall相关系数。</p>
+<p>在医学研究过程中，除了检验不同组的数据之间是否存在差异之外，还常需要用到相关性分析，用于分析两个变量之间是否存在关联、关联的方向以及关联的强度。
+如空腹血糖与胰岛素的关系，患者血药浓度与时间的关系等等。
+进行相关性分析，需要理解相关性，相关性可以显示两个变量是否相关以及如何相关。
+例如，身高和体重是相关的; 较高的人往往有更大的体重。
+那么这种关系就是正相关。
+那么再例如汽车排量与每升汽油的里程，是负相关的，汽车排量越大，每升汽油跑的里程就越短。
+尽管这种相关性非常明显，但您的数据可能包含未预料到的相关性。
+您可能还会产生怀疑，怀疑两个变量之间是否存在相关性，或者不知道两者之间的依赖和联系程度。
+这个时候，就需要一种可以量化的指数分析。
+相关分析可以帮助我们更好地理解数据。
+但是，使用相关性分析的时候，我们需要记住的一个关键事项是：永远不要假设相关性就一定意味着A变量的变化会导致B变量的变化。
+多年来个人电脑和运动鞋的销售都急剧增长，并且它们之间存在高度相关性，但你不能认为购买电脑会导致人们购买运动鞋（反之亦然）。
+但可能还是可能存在相同的调节因素，比如社会生产力的提高和经济状况的改善。
+另外，在进行相关分析时，需要根据数据的类型和分布特征选择合适的相关系数，对于两连续型正态分布的资料，选择Pearson相关系数；
+等级资料或不满足正态分布的变量，应当选择Spearman相关系数；
+对于有序分类变量，应当选择Kendall相关系数。</p>
 <h2 id="2pearson">2.pearson相关系数<a class="headerlink" href="#2pearson" title="Permanent link">&para;</a></h2>
 <p>算法如下：
 <img alt="" src="https://cdn.nlark.com/yuque/0/2021/png/1234840/1609936671930-3a0adc1f-ce14-4fa5-9dda-6cf75aa29871.png#align=left&amp;display=inline&amp;height=130&amp;margin=%5Bobject%20Object%5D&amp;originHeight=130&amp;originWidth=312&amp;size=0&amp;status=done&amp;style=none&amp;width=312" /></p>
@@ -13474,11 +13549,11 @@ summary(log1)</code>
 <h3 id="3_7">(3) 相关性系数<a class="headerlink" href="#3_7" title="Permanent link">&para;</a></h3>
 <p>根据上述，我们知道了协方差可以获得两个变量之间的协同变化程度，标准差可以知道变量的变化范围。
 协方差虽然可以衡量变化程度，但是还缺少一个统一的量纲，否则不能进行比较。例如：
-<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>sunglass &lt;- c(213,233,296,345,645,644,492,691,790,667,645,546,506,524,434,383,282,181,30,50,30) 
-<a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a>icecream &lt;- c(215,236,300,350,651,651,500,700,800,678,657,559,520,539,450,400,300,200,50,30,50) 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>sunglass &lt;- c(213,233,296,345,645,644,492,691,790,667,645,546,506,524,434,383,282,181,30,50,30)
+<a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a>icecream &lt;- c(215,236,300,350,651,651,500,700,800,678,657,559,520,539,450,400,300,200,50,30,50)
 <a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a>cov(sunglass,icecream)
-<a id="__codelineno-57-4" name="__codelineno-57-4" href="#__codelineno-57-4"></a>p1 &lt;- qplot(sunglass,icecream) 
-<a id="__codelineno-57-5" name="__codelineno-57-5" href="#__codelineno-57-5"></a>p2 &lt;- qplot(((sunglass)*0.01), ((icecream)*0.01)) 
+<a id="__codelineno-57-4" name="__codelineno-57-4" href="#__codelineno-57-4"></a>p1 &lt;- qplot(sunglass,icecream)
+<a id="__codelineno-57-5" name="__codelineno-57-5" href="#__codelineno-57-5"></a>p2 &lt;- qplot(((sunglass)*0.01), ((icecream)*0.01))
 <a id="__codelineno-57-6" name="__codelineno-57-6" href="#__codelineno-57-6"></a>cowplot::plot_grid(p1,p2,nrow = 1,labels = c("p1","p2"),hjust = 0.05)
 </code></pre></div></p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2021/png/1234840/1609936671948-afac71ac-55dc-42b4-8725-3cdb23dcdc0b.png#align=left&amp;display=inline&amp;height=358&amp;margin=%5Bobject%20Object%5D&amp;originHeight=358&amp;originWidth=782&amp;size=0&amp;status=done&amp;style=none&amp;width=782" /></p>
@@ -13521,7 +13596,19 @@ cor函数可计算三种相关性系数：pearson,kendall和spearman,默认是pe
 参考文章: <a href="https://mp.weixin.qq.com/s/I6Ppoc4H1G7rDFLctVB7dg">https://mp.weixin.qq.com/s/I6Ppoc4H1G7rDFLctVB7dg</a></p>
 <h1 id="_5">六.主成分分析<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
 <h2 id="1_18">1.概述<a class="headerlink" href="#1_18" title="Permanent link">&para;</a></h2>
-<p>在许多领域的研究与应用中，往往需要对反映事物的多个变量进行大量的观测，收集大量数据以便进行分析寻找规律。多变量大样本无疑会为研究和应用提供了丰富的信息，但也在一定程度上增加了数据采集的工作量，更重要的是在多数情况下，许多变量之间可能存在相关性，从而增加了问题分析的复杂性，同时对分析带来不便。如果分别对每个指标进行分析，分析往往是孤立的，而不是综合的。盲目减少指标会损失很多信息，容易产生错误的结论。因此需要找到一个合理的方法，在减少需要分析的指标同时，尽量减少原指标包含信息的损失，以达到对所收集数据进行全面分析的目的。由于各变量间存在一定的相关关系，因此有可能用较少的综合指标分别综合存在于各变量中的各类信息。主成分分析与因子分析就属于这类降维的方法。主成分分析是设法将原来众多具有一定相关性（比如P个指标），重新组合成一组新的互相无关的综合指标来代替原来的指标。主成分分析，是考察多个变量间相关性一种多元统计方法，研究如何通过少数几个主成分来揭示多个变量间的内部结构，即从原始变量中导出少数几个主成分，使它们尽可能多地保留原始变量的信息，且彼此间互不相关。通常数学上的处理就是将原来P个指标作线性组合，作为新的综合指标。最经典的做法就是用F1（选取的第一个线性组合，即第一个综合指标）的方差来表达，即Var(F1)越大，表示F1包含的信息越多。因此在所有的线性组合中选取的F1应该是方差最大的，故称F1为第一主成分。如果第一主成分不足以代表原来P个指标的信息，再考虑选取F2即选第二个线性组合，为了有效地反映原来信息，F1已有的信息就不需要再出现在F2中，用数学语言表达就是要求Cov(F1, F2)=0，则称F2为第二主成分，依此类推可以构造出第三、第四，……，第P个主成分。
+<p>在许多领域的研究与应用中，往往需要对反映事物的多个变量进行大量的观测，收集大量数据以便进行分析寻找规律。
+多变量大样本无疑会为研究和应用提供了丰富的信息，但也在一定程度上增加了数据采集的工作量，更重要的是在多数情况下，许多变量之间可能存在相关性，从而增加了问题分析的复杂性，同时对分析带来不便。
+如果分别对每个指标进行分析，分析往往是孤立的，而不是综合的。
+盲目减少指标会损失很多信息，容易产生错误的结论。
+因此需要找到一个合理的方法，在减少需要分析的指标同时，尽量减少原指标包含信息的损失，以达到对所收集数据进行全面分析的目的。
+由于各变量间存在一定的相关关系，因此有可能用较少的综合指标分别综合存在于各变量中的各类信息。
+主成分分析与因子分析就属于这类降维的方法。
+主成分分析是设法将原来众多具有一定相关性（比如P个指标），重新组合成一组新的互相无关的综合指标来代替原来的指标。
+主成分分析，是考察多个变量间相关性一种多元统计方法，研究如何通过少数几个主成分来揭示多个变量间的内部结构，即从原始变量中导出少数几个主成分，使它们尽可能多地保留原始变量的信息，且彼此间互不相关。
+通常数学上的处理就是将原来P个指标作线性组合，作为新的综合指标。
+最经典的做法就是用F1（选取的第一个线性组合，即第一个综合指标）的方差来表达，即Var(F1)越大，表示F1包含的信息越多。
+因此在所有的线性组合中选取的F1应该是方差最大的，故称F1为第一主成分。
+如果第一主成分不足以代表原来P个指标的信息，再考虑选取F2即选第二个线性组合，为了有效地反映原来信息，F1已有的信息就不需要再出现在F2中，用数学语言表达就是要求Cov(F1, F2)=0，则称F2为第二主成分，依此类推可以构造出第三、第四，……，第P个主成分。
 主成分分析实际上是对原始变量进行线性变换，主成分就是原始变量的线性组合。假设有m个原始变量，X1,X2,···，Xm，我们想找到这些变量的m个线性组合：Z1 ，Z2 ，···，Zm。
 Z1 = a11X1 +a12X2 + ··· + a1mXm
 Z2 = a21X1 +a22X2 + ··· + a2mXm
@@ -13530,7 +13617,10 @@ Zm =  am1X1 +am2X2 + ··· + ammXm
 <img alt="image.png" src="https://cdn.nlark.com/yuque/0/2021/png/1234840/1609813143941-99ccd91e-2610-4962-b2b7-cbcc5c8a7e8b.png#align=left&amp;display=inline&amp;height=264&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=528&amp;originWidth=1485&amp;size=1133902&amp;status=done&amp;style=none&amp;width=742.5" />
 在进行主成分分析前需要检验数据是否适合做主成分分析，检验方法有KMO检验和特球形检验，但目前，大量数据发分析，是可以不需要检验的，数据量小需要检验。然后对原始数据进行标准化，原始数据减去均值，然后除以标准差，但也不是必须的，在做主成分时，用协方差矩阵是需要标准化，用相关系数矩阵是不需要对数据进行标准化。一般我们就用相关系数矩阵做主成分分析。求出相关系数矩阵后，对相关系数矩阵求特征值和特征向量。下面先简单介绍一下特征值与特征向量。**
 <strong>定义：</strong>设A为n阶实方阵，如果存在某个数<img alt="" src="https://cdn.nlark.com/yuque/0/2021/gif/1234840/1609815803573-7487b9f3-bdfe-4152-9b69-15f81fe04bfd.gif#align=left&amp;display=inline&amp;height=24&amp;margin=%5Bobject%20Object%5D&amp;originHeight=24&amp;originWidth=19&amp;size=0&amp;status=done&amp;style=none&amp;width=19" />及某个n维非零列向量<img alt="" src="https://cdn.nlark.com/yuque/0/2021/gif/1234840/1609815803588-d5554c9f-581b-42ca-95f9-c01eca0f117a.gif#align=left&amp;display=inline&amp;height=17&amp;margin=%5Bobject%20Object%5D&amp;originHeight=17&amp;originWidth=13&amp;size=0&amp;status=done&amp;style=none&amp;width=13" />，使得<img alt="" src="https://cdn.nlark.com/yuque/0/2021/gif/1234840/1609815803592-27c5b5f7-32e7-4f16-b83b-4990103fee50.gif#align=left&amp;display=inline&amp;height=24&amp;margin=%5Bobject%20Object%5D&amp;originHeight=24&amp;originWidth=63&amp;size=0&amp;status=done&amp;style=none&amp;width=63" />，则称<img alt="" src="https://cdn.nlark.com/yuque/0/2021/gif/1234840/1609815803617-6de97c8e-760a-4c46-b109-cf3f213d176a.gif#align=left&amp;display=inline&amp;height=24&amp;margin=%5Bobject%20Object%5D&amp;originHeight=24&amp;originWidth=19&amp;size=0&amp;status=done&amp;style=none&amp;width=19" />是方阵A的一个特征值，<img alt="" src="https://cdn.nlark.com/yuque/0/2021/gif/1234840/1609815803600-771a8e59-efbc-42cb-839f-62a048905971.gif#align=left&amp;display=inline&amp;height=17&amp;margin=%5Bobject%20Object%5D&amp;originHeight=17&amp;originWidth=13&amp;size=0&amp;status=done&amp;style=none&amp;width=13" />是方阵A的属于特征值<img alt="" src="https://cdn.nlark.com/yuque/0/2021/gif/1234840/1609815803599-b670720a-17cb-4075-a20a-933968049671.gif#align=left&amp;display=inline&amp;height=24&amp;margin=%5Bobject%20Object%5D&amp;originHeight=24&amp;originWidth=19&amp;size=0&amp;status=done&amp;style=none&amp;width=19" />的一个特征向量。
-注：①定义说明特征值与特征向量是紧密相连的概念，对每个特征值必有属于它的特征向量，且有无穷多个；而对每个特征向量必属于某个特征值，且只属于一个特征值。②特征向量必须是非零向量，且必是列向量。③若<img alt="" src="https://cdn.nlark.com/yuque/0/2021/gif/1234840/1609816008044-f6330d6b-40dd-4cde-a2c6-2eb8c0506e33.gif#align=left&amp;display=inline&amp;height=24&amp;margin=%5Bobject%20Object%5D&amp;originHeight=24&amp;originWidth=37&amp;size=0&amp;status=done&amp;style=none&amp;width=37" />均为A的属于<img alt="" src="https://cdn.nlark.com/yuque/0/2021/gif/1234840/1609816008035-f7497a63-11ed-45a6-af0b-38c0aace347a.gif#align=left&amp;display=inline&amp;height=24&amp;margin=%5Bobject%20Object%5D&amp;originHeight=24&amp;originWidth=19&amp;size=0&amp;status=done&amp;style=none&amp;width=19" />的特征向量，则对任何不全为零的数<img alt="" src="https://cdn.nlark.com/yuque/0/2021/gif/1234840/1609816008137-4b772a79-96a0-4647-ac1d-e0dc44007255.gif#align=left&amp;display=inline&amp;height=24&amp;margin=%5Bobject%20Object%5D&amp;originHeight=24&amp;originWidth=132&amp;size=0&amp;status=done&amp;style=none&amp;width=132" />也是A的属于<img alt="" src="https://cdn.nlark.com/yuque/0/2021/gif/1234840/1609816008049-b8ea8626-3f37-4afc-8bdf-1dd541b7f5e8.gif#align=left&amp;display=inline&amp;height=24&amp;margin=%5Bobject%20Object%5D&amp;originHeight=24&amp;originWidth=19&amp;size=0&amp;status=done&amp;style=none&amp;width=19" />的特征向量。
+注：①定义说明特征值与特征向量是紧密相连的概念，对每个特征值必有属于它的特征向量，且有无穷多个；
+而对每个特征向量必属于某个特征值，且只属于一个特征值。
+②特征向量必须是非零向量，且必是列向量。
+③若<img alt="" src="https://cdn.nlark.com/yuque/0/2021/gif/1234840/1609816008044-f6330d6b-40dd-4cde-a2c6-2eb8c0506e33.gif#align=left&amp;display=inline&amp;height=24&amp;margin=%5Bobject%20Object%5D&amp;originHeight=24&amp;originWidth=37&amp;size=0&amp;status=done&amp;style=none&amp;width=37" />均为A的属于<img alt="" src="https://cdn.nlark.com/yuque/0/2021/gif/1234840/1609816008035-f7497a63-11ed-45a6-af0b-38c0aace347a.gif#align=left&amp;display=inline&amp;height=24&amp;margin=%5Bobject%20Object%5D&amp;originHeight=24&amp;originWidth=19&amp;size=0&amp;status=done&amp;style=none&amp;width=19" />的特征向量，则对任何不全为零的数<img alt="" src="https://cdn.nlark.com/yuque/0/2021/gif/1234840/1609816008137-4b772a79-96a0-4647-ac1d-e0dc44007255.gif#align=left&amp;display=inline&amp;height=24&amp;margin=%5Bobject%20Object%5D&amp;originHeight=24&amp;originWidth=132&amp;size=0&amp;status=done&amp;style=none&amp;width=132" />也是A的属于<img alt="" src="https://cdn.nlark.com/yuque/0/2021/gif/1234840/1609816008049-b8ea8626-3f37-4afc-8bdf-1dd541b7f5e8.gif#align=left&amp;display=inline&amp;height=24&amp;margin=%5Bobject%20Object%5D&amp;originHeight=24&amp;originWidth=19&amp;size=0&amp;status=done&amp;style=none&amp;width=19" />的特征向量。
 因<img alt="" src="https://cdn.nlark.com/yuque/0/2021/gif/1234840/1609816008073-adc4aad8-ebb9-4942-a5d9-f95e25f05d05.gif#align=left&amp;display=inline&amp;height=24&amp;margin=%5Bobject%20Object%5D&amp;originHeight=24&amp;originWidth=303&amp;size=0&amp;status=done&amp;style=none&amp;width=303" />
 如果有线性代数基础，<a href="http://www2.edu-edu.com.cn/lesson_crs78/self/j_4184/soft/ch0501.html">参考文章</a>理解其计算过程。没有基础的话，至少上面的定义要能理解。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a><span class="n">mydata</span><span class="o">&lt;-</span><span class="n">iris</span><span class="p">[,</span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">]</span>
@@ -13594,12 +13684,12 @@ sdev表示各主成分的标准差;loadings表示载荷矩阵;center表示各指
 <p>利用datasets包里的数据集Harman23.cor
 <div class="highlight"><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a><span class="nf">rm</span><span class="p">(</span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">ls</span><span class="p">())</span>
 <a id="__codelineno-70-2" name="__codelineno-70-2" href="#__codelineno-70-2"></a><span class="n">cor.matrix</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">Harman23.cor</span><span class="o">$</span><span class="n">cov</span>
-<a id="__codelineno-70-3" name="__codelineno-70-3" href="#__codelineno-70-3"></a><span class="nf">eigen</span><span class="p">(</span><span class="n">cor.matrix</span><span class="p">)</span><span class="w">  </span>
+<a id="__codelineno-70-3" name="__codelineno-70-3" href="#__codelineno-70-3"></a><span class="nf">eigen</span><span class="p">(</span><span class="n">cor.matrix</span><span class="p">)</span>
 <a id="__codelineno-70-4" name="__codelineno-70-4" href="#__codelineno-70-4"></a><span class="nf">eigen</span><span class="p">(</span><span class="n">cor.matrix</span><span class="p">)</span><span class="o">$</span><span class="n">values</span>
 <a id="__codelineno-70-5" name="__codelineno-70-5" href="#__codelineno-70-5"></a><span class="nf">round</span><span class="p">(</span><span class="nf">eigen</span><span class="p">(</span><span class="n">cor.matrix</span><span class="p">)</span><span class="o">$</span><span class="n">vectors</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
-<a id="__codelineno-70-6" name="__codelineno-70-6" href="#__codelineno-70-6"></a><span class="n">PCA</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">princomp</span><span class="p">(</span><span class="n">covmat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cor.matrix</span><span class="p">)</span><span class="w">  </span>
-<a id="__codelineno-70-7" name="__codelineno-70-7" href="#__codelineno-70-7"></a><span class="nf">summary</span><span class="p">(</span><span class="n">PCA</span><span class="p">,</span><span class="w"> </span><span class="n">loadings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-70-8" name="__codelineno-70-8" href="#__codelineno-70-8"></a><span class="nf">screeplot</span><span class="p">(</span><span class="n">PCA</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"lines"</span><span class="p">)</span><span class="w">   </span>
+<a id="__codelineno-70-6" name="__codelineno-70-6" href="#__codelineno-70-6"></a><span class="n">PCA</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">princomp</span><span class="p">(</span><span class="n">covmat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cor.matrix</span><span class="p">)</span>
+<a id="__codelineno-70-7" name="__codelineno-70-7" href="#__codelineno-70-7"></a><span class="nf">summary</span><span class="p">(</span><span class="n">PCA</span><span class="p">,</span><span class="w"> </span><span class="n">loadings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
+<a id="__codelineno-70-8" name="__codelineno-70-8" href="#__codelineno-70-8"></a><span class="nf">screeplot</span><span class="p">(</span><span class="n">PCA</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"lines"</span><span class="p">)</span>
 <a id="__codelineno-70-9" name="__codelineno-70-9" href="#__codelineno-70-9"></a><span class="nf">abline</span><span class="p">(</span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 <a id="__codelineno-70-10" name="__codelineno-70-10" href="#__codelineno-70-10"></a><span class="n">load</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">loadings</span><span class="p">(</span><span class="n">PCA</span><span class="p">)</span>
 <a id="__codelineno-70-11" name="__codelineno-70-11" href="#__codelineno-70-11"></a><span class="nf">plot</span><span class="p">(</span><span class="n">load</span><span class="p">[,</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">2</span><span class="p">],</span><span class="w"> </span><span class="n">xlim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">-0.5</span><span class="p">,</span><span class="w"> </span><span class="m">0.5</span><span class="p">),</span><span class="w"> </span><span class="n">ylim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">-0.5</span><span class="p">,</span><span class="w"> </span><span class="m">0.5</span><span class="p">))</span>
@@ -13612,13 +13702,29 @@ sdev表示各主成分的标准差;loadings表示载荷矩阵;center表示各指
 <h1 id="_6">七.因子分析<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h1>
 <h2 id="1_19">1.概述<a class="headerlink" href="#1_19" title="Permanent link">&para;</a></h2>
 <p>因子分析（factor analysis, 简称FC）又称因素分析，基于相关关系而进行的数据分析技术，是一种建立在众多的观测数据的基础上的降维处理方法。其主要目的是探索隐藏在大量观测数据背后的某种结构，寻找一组变量变化的共同因子，将相同本质的变量归入一个因子，可减少变量的数目，还可检验变量间关系的假设。
-因子分析是对数据进行“降维”的另一种方法，它是主成分分析的推广和发展，也是研究相关矩阵或协方差阵的内部依赖关系，其思想在于:将多个变量综合为少数几个因子，以再现原始变量与因子之间的关系。主成分分析和探索性因子分析均是用来探索和简化多变量复杂关系的常用方法，它们之间有联系也有区别。主成分分析(PCA)是一种数据降维方法，它能将大量相关变量转化为一组很少的不相关变量，这些无关变量称为主成分。例如，使用PCA可将30个相关的环境变量转化为少数几个无关的成分变量，并且尽可能地保留原始数据集的信息。相对而言，探索性因子分析(EFA)是一系列用来发现一组变量的潜在结构的方法。它通过寻找一组更小的、潜在的或隐藏的结构来解释已观测到的、显式的变量间的关系。因子分析的主要思想是提取重要的不相关信息；而主成分分析是对原始变量线性组合，形成不相关的主成分，然后删掉不重要的成分。
+因子分析是对数据进行“降维”的另一种方法，它是主成分分析的推广和发展，也是研究相关矩阵或协方差阵的内部依赖关系，其思想在于:将多个变量综合为少数几个因子，以再现原始变量与因子之间的关系。
+主成分分析和探索性因子分析均是用来探索和简化多变量复杂关系的常用方法，它们之间有联系也有区别。
+主成分分析(PCA)是一种数据降维方法，它能将大量相关变量转化为一组很少的不相关变量，这些无关变量称为主成分。
+例如，使用PCA可将30个相关的环境变量转化为少数几个无关的成分变量，并且尽可能地保留原始数据集的信息。
+相对而言，探索性因子分析(EFA)是一系列用来发现一组变量的潜在结构的方法。
+它通过寻找一组更小的、潜在的或隐藏的结构来解释已观测到的、显式的变量间的关系。
+因子分析的主要思想是提取重要的不相关信息；
+而主成分分析是对原始变量线性组合，形成不相关的主成分，然后删掉不重要的成分。
 <img alt="image.png" src="https://cdn.nlark.com/yuque/0/2021/png/1234840/1612185830060-6169b8ca-d526-4633-b9fc-8136103e1169.png#align=left&amp;display=inline&amp;height=296&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=421&amp;originWidth=800&amp;size=262253&amp;status=done&amp;style=none&amp;width=563" />
 在医学、心理学等研究中，有些变量是可以直接测量的，称之为可观测变量或显变量，比如血压水平；有些变量是无法直接测量的，它们只能通过其他多个可观测变量来间接地反映，称之为不可观测变量或潜变量，比如学习能力这个指标是无法直接测量的，但它可以通过学习专注力、思维灵活度、学习成就感、反思力等多个指标来综合反映。由于学习专注力、思维灵活度等可观测指标都在不同程度上反映了学习能力的情况，所以这些指标之间可能会存在一定的相关关系。因子分析的数学模型如下：
 <img alt="" src="https://cdn.nlark.com/yuque/0/2021/webp/1234840/1610505076268-039136f3-21d7-4c3b-b85a-9c38e8642c38.webp#align=left&amp;display=inline&amp;height=163&amp;margin=%5Bobject%20Object%5D&amp;originHeight=163&amp;originWidth=349&amp;size=0&amp;status=done&amp;style=none&amp;width=349" />
 其中X1、X2、Xn表示原始变量（指标），每个原始变量的表达式中均有F1、F2、Fm，即F1、F2、Fm与每一个原始变量X1、X2、Xn均有关但无法直接观测得到，故称F1、F2、Fm为潜变量（公因子）。e1、e2、en只与相应的一个X有关，故称之为特殊因子或个性因子。
 简单来说，因子分析（Factor Analysis）就是一种从分析多个原始指标的相关关系入手，找到支配这种相关关系的有限个不可观测的潜变量（公因子），并用这些潜变量来解释原始指标之间的相关性或协方差关系的多元统计方法。
-这里需要知道一个概念，<strong>因子载荷</strong>，因子载荷 a 的统计意义就是第i个变量与第 j 个公共因子的相关系数即表示 X 依赖 F 的份量（比重）。统计学术语称作权，心理学家将它叫做载荷，即表示第 i 个变量在第 j 个公共因子上的负荷，它反映了第 i 个变量在第 j 个公共因子上的相对重要性。因子旋转(factor rotation)是一种变换，就是旋转因子的坐标轴。为使因子分析法求出因子载荷阵结构简化，便于对主因子进行专业上解释，常对因子载荷阵施行变换或称因子旋转。最常用的方法是方差最大的正交旋转法，使旋转后的因子载荷阵中的每一列元素尽可能地拉开距离，即向0或1两极分化，使每一个主因子只对应少数几个变量具有高载荷，其余载荷很小， 且每一变量也只在少数个主因子上具有高载荷，其余载荷都很小。正交旋转适用于正交因子模型，即主因子是相互独立的情况，如果主因子是彼此相关的，这时要做非正交旋转即斜交旋转。在因子分析中，当求得公共因子及其因子载荷阵后，对公因子要给出具有实际意义的合理解释。如果公共因子难以和实际问题相对应，可对公因子进行旋转，使得旋转后的公因子具有实际意义。常用的旋转方法有两种：方差极大的正交旋转；方差极大的斜交旋转，正交旋转强调2个因子不相关，允许两个因子相关用斜交旋转。
+这里需要知道一个概念，<strong>因子载荷</strong>，因子载荷 a 的统计意义就是第i个变量与第 j 个公共因子的相关系数即表示 X 依赖 F 的份量（比重）。
+统计学术语称作权，心理学家将它叫做载荷，即表示第 i 个变量在第 j 个公共因子上的负荷，它反映了第 i 个变量在第 j 个公共因子上的相对重要性。
+因子旋转(factor rotation)是一种变换，就是旋转因子的坐标轴。
+为使因子分析法求出因子载荷阵结构简化，便于对主因子进行专业上解释，常对因子载荷阵施行变换或称因子旋转。
+最常用的方法是方差最大的正交旋转法，使旋转后的因子载荷阵中的每一列元素尽可能地拉开距离，即向0或1两极分化，使每一个主因子只对应少数几个变量具有高载荷，其余载荷很小， 且每一变量也只在少数个主因子上具有高载荷，其余载荷都很小。
+正交旋转适用于正交因子模型，即主因子是相互独立的情况，如果主因子是彼此相关的，这时要做非正交旋转即斜交旋转。
+在因子分析中，当求得公共因子及其因子载荷阵后，对公因子要给出具有实际意义的合理解释。
+如果公共因子难以和实际问题相对应，可对公因子进行旋转，使得旋转后的公因子具有实际意义。
+常用的旋转方法有两种：方差极大的正交旋转；
+方差极大的斜交旋转，正交旋转强调2个因子不相关，允许两个因子相关用斜交旋转。
 在R中，前面计算步骤与主成分分析一样，就最后提取因子得分时用fa()函数。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a>fa(x,nfactors,rotate="oblmin",scores,fm)
 </code></pre></div>
@@ -13634,7 +13740,7 @@ fm:提取公因子的方法，默认：极小残差法。
 <a id="__codelineno-72-5" name="__codelineno-72-5" href="#__codelineno-72-5"></a><span class="w">                   </span><span class="m">0.288</span><span class="p">,</span><span class="w"> </span><span class="m">0.354</span><span class="p">,</span><span class="w"> </span><span class="m">0.164</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0.595</span><span class="p">,</span><span class="w"> </span><span class="m">0.470</span><span class="p">,</span>
 <a id="__codelineno-72-6" name="__codelineno-72-6" href="#__codelineno-72-6"></a><span class="w">                   </span><span class="m">0.329</span><span class="p">,</span><span class="w"> </span><span class="m">0.320</span><span class="p">,</span><span class="w"> </span><span class="m">0.190</span><span class="p">,</span><span class="w"> </span><span class="m">0.595</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0.464</span><span class="p">,</span>
 <a id="__codelineno-72-7" name="__codelineno-72-7" href="#__codelineno-72-7"></a><span class="w">                   </span><span class="m">0.248</span><span class="p">,</span><span class="w"> </span><span class="m">0.329</span><span class="p">,</span><span class="w"> </span><span class="m">0.181</span><span class="p">,</span><span class="w"> </span><span class="m">0.470</span><span class="p">,</span><span class="w"> </span><span class="m">0.464</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">),</span>
-<a id="__codelineno-72-8" name="__codelineno-72-8" href="#__codelineno-72-8"></a><span class="w">                 </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-72-8" name="__codelineno-72-8" href="#__codelineno-72-8"></a><span class="w">                 </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="p">)</span>
 <a id="__codelineno-72-9" name="__codelineno-72-9" href="#__codelineno-72-9"></a><span class="nf">colnames</span><span class="p">(</span><span class="n">cormat</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">paste0</span><span class="p">(</span><span class="s">"gene"</span><span class="p">,</span><span class="m">1</span><span class="o">:</span><span class="m">6</span><span class="p">)</span>
 <a id="__codelineno-72-10" name="__codelineno-72-10" href="#__codelineno-72-10"></a><span class="nf">rownames</span><span class="p">(</span><span class="n">cormat</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">paste0</span><span class="p">(</span><span class="s">"gene"</span><span class="p">,</span><span class="m">1</span><span class="o">:</span><span class="m">6</span><span class="p">)</span>
 <a id="__codelineno-72-11" name="__codelineno-72-11" href="#__codelineno-72-11"></a><span class="nf">library</span><span class="p">(</span><span class="n">psych</span><span class="p">)</span>
@@ -13684,7 +13790,8 @@ Control：模型中因子对照的列表，默认值为NULL，该函数的返回
 </ul>
 <p>此外，也可以利用其他函数来提取因子分析的结果，函数varimax()可用于完成因子载荷矩阵的旋转变换，其返回值为一个列表，其中包括旋转后的因子载荷阵和旋转矩阵；函数promax()用于完成斜交变化，返回值与函数varimax()基本一致，不同之处在于顺转矩阵不是正交阵。</p>
 <h2 id="3_9">3.综合案例:能力和智商测试的因子分析探索<a class="headerlink" href="#3_9" title="Permanent link">&para;</a></h2>
-<p>下面利用ability.cov数据集进行实战演练，该数据集是关于能力和智商测试的数据，对112个个体进行6项测试，分别为:使用Catell的文化公平测试(general)、 图片完成测试(picture)、板块设计(blocks)、迷宫(maze)、阅读理解(reading) 和词汇量(vocab), 数据以列表的形式存储，其中包括cov、center和n.obs三个子列表。具体可阅读文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264251&amp;idx=1&amp;sn=f86aec1dfadd0d0cdce3b4a62abf7ed9&amp;chksm=841ef086b36979906635f3de5ac0d26b85ceab20f13a87c0bbc4d62650fd9aff7f4e4f213128&amp;scene=21#wechat_redirect">第7章:因子分析</a>。
+<p>下面利用ability.cov数据集进行实战演练，该数据集是关于能力和智商测试的数据，对112个个体进行6项测试，分别为:使用Catell的文化公平测试(general)、 图片完成测试(picture)、板块设计(blocks)、迷宫(maze)、阅读理解(reading) 和词汇量(vocab), 数据以列表的形式存储，其中包括cov、center和n.obs三个子列表。
+具体可阅读文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264251&amp;idx=1&amp;sn=f86aec1dfadd0d0cdce3b4a62abf7ed9&amp;chksm=841ef086b36979906635f3de5ac0d26b85ceab20f13a87c0bbc4d62650fd9aff7f4e4f213128&amp;scene=21#wechat_redirect">第7章:因子分析</a>。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a><span class="nf">data</span><span class="p">(</span><span class="s">"ability.cov"</span><span class="p">)</span>
 </code></pre></div>
 下面将数据集中的协方差阵提取出来，并用函数cov2cor()将其转化为相关矩阵：
@@ -13803,7 +13910,12 @@ solveLP(cvec,bvec,Amat,maximum=TRUE,const.dir)
 <h1 id="_8">九.判别分析<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h1>
 <h2 id="1_21">1.概述<a class="headerlink" href="#1_21" title="Permanent link">&para;</a></h2>
 <p>判别分析是判断个体所属类别的一种多元统计分析方法。它在医学领域有着广泛的应用，主要有疾病诊断、疾病预测和病因学分析。例如，根据病人的症状、生化指标判断病人得的是什么疾病，根据病人症状的严重程度或者指标的高低预测病人的预后等等。比如，高血压、高血糖、动脉硬化程度这些都是脑血管疾病的患病危险因素；那么如果知道了人体的这些指标，并对这些数据进行分析，就可以对尚未明确诊断的人是否发生脑血管疾病进行预测；对于很可能是脑血管疾病的人就可以事先给予预防，或者在入院后尽快得到救治，提高诊疗有效率。
-判别分析也属于对事物现象进行分类的统计分析方法，它和聚类分析不同的地方在于：聚类分析(后面会讲)事先并不知道分型情况，而判别分析需要事先知道分型情况，已知的分型数据又叫训练数据。判别分析需要事先得到一些已经明确知道诊断结果的训练数据，利用这些数据建立判别准则，然后依据准则对未知类别的预测值进行判别。如果是对于分类不明的数据，可以先用聚类分析对这组数据进行分类，然后再用判别分析对新建立的类别进行判断。判别问题用统计的语言来表达，就是<strong>已有q个总体</strong><img alt="" src="https://cdn.nlark.com/yuque/0/2021/gif/1234840/1610543340047-cb65d3ce-4384-4478-a2b7-a0c39d019ff5.gif#align=left&amp;display=inline&amp;height=20&amp;margin=%5Bobject%20Object%5D&amp;originHeight=20&amp;originWidth=134&amp;size=0&amp;status=done&amp;style=none&amp;width=134" />** ，它们的分布函数分别为 <img alt="" src="https://cdn.nlark.com/yuque/0/2021/gif/1234840/1610543258311-4e7a0eac-9aac-4bb2-b80c-21dabb3d04f7.gif#align=left&amp;display=inline&amp;height=22&amp;margin=%5Bobject%20Object%5D&amp;originHeight=22&amp;originWidth=198&amp;size=0&amp;status=done&amp;style=none&amp;width=198" />  ,每个 <img alt="" src="https://cdn.nlark.com/yuque/0/2021/gif/1234840/1610543257938-f52a3825-e5ba-467b-b699-cffd3a3781c2.gif#align=left&amp;display=inline&amp;height=20&amp;margin=%5Bobject%20Object%5D&amp;originHeight=20&amp;originWidth=46&amp;size=0&amp;status=done&amp;style=none&amp;width=46" /> 都是 p 维函数。对于给定的样本 X ，要判断它来自哪一个总体？当然，应该要求判别准则在某种意义下是优的，例如错判的概率小或错判的损失小等<strong>。
+判别分析也属于对事物现象进行分类的统计分析方法，它和聚类分析不同的地方在于：聚类分析(后面会讲)事先并不知道分型情况，而判别分析需要事先知道分型情况，已知的分型数据又叫训练数据。
+判别分析需要事先得到一些已经明确知道诊断结果的训练数据，利用这些数据建立判别准则，然后依据准则对未知类别的预测值进行判别。
+如果是对于分类不明的数据，可以先用聚类分析对这组数据进行分类，然后再用判别分析对新建立的类别进行判断。
+判别问题用统计的语言来表达，就是<strong>已有q个总体</strong><img alt="" src="https://cdn.nlark.com/yuque/0/2021/gif/1234840/1610543340047-cb65d3ce-4384-4478-a2b7-a0c39d019ff5.gif#align=left&amp;display=inline&amp;height=20&amp;margin=%5Bobject%20Object%5D&amp;originHeight=20&amp;originWidth=134&amp;size=0&amp;status=done&amp;style=none&amp;width=134" />** ，它们的分布函数分别为 <img alt="" src="https://cdn.nlark.com/yuque/0/2021/gif/1234840/1610543258311-4e7a0eac-9aac-4bb2-b80c-21dabb3d04f7.gif#align=left&amp;display=inline&amp;height=22&amp;margin=%5Bobject%20Object%5D&amp;originHeight=22&amp;originWidth=198&amp;size=0&amp;status=done&amp;style=none&amp;width=198" />  ,每个 <img alt="" src="https://cdn.nlark.com/yuque/0/2021/gif/1234840/1610543257938-f52a3825-e5ba-467b-b699-cffd3a3781c2.gif#align=left&amp;display=inline&amp;height=20&amp;margin=%5Bobject%20Object%5D&amp;originHeight=20&amp;originWidth=46&amp;size=0&amp;status=done&amp;style=none&amp;width=46" /> 都是 p 维函数。
+对于给定的样本 X ，要判断它来自哪一个总体？
+当然，应该要求判别准则在某种意义下是优的，例如错判的概率小或错判的损失小等<strong>。
 判别方法是确定待判样品归属于哪一组的方法，可分为参数法和非参数法，也可以根据资料的性质分为定性资料的判别分析和定量资料的判别分析。此处给出的分类主要是根据采用的判别准则分出几种常用方法。除最大似然法外，其余几种均适用于连续性资料。
 <strong>1）最大似然法：</strong>用于自变量均为分类变量的情况，该方法建立在独立事件概率乘法定理的基础上，根据训练样品信息求得自变量各种组合情况下样品被封为任何一类的概率。当新样品进入是，则计算它被分到每一类中去的条件概率（似然值），概率最大的那一类就是最终评定的归类。
 <strong>2）距离判别：</strong>其基本思想是由训练样品得出每个分类的重心坐标，然后对新样品求出它们离各个类别重心的距离远近，从而归入离得最近的类。也就是根据个案离母体远近进行判别。</strong>最常用的距离是马氏距离**，偶尔也采用欧式距离。距离判别的特点是直观、简单，适合于对自变量均为连续变量的情况下进行分类，且它对变量的分布类型无严格要求，特别是并不严格要求总体协方差阵相等。
@@ -13812,11 +13924,11 @@ solveLP(cvec,bvec,Amat,maximum=TRUE,const.dir)
 <h2 id="2_13">2.几个相关概念<a class="headerlink" href="#2_13" title="Permanent link">&para;</a></h2>
 <h3 id="1_22">(1) 欧式距离<a class="headerlink" href="#1_22" title="Permanent link">&para;</a></h3>
 <p>欧式距离也称欧几里得距离，是最常见的距离度量，衡量的是多维空间中两个点之间的绝对距离。也可以理解为：m维空间中两个点之间的真实距离，或者向量的自然长度（即该点到原点的距离）。在二维和三维空间中的欧氏距离就是两点之间的实际距离，下面是具体的计算公式:
-                                                           <img alt="" src="https://cdn.nlark.com/yuque/0/2021/png/1234840/1610543740099-b86ab8f0-b030-4597-8bb2-ab8b4d3ca50c.png#align=left&amp;display=inline&amp;height=69&amp;margin=%5Bobject%20Object%5D&amp;originHeight=103&amp;originWidth=363&amp;size=0&amp;status=done&amp;style=none&amp;width=243" />
+<img alt="" src="https://cdn.nlark.com/yuque/0/2021/png/1234840/1610543740099-b86ab8f0-b030-4597-8bb2-ab8b4d3ca50c.png#align=left&amp;display=inline&amp;height=69&amp;margin=%5Bobject%20Object%5D&amp;originHeight=103&amp;originWidth=363&amp;size=0&amp;status=done&amp;style=none&amp;width=243" />
 上面的欧式距离是简单的欧氏距离，标准化欧氏距离是针对简单欧氏距离的缺点而作的一种改进方案。标准欧氏距离的思路：既然数据各维分量的分布不一样，好吧！那我先将各个分量都“标准化”到均值、方差相等吧。均值和方差标准化到多少呢？这里先复习点统计学知识吧，假设样本集X的均值(mean)为m，标准差为s，那么X的“标准化变量”表示为：
-　<img alt="" src="https://cdn.nlark.com/yuque/0/2021/webp/1234840/1610590671942-984bf6a0-7c3e-4a4b-82b9-e5976e5d09fe.webp#align=left&amp;display=inline&amp;height=42&amp;margin=%5Bobject%20Object%5D&amp;originHeight=42&amp;originWidth=85&amp;size=0&amp;status=done&amp;style=none&amp;width=85" />　
+　<img alt="" src="https://cdn.nlark.com/yuque/0/2021/webp/1234840/1610590671942-984bf6a0-7c3e-4a4b-82b9-e5976e5d09fe.webp#align=left&amp;display=inline&amp;height=42&amp;margin=%5Bobject%20Object%5D&amp;originHeight=42&amp;originWidth=85&amp;size=0&amp;status=done&amp;style=none&amp;width=85" />
 而且标准化变量的数学期望为0，方差为1。因此样本集的标准化过程(standardization)用公式描述就是：标准化后的值 =  ( 标准化前的值  － 分量的均值 ) /分量的标准差。经过简单的推导就可以得到两个n维向量a(x11,x12,…,x1n)与b(x21,x22,…,x2n)间的标准化欧氏距离的公式：
-<img alt="" src="https://cdn.nlark.com/yuque/0/2021/webp/1234840/1610590671981-e5a928b7-5dc1-47e2-89b8-6b26a6341e7d.webp#align=left&amp;display=inline&amp;height=83&amp;margin=%5Bobject%20Object%5D&amp;originHeight=83&amp;originWidth=171&amp;size=0&amp;status=done&amp;style=none&amp;width=171" />　　
+<img alt="" src="https://cdn.nlark.com/yuque/0/2021/webp/1234840/1610590671981-e5a928b7-5dc1-47e2-89b8-6b26a6341e7d.webp#align=left&amp;display=inline&amp;height=83&amp;margin=%5Bobject%20Object%5D&amp;originHeight=83&amp;originWidth=171&amp;size=0&amp;status=done&amp;style=none&amp;width=171" />
 如果将方差的倒数看成是一个权重，这个公式可以看成是一种<strong>加权欧氏距离(WeightedEuclidean distance)</strong>。</p>
 <h3 id="2-mahalanobis">(2) Mahalanobis 距离（马氏距离）<a class="headerlink" href="#2-mahalanobis" title="Permanent link">&para;</a></h3>
 <p>在介绍马氏距离之前，我们先来看如下几个概念：
@@ -13831,9 +13943,9 @@ solveLP(cvec,bvec,Amat,maximum=TRUE,const.dir)
 <h3 id="3-chebyshev-distance">(3) 切比雪夫距离（Chebyshev distance）<a class="headerlink" href="#3-chebyshev-distance" title="Permanent link">&para;</a></h3>
 <p>在数学中，切比雪夫距离（Chebyshev distance）或是L∞度量，是向量空间中的一种度量，二个点之间的距离定义是其各坐标数值差绝对值的最大值。以数学的观点来看，切比雪夫距离是由一致范数（uniform norm）（或称为上确界范数）所衍生的度量，也是超凸度量（injective metric space）的一种。国际象棋玩过么？国王走一步能够移动到相邻的8个方格中的任意一个。那么国王从格子(x1,y1)走到格子(x2,y2)最少需要多少步？自己走走试试。你会发现最少步数总是max(| x2-x1 | , | y2-y1 | ) 步。有一种类似的一种距离度量方法叫切比雪夫距离。
 <strong>二维平面两点a(x1,y1)与b(x2,y2)间的切比雪夫距离</strong>
-<img alt="image.png" src="https://cdn.nlark.com/yuque/0/2021/png/1234840/1610589621136-69726a4a-69f9-4c48-bd6e-17fbd952c12f.png#align=left&amp;display=inline&amp;height=24&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=30&amp;originWidth=307&amp;size=9344&amp;status=done&amp;style=none&amp;width=246" /> 
+<img alt="image.png" src="https://cdn.nlark.com/yuque/0/2021/png/1234840/1610589621136-69726a4a-69f9-4c48-bd6e-17fbd952c12f.png#align=left&amp;display=inline&amp;height=24&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=30&amp;originWidth=307&amp;size=9344&amp;status=done&amp;style=none&amp;width=246" />
 两个n维向量a(x11,x12,…,x1n)与b(x21,x22,…,x2n)间的切比雪夫距离<img alt="image.png" src="https://cdn.nlark.com/yuque/0/2021/png/1234840/1610589581822-028afac6-7f31-4243-a853-8f82fb17b478.png#align=left&amp;display=inline&amp;height=29&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=31&amp;originWidth=211&amp;size=5724&amp;status=done&amp;style=none&amp;width=200" /> 这个公式的另一种等价形式是
-<img alt="" src="https://cdn.nlark.com/yuque/0/2021/webp/1234840/1610589499031-2d8765f4-ca64-4dc7-8053-c23f79d9c699.webp#align=left&amp;display=inline&amp;height=62&amp;margin=%5Bobject%20Object%5D&amp;originHeight=62&amp;originWidth=217&amp;size=0&amp;status=done&amp;style=none&amp;width=217" />       
+<img alt="" src="https://cdn.nlark.com/yuque/0/2021/webp/1234840/1610589499031-2d8765f4-ca64-4dc7-8053-c23f79d9c699.webp#align=left&amp;display=inline&amp;height=62&amp;margin=%5Bobject%20Object%5D&amp;originHeight=62&amp;originWidth=217&amp;size=0&amp;status=done&amp;style=none&amp;width=217" />
 看不出两个公式是等价的？提示一下：试试用放缩法和夹逼法则来证明。</p>
 <h3 id="3_10">(3) 曼哈顿距离<a class="headerlink" href="#3_10" title="Permanent link">&para;</a></h3>
 <p>二维平面两点a(x1,y1)与b(x2,y2)间的曼哈顿距离
@@ -13843,7 +13955,17 @@ solveLP(cvec,bvec,Amat,maximum=TRUE,const.dir)
 <h3 id="4_4">(4) 闵氏距离<a class="headerlink" href="#4_4" title="Permanent link">&para;</a></h3>
 <p>闵氏距离不是一种距离，而是一组距离的定义。两个n维变量a(x11,x12,…,x1n)与b(x21,x22,…,x2n)间的闵可夫斯基距离定义为：
 <img alt="" src="https://cdn.nlark.com/yuque/0/2021/webp/1234840/1610590149532-981f1e44-c862-4f16-b9fc-ff758144beba.webp#align=left&amp;display=inline&amp;height=131&amp;margin=%5Bobject%20Object%5D&amp;originHeight=83&amp;originWidth=169&amp;size=0&amp;status=done&amp;style=none&amp;width=266" />
-其中p是一个变参数。当p=1时，就是曼哈顿距离；当p=2时，就是欧氏距离；当p→∞时，就是切比雪夫距离 。    根据变参数的不同，闵氏距离可以表示一类的距离。闵氏距离，包括曼哈顿距离、欧氏距离和切比雪夫距离都存在明显的缺点。举个例子：二维样本(身高,体重)，其中身高范围是150<sub>190，体重范围是50</sub>60，有三个样本：a(180,50)，b(190,50)，c(180,60)。那么a与b之间的闵氏距离（无论是曼哈顿距离、欧氏距离或切比雪夫距离）等于a与c之间的闵氏距离，但是身高的10cm真的等价于体重的10kg么？因此用闵氏距离来衡量这些样本间的相似度很有问题。简单说来，闵氏距离的缺点主要有两个：以上将各个分量的量纲(scale)，也就是“单位”当作相同的看待了。(2)没有考虑各个分量的分布（期望，方差等)可能是不同的。</p>
+其中p是一个变参数。
+当p=1时，就是曼哈顿距离；
+当p=2时，就是欧氏距离；
+当p→∞时，就是切比雪夫距离 。
+    根据变参数的不同，闵氏距离可以表示一类的距离。
+闵氏距离，包括曼哈顿距离、欧氏距离和切比雪夫距离都存在明显的缺点。
+举个例子：二维样本(身高,体重)，其中身高范围是150<sub>190，体重范围是50</sub>60，有三个样本：a(180,50)，b(190,50)，c(180,60)。
+那么a与b之间的闵氏距离（无论是曼哈顿距离、欧氏距离或切比雪夫距离）等于a与c之间的闵氏距离，但是身高的10cm真的等价于体重的10kg么？
+因此用闵氏距离来衡量这些样本间的相似度很有问题。
+简单说来，闵氏距离的缺点主要有两个：以上将各个分量的量纲(scale)，也就是“单位”当作相同的看待了。
+(2)没有考虑各个分量的分布（期望，方差等)可能是不同的。</p>
 <h3 id="5_3">(5) 兰氏距离<a class="headerlink" href="#5_3" title="Permanent link">&para;</a></h3>
 <p>兰氏距离(Lance and Williams distance)堪培拉距离（Canberra Distance），被认为是曼哈顿距离的加权版本。其定义公式为：
 <img alt="image.png" src="https://cdn.nlark.com/yuque/0/2021/png/1234840/1610591330381-8ea65f3c-0056-41d3-bfbc-317824c1dea7.png#align=left&amp;display=inline&amp;height=75&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=75&amp;originWidth=273&amp;size=4435&amp;status=done&amp;style=none&amp;width=273" />
@@ -14037,7 +14159,12 @@ Step4 判别效果评价，一般要求判别函数的误判概率小于0.1或0
 然后利用class()函数将判别结果展示出来，该函数输出结果为1个列表，其中class、posterior和x三个子列表，分别表示分类结果，后验概率，由于输出量较大，故后面只展示20行记录。
 在测试数据集的75条记录中，75个样本分类正确。</p>
 <h2 id="6k">6.K最邻近判别<a class="headerlink" href="#6k" title="Permanent link">&para;</a></h2>
-<p>K最邻近(K-Nearest Neighbor,KNN)算法是一个理论上比较成熟的分类算法，也是最简单的分类算法之一。其基本思路是，如果一个样品在特征空间中与K个最邻近(或最相似)样品中的大多数属于某一个类别,则将该样品判为这个类别。KNN法在进行判别时，主要依靠样品周围若干邻近样品的信息，对于类域的交叉或重叠较多的待分类样品来说，分类效果通常比其他方法好。class包里的函数knn()可以实现KNN分类,在函数中需要输入训练集(train)、测试集(test)、训练集里样品的类别标签(cl)和邻近点的个数(k)等。下面以数据集iris为例说明函数knn()的使用方法。首先，建立训练集和测试集:
+<p>K最邻近(K-Nearest Neighbor,KNN)算法是一个理论上比较成熟的分类算法，也是最简单的分类算法之一。
+其基本思路是，如果一个样品在特征空间中与K个最邻近(或最相似)样品中的大多数属于某一个类别,则将该样品判为这个类别。
+KNN法在进行判别时，主要依靠样品周围若干邻近样品的信息，对于类域的交叉或重叠较多的待分类样品来说，分类效果通常比其他方法好。
+class包里的函数knn()可以实现KNN分类,在函数中需要输入训练集(train)、测试集(test)、训练集里样品的类别标签(cl)和邻近点的个数(k)等。
+下面以数据集iris为例说明函数knn()的使用方法。
+首先，建立训练集和测试集:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-98-1" name="__codelineno-98-1" href="#__codelineno-98-1"></a><span class="c1">##k最邻近判别</span>
 <a id="__codelineno-98-2" name="__codelineno-98-2" href="#__codelineno-98-2"></a><span class="nf">set.seed</span><span class="p">(</span><span class="m">1234</span><span class="p">)</span>
 <a id="__codelineno-98-3" name="__codelineno-98-3" href="#__codelineno-98-3"></a><span class="nf">nrow</span><span class="p">(</span><span class="n">iris</span><span class="p">)</span>
@@ -14067,7 +14194,14 @@ Step4 判别效果评价，一般要求判别函数的误判概率小于0.1或0
 与多元分析的其他方法相比，聚类分析是很粗糙的，理论尚不完善，但由于它成功地应用于心理、经济、社会、管理、医学、地质、生态、地震、气象、考古、企业决策等，因此成了多元分析的重要方法，统计包中都有丰富的软件，对数据进行聚类处理。
 聚类分析除了独立的统计功能外，还有一个辅助功能，就是和其他统计方法配合，对数据进行预处理。例如，当总体不清楚时，可对原始数据进行聚类，根据聚类后相似的数据，各自建立回归分析，分析的效果会更好。同时如果聚类不是根据个案，而是对变量先进行聚类，聚类的结果，可以在每一类推出一个最有代表性的变量，从而减少了进入回归方程的变量数。
 聚类分析是研究按一定特征，对研究对象进行分类的多元统计方法，它并不关心特征及变量间的因果关系。分类的结果，应使类别间个体差异大，而同类的个体差异相对要小。例如，同学间会自然地形成一些小圈子，圈子内的人际关系比较密切，分析其原因，可能是爱好、家庭背景、性格、学习成绩相近等，这种物以类聚、人以群分的现象，在社会生活中是普遍存在的。分类法也是人类认识自然的一种古老和基本的方法。不仅很多学科的发展是从分类开始，而且分类对学科还起到了关键作用。
-和聚类相近的，还有一种也是用于分类的统计分析方法，称判别分析，严格说，它不是分类方法，而是归类的方法。判别的分类，是根据外在事先导出的准则，分成了若干类别，然后将新的对象归入已知的类别。而聚类分析是所有研究的个案，它们之间的关系都是未知的，甚至连总共有几类都不知道。聚类分析是根据事物本身相似的程度进行分类的。但聚类分析与判别分析也可以是研究工作的两个阶段，首先通过样本的聚类，建立起科学的分类，然后，以此分类为依据，指导新的发现对象，判别它应该属于哪一类别。例如考古学家根据某地古人类颅骨的长、宽、高、额、鼻、眶、面、齿等22组指标，通过聚类分成了5类，这使以后发现的颅骨判别其属类有了依据。又如中国的传统医学，认为人的体质是不同的，同样的病症，对不同的体质，用药应有所不同，但为了弄清楚体质的不同，曾进行了近千人的调查，通过32个有关健康表相的问题，聚成了9类不同的体质，有了这9种体质的量表，可以准确地判别病人的体质，从而做到一人一方。所以在某些领域，如航空探矿、指纹识别、语音识别、文字识别等，判别分析的重要性与回归分析相当。
+和聚类相近的，还有一种也是用于分类的统计分析方法，称判别分析，严格说，它不是分类方法，而是归类的方法。
+判别的分类，是根据外在事先导出的准则，分成了若干类别，然后将新的对象归入已知的类别。
+而聚类分析是所有研究的个案，它们之间的关系都是未知的，甚至连总共有几类都不知道。
+聚类分析是根据事物本身相似的程度进行分类的。
+但聚类分析与判别分析也可以是研究工作的两个阶段，首先通过样本的聚类，建立起科学的分类，然后，以此分类为依据，指导新的发现对象，判别它应该属于哪一类别。
+例如考古学家根据某地古人类颅骨的长、宽、高、额、鼻、眶、面、齿等22组指标，通过聚类分成了5类，这使以后发现的颅骨判别其属类有了依据。
+又如中国的传统医学，认为人的体质是不同的，同样的病症，对不同的体质，用药应有所不同，但为了弄清楚体质的不同，曾进行了近千人的调查，通过32个有关健康表相的问题，聚成了9类不同的体质，有了这9种体质的量表，可以准确地判别病人的体质，从而做到一人一方。
+所以在某些领域，如航空探矿、指纹识别、语音识别、文字识别等，判别分析的重要性与回归分析相当。
 聚类分析之所以称作统计方法，是因为这些计算方法往往要用到统计学中的一些基本概念，如平均值、方差、相关系数等。但是聚类所处理的数据并不是统计意义下的样本，一般不要求随机抽样，研究结论也不要求外推，不涉及显著性检验等问题。
  聚类是将数据分类到不同的类或者簇这样的一个过程，所以同一个簇中的对象有很大的相似性，而不同簇间的对象有很大的相异性。从统计学的观点看，聚类分析是通过数据建模简化数据的一种方法。传统的统计聚类分析方法包括系统聚类法、分解法、加入法、动态聚类法、有序样品聚类、有重叠聚类和模糊聚类等。采用k-均值、k-中心点等算法的聚类分析工具已被加入到许多著名的统计分析软件包中，如SPSS、SAS等。按数据量大小，聚类分成两种：</p>
 <h3 id="1_26">(1) 小数据集用系统聚类法<a class="headerlink" href="#1_26" title="Permanent link">&para;</a></h3>
@@ -14141,20 +14275,20 @@ Step4 判别效果评价，一般要求判别函数的误判概率小于0.1或0
 <a id="__codelineno-101-10" name="__codelineno-101-10" href="#__codelineno-101-10"></a><span class="m">5</span><span class="w">  </span><span class="m">1.329</span><span class="w"> </span><span class="m">-0.0588</span><span class="w">  </span><span class="m">1.367</span><span class="w">  </span><span class="m">-0.451</span><span class="w">  </span><span class="m">0.0383</span>
 <a id="__codelineno-101-11" name="__codelineno-101-11" href="#__codelineno-101-11"></a>
 <a id="__codelineno-101-12" name="__codelineno-101-12" href="#__codelineno-101-12"></a><span class="n">Clustering</span><span class="w"> </span><span class="n">vector</span><span class="o">:</span>
-<a id="__codelineno-101-13" name="__codelineno-101-13" href="#__codelineno-101-13"></a><span class="w">       </span><span class="n">beef</span><span class="w"> </span><span class="n">braised</span><span class="w">           </span><span class="n">hamburger</span><span class="w">          </span><span class="n">beef</span><span class="w"> </span><span class="n">roast</span><span class="w">          </span><span class="n">beef</span><span class="w"> </span><span class="n">steak</span><span class="w"> </span>
-<a id="__codelineno-101-14" name="__codelineno-101-14" href="#__codelineno-101-14"></a><span class="w">                  </span><span class="m">5</span><span class="w">                   </span><span class="m">2</span><span class="w">                   </span><span class="m">5</span><span class="w">                   </span><span class="m">5</span><span class="w"> </span>
-<a id="__codelineno-101-15" name="__codelineno-101-15" href="#__codelineno-101-15"></a><span class="w">        </span><span class="n">beef</span><span class="w"> </span><span class="n">canned</span><span class="w">     </span><span class="n">chicken</span><span class="w"> </span><span class="n">broiled</span><span class="w">      </span><span class="n">chicken</span><span class="w"> </span><span class="n">canned</span><span class="w">          </span><span class="n">beef</span><span class="w"> </span><span class="n">heart</span><span class="w"> </span>
-<a id="__codelineno-101-16" name="__codelineno-101-16" href="#__codelineno-101-16"></a><span class="w">                  </span><span class="m">2</span><span class="w">                   </span><span class="m">1</span><span class="w">                   </span><span class="m">2</span><span class="w">                   </span><span class="m">2</span><span class="w"> </span>
-<a id="__codelineno-101-17" name="__codelineno-101-17" href="#__codelineno-101-17"></a><span class="w">     </span><span class="n">lamb</span><span class="w"> </span><span class="n">leg</span><span class="w"> </span><span class="n">roast</span><span class="w"> </span><span class="n">lamb</span><span class="w"> </span><span class="n">shoulder</span><span class="w"> </span><span class="n">roast</span><span class="w">          </span><span class="n">smoked</span><span class="w"> </span><span class="n">ham</span><span class="w">          </span><span class="n">pork</span><span class="w"> </span><span class="n">roast</span><span class="w"> </span>
-<a id="__codelineno-101-18" name="__codelineno-101-18" href="#__codelineno-101-18"></a><span class="w">                  </span><span class="m">5</span><span class="w">                   </span><span class="m">5</span><span class="w">                   </span><span class="m">5</span><span class="w">                   </span><span class="m">5</span><span class="w"> </span>
-<a id="__codelineno-101-19" name="__codelineno-101-19" href="#__codelineno-101-19"></a><span class="w">      </span><span class="n">pork</span><span class="w"> </span><span class="n">simmered</span><span class="w">         </span><span class="n">beef</span><span class="w"> </span><span class="n">tongue</span><span class="w">         </span><span class="n">veal</span><span class="w"> </span><span class="n">cutlet</span><span class="w">      </span><span class="n">bluefish</span><span class="w"> </span><span class="n">baked</span><span class="w"> </span>
-<a id="__codelineno-101-20" name="__codelineno-101-20" href="#__codelineno-101-20"></a><span class="w">                  </span><span class="m">5</span><span class="w">                   </span><span class="m">2</span><span class="w">                   </span><span class="m">2</span><span class="w">                   </span><span class="m">1</span><span class="w"> </span>
-<a id="__codelineno-101-21" name="__codelineno-101-21" href="#__codelineno-101-21"></a><span class="w">          </span><span class="n">clams</span><span class="w"> </span><span class="n">raw</span><span class="w">        </span><span class="n">clams</span><span class="w"> </span><span class="n">canned</span><span class="w">     </span><span class="n">crabmeat</span><span class="w"> </span><span class="n">canned</span><span class="w">       </span><span class="n">haddock</span><span class="w"> </span><span class="n">fried</span><span class="w"> </span>
-<a id="__codelineno-101-22" name="__codelineno-101-22" href="#__codelineno-101-22"></a><span class="w">                  </span><span class="m">3</span><span class="w">                   </span><span class="m">3</span><span class="w">                   </span><span class="m">1</span><span class="w">                   </span><span class="m">1</span><span class="w"> </span>
-<a id="__codelineno-101-23" name="__codelineno-101-23" href="#__codelineno-101-23"></a><span class="w">   </span><span class="n">mackerel</span><span class="w"> </span><span class="n">broiled</span><span class="w">     </span><span class="n">mackerel</span><span class="w"> </span><span class="n">canned</span><span class="w">         </span><span class="n">perch</span><span class="w"> </span><span class="n">fried</span><span class="w">       </span><span class="n">salmon</span><span class="w"> </span><span class="n">canned</span><span class="w"> </span>
-<a id="__codelineno-101-24" name="__codelineno-101-24" href="#__codelineno-101-24"></a><span class="w">                  </span><span class="m">1</span><span class="w">                   </span><span class="m">1</span><span class="w">                   </span><span class="m">1</span><span class="w">                   </span><span class="m">1</span><span class="w"> </span>
-<a id="__codelineno-101-25" name="__codelineno-101-25" href="#__codelineno-101-25"></a><span class="w">    </span><span class="n">sardines</span><span class="w"> </span><span class="n">canned</span><span class="w">         </span><span class="n">tuna</span><span class="w"> </span><span class="n">canned</span><span class="w">       </span><span class="n">shrimp</span><span class="w"> </span><span class="n">canned</span><span class="w"> </span>
-<a id="__codelineno-101-26" name="__codelineno-101-26" href="#__codelineno-101-26"></a><span class="w">                  </span><span class="m">4</span><span class="w">                   </span><span class="m">2</span><span class="w">                   </span><span class="m">2</span><span class="w"> </span>
+<a id="__codelineno-101-13" name="__codelineno-101-13" href="#__codelineno-101-13"></a><span class="w">       </span><span class="n">beef</span><span class="w"> </span><span class="n">braised</span><span class="w">           </span><span class="n">hamburger</span><span class="w">          </span><span class="n">beef</span><span class="w"> </span><span class="n">roast</span><span class="w">          </span><span class="n">beef</span><span class="w"> </span><span class="n">steak</span>
+<a id="__codelineno-101-14" name="__codelineno-101-14" href="#__codelineno-101-14"></a><span class="w">                  </span><span class="m">5</span><span class="w">                   </span><span class="m">2</span><span class="w">                   </span><span class="m">5</span><span class="w">                   </span><span class="m">5</span>
+<a id="__codelineno-101-15" name="__codelineno-101-15" href="#__codelineno-101-15"></a><span class="w">        </span><span class="n">beef</span><span class="w"> </span><span class="n">canned</span><span class="w">     </span><span class="n">chicken</span><span class="w"> </span><span class="n">broiled</span><span class="w">      </span><span class="n">chicken</span><span class="w"> </span><span class="n">canned</span><span class="w">          </span><span class="n">beef</span><span class="w"> </span><span class="n">heart</span>
+<a id="__codelineno-101-16" name="__codelineno-101-16" href="#__codelineno-101-16"></a><span class="w">                  </span><span class="m">2</span><span class="w">                   </span><span class="m">1</span><span class="w">                   </span><span class="m">2</span><span class="w">                   </span><span class="m">2</span>
+<a id="__codelineno-101-17" name="__codelineno-101-17" href="#__codelineno-101-17"></a><span class="w">     </span><span class="n">lamb</span><span class="w"> </span><span class="n">leg</span><span class="w"> </span><span class="n">roast</span><span class="w"> </span><span class="n">lamb</span><span class="w"> </span><span class="n">shoulder</span><span class="w"> </span><span class="n">roast</span><span class="w">          </span><span class="n">smoked</span><span class="w"> </span><span class="n">ham</span><span class="w">          </span><span class="n">pork</span><span class="w"> </span><span class="n">roast</span>
+<a id="__codelineno-101-18" name="__codelineno-101-18" href="#__codelineno-101-18"></a><span class="w">                  </span><span class="m">5</span><span class="w">                   </span><span class="m">5</span><span class="w">                   </span><span class="m">5</span><span class="w">                   </span><span class="m">5</span>
+<a id="__codelineno-101-19" name="__codelineno-101-19" href="#__codelineno-101-19"></a><span class="w">      </span><span class="n">pork</span><span class="w"> </span><span class="n">simmered</span><span class="w">         </span><span class="n">beef</span><span class="w"> </span><span class="n">tongue</span><span class="w">         </span><span class="n">veal</span><span class="w"> </span><span class="n">cutlet</span><span class="w">      </span><span class="n">bluefish</span><span class="w"> </span><span class="n">baked</span>
+<a id="__codelineno-101-20" name="__codelineno-101-20" href="#__codelineno-101-20"></a><span class="w">                  </span><span class="m">5</span><span class="w">                   </span><span class="m">2</span><span class="w">                   </span><span class="m">2</span><span class="w">                   </span><span class="m">1</span>
+<a id="__codelineno-101-21" name="__codelineno-101-21" href="#__codelineno-101-21"></a><span class="w">          </span><span class="n">clams</span><span class="w"> </span><span class="n">raw</span><span class="w">        </span><span class="n">clams</span><span class="w"> </span><span class="n">canned</span><span class="w">     </span><span class="n">crabmeat</span><span class="w"> </span><span class="n">canned</span><span class="w">       </span><span class="n">haddock</span><span class="w"> </span><span class="n">fried</span>
+<a id="__codelineno-101-22" name="__codelineno-101-22" href="#__codelineno-101-22"></a><span class="w">                  </span><span class="m">3</span><span class="w">                   </span><span class="m">3</span><span class="w">                   </span><span class="m">1</span><span class="w">                   </span><span class="m">1</span>
+<a id="__codelineno-101-23" name="__codelineno-101-23" href="#__codelineno-101-23"></a><span class="w">   </span><span class="n">mackerel</span><span class="w"> </span><span class="n">broiled</span><span class="w">     </span><span class="n">mackerel</span><span class="w"> </span><span class="n">canned</span><span class="w">         </span><span class="n">perch</span><span class="w"> </span><span class="n">fried</span><span class="w">       </span><span class="n">salmon</span><span class="w"> </span><span class="n">canned</span>
+<a id="__codelineno-101-24" name="__codelineno-101-24" href="#__codelineno-101-24"></a><span class="w">                  </span><span class="m">1</span><span class="w">                   </span><span class="m">1</span><span class="w">                   </span><span class="m">1</span><span class="w">                   </span><span class="m">1</span>
+<a id="__codelineno-101-25" name="__codelineno-101-25" href="#__codelineno-101-25"></a><span class="w">    </span><span class="n">sardines</span><span class="w"> </span><span class="n">canned</span><span class="w">         </span><span class="n">tuna</span><span class="w"> </span><span class="n">canned</span><span class="w">       </span><span class="n">shrimp</span><span class="w"> </span><span class="n">canned</span>
+<a id="__codelineno-101-26" name="__codelineno-101-26" href="#__codelineno-101-26"></a><span class="w">                  </span><span class="m">4</span><span class="w">                   </span><span class="m">2</span><span class="w">                   </span><span class="m">2</span>
 <a id="__codelineno-101-27" name="__codelineno-101-27" href="#__codelineno-101-27"></a>
 <a id="__codelineno-101-28" name="__codelineno-101-28" href="#__codelineno-101-28"></a><span class="n">Within</span><span class="w"> </span><span class="n">cluster</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">squares</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">cluster</span><span class="o">:</span>
 <a id="__codelineno-101-29" name="__codelineno-101-29" href="#__codelineno-101-29"></a><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">10.203</span><span class="w"> </span><span class="m">13.043</span><span class="w">  </span><span class="m">0.563</span><span class="w">  </span><span class="m">0.000</span><span class="w">  </span><span class="m">4.336</span>
@@ -14163,7 +14297,7 @@ Step4 判别效果评价，一般要求判别函数的误判概率小于0.1或0
 <a id="__codelineno-101-32" name="__codelineno-101-32" href="#__codelineno-101-32"></a><span class="n">Available</span><span class="w"> </span><span class="n">components</span><span class="o">:</span>
 <a id="__codelineno-101-33" name="__codelineno-101-33" href="#__codelineno-101-33"></a>
 <a id="__codelineno-101-34" name="__codelineno-101-34" href="#__codelineno-101-34"></a><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">"cluster"</span><span class="w">      </span><span class="s">"centers"</span><span class="w">      </span><span class="s">"totss"</span><span class="w">        </span><span class="s">"withinss"</span><span class="w">     </span><span class="s">"tot.withinss"</span>
-<a id="__codelineno-101-35" name="__codelineno-101-35" href="#__codelineno-101-35"></a><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="w"> </span><span class="s">"betweenss"</span><span class="w">    </span><span class="s">"size"</span><span class="w">         </span><span class="s">"iter"</span><span class="w">         </span><span class="s">"ifault"</span><span class="w">      </span>
+<a id="__codelineno-101-35" name="__codelineno-101-35" href="#__codelineno-101-35"></a><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="w"> </span><span class="s">"betweenss"</span><span class="w">    </span><span class="s">"size"</span><span class="w">         </span><span class="s">"iter"</span><span class="w">         </span><span class="s">"ifault"</span>
 <a id="__codelineno-101-36" name="__codelineno-101-36" href="#__codelineno-101-36"></a><span class="n">BioinfoNotes</span><span class="w"> </span><span class="o">@</span>
 </code></pre></div>
 <strong>K-means clustering with 5 clusters of sizes 8, 8, 2, 1, 8</strong> 表示聚成5类的各类样本数，<strong>Within cluster sum of squares by cluster</strong>是各类别的组内评分和，括号中表示组间平方和占中平方和的78.3%，值越大，表明组内差距越小，组间差异越大，说明聚类结果越好。
@@ -14187,7 +14321,7 @@ Step4 判别效果评价，一般要求判别函数的误判概率小于0.1或0
 <img alt="image.png" src="https://cdn.nlark.com/yuque/0/2021/png/1234840/1610693216195-47c4b6bd-3e7c-477b-a809-e624a9a31147.png#align=left&amp;display=inline&amp;height=281&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=562&amp;originWidth=625&amp;size=19687&amp;status=done&amp;style=none&amp;width=312.5" />
 k-means聚类算法容易受到异常值的影响，因此有时候需要理由k-medoids聚类算法替代，k-medoids聚类算法与k-means聚类算法的原理基本一致，不同之处在于原始的k-means聚类算法容易受到异常值的影响，k-medoids聚类算法则针对该缺点进行改进，在确定各类质点时不采样本均值点，而在类别内选取到其他样本点距离之和最小的样本作为质心点。在R语言中,用于实现k-medoids聚类的函数为pam(),该函数存储在R包cluser中，其函数的基本书写格式为:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-104-1" name="__codelineno-104-1" href="#__codelineno-104-1"></a><span class="nf">pam</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">diss</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">inherits</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="s">"dist"</span><span class="p">),</span>
-<a id="__codelineno-104-2" name="__codelineno-104-2" href="#__codelineno-104-2"></a><span class="w">    </span><span class="n">metric</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"euclidean"</span><span class="p">,</span><span class="w"> </span><span class="s">"manhattan"</span><span class="p">),</span><span class="w"> </span>
+<a id="__codelineno-104-2" name="__codelineno-104-2" href="#__codelineno-104-2"></a><span class="w">    </span><span class="n">metric</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"euclidean"</span><span class="p">,</span><span class="w"> </span><span class="s">"manhattan"</span><span class="p">),</span>
 <a id="__codelineno-104-3" name="__codelineno-104-3" href="#__codelineno-104-3"></a><span class="w">    </span><span class="n">medoids</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">stand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">cluster.only</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span>
 <a id="__codelineno-104-4" name="__codelineno-104-4" href="#__codelineno-104-4"></a><span class="w">    </span><span class="n">do.swap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span>
 <a id="__codelineno-104-5" name="__codelineno-104-5" href="#__codelineno-104-5"></a><span class="w">    </span><span class="n">keep.diss</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="n">diss</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">cluster.only</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">100</span><span class="p">,</span>
@@ -14318,11 +14452,11 @@ k-means聚类算法容易受到异常值的影响，因此有时候需要理由k
 <img alt="image.png" src="https://cdn.nlark.com/yuque/0/2021/png/1234840/1610697793251-1ca7fe9f-ae22-471b-9c10-3758feb8b1d5.png#align=left&amp;display=inline&amp;height=275&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=438&amp;originWidth=1189&amp;size=67437&amp;status=done&amp;style=none&amp;width=746" />
 下面是用马氏距离计算样品间的聚类，并用离差平方和法进行层次聚类。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-113-1" name="__codelineno-113-1" href="#__codelineno-113-1"></a><span class="n">dist.ma</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-113-2" name="__codelineno-113-2" href="#__codelineno-113-2"></a><span class="w">   </span><span class="n">X</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.matrix</span><span class="p">(</span><span class="nf">na.omit</span><span class="p">(</span><span class="n">data</span><span class="p">))</span><span class="w"> </span>
-<a id="__codelineno-113-3" name="__codelineno-113-3" href="#__codelineno-113-3"></a><span class="w">   </span><span class="n">V</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">cov</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-113-4" name="__codelineno-113-4" href="#__codelineno-113-4"></a><span class="w">   </span><span class="n">L</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">t</span><span class="p">(</span><span class="nf">chol</span><span class="p">(</span><span class="n">V</span><span class="p">))</span><span class="w">  </span>
-<a id="__codelineno-113-5" name="__codelineno-113-5" href="#__codelineno-113-5"></a><span class="w">   </span><span class="n">stdX</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">t</span><span class="p">(</span><span class="nf">forwardsolve</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="nf">t</span><span class="p">(</span><span class="n">X</span><span class="p">)))</span><span class="w"> </span>
-<a id="__codelineno-113-6" name="__codelineno-113-6" href="#__codelineno-113-6"></a><span class="w">   </span><span class="n">d</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">dist</span><span class="p">(</span><span class="n">stdX</span><span class="p">)</span><span class="w">  </span>
+<a id="__codelineno-113-2" name="__codelineno-113-2" href="#__codelineno-113-2"></a><span class="w">   </span><span class="n">X</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.matrix</span><span class="p">(</span><span class="nf">na.omit</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+<a id="__codelineno-113-3" name="__codelineno-113-3" href="#__codelineno-113-3"></a><span class="w">   </span><span class="n">V</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">cov</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<a id="__codelineno-113-4" name="__codelineno-113-4" href="#__codelineno-113-4"></a><span class="w">   </span><span class="n">L</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">t</span><span class="p">(</span><span class="nf">chol</span><span class="p">(</span><span class="n">V</span><span class="p">))</span>
+<a id="__codelineno-113-5" name="__codelineno-113-5" href="#__codelineno-113-5"></a><span class="w">   </span><span class="n">stdX</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">t</span><span class="p">(</span><span class="nf">forwardsolve</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="nf">t</span><span class="p">(</span><span class="n">X</span><span class="p">)))</span>
+<a id="__codelineno-113-6" name="__codelineno-113-6" href="#__codelineno-113-6"></a><span class="w">   </span><span class="n">d</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">dist</span><span class="p">(</span><span class="n">stdX</span><span class="p">)</span>
 <a id="__codelineno-113-7" name="__codelineno-113-7" href="#__codelineno-113-7"></a><span class="w">   </span><span class="nf">attr</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="w"> </span><span class="s">"Labels"</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">row.names</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <a id="__codelineno-113-8" name="__codelineno-113-8" href="#__codelineno-113-8"></a><span class="w">   </span><span class="n">d</span>
 <a id="__codelineno-113-9" name="__codelineno-113-9" href="#__codelineno-113-9"></a><span class="p">}</span>
@@ -14357,7 +14491,7 @@ k-means聚类算法容易受到异常值的影响，因此有时候需要理由k
 <a id="__codelineno-116-3" name="__codelineno-116-3" href="#__codelineno-116-3"></a><span class="w">              </span><span class="m">0.671</span><span class="p">,</span><span class="w"> </span><span class="m">0.636</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0.153</span><span class="p">,</span><span class="w"> </span><span class="m">0.233</span><span class="p">,</span><span class="w"> </span><span class="m">0.252</span><span class="p">,</span>
 <a id="__codelineno-116-4" name="__codelineno-116-4" href="#__codelineno-116-4"></a><span class="w">              </span><span class="m">0.099</span><span class="p">,</span><span class="w"> </span><span class="m">0.055</span><span class="p">,</span><span class="w"> </span><span class="m">0.153</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0.732</span><span class="p">,</span><span class="w"> </span><span class="m">0.627</span><span class="p">,</span>
 <a id="__codelineno-116-5" name="__codelineno-116-5" href="#__codelineno-116-5"></a><span class="w">              </span><span class="m">0.234</span><span class="p">,</span><span class="w"> </span><span class="m">0.174</span><span class="p">,</span><span class="w"> </span><span class="m">0.233</span><span class="p">,</span><span class="w"> </span><span class="m">0.732</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0.676</span><span class="p">,</span>
-<a id="__codelineno-116-6" name="__codelineno-116-6" href="#__codelineno-116-6"></a><span class="w">              </span><span class="m">0.376</span><span class="p">,</span><span class="w"> </span><span class="m">0.321</span><span class="p">,</span><span class="w"> </span><span class="m">0.252</span><span class="p">,</span><span class="w"> </span><span class="m">0.627</span><span class="p">,</span><span class="w"> </span><span class="m">0.676</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">),</span><span class="w"> </span>
+<a id="__codelineno-116-6" name="__codelineno-116-6" href="#__codelineno-116-6"></a><span class="w">              </span><span class="m">0.376</span><span class="p">,</span><span class="w"> </span><span class="m">0.321</span><span class="p">,</span><span class="w"> </span><span class="m">0.252</span><span class="p">,</span><span class="w"> </span><span class="m">0.627</span><span class="p">,</span><span class="w"> </span><span class="m">0.676</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">),</span>
 <a id="__codelineno-116-7" name="__codelineno-116-7" href="#__codelineno-116-7"></a><span class="w">            </span><span class="n">nr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="p">,</span>
 <a id="__codelineno-116-8" name="__codelineno-116-8" href="#__codelineno-116-8"></a><span class="w">            </span><span class="n">dimnames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">"身高"</span><span class="p">,</span><span class="w"> </span><span class="s">"下肢长"</span><span class="p">,</span><span class="w"> </span><span class="s">"手臂长"</span><span class="p">,</span><span class="w"> </span><span class="s">"腰围"</span><span class="p">,</span><span class="w"> </span><span class="s">"胸围"</span><span class="p">,</span><span class="w"> </span><span class="s">"臀围"</span><span class="p">)))</span>
 <a id="__codelineno-116-9" name="__codelineno-116-9" href="#__codelineno-116-9"></a><span class="n">d</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.dist</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">R</span><span class="p">)</span>
@@ -14369,7 +14503,16 @@ k-means聚类算法容易受到异常值的影响，因此有时候需要理由k
 <h1 id="_10">十一.决策树<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h1>
 <h2 id="1_28">1.基础概念<a class="headerlink" href="#1_28" title="Permanent link">&para;</a></h2>
 <h3 id="1_29">(1) 信息熵<a class="headerlink" href="#1_29" title="Permanent link">&para;</a></h3>
-<p>信息是个很抽象的概念。人们常常说信息很多，或者信息较少，但却很难说清楚信息到底有多少。比如一本五十万字的中文书到底有多少信息量。直到1948年，香农提出了“信息熵”的概念，才解决了对信息的量化度量问题。信息熵这个词是C.E.Shannon（香农）从热力学中借用过来的。热力学中的热熵是表示分子状态混乱程度的物理量。香农用信息熵的概念来描述信源的不确定度。机器学习中，绕不开的一个概念就是<strong>熵 (Entropy)</strong>，<strong>信息熵</strong>。信息熵常被用来作为一个系统的信息含量的量化指标，从而可以进一步用来作为系统方程优化的目标或者参数选择的判据。在决策树的生成过程中，就使用了熵来作为样本最优属性划分的判据。
+<p>信息是个很抽象的概念。
+人们常常说信息很多，或者信息较少，但却很难说清楚信息到底有多少。
+比如一本五十万字的中文书到底有多少信息量。
+直到1948年，香农提出了“信息熵”的概念，才解决了对信息的量化度量问题。
+信息熵这个词是C.E.Shannon（香农）从热力学中借用过来的。
+热力学中的热熵是表示分子状态混乱程度的物理量。
+香农用信息熵的概念来描述信源的不确定度。
+机器学习中，绕不开的一个概念就是<strong>熵 (Entropy)</strong>，<strong>信息熵</strong>。
+信息熵常被用来作为一个系统的信息含量的量化指标，从而可以进一步用来作为系统方程优化的目标或者参数选择的判据。
+在决策树的生成过程中，就使用了熵来作为样本最优属性划分的判据。
 通常，一个信源发送出什么符号是不确定的，衡量它可以根据其出现的概率来度量。概率大，出现机会多，不确定性小；反之不确定性就大。
 不确定性函数f是概率P的减函数；两个独立符号所产生的不确定性应等于各自不确定性之和，即f(PP)=f(P)+f(P)，这称为可加性。同时满足这两个条件的函数f是对数函数，即
 <img alt="" src="https://cdn.nlark.com/yuque/0/2021/svg/1234840/1611026576627-51d9ee7f-5d4e-42e9-90dd-0cd887922d90.svg#align=left&amp;display=inline&amp;height=60&amp;margin=%5Bobject%20Object%5D&amp;originHeight=50&amp;originWidth=212&amp;size=0&amp;status=done&amp;style=none&amp;width=256" />
@@ -14471,7 +14614,7 @@ k-means聚类算法容易受到异常值的影响，因此有时候需要理由k
 信息增益的算法步骤：
 输入：训练数据集D和特征A；</p>
 <p>输出：特征A对训练数据集D的信息增益g(D,A)</p>
-<p>计算数据集D的经验熵H(D) </p>
+<p>计算数据集D的经验熵H(D)</p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2021/png/1234840/1611041540586-221b02df-7237-472e-a8c3-f5a04edbdb7e.png#align=left&amp;display=inline&amp;height=48&amp;margin=%5Bobject%20Object%5D&amp;originHeight=81&amp;originWidth=328&amp;size=0&amp;status=done&amp;style=none&amp;width=195" />
 计算特征A对数据集D的经验条件熵H(D|A)
                <img alt="" src="https://cdn.nlark.com/yuque/0/2021/png/1234840/1611041540598-4358d28f-ac1d-4b57-b331-1c2897f157ee.png#align=left&amp;display=inline&amp;height=51&amp;margin=%5Bobject%20Object%5D&amp;originHeight=79&amp;originWidth=599&amp;size=0&amp;status=done&amp;style=none&amp;width=387" />

@@ -9487,100 +9487,100 @@
 
 
 <h1 id="_1">基因表达差异分析<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p><font style="color:#000000;">参考文章【</font><a href="https://mp.weixin.qq.com/s/e05YajG5nR5HhVC1xxisOA"><u>一文就会TCGA数据库基因表达差异分析</u></a><font style="color:#000000;">】。视频可去B站：</font><a href="https://www.bilibili.com/video/BV117411Z7Cq"><u>https://www.bilibili.com/video/BV117411Z7Cq</u></a><font style="color:#000000;"> ，</font></p>
+<p>参考文章【<a href="https://mp.weixin.qq.com/s/e05YajG5nR5HhVC1xxisOA"><u>一文就会TCGA数据库基因表达差异分析</u></a>】。视频可去B站：<a href="https://www.bilibili.com/video/BV117411Z7Cq"><u>https://www.bilibili.com/video/BV117411Z7Cq</u></a> ，</p>
 <p><img alt="1612531756791-50a45664-0956-49db-89ef-f6d700417f38.png" src="../img/l9nebAoHw7GO7UOY/1612531756791-50a45664-0956-49db-89ef-f6d700417f38-226307.png" /></p>
-<p><font style="color:#000000;">如果二维码失效，后台回复：TCGA-20200313，获取。提取码：0uvi百度网盘，如果下载慢，或者保存超过文件个数，你可以只下载R代码，其</font><font style="color:#000000;">他的按照视频教程来。</font></p>
-<p><font style="color:#000000;">你需要参考文章：超详细的</font><a href="https://mp.weixin.qq.com/s/CtKlpDgtNs3f2NXaoulD5Q"><u>DESeq2和edgeR包的基本原理和实战案例</u></a></p>
-<p><font style="color:#000000;">案列数据下载链接：</font><a href="https://pan.baidu.com/s/1HcAdYficX7rjq62mTixL1Q"><u>https://pan.baidu.com/s/1HcAdYficX7rjq62mTixL1Q</u></a><font style="color:#000000;">  提取码：1n3u。这个数据包括了FPKM和counts的。</font></p>
+<p>如果二维码失效，后台回复：TCGA-20200313，获取。提取码：0uvi百度网盘，如果下载慢，或者保存超过文件个数，你可以只下载R代码，其他的按照视频教程来。</p>
+<p>你需要参考文章：超详细的<a href="https://mp.weixin.qq.com/s/CtKlpDgtNs3f2NXaoulD5Q"><u>DESeq2和edgeR包的基本原理和实战案例</u></a></p>
+<p>案列数据下载链接：<a href="https://pan.baidu.com/s/1HcAdYficX7rjq62mTixL1Q"><u>https://pan.baidu.com/s/1HcAdYficX7rjq62mTixL1Q</u></a>  提取码：1n3u。这个数据包括了FPKM和counts的。</p>
 <p><img alt="1612531569515-27398f06-a0ba-4a41-a1a2-b903200fe091.png" src="../img/l9nebAoHw7GO7UOY/1612531569515-27398f06-a0ba-4a41-a1a2-b903200fe091-720973.png" /></p>
-<p><font style="color:#000000;">你只需要下载红框中的数据。</font></p>
-<p><font style="color:#000000;">网盘gtf文件下载链接：</font><a href="https://pan.baidu.com/s/1Tx5DD2zztdKG_gt-r9SP2A"><u>https://pan.baidu.com/s/1Tx5DD2zztdKG_gt-r9SP2A </u></a></p>
-<p><font style="color:#000000;">提取码：hy9w</font></p>
-<p><font style="color:#000000;">很多人在代码1.0中运行</font></p>
+<p>你只需要下载红框中的数据。</p>
+<p>网盘gtf文件下载链接：<a href="https://pan.baidu.com/s/1Tx5DD2zztdKG_gt-r9SP2A"><u>https://pan.baidu.com/s/1Tx5DD2zztdKG_gt-r9SP2A </u></a></p>
+<p>提取码：hy9w</p>
+<p>很多人在代码1.0中运行</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Counts&lt;- data.frame(c(LUAD_Counts_expMatrix[,dataSmNT],LUAD_Counts_expMatrix[,dataSmTP]))
 </code></pre></div>
-<p><font style="color:#000000;">的时候发现，有未定义的列，那是因为TCGAbiolinks包请求的数据可能和你手动下载的数据可能有那么几个病人不在网页下载的数据中。TCGAbiolinks下载的数据好像的确不是很全，再加上这个包现在好像很多函数已经无法使用，我不知道现在更新没。所以区分正常样本和肿瘤样本可以用代码文件：dl.barcode.R，这也是在2.0或者3.0的代码中。为了进一步简化。3.0的代码更为简便，没有视频中的很多步骤。</font></p>
+<p>的时候发现，有未定义的列，那是因为TCGAbiolinks包请求的数据可能和你手动下载的数据可能有那么几个病人不在网页下载的数据中。TCGAbiolinks下载的数据好像的确不是很全，再加上这个包现在好像很多函数已经无法使用，我不知道现在更新没。所以区分正常样本和肿瘤样本可以用代码文件：dl.barcode.R，这也是在2.0或者3.0的代码中。为了进一步简化。3.0的代码更为简便，没有视频中的很多步骤。</p>
 <hr />
 <hr />
 <h1 id="_2"><strong>基因表达差异分析</strong><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
 <h1 id="_3"><strong>一.数据下载</strong><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
-<p><font style="color:#000000;">利用R包下载可参考下面2篇文章：</font></p>
+<p>利用R包下载可参考下面2篇文章：</p>
 <p><a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263886&amp;idx=1&amp;sn=1c433a1b2144328a52c0d2d8af5c35ff&amp;scene=19#wechat_redirect"><u>1.TCGA数据挖掘（一）：TCGAbiolinks包介绍</u></a></p>
-<p><font style="color:#000000;">2</font><a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263287&amp;idx=1&amp;sn=6194d0824e8883145508b1b1b92b1227&amp;chksm=841ef54ab3697c5cde3e28c0872685f1b60106add95129f77c2a9553804d0d896788cf9a2c6d&amp;scene=21#wechat_redirect"><u>.R语言TCGA-Assembler包下载TCGA数据</u></a></p>
-<p><font style="color:#000000;">关于利用R包下载，我主要用过TCGAbiolinks和GDCRNATools，但是这2个包有些函数现在好像有些问题，所以这部分你自己关注，</font><font style="color:#FF0000;">这里主要是自己下载后从头整理，只需要关注官网在线下载部分。</font><font style="color:#000000;">主要是让大家知道细节是一个怎么回事。</font></p>
+<p>2<a href="https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651263287&amp;idx=1&amp;sn=6194d0824e8883145508b1b1b92b1227&amp;chksm=841ef54ab3697c5cde3e28c0872685f1b60106add95129f77c2a9553804d0d896788cf9a2c6d&amp;scene=21#wechat_redirect"><u>.R语言TCGA-Assembler包下载TCGA数据</u></a></p>
+<p>关于利用R包下载，我主要用过TCGAbiolinks和GDCRNATools，但是这2个包有些函数现在好像有些问题，所以这部分你自己关注，这里主要是自己下载后从头整理，只需要关注官网在线下载部分。主要是让大家知道细节是一个怎么回事。</p>
 <p><img alt="1612531569090-528873b5-59c6-492e-bc51-d5dff415dbf5.png" src="../img/l9nebAoHw7GO7UOY/1612531569090-528873b5-59c6-492e-bc51-d5dff415dbf5-004059.png" /></p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">Label</font></th>
-<th style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">Identifier for</font></th>
-<th style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">解释</font></th>
+<th style="text-align: left;"><br/>Label</th>
+<th style="text-align: left;"><br/>Identifier for</th>
+<th style="text-align: left;"><br/>解释</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">Project</font></td>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">Project name</font></td>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">来自哪个项目: 如TCGA、TARGET等等</font></td>
+<td style="text-align: left;"><br/>Project</td>
+<td style="text-align: left;"><br/>Project name</td>
+<td style="text-align: left;"><br/>来自哪个项目: 如TCGA、TARGET等等</td>
 </tr>
 <tr>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">TSS</font></td>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">Tissue source site</font></td>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">样品来自哪个组织机构：01 代表International Genomics Consortium, 更多见：</font><a href="https://www.omicsclass.com/article/1079"><u>TSS</u></a></td>
+<td style="text-align: left;"><br/>TSS</td>
+<td style="text-align: left;"><br/>Tissue source site</td>
+<td style="text-align: left;"><br/>样品来自哪个组织机构：01 代表International Genomics Consortium, 更多见：<a href="https://www.omicsclass.com/article/1079"><u>TSS</u></a></td>
 </tr>
 <tr>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">Participant</font></td>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">Study participant</font></td>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">样品唯一编号(可以理解为一个病人唯一编号）</font></td>
+<td style="text-align: left;"><br/>Participant</td>
+<td style="text-align: left;"><br/>Study participant</td>
+<td style="text-align: left;"><br/>样品唯一编号(可以理解为一个病人唯一编号）</td>
 </tr>
 <tr>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">Sample</font></td>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">Sample type</font></td>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">样品来自人体组织类型，如：01代表Primary Solid Tumor， 更多见：</font><a href="https://www.omicsclass.com/article/1080"><u>SampleType</u></a></td>
+<td style="text-align: left;"><br/>Sample</td>
+<td style="text-align: left;"><br/>Sample type</td>
+<td style="text-align: left;"><br/>样品来自人体组织类型，如：01代表Primary Solid Tumor， 更多见：<a href="https://www.omicsclass.com/article/1080"><u>SampleType</u></a></td>
 </tr>
 <tr>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">Vial</font></td>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">Order of sample in a sequence of samples</font></td>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">一份样品被分割成好几份，表示第几份，通常是A-Z编号</font></td>
+<td style="text-align: left;"><br/>Vial</td>
+<td style="text-align: left;"><br/>Order of sample in a sequence of samples</td>
+<td style="text-align: left;"><br/>一份样品被分割成好几份，表示第几份，通常是A-Z编号</td>
 </tr>
 <tr>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">Portion</font></td>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">Order of portion in a sequence of 100-120 mg sample portions</font></td>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">每份样品再分割成不同的小样品：01-99等等编号，代表第几份</font></td>
+<td style="text-align: left;"><br/>Portion</td>
+<td style="text-align: left;"><br/>Order of portion in a sequence of 100-120 mg sample portions</td>
+<td style="text-align: left;"><br/>每份样品再分割成不同的小样品：01-99等等编号，代表第几份</td>
 </tr>
 <tr>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">Analyte</font></td>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">Molecular type of analyte for analysis</font></td>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">实验数据来源分子类型，如R代表 RNA，D代表DNA等等，更多见：</font><a href="https://gdc.cancer.gov/resources-tcga-users/tcga-code-tables/portion-analyte-codes"><u>Portion / Analyte Codes</u></a></td>
+<td style="text-align: left;"><br/>Analyte</td>
+<td style="text-align: left;"><br/>Molecular type of analyte for analysis</td>
+<td style="text-align: left;"><br/>实验数据来源分子类型，如R代表 RNA，D代表DNA等等，更多见：<a href="https://gdc.cancer.gov/resources-tcga-users/tcga-code-tables/portion-analyte-codes"><u>Portion / Analyte Codes</u></a></td>
 </tr>
 <tr>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">Plate</font></td>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">Order of plate in a sequence of 96-well plates</font></td>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">96孔序列中板的顺序，4个数字组成</font></td>
+<td style="text-align: left;"><br/>Plate</td>
+<td style="text-align: left;"><br/>Order of plate in a sequence of 96-well plates</td>
+<td style="text-align: left;"><br/>96孔序列中板的顺序，4个数字组成</td>
 </tr>
 <tr>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">Center</font></td>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">Sequencing or characterization center that will receive the aliquot for analysis</font></td>
-<td style="text-align: left;"><br/><font style="color:rgb(51, 51, 51);">数据由哪个机构分析：如 01代表The Broad Institute GCC,更多见：</font><a href="https://www.omicsclass.com/article/1081"><u>Center</u></a></td>
+<td style="text-align: left;"><br/>Center</td>
+<td style="text-align: left;"><br/>Sequencing or characterization center that will receive the aliquot for analysis</td>
+<td style="text-align: left;"><br/>数据由哪个机构分析：如 01代表The Broad Institute GCC,更多见：<a href="https://www.omicsclass.com/article/1081"><u>Center</u></a></td>
 </tr>
 </tbody>
 </table>
 <h2 id="1"><strong>1. 官网在线下载</strong><a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<p><font style="color:#000000;">在线下载lung cancer(只选择LUAD)转录组数据的筛选条件，下载日期2020年2月5日。</font></p>
+<p>在线下载lung cancer(只选择LUAD)转录组数据的筛选条件，下载日期2020年2月5日。</p>
 <p><img alt="1612531569138-f9224773-27c7-4940-b671-bc23f195fbb3.png" src="../img/l9nebAoHw7GO7UOY/1612531569138-f9224773-27c7-4940-b671-bc23f195fbb3-632953.png" /><img alt="1612531569106-efb57363-b382-4bd4-a56c-b317a6258584.png" src="../img/l9nebAoHw7GO7UOY/1612531569106-efb57363-b382-4bd4-a56c-b317a6258584-183038.png" /></p>
-<p><font style="color:#000000;">下载的数据类型，用R包分析差异基因下载原始的Counts数据，选择几个基因分析，下载FPKM数据。这里下载FPKM数据。</font></p>
-<p><font style="color:#000000;">添加到购物车，下载Manifest文件和cart文件还有Metadata文件。</font></p>
+<p>下载的数据类型，用R包分析差异基因下载原始的Counts数据，选择几个基因分析，下载FPKM数据。这里下载FPKM数据。</p>
+<p>添加到购物车，下载Manifest文件和cart文件还有Metadata文件。</p>
 <p><img alt="1612531569159-c47d7e28-67aa-40b8-b2d2-0964668b20da.png" src="../img/l9nebAoHw7GO7UOY/1612531569159-c47d7e28-67aa-40b8-b2d2-0964668b20da-024955.png" /></p>
 <h2 id="2">**2.官网下载工具下载  **<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<p><font style="color:#000000;">Data Transfer Tool：</font><a href="https://gdc.cancer.gov/access-data/gdc-data-transfer-tool"><u>https://gdc.cancer.gov/access-data/gdc-data-transfer-tool</u></a></p>
+<p>Data Transfer Tool：<a href="https://gdc.cancer.gov/access-data/gdc-data-transfer-tool"><u>https://gdc.cancer.gov/access-data/gdc-data-transfer-tool</u></a></p>
 <p><img alt="1612531569130-9dad5919-117a-4fbd-9791-49400d80c3d7.png" src="../img/l9nebAoHw7GO7UOY/1612531569130-9dad5919-117a-4fbd-9791-49400d80c3d7-087745.png" /></p>
-<p><font style="color:#000000;">把gdc-client加入环境变量：上面配置都完成后，dos窗口输入gdc-client -h检验环境变量是否配制成功。</font></p>
-<p><font style="color:#000000;">下载方式很简单，还记得上文中下载的Manifest文件吧，然后在windows下打开cmd，并在其中输入下载命令：</font></p>
+<p>把gdc-client加入环境变量：上面配置都完成后，dos窗口输入gdc-client -h检验环境变量是否配制成功。</p>
+<p>下载方式很简单，还记得上文中下载的Manifest文件吧，然后在windows下打开cmd，并在其中输入下载命令：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>gdc-client download -m gdc_manifest_20200211_063426.txt
 </code></pre></div>
-<p><font style="color:#000000;">然后就是慢慢下载了，如果中间有报错断了，一般就是网络不好的原因，重新下载或者换个时间段就行了</font><font style="color:#000000;">。</font><font style="color:#FF0000;">国内利用这个下载速度还是挺慢的。</font></p>
+<p>然后就是慢慢下载了，如果中间有报错断了，一般就是网络不好的原因，重新下载或者换个时间段就行了。国内利用这个下载速度还是挺慢的。</p>
 <h2 id="3-rtcgabiolinks"><strong>3. R语言TCGAbiolinks包下载</strong><a class="headerlink" href="#3-rtcgabiolinks" title="Permanent link">&para;</a></h2>
-<p><font style="color:#000000;">TCGAbiolinks包下载数据超级慢，可以选择官网下载。</font><font style="color:#000000;">这个包只下载数据的话可以试试，我好久没有用啦。</font></p>
+<p>TCGAbiolinks包下载数据超级慢，可以选择官网下载。这个包只下载数据的话可以试试，我好久没有用啦。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>########################## 这里下载的是Counts数据，不是FPKM数据####################
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>setwd(".")
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a># 加载相应的包，可能会需要其他包，提示错误就安装缺少的包。
@@ -9589,10 +9589,10 @@
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a># 请求数据。
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>query &lt;- GDCquery(project = "TCGA-LUAD",
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>                  data.category = "Transcriptome Profiling",
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>                  data.type = "Gene Expression Quantification", 
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>                  data.type = "Gene Expression Quantification",
 <a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>                  workflow.type = "HTSeq - Counts")
 <a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a># 从query中获取结果表，它可以选择带有cols参数的列，并使用rows参数返回若干行。
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a># 594个barcode                 
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a># 594个barcode
 <a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>samplesDown &lt;- getResults(query,cols=c("cases"))
 <a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a># 533个barcode
 <a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>dataSmTP &lt;- TCGAquery_SampleTypes(barcode = samplesDown,
@@ -9604,84 +9604,84 @@
 <a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>dataSmTP_short &lt;- dataSmTP[1:533]
 <a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>dataSmNT_short &lt;- dataSmNT[1:59]
 <a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a># 根据前面的筛选，再次请求数据
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>queryDown &lt;- GDCquery(project = "TCGA-LUAD", 
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>queryDown &lt;- GDCquery(project = "TCGA-LUAD",
 <a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>                      data.category = "Transcriptome Profiling",
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>                      data.type = "Gene Expression Quantification", 
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>                      workflow.type = "HTSeq - Counts", 
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>                      data.type = "Gene Expression Quantification",
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>                      workflow.type = "HTSeq - Counts",
 <a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>                      barcode = c(dataSmTP_short, dataSmNT_short))
 <a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>#读取下载的数据并将其准备到R对象中，在工作目录生成LUAD_case.rda文件，
 <a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>#同时还产生Human_genes__GRCh38_p12_.rda文件
 <a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>GDCdownload(query = queryDown)
 <a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>dataPrep1 &lt;- GDCprepare(query = queryDown, save = TRUE, save.filename = "LUAD_case.rda")
 </code></pre></div>
-<p><font style="color:#000000;">如果下载其他癌症的数据，可通过getGDCprojects()$project_id查看数据框中的project。</font></p>
+<p>如果下载其他癌症的数据，可通过getGDCprojects()$project_id查看数据框中的project。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&gt; getGDCprojects()$project_id
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a> [1] "TCGA-READ"             "TCGA-MESO"             "TCGA-ACC"              "TCGA-LGG"             
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a> [5] "BEATAML1.0-CRENOLANIB" "TCGA-THCA"             "TCGA-SARC"             "TARGET-CCSK"          
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a> [9] "TARGET-NBL"            "TARGET-AML"            "WCDT-MCRPC"            "HCMI-CMDC"            
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>[13] "TCGA-BRCA"             "VAREPOP-APOLLO"        "TCGA-CHOL"             "TCGA-KIRC"            
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>[17] "TCGA-OV"               "TCGA-GBM"              "ORGANOID-PANCREATIC"   "GENIE-VICC"           
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>[21] "TCGA-SKCM"             "TCGA-TGCT"             "CGCI-BLGSP"            "TCGA-KICH"            
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>[25] "TCGA-THYM"             "TCGA-UVM"              "TCGA-PRAD"             "TCGA-LUSC"            
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>[29] "FM-AD"                 "BEATAML1.0-COHORT"     "TCGA-DLBC"             "OHSU-CNL"             
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>[33] "TARGET-ALL-P2"         "TCGA-STAD"             "TCGA-LAML"             "GENIE-DFCI"           
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>[37] "TARGET-ALL-P3"         "TCGA-UCEC"             "GENIE-JHU"             "GENIE-NKI"            
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>[41] "GENIE-MDA"             "CPTAC-3"               "GENIE-MSK"             "TARGET-OS"            
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>[45] "TCGA-HNSC"             "TCGA-ESCA"             "TARGET-RT"             "CTSP-DLBCL1"          
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>[49] "TCGA-LIHC"             "TCGA-COAD"             "TCGA-KIRP"             "TARGET-WT"            
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>[53] "TCGA-CESC"             "TCGA-LUAD"             "GENIE-UHN"             "MMRF-COMMPASS"        
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a> [1] "TCGA-READ"             "TCGA-MESO"             "TCGA-ACC"              "TCGA-LGG"
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a> [5] "BEATAML1.0-CRENOLANIB" "TCGA-THCA"             "TCGA-SARC"             "TARGET-CCSK"
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a> [9] "TARGET-NBL"            "TARGET-AML"            "WCDT-MCRPC"            "HCMI-CMDC"
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>[13] "TCGA-BRCA"             "VAREPOP-APOLLO"        "TCGA-CHOL"             "TCGA-KIRC"
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>[17] "TCGA-OV"               "TCGA-GBM"              "ORGANOID-PANCREATIC"   "GENIE-VICC"
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>[21] "TCGA-SKCM"             "TCGA-TGCT"             "CGCI-BLGSP"            "TCGA-KICH"
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>[25] "TCGA-THYM"             "TCGA-UVM"              "TCGA-PRAD"             "TCGA-LUSC"
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>[29] "FM-AD"                 "BEATAML1.0-COHORT"     "TCGA-DLBC"             "OHSU-CNL"
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>[33] "TARGET-ALL-P2"         "TCGA-STAD"             "TCGA-LAML"             "GENIE-DFCI"
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>[37] "TARGET-ALL-P3"         "TCGA-UCEC"             "GENIE-JHU"             "GENIE-NKI"
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>[41] "GENIE-MDA"             "CPTAC-3"               "GENIE-MSK"             "TARGET-OS"
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>[45] "TCGA-HNSC"             "TCGA-ESCA"             "TARGET-RT"             "CTSP-DLBCL1"
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>[49] "TCGA-LIHC"             "TCGA-COAD"             "TCGA-KIRP"             "TARGET-WT"
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>[53] "TCGA-CESC"             "TCGA-LUAD"             "GENIE-UHN"             "MMRF-COMMPASS"
 <a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>[57] "TARGET-ALL-P1"         "GENIE-GRCC"            "CPTAC-2"               "TCGA-PAAD"
 </code></pre></div>
-<p><font style="color:#000000;">缩写 英文名称    中文名称</font></p>
-<p><font style="color:#000000;">ACC    Adrenocortical carcinoma    肾上腺皮质癌</font></p>
-<p><font style="color:#000000;">BLCA   Bladder Urothelial Carcinoma    膀胱尿路上皮癌</font></p>
-<p><font style="color:#000000;">BRCA   Breast invasive carcinoma   乳腺浸润癌</font></p>
-<p><font style="color:#000000;">CESC   Cervical squamous cell carcinoma and endocervical adenocarcinoma    宫颈鳞癌和腺癌</font></p>
-<p><font style="color:#000000;">CHOL   Cholangiocarcinoma  胆管癌</font></p>
-<p><font style="color:#000000;">COAD   Colon adenocarcinoma    结肠癌</font></p>
-<p><font style="color:#000000;">COADREAD   Colon adenocarcinoma/Rectum adenocarcinoma Esophageal carcinoma 结直肠癌</font></p>
-<p><font style="color:#000000;">DLBC   Lymphoid Neoplasm Diffuse Large B-cell Lymphoma 弥漫性大B细胞淋巴瘤</font></p>
-<p><font style="color:#000000;">ESCA   Esophageal carcinoma    食管癌</font></p>
-<p><font style="color:#000000;">FPPP   FFPE Pilot Phase II FFPE试点二期</font></p>
-<p><font style="color:#000000;">GBM    Glioblastoma multiforme 多形成性胶质细胞瘤</font></p>
-<p><font style="color:#000000;">GBMLGG Glioma  胶质瘤</font></p>
-<p><font style="color:#000000;">HNSC   Head and Neck squamous cell carcinoma   头颈鳞状细胞癌</font></p>
+<p>缩写  英文名称    中文名称</p>
+<p>ACC Adrenocortical carcinoma    肾上腺皮质癌</p>
+<p>BLCA    Bladder Urothelial Carcinoma    膀胱尿路上皮癌</p>
+<p>BRCA    Breast invasive carcinoma   乳腺浸润癌</p>
+<p>CESC    Cervical squamous cell carcinoma and endocervical adenocarcinoma    宫颈鳞癌和腺癌</p>
+<p>CHOL    Cholangiocarcinoma  胆管癌</p>
+<p>COAD    Colon adenocarcinoma    结肠癌</p>
+<p>COADREAD    Colon adenocarcinoma/Rectum adenocarcinoma Esophageal carcinoma 结直肠癌</p>
+<p>DLBC    Lymphoid Neoplasm Diffuse Large B-cell Lymphoma 弥漫性大B细胞淋巴瘤</p>
+<p>ESCA    Esophageal carcinoma    食管癌</p>
+<p>FPPP    FFPE Pilot Phase II FFPE试点二期</p>
+<p>GBM Glioblastoma multiforme 多形成性胶质细胞瘤</p>
+<p>GBMLGG  Glioma  胶质瘤</p>
+<p>HNSC    Head and Neck squamous cell carcinoma   头颈鳞状细胞癌</p>
 <p><strong>KICH  Kidney Chromophobe  肾嫌色细胞癌</strong></p>
 <p><strong>KIRC  Kidney renal clear cell carcinoma   肾透明细胞癌</strong></p>
 <p><strong>KIRP  Kidney renal papillary cell carcinoma   肾乳头状细胞癌</strong></p>
-<p><font style="color:#000000;">LAML   Acute Myeloid Leukemia  急性髓细胞样白血病</font></p>
-<p><font style="color:#000000;">LGG    Brain Lower Grade Glioma    脑低级别胶质瘤</font></p>
-<p><font style="color:#000000;">LIHC   Liver hepatocellular carcinoma  肝细胞肝癌</font></p>
-<p><font style="color:#000000;">LUAD   Lung adenocarcinoma 肺腺癌</font></p>
-<p><font style="color:#000000;">LUSC   Lung squamous cell carcinoma    肺鳞癌</font></p>
-<p><font style="color:#000000;">MESO   Mesothelioma    间皮瘤</font></p>
-<p><font style="color:#000000;">OV Ovarian serous cystadenocarcinoma   卵巢浆液性囊腺癌</font></p>
-<p><font style="color:#000000;">PAAD   Pancreatic adenocarcinoma   胰腺癌</font></p>
-<p><font style="color:#000000;">PCPG   Pheochromocytoma and Paraganglioma  嗜铬细胞瘤和副神经节瘤</font></p>
-<p><font style="color:#000000;">PRAD   Prostate adenocarcinoma 前列腺癌</font></p>
-<p><font style="color:#000000;">READ   Rectum adenocarcinoma   直肠腺癌</font></p>
-<p><font style="color:#000000;">SARC   Sarcoma 肉瘤</font></p>
-<p><font style="color:#000000;">SKCM   Skin Cutaneous Melanoma 皮肤黑色素瘤</font></p>
-<p><font style="color:#000000;">STAD   Stomach adenocarcinoma  胃癌</font></p>
-<p><font style="color:#000000;">STES   Stomach and Esophageal carcinoma    胃和食管癌</font></p>
-<p><font style="color:#000000;">TGCT   Testicular Germ Cell Tumors 睾丸癌</font></p>
-<p><font style="color:#000000;">THCA   Thyroid carcinoma   甲状腺癌</font></p>
-<p><font style="color:#000000;">THYM   Thymoma 胸腺癌</font></p>
-<p><font style="color:#000000;">UCEC   Uterine Corpus Endometrial Carcinoma    子宫内膜癌</font></p>
-<p><font style="color:#000000;">UCS    Uterine Carcinosarcoma  子宫肉瘤</font></p>
-<p><font style="color:#000000;">UVM    Uveal Melanoma  葡萄膜黑色素瘤</font></p>
-<p><font style="color:#000000;">AML    Acute Myeloid Leukemia  急性髓系白血病</font></p>
-<p><font style="color:#000000;">CCSK   Clear Cell Sarcoma of the Kidney    肾透明细胞肉瘤</font></p>
-<p><font style="color:#000000;">NBL    Neuroblastoma   神经母细胞瘤</font></p>
-<p><font style="color:#000000;">OS Osteosarcoma    骨肉瘤</font></p>
-<p><font style="color:#000000;">RT Rhabdoid Tumor  横纹肌样瘤</font></p>
-<p><font style="color:#000000;">WT High-Risk Wilms Tumor   高危肾母细胞瘤</font></p>
+<p>LAML    Acute Myeloid Leukemia  急性髓细胞样白血病</p>
+<p>LGG Brain Lower Grade Glioma    脑低级别胶质瘤</p>
+<p>LIHC    Liver hepatocellular carcinoma  肝细胞肝癌</p>
+<p>LUAD    Lung adenocarcinoma 肺腺癌</p>
+<p>LUSC    Lung squamous cell carcinoma    肺鳞癌</p>
+<p>MESO    Mesothelioma    间皮瘤</p>
+<p>OV  Ovarian serous cystadenocarcinoma   卵巢浆液性囊腺癌</p>
+<p>PAAD    Pancreatic adenocarcinoma   胰腺癌</p>
+<p>PCPG    Pheochromocytoma and Paraganglioma  嗜铬细胞瘤和副神经节瘤</p>
+<p>PRAD    Prostate adenocarcinoma 前列腺癌</p>
+<p>READ    Rectum adenocarcinoma   直肠腺癌</p>
+<p>SARC    Sarcoma 肉瘤</p>
+<p>SKCM    Skin Cutaneous Melanoma 皮肤黑色素瘤</p>
+<p>STAD    Stomach adenocarcinoma  胃癌</p>
+<p>STES    Stomach and Esophageal carcinoma    胃和食管癌</p>
+<p>TGCT    Testicular Germ Cell Tumors 睾丸癌</p>
+<p>THCA    Thyroid carcinoma   甲状腺癌</p>
+<p>THYM    Thymoma 胸腺癌</p>
+<p>UCEC    Uterine Corpus Endometrial Carcinoma    子宫内膜癌</p>
+<p>UCS Uterine Carcinosarcoma  子宫肉瘤</p>
+<p>UVM Uveal Melanoma  葡萄膜黑色素瘤</p>
+<p>AML Acute Myeloid Leukemia  急性髓系白血病</p>
+<p>CCSK    Clear Cell Sarcoma of the Kidney    肾透明细胞肉瘤</p>
+<p>NBL Neuroblastoma   神经母细胞瘤</p>
+<p>OS  Osteosarcoma    骨肉瘤</p>
+<p>RT  Rhabdoid Tumor  横纹肌样瘤</p>
+<p>WT  High-Risk Wilms Tumor   高危肾母细胞瘤</p>
 <h1 id="_4"><strong>二. 数据的整理</strong><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h1>
-<p><font style="color:#000000;">下载的数据，每个样本的数据分别不同文件夹下，我们需要将所有文件移动到同一个文件夹下。</font></p>
+<p>下载的数据，每个样本的数据分别不同文件夹下，我们需要将所有文件移动到同一个文件夹下。</p>
 <ol>
 <li><strong>移动文件</strong></li>
 </ol>
-<p><font style="color:#000000;">下面是R语言移动的代码：</font></p>
+<p>下面是R语言移动的代码：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>options(stringsAsFactors = F)
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>setwd("./")#设置工作目录
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>#################################数据下载##########################
@@ -9699,8 +9699,8 @@
 <a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>}
 </code></pre></div>
 <h2 id="2_1"><strong>2. 解压文件</strong><a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h2>
-<p><font style="color:#000000;">这一步有点多余，可以不做。直接读入数据。</font></p>
-<p><font style="color:#000000;">解压所有文件并删除原文件</font></p>
+<p>这一步有点多余，可以不做。直接读入数据。</p>
+<p>解压所有文件并删除原文件</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>########################### 解压所有文件并删除原文件###################
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>####其实有些多余，熟悉R后，是可以直接读入的。
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>setwd(".\\SampleFiles")
@@ -9710,7 +9710,7 @@
 <a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>sapply(countsFiles, gunzip) # 解压函数gunzip需要安装R.utils包
 </code></pre></div>
 <h2 id="3-json"><strong>3. 处理json文件</strong><a class="headerlink" href="#3-json" title="Permanent link">&para;</a></h2>
-<p><font style="color:#000000;">因为我们下载的样本数据的文件名很难看出是什么样本信息。我们需要找到文件对应样品的barcode。</font></p>
+<p>因为我们下载的样本数据的文件名很难看出是什么样本信息。我们需要找到文件对应样品的barcode。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>####################### 处理json文件#################################
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>library(rjson)
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>metadata_json_File &lt;- fromJSON(file="..\\metadata.cart.2020-06-16.json")
@@ -9723,10 +9723,10 @@
 <a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>rownames(json_File_Info) &lt;- json_File_Info[,1]
 <a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>write.csv(json_File_Info,file = "..\\json_File_Info.CSV")
 </code></pre></div>
-<p><font style="color:#000000;">我们运行代码后会得到一个文件名称与barcode对应关系的文件：json_File_Info.CSV</font></p>
+<p>我们运行代码后会得到一个文件名称与barcode对应关系的文件：json_File_Info.CSV</p>
 <p><img alt="1612531569103-09d36f0a-2455-4638-a8b6-88ab6c950935.png" src="../img/l9nebAoHw7GO7UOY/1612531569103-09d36f0a-2455-4638-a8b6-88ab6c950935-605304.png" /></p>
 <h1 id="_5"><strong>三. 数据融合</strong><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
-<p><font style="color:#000000;">即将所有样本合并成一个数据框</font></p>
+<p>即将所有样本合并成一个数据框</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>########################## 获取Counts矩阵#######################
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>filesName_To_TCGA_BarcodeFile &lt;- json_File_Info[-1]
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>countsFileNames&lt;-dir(pattern="counts$") #list.files()函数也行
@@ -9742,7 +9742,7 @@
 <a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>  if (dim(allSampleRawCounts)[1]== 0){
 <a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    allSampleRawCounts &lt;- SampleCounts
 <a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>  }
-<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>  else 
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>  else
 <a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>  {allSampleRawCounts&lt;- cbind(allSampleRawCounts,SampleCounts)}
 <a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>}
 <a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>write.csv(allSampleRawCounts,file = "..\\allSampleRawCounts.CSV")
@@ -9751,12 +9751,12 @@
 <a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>#RawCounts.CS文件与allSampleRawCounts.CSV文件的区别在于行名的ensembl去掉了版本号
 <a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>write.csv(allSampleRawCounts,file = "..\\RawCounts.CSV")
 </code></pre></div>
-<p><font style="color:#000000;">运行代码后我们会得到一个RawCounts.CSV的文件，行名是Ensembl ID,列名是样品名称，用于后面的分析。</font></p>
+<p>运行代码后我们会得到一个RawCounts.CSV的文件，行名是Ensembl ID,列名是样品名称，用于后面的分析。</p>
 <p><img alt="1612531569112-f0a9795f-f7d7-4c5f-8901-218c83be5fe1.png" src="../img/l9nebAoHw7GO7UOY/1612531569112-f0a9795f-f7d7-4c5f-8901-218c83be5fe1-405085.png" /></p>
 <h1 id="id"><strong>四. ID转换</strong><a class="headerlink" href="#id" title="Permanent link">&para;</a></h1>
 <p><a href="https://mp.weixin.qq.com/s?src=11&amp;timestamp=1581245491&amp;ver=2148&amp;signature=Tqc3mBFhZXrl1TIEi9TtROMKA1CsPCirp-pL3tVcX8M6MAkDqpaZ6Rc6rrF9jIZcte03mQma-kPdSNzJ7395zicreulip2VNHwojXk9fEJTC9kRvkI17bHLlWEY1jTnT&amp;new=1"><u>参考文章</u></a></p>
 <p><img alt="1612531569135-f07dc587-75f9-4a96-8377-cc02056348d9.png" src="../img/l9nebAoHw7GO7UOY/1612531569135-f07dc587-75f9-4a96-8377-cc02056348d9-728941.png" /></p>
-<p><font style="color:#000000;">ENSG00000000003.13中小数点之后的数字是版本号，删掉即可。</font></p>
+<p>ENSG00000000003.13中小数点之后的数字是版本号，删掉即可。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>#####################  ID转换  ####################
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a># 添加一列Ensemble_ID到RawCounts数据框中
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>RawCounts &lt;- allSampleRawCounts
@@ -9787,7 +9787,7 @@
 <a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>  return(Ensembl_ID_TO_Genename)
 <a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>}
 <a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>#注意传入gtf文件路径
-<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>Ensembl_ID_TO_Genename &lt;- get_map("../human.v33lift37.annotation.gtf") 
+<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>Ensembl_ID_TO_Genename &lt;- get_map("../human.v33lift37.annotation.gtf")
 <a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a>gtf_Ensembl_ID &lt;- substr(Ensembl_ID_TO_Genename[,1],1,15)
 <a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a>Ensembl_ID_TO_Genename &lt;- data.frame(gtf_Ensembl_ID,Ensembl_ID_TO_Genename[,2])
 <a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a>colnames(Ensembl_ID_TO_Genename) &lt;- c("Ensembl_ID","gene_id")
@@ -9807,10 +9807,14 @@
 <a id="__codelineno-8-48" name="__codelineno-8-48" href="#__codelineno-8-48"></a># 保存文件
 <a id="__codelineno-8-49" name="__codelineno-8-49" href="#__codelineno-8-49"></a>write.csv(LUAD_Counts_expMatrix,file = "..\\LUAD_Counts_expMatrix.csv")
 </code></pre></div>
-<p><font style="color:#000000;">gtf文件下载：</font><a href="https://www.gencodegenes.org/human/"><u>https://www.gencodegenes.org/human/</u></a></p>
-<p><font style="color:#000000;">运行上面代码后会得到一个Ensembl_ID与基因名称的对应关系的数据框：</font></p>
+<p>gtf文件下载：<a href="https://www.gencodegenes.org/human/"><u>https://www.gencodegenes.org/human/</u></a></p>
+<p>运行上面代码后会得到一个Ensembl_ID与基因名称的对应关系的数据框：</p>
 <p><img alt="1612531569118-61eed2e4-3565-4176-9de9-53f9ecb10541.png" src="../img/l9nebAoHw7GO7UOY/1612531569118-61eed2e4-3565-4176-9de9-53f9ecb10541-493368.png" /></p>
-<p><font style="color:#000000;">关于生信中的各种ID转换，我在文章中有介绍</font><a href="https://mp.weixin.qq.com/s/lazavD3jzRVO4QkxysHQcg"><u>https://mp.weixin.qq.com/s/lazavD3jzRVO4QkxysHQcg</u></a><font style="color:#000000;"> ，这篇文章是付费文章，隐藏内容仅仅是gtf文件进行ID转换的内容，你不需要去付费。下面代码是一个函数，和上面的函数一样，用于基因转换的，只是提取的信息比较多，上面提取的基因很多，包括了假基因，下面代码还提取了更多基因的信息包括是编码蛋白的还是非编码RNA的，又或者是假基因。你自己把上面的gtf文件作为输入，运行一次看结果。</font><font style="color:#FF0000;">都是处理同一文件，但返回的数据框的列名不一样，用在上面需要自己更改后续的代码</font><font style="color:#000000;">。3.0的代码就是值分析编码蛋白的基因。</font></p>
+<p>关于生信中的各种ID转换，我在文章中有介绍<a href="https://mp.weixin.qq.com/s/lazavD3jzRVO4QkxysHQcg"><u>https://mp.weixin.qq.com/s/lazavD3jzRVO4QkxysHQcg</u></a> ，这篇文章是付费文章，隐藏内容仅仅是gtf文件进行ID转换的内容，你不需要去付费。
+下面代码是一个函数，和上面的函数一样，用于基因转换的，只是提取的信息比较多，上面提取的基因很多，包括了假基因，下面代码还提取了更多基因的信息包括是编码蛋白的还是非编码RNA的，又或者是假基因。
+你自己把上面的gtf文件作为输入，运行一次看结果。
+都是处理同一文件，但返回的数据框的列名不一样，用在上面需要自己更改后续的代码。
+3.0的代码就是值分析编码蛋白的基因。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>############## 一个函数，通过gtf文件获取Ensemble_ID与基因名称的对应关系
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>get_map &lt;- function(input) {
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>  if (is.character(input)) {
@@ -9836,8 +9840,8 @@
 </code></pre></div>
 <p><img alt="1612531570885-dc2ad323-4fa3-49d7-855e-f8f2270e1f1c.png" src="../img/l9nebAoHw7GO7UOY/1612531570885-dc2ad323-4fa3-49d7-855e-f8f2270e1f1c-611567.png" /></p>
 <h1 id="_6"><strong>五. 表达差异分析</strong><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h1>
-<p><strong>DESeq2和EdgeR包</strong><font style="color:#191919;">: 都可用于做基因差异表达分析，主要也是用于RNA-Seq数据，同样也可以处理类似的ChIP-Seq,shRNA以及质谱数据。这两个都属于R包，其相同点在于都是对count data数据进行处理，都是基于负二项分布模型。</font></p>
-<p><font style="color:#191919;">差异分析可以参考文章：</font><a href="https://mp.weixin.qq.com/s/CtKlpDgtNs3f2NXaoulD5Q"><u>超详细的DESeq2和edgeR包的基本原理和实战案例 </u></a><font style="color:#191919;">。</font></p>
+<p><strong>DESeq2和EdgeR包</strong>: 都可用于做基因差异表达分析，主要也是用于RNA-Seq数据，同样也可以处理类似的ChIP-Seq,shRNA以及质谱数据。这两个都属于R包，其相同点在于都是对count data数据进行处理，都是基于负二项分布模型。</p>
+<p>差异分析可以参考文章：<a href="https://mp.weixin.qq.com/s/CtKlpDgtNs3f2NXaoulD5Q"><u>超详细的DESeq2和edgeR包的基本原理和实战案例 </u></a>。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>#############################差异分析#################################
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>library(stringr)
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>##处理barcode
@@ -9953,16 +9957,20 @@
 <a id="__codelineno-10-113" name="__codelineno-10-113" href="#__codelineno-10-113"></a>TCGAVisualize_volcano(diffData$log2FoldChange, diffData$padj,
 <a id="__codelineno-10-114" name="__codelineno-10-114" href="#__codelineno-10-114"></a>                      filename = volFig, xlab = "logFC",
 <a id="__codelineno-10-115" name="__codelineno-10-115" href="#__codelineno-10-115"></a>                      names = rownames(diffData), show.names = "highlighted",
-<a id="__codelineno-10-116" name="__codelineno-10-116" href="#__codelineno-10-116"></a>                      x.cut = 1, y.cut = 0.01, 
+<a id="__codelineno-10-116" name="__codelineno-10-116" href="#__codelineno-10-116"></a>                      x.cut = 1, y.cut = 0.01,
 <a id="__codelineno-10-117" name="__codelineno-10-117" href="#__codelineno-10-117"></a>                      highlight = rownames(diffData)[which(abs(diffData$log2FoldChange) &gt;= 8)],
 <a id="__codelineno-10-118" name="__codelineno-10-118" href="#__codelineno-10-118"></a>                      highlight.color = "orange")
 <a id="__codelineno-10-119" name="__codelineno-10-119" href="#__codelineno-10-119"></a>dev.off()
 </code></pre></div>
-<p><font style="color:#191919;">在提取表达数据的时候，代码虽然复杂，很多步骤多余。仅仅是让初学者知道一个详细的过程还需要特别说明的是，1.0的代码分析的基因没有筛选，包括了假基因和编码RNA的基因。你可以通过上面的</font><font style="color:#191919;">get_map函数筛选出编码蛋白的基因。3.0的代码的只分析了编码蛋白的基因</font><font style="color:#191919;">。除此以外，也可以利用相关R包直接分析，比如：GDCRNATools包进行分析：</font><a href="https://mp.weixin.qq.com/s/XBuikduP6iiSHFl0RBKxQg"><u>https://mp.weixin.qq.com/s/XBuikduP6iiSHFl0RBKxQg</u></a><a href="https://mp.weixin.qq.com/s/XBuikduP6iiSHFl0RBKxQg"></a></p>
-<p><font style="color:#333333;">最后，我觉得这教程已经够细了，如果代码还出错，那就R语言没有好好学习。建议去学习我的R语言视频教程。</font></p>
-<p><font style="color:#333333;">公众号文章目录：</font></p>
+<p>在提取表达数据的时候，代码虽然复杂，很多步骤多余。
+仅仅是让初学者知道一个详细的过程还需要特别说明的是，1.0的代码分析的基因没有筛选，包括了假基因和编码RNA的基因。
+你可以通过上面的get_map函数筛选出编码蛋白的基因。
+3.0的代码的只分析了编码蛋白的基因。
+除此以外，也可以利用相关R包直接分析，比如：GDCRNATools包进行分析：<a href="https://mp.weixin.qq.com/s/XBuikduP6iiSHFl0RBKxQg"><u>https://mp.weixin.qq.com/s/XBuikduP6iiSHFl0RBKxQg</u></a><a href="https://mp.weixin.qq.com/s/XBuikduP6iiSHFl0RBKxQg"></a></p>
+<p>最后，我觉得这教程已经够细了，如果代码还出错，那就R语言没有好好学习。建议去学习我的R语言视频教程。</p>
+<p>公众号文章目录：</p>
 <blockquote>
-<p>更新: 2021-02-05 21:41:26<br />
+<p>更新: 2021-02-05 21:41:26
 原文: <a href="https://www.yuque.com/doublehelix/bioinfonotes/pz3xwu">https://www.yuque.com/doublehelix/bioinfonotes/pz3xwu</a></p>
 </blockquote>
 

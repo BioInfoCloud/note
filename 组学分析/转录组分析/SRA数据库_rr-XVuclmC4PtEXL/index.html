@@ -9630,8 +9630,8 @@
 <p>fastq-dump --split-files SRR5933808 SRR5933808/</p>
 <p>4) 文件拆分及格式转换</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">fastq</span><span class="o">-</span><span class="n">dump</span><span class="w"> </span><span class="o">--</span><span class="n">split</span><span class="o">-</span><span class="n">files</span><span class="w"> </span><span class="n">SRR5933808.sra</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">fastq</span><span class="o">-</span><span class="n">dump</span><span class="w"> </span><span class="o">--</span><span class="n">split</span><span class="o">-</span><span class="n">files</span><span class="w"> </span><span class="n">SRR5933808</span><span class="w"> </span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">fastq</span><span class="o">-</span><span class="n">dump</span><span class="w"> </span><span class="o">--</span><span class="n">gzip</span><span class="w"> </span><span class="o">--</span><span class="n">split</span><span class="m">-3</span><span class="w"> </span><span class="n">SRR5933808</span><span class="w"> </span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">fastq</span><span class="o">-</span><span class="n">dump</span><span class="w"> </span><span class="o">--</span><span class="n">split</span><span class="o">-</span><span class="n">files</span><span class="w"> </span><span class="n">SRR5933808</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">fastq</span><span class="o">-</span><span class="n">dump</span><span class="w"> </span><span class="o">--</span><span class="n">gzip</span><span class="w"> </span><span class="o">--</span><span class="n">split</span><span class="m">-3</span><span class="w"> </span><span class="n">SRR5933808</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># --split-spot: 将双端测序分为两份,但是都放在同一个文件中</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1"># --split-files: 将双端测序分为两份,放在不同的文件,但是对于一方有而一方没有的reads直接丢弃</span>
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c1"># --split-3: 将双端测序分为两份,放在不同的文件,但是对于一方有而一方没有的reads会单独放在一个文件夹里</span>
@@ -9667,7 +9667,7 @@
 <p>即使一个SRX包括超过一个数据集的时候（多个SRR），也会返回结果，例如：SRX1067547包含两个run。</p>
 <p>(4) 使用wget直接下载</p>
 <p>找到数据下载链接后直接使用如下命令下载sra或者fastq数据。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">wget</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"> </span><span class="o">-</span><span class="n">t</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">-</span><span class="n">O</span><span class="w"> </span><span class="n">SRR5933809</span><span class="w">  </span><span class="n">ftp.sra.ebi.ac.uk</span><span class="o">/</span><span class="n">vol1</span><span class="o">/</span><span class="n">srr</span><span class="o">/</span><span class="n">SRR593</span><span class="o">/</span><span class="m">009</span><span class="o">/</span><span class="n">SRR5933809</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">wget</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"> </span><span class="o">-</span><span class="n">t</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">-</span><span class="n">O</span><span class="w"> </span><span class="n">SRR5933809</span><span class="w">  </span><span class="n">ftp.sra.ebi.ac.uk</span><span class="o">/</span><span class="n">vol1</span><span class="o">/</span><span class="n">srr</span><span class="o">/</span><span class="n">SRR593</span><span class="o">/</span><span class="m">009</span><span class="o">/</span><span class="n">SRR5933809</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">wget</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"> </span><span class="o">-</span><span class="n">t</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">-</span><span class="n">O</span><span class="w"> </span><span class="n">SRR5933809_1.fastq.gz</span><span class="w"> </span><span class="n">ftp.sra.ebi.ac.uk</span><span class="o">/</span><span class="n">vol1</span><span class="o">/</span><span class="n">fastq</span><span class="o">/</span><span class="n">SRR593</span><span class="o">/</span><span class="m">009</span><span class="o">/</span><span class="n">SRR5933809</span><span class="o">/</span><span class="n">SRR5933809_1.fastq.gz</span><span class="w"> </span><span class="o">&amp;</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="c1"># -c -t 配合使用可以防止下载数据的过程中链接中断的问题，-O则可以指定下载路径和文件名。</span>
 </code></pre></div>
@@ -9709,7 +9709,7 @@
 <p>版权声明：本文为CSDN博主「wangchuang2017」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。</p>
 <p>原文链接：<a href="https://blog.csdn.net/u010608296/article/details/121878169">https://blog.csdn.net/u010608296/article/details/121878169</a></p>
 <blockquote>
-<p>更新: 2022-04-15 12:36:38<br />
+<p>更新: 2022-04-15 12:36:38
 原文: <a href="https://www.yuque.com/doublehelix/bioinfonotes/tzqgbb">https://www.yuque.com/doublehelix/bioinfonotes/tzqgbb</a></p>
 </blockquote>
 
