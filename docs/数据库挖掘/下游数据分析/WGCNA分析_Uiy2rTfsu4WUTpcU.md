@@ -1,44 +1,44 @@
 # WGCNA分析
 
-## **1.基本原理**
+## 1.基本原理
 
-WGCNA其译为加权基因共表达网络分析。该分析方法旨在寻找协同表达的基因模块(module)，并探索基因网络与关注的表型之间的关联关系，以及网络中的核心基因。从方法上来讲，WGCNA分为表达量聚类分析和表型关联两部分，主要包括基因之间相关系数计算、基因模块的确定、共表达网络、模块与性状关联四个步骤。
+WGCNA其译为加权基因共表达网络分析。该分析方法旨在寻找协同表达的基因模块（module），并探索基因网络与关注的表型之间的关联关系，以及网络中的核心基因。从方法上来讲，WGCNA分为表达量聚类分析和表型关联两部分，主要包括基因之间相关系数计算、基因模块的确定、共表达网络、模块与性状关联四个步骤。
 
-第一步计算任意两个基因之间的相关系数（Person Coefficient）。为了衡量两个基因是否具有相似表达模式，一般需要设置阈值来筛选，高于阈值的则认为是相似的。但是这样如果将阈值设为0.8，那么很难说明0.8和0.79两个是有显著差别的。因此，WGCNA分析时采用相关系数加权值，即对基因相关系数取N次幂，使得网络中的基因之间的连接服从无尺度网络分布(scale-freenetworks)，这种算法更具生物学意义。
+第一步计算任意两个基因之间的相关系数（Person Coefficient）。为了衡量两个基因是否具有相似表达模式，一般需要设置阈值来筛选，高于阈值的则认为是相似的。但是这样如果将阈值设为0.8，那么很难说明0.8和0.79两个是有显著差别的。因此，WGCNA分析时采用相关系数加权值，即对基因相关系数取N次幂，使得网络中的基因之间的连接服从无尺度网络分布（scale-freenetworks），这种算法更具生物学意义。
 
 第二步通过基因之间的相关系数构建分层聚类树，聚类树的不同分支代表不同的基因模块，不同颜色代表不同的模块。基于基因的加权相关系数，将基因按照表达模式进行分类，将模式相似的基因归为一个模块。这样就可以将几万个基因通过基因表达模式被分成了几十个模块，是一个提取归纳信息的过程。
 
-## **2.WGCNA术语**
+## 2.WGCNA术语
 
-**权重(weghted) ：**基因之间不仅仅是相关与否，还记录着它们的相关性数值，数值就是基因之间的联系的权重(相关性)。
+**权重（weghted） ：**基因之间不仅仅是相关与否，还记录着它们的相关性数值，数值就是基因之间的联系的权重（相关性）。
 
 ![1664939290583-f0dd9ab4-9b6d-439f-a34c-cbfeb90414c4.png](./img/Uiy2rTfsu4WUTpcU/1664939290583-f0dd9ab4-9b6d-439f-a34c-cbfeb90414c4-742867.png)
 
 ![1650615619766-78d17742-430c-4d93-9d7d-e8af4efb7d6f.png](./img/Uiy2rTfsu4WUTpcU/1650615619766-78d17742-430c-4d93-9d7d-e8af4efb7d6f-147115.png)
 
-**共表达网络：**定义为加权基因网络。点代表基因，边代表基因表达相关性。加权是指对相关性值进行冥次运算(冥次的值也就是软阈值 (power, pickSoftThreshold这个函数所做的就是确定合适的power))。无向网络的边属性计算方式为  abs(cor(genex, geney)) ^ power；有向网络的边属性计算方式为 (1+cor(genex, geney)/2) ^  power; sign hybrid的边属性计算方式为cor(genex, geney)^power if cor>0 else  0。这种处理方式强化了强相关，弱化了弱相关或负相关，使得相关性数值更符合无标度网络特征，更具有生物意义。如果没有合适的power，一般是由于部分样品与其它样品因为某种原因差别太大导致的，可根据具体问题移除部分样品或查看后面的经验值。
+**共表达网络：**定义为加权基因网络。点代表基因，边代表基因表达相关性。加权是指对相关性值进行冥次运算(冥次的值也就是软阈值（power, pickSoftThreshold这个函数所做的就是确定合适的power）)。无向网络的边属性计算方式为  abs(cor(genex, geney)) ^ power；有向网络的边属性计算方式为 (1+cor(genex, geney)/2) ^  power; sign hybrid的边属性计算方式为cor(genex, geney)^power if cor>0 else  0。这种处理方式强化了强相关，弱化了弱相关或负相关，使得相关性数值更符合无标度网络特征，更具有生物意义。如果没有合适的power，一般是由于部分样品与其它样品因为某种原因差别太大导致的，可根据具体问题移除部分样品或查看后面的经验值。
 
 **Module(模块)：**高度內连的基因集。在无向网络中，模块内是高度相关的基因。在有向网络中，模块内是高度正相关的基因。把基因聚类成模块后，可以对每个模块进行三个层次的分析：a. 功能富集分析查看其功能特征是否与研究目的相符；b. 模块与性状进行关联分析，找出与关注性状相关度最高的模块；c.  模块与样本进行关联分析，找到样品特异高表达的模块。
 
 **Connectivity (连接度)：**类似于网络中 “度”(degree)的概念。每个基因的连接度是与其相连的基因的边属性之和。
 
-**Module eigengene：**Eigengene（eigen  +‎ gene），基因和样本构成的矩阵，[<u>https://en.wiktionary.org/wiki/eigengene</u>](https://en.wiktionary.org/wiki/eigengene) ，Module eigengene是一个基因模块的代表，通常定义为该模块内所有基因表达谱的第一主成分（PC1）。它代表了整个模块的基因表达谱，并用于计算模块与表型或其他基因模块之间的关联。
+**Module eigengene：**Eigengene（eigen +‎ gene），基因和样本构成的矩阵，[<u>https://en.wiktionary.org/wiki/eigengene</u>](https://en.wiktionary.org/wiki/eigengene) ，Module eigengene是一个基因模块的代表，通常定义为该模块内所有基因表达谱的第一主成分（PC1）。它代表了整个模块的基因表达谱，并用于计算模块与表型或其他基因模块之间的关联。
 
 **Intramodular connectivity：**给定基因与给定Module内其他基因的关联度，判断基因所属关系。
 
 **Module membership: **给定基因表达谱与给定**Module**的eigengene的相关性。Module membership是一个基因表达谱与给定模块的Module eigengene之间的相关性度量。它表示了单个基因属于某个特定模块的程度。
 
-**Hub gene: **关键基因 (连接度最多或连接多个模块的基因)。
+**Hub gene: **关键基因（连接度最多或连接多个模块的基因）。
 
 **邻近矩阵：**是图的一种存储形式，用一个一维数组存放图中所有顶点数据；用一个二维数组存放顶点间关系（边或弧）的数据，这个二维数组称为邻接矩阵；在WGCNA分析里面指的是基因与基因之间的相关性系数矩阵。 如果用了阈值来判断基因相关与否，那么这个邻近矩阵就是0/1矩阵，只记录基因相关与否。但是WGCNA没有用阈值来卡基因的相关性，而是记录了所有基因之间的相关性。
 
 **Topological Overlap Matrix (TOM) ：**WGNA认为基因之间的简单的相关性不足以计算共表达，所以它利用上面的邻近矩阵，又计算了一个新的邻近矩阵。一般来说，TOM就是WGCNA分析的最终结果，后续的只是对TOM的下游注释。
 
-## **3.分析流程**
+## 3.分析流程
 
 ![1650675968716-c3c280da-33a4-4bd0-ac3f-a0b3081ee491.jpeg](./img/Uiy2rTfsu4WUTpcU/1650675968716-c3c280da-33a4-4bd0-ac3f-a0b3081ee491-946001.jpeg)
 
-### **3.1. 数据预处理**
+### 3.1. 数据预处理
 
 这部分内容包括以下部分：
 
@@ -50,7 +50,7 @@ WGCNA其译为加权基因共表达网络分析。该分析方法旨在寻找协
 
 对于基因的表达量数据，需要进行过滤，对于基因而言，可以过滤缺失值或者低表达的基因，对于样本而言，如果该样本中基因缺失值很多，也需要过滤，WGCNA内置了一个检验基因和样本的函数，通过该函数可以进行一个基本过滤。基础过滤之后，还可以看下是否存在离群值的样本，通过样本的聚类树进行判断，生成的图片如下。
 
-#### **（1）表达数据处理**
+#### （1）表达数据处理
 ```plain
 library(WGCNA);
 # The following setting is important, do not omit.
@@ -137,7 +137,7 @@ cutreeStatic函数用来切枝。模块检测在分层树状图使用恒定高�
 
 ![1612609004755-c2916543-8a10-4b12-9df7-5d44fa73535e.png](./img/Uiy2rTfsu4WUTpcU/1612609004755-c2916543-8a10-4b12-9df7-5d44fa73535e-320500.png)
 
-#### **（2）临床数据处理**
+#### （2）临床数据处理
 
 表型数据中也包含了不需要的列，而且其样本比表达谱的样本多，需要根据表达谱的样本提取对应的表型数据。
 
@@ -207,8 +207,8 @@ plotDendroAndColors(sampleTree2, traitColors,
 save(datExpr, datTraits, file = "FemaleLiver-01-dataInput.RData")
 ```
 
-### **3.2. 识别modules**
-#### **（1）选择软阈值指数：拓扑网络分析**
+### 3.2. 识别modules
+#### （1）选择软阈值指数：拓扑网络分析
 
 在构建共表达网络时，将基因间的相关系数进行乘方运算来表征其相关性，首先需要确定乘方的值，也就是软阈值或者我们叫power值、beta值。这个power值至关重要！至关重要！至关重要！那怎么选呢？在WGCNA作者的官方介绍中，一般选6就可以。作者基于无尺度网络的理念提出一种选择软阈值指数的方法，来使得基因表达网络达到无尺度网络的状态。使用函数pickSoftThreshold来进行网络拓扑分析，该函数可以帮助使用者选择合适的软阈值指数。使用者选择一系列的待定指数，然后函数返回一系列的即将被检测到的网络指数。
 
@@ -261,8 +261,8 @@ text(sft$fitIndices[,1], sft$fitIndices[,5], labels=powers, cex=cex1,col="red")
 
 从这个图片中怎么选择power值？最直接的方法：看y轴等于0.9的时候，与曲线的交点，在这个示例数据中，刚好等于6，那我们就选6作为power值。切记：在分析自己数据的时候，power值肯定在6的附近，4-10之内都是可以的，如果离的太远，那就有问题了。之后，就可以用6作为beta值去构建基因module了。
 
-#### **（2）网络构建和模块检测**
-##### **a.方法一：自动化构建基因网络和识别模块**
+#### （2）网络构建和模块检测
+##### a.方法一：自动化构建基因网络和识别模块
 ```plain
 #跨多个数据集进行网络构建和一致性模块检测。net = blockwiseModules(datExpr, power = 6,
                        TOMType = "unsigned", minModuleSize = 30,
@@ -312,7 +312,7 @@ save(MEs, moduleLabels, moduleColors, geneTree,
      file = "FemaleLiver-02-networkConstruction-auto.RData")
 ```
 
-##### **b.方法二：Step-by-step网络构建和模块识别**
+##### b.方法二：Step-by-step网络构建和模块识别
 
 下面利用adjacency 函数计算邻近值，datExp是表达数据的数据框。列对应基因，行对应样本。
 
@@ -337,7 +337,7 @@ TOM = TOMsimilarity(adjacency);
 dissTOM = 1-TOM
 ```
 
-使用分级聚类来产生基因的分级聚类树(dendrogram)。前2步其实就是将自动化构建时 hclust函数中的dist(datExpr)这个参数进行了拆解，一步一步是计算，先计算邻近值，在计算TOM。
+使用分级聚类来产生基因的分级聚类树（dendrogram）。前2步其实就是将自动化构建时 hclust函数中的dist(datExpr)这个参数进行了拆解，一步一步是计算，先计算邻近值，在计算TOM。
 
 ```plain
 # Call the hierarchical clustering function
@@ -449,7 +449,7 @@ MEs = mergedMEs;
 save(MEs, moduleLabels, moduleColors, geneTree, file = "FemaleLiver-02-networkConstruction-stepByStep.RData")
 ```
 
-### **3.3. 筛选和表型相关的module**
+### 3.3. 筛选和表型相关的module
 
 加载前面分析好的数据
 
@@ -463,7 +463,7 @@ lnames = load(file = "FemaleLiver-02-networkConstruction-auto.RData");
 lnames
 ```
 
-#### **（1）定量模块-临床关系**
+#### （1）定量模块-临床关系
 
 在这个分析中，我们将识别出和临床表征相关的模块。我们已经有了每个模块总结性的数据eigengeneeigengene，我们将eigengenes和临床数据关联来查看最重要的联系。本质上是计算module的ME值与表型的相关系数，可以对module和表型间的系数的结果进行可视化。
 
@@ -505,7 +505,7 @@ labeledHeatmap(Matrix = moduleTraitCor,
 
 指定一个我们感兴趣的表型，可以得到与其相关性最高的module。在这个图中，红色表示正相关，绿色表示负相关，颜色越深表示相关性越强。比如，以上结果中，和weight这个表型最相关的为module为red和brown，当然也可以自己指定一个阈值，筛选出多个候选的modules。
 
-#### **（2）基因和临床表征和重要模块的关系：gene显著性和模块关系**
+#### （2）基因和临床表征和重要模块的关系：gene显著性和模块关系
 
 在定量每个基因和感兴趣的临床表征（体重）的联系时，WGCNA定义了基因显著性（Gene Significance，GS）作为基因和表征之间的相关性绝对值。对于每一个模块，WGCNA也定义了模块成员关系（module membership MM）作为模块的engengene和基因表达谱的相关性。这样我们可以对每个模块定量所有基因的相似度。在WGCNA（Weighted Gene Co-Expression Network Analysis，加权基因共表达网络分析）分析中，模块内分析的一个关键步骤是识别那些具有高GS（Gene Significance）和MM（Module Membership）的基因。
 
@@ -543,7 +543,7 @@ names(geneTraitSignificance) = paste("GS.", names(weight), sep="");
 names(GSPvalue) = paste("p.GS.", names(weight), sep="");
 ```
 
-#### **（3）模块内分析：识别具有高GS和MM的gene**
+#### （3）模块内分析：识别具有高GS和MM的gene
 
 使用GS和MM，我们可以识别一些基因既对体重有重要意义，其所在模块也有高的模块成员关系.例如，我们观测到棕色模块和体重有较高的联系，我们在棕色模块内绘制GS vs. MM的散点图。
 
@@ -565,7 +565,7 @@ verboseScatterplot(abs(geneModuleMembership[moduleGenes, column]),
 
 在图中可以看到，GS和MM是高度协相关的，也就是对表征有重要意义的基因就在和该表征关系最密切的模块内。
 
-### **3.4. 生成网络，筛选核心基因**
+### 3.4. 生成网络，筛选核心基因
 
 找到和表型关联的module之后，就可以导出指定modules对应的基因共表达网络，方便可视化。所谓WGCNA（共表达网络）分析，说到底还是要构建一个网络的。那么，既然说到网络，就不得不说最厉害的网络图分析软件Cytoscape。它能够帮我们去实现网络图的可视化和深层次的挖掘。在WGCNA中，也可以直接对接Cytoscape，生成的文件可以导入cytoscape进行绘图。
 

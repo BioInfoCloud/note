@@ -37,7 +37,7 @@ GST（谷胱甘肽巯基转移酶） ， 它的特性， 第一是能够把融�
 ## 2 Cytoscope中使用GeneMANIA插件
 #### 2.1 安装插件
 
-安装java -> 安装Cytoscope -> 安装GeneMANIA插件(在线安装)，也可以从jar文件手动安装
+安装java -> 安装Cytoscope -> 安装GeneMANIA插件（在线安装），也可以从jar文件手动安装
 
 ![1564114381026-d35c2188-5271-4827-b12f-7a9fc16a0da6.png](./img/oOu3b7kl3pz5cl1n/1564114381026-d35c2188-5271-4827-b12f-7a9fc16a0da6-116366.png)
 

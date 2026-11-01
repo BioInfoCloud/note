@@ -18,9 +18,9 @@ Affymetrix公司在基因芯片的高密度生产上做出了里程碑式的贡�
 
 ![1612929861038-5a052d88-f277-4b76-ab16-136b66224352.gif](./img/Ytl8eaB3r5kpWEyw/1612929861038-5a052d88-f277-4b76-ab16-136b66224352-601537.gif)
 
-[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**| **[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**| **[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
-[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
 ---
 
@@ -46,7 +46,7 @@ NCBI基因表达综合库（GEO）可以用作各种高通量实验数据的公�
 
 **1.3系列**
 
-系列记录定义了一组相关的样本，这些样本被视为组的一部分，这些样本的关联方式以及它们是否有序和如何排序。系列作为一个整体提供了实验的重点和描述。系列记录还可以包含描述提取的数据、总结结论或分析的表格。每个系列记录都分配有一个唯一且稳定的GEO登录号(GSExxx)。系列记录有两种格式，由GEOquery独立处理。较小的新GSEMatrix文件解析起来非常快。GEOquery使用一个简单的标志来选择使用GSEMatrix文件（请参见下文）。
+系列记录定义了一组相关的样本，这些样本被视为组的一部分，这些样本的关联方式以及它们是否有序和如何排序。系列作为一个整体提供了实验的重点和描述。系列记录还可以包含描述提取的数据、总结结论或分析的表格。每个系列记录都分配有一个唯一且稳定的GEO登录号（GSExxx）。系列记录有两种格式，由GEOquery独立处理。较小的新GSEMatrix文件解析起来非常快。GEOquery使用一个简单的标志来选择使用GSEMatrix文件（请参见下文）。
 
 **1.4数据集**
 
@@ -219,9 +219,9 @@ GSMList(gse)[[1]]
 names(GPLList(gse))
 ```
 
-**4. 转化为 BioConductor的 ExpressionSets 和 limma MALists对象**
+**4. 转化为 BioConductor的 ExpressionSets 和 limma MALists对象**
 
-GEO数据集(与其他一些GEO实例不同)非常类似于LIMMA数据结构的MAList对象和BioBase数据结构的ExpressionSet对象。因此，有两个函数GDS2MA和GDS2eSet可以完成转换任务。
+GEO数据集（与其他一些GEO实例不同）非常类似于LIMMA数据结构的MAList对象和BioBase数据结构的ExpressionSet对象。因此，有两个函数GDS2MA和GDS2eSet可以完成转换任务。
 
 **4.1 获取作为ExpressionSets的GSE系列矩阵文件**
 
@@ -327,7 +327,7 @@ ano <- MA[["genes"]]
 5   200004_at eukaryotic translation initiation factor 4 gamma 2          EIF4G2             1982
 ```
 
-**4.4 GSE转化为 ExpressionSet**
+**4.4 GSE转化为 ExpressionSet**
 
 ```plain
 gsmplatforms <- lapply(GSMList(gse),function(x) {Meta(x)$platform_id})
@@ -360,7 +360,7 @@ gsmlist = Filter(function(gsm) {Meta(gsm)$platform_id=='GPL96'},GSMList(gse))
 [1] 17
 ```
 
-所以，现在我们想知道哪一列代表我们想要提取的数据。查看单个GSM的表的前几行可能会给我们一个概念(顺便说一句，GEO使用了一个约定，即包含每个数组的单个度量的列称为值列，如果我们不知道其他哪些列最相关，可以使用它)。
+所以，现在我们想知道哪一列代表我们想要提取的数据。查看单个GSM的表的前几行可能会给我们一个概念（顺便说一句，GEO使用了一个约定，即包含每个数组的单个度量的列称为值列，如果我们不知道其他哪些列最相关，可以使用它）。
 
 ```plain
 > Table(gsmlist[[1]])[1:5,]

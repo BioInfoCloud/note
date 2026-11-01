@@ -2,9 +2,9 @@
 
 ![1608887983453-e409337a-c444-4bae-be0b-8c9e8f74eef3.gif](./img/WA1poQh-JPfnWMhf/1608887983453-e409337a-c444-4bae-be0b-8c9e8f74eef3-624512.gif)
 
-[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**| **[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**| **[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
-[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
 ---
 
@@ -104,7 +104,7 @@ Phenotypes labels(样品表型分类文件)：选择上一步上传的表型cls�
 
 我们选择一个就行，2个分组的话，其实没多大区别。
 
-Collapse dataset to gene symbols：我们选择No_Collapse
+Collapse dataset to gene symbols：我们选择No_Collapse
 
 Permutation type(扰动类型)：通常选择phenotype，如果样品数目较少可以选择gene_set。
 
@@ -166,7 +166,7 @@ Enrichment Score (ES)值。
 
 • CORE ENRICHMENT表示对ES有重要贡献的基因，即Leading edge subset，以绿色标记，值为Yes。
 
-回到首页，点击**enrichment results in html **查看富集结果：
+回到首页，点击**enrichment results in html **查看富集结果：
 
 ![1608887983603-59b6ae1e-989d-4cf6-939e-a56faeb1cbde.png](./img/WA1poQh-JPfnWMhf/1608887983603-59b6ae1e-989d-4cf6-939e-a56faeb1cbde-779578.png)
 
@@ -242,7 +242,7 @@ keyType ：就是我们进行GO分析选择 "BP", "MF"还是 "CC" ，如果三�
 
 pvalueCutoff :筛选时p值的选择，一般是0.05或者0.01.
 
-pAdjustMethod：p值的校正方法： "holm", "hochberg", "hommel", "bonferroni", "BH", "BY", "fdr", "none"。
+pAdjustMethod：p值的校正方法： "holm", "hochberg", "hommel", "bonferroni", "BH", "BY", "fdr", "none"。
 
 universe ：背景基因，如果没有,利用数据库中所有基因作为背景。
 
@@ -459,7 +459,7 @@ organism：指定物种，人:hsa，具体可看官网：
 
 ![1608887983568-f6f2441a-9da9-44fa-8f25-994ccbd00265.png](./img/WA1poQh-JPfnWMhf/1608887983568-f6f2441a-9da9-44fa-8f25-994ccbd00265-622492.png)
 
-keyType： "kegg", "ncbi-geneid", "ncib-proteinid" 和 "uniprot"中的一种，我们默认kegg就可以了。
+keyType： "kegg", "ncbi-geneid", "ncib-proteinid" 和 "uniprot"中的一种，我们默认kegg就可以了。
 
 ```plain
 eKEGG <- enrichKEGG(ENTREZ_ID, organism = "hsa", pvalueCutoff=0.01)
@@ -694,7 +694,7 @@ gseaplot(egmt, 1)
 
 ![1608887983751-28a4fdec-054a-4071-8ac6-3283db05dfbe.png](./img/WA1poQh-JPfnWMhf/1608887983751-28a4fdec-054a-4071-8ac6-3283db05dfbe-896961.png)
 
-通过title指定标题，by是 "runningScore"、 "preranked"和"all"中的一个。all表示2者都绘制。
+通过title指定标题，by是 "runningScore"、 "preranked"和"all"中的一个。all表示2者都绘制。
 
 ```plain
 gseaplot(egmt, geneSetID = 1, by = "runningScore", title = egmt$Description[1])
@@ -740,7 +740,7 @@ gseaplot2(gse_KEGG,1:3)
 
 ![1608887983709-f247c292-0ed2-4c1a-bcf6-d9c5c10fbbbf.png](./img/WA1poQh-JPfnWMhf/1608887983709-f247c292-0ed2-4c1a-bcf6-d9c5c10fbbbf-739123.png)
 
-提取码：**95h6 **
+提取码：**95h6 **
 
 如果失效，后台回复：**cluKGGSEA**
 

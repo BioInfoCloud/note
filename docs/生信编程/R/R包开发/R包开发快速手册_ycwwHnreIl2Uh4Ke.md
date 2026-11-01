@@ -19,7 +19,7 @@ devtools::install_github("r-lib/usethis")
 
 相关函数：<https://usethis.r-lib.org/reference/index.html>
 
-## **一.创建一个R包**
+## 一.创建一个R包
 
 Rstudio中点击File - New Project - New Directory - R Package - 给自己R包取名和选择包地址，确定即可。
 
@@ -53,7 +53,7 @@ NAMESPACE(用来规定可以调用的R函数功能,如果这里没有写明，�
 
 .gitignore和.Rbuildgnore
 
-## **二.创建R脚本**
+## 二.创建R脚本
 
 R脚本是存放在R这个文件夹下，但我们通常usethis工具创建。自动在R文件夹下生成脚本文件。
 
@@ -79,7 +79,7 @@ usethis::use_r("getSamInfo")
 
 怎么生成许可协议？？首先就得介绍一下DESCRIPTION文件
 
-## **三.编写DESCRIPTION文件**
+## 三.编写DESCRIPTION文件
 
 DESCRIPTION文件的作用是存储包中重要的元数据，当创建包时，就默认生成了DESCRIPTION文件，默认已经有一些内容。
 
@@ -95,7 +95,7 @@ Author: 作者信息
 
 Description: 包的描述
 
-License: 许可证(包的公共许可，开源程序的特色)
+License: 许可证（包的公共许可，开源程序的特色）
 
 Encoding: UTF-8(编码方式)
 
@@ -121,7 +121,7 @@ usethis::use_mit_license("Yun Sen")
 
 ![1658108476393-e63db304-1bdd-428e-b051-ed9e9f299f5d.png](./img/ycwwHnreIl2Uh4Ke/1658108476393-e63db304-1bdd-428e-b051-ed9e9f299f5d-598409.png)
 
-## **四.写函数帮助文档**
+## 四.写函数帮助文档
 
 R 函数的帮助文档也是 R Package 的重要组成部分。函数文档以特殊的标记格式放在 man/\*.Rd 文件中，但是我们不需要掌握这种特殊标记语法，我们只需要撰写特殊格式的注释，然后 roxygen2 就会将其转换成 \*.Rd 文件。
 
@@ -161,7 +161,7 @@ devtools::document()
 
 ![1658108479203-97d37cc6-acb7-45e2-b3f4-5ee4b35aa2f5.png](./img/ycwwHnreIl2Uh4Ke/1658108479203-97d37cc6-acb7-45e2-b3f4-5ee4b35aa2f5-285576.png)
 
-## **五.添加测试代码**
+## 五.添加测试代码
 
 当我们写好一个函数后，需要验证函数是否能正确执行，结果是否正确，需要进行测试。
 
@@ -207,7 +207,7 @@ devtools::test()
 
 如果这些函数不能满足我们的需要，我们需要用expect_true或者expect_false函数来抓取其他的期望。这里的期望是我自己去构造的，也就是构造一个返回值为true或者false的期望表达式。还有，有时候结果太复杂，不容易通过代码重建，在这种情况下，可以检查结果是否与上次相同，expect_equal_to_reference()会缓存第一次结果，然后将其与随后的运行进行比较。
 
-## **六.依赖包**
+## 六.依赖包
 
 如果我们开发包过程中用到一些已有的包，或者其中的某个函数，那么我们需要引入，我们平时使用包是通过library或者source来加载包，但在开发时不能使用这种方式。R有很多种方式来描述这种潜在的依赖关系。通过imports（输入）、suggests（建议）、Depends（依赖）、LinkingTo（链接到）和Enhances（增强）来描述。imports里的包必须被安装，也就是在安装自己包的时候，imports申明的包也会被安装。suggests中的包，我们可以使用他，但不是必须的，比如我们可以退使用建议包中的数据来运行测试，编译使用指南，或者只有一个函数需要这个包，suggests中的包是不会随我们的包的安装而安装的。Depends用来指定特定的R版本，例如Depends：R（>=3.0.1)。LinkingTo用于列出依赖于另一个包中的C或者C++代码。Enhances列出你的包增强了的包，通常，你的包为其他包里的类提供了方法。
 
@@ -245,9 +245,9 @@ usethis::use_r("getTCGAData")
 usethis::use_tidy_eval()
 ```
 
-## **七. 外部数据**
+## 七. 外部数据
 
-### **1.导出的数据**
+### 1.导出的数据
 
 包中数据最常用的位置是在data/目录下，数据格式一般是.Rdata。其中包含单个对象和文件的名称相同，使用这个规则最简单的方法是使用：
 
@@ -267,13 +267,13 @@ usethis::use_data()
 
 \#' @format #' @source
 
-### **2.内部数据**
+### 2.内部数据
 
 有时候函数需要预先计算的数据表，如果把这些数据放在data/目录下，这些数据也将会被提供给包的用户，这是不恰当的，正确的做法是把他保存在R、sysdata.Rda。我们在使用usethis::use_data()保存数据的时候，可以加上internal=TRUE来创建文件。
 
 ![1658108482964-1dd512ff-1743-42d9-b626-aefff3e0d6ba.png](./img/ycwwHnreIl2Uh4Ke/1658108482964-1dd512ff-1743-42d9-b626-aefff3e0d6ba-968126.png)
 
-### **3.原始数据**
+### 3.原始数据
 
 如果想展示加载/解析原始数据的例子，就将原始文件放在inst/extdata。安装包时，inst/中所有文件和文件夹都会移动到顶层目录，所以它们不能有R/description这样的名字，要引用inst/extdata（无论是否安装）中是文件，使用system.file()。
 
@@ -326,9 +326,9 @@ git remote add origin git@github.com:BioInfoNote/FUNscore.git
 git push -u origin master
 ```
 
-## **十. usethis包**
+## 十. usethis包
 
-### **1.use_package()**
+### 1.use_package()
 
 use_package()向DESCRIPTION添加了一个CRAN包依赖关系，并提供了一些关于如何最好地使用它的建议。
 
@@ -344,7 +344,7 @@ min_version：还可以为包提供一个最小版本。设置为TRUE以使用�
 
 remote：默认情况下，插入一个OWNER/REPO GitHub远程服务器。您可以选择提供一个字符串来指定远程，例如。"gitlab::jimhester/covr"，使用远程包支持的任何语法。
 
-### **2.use_import_from()**
+### 2.use_import_from()
 
 use_import_from(package, fun, load = is_interactive())
 
@@ -356,17 +356,17 @@ fun：A vector of function names
 
 load：Logical. Re-load with pkgload::load_all()?
 
-### **3.use_r()**
+### 3.use_r()
 
 use_r(name = NULL, open = rlang::is_interactive()) use_test(name = NULL, open = rlang::is_interactive())
 
 name：可以使用没有扩展名的名称，也可以使用NULL来根据脚本编辑器中当前打开的文件创建成对的文件。如果R文件是打开的，use_test()将创建/打开相应的测试文件;如果测试文件打开，use_r()将创建/打开相应的R文件。
 
-### **4.use_rmarkdown_template()**
+### 4.use_rmarkdown_template()
 
 use_rmarkdown_template(   template_name ="Template Name",   template_dir =NULL,   template_description ="A description of the template",   template_create_dir =FALSE)
 
-### **5\*\*\*\*.Use_data()**
+### 5\*\*\*\*.Use_data()
 
 ```r
 use_data(...,   internal =FALSE,   overwrite =FALSE,   compress ="bzip2",   version =2)
@@ -418,7 +418,7 @@ Maintainer: The package maintainer yourself@somewhere.net(包的贡献者名字�
 
 Description: 包的描述
 
-License: 许可证(包的公共许可，开源程序的特色。这里也不理会，以GPL-3为协议)
+License: 许可证（包的公共许可，开源程序的特色。这里也不理会，以GPL-3为协议）
 
 Encoding: UTF-8(编码方式)
 

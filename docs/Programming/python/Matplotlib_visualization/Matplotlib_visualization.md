@@ -44,8 +44,8 @@ my_fonts = set(f.name for f in fm.ttflist)
     num：整数，表示图形的编号。如果当前已经存在编号为num的图形，则新创建的图形会成为当前图形。
     figsize：元组，表示图形的大小。第一个元素是宽度（width），第二个元素是高度（height）。单位为英寸。
     dpi：整数，表示图形的分辨率，单位为像素/英寸。默认值为80。
-    facecolor：字符串，表示图形的背景颜色。可以是颜色名称的字符串，如"white"、"black"等，也可以是RGB元组，如(1, 1, 1)。默认值为"white"。
-    edgecolor：字符串，表示图形的边框颜色。可以是颜色名称的字符串，如"black"等，也可以是RGB元组，如(0, 0, 0)。默认值为"black"。
+    facecolor：字符串，表示图形的背景颜色。可以是颜色名称的字符串，如"white"、"black"等，也可以是RGB元组，如（1, 1, 1）。默认值为"white"。
+    edgecolor：字符串，表示图形的边框颜色。可以是颜色名称的字符串，如"black"等，也可以是RGB元组，如（0, 0, 0）。默认值为"black"。
     frameon:是否显示边框。
 
 ```python
@@ -1331,7 +1331,7 @@ matplotlib.pyplot.pie(x, explode=None, labels=None, colors=None, autopct=None, p
     counterclock: 是否逆时针绘制饼图。默认为 True。
     wedgeprops: 用于设置每个扇形的属性，如颜色、边界等。
     textprops: 用于设置百分比标签的属性，如颜色、大小等。
-    center: 饼图的中心坐标。默认为 (0, 0)，即原点。
+    center: 饼图的中心坐标。默认为（0, 0），即原点。
     frame: 是否绘制饼图的边框。默认为 False。
     rotatelabels: 是否旋转标签，使其始终在扇形中心。默认为 False。
     normalize: 是否将输入数据规范化为百分比。默认为 True。

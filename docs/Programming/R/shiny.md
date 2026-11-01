@@ -240,7 +240,7 @@ server <- function(input, output, session) {
 
 默认情况下，plotOutput() 将占据其容器的整个宽度（稍后会详细介绍），并且高度为 400 像素。 您可以使用高度和宽度参数覆盖这些默认值。 我们建议始终设置 res = 96，因为这将使您的 Shiny 图与您在 RStudio 中看到的尽可能接近。
 
-图很特别，因为它们是输出，也可以作为输入。 plotOutput() 有许多参数，例如 click、dblclick 和 hover。 如果你给它们传递一个字符串，比如 click = "plot_click"，它们将创建一个反应性输入 (input$plot_click)，你可以用它来处理用户在绘图上的交互，例如 点击情节。
+图很特别，因为它们是输出，也可以作为输入。 plotOutput() 有许多参数，例如 click、dblclick 和 hover。 如果你给它们传递一个字符串，比如 click = "plot_click"，它们将创建一个反应性输入（input$plot_click），你可以用它来处理用户在绘图上的交互，例如 点击情节。
 
 #### (4)下载
 

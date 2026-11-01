@@ -265,7 +265,7 @@ sc.pp.filter_cells(adata, min_genes=200)
 sc.pp.filter_genes(adata, min_cells=3)
 ```
 
-线粒体基因含量高的问题(Lun, McCarthy & Marioni, 2017)：高比例表明细胞质量差(Islam et al. 2014; Ilicic et al. 2016) ，可能是因为穿孔细胞失去了细胞质 RNA，而线粒体比单个转录分子大，不太可能通过细胞膜上的裂口逃脱。
+线粒体基因含量高的问题（Lun, McCarthy & Marioni, 2017）：高比例表明细胞质量差（Islam et al. 2014; Ilicic et al. 2016） ，可能是因为穿孔细胞失去了细胞质 RNA，而线粒体比单个转录分子大，不太可能通过细胞膜上的裂口逃脱。
 
 ```python
 adata.var['mt'] = adata.var_names.str.startswith('MT-')  # annotate the group of mitochondrial genes as 'mt'
@@ -320,7 +320,7 @@ adata.raw = adata
 
 之前高度可变基因检测的结果作为注释存储在 .var.highly_variable 中，并由 PCA 自动检测，因此也由 sc.pp.neighbors 和后续的流形/图工具自动检测。在这种情况下，下面实际进行过滤的步骤也是不必要的。
 
-通过主成分分析(PCA)对数据进行降维，揭示数据的主要变化轴，对数据进行降噪处理。
+通过主成分分析（PCA）对数据进行降维，揭示数据的主要变化轴，对数据进行降噪处理。
 
 ```python
 adata = adata[:, adata.var.highly_variable]
@@ -345,7 +345,7 @@ sc.pp.scale(adata, max_value=10)
 
 ### 3.4 主成分分析
 
-通过主成分分析(PCA)对数据进行降维，揭示数据的主要变化轴，对数据进行降噪处理。
+通过主成分分析（PCA）对数据进行降维，揭示数据的主要变化轴，对数据进行降噪处理。
 
 ```python
 sc.tl.pca(adata, svd_solver='arpack')
@@ -405,7 +405,7 @@ sc.pl.umap(adata, color=['CST3', 'NKG7', 'PPBP'], use_raw=False)
 
 在单细胞分析中，对邻域图进行聚类（Clustering the neighborhood graph）是指利用聚类算法对邻域图中的细胞进行分组，以识别不同的细胞亚群。
 
-在单细胞分析中，常用的聚类方法包括K-means聚类、层次聚类、DBSCAN聚类等。这些方法可以根据细胞的相似性和相关性，将邻域图中的细胞分成不同的组或簇。通过对这些簇进行分析，可以揭示细胞群体的结构和功能特征，进一步了解细胞之间的相互作用和分化过程。与Seurat和许多其他框架一样，我们推荐Traag等人(2018)的Leiden图聚类方法(community detection based on optimizing modularity)。注意，Leiden聚类直接对单元的邻域图进行聚类，我们已经在前一节中计算过了。
+在单细胞分析中，常用的聚类方法包括K-means聚类、层次聚类、DBSCAN聚类等。这些方法可以根据细胞的相似性和相关性，将邻域图中的细胞分成不同的组或簇。通过对这些簇进行分析，可以揭示细胞群体的结构和功能特征，进一步了解细胞之间的相互作用和分化过程。与Seurat和许多其他框架一样，我们推荐Traag等人（2018）的Leiden图聚类方法（community detection based on optimizing modularity）。注意，Leiden聚类直接对单元的邻域图进行聚类，我们已经在前一节中计算过了。
 
 ```python
 sc.tl.leiden(adata)

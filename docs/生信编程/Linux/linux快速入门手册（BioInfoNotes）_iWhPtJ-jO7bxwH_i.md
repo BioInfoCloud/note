@@ -1,4 +1,4 @@
-# linux快速入门手册(BioInfoNotes)
+# linux快速入门手册（BioInfoNotes）
 
 【腾讯文档】Linux笔记：[https://docs.qq.com/doc/DWnJZbER4cWVJWHRN](https://docs.qq.com/doc/DWnJZbER4cWVJWHRN)
 

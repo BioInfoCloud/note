@@ -24,7 +24,7 @@ SingleR是一个R包，是单细胞数据分析中细胞注释工具，它可以
 
 根据参考数据集，我们得到Marker基因。主要方法是默认基于差异倍数（其他比如秩和检验或者T检验）。主要分2 步：
 
-#### **1.1 计算差异倍数**
+#### 1.1 计算差异倍数
 
 以计算参考集A类细胞的Marker基因为例，先计算得到参考集中各个基因在A类细胞和其他细胞中表达量的中位数（因为参考集，每种细胞都有大量重复，所以可以计算中位数），然后根据中位数将参考集中细胞类型进行两两比较，计算表达差异倍数。
 
@@ -34,16 +34,16 @@ SingleR自带5个人的参考数据库和2个小鼠的参考数据库，，**每
 
 **Mouse:**
 
-- Immunological Genome Project (ImmGen): 收集了830个微阵列样本，我们将其分类为20个主要细胞类型，进一步注释为253个子类型 (Heng et al. 2008)。The ImmGen reference consists of microarray profiles of puremouse immune cells from the project of the same name (Heng et al. 2008). This is currently the most highly resolved immune reference- possibly overwhelmingly so, given the granularity of the fine labels。
-- MRD参考包含从基因表达综合库下载的小鼠大体积rna序列数据集(Benayoun等人，2019年)。有各种各样的细胞类型，同样主要来自血液，但也包括其他一些组织。
+- Immunological Genome Project (ImmGen): 收集了830个微阵列样本，我们将其分类为20个主要细胞类型，进一步注释为253个子类型（Heng et al. 2008）。The ImmGen reference consists of microarray profiles of puremouse immune cells from the project of the same name (Heng et al. 2008). This is currently the most highly resolved immune reference- possibly overwhelmingly so, given the granularity of the fine labels。
+- MRD参考包含从基因表达综合库下载的小鼠大体积rna序列数据集（Benayoun等人，2019年）。有各种各样的细胞类型，同样主要来自血液，但也包括其他一些组织。
 
 **Human:**
 
-- Human Primary Cell Atlas (HPCA): 基因表达集合(GEO数据集)，包含713个微阵列样本，分类为38种主要细胞类型，进一步注释为169个子类型 (Mabbott et al. 2013)。大多数标签指的是血液亚群，但细胞类型从其他组织也可用。
-- Blueprint/ENCODE 参考由 Blueprint (Martens and Stunnenberg 2013)和 ENCODE 项目(ENCODE Project Consortium 2012)产生的纯基质和免疫细胞的大量 RNA-seq 数据组成。
-- DICE参考由来自同名项目(Schmiedel等人，2018年)的排序细胞群的大量RNA-seq样本组成。
-- Novershtern参考资料(以前称为分化图)由GSE24759中排序的造血细胞群的微阵列数据集组成(Novershtern et al. 2011)。
-- Monaco参考由来自GSE107011的免疫细胞群的大量RNA-seq样本组成(Monaco et al. 2019)。
+- Human Primary Cell Atlas (HPCA): 基因表达集合（GEO数据集），包含713个微阵列样本，分类为38种主要细胞类型，进一步注释为169个子类型（Mabbott et al. 2013）。大多数标签指的是血液亚群，但细胞类型从其他组织也可用。
+- Blueprint/ENCODE 参考由 Blueprint (Martens and Stunnenberg 2013)和 ENCODE 项目（ENCODE Project Consortium 2012）产生的纯基质和免疫细胞的大量 RNA-seq 数据组成。
+- DICE参考由来自同名项目（Schmiedel等人，2018年）的排序细胞群的大量RNA-seq样本组成。
+- Novershtern参考资料（以前称为分化图）由GSE24759中排序的造血细胞群的微阵列数据集组成（Novershtern et al. 2011）。
+- Monaco参考由来自GSE107011的免疫细胞群的大量RNA-seq样本组成（Monaco et al. 2019）。
 
 #### 1.2 确定Marker的数目
 
@@ -63,7 +63,7 @@ Tips:
 SingleR计算相关性有两种方法：
 
 - sd—— 参考数据集中所有样本的标准差超过阈值的基因。我们选择阈值，从3000-4000个基因开始。
-- de——与其他细胞类型相比，在一种细胞类型中有较高中位数表达的前N个基因。我们使用可变的N，这取决于分析中使用的细胞类型的数量(K)。
+- de——与其他细胞类型相比，在一种细胞类型中有较高中位数表达的前N个基因。我们使用可变的N，这取决于分析中使用的细胞类型的数量（K）。
 
 计算待测细胞X与参考集A类细胞的相关系数，细胞X与参考集A类细胞的相关系数为80%分位数（由于参考集A类细胞有很多重复，会得到多个相关系数）。也就是细胞X与参考集中的每一类细胞只有1个相关系数，这就避免了参考库中数据异质性导致的误差。
 
@@ -184,7 +184,7 @@ P9 + P10
 
 ### 4.细胞注释的可靠性
 
-plotScoreHeatmap显示所有引用细胞类型上所有细胞的得分，这允许用户检查数据集中预测细胞类型的可信度。每个类群/细胞的实际分配标签显示在顶部的颜色栏中。关键点是检查分数(scores)在每个类群/细胞中的分布情况。理想情况下，每个类群/细胞(即热图的列)应该有一个明显大于其他细胞的分数，这表明它明确地分配给了单个标签。
+plotScoreHeatmap显示所有引用细胞类型上所有细胞的得分，这允许用户检查数据集中预测细胞类型的可信度。每个类群/细胞的实际分配标签显示在顶部的颜色栏中。关键点是检查分数（scores）在每个类群/细胞中的分布情况。理想情况下，每个类群/细胞（即热图的列）应该有一个明显大于其他细胞的分数，这表明它明确地分配给了单个标签。
 
 ![](https://raw.githubusercontent.com/BioInfoCloud/ImageGo/main/202210122237212.png)
 

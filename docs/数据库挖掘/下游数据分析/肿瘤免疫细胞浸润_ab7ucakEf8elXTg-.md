@@ -66,7 +66,7 @@ write.table(expdata,file = "as.ImmueInputExp.txt",row.names = F,sep = "\t")
 
 上面代码中TCGA-COAD-Exp.txt文件，没有去掉重复的基因，所以我们需要处理一下，也同时删除没有表达的基因。输出的as.ImmueInputExp.txt文件就作为计算免疫细胞浸润的比例文件，第一列是基因名称，其他列是样本名称。
 
-## **二.免疫浸润计算**
+## 二.免疫浸润计算
 
 **登录网址，没有账号得先注册**
 
@@ -492,9 +492,9 @@ write.table(StageR,file=paste0(outputPath,"immueStageFig\\",clin,".xls"),
 
 ![1612608562588-251ca6b6-386e-46a7-af1f-4e183e52c44a.png](./img/ab7ucakEf8elXTg-/1612608562588-251ca6b6-386e-46a7-af1f-4e183e52c44a-351474.png)
 
-链接：[<u>https://pan.baidu.com/s/1uEhnIA4sCFr8RKX_LpkcSA</u>](https://pan.baidu.com/s/1uEhnIA4sCFr8RKX_LpkcSA)<u> </u>
+链接：[<u>https://pan.baidu.com/s/1uEhnIA4sCFr8RKX_LpkcSA</u>](https://pan.baidu.com/s/1uEhnIA4sCFr8RKX_LpkcSA)<u> </u>
 
-提取码：**v9tx **
+提取码：**v9tx **
 
 如果失效，后台回复：**TCGA-ImmuneInfiltration**
 

@@ -2,9 +2,9 @@
 
 ![1615612397098-b5f27f54-47eb-474d-8ec2-96bc53c8f7c6.gif](./img/KXLt7IQgD8Ez9VxL/1615612397098-b5f27f54-47eb-474d-8ec2-96bc53c8f7c6-875035.gif)
 
-[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**| **[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**| **[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
-[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)** |**** **[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | 服务器与**[**Linux**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1410264757734817793&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)** |**** **[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | 服务器与**[**Linux**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1410264757734817793&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
 ---
 
@@ -56,7 +56,7 @@ head(keys(miRBaseVersions.db, keytype = "VW-MIMAT-22.0"))
 
 ![1615612397062-8edb2bbb-0bb0-4b5d-84b2-c6b57eac126f.png](./img/KXLt7IQgD8Ez9VxL/1615612397062-8edb2bbb-0bb0-4b5d-84b2-c6b57eac126f-675172.png)
 
-select函数用于提取数据。作为输入值，该函数接受从其他三个函数(键、列和键类型)接收的输出。
+select函数用于提取数据。作为输入值，该函数接受从其他三个函数（键、列和键类型）接收的输出。
 
 例如，要提取关于成熟accession' MIMAT0000092 '的所有信息，我们可以运行以下命令:
 
@@ -106,7 +106,7 @@ ftp://mirbase.org/pub/mirbase/CURRENT/
 
 ---
 
-经    典    栏    目
+经 典 栏 目
 
 | ![1615612397123-74e1598f-104c-4078-9e4c-2ff79baa096f.png](./img/KXLt7IQgD8Ez9VxL/1615612397123-74e1598f-104c-4078-9e4c-2ff79baa096f-917840.png) | ![1615612397239-af9f5668-9291-4a4f-8bb1-577be61d6040.png](./img/KXLt7IQgD8Ez9VxL/1615612397239-af9f5668-9291-4a4f-8bb1-577be61d6040-026602.png) |
 | --- | --- |

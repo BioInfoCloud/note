@@ -132,7 +132,7 @@ Sentiment Scores
 
 情绪可以分为积极的、中性的和消极的。它们也可以用数字表示，以便更好地表达文本主体中所包含的情绪的积极或消极程度。
 
-这个例子使用Syuzhet包来生成情感分数，它有四个情感词典，并提供了一种访问斯坦福大学NLP小组开发的情感抽取工具的方法。get_sentiment函数接受两个参数:一个字符向量(句子或单词)和一个方法。所选择的方法决定了将使用四种可用的情感提取方法中的哪一种。这四个方法是syuzhet(这是默认的)、bing、afinn和nrc。每种方法使用不同的刻度，因此返回的结果略有不同。请注意，nrc方法的结果不仅仅是一个数值分数，需要额外的解释，超出了本文的范围。get_sentiment函数的描述来源于:
+这个例子使用Syuzhet包来生成情感分数，它有四个情感词典，并提供了一种访问斯坦福大学NLP小组开发的情感抽取工具的方法。get_sentiment函数接受两个参数:一个字符向量（句子或单词）和一个方法。所选择的方法决定了将使用四种可用的情感提取方法中的哪一种。这四个方法是syuzhet(这是默认的)、bing、afinn和nrc。每种方法使用不同的刻度，因此返回的结果略有不同。请注意，nrc方法的结果不仅仅是一个数值分数，需要额外的解释，超出了本文的范围。get_sentiment函数的描述来源于:
 
 [https://cran.r-project.org/web/packages/syuzhet/vignettes/syuzhet-vignette.html?](https://cran.r-project.org/web/packages/syuzhet/vignettes/syuzhet-vignette.html?)
 

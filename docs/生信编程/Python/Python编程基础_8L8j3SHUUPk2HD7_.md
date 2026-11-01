@@ -309,7 +309,7 @@ print("MedBioInfoCloud")
 * 定义一个书签【F11】
 * 代码小写转大写【Ctrl + Shift+U】
 * 进入一个方法【Ctrl + B / Ctrl +鼠标左键】
-* 快捷查看方法的实现(源码)【Ctrl + Shift + I】
+* 快捷查看方法的实现（源码）【Ctrl + Shift + I】
 * 查看文档描述【Ctrl + Q】
 * 查看文件中的方法【Ctrl + F12】
 * 最近编辑的文件列表【Ctrl + E】

@@ -281,7 +281,7 @@ devtools::install_github('dviraran/xCell')
 library(xCell)
 ```
 
-xCell使用的是表达水平排序而不是实际值，因此归一化没有效果，但是需要归一化到基因长度(RPKM/FPKM/TPM/RSEM)。案例：
+xCell使用的是表达水平排序而不是实际值，因此归一化没有效果，但是需要归一化到基因长度（RPKM/FPKM/TPM/RSEM）。案例：
 
 ```r
 	proj = "TCGA-LUAD"

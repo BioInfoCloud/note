@@ -10,7 +10,7 @@ RNA-seq的counts值，RPKM, FPKM, TPM 的异同
 
 基因长度：同一条件下，不同的基因长度产生不对等的read读数，基因越长，该基因的read读数越高。
 
-## **1.Count值**
+## 1.Count值
 
 对给定的基因组参考区域，计算比对上的read数，又称为raw count（RC）。在RNAseq数据中，raw reads count一般是指mapped到基因外显子区域的reads数目。
 
@@ -32,11 +32,11 @@ FPKM(Fragment Per Kilobase of transcript, per Million mapped reads）：每千�
 
 **RPKM与FPKM的区别**：RPKM值适用于单末端RNA-seq实验数据，FPKM适用于双末端RNA-seq测序数据。
 
-## **3.TPM (Transcript per million)**
+## 3.TPM (Transcript per million)
 
 TPM（Transcripts Per Million） 是一种常用的基因表达量归一化方法，它将基因的表达量调整为每百万条转录本的数量。TPM 值考虑了基因的长度和测序深度，通过将每个基因的 Counts 值除以其长度，并进行适当的归一化，将基因的表达量转换为每百万转录本数，以便进行样本间的比较和分析。TPM 值消除了样本间测序深度的差异和基因长度的影响。
 
- ![1702201133439-8661f5aa-caab-4420-adb7-53589546960b.png](./img/08QLyEVmIYT1PuBG/1702201133439-8661f5aa-caab-4420-adb7-53589546960b-225671.png)
+![1702201133439-8661f5aa-caab-4420-adb7-53589546960b.png](./img/08QLyEVmIYT1PuBG/1702201133439-8661f5aa-caab-4420-adb7-53589546960b-225671.png)
 
 TPM的计算方法也同RPKM/FPKM类似，首先使用式2计算每个基因的表达值，去除基因长度的影响。随后计算每个基因的表达量的百分比，最后再乘以10^6，TPM可以看作是RPKM/FPKM值的百分比。
 
@@ -52,7 +52,7 @@ TPM的使用范围与RPKM/FPKM相同。
 
 raw count作为原始的read计数矩阵是一个绝对值，而绝对值的特点是规模不同（基因长度、测序深度），不可以比较。进行这些基因标准化方法的目的是将count矩阵转变为相对值，去除技术偏差的影响，使后续的差异分析具有统计学的意义。
 
-           ![1612327456384-40358485-b080-42bf-8484-207f44081d88.png](./img/08QLyEVmIYT1PuBG/1612327456384-40358485-b080-42bf-8484-207f44081d88-381946.png)
+![1612327456384-40358485-b080-42bf-8484-207f44081d88.png](./img/08QLyEVmIYT1PuBG/1612327456384-40358485-b080-42bf-8484-207f44081d88-381946.png)
 
 ## 5.数据之间的转换
 

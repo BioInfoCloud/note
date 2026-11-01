@@ -134,12 +134,12 @@ makeClassifTask(
 - coordinates:(data.frame)空间数据集的坐标，将用于空间交叉验证重采样设置中数据的空间分区。坐标必须是数值。提供的data.fram需要具有与data相同的行数，并且至少包含两个维度。
 
 -
-  positive:二进制分类的阳性类(否则忽略并设置为NA)。Default是目标属性的第一个因子级别。
+  positive:二进制分类的阳性类（否则忽略并设置为NA）。Default是目标属性的第一个因子级别。
 
 -
   fixup.data:是否应该进行一些基本的数据清理？目前，这意味着删除列的空因子级别。可能的选择是：“no”=不做。“warn”=做但要警告。“quiet”=做但保持沉默。默认值为“warn”。
 
-- check.data:逻辑值，是否应该在任务创建时首先检查数据的完整性?你应该有很好的理由关闭它(一个可能是速度)。默认为TRUE。
+- check.data:逻辑值，是否应该在任务创建时首先检查数据的完整性?你应该有很好的理由关闭它（一个可能是速度）。默认为TRUE。
 
 ```R
 # DEFINING THE DIABETES TASK ----

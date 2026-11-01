@@ -128,7 +128,7 @@ Seurat包CellCycleScoring较scran包cyclone函数最主要的区别是直接根�
 
 ![image.png](./Figure/scRNASeq_Down_008.jpg)
 
-根据每一个细胞对于三个周期阶段的scores，可进行判断；具体规则为 **G1或G2M评分高于0.5的细胞分别被分配到G1期或G2M期**。若G1 or G2M phases均小于0.5，则可判断为S期(虽然可以直接看S期的score)；若G1 or G2M phases均大于0.5，则 the higher score is used for assignment。
+根据每一个细胞对于三个周期阶段的scores，可进行判断；具体规则为 **G1或G2M评分高于0.5的细胞分别被分配到G1期或G2M期**。若G1 or G2M phases均小于0.5，则可判断为S期（虽然可以直接看S期的score）；若G1 or G2M phases均大于0.5，则 the higher score is used for assignment。
 
 ## 5.检测doublets
 

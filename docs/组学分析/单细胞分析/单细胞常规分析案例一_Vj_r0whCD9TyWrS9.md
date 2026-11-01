@@ -120,7 +120,7 @@ rownames(sce.all.filt)[grepl('^RP[SL]',rownames(sce.all.filt),ignore.case = T)]
 sce.all.filt[["percent.mt"]] <- PercentageFeatureSet(sce.all.filt, pattern = "^MT-")
 ```
 
-上面的方法是修改 sce.all.filt[["percent.mt"]]  ，下面我们演示 AddMetaData 函数，同样是可以增加线粒体基因含量信息到我们的seurat对象。
+上面的方法是修改 sce.all.filt[["percent.mt"]] ，下面我们演示 AddMetaData 函数，同样是可以增加线粒体基因含量信息到我们的seurat对象。
 
 计算核糖体蛋白基因的比例：
 
@@ -164,7 +164,7 @@ plot2 <- FeatureScatter(sce.all.filt1, feature1 = "nCount_RNA", feature2 = "nFea
 plot1 + plot2
 ```
 
-## 6.**数据标准化**
+## 6.数据标准化
 
 基因的表达矩阵需要经过标准化后才能进行后续的分析。使用NormalizeData函数进行标准化，normalization.method：标准化方法，可选项，
 

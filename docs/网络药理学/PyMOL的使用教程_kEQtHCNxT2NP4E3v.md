@@ -75,7 +75,7 @@ PyMOL 软件界面如下图所示，主要由2部分组成。第一部分是菜�
 
 点击Download，你会发现PyMOL会自动加载该蛋白，在工作路径 D:\PyMOLstartedManual 下面出现 4hbk.cif 文件，随着PDB解析的结构越来越大，PDB格式文件的局限性就暴露出来，不能超过9999个原子，因此正在逐渐用cif 格式取代pdb 格式。
 
-### 蛋白的展现形式(show)
+### 蛋白的展现形式（show）
 
 在2.3对象列表窗口中，我们可以看到现在有2个object 名字，
 
@@ -198,7 +198,7 @@ PyMOL 软件界面如下图所示，主要由2部分组成。第一部分是菜�
 
 ![1612063832107-fe765f2e-47a3-4b52-939a-c6c8e07a10b0.png](./img/kEQtHCNxT2NP4E3v/1612063832107-fe765f2e-47a3-4b52-939a-c6c8e07a10b0-644144.png)
 
-### 查看该结构的序列(Sequence)
+### 查看该结构的序列（Sequence）
 
 点击左下角的S，即可显示蛋白的序列信息，如图所示,再点击一次S，则掩藏序列信息。 S是单词Sequece的缩写。
 
@@ -428,7 +428,7 @@ step4 在edit模式下，按住shit 就可以通过鼠标移动配体。
 | --- | --- |
 | ![1612063832143-170427d6-db01-4f4d-a58f-c2902d15cb63.png](./img/kEQtHCNxT2NP4E3v/1612063832143-170427d6-db01-4f4d-a58f-c2902d15cb63-621411.png)<br/>Fig 3. Multi-Layer(real time oit) | ![1612063831842-cdd3e3c2-00a6-4009-8a8d-1589767dea55.png](./img/kEQtHCNxT2NP4E3v/1612063831842-cdd3e3c2-00a6-4009-8a8d-1589767dea55-391737.png)<br/>Fig 4. Fast-ugly |
 
-### 雾化(fogging)处理
+### 雾化（fogging）处理
 
 PyMOL中支持各种雾化处理，保证depth_cue是开启的。
 
@@ -537,7 +537,7 @@ PyMOL中有2个地方可供命令输入，如下图所示，根据自己的爱�
 
 笔者倾向于使用命令框1，下面我将讲解一些常用的命令：
 
-### 查看切换工作路径(pwd)
+### 查看切换工作路径（pwd）
 
 默认打开和保存文件，都是在工作路径中。因此设定合适的工作路径，可以提供效率。 建议分子文件格式，如mol2,pdb等格式，全部关联到PyMOL软件，不要关联到DS，Maestro等软件。
 
@@ -550,7 +550,7 @@ PyMOL中有2个地方可供命令输入，如下图所示，根据自己的爱�
 
 ![1612063966655-fbec5f6f-6dfd-47a9-9b67-48253eaf5ddf.png](./img/kEQtHCNxT2NP4E3v/1612063966655-fbec5f6f-6dfd-47a9-9b67-48253eaf5ddf-884089.png)
 
-### 下载蛋白(fetch)
+### 下载蛋白（fetch）
 
 fetch 命令可以根据PDB ID编号下载蛋白结构到工作路径，并载入到PyMOL中显示,在PyMOL中的object的名字默认是PDB ID,可通过name参数进行修改。 从PyMOL 1.8开始，默认的格式是cif,可通过type参数修改文件的格式，也支持根据配体ligand ID的编号下载小分子。
 
@@ -757,7 +757,7 @@ phi_psi 4hbk phi_psi resi 100
 
 ***
 
-### 蛋白的展现形式(show,as)
+### 蛋白的展现形式（show,as）
 
 命令如下:
 
@@ -787,9 +787,9 @@ ray 方可看到调整后的状态。
 
 ### 设置双键的显示形式 valence
 
-set valence, 0  #关闭双键显示
+set valence, 0 #关闭双键显示
 
-set valence, 1  #开启双键显示
+set valence, 1 #开启双键显示
 
 ### 设置小球的大小 sphere_scale
 
@@ -799,7 +799,7 @@ set sphere_scale,0.5
 
 ![1612063967419-8b129ec1-16f6-4004-a94e-3d3d461fd4bf.png](./img/kEQtHCNxT2NP4E3v/1612063967419-8b129ec1-16f6-4004-a94e-3d3d461fd4bf-727381.png)
 
-### 重新计算二级结构(dss)
+### 重新计算二级结构（dss）
 
 dss
 
@@ -877,21 +877,21 @@ set cartoon_cylindrical_helices, 0
 
 set cartoon_oval_length , 0.8 # default is 1.20
 
-set cartoon_oval_width , 0.2  # default is 0.25
+set cartoon_oval_width , 0.2 # default is 0.25
 
 示例：
 
 ![1612063966955-5181c859-aa0e-4e5a-83a9-b7c7ff3f9133.png](./img/kEQtHCNxT2NP4E3v/1612063966955-5181c859-aa0e-4e5a-83a9-b7c7ff3f9133-014098.png)
 
-### 着色(color)
+### 着色（color）
 
 color red,object name
 
-### 设置透明度(transparency)
+### 设置透明度（transparency）
 
 所有的命令
 
-### 选择，残基(select)
+### 选择，残基（select）
 
 选择所有的碳原子： select catoms, elem C
 
@@ -911,11 +911,11 @@ show sticks, (cys/ca+cb+sg) and byres (cys/sg and bound_to cys/sg)
 
 step1. 显示整个蛋白蛋白的静电势表面；A->generate->vacuum electrostatic->potential
 
-step2  设置口袋的中心，一般以其中的配体作为中心；
+step2 设置口袋的中心，一般以其中的配体作为中心；
 
 set surface_carve_selection, ligand
 
-step3  设置口袋的大小
+step3 设置口袋的大小
 
 set surface_carve_cutoff, 5
 
@@ -952,7 +952,7 @@ super p1 & alt A+'', p2 & alt B+''
 
 实战
 
-super obj03  & resi 2-191 & chain K, obj04  & resi 2-191 & chain C
+super obj03 & resi 2-191 & chain K, obj04 & resi 2-191 & chain C
 
 ### 分组（group)
 
@@ -978,85 +978,85 @@ order object
 
 PyMOL 中内置超过<code>100种颜色 <[https://pymolwiki.org/index.php/Color_Values](https://pymolwiki.org/index.php/Color_Values)></code>\_，
 
-aquamarine    0.5     1.0     1.0
+aquamarine 0.5 1.0 1.0
 
-      black   0.0     0.0     0.0
+black 0.0 0.0 0.0
 
-      blue    0.0     0.0     1.0
+blue 0.0 0.0 1.0
 
-      bluewhite       0.85    0.85    1.00
+bluewhite 0.85 0.85 1.00
 
-      br0     0.1     0.1     1.0
+br0 0.1 0.1 1.0
 
-      br1     0.2     0.1     0.9
+br1 0.2 0.1 0.9
 
-      br2     0.3     0.1     0.8
+br2 0.3 0.1 0.8
 
-      br3     0.4     0.1     0.7
+br3 0.4 0.1 0.7
 
-      br4     0.5     0.1     0.6
+br4 0.5 0.1 0.6
 
-      br5     0.6     0.1     0.5
+br5 0.6 0.1 0.5
 
-      br6     0.7     0.1     0.4
+br6 0.7 0.1 0.4
 
-      br7     0.8     0.1     0.3
+br7 0.8 0.1 0.3
 
-      br8     0.9     0.1     0.2
+br8 0.9 0.1 0.2
 
-      br9     1.0     0.1     0.1
+br9 1.0 0.1 0.1
 
-      brightorange    1.0     0.7     0.2
+brightorange 1.0 0.7 0.2
 
-      brown   0.65    0.32    0.17
+brown 0.65 0.32 0.17
 
-      carbon  0.2     1.0     0.2
+carbon 0.2 1.0 0.2
 
-      chartreuse      0.5     1.0     0.0
+chartreuse 0.5 1.0 0.0
 
-      chocolate       0.555   0.222   0.111
+chocolate 0.555 0.222 0.111
 
-      cyan    0.0     1.0     1.0
+cyan 0.0 1.0 1.0
 
-      darksalmon      0.73    0.55    0.52
+darksalmon 0.73 0.55 0.52
 
-      dash    1.0     1.0     0.0
+dash 1.0 1.0 0.0
 
-      deepblue        0.25    0.25    0.65    deep
+deepblue 0.25 0.25 0.65 deep
 
-      deepolive       0.6     0.6     0.1
+deepolive 0.6 0.6 0.1
 
-      deeppurple      0.6     0.1     0.6
+deeppurple 0.6 0.1 0.6
 
-      deepsalmon      1.0     0.5     0.5     duplicated?
+deepsalmon 1.0 0.5 0.5 duplicated?
 
-      deepsalmon      1.00    0.42    0.42
+deepsalmon 1.00 0.42 0.42
 
-      ... ...
+... ...
 
-violetpurple  0.55    0.25    0.60
+violetpurple 0.55 0.25 0.60
 
-warmpink      0.85    0.20    0.50
+warmpink 0.85 0.20 0.50
 
-wheat         0.99    0.82    0.65
+wheat 0.99 0.82 0.65
 
-white         1.0     1.0     1.0
+white 1.0 1.0 1.0
 
-yellow        1.0     1.0     0.0
+yellow 1.0 1.0 0.0
 
-yelloworange  1.0     0.87    0.37
+yelloworange 1.0 0.87 0.37
 
 ### 设置二级结构的颜色
 
 PyMOL中内置了3种二级结构着色策略。
 
-helix       sheet   loop
+helix sheet loop
 
-red         yellow  green   （策略1）
+red yellow green （策略1）
 
-cyan        magenta         salmon （策略2）
+cyan magenta salmon （策略2）
 
-cyan        red     magenta     （策略3）
+cyan red magenta （策略3）
 
 除了上述内置的着色策略，我们还可以自定义二级结构的颜色。
 
@@ -1080,7 +1080,7 @@ PyMOL>color grey,ss l+''
 
 PyMOL>color teal,ss h
 
-### 设置颜色 (set xx_color)
+### 设置颜色（set xx_color）
 
 set
 
@@ -1112,7 +1112,7 @@ set
 
 #### 制作分子对接示例动画
 
-1. 准备材料(选定蛋白体系，配体)
+1. 准备材料（选定蛋白体系，配体）
 2. 分子对接，保留制作动画用的配体小分子构象
 3. 制作动画
 
@@ -1241,7 +1241,7 @@ FocalBlur一共有5个参数：
 | 1 2 3 4 | **from** **pymol** **import** cmd **def** dist_center(obj1="obj01",obj2="obj02",showflag=True):     **pass** cmd.extend("dist_center", dist_center) |
 | --- | --- |
 
-完整代码(dist_center_2obj.py)如下：
+完整代码（dist_center_2obj.py）如下：
 
 |  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 | *"""* *DESCRIPTION* *measure the distance between the centers of two objects* *the object usually is  benzene, pyridine and other cyclo object* *more information at: \_ [*http://pymol.chenzhaoqiang.com/intro/advanceManual.html*](http://pymol.chenzhaoqiang.com/intro/advanceManual.html)<br/> *AUTHOR* *Zhaoqiang Chen, 2017* *Please inform me if you use/improve/like/dislike/publish with this script.* *email: 744891290@qq.com* *"""* **from** **pymol** **import** cmd,math  **def** getcenterofatoms(atoms):     *'''* \_    '''*     x=0     y=0     z=0     **for** atm **in** atoms:         x+=atm.coord\[0]         y+=atm.coord\[1]         z+=atm.coord\[2]     numatm=float(len(atoms))     x=x/numatm     y=y/numatm     z=z/numatm     **return** \[x,y,z] **def** getdist(cen1,cen2):     *'''* \_    '''\_     dx=cen1\[0]-cen2\[0]     dy=cen1\[1]-cen2\[1]     dz=cen1\[2]-cen2\[2]     dist=dx*dx+dy*dy+dz\*dz     **return** math.sqrt(dist) **def** dist_center(obj1="obj01",obj2="obj02",showflag=True):     *'''* \_    usage1:\_ \_    dist_center obj01,obj02 \_ \_    usage2:\_ \_    dist_center obj01,obj02,1 \_ \_    usage3:\_ \_    dist_center obj01,obj02,0\_ \_    usage1 is equal to usage2!\_ \_    '''\_     obj1atoms=cmd.get_model(obj1).atom     obj2atoms=cmd.get_model(obj2).atom     obj1center=getcenterofatoms(obj1atoms)     obj2center=getcenterofatoms(obj2atoms)     dist = getdist(obj1center,obj2center)     **print**("distance: *%.2f*"%(dist ))     **if** showflag:         cmd.pseudoatom('cen1', pos=obj1center)         cmd.pseudoatom('cen2', pos=obj2center)         cmd.distance("dist","cen1","cen2")          cmd.extend("dist_center", dist_center) |
 | --- | --- |
@@ -1282,11 +1282,11 @@ PyMOL>distance saltbridge, (negative ), (positive ), 4.0, 0
 
 **def** show_saltbridge(dist=4.0):
 
-    cmd.select("negative","resn ASP+Glu and name OD\*+OE\*")
+cmd.select("negative","resn ASP+Glu and name OD\*+OE\*")
 
-    cmd.select("positive","(resn Lys and name NZ) or (resn arg and name NE+NH\*)")
+cmd.select("positive","(resn Lys and name NZ) or (resn arg and name NE+NH\*)")
 
-    cmd.distance("saltbridge","negative","positive",dist,0)
+cmd.distance("saltbridge","negative","positive",dist,0)
 
 cmd.extend("show_saltbridge", show_saltbridge)
 
@@ -1330,7 +1330,7 @@ PyMOL>axes
 
 #### 加载坐标颜色文件
 
-文件(test.xyzrgb)格式如下
+文件（test.xyzrgb）格式如下
 
 > <code>[test.xyzrgb](http://pymol.chenzhaoqiang.com/_downloads/axes.py)</code>
 
@@ -1352,49 +1352,49 @@ PyMOL>loadxyzrgb test.xyzrgb
 
 **from** **pymol** **import** util
 
-*# example 6SP6 KJK    A*
+*# example 6SP6 KJK A*
 
 **def** extractSiteByLig(pdbid,ligid,radius=4,chainid=None):
 
-    *'''*
+*'''*
 
-\_    '''\_
+\_ '''\_
 
-    cmd.delete('all')
+cmd.delete('all')
 
-    cmd.fetch(pdbid)
+cmd.fetch(pdbid)
 
-    **if** **not**  chainid:
+**if** **not** chainid:
 
-        cmd.select("ligall","resn *%s*"%ligid)
+cmd.select("ligall","resn *%s*"%ligid)
 
-        atms_lig = cmd.get_model("ligall").atom
+atms_lig = cmd.get_model("ligall").atom
 
-        chains_lig = \[    atom.chain     **for** atom **in** atms_lig ]
+chains_lig = \[ atom.chain **for** atom **in** atms_lig ]
 
-        chains_lig = list(set(chains_lig))
+chains_lig = list(set(chains_lig))
 
-        chainid = chains_lig\[0]
+chainid = chains_lig\[0]
 
-    cmd.select("lig\_*%s*"%chainid," chain *%s* and resn *%s* "%(chainid,ligid))
+cmd.select("lig\_*%s*"%chainid," chain *%s* and resn *%s* "%(chainid,ligid))
 
-    cmd.select("site","byres (lig\_*%s* expand *%s*)"%(chainid,radius))
+cmd.select("site","byres (lig\_*%s* expand *%s*)"%(chainid,radius))
 
-    cmd.create("pocket","site")
+cmd.create("pocket","site")
 
-    cmd.disable("all")
+cmd.disable("all")
 
-    cmd.enable("pocket")
+cmd.enable("pocket")
 
-    cmd.do("as sticks,pocket")
+cmd.do("as sticks,pocket")
 
-    util.cba(144,"pocket")
+util.cba(144,"pocket")
 
-    util.cba(120,"pocket and resn *%s*"%ligid)
+util.cba(120,"pocket and resn *%s*"%ligid)
 
-    newfile="*%s***%s\_**%s\_**%s\_.pdb"%(pdbid,ligid,chainid,radius)
+newfile="*%s***%s\_**%s\_**%s\_.pdb"%(pdbid,ligid,chainid,radius)
 
-    cmd.save(newfile,"site")
+cmd.save(newfile,"site")
 
 *# extractSiteByLig 6SP6, KJK*
 

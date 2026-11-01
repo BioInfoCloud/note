@@ -2,9 +2,9 @@
 
 ![1610773180962-4ccb3d56-40c5-408f-917f-4f55f067b7de.gif](./img/uiDhZC5sbsRnkS0W/1610773180962-4ccb3d56-40c5-408f-917f-4f55f067b7de-629554.gif)
 
-[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**| **[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**| **[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
-[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | 服务器与**[**Linux**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1410264757734817793&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | 服务器与**[**Linux**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1410264757734817793&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
 ---
 
@@ -172,7 +172,7 @@ Find genes that are up/down for this condition(s)可以根据选择的实验筛�
 
 ![1610773181037-0e29a148-d33b-4947-b428-269fe21e2fae.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181037-0e29a148-d33b-4947-b428-269fe21e2fae-286932.jpeg)
 
-我们点击Step2： Select which Samples to put in Group A and Group B会弹出一个窗口，让我们自己进行分组。我们可以看见A组合B组的GSM号是一样的，需要将他分在哪一组就在哪一组点击一下就行。背景变为深灰色就表示被选中，这里将GSM9920-GSM9925定位A组，其余定位B组。点击OK.
+我们点击Step2： Select which Samples to put in Group A and Group B会弹出一个窗口，让我们自己进行分组。我们可以看见A组合B组的GSM号是一样的，需要将他分在哪一组就在哪一组点击一下就行。背景变为深灰色就表示被选中，这里将GSM9920-GSM9925定位A组，其余定位B组。点击OK.
 
 ![1610773181061-50ba3299-f571-4f5d-89d6-b6865e654afd.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181061-50ba3299-f571-4f5d-89d6-b6865e654afd-758104.jpeg)
 
@@ -288,7 +288,7 @@ Apply log transformation to the data
 
 GEO数据库接受各种数据值类型，包括logged和未logged的数据。Limma包需要使用logged数据为了解决这个问题，GEO2R有一个自动检测特性，它检查所选样本的值，并自动执行log2转换。可选择是否自动转换。
 
- Category of Platform annotation to display on results
+Category of Platform annotation to display on results
 
 选择要在结果上显示的注释类别。基因注释来自于相应的平台记录。有两种注释类型:
 

@@ -94,7 +94,7 @@
 
 ------
 
-## **3.R基础绘图的文章笔记**
+## 3.R基础绘图的文章笔记
 
 [第0章：ggplot2绘图思想](https://mp.weixin.qq.com/s/0sZmqC9s6nJ3ncZYa_pM0w)
 
@@ -118,7 +118,7 @@
 
 ---
 
-## **4.R语言数据分析与挖掘文章目录**
+## 4.R语言数据分析与挖掘文章目录
 
 [第1章:数据预处理(1)——缺失值处理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264104&idx=1&sn=0bd5d5748287cb949da2b491f07f864c&chksm=841ef015b3697903ac1e2d44df9330b95eef9445e245aac79a5377b4bc5c6e31e53c197b0a7b&scene=21#wechat_redirect)
 

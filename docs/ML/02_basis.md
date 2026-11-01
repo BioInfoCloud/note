@@ -20,7 +20,7 @@
 
 ### 二、输入空间与输出空间
 
-输入空间(Input Space):将输入的所有可能取值的集合称作输入空间。
+输入空间（Input Space）:将输入的所有可能取值的集合称作输入空间。
 
 输出空间（Output Space)︰将输出的所有可能取值的集合称作输出空间。
 
@@ -41,9 +41,9 @@
 
 ### 三、特征空间
 
-特征(Feature ):即属性。每个输入实例的各个组成部分（属性）称作原始特征，基于原始特征还可以扩展出更多的衍生特征。
+特征（Feature ）:即属性。每个输入实例的各个组成部分（属性）称作原始特征，基于原始特征还可以扩展出更多的衍生特征。
 
-特征向量(Feature Vector) :由多个特征组成的集合，称作特征向量。
+特征向量（Feature Vector） :由多个特征组成的集合，称作特征向量。
 
 特征空间（Feature Space):将特征向量存在的空间称作特征空间。
 
@@ -67,14 +67,14 @@ PassengerId, Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
 
 特征: Sex= "male”,Age=22,C_level= “L”
 
-- 特征空间中每一维都对应了一个特征(属性)
+- 特征空间中每一维都对应了一个特征（属性）
 - 特征空间可以和输入空间相同，也可以不同
 - 需将将实例从输入空间映射到特征空间
 - 模型实际上是定义于特征空间之上的
 
-### **四、假设空间的定义**
+### 四、假设空间的定义
 
-假设空间 (Hypothesis Space)：由输入空间到输出空间的映射的集合，称作假设空间。
+假设空间（Hypothesis Space）：由输入空间到输出空间的映射的集合，称作假设空间。
 
 假设空间的不同定义：
 
@@ -88,9 +88,9 @@ The hypothesis space,which defines the class of functions mapping the input spac
 
 假设空间指的是问题所有假设组成的空间，我们可以把学习过程看作是在假设空间中搜索的过程，搜索目标是寻找与训练集“匹配”的假设。--周志华《机器学习》
 
-### **五、举例**
+### 五、举例
 
-举例：某商品的浏览、购买记录中，记录了性别、信用度及是否购买，基于数据建模。其中Gender 取值为(Female,Male)，Credit 取值为(High, Mediun,Low) Buy的取值为(TRUE, FALSE)
+举例：某商品的浏览、购买记录中，记录了性别、信用度及是否购买，基于数据建模。其中Gender 取值为（Female,Male），Credit 取值为（High, Mediun,Low） Buy的取值为（TRUE, FALSE）
 
 | Gender | credit | Buy   |
 | ------ | ------ | ----- |
@@ -176,9 +176,9 @@ The hypothesis space,which defines the class of functions mapping the input spac
 
 结构风险最小（SRM : Structural Risk Minimization)
 
-#### **3、损失函数：**
+#### 3、损失函数：
 
-损失函数(Loss Function)：用来衡量预测结果和真实结果之间的差距，其值越小，代表预测结果和真实结果越一致。通常是一个非负实值函数，通过各种方式缩小损失函数的过程被称作优化。损失函数记做L(Y,f(x))。
+损失函数（Loss Function）：用来衡量预测结果和真实结果之间的差距，其值越小，代表预测结果和真实结果越一致。通常是一个非负实值函数，通过各种方式缩小损失函数的过程被称作优化。损失函数记做L(Y,f(x))。
 
 - 0-1损失函数（0-1LF）：
 
@@ -203,13 +203,13 @@ L(Y,f(X))= 0,|Y=f(X)|<T
 
 前者相当于后者的一个特殊情况 T=0
 
-- 绝对值损失函数(Absolute LF):
+- 绝对值损失函数（Absolute LF）:
 
 预测结果与真实结果差的绝对值。简单易懂,但是计算不方便。
 
 L(Y,f(X))=|Y-f(X)|
 
-- 平方损失函数(Quadratic LF):
+- 平方损失函数（Quadratic LF）:
 
 预示结果与真实结果差的平方。
 
@@ -228,19 +228,19 @@ L(Y,f(X))=(Y-f(X))²
 | 1    | 1.2  | 0.2  | 0.04 |
 | 0    | 0    | 1    | 0    |
 
-（四）对数损失函数(Logarithmic LF)或对数似然损失函数(log-likehood loss function)：
+（四）对数损失函数（Logarithmic LF）或对数似然损失函数（log-likehood loss function）：
 
 对数函数具有单调性，在求最优化问题时，结果与原始目标一致。可将乘法转化为加法，简化计算：
 
 L(Y，P(Y∣X))= -logP(Y∣X)
 
-（五）指数损失函数(Exponential LF)：
+（五）指数损失函数（Exponential LF）：
 
 单调性、非负性的优良性质，使得越接近正确结果误差越小
 
 L(Y,f(x))=
 
-（六）折叶损失函数(Hings LF):
+（六）折叶损失函数（Hings LF）:
 
    也称铰链损失，对于判定边界附近点的惩罚力度较高，常见于SVM
 

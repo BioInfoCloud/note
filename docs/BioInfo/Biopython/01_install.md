@@ -8,7 +8,7 @@ title: Biopython
 
 Biopython是Python的最大，最受欢迎的生物信息学软件包。它包含许多用于常规生物信息学任务的不同子模块。它由Chapman和Chang开发，主要使用Python编写。它还包含C代码，以优化软件的复杂计算部分。它可以在Windows，Linux，Mac OS X等操作系统上运行。
 
-基本上，Biopython是python模块的集合，这些模块提供处理DNA，RNA和蛋白质序列操作的功能，例如DNA字符串的反向互补，寻找蛋白质序列中的基序等。它提供了很多解析器，可以读取所有主要的遗传数据库 如GenBank，SwissPort，FASTA等，以及在python环境中运行其他流行的生物信息学软件/工具(如NCBI BLASTN，Entrez等)的包装程序/接口。它具有兄弟项目，例如：BioPerl，BioJava和BioRuby。
+基本上，Biopython是python模块的集合，这些模块提供处理DNA，RNA和蛋白质序列操作的功能，例如DNA字符串的反向互补，寻找蛋白质序列中的基序等。它提供了很多解析器，可以读取所有主要的遗传数据库 如GenBank，SwissPort，FASTA等，以及在python环境中运行其他流行的生物信息学软件/工具（如NCBI BLASTN，Entrez等）的包装程序/接口。它具有兄弟项目，例如：BioPerl，BioJava和BioRuby。
 
 官网：[Biopython · Biopython](https://biopython.org/)
 
@@ -23,7 +23,7 @@ Biopython是可移植的，清晰的并且具有易于学习的语法。下面�
 - 处理序列格式的选项。
 - 管理蛋白质结构的工具。
 - BioSQL-SQL表的标准集合，用于存储序列以及功能和注释。
-- 访问在线服务和数据库，包括NCBI服务(Blast，Entrez，PubMed)和ExPASY服务(SwissProt，Prosite)。
+- 访问在线服务和数据库，包括NCBI服务（Blast，Entrez，PubMed）和ExPASY服务（SwissProt，Prosite）。
 - 访问本地服务，包括Blast，Clustalw，EMBOSS。
 
 ### (2). 目标
@@ -49,7 +49,7 @@ Biopython只需很少的代码，并具有以下优点 -
 
 ### (4). 样本案例研究
 
-让我们来看看一些用例(种群遗传学，RNA结构等)，并尝试了解Biopython在该领域如何发挥重要作用：
+让我们来看看一些用例（种群遗传学，RNA结构等），并尝试了解Biopython在该领域如何发挥重要作用：
 
 **人口遗传学**
 

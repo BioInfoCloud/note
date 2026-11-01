@@ -62,7 +62,7 @@ _**1.4 重复**_
 
 **有参**分析时将序列比对到参考基因组或是转录组上获得表达转录本，比对到转录组上会屏蔽新的未注释的转录本，只对已知转录本进行定量分析。**无参**时先组装为长contigs后已contig作为表达转录组将reads比对上去进行定量分析，或者覆盖度可用于对转录本进行定量。区别在于转录和定量同时完成还是顺序完成。
 
-_**2.1  比对**_
+_**2.1 比对**_
 
 有参比对分两种：基因组比对和转录组比对（图2a，b），一条或多条序列（multireads）都可以比对在特定的位点。多比对由于重复序列或是有共同结构域的旁系同源基因而导致，在比对在基因组上会产生显著性的比对结果，在转录组为参考基因组时由于基因异构体含有共同的外显子而更显著，结果保留。在基因表达变化时转录本的发现和定量更加困难。
 
@@ -106,7 +106,7 @@ edgeR将原始输入reads计数及可能的偏好性带入数据模型，将归�
 
 **6. 可视化**
 
-可视化可以在reads水平（ReadXplorer)或在处理深度(read pileup), 未均一化 (总count) 或均一化后（基因组浏览器 UCSC browser，Integrative Genomics Viewer (IGV) , Genome Maps 或Savant，RNAseqViewer查看多个RNA-seq样本，展示风丰富的外显子，转录本，连接区，但比IGV慢。
+可视化可以在reads水平（ReadXplorer)或在处理深度（read pileup）, 未均一化（总count） 或均一化后（基因组浏览器 UCSC browser，Integrative Genomics Viewer (IGV) , Genome Maps 或Savant，RNAseqViewer查看多个RNA-seq样本，展示风丰富的外显子，转录本，连接区，但比IGV慢。
 
 **7. 发现融合基因**
 

@@ -988,7 +988,7 @@ samtools 更多信息：[**<u>http://www.htslib.org/</u>**](http://www.htslib.or
 
 **1. samtools view**
 
-samtools view 主要用来转换 SAM/BAM/CRAM 文件。将 sam 文件与 bam 文件互换；然后对 bam 文件进行各种操作，比如数据的排序(sort)和提取（这些操作是对 bam 文件进行的，因而当输入为 sam 文件的时候，不能进行该操作）；最后将排序或提取得到的数据输出为 bam 或 sam（默认的）格式。如果没有指定选项或区域，则将指定的输入对齐文件（SAM、BAM 或 CRAM 格式）中的所有对齐打印到 SAM 格式的标准输出（没有标头）。可以在输入文件名后指定一个或多个空格分隔的区域规范，以将输出限制为仅覆盖指定区域的那些对齐。使用区域规范需要一个协调排序和索引的输入文件（BAM 或 CRAM 格式）。samtools view 的参数很多，-b、-C、-1、-u、-h、-H 和-C 选项将更改缺省的无 header SAM 的输出格式，而-o 和-u 选项将设置输出文件名。
+samtools view 主要用来转换 SAM/BAM/CRAM 文件。将 sam 文件与 bam 文件互换；然后对 bam 文件进行各种操作，比如数据的排序（sort）和提取（这些操作是对 bam 文件进行的，因而当输入为 sam 文件的时候，不能进行该操作）；最后将排序或提取得到的数据输出为 bam 或 sam（默认的）格式。如果没有指定选项或区域，则将指定的输入对齐文件（SAM、BAM 或 CRAM 格式）中的所有对齐打印到 SAM 格式的标准输出（没有标头）。可以在输入文件名后指定一个或多个空格分隔的区域规范，以将输出限制为仅覆盖指定区域的那些对齐。使用区域规范需要一个协调排序和索引的输入文件（BAM 或 CRAM 格式）。samtools view 的参数很多，-b、-C、-1、-u、-h、-H 和-C 选项将更改缺省的无 header SAM 的输出格式，而-o 和-u 选项将设置输出文件名。
 - `-t` 和 `-T` 选项提供了额外的参考数据。当 SAM 输入不包含@SQ headers 时，这两个选项中的一个是必需的，当编写 CRAM 输出时，-T 选项是必需的。
 - `-L`、`-M`、`-r`、`-R`、`-d`、`-D`、`-s`、`-q`、`-f`、`-F` 和 `-G` 选项用于过滤输出中的比对，只保留匹配特定条件的比对。
 - `-x` 和 `-B` 选项修改包含在每条比对中的数据。如果数据文件夹不包含任何索引文件，可以使用-X 选项允许用户指定定制的索引文件位置。
@@ -1034,7 +1034,7 @@ samtools view [options] <in.bam>|<in.sam>|<in.cram> [region ...]
 
 **2. samtools sort**
 
-samtools sort 用来对 SAM/BAM/CRAM 文件进行排序，按最左坐标排序，或使用-n 时按读取名称排序。默认情况下，排序后的输出被写到标准输出，或者在使用-o 时写到指定的文件(out.bam)。此命令还会创建临时文件 `tmpprefix.%d.bam`。当整个对齐数据无法装入内存时（通过-m 选项控制），根据需要使用 bam。
+samtools sort 用来对 SAM/BAM/CRAM 文件进行排序，按最左坐标排序，或使用-n 时按读取名称排序。默认情况下，排序后的输出被写到标准输出，或者在使用-o 时写到指定的文件（out.bam）。此命令还会创建临时文件 `tmpprefix.%d.bam`。当整个对齐数据无法装入内存时（通过-m 选项控制），根据需要使用 bam。
 
 ```plain
 samtools sort [-l level] [-m maxMem] [-o out.bam] [-O format] [-n] [-T tmpprefix] [-@ threads] [in.sam|in.bam|in.cram]

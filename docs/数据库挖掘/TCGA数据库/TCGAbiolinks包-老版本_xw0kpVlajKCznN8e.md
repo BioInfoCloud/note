@@ -11,13 +11,13 @@
 
 使用R语言挖掘TCGA数据，可以用的包很多，比如GDCRNATools包，以及之前我们介绍过的TCGA-Assembler包。在这里我们就不推荐使用这些包，我们只推荐本文要介绍的TCGAbiolinks包。这个包的功能很强大，学会了这个包几乎就已经够用，不用在学其他包。今天我们开始
 
-tcgabiollinks提供了一些搜索GDC数据库的功能。本节首先解释了不同的GDC资源(Harmonized和Legacy Archive)，然后是一些如何访问它们的例子。
+tcgabiollinks提供了一些搜索GDC数据库的功能。本节首先解释了不同的GDC资源（Harmonized和Legacy Archive），然后是一些如何访问它们的例子。
 
 TCGA条形码由一组标识符组成。每个都明确地标识一个TCGA数据元素。有关元数据标识符如何组成条形码的说明，请参阅下图。分隔符条码包含最多的标识符。
 
 以下是使用tcgabiolink下载GDC数据的两个可用来源:
 
-GDC Legacy Archive : 提供访问以前存储在CGHub和TCGA数据门户(由TCGA数据协调中心(DCC)托管)的未经修改的数据副本，在TCGA数据协调中心(DCC)使用参考GRCh37 (hg19)和GRCh36 (hg18)。
+GDC Legacy Archive : 提供访问以前存储在CGHub和TCGA数据门户(由TCGA数据协调中心（DCC）托管)的未经修改的数据副本，在TCGA数据协调中心（DCC）使用参考GRCh37 (hg19)和GRCh36 (hg18)。
 
 GDC harmonized database:可利用的数据与GRCh38 (hg38)使用GDC生物信息学管道进行协调，该管道为生物标本和临床数据的标准化提供了方法。
 
@@ -265,7 +265,7 @@ GDCdownload(
 
 （2）token.file
 
-用于下载受控数据的令牌文件(仅适用于`method = " client "`)
+用于下载受控数据的令牌文件（仅适用于`method = " client "`）
 
 （3）method
 
@@ -277,7 +277,7 @@ GDCdownload(
 
 （5）files.per.chunk
 
-这将使API方法一次只下载n个(`files.per.chunk`)文件。当数据大小太大时，这个参数将设置每个`tar.gz`中只下载的文件个数，每个这可能会减少下载可能出现的问题。
+这将使API方法一次只下载n个（`files.per.chunk`）文件。当数据大小太大时，这个参数将设置每个`tar.gz`中只下载的文件个数，每个这可能会减少下载可能出现的问题。
 
 下面是下载前面请求的数据案例
 

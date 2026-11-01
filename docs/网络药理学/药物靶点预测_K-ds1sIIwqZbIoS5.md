@@ -64,9 +64,9 @@ TargetHunter是基于小分子二维结构相似性的靶标搜寻工具，该�
 
 ## 五.PharmMapper
 
-PharmMapper服务器是一个免费访问的web服务器，设计用于识别给定探针小分子(药物、天然产物或其他新发现的靶标尚未识别的化合物)的潜在靶标，使用药效团映射方法。得益于高效和稳健的映射方法，PharmMapper具有高通量能力，可以在数小时内从数据库中识别出潜在的候选靶标。
+PharmMapper服务器是一个免费访问的web服务器，设计用于识别给定探针小分子（药物、天然产物或其他新发现的靶标尚未识别的化合物）的潜在靶标，使用药效团映射方法。得益于高效和稳健的映射方法，PharmMapper具有高通量能力，可以在数小时内从数据库中识别出潜在的候选靶标。
 
-从TargetBank、DrugBank、BindingDB和PDTD的所有靶标中提取的大量内部药效基因库支持了PharmMapper。超过7000个基于受体的药效团模型(包括1627个药物靶点信息，其中459个是人类蛋白靶点)被pharmacmapper存储和访问。PharmMapper根据PharmTargetDB中的所有靶标找到用户上传的分子的最佳映射位(Tripos Mol2或MDL SDF格式)，并输出前N个潜在药物靶标以及各自分子的对齐位。
+从TargetBank、DrugBank、BindingDB和PDTD的所有靶标中提取的大量内部药效基因库支持了PharmMapper。超过7000个基于受体的药效团模型（包括1627个药物靶点信息，其中459个是人类蛋白靶点）被pharmacmapper存储和访问。PharmMapper根据PharmTargetDB中的所有靶标找到用户上传的分子的最佳映射位（Tripos Mol2或MDL SDF格式），并输出前N个潜在药物靶标以及各自分子的对齐位。
 
 地址：[http://lilab-ecust.cn/pharmmapper/](http://lilab-ecust.cn/pharmmapper/)
 

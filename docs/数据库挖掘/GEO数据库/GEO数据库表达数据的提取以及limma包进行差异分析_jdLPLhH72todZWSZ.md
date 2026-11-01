@@ -2,9 +2,9 @@
 
 ![1610771743388-033b9e4f-52c6-4688-a1eb-aaca3764d63d.gif](./img/jdLPLhH72todZWSZ/1610771743388-033b9e4f-52c6-4688-a1eb-aaca3764d63d-480502.gif)
 
-[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**| **[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**| **[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
-[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
 ---
 
@@ -26,11 +26,11 @@ getGEO(GEO = NULL, filename = NULL, destdir = tempdir(),
 
 GEO：就是我们需要下载的GSE/GDS/GPL登录号，通常我们只会利用GSE。
 
-filename：以前下载的GEO软格式文件的文件名或其gzip表示形式(在这种情况下，文件名必须以.gz结尾)。可以指定GEO或FILENAME中的任何一个，但不能同时指定两者。还处理GEO系列矩阵文件。注意，由于解析的是单个文件，因此在解析GSE矩阵文件时，返回值不是ESET列表，而是单个ESET。说白了，本地文件的话，设置filename，网络下载设置GEO。
+filename：以前下载的GEO软格式文件的文件名或其gzip表示形式（在这种情况下，文件名必须以.gz结尾）。可以指定GEO或FILENAME中的任何一个，但不能同时指定两者。还处理GEO系列矩阵文件。注意，由于解析的是单个文件，因此在解析GSE矩阵文件时，返回值不是ESET列表，而是单个ESET。说白了，本地文件的话，设置filename，网络下载设置GEO。
 
 destdir：指定下载数据存放目录。默认为体系结构相关的临时目录。如果要保存文件以供以后使用，您可能需要指定其他目录。
 
-GSElimits：此参数只能用于从GSE加载GSM的连续子集。它应该被指定为长度为2的向量，指定要加载的起始和结束(包括)GSM。例如，这对于将大型GSE拆分成更易于管理的部分可能很有用。
+GSElimits：此参数只能用于从GSE加载GSM的连续子集。它应该被指定为长度为2的向量，指定要加载的起始和结束（包括）GSM。例如，这对于将大型GSE拆分成更易于管理的部分可能很有用。
 
 GSEMatrix：告知GEO查询是否使用GEO中的GSE系列矩阵文件的布尔值。
 
@@ -40,7 +40,7 @@ AnnotGPL：关于是否使用注释GPL信息默认为False的布尔值。这些�
 
 getGPL：在获取GSEMatrix文件时是否下载并包含GPL信息的布尔值，默认值为TRUE。如果您知道要使用BioConductor工具而不是依赖于通过NCBI GEO提供的信息来注释Feature Data，则可能需要将其设置为False。通过指定FALSE，还可以大大减少下载时间。
 
-parseCharacteristics：关于是否解析GSE矩阵文件的特征信息(如果可用)的布尔默认值为TRUE。如果在解析特征时遇到问题，请将其设置为FALSE。
+parseCharacteristics：关于是否解析GSE矩阵文件的特征信息（如果可用）的布尔默认值为TRUE。如果在解析特征时遇到问题，请将其设置为FALSE。
 
 ---
 

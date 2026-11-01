@@ -46,7 +46,7 @@ mgltools的下载：下载页面底部有个ADT，新页面点击AutoDockTools�
 
 ![1611833310137-732bc09b-6dce-4c72-8c3b-98ae2df361ae.png](./img/RlF9XutPxSSSW6YN/1611833310137-732bc09b-6dce-4c72-8c3b-98ae2df361ae-671795.png)
 
-从PDB首页的搜索条里，可以通过搜索PDB ID、分子名称、作者姓名等关键词来查找蛋白质三级结构。此外，利用高级搜索工具，可以通过序列相似性搜索获得与输入序列在序列水平上相似的蛋白质的三级结构。搜索方法选 BLAST，输入序列，点击“Result Count”。这里不详细介绍，因为我们做分子对接，通常蛋白名称是已知的。**我们重点介绍怎么选择合适的蛋白结构文件**。
+从PDB首页的搜索条里，可以通过搜索PDB ID、分子名称、作者姓名等关键词来查找蛋白质三级结构。此外，利用高级搜索工具，可以通过序列相似性搜索获得与输入序列在序列水平上相似的蛋白质的三级结构。搜索方法选 BLAST，输入序列，点击“Result Count”。这里不详细介绍，因为我们做分子对接，通常蛋白名称是已知的。**我们重点介绍怎么选择合适的蛋白结构文件**。
 
 ![1611833461093-9a22641c-db35-4d42-939d-579da1a83367.png](./img/RlF9XutPxSSSW6YN/1611833461093-9a22641c-db35-4d42-939d-579da1a83367-800424.png)
 
@@ -70,27 +70,27 @@ mgltools的下载：下载页面底部有个ADT，新页面点击AutoDockTools�
 
 **UniProt 数据库有三个层次。**
 
-第一层叫 UniParc，收录了所有 UniProt 数据库子库中的蛋白质序列，量大，粗糙。
+第一层叫 UniParc，收录了所有 UniProt 数据库子库中的蛋白质序列，量大，粗糙。
 
-第二层是 UniRef，他归纳了 UniProt 几个主要数据库并且是将重复序列去除后的数据库。
+第二层是 UniRef，他归纳了 UniProt 几个主要数据库并且是将重复序列去除后的数据库。
 
-第三层是 UniProtKB，他有详细注释并与其他数据库有链接，分为 UniProtKB 下的 Swiss-Prot和 UniProtKB 下的 TrEMBL 数据库。
+第三层是 UniProtKB，他有详细注释并与其他数据库有链接，分为 UniProtKB 下的 Swiss-Prot和 UniProtKB 下的 TrEMBL 数据库。
 
-关系稍有点复杂，但实际上我们最常用的就是 UniProtKB下的 Swiss-Prot 数据库。
+关系稍有点复杂，但实际上我们最常用的就是 UniProtKB下的 Swiss-Prot 数据库。
 
-从 UniProt 数据库查看一条蛋白质序列（[http://www.uniprot.org/](http://www.uniprot.org/)）。在UniProt数据库的首页上有一个关于 UniProtKB 数据库的统计表。可以看到，TrEMBL 数据库里存储的序列数量远远大于 Swiss-Prot 中的。统计表里清楚的写着：TrEMBL 是自动注释的，没有经过检查，而 Swiss-Prot 是人工注释的，并且经过检查。
+从 UniProt 数据库查看一条蛋白质序列（[http://www.uniprot.org/](http://www.uniprot.org/)）。在UniProt数据库的首页上有一个关于 UniProtKB 数据库的统计表。可以看到，TrEMBL 数据库里存储的序列数量远远大于 Swiss-Prot 中的。统计表里清楚的写着：TrEMBL 是自动注释的，没有经过检查，而 Swiss-Prot 是人工注释的，并且经过检查。
 
 ![1604969277464-c1d9e0ab-8590-49b5-b8dd-29154a9a3d61.png](./img/RlF9XutPxSSSW6YN/1604969277464-c1d9e0ab-8590-49b5-b8dd-29154a9a3d61-350370.png)
 
-UniProt 数据库的首页上也有一个搜索条，选择UniprotKB 数据库，然后输入“human dutpase”，第一条就是我们要的。Entry 这一列是蛋白质序列在 UniProtKB 数据库中的检索号，Entry_Name 是检索名，检索号与检索名平行运行，都是一条序列在数据库中的唯一标识，两者作用相同，只是写法不同。从检索名可以更直观的知道是哪个物种的什么蛋白质。从加星文档图标（Entry_Name后一列）我们可以获知序列是被人工检查过的还是没有。也就是说，有加星文档图标的是 Swiss-Prot 中的数据，没有的是 TrEMBL 里的。后面这几列，依次是蛋白质的名字，编码这一蛋白质的基因的名字，所属物种以及序列长度。点击第一条序列的检索号，打开这条数据库记录。
+UniProt 数据库的首页上也有一个搜索条，选择UniprotKB 数据库，然后输入“human dutpase”，第一条就是我们要的。Entry 这一列是蛋白质序列在 UniProtKB 数据库中的检索号，Entry_Name 是检索名，检索号与检索名平行运行，都是一条序列在数据库中的唯一标识，两者作用相同，只是写法不同。从检索名可以更直观的知道是哪个物种的什么蛋白质。从加星文档图标（Entry_Name后一列）我们可以获知序列是被人工检查过的还是没有。也就是说，有加星文档图标的是 Swiss-Prot 中的数据，没有的是 TrEMBL 里的。后面这几列，依次是蛋白质的名字，编码这一蛋白质的基因的名字，所属物种以及序列长度。点击第一条序列的检索号，打开这条数据库记录。
 
 ![1604969277802-9b0ce776-fad3-4109-aeb2-a71160d85b5c.png](./img/RlF9XutPxSSSW6YN/1604969277802-9b0ce776-fad3-4109-aeb2-a71160d85b5c-521528.png)
 
-UniProtKB 中的数据库记录分成几个部分，左侧是注释标签，点击其中某一个标签可以直接跳转到该部分注释。上方是工具标签，可以用于和其他序列进行比较，格式转换，存储等。工具标签下方是这条蛋白质序列的基本信息，蛋白质的名字，基因的名字，所属物种，以及状态。这里有加星文档图标，是被人工检查过的，应该属于 Swiss-Prot 数据库。注释打分 5 星，说明注释得很全面，并且这些注释在蛋白质水平上有实验依据。
+UniProtKB 中的数据库记录分成几个部分，左侧是注释标签，点击其中某一个标签可以直接跳转到该部分注释。上方是工具标签，可以用于和其他序列进行比较，格式转换，存储等。工具标签下方是这条蛋白质序列的基本信息，蛋白质的名字，基因的名字，所属物种，以及状态。这里有加星文档图标，是被人工检查过的，应该属于 Swiss-Prot 数据库。注释打分 5 星，说明注释得很全面，并且这些注释在蛋白质水平上有实验依据。
 
-**Function\*\*\*\*：**功能这部分注释很详细的说明了这个蛋白质的功能。从这里可以得知dUTPase 是一种在核酸代谢过程中的酶、它的催化反应方程式、它的辅助因子、它参与的代谢途径等。每条注释信息都提供出处来源，让你有据可查。
+**Function\*\*\*\*：**功能这部分注释很详细的说明了这个蛋白质的功能。从这里可以得知dUTPase 是一种在核酸代谢过程中的酶、它的催化反应方程式、它的辅助因子、它参与的代谢途径等。每条注释信息都提供出处来源，让你有据可查。
 
-**Names & Taxomomy****：**** **给出了蛋白质的各种名字，包括全称、缩写以及别名。还列出了所属物种以及该物种的分类学谱系等。
+**Names & Taxomomy****：**** **给出了蛋白质的各种名字，包括全称、缩写以及别名。还列出了所属物种以及该物种的分类学谱系等。
 
 **Subcellular location\*\*\*\*：**提供蛋白质亚细胞定位（subcellular localization）的信息。目前，研究亚细胞定位的数据来源基本都是Swiss-Prot 数据库。
 
@@ -100,11 +100,11 @@ UniProtKB 中的数据库记录分成几个部分，左侧是注释标签，点
 
 **PTM/Processing\*\*\*\*：**提供蛋白质翻译后修饰或翻译后加工的相关信息。
 
-**Expression\*\*\*\*：**提供了基因在 mRNA 水平上的表达信息，或者在细胞中蛋白质水平上的表达信息，或者在不同器官组织中的表达信息。
+**Expression\*\*\*\*：**提供了基因在 mRNA 水平上的表达信息，或者在细胞中蛋白质水平上的表达信息，或者在不同器官组织中的表达信息。
 
-**Interaction\*\*\*\*：**提供了蛋白质之间相互作用的信息。包括 UniProtKB 中直接与这个蛋白质有两两相互作用的蛋白质序列的链接，以及这个蛋白质在各种蛋白质相互作用数据库或蛋白质网络数据库中涉及的数据库记录链接。
+**Interaction\*\*\*\*：**提供了蛋白质之间相互作用的信息。包括 UniProtKB 中直接与这个蛋白质有两两相互作用的蛋白质序列的链接，以及这个蛋白质在各种蛋白质相互作用数据库或蛋白质网络数据库中涉及的数据库记录链接。
 
-**Structure\*\*\*\*：**提供蛋白质二级结构和三级结构信息。只有那些已通过实验方法测定三级结构并且已提交到蛋白质结构数据库 PDB 的蛋白质才有结构注释。二级结构以图形拓扑的形式呈现。三级结构列出了该蛋白质在蛋白质结构数据库 PDB 中涉及的数据库记录链接。这些结构经常只对应蛋白质的部分序列。
+**Structure\*\*\*\*：**提供蛋白质二级结构和三级结构信息。只有那些已通过实验方法测定三级结构并且已提交到蛋白质结构数据库 PDB 的蛋白质才有结构注释。二级结构以图形拓扑的形式呈现。三级结构列出了该蛋白质在蛋白质结构数据库 PDB 中涉及的数据库记录链接。这些结构经常只对应蛋白质的部分序列。
 
 **Family & Domains\*\*\*\*：**提供蛋白质家族及结构域信息。
 
@@ -118,7 +118,7 @@ UniProtKB 中的数据库记录分成几个部分，左侧是注释标签，点
 
 **Miscellaneous**：杂项，包含任何无法归入前几项的内容。
 
-**Similar Proteins**：在 UniRef 数据库里找到与该蛋白质在序列水平上相似的其他蛋白质，并按相似度高低分组。
+**Similar Proteins**：在 UniRef 数据库里找到与该蛋白质在序列水平上相似的其他蛋白质，并按相似度高低分组。
 
 \*\*好了我们接着前面的介绍。\*\*我们在uniprot的搜索框中输入关键词，左侧选择相应的物种。
 
@@ -135,7 +135,7 @@ UniProtKB 中的数据库记录分成几个部分，左侧是注释标签，点
 
 ![1611837336863-2f5325ac-50f1-4e3c-9d46-46f82253006a.png](./img/RlF9XutPxSSSW6YN/1611837336863-2f5325ac-50f1-4e3c-9d46-46f82253006a-386183.png)
 
-最后，这些都是在蛋白结构已知的蛋白分子对接，如果我们要对接的蛋白，没有晶体结构，在PDB中是检索不到的，在UniProt 中的Structure是不会显示的。比如DRAM1这个蛋白，是没有结构的，所以在UniProt 中的Structure是灰色。
+最后，这些都是在蛋白结构已知的蛋白分子对接，如果我们要对接的蛋白，没有晶体结构，在PDB中是检索不到的，在UniProt 中的Structure是不会显示的。比如DRAM1这个蛋白，是没有结构的，所以在UniProt 中的Structure是灰色。
 
 ![1611838389721-60afa3b3-24c7-4755-a638-8074534e7b86.png](./img/RlF9XutPxSSSW6YN/1611838389721-60afa3b3-24c7-4755-a638-8074534e7b86-084027.png)
 
@@ -143,7 +143,7 @@ UniProtKB 中的数据库记录分成几个部分，左侧是注释标签，点
 
 ## 三. 配体分子文件格式转换
 
-我们知道，分子文件的格式很多，比如mol，sdf等，但AutoDock这个软件不识别sdf这样的格式文件，而我们通常下载的文件就是sdf这个格式的文件。我们需要转换成mol2或者PDB格式的文件，才能被AutoDock这个软件所读入。当然，有一些分子我们是可以从一些数据库中直接下载mol2格式文件的。比如一些中药成分小分子，我们可以从TCMSP这个数据库下载(<https://tcmspw.com/>)，比如:quercetin
+我们知道，分子文件的格式很多，比如mol，sdf等，但AutoDock这个软件不识别sdf这样的格式文件，而我们通常下载的文件就是sdf这个格式的文件。我们需要转换成mol2或者PDB格式的文件，才能被AutoDock这个软件所读入。当然，有一些分子我们是可以从一些数据库中直接下载mol2格式文件的。比如一些中药成分小分子，我们可以从TCMSP这个数据库下载（<https://tcmspw.com/>），比如:quercetin
 
 ![1611840289434-a56f3f71-645e-4ac9-9a6a-3033c2cad3bf.png](./img/RlF9XutPxSSSW6YN/1611840289434-a56f3f71-645e-4ac9-9a6a-3033c2cad3bf-369297.png)
 
@@ -151,7 +151,7 @@ UniProtKB 中的数据库记录分成几个部分，左侧是注释标签，点
 
 ![1611840390162-ab9dee25-060f-401d-a32b-e0e994c64fb9.png](./img/RlF9XutPxSSSW6YN/1611840390162-ab9dee25-060f-401d-a32b-e0e994c64fb9-818580.png)
 
-还有一个数据库能下载mol2格式的文件。ZINC(<http://zinc.docking.org/>)，这里就不介绍了，你要是能从上面的数据库下载到你配体小分子的mol2格式文件，就直接用，如果不能，那就是去PubChem数据库(<https://pubchem.ncbi.nlm.nih.gov/>)下载sdf文件，然后进行转换，这也是我这里要介绍的。
+还有一个数据库能下载mol2格式的文件。ZINC(<http://zinc.docking.org/>)，这里就不介绍了，你要是能从上面的数据库下载到你配体小分子的mol2格式文件，就直接用，如果不能，那就是去PubChem数据库（<https://pubchem.ncbi.nlm.nih.gov/>）下载sdf文件，然后进行转换，这也是我这里要介绍的。
 
 首先在PubChem数据库检索你的化合物，进入相应的页面，3D Conformer处点击下载，会有sdf格式文件的下载选项。
 
@@ -475,7 +475,7 @@ AD4_parameters.dat这个文件就是离子参数配置文件，不懂的话先�
 
 ![1612069290688-af1af925-65db-4567-a309-cc74202b5e83.png](./img/RlF9XutPxSSSW6YN/1612069290688-af1af925-65db-4567-a309-cc74202b5e83-308607.png)
 
-如 3PAU这个蛋白，含有铜离子，而铜离子在我们默认的参数里面是没有的。
+如 3PAU这个蛋白，含有铜离子，而铜离子在我们默认的参数里面是没有的。
 
 ![1612069944232-6a08e403-560e-4111-81a6-b9c9a57bd682.png](./img/RlF9XutPxSSSW6YN/1612069944232-6a08e403-560e-4111-81a6-b9c9a57bd682-438082.png)
 
@@ -682,7 +682,7 @@ atom_par Fm 3.29 0.012 12.000 -0.00110 0.0 0.0 0 -1 -1 4 # Non H-bonding
 
 导入刚才下载的复合物PDB文件（1e8y.pdb）。
 
-\*\*注意：\*\*有两种方法导入文件，一种是鼠标点击菜单栏File -> Open…，另一种是通过命令行。通过`load`命令加载：`load 1e8y.pdb`，因为这样可以同时把工作目录设置好，方便后续保存文件。
+\*\*注意：\*\*有两种方法导入文件，一种是鼠标点击菜单栏File -> Open…，另一种是通过命令行。通过`load`命令加载：`load 1e8y.pdb`，因为这样可以同时把工作目录设置好，方便后续保存文件。
 
 假设我们的工作目录为`F:\AutoDock`。注意：路径中不要有中文和空格，这是导致很多计算类软件（尤其是免费软件）出现问题的原因。
 
@@ -748,11 +748,11 @@ L->vdw radius 产看原子的范德华半径
 
 ![1612009645505-528f9c24-41ce-4714-9a8c-867a78a832e3.png](./img/RlF9XutPxSSSW6YN/1612009645505-528f9c24-41ce-4714-9a8c-867a78a832e3-248707.png)
 
-我们用pymol打开result.pdb文件，在右下角处Selecting 处点击切换到Chains，然后选种蛋白质，在左上角sele处选择A，然后选择rename selection，然后在左上角的窗口处会弹出一行，在：后面输入名称。我这里是protein。或者通过命令set_name sele,protein实现。
+我们用pymol打开result.pdb文件，在右下角处Selecting 处点击切换到Chains，然后选种蛋白质，在左上角sele处选择A，然后选择rename selection，然后在左上角的窗口处会弹出一行，在：后面输入名称。我这里是protein。或者通过命令set_name sele,protein实现。
 
 ![1612009978089-2757ff09-b512-4d70-bf0a-488d3f27b4d1.png](./img/RlF9XutPxSSSW6YN/1612009978089-2757ff09-b512-4d70-bf0a-488d3f27b4d1-103013.png)
 
-我下面通过命令`set_name protein,p`又将protein改为p。
+我下面通过命令`set_name protein,p`又将protein改为p。
 
 ![1612010461093-141ba7e4-8b97-4677-8ee3-a13e676f80a6.png](./img/RlF9XutPxSSSW6YN/1612010461093-141ba7e4-8b97-4677-8ee3-a13e676f80a6-648951.png)
 
@@ -802,7 +802,7 @@ Selecting 处切换到残基。
 
 ![1612012926764-bff630f7-76bb-4589-a03c-d4ba773190f7.png](./img/RlF9XutPxSSSW6YN/1612012926764-bff630f7-76bb-4589-a03c-d4ba773190f7-777673.png)
 
-我们可以给残基换一个颜色(C)。
+我们可以给残基换一个颜色（C）。
 
 ![1612013077114-96cd44e8-0677-49e9-8099-d3045560b2f5.png](./img/RlF9XutPxSSSW6YN/1612013077114-96cd44e8-0677-49e9-8099-d3045560b2f5-125476.png)
 
@@ -820,125 +820,125 @@ Selecting 处切换到残基。
 
 能够实现蛋白质三维结构可视化的软件非常多。比专业级的PyMOL（<https://pymol.org/2/>）。这个软件已经被世界上著名的生物医药软件公司“薛定谔公司（Schrödinger）”收购。这种专业级的可视化软件不仅能够做出非常漂亮的图片，它还有强大的插件支持各种各样的蛋白质结构分析，这款软件需要购买，如果你发表的文章里提到某些内容是使用PyMOL制作的，而文章中所有作者和作者单位都没有PyMOL的购买记录的话，你可能会面临薛定谔公司的追责。
 
-下面给大家介绍一个功能同样强大的免费蛋白质三维结构可视化软件，VMD（<http://www.ks.uiuc.edu/Research/vmd>）。VMD由伊利诺伊大学研发。下载 VMD 需要先注册获得一个账户，之后就可以根据你的操作系统和机器配置选择合适的版本下载了。当然，如前所述，注册和下载对于非商业用途的用户都是免费的。VMD 的安装也极其简单。不需要预装任何语言环境，完全图形化安装过程，绝对可以轻松搞定。
+下面给大家介绍一个功能同样强大的免费蛋白质三维结构可视化软件，VMD（<http://www.ks.uiuc.edu/Research/vmd>）。VMD由伊利诺伊大学研发。下载 VMD 需要先注册获得一个账户，之后就可以根据你的操作系统和机器配置选择合适的版本下载了。当然，如前所述，注册和下载对于非商业用途的用户都是免费的。VMD 的安装也极其简单。不需要预装任何语言环境，完全图形化安装过程，绝对可以轻松搞定。
 
-对于 Windows 用户，VMD 默认安装在 C :\Program Files(x86)\University of Illinois\VMD 文件夹下。打开 VMD。VMD打开后，会弹出三个窗口：VMD Main（主窗口），VMD Display（显示窗口），和命令窗口。
+对于 Windows 用户，VMD 默认安装在 C :\Program Files(x86)\University of Illinois\VMD 文件夹下。打开 VMD。VMD打开后，会弹出三个窗口：VMD Main（主窗口），VMD Display（显示窗口），和命令窗口。
 
 ![1604969312088-add16c19-b4bd-4c2c-8874-2cebf8527366.png](./img/RlF9XutPxSSSW6YN/1604969312088-add16c19-b4bd-4c2c-8874-2cebf8527366-055871.png)
 
-图4.14 VMD 主窗口、显示窗口和命令窗口
+图4.14 VMD 主窗口、显示窗口和命令窗口
 
-打开一个蛋白质结构（图4.15）：主窗口中点 File\New Molecule，弹出新窗口Molecule File Browser（文件读取窗口），文件读取窗口中点 Browse，自动打开 VMD安装目录，进入proteins文件夹选择VMD自带的演示结构bpti.pdb，文件读取窗口中点 Load，显示窗口出现蛋白质结构。
+打开一个蛋白质结构（图4.15）：主窗口中点 File\New Molecule，弹出新窗口Molecule File Browser（文件读取窗口），文件读取窗口中点 Browse，自动打开 VMD安装目录，进入proteins文件夹选择VMD自带的演示结构bpti.pdb，文件读取窗口中点 Load，显示窗口出现蛋白质结构。
 
 ![1604969312294-9aaebee4-1506-4697-8eaf-b7993fc33657.png](./img/RlF9XutPxSSSW6YN/1604969312294-9aaebee4-1506-4697-8eaf-b7993fc33657-117611.png)
 
-图4.15  打开一个蛋白质结构
+图4.15 打开一个蛋白质结构
 
-默认的蛋白质结构显示方案（图4.16）：把显示窗口拖大后可以看到，VMD 读取了 PDB文件中的原子坐标，把每一个原子以细线的形式展示在 3D 空间中。不同的原子应的细线颜色不同。碳原子是青色的，氮原子是蓝色的，氧原子是红色的，氢原子是白色的，还有少量黄色的硫原子。
+默认的蛋白质结构显示方案（图4.16）：把显示窗口拖大后可以看到，VMD 读取了 PDB文件中的原子坐标，把每一个原子以细线的形式展示在 3D 空间中。不同的原子应的细线颜色不同。碳原子是青色的，氮原子是蓝色的，氧原子是红色的，氢原子是白色的，还有少量黄色的硫原子。
 
 ![1604969312435-739aa4a7-867e-48d9-91a0-b1809b6a3f32.png](./img/RlF9XutPxSSSW6YN/1604969312435-739aa4a7-867e-48d9-91a0-b1809b6a3f32-375392.png)
 
-图4.16  默认的蛋白质结构显示方案
+图4.16 默认的蛋白质结构显示方案
 
-**1****、****VMD \*\*\*\*中鼠标的使用：**把鼠标移到显示窗口里，按住左键，随意拖动，蛋白质就会在 3D 空间内任意旋转；按住鼠标右键拖动，蛋白质会在当前平面内 360 度旋转；前后滚动鼠标中键，可以将蛋白质放大或缩小。此外，鼠标还有更多的使用方法：主窗口上的 Mouse 菜单里可以切换鼠标模式。默认的鼠标模式是 Rotate Mode（旋转模式，R）。R模式下，鼠标在显示窗口内为单箭头。操作即为上述三种。将鼠标模式改为 Translate Mode（移动模式，T）后，鼠标在显示窗口内变为十字箭头 。T模式下，按住鼠标左键拖动为移动结构；右键和中键都为放缩功能。此外，还有Scale Mode（缩放模式，S）。S模式下，鼠标在显示窗口内变为左右箭头，按住鼠标左键或右键后，左右移动，即可完成连续的缩放。这种连续的缩放，不同于滚动中键实现的缩放。在默认的情况下，所有旋转是围绕整个结构的中心点进行的。我们也可以自己指定旋转的中心。这需要把鼠标模式切换为 Center（中心模式，C）。C模式下，鼠标在显示窗口内为十字。将十字放在想要作为旋转中心的原子上点一下，再按住鼠标左键旋转，就会以新定义的中心进行旋转。
+**1****、****VMD \*\*\*\*中鼠标的使用：**把鼠标移到显示窗口里，按住左键，随意拖动，蛋白质就会在 3D 空间内任意旋转；按住鼠标右键拖动，蛋白质会在当前平面内 360 度旋转；前后滚动鼠标中键，可以将蛋白质放大或缩小。此外，鼠标还有更多的使用方法：主窗口上的 Mouse 菜单里可以切换鼠标模式。默认的鼠标模式是 Rotate Mode（旋转模式，R）。R模式下，鼠标在显示窗口内为单箭头。操作即为上述三种。将鼠标模式改为 Translate Mode（移动模式，T）后，鼠标在显示窗口内变为十字箭头 。T模式下，按住鼠标左键拖动为移动结构；右键和中键都为放缩功能。此外，还有Scale Mode（缩放模式，S）。S模式下，鼠标在显示窗口内变为左右箭头，按住鼠标左键或右键后，左右移动，即可完成连续的缩放。这种连续的缩放，不同于滚动中键实现的缩放。在默认的情况下，所有旋转是围绕整个结构的中心点进行的。我们也可以自己指定旋转的中心。这需要把鼠标模式切换为 Center（中心模式，C）。C模式下，鼠标在显示窗口内为十字。将十字放在想要作为旋转中心的原子上点一下，再按住鼠标左键旋转，就会以新定义的中心进行旋转。
 
 **2\*\*\*\*、恢复结构初始位置：**主窗口中点Display\Reset View。或者在显示窗口内单击鼠标左键以激活窗口后，点击“=”键。
 
-**3\*\*\*\*、改变蛋白质结构的外观：**有关外观的设置在主窗口中的 Graphic 菜单下的 Representation 窗口里（图4.17）。一个 Representation（显示状态）由三个元素构成。第一个元素是用什么样式（Style）显示，当前使用的样式是以细线显示原子（Lines）。第二个元素是用什么颜色（Color）显示，当前使用的颜色是按原子名定义的不同颜色（Name）。最后一个元素是要显示什么内容（Selection），当前显示的内容是所有原子（all）。这三个元素分别在 Representation窗口里的 Draw style 标签下的 Drawing Method 下拉条、Coloring Method 下拉条和Selected Atoms 输入框里进行设置。
+**3\*\*\*\*、改变蛋白质结构的外观：**有关外观的设置在主窗口中的 Graphic 菜单下的 Representation 窗口里（图4.17）。一个 Representation（显示状态）由三个元素构成。第一个元素是用什么样式（Style）显示，当前使用的样式是以细线显示原子（Lines）。第二个元素是用什么颜色（Color）显示，当前使用的颜色是按原子名定义的不同颜色（Name）。最后一个元素是要显示什么内容（Selection），当前显示的内容是所有原子（all）。这三个元素分别在 Representation窗口里的 Draw style 标签下的 Drawing Method 下拉条、Coloring Method 下拉条和Selected Atoms 输入框里进行设置。
 
 ![1604969312891-611e9f53-f189-41f3-b6bf-ef2c4679ce29.png](./img/RlF9XutPxSSSW6YN/1604969312891-611e9f53-f189-41f3-b6bf-ef2c4679ce29-417286.png)
 
-图4.17 Representation 窗口
+图4.17 Representation 窗口
 
-**4****、****Drawing Method ****下拉条（图****4.18\*\*\*\*）：**Lines 以细线显示原子。CPK 以不同大小的球来显示原子，原子间的连线是相应的化学键，比如碳与碳之间的共价键，硫与硫之间的二硫键等。NewCartoon 只显示蛋白质的碳骨架（backbone），并形象的展示出不同的二级结构。每一种 Drawing Method 都可以再进一步设置显示效果。比如对于 CPK，可以调整原子球的大小（Sphere Scale）、改变化学键的粗细（Bond Radius）、以及设置更高或更低的分辨率（Sphere/Bond Resolution）。
+**4****、****Drawing Method ****下拉条（图****4.18\*\*\*\*）：**Lines 以细线显示原子。CPK 以不同大小的球来显示原子，原子间的连线是相应的化学键，比如碳与碳之间的共价键，硫与硫之间的二硫键等。NewCartoon 只显示蛋白质的碳骨架（backbone），并形象的展示出不同的二级结构。每一种 Drawing Method 都可以再进一步设置显示效果。比如对于 CPK，可以调整原子球的大小（Sphere Scale）、改变化学键的粗细（Bond Radius）、以及设置更高或更低的分辨率（Sphere/Bond Resolution）。
 
 ![1604969313037-1a5426e2-1586-4eb1-9508-ae3b10b601c3.png](./img/RlF9XutPxSSSW6YN/1604969313037-1a5426e2-1586-4eb1-9508-ae3b10b601c3-393527.png)
 
-4.18  不同的几种Drawing Method
+4.18 不同的几种Drawing Method
 
-**5****、****Coloring Method ****下拉条（图****4.19\*\*\*\*）：**Name 颜色方案是一种原子一种颜色，常见的比如碳原子青色、氧原子红色、氮原子蓝色、硫原子黄色。在 NewCartoon 显示样式下，只有碳骨架被现实出来，再配以 Name 颜色方案，整个结构都是青色的。Secondary Structure 颜色方案可以为不同的二级结构赋予不同的颜色，常见的比如α螺旋紫色、β折片黄色、转角青色、松散 coil 结构白色。颜色方案 Res Type 根据氨基酸类型的不同赋予不同的颜色，比如非极性氨基酸白色、极性带正电荷的氨基酸（碱性的氨基酸）蓝色、极性带负电荷的氨基酸（酸性的氨基酸）红色、极性不带电荷的氨基酸绿色。这种颜色方案适合在显示氨基酸侧链的 Drawing Method 下观看，比如 CPK 样式。颜色方案 ResName 为20 种氨基酸设置了 20 种不同的颜色。
+**5****、****Coloring Method ****下拉条（图****4.19\*\*\*\*）：**Name 颜色方案是一种原子一种颜色，常见的比如碳原子青色、氧原子红色、氮原子蓝色、硫原子黄色。在 NewCartoon 显示样式下，只有碳骨架被现实出来，再配以 Name 颜色方案，整个结构都是青色的。Secondary Structure 颜色方案可以为不同的二级结构赋予不同的颜色，常见的比如α螺旋紫色、β折片黄色、转角青色、松散 coil 结构白色。颜色方案 Res Type 根据氨基酸类型的不同赋予不同的颜色，比如非极性氨基酸白色、极性带正电荷的氨基酸（碱性的氨基酸）蓝色、极性带负电荷的氨基酸（酸性的氨基酸）红色、极性不带电荷的氨基酸绿色。这种颜色方案适合在显示氨基酸侧链的 Drawing Method 下观看，比如 CPK 样式。颜色方案 ResName 为20 种氨基酸设置了 20 种不同的颜色。
 
 ![1604969313314-c266f453-0ca0-416f-9fca-79cb26dc1cb1.png](./img/RlF9XutPxSSSW6YN/1604969313314-c266f453-0ca0-416f-9fca-79cb26dc1cb1-340940.png)
 
-4.19  不同 Drawing Method 和 Coloring Method 组合
+4.19 不同 Drawing Method 和 Coloring Method 组合
 
-**6****、****Selected Atoms \*\*\*\*输入框：**输入框里输入需要显示的内容，比如，写“all”代表显示所有原子，也就是整个蛋白质、写“backbone”代表显示碳骨架。输入框里允许输入的关键词和语法在 Selections 标签下有详细定义。可以写 Singlewords 里面单个的单词，也可以写 Keyword和 Value 组成的词组，还可以利用逻辑词“and/or/not”把多个单词和词组串成句子。举例：
+**6****、****Selected Atoms \*\*\*\*输入框：**输入框里输入需要显示的内容，比如，写“all”代表显示所有原子，也就是整个蛋白质、写“backbone”代表显示碳骨架。输入框里允许输入的关键词和语法在 Selections 标签下有详细定义。可以写 Singlewords 里面单个的单词，也可以写 Keyword和 Value 组成的词组，还可以利用逻辑词“and/or/not”把多个单词和词组串成句子。举例：
 
-（1）点击 Reset 清空输入框里的内容→Keyword 里双击 ResName→Value 里双击 ALA（输入框里出现“ResName ALA”） →点击 Apply。显示名字为 Alanine 的氨基酸上的原子，即显示所有丙氨酸。配合 Drawing Method 设置为 CPK，Coloring Method 设置为 ResName。
+（1）点击 Reset 清空输入框里的内容→Keyword 里双击 ResName→Value 里双击 ALA（输入框里出现“ResName ALA”） →点击 Apply。显示名字为 Alanine 的氨基酸上的原子，即显示所有丙氨酸。配合 Drawing Method 设置为 CPK，Coloring Method 设置为 ResName。
 
-（2）点击 Reset 清空输入框里的内容→Keyword 里双击 Resid→Value 里双击1→点击Apply。显示第一个氨基酸。利用这个 Keyword 和 Value 组合可以根据残基的编号选择某个或某一段氨基酸，比如，想要显示第1到第10个氨基酸，可以直接在输入框里输入“resid 1 to 10”，回车。此时显示的就是前10个氨基酸。
+（2）点击 Reset 清空输入框里的内容→Keyword 里双击 Resid→Value 里双击1→点击Apply。显示第一个氨基酸。利用这个 Keyword 和 Value 组合可以根据残基的编号选择某个或某一段氨基酸，比如，想要显示第1到第10个氨基酸，可以直接在输入框里输入“resid 1 to 10”，回车。此时显示的就是前10个氨基酸。
 
-（3）Draw style 标签下，Drawing Method 设置为NewCartoon，Coloring Method 设置为 Secondary Structure→Selections 标签下，点击 Reset 清空输入框里的内容→Singlewords 里面双击 alpha_helix→点击“or” → Singlewords 里面双击 beta_sheet（输入框里出现“alpha_helix or beta_sheet”） →点击 Apply。通过逻辑词显示出所有的α helix 和β sheet。
+（3）Draw style 标签下，Drawing Method 设置为NewCartoon，Coloring Method 设置为 Secondary Structure→Selections 标签下，点击 Reset 清空输入框里的内容→Singlewords 里面双击 alpha_helix→点击“or” → Singlewords 里面双击 beta_sheet（输入框里出现“alpha_helix or beta_sheet”） →点击 Apply。通过逻辑词显示出所有的α helix 和β sheet。
 
-VMD 可以设置多个representations（简称 rep），也就是将多个显示状态的试试效果叠加在一起（图4.20）。
+VMD 可以设置多个representations（简称 rep），也就是将多个显示状态的试试效果叠加在一起（图4.20）。
 
-**7****、****representations****（简称**** ****rep****）：**设置第一个 rep：当前处于编辑状态下的 rep 背景色为浅绿色。设置 Drawing Method为 NewCartoon，Coloring Method 为 Secondary Structure，Selected Atoms为“all”，回车（或点击右下角 Apply 按钮）。创建第二个 rep：点击 Create Rep。点击后，复制产生了和第一个一摸一样的第二个 rep。浅绿色背景自动跳转到第二个 rep，即目前第二个 rep 处于可编辑状态。设置Drawing Method 为 cpk，Coloring Method 为 colorid，并选择选“1 red”（红色），Selected Atoms 为“resname PRO”，回车（或点击右下角 Apply 按钮）。设置两个 representations 后，蛋白质中的所有脯氨酸就以红色的原子球的形式叠加显示在以二级结构着色的碳骨架上了。
+**7****、****representations****（简称**** ****rep****）：**设置第一个 rep：当前处于编辑状态下的 rep 背景色为浅绿色。设置 Drawing Method为 NewCartoon，Coloring Method 为 Secondary Structure，Selected Atoms为“all”，回车（或点击右下角 Apply 按钮）。创建第二个 rep：点击 Create Rep。点击后，复制产生了和第一个一摸一样的第二个 rep。浅绿色背景自动跳转到第二个 rep，即目前第二个 rep 处于可编辑状态。设置Drawing Method 为 cpk，Coloring Method 为 colorid，并选择选“1 red”（红色），Selected Atoms 为“resname PRO”，回车（或点击右下角 Apply 按钮）。设置两个 representations 后，蛋白质中的所有脯氨酸就以红色的原子球的形式叠加显示在以二级结构着色的碳骨架上了。
 
 ![1604969313470-df6f82ee-0e5f-4817-9eb8-76804acd8cf7.png](./img/RlF9XutPxSSSW6YN/1604969313470-df6f82ee-0e5f-4817-9eb8-76804acd8cf7-656555.png)
 
-图4.20 设置两个 representations
+图4.20 设置两个 representations
 
-创建第三个rep：点击 Create Rep。设置 Drawing Method 为 Surface，Coloring Method 为 colorid，并选择选“8 white”（白色），Selected Atoms 为“all”，回车（或点击右下角 Apply 按钮）。此时，可以看到填满肉的蛋白质，也就是蛋白质的外表面。继续设置 Coloring Method 右侧的 Material（材质）为 Transparent（透明材质）。如果显卡支持，可以打开 GLSL 显示模式：主窗口中点 DisplayRendermode选中 GLSL。GLSL 打开后的 Transparent Surface 变得更加柔美了（图4.21）。
+创建第三个rep：点击 Create Rep。设置 Drawing Method 为 Surface，Coloring Method 为 colorid，并选择选“8 white”（白色），Selected Atoms 为“all”，回车（或点击右下角 Apply 按钮）。此时，可以看到填满肉的蛋白质，也就是蛋白质的外表面。继续设置 Coloring Method 右侧的 Material（材质）为 Transparent（透明材质）。如果显卡支持，可以打开 GLSL 显示模式：主窗口中点 DisplayRendermode选中 GLSL。GLSL 打开后的 Transparent Surface 变得更加柔美了（图4.21）。
 
 ![1604969313659-c0bb66c3-3f90-455b-bcb3-8a5afb47b05e.png](./img/RlF9XutPxSSSW6YN/1604969313659-c0bb66c3-3f90-455b-bcb3-8a5afb47b05e-744365.png)
 
-图4.21  设置三个 representations 及 GLSL 显示模式
+图4.21 设置三个 representations 及 GLSL 显示模式
 
-如果要删除某一个rep，比如删除第二个rep，需要先选中它（选中后背景色变为浅绿色），再点击 Delete Rep，就删掉了。或者你可以双击某一个 rep，比如双击第三个rep，将其暂时隐藏，等需要的时候再双击它取消隐藏（图4.22）。
+如果要删除某一个rep，比如删除第二个rep，需要先选中它（选中后背景色变为浅绿色），再点击 Delete Rep，就删掉了。或者你可以双击某一个 rep，比如双击第三个rep，将其暂时隐藏，等需要的时候再双击它取消隐藏（图4.22）。
 
 ![1604969314050-15715d93-2c45-4743-981c-fdbadd15d7b1.png](./img/RlF9XutPxSSSW6YN/1604969314050-15715d93-2c45-4743-981c-fdbadd15d7b1-042208.png)
 
-图4.22  删除和隐藏 representation
+图4.22 删除和隐藏 representation
 
-**8\*\*\*\*、保存与打开：**当把蛋白质结构的显示效果调整到比较满意的状态后，可以保存当前所有的representations（注意保存的是显示状态，而不是结构）：主窗口中点击 File→Save Visualization State→保存在桌面上，起名叫 mystate.vmd。接下来关闭 VMD 再重新打开。这次我们不需要 Load 蛋白质结构，分别设置三个 rep，我们只需要直接载入刚刚保存的mystate.vmd ， 即可恢复刚刚的显示状态：主窗口中点击File→ LoadVisualization State→找到并打开mystate.vmd。这时，之前保存的显示状态就自动显示出来了（图4.23）。
+**8\*\*\*\*、保存与打开：**当把蛋白质结构的显示效果调整到比较满意的状态后，可以保存当前所有的representations（注意保存的是显示状态，而不是结构）：主窗口中点击 File→Save Visualization State→保存在桌面上，起名叫 mystate.vmd。接下来关闭 VMD 再重新打开。这次我们不需要 Load 蛋白质结构，分别设置三个 rep，我们只需要直接载入刚刚保存的mystate.vmd ， 即可恢复刚刚的显示状态：主窗口中点击File→ LoadVisualization State→找到并打开mystate.vmd。这时，之前保存的显示状态就自动显示出来了（图4.23）。
 
 ![1604969314214-1ce023a8-ee88-4235-8df2-7cf426b2f85c.png](./img/RlF9XutPxSSSW6YN/1604969314214-1ce023a8-ee88-4235-8df2-7cf426b2f85c-145247.png)
 
-图4.23 保存和载入显示状态
+图4.23 保存和载入显示状态
 
-**9****、调换背景颜色（图****4.24\*\*\*\*）：**主窗口中点击 Graphics→Colors→弹出 Color Controls颜色控制窗口→Categories选Display→Names 选 Background→Colors选8 white。
+**9****、调换背景颜色（图****4.24\*\*\*\*）：**主窗口中点击 Graphics→Colors→弹出 Color Controls颜色控制窗口→Categories选Display→Names 选 Background→Colors选8 white。
 
 ![1604969314596-572126d2-cf9d-4971-8dcf-c1a130143d28.png](./img/RlF9XutPxSSSW6YN/1604969314596-572126d2-cf9d-4971-8dcf-c1a130143d28-941132.png)
 
-图4.24  Color Controls 窗口调换颜色方案
+图4.24 Color Controls 窗口调换颜色方案
 
-Color Controls 窗口里可以调整各种VMD 默认的颜色方案。比如Coloring Method选Name的时候，默认的颜色方案是：氢原子白色，氧原子红色，碳原子青色等。这里，你可以根据需要把它们设置成其他颜色。
+Color Controls 窗口里可以调整各种VMD 默认的颜色方案。比如Coloring Method选Name的时候，默认的颜色方案是：氢原子白色，氧原子红色，碳原子青色等。这里，你可以根据需要把它们设置成其他颜色。
 
-**10\*\*\*\*、隐藏坐标轴：**主窗口中点击 Display→Axes→off。
+**10\*\*\*\*、隐藏坐标轴：**主窗口中点击 Display→Axes→off。
 
-**11****、****显示****Lable****：**有时我们需要标记出某些氨基酸的序号或原子的名称（图4.25）。主窗口中点击 Mouse→Lable→Atom。把鼠标模式设置为Lable模式，让它标记原子。此时，鼠标变为十字。接下来在显示窗口中，要标记哪个原子就在哪里点一下。点击后出现文本显示的氨基酸名字、氨基酸序号以及被点击的原子的名字。
+**11****、****显示****Lable****：**有时我们需要标记出某些氨基酸的序号或原子的名称（图4.25）。主窗口中点击 Mouse→Lable→Atom。把鼠标模式设置为Lable模式，让它标记原子。此时，鼠标变为十字。接下来在显示窗口中，要标记哪个原子就在哪里点一下。点击后出现文本显示的氨基酸名字、氨基酸序号以及被点击的原子的名字。
 
 ![1604969314768-1c451f10-76ba-41ae-8422-dacea8649172.png](./img/RlF9XutPxSSSW6YN/1604969314768-1c451f10-76ba-41ae-8422-dacea8649172-460779.png)
 
-图4.25 显示Lable
+图4.25 显示Lable
 
-**12****、调整**** Lable\*\*\*\*：**
+**12****、调整**** Lable\*\*\*\*：**
 
-1）改变字体颜色（图4.26）：主窗口中点击 Graphics→Colors→弹出 Color Controls颜色控制窗口→Categories 选 Lable→Names 选 Atoms→Colors选16 black。
+1）改变字体颜色（图4.26）：主窗口中点击 Graphics→Colors→弹出 Color Controls颜色控制窗口→Categories 选 Lable→Names 选 Atoms→Colors选16 black。
 
 ![1604969315105-9c16c70a-1ae8-4300-89c1-ec58bb1e77c0.png](./img/RlF9XutPxSSSW6YN/1604969315105-9c16c70a-1ae8-4300-89c1-ec58bb1e77c0-573730.png)
 
-图4.26 Color Controls 窗口改变 Lable 字体颜色
+图4.26 Color Controls 窗口改变 Lable 字体颜色
 
-2）改变字体大小/粗细（图4.27）：主窗口中点击Graphics→Lables→弹出 Lable 窗口→Global Properties 标签下设置 Text Size 改变字体大小，Thickness 改变粗细。
+2）改变字体大小/粗细（图4.27）：主窗口中点击Graphics→Lables→弹出 Lable 窗口→Global Properties 标签下设置 Text Size 改变字体大小，Thickness 改变粗细。
 
-3）改变显示位置和内容（图4.28）：主窗口中点击 Graphics→Lables→弹出 Lable 窗口→Properties 标签下选中要调整的 Lable→按住鼠标左键在 Offset 坐标系内移动来改变 Lable 的位置写入 Format 来改变 Lable 的内容。默认 Format 为：%R（氨基酸名字）%d（氨基酸序号）:%a（原子名字）。比如，只想显示氨基酸名字和编号，删掉“:%a”这部分代表原子信息的代码即可。
+3）改变显示位置和内容（图4.28）：主窗口中点击 Graphics→Lables→弹出 Lable 窗口→Properties 标签下选中要调整的 Lable→按住鼠标左键在 Offset 坐标系内移动来改变 Lable 的位置写入 Format 来改变 Lable 的内容。默认 Format 为：%R（氨基酸名字）%d（氨基酸序号）:%a（原子名字）。比如，只想显示氨基酸名字和编号，删掉“:%a”这部分代表原子信息的代码即可。
 
 ![1604969315279-1be91064-a69b-40ab-95af-c361941e420f.png](./img/RlF9XutPxSSSW6YN/1604969315279-1be91064-a69b-40ab-95af-c361941e420f-319041.png)
 
-图4.27  Lable 窗口改变 Lable 字体大小/粗细
+图4.27 Lable 窗口改变 Lable 字体大小/粗细
 
 ![1604969315666-ee2aa9b8-d06e-4453-b796-b9afd5c3d389.png](./img/RlF9XutPxSSSW6YN/1604969315666-ee2aa9b8-d06e-4453-b796-b9afd5c3d389-734780.png)
 
-图4.28  Lable 窗口改变 Lable 位置和内容
+图4.28 Lable 窗口改变 Lable 位置和内容
 
 **13\*\*\*\*、保存结构图：**
 
-以刚刚bpti.pdb 这个蛋白质结构文件为例，设置了三个 representations，添加并调整了Lable，得到了最终的蛋白质3D 结构（图4.29）。最后要做的就是保存结构图片。屏幕截图是较为方便快捷的方法，但是所得图片分辨率不高。如果想要高质量的图片，可以用主窗口下的FileRender弹出 File Render Controls 窗口。File Render Controls 窗口里可以选择多种图片导出方式。
+以刚刚bpti.pdb 这个蛋白质结构文件为例，设置了三个 representations，添加并调整了Lable，得到了最终的蛋白质3D 结构（图4.29）。最后要做的就是保存结构图片。屏幕截图是较为方便快捷的方法，但是所得图片分辨率不高。如果想要高质量的图片，可以用主窗口下的FileRender弹出 File Render Controls 窗口。File Render Controls 窗口里可以选择多种图片导出方式。
 
 ![1604969316147-50e3d28c-0632-442f-99f1-7c15ee93d674.png](./img/RlF9XutPxSSSW6YN/1604969316147-50e3d28c-0632-442f-99f1-7c15ee93d674-086415.png)
 
-图4.29  bpti.pdb 的最终结构图片
+图4.29 bpti.pdb 的最终结构图片
 
 <https://novopro.cn/tools/molstar.html>
 

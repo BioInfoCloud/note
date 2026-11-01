@@ -122,7 +122,7 @@ ceRNA 本质上是 miRNA 作用机制的升级，把它从单机版变成网络�
 
 ceRNA 不是指一个分子，而是 RNA 与 RNA 之间多元调控的一种交互模型。一个 miRNA 结合的靶基因可能有上百个，而 mRNA 的 3'UTR 和大量的非编码 RNA 上，也有远远不止一个的 miRNA 识别元件，miRNA recognition elements(MRE)，或者叫 miRNA binding sites，miRNA 结合位点。
 
- miRNA 结合靶基因被证明是依赖于 RISC 蛋白复合体的，RISC 复合体中有个关键催化组分蛋白叫 AGO2。有一种思路是利用 AGO2 的抗体把复合物免疫沉淀下来，再把结合在其中的 miRNA 和其他 RNA 送去测序，这样的高通量研究就表明参与 ceRNA 调控网络的基因数量非常庞大。
+miRNA 结合靶基因被证明是依赖于 RISC 蛋白复合体的，RISC 复合体中有个关键催化组分蛋白叫 AGO2。有一种思路是利用 AGO2 的抗体把复合物免疫沉淀下来，再把结合在其中的 miRNA 和其他 RNA 送去测序，这样的高通量研究就表明参与 ceRNA 调控网络的基因数量非常庞大。
 
 Dicer 是 miRNA 从前体加工成成熟体必须的酶，Dicer 缺陷的细胞是 miRNA 缺失的，这也相当于是一种阻断策略。
 

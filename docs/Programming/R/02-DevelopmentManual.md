@@ -12,7 +12,7 @@ devtools::install_github("r-lib/usethis")
 ```
 相关函数：[https://usethis.r-lib.org/reference/index.html](https://usethis.r-lib.org/reference/index.html)
 
-# **一.创建一个R包**
+# 一.创建一个R包
 
 Rstudio中点击File - New Project - New Directory - R Package - 给自己R包取名和选择包地址，确定即可。
 ![](https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108473539-1f51f674-502f-485a-9d21-58a7064bcc72.png#clientId=ub4751717-1738-4&crop=0&crop=0&crop=1&crop=1&errorMessage=unknown%20error&from=paste&id=uf7d56e74&margin=%5Bobject%20Object%5D&originHeight=382&originWidth=531&originalType=url&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=uf510c6a3-1d1e-49a3-a92d-e33fbdb9bdf&title=)
@@ -32,7 +32,7 @@ DESCRIPTION(R包的相关描述)
 NAMESPACE(用来规定可以调用的R函数功能,如果这里没有写明，即是R文件夹里面有相关函数功能也不能在之后调用)
 .gitignore和.Rbuildgnore
 
-## **二.创建R脚本**
+## 二.创建R脚本
 
 R脚本是存放在R这个文件夹下，但我们通常usethis工具创建。自动在R文件夹下生成脚本文件。
 ```r
@@ -47,7 +47,7 @@ usethis::use_r("getSamInfo")
 ![](https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108474891-a893c2fd-429a-4197-a3e2-2e17defda93f.png#clientId=ub4751717-1738-4&crop=0&crop=0&crop=1&crop=1&errorMessage=unknown%20error&from=paste&id=u1e81a344&margin=%5Bobject%20Object%5D&originHeight=475&originWidth=1212&originalType=url&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u31e812ac-8289-4546-bfda-bc4295d1565&title=)
 0个错误，1个警告，0个注意。可以看见警告内容是没有许可协议，如果不给其他人用，自己用的话，可以忽略许可协议。怎么生成许可协议？？首先就得介绍一下DESCRIPTION文件
 
-## **三.编写DESCRIPTION文件**
+## 三.编写DESCRIPTION文件
 
 DESCRIPTION文件的作用是存储包中重要的元数据，当创建包时，就默认生成了DESCRIPTION文件，默认已经有一些内容。
 ![](https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108475723-299c29ce-bb4d-4d40-a900-dd855309ea1d.png#clientId=ub4751717-1738-4&crop=0&crop=0&crop=1&crop=1&errorMessage=unknown%20error&from=paste&id=u6fcd916f&margin=%5Bobject%20Object%5D&originHeight=506&originWidth=1219&originalType=url&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=uc675da0b-937b-4a2f-a47c-be4bbe28096&title=)
@@ -56,7 +56,7 @@ Title: 包的介绍，这里的内容就是Rstudio中Packages面板下各种包�
 Version: 0.0.0.9000(版本号,版本号存在一定规范。这里只是一个简单的R包开发教程，不需理会)
 Author: 作者信息
 Description: 包的描述
-License: 许可证(包的公共许可，开源程序的特色)
+License: 许可证（包的公共许可，开源程序的特色）
 Encoding: UTF-8(编码方式)
 LazyData: true(R包内置数据时选中)
 先修改作者信息。
@@ -71,7 +71,7 @@ usethis::use_mit_license("Yun Sen")
 同时在包目录下会生成2个文件。
 ![](https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108476393-e63db304-1bdd-428e-b051-ed9e9f299f5d.png#clientId=ub4751717-1738-4&crop=0&crop=0&crop=1&crop=1&errorMessage=unknown%20error&from=paste&id=u8b4af6f9&margin=%5Bobject%20Object%5D&originHeight=275&originWidth=679&originalType=url&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u9603c6bd-8c93-45ea-b5d6-39a7399c338&title=)
 
-## **四.写函数帮助文档**
+## 四.写函数帮助文档
 
 R 函数的帮助文档也是 R Package 的重要组成部分。函数文档以特殊的标记格式放在 man/*.Rd 文件中，但是我们不需要掌握这种特殊标记语法，我们只需要撰写特殊格式的注释，然后 roxygen2 就会将其转换成 *.Rd 文件。将鼠标光标放在指定的函数体内，在 RStudio 中使用 Ctrl + Shift + Alt + R 或依次点击 Code -> Insert Roxygen Skeleton，就能够产生特殊格式的注释框架。
 ![](https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108477174-2b91cfba-38d4-437e-8882-f19fbc7f2c35.png#clientId=ub4751717-1738-4&crop=0&crop=0&crop=1&crop=1&errorMessage=unknown%20error&from=paste&id=u6a418137&margin=%5Bobject%20Object%5D&originHeight=703&originWidth=506&originalType=url&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u7161181e-1e18-4a2b-b971-2aa57a3e29f&title=)
@@ -93,7 +93,7 @@ devtools::document()
 然后我们就可以像平时一样通过问号?getSamInfo查看帮助文档了。
 ![](https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108479203-97d37cc6-acb7-45e2-b3f4-5ee4b35aa2f5.png#clientId=ub4751717-1738-4&crop=0&crop=0&crop=1&crop=1&errorMessage=unknown%20error&from=paste&id=u2c4e09f6&margin=%5Bobject%20Object%5D&originHeight=525&originWidth=674&originalType=url&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u6d61e563-7504-4651-a3d7-76d14233618&title=)
 
-## **五.添加测试代码**
+## 五.添加测试代码
 
 当我们写好一个函数后，需要验证函数是否能正确执行，结果是否正确，需要进行测试。
 ```r
@@ -118,7 +118,7 @@ devtools::test()
 ![](https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108480693-bb575335-ba0f-495e-8f20-72442d7ff2ea.png#clientId=ub4751717-1738-4&crop=0&crop=0&crop=1&crop=1&errorMessage=unknown%20error&from=paste&id=ufec1e665&margin=%5Bobject%20Object%5D&originHeight=238&originWidth=1181&originalType=url&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u16621f39-98da-4853-bb95-b93ada22c22&title=)
 如果这些函数不能满足我们的需要，我们需要用expect_true或者expect_false函数来抓取其他的期望。这里的期望是我自己去构造的，也就是构造一个返回值为true或者false的期望表达式。还有，有时候结果太复杂，不容易通过代码重建，在这种情况下，可以检查结果是否与上次相同，expect_equal_to_reference()会缓存第一次结果，然后将其与随后的运行进行比较。
 
-## **六.依赖包**
+## 六.依赖包
 
 如果我们开发包过程中用到一些已有的包，或者其中的某个函数，那么我们需要引入，我们平时使用包是通过library或者source来加载包，但在开发时不能使用这种方式。R有很多种方式来描述这种潜在的依赖关系。通过imports（输入）、suggests（建议）、Depends（依赖）、LinkingTo（链接到）和Enhances（增强）来描述。imports里的包必须被安装，也就是在安装自己包的时候，imports申明的包也会被安装。suggests中的包，我们可以使用他，但不是必须的，比如我们可以退使用建议包中的数据来运行测试，编译使用指南，或者只有一个函数需要这个包，suggests中的包是不会随我们的包的安装而安装的。Depends用来指定特定的R版本，例如Depends：R（>=3.0.1)。LinkingTo用于列出依赖于另一个包中的C或者C++代码。Enhances列出你的包增强了的包，通常，你的包为其他包里的类提供了方法。我们通过use_package()函数来申明依赖包。
 ```r
@@ -139,8 +139,8 @@ usethis::use_r("getTCGAData")
 ```r
 usethis::use_tidy_eval()
 ```
-## **七. 外部数据**
-### **1.导出的数据**
+## 七. 外部数据
+### 1.导出的数据
 
 包中数据最常用的位置是在data/目录下，数据格式一般是.Rdata。其中包含单个对象和文件的名称相同，使用这个规则最简单的方法是使用：
 usethis::use_data()
@@ -152,12 +152,12 @@ usethis::use_data()
 在oneSamID写生成数据的代码，后续也好知道数据的来源，data-raw目录下的代码是不需要打包的。对于数据的描述文档可以使用下面2个标签描述。
 #' @format #' @source
 
-### **2.内部数据**
+### 2.内部数据
 
 有时候函数需要预先计算的数据表，如果把这些数据放在data/目录下，这些数据也将会被提供给包的用户，这是不恰当的，正确的做法是把他保存在R、sysdata.Rda。我们在使用usethis::use_data()保存数据的时候，可以加上internal=TRUE来创建文件。
 ![](https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108482964-1dd512ff-1743-42d9-b626-aefff3e0d6ba.png#clientId=ub4751717-1738-4&crop=0&crop=0&crop=1&crop=1&errorMessage=unknown%20error&from=paste&id=u6ef7616a&margin=%5Bobject%20Object%5D&originHeight=478&originWidth=736&originalType=url&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u02832db9-e984-4680-818f-86de0d38d10&title=)
 
-### **3.原始数据**
+### 3.原始数据
 
 如果想展示加载/解析原始数据的例子，就将原始文件放在inst/extdata。安装包时，inst/中所有文件和文件夹都会移动到顶层目录，所以它们不能有R/description这样的名字，要引用inst/extdata（无论是否安装）中是文件，使用system.file()。
 ![](https://cdn.nlark.com/yuque/0/2022/png/1234840/1658108483440-0eefd13a-e65a-4b4f-8613-ca34390c7a36.png#clientId=ub4751717-1738-4&crop=0&crop=0&crop=1&crop=1&errorMessage=unknown%20error&from=paste&id=u12f1671f&margin=%5Bobject%20Object%5D&originHeight=151&originWidth=695&originalType=url&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=ucfbce8cd-ea79-463b-a496-b46b57f0cec&title=)
@@ -194,29 +194,29 @@ CMD窗口，输入命令：rundll32.exe keymgr.dll,KRShowKeyMgr，出现「存�
 git remote add origin git@github.com:BioInfoNote/FUNscore.git
 git push -u origin master
 ```
-## **十. usethis包**
-### **1.use_package()**
+## 十. usethis包
+### 1.use_package()
 
 use_package()向DESCRIPTION添加了一个CRAN包依赖关系，并提供了一些关于如何最好地使用它的建议。use_dev_package()添加了一个对正在开发的包的依赖，将dev repo添加到Remotes，这样它就会从正确的位置自动安装。use_package(package, type = "Imports", min_version = NULL) use_dev_package(package, type = "Imports", remote = NULL)
 package：要依赖的包的名称。type：依赖类型:必须是 "Imports", "Depends", "Suggests", "Enhances"h或者 "LinkingTo" 之一。匹配不区分大小写。min_version：还可以为包提供一个最小版本。设置为TRUE以使用当前安装的版本。remote：默认情况下，插入一个OWNER/REPO GitHub远程服务器。您可以选择提供一个字符串来指定远程，例如。"gitlab::jimhester/covr"，使用远程包支持的任何语法。
 
-### **2.use_import_from()**
+### 2.use_import_from()
 
 use_import_from(package, fun, load = is_interactive())
 use_import_from()通过将roxygen2 @importFrom标记添加到包级文档(可以使用use_package_doc()创建)来从另一个包中导入函数。从另一个包中导入一个函数允许你在没有命名空间的情况下引用它(例如，fun()而不是package::fun())。use_import_from()也会重新记录命名空间，并重新加载当前包。这能够确保你的开发过程中能够立即获得乐趣。package：Package name
 fun：A vector of function names
 load：Logical. Re-load with pkgload::load_all()?
 
-### **3.use_r()**
+### 3.use_r()
 
 use_r(name = NULL, open = rlang::is_interactive()) use_test(name = NULL, open = rlang::is_interactive())
 name：可以使用没有扩展名的名称，也可以使用NULL来根据脚本编辑器中当前打开的文件创建成对的文件。如果R文件是打开的，use_test()将创建/打开相应的测试文件;如果测试文件打开，use_r()将创建/打开相应的R文件。
 
-### **4.use_rmarkdown_template()**
+### 4.use_rmarkdown_template()
 
 use_rmarkdown_template(   template_name ="Template Name",   template_dir =NULL,   template_description ="A description of the template",   template_create_dir =FALSE)
 
-### **5.Use_data()**
+### 5.Use_data()
 ```r
 use_data(...,   internal =FALSE,   overwrite =FALSE,   compress ="bzip2",   version =2)
 ```
@@ -243,7 +243,7 @@ Version: 0.1.0(版本号,版本号存在一定规范。这里只是一个简单�
 Author: 作者
 Maintainer: The package maintainer yourself@somewhere.net(包的贡献者名字及邮箱)
 Description: 包的描述
-License: 许可证(包的公共许可，开源程序的特色。这里也不理会，以GPL-3为协议)
+License: 许可证（包的公共许可，开源程序的特色。这里也不理会，以GPL-3为协议）
 Encoding: UTF-8(编码方式)
 LazyData: true(R包内置数据时选中)
 Depends : 依赖环境

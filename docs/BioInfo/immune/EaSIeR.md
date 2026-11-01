@@ -12,7 +12,7 @@ EaSIeR 存储在Biocondoctor， 可以使用BiocManager 下载安装。
 
 ## 2.EaSIeR 示例数据
 
-IMvigor210CoreBiologies包，文献PMCID: PMC6028240，数据包含RNA-seq 数据（Count和 TPM）、肿瘤突变负荷 (TMB) 信息和 192 名患者对 ICB 治疗的反应结果。CR, complete response; PD, progressive disease; PR, partial response; SD, stable disease。其中（完全缓解 (CR) 的 25 名：R；疾病进展 (PD) 的 167 名：NR）
+IMvigor210CoreBiologies包，文献PMCID: PMC6028240，数据包含RNA-seq 数据（Count和 TPM）、肿瘤突变负荷（TMB） 信息和 192 名患者对 ICB 治疗的反应结果。CR, complete response; PD, progressive disease; PR, partial response; SD, stable disease。其中（完全缓解（CR） 的 25 名：R；疾病进展（PD） 的 167 名：NR）
 
 官方指导手册：[TGF-b attenuates tumor response to PD-L1 blockade by contributing to exclusion of T cells (gene.com)](http://research-pub.gene.com/IMvigor210CoreBiologies/)
 
@@ -26,7 +26,7 @@ IMvigor210CoreBiologies包，文献PMCID: PMC6028240，数据包含RNA-seq 数�
 
 ## 3. 计算免疫反应的Hallmarks
 
-作者利用TPM数据计算下列免疫特征的评分：溶细胞活性 (CYT) (Rooney et al. 2015)、Roh 免疫评分 (Roh_IS) (Roh et al. 2017)、趋化因子特征 (chemokines) (Messina et al. . 2012) , Davoli 免疫特征 (Davoli_IS) (Davoli et al. 2017) , IFNy 特征 (IFNy) (McClanahan 2017) , 扩展免疫特征 (Ayers_expIS) (McClanahan 2017) , T 细胞炎症特征 (Tcell_inflamed) (McClanahan 2017 ) )、免疫抵抗程序（RIR：resF_down、resF_up、resF）(Jerby-Arnon et al. 2018)和三级淋巴结构特征 (TLS) (Cabrita et al. 2020)。
+作者利用TPM数据计算下列免疫特征的评分：溶细胞活性（CYT） (Rooney et al. 2015)、Roh 免疫评分（Roh_IS） (Roh et al. 2017)、趋化因子特征（chemokines） (Messina et al. . 2012) , Davoli 免疫特征（Davoli_IS） (Davoli et al. 2017) , IFNy 特征（IFNy） (McClanahan 2017) , 扩展免疫特征（Ayers_expIS） (McClanahan 2017) , T 细胞炎症特征（Tcell_inflamed） (McClanahan 2017 ) )、免疫抵抗程序（RIR：resF_down、resF_up、resF）(Jerby-Arnon et al. 2018)和三级淋巴结构特征（TLS） (Cabrita et al. 2020)。
 
 Immunophenoscore是根据与MHC分子、免疫调节剂、效应细胞和抑制细胞有关的基因来计算的。IMPRES是通过免疫检查点基因对的表达的逻辑比较得到的。Roh免疫评分（Roh_IS）是由一组参与与肿瘤排斥有关的免疫激活的基因定义的。趋化因子标签（Chemokine）是基于一组与炎症和免疫有关的基因，它能够预测宿主的免疫反应和肿瘤局部淋巴结构的形成。Davoli免疫特征（Davoli_IS）来自于细胞毒性CD8+T细胞和NK细胞标记物的表达。IFN-γ签名包括能够区分黑色素瘤中的应答者和非应答者的基因。免疫扩展标签（Ayes_expIS）是通过搜索与IFN-γ标签基因高度相关的基因产生的；这个新的集合包括所有免疫相关的基因。T细胞炎症微环境标签（T cell_inflamed）是基于IFN-γ和T细胞相关炎症基因在预测对PD-1阻断反应方面的联合潜力。TIDE是在免疫逃逸特征的基础上开发的，如T细胞功能紊乱或排斥。MSI状态是通过MSI相关基因对的逻辑比较确定的。TLS特征是由有TLS的肿瘤中差异表达的基因得出。压抑的免疫抵抗是通过结合一套与T细胞排斥、治疗后和功能抵抗相关的基因签名来定义的。
 

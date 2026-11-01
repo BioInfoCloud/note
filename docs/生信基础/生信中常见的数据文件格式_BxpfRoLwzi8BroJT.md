@@ -2,9 +2,9 @@
 
 ![1612426369824-a7a1f7e0-c465-4292-955c-7abd1f1e2cc1.gif](./img/BxpfRoLwzi8BroJT/1612426369824-a7a1f7e0-c465-4292-955c-7abd1f1e2cc1-551328.gif)
 
-[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**| **[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**| **[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
-[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)** |**** **[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | 服务器与**[**Linux**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1410264757734817793&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)** |**** **[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | 服务器与**[**Linux**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1410264757734817793&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
 ---
 
@@ -28,7 +28,7 @@
 
 ---
 
-## **1.fastq文件**
+## 1.fastq文件
 
 FASTQ是基于文本的，保存生物序列（通常是核酸序列）和其测序质量信息的标准格式。其序列以及质量信息都是使用一个ASCII字符标示，最初由Sanger开发，目的是将FASTA序列与质量数据放到一起，目前已经成为高通量测序结果的事实标准。
 
@@ -44,7 +44,7 @@ FASTQ文件中每个序列通常有四行：
 
 例如：
 
-      ![1612426369905-8f946b30-de78-4e0a-9511-fad6fc662f86.png](./img/BxpfRoLwzi8BroJT/1612426369905-8f946b30-de78-4e0a-9511-fad6fc662f86-847711.png)质量评分指的是一个碱基的错误概率的对数值。其最初在Phred拼接软件中定义与使用，对于每个碱基的质量编码标示，不同的软件采用不同的方案，目前有5种方案：
+![1612426369905-8f946b30-de78-4e0a-9511-fad6fc662f86.png](./img/BxpfRoLwzi8BroJT/1612426369905-8f946b30-de78-4e0a-9511-fad6fc662f86-847711.png)质量评分指的是一个碱基的错误概率的对数值。其最初在Phred拼接软件中定义与使用，对于每个碱基的质量编码标示，不同的软件采用不同的方案，目前有5种方案：
 
 + Sanger，Phred quality score，值的范围从0到92，对应的ASCII码从33到126，但是对于测序数据（raw read data）质量得分通常小于60，序列拼接或者mapping可能用到更大的分数。
 + Solexa/Illumina 1.0, Solexa/Illumina quality score，值的范围从-5到63，对应的ASCII码从59到126，对于测序数据，得分一般在-5到40之间；
@@ -52,11 +52,11 @@ FASTQ文件中每个序列通常有四行：
 + Illumina 1.5+，Phred quality score，但是0到2作为另外的标示；
 + Illumina 1.8+ ，Phred quality score。
 
-       ![1612426369837-ba4312e0-9a81-45ed-a9c2-79e1c4ef026b.png](./img/BxpfRoLwzi8BroJT/1612426369837-ba4312e0-9a81-45ed-a9c2-79e1c4ef026b-560845.png)
+![1612426369837-ba4312e0-9a81-45ed-a9c2-79e1c4ef026b.png](./img/BxpfRoLwzi8BroJT/1612426369837-ba4312e0-9a81-45ed-a9c2-79e1c4ef026b-560845.png)
 
 **举个犊子，假设质量信息是5，这个5看成字符，不要看成数字，那么他对应的十进制数就是53，如果使用的是Sanger测序，那么质量评分采用的就是Phred+33的形式，那么Q = 53-33=20=-10lg(errorP)，所以errorP = 0.01。也就计算出错误率啦，就便于我们进行质控。每一个碱基都有一个质量评分，所以第2行和第4行的位数是相同的。**
 
-   ![1612426369848-a316c7b4-d319-46d1-9003-1f4d9f8e9f9c.png](./img/BxpfRoLwzi8BroJT/1612426369848-a316c7b4-d319-46d1-9003-1f4d9f8e9f9c-275282.png)
+![1612426369848-a316c7b4-d319-46d1-9003-1f4d9f8e9f9c.png](./img/BxpfRoLwzi8BroJT/1612426369848-a316c7b4-d319-46d1-9003-1f4d9f8e9f9c-275282.png)
 
 **2.fasta文件**
 
@@ -70,19 +70,19 @@ FASTA文件各行记录信息如下：
 
 **核苷酸序列：**
 
-       ![1612426369919-6d35d224-31c4-44fd-9324-cba924332557.png](./img/BxpfRoLwzi8BroJT/1612426369919-6d35d224-31c4-44fd-9324-cba924332557-936604.png)
+![1612426369919-6d35d224-31c4-44fd-9324-cba924332557.png](./img/BxpfRoLwzi8BroJT/1612426369919-6d35d224-31c4-44fd-9324-cba924332557-936604.png)
 
 **氨基酸序列：**
 
-       ![1612426369859-0130f7ad-61d8-48ff-8344-41f0c4b332b6.png](./img/BxpfRoLwzi8BroJT/1612426369859-0130f7ad-61d8-48ff-8344-41f0c4b332b6-861282.png)       fasta格式还是比较常见的，比如我们在NCBI查看基因的的时候通常就有fasta格式genebank格式。下面就是fasta格式的案例：
+![1612426369859-0130f7ad-61d8-48ff-8344-41f0c4b332b6.png](./img/BxpfRoLwzi8BroJT/1612426369859-0130f7ad-61d8-48ff-8344-41f0c4b332b6-861282.png) fasta格式还是比较常见的，比如我们在NCBI查看基因的的时候通常就有fasta格式genebank格式。下面就是fasta格式的案例：
 
-       ![1612426369936-ea4a2254-003e-4711-b2c3-3fa688a43e38.png](./img/BxpfRoLwzi8BroJT/1612426369936-ea4a2254-003e-4711-b2c3-3fa688a43e38-262882.png) **3.SAM/BAM**
+![1612426369936-ea4a2254-003e-4711-b2c3-3fa688a43e38.png](./img/BxpfRoLwzi8BroJT/1612426369936-ea4a2254-003e-4711-b2c3-3fa688a43e38-262882.png) **3.SAM/BAM**
 
 当我们测序得到的fastq数据map【[转录组分析 | 使用Hisat2进行序列比对](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273450&idx=1&sn=efab631b255e12cf5ffd259dd53fb2b3&chksm=841edc97b3695581de924856b0e6901c67b87648f85bd491729eaa2ee0592271d84042b9eb76&token=108642787&lang=zh_CN&scene=21#wechat_redirect)】到基因组之后，会得到一个以sam或bam【[转录组分析 | 使用SAMtools将SAM文件转换为BAM文件、排序、建立索引](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273488&idx=1&sn=f5ed53f20164b19720d31f0a2cfcd268&chksm=841edd6db369547bc04ae15a2a8a7661fefa1193cabbe05d7e2f9e2fa986211603537cf8fbd0&token=108642787&lang=zh_CN&scene=21#wechat_redirect)】为扩展名的文件。这里，SAM的全称是sequence alignment/map format。而BAM就是SAM的二进制文件，也就是压缩格式的sam文件。
 
 SAM格式文件包括头部注释部分和比对结果部分，头部分为’’可选部分’’。头部分位于比对部分之前，以“@”开头。比对部分有11列是固定的，其他多列可选。
 
-### **（1）Header （标头注释部分）**
+### （1）Header （标头注释部分）
 ```plain
 @HD VN:1.0 SO:coordinate @SQ SN:chr1 LN:249250621 @SQ SN:chr10 LN:135534747 @SQ SN:chr11 LN:135006516 ... @SQ SN:chrY LN:59373566 @PG ID:TopHat VN:2.0.8b CL:/home/hpages/tophat-2.0.8b.Linux_x86_64/tophat --mate-inner-dist 150 --solexa-quals --max-multihits 5 --no-discordant --no-mixed --coverage-search --microexon-search --library-type fr-unstranded --num-threads 2 --output-dir tophat2_out/ERR127306 /home/hpages/bowtie2-2.1.0/indexes/hg19 fastq/ERR127306_1.fastq fastq/ERR127306_2.fastq
 ```
@@ -91,7 +91,7 @@ SAM格式文件包括头部注释部分和比对结果部分，头部分为’�
 + @SQ：参考序列目录。SN：参考序列名字。LN：参考序列长度。
 + @PG：使用的比对程序名。
 
-### **（2）比对结果部分**
+### （2）比对结果部分
 
 例如这样的：
 
@@ -101,7 +101,7 @@ E00514:173:H3C3JCCXY:4:1124:12398:67234    337 Chr00   32904   0   150M    Chr09
 
 字段之间也就是列之间由Tab隔开，每一字段具体含义参考下图：
 
-   ![1612426369906-20739abe-72c1-4e98-8ea8-1b181e25fedf.png](./img/BxpfRoLwzi8BroJT/1612426369906-20739abe-72c1-4e98-8ea8-1b181e25fedf-577788.png)
+![1612426369906-20739abe-72c1-4e98-8ea8-1b181e25fedf.png](./img/BxpfRoLwzi8BroJT/1612426369906-20739abe-72c1-4e98-8ea8-1b181e25fedf-577788.png)
 
 + qname：测序的reads的名称；
 + Flag：提供了一个比对文件的信息，比对文件可以设置或取消flag，flag整数是多个flag的同时表示。表示比对的结果，由数字表示，不同的数值含义不同：
@@ -118,7 +118,7 @@ E00514:173:H3C3JCCXY:4:1124:12398:67234    337 Chr00   32904   0   150M    Chr09
     - 1024: 代表这个序列是PCR重复序列（#这个标签不常用）
     - 2048: 代表这个序列是补充的比对（#这个标签具体什么意思，没搞清楚，但是不常用。
 
-       ![1612426369903-e21d1466-62ed-46c2-b738-aa9ee9a64e4f.png](./img/BxpfRoLwzi8BroJT/1612426369903-e21d1466-62ed-46c2-b738-aa9ee9a64e4f-030472.png)
+![1612426369903-e21d1466-62ed-46c2-b738-aa9ee9a64e4f.png](./img/BxpfRoLwzi8BroJT/1612426369903-e21d1466-62ed-46c2-b738-aa9ee9a64e4f-030472.png)
 
 具体还可以参考官网：[<u>https://www.samformat.info/sam-format-flag</u>](https://www.samformat.info/sam-format-flag)
 
@@ -129,25 +129,25 @@ E00514:173:H3C3JCCXY:4:1124:12398:67234    337 Chr00   32904   0   150M    Chr09
 + mapq：比对的映射质量；
 + CIGAR：CIGAR字符串，一个数字与字母交替构成的字符串，标记了这段reads不同位置的match情况。
 
-       ![1612426369968-0a3078db-a315-4d3b-9b11-83aca37c3026.png](./img/BxpfRoLwzi8BroJT/1612426369968-0a3078db-a315-4d3b-9b11-83aca37c3026-627138.png)
+![1612426369968-0a3078db-a315-4d3b-9b11-83aca37c3026.png](./img/BxpfRoLwzi8BroJT/1612426369968-0a3078db-a315-4d3b-9b11-83aca37c3026-627138.png)
 
 + qwidth：读段的长度；
 + RNEXT：双末端测序中下一个reads比对的参考系列的名称，如果没有则用 " * " 表示，如果和前一个reads比对到同一个参考序列则用" = "表示；
 + PNEXT：下一个reads比对到参考序列上的位置，如果没有则用0表示；
 + TLEN：序列模板的长度；
 + seq：比对的实际顺序；
-+ qual：比对的质量字符串(fasta文件中的质量得分)；
++ qual：比对的质量字符串（fasta文件中的质量得分）；
 + cigar中会包含数字，代表了特定match持续了多少nt；以及不同的字符，代表了不同的match情况。如36M表示它没有插入或删除。
 
 由于sam格式的文件通常都非常大，所以为了节省存储空间而将sam转换为二进制格式以便于存储，也就是bam文件。sam/bam文件可以由特定的一些软件（比如samtools）来处理的，包括格式互转、排序、建立索引等操作。
 
-## **4.GTF和GFF文件**
+## 4.GTF和GFF文件
 
 GTF全称是Gene transfer format，用于储存基因结构信息，总共有9列。关于gtf文件，我在文章：[**生信中各种ID转换**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265466&idx=1&sn=021a10503d338e09abe07b578e734566&chksm=841efdc7b36974d13b7ad95e2272d293089d49adff9b74667bbeed78306328f0a42b0259c030&scene=21#wechat_redirect)中就已经有所应用。我之前在[**TCGA数据库差异分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264898&idx=1&sn=f6287d98fe0b0fb48a96d2905ca0bb4f&chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&scene=21#wechat_redirect)的文章中，也是通过gtf文件进行ID转换的。
 
 ![1612426369906-7804dcf6-81ae-456d-97d0-c4216190aea5.png](./img/BxpfRoLwzi8BroJT/1612426369906-7804dcf6-81ae-456d-97d0-c4216190aea5-436256.png)
 
-       ![1612426369906-5a2a3099-7480-4d31-98b3-dcdb7f595d8a.png](./img/BxpfRoLwzi8BroJT/1612426369906-5a2a3099-7480-4d31-98b3-dcdb7f595d8a-208326.png)
+![1612426369906-5a2a3099-7480-4d31-98b3-dcdb7f595d8a.png](./img/BxpfRoLwzi8BroJT/1612426369906-5a2a3099-7480-4d31-98b3-dcdb7f595d8a-208326.png)
 
 GFF全称为general feature format，这种格式主要是用来注释基因组。描述了基因组上各种特征的区间信息，包括染色体，基因，转录本等。GFF文件本质上是一个\t分隔的，和gtf文件差不多，共9列的纯文本文件。
 
@@ -195,12 +195,12 @@ chr3    124792319       124792562       ENSG00000276626 RF00100 -chr1    9270081
 + score - 得分在0到1000之间。如果此注释数据集的轨迹线useScore属性设置为1，则得分值将确定显示此要素的灰度级别（较高的数字=较深的灰色）。
 + 此表显示 Genome Browser将BED分数值转换为灰色阴影：
 + strand - 定义strand。要么“.” （=无绞线）或“+”或“ - ”。
-+ thickStart- 绘制特征的起始位置（例如，基因显示中的起始密码子）。当没有厚部分时，thickStart和thickEnd通常设置为chromStart位置。
++ thickStart- 绘制特征的起始位置（例如，基因显示中的起始密码子）。当没有厚部分时，thickStart和thickEnd通常设置为chromStart位置。
 + thickEnd - 绘制特征的结束位置（例如基因显示中的终止密码子）。
 + itemRgb- R，G，B形式的RGB值（例如255,0,0）。如果轨道行 itemRgb属性设置为“On”，则此RBG值将确定此BED行中包含的数据的显示颜色。注意：建议使用此属性的简单颜色方案（八种颜色或更少颜色），以避免压倒Genome浏览器和Internet浏览器的颜色资源。
 + blockCount- BED行中的块（外显子）数。
 + blockSizes- 块大小的逗号分隔列表。此列表中的项目数应与blockCount相对应。
-+ blockStarts - 以逗号分隔的块开始列表。应该相对于chromStart计算所有 blockStart位置。此列表中的项目数应与blockCount相对应。
++ blockStarts - 以逗号分隔的块开始列表。应该相对于chromStart计算所有 blockStart位置。此列表中的项目数应与blockCount相对应。
 
 **BED文件与GFF文件的区别与联系：**
 

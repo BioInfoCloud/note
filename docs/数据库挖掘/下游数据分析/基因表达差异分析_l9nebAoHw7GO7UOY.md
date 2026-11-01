@@ -30,8 +30,8 @@ Counts<- data.frame(c(LUAD_Counts_expMatrix[,dataSmNT],LUAD_Counts_expMatrix[,da
 
 ---
 
-## **基因表达差异分析**
-## **一.数据下载**
+## 基因表达差异分析
+## 一.数据下载
 
 利用R包下载可参考下面2篇文章：
 
@@ -55,7 +55,7 @@ Counts<- data.frame(c(LUAD_Counts_expMatrix[,dataSmNT],LUAD_Counts_expMatrix[,da
 | <br/>Plate | <br/>Order of plate in a sequence of 96-well plates | <br/>96孔序列中板的顺序，4个数字组成 |
 | <br/>Center | <br/>Sequencing or characterization center that will receive the aliquot for analysis | <br/>数据由哪个机构分析：如 01代表The Broad Institute GCC,更多见：[<u>Center</u>](https://www.omicsclass.com/article/1081) |
 
-### **1. 官网在线下载**
+### 1. 官网在线下载
 
 在线下载lung cancer(只选择LUAD)转录组数据的筛选条件，下载日期2020年2月5日。
 
@@ -67,7 +67,7 @@ Counts<- data.frame(c(LUAD_Counts_expMatrix[,dataSmNT],LUAD_Counts_expMatrix[,da
 
 ![1612531569159-c47d7e28-67aa-40b8-b2d2-0964668b20da.png](./img/l9nebAoHw7GO7UOY/1612531569159-c47d7e28-67aa-40b8-b2d2-0964668b20da-024955.png)
 
-### **2.官网下载工具下载  **
+### 2.官网下载工具下载
 
 Data Transfer Tool：[<u>https://gdc.cancer.gov/access-data/gdc-data-transfer-tool</u>](https://gdc.cancer.gov/access-data/gdc-data-transfer-tool)
 
@@ -83,7 +83,7 @@ gdc-client download -m gdc_manifest_20200211_063426.txt
 
 然后就是慢慢下载了，如果中间有报错断了，一般就是网络不好的原因，重新下载或者换个时间段就行了。国内利用这个下载速度还是挺慢的。
 
-### **3. R语言TCGAbiolinks包下载**
+### 3. R语言TCGAbiolinks包下载
 
 TCGAbiolinks包下载数据超级慢，可以选择官网下载。这个包只下载数据的话可以试试，我好久没有用啦。
 
@@ -167,13 +167,13 @@ GBM	Glioblastoma multiforme	多形成性胶质细胞瘤
 
 GBMLGG	Glioma	胶质瘤
 
-HNSC	Head and Neck squamous cell carcinoma 	头颈鳞状细胞癌
+HNSC	Head and Neck squamous cell carcinoma 	头颈鳞状细胞癌
 
 **KICH	Kidney Chromophobe	肾嫌色细胞癌**
 
 **KIRC 	Kidney renal clear cell carcinoma	肾透明细胞癌**
 
-**KIRP	Kidney renal papillary cell carcinoma 	肾乳头状细胞癌**
+**KIRP	Kidney renal papillary cell carcinoma 	肾乳头状细胞癌**
 
 LAML	Acute Myeloid Leukemia	急性髓细胞样白血病
 
@@ -217,19 +217,19 @@ UCS	Uterine Carcinosarcoma	子宫肉瘤
 
 UVM	Uveal Melanoma	葡萄膜黑色素瘤
 
-AML	Acute Myeloid Leukemia	急性髓系白血病
+AML	Acute Myeloid Leukemia	急性髓系白血病
 
-CCSK	Clear Cell Sarcoma of the Kidney	肾透明细胞肉瘤
+CCSK	Clear Cell Sarcoma of the Kidney	肾透明细胞肉瘤
 
 NBL	Neuroblastoma	神经母细胞瘤
 
 OS	Osteosarcoma	骨肉瘤
 
-RT	Rhabdoid Tumor	横纹肌样瘤
+RT	Rhabdoid Tumor	横纹肌样瘤
 
-WT	High-Risk Wilms Tumor	高危肾母细胞瘤
+WT	High-Risk Wilms Tumor	高危肾母细胞瘤
 
-## **二. 数据的整理**
+## 二. 数据的整理
 
 下载的数据，每个样本的数据分别不同文件夹下，我们需要将所有文件移动到同一个文件夹下。
 
@@ -255,7 +255,7 @@ for(wd in filepath){
 }
 ```
 
-### **2. 解压文件**
+### 2. 解压文件
 
 这一步有点多余，可以不做。直接读入数据。
 
@@ -270,7 +270,7 @@ library(R.utils)
 sapply(countsFiles, gunzip) # 解压函数gunzip需要安装R.utils包
 ```
 
-### **3. 处理json文件**
+### 3. 处理json文件
 
 因为我们下载的样本数据的文件名很难看出是什么样本信息。我们需要找到文件对应样品的barcode。
 
@@ -292,7 +292,7 @@ write.csv(json_File_Info,file = "..\\json_File_Info.CSV")
 
 ![1612531569103-09d36f0a-2455-4638-a8b6-88ab6c950935.png](./img/l9nebAoHw7GO7UOY/1612531569103-09d36f0a-2455-4638-a8b6-88ab6c950935-605304.png)
 
-## **三. 数据融合**
+## 三. 数据融合
 
 即将所有样本合并成一个数据框
 
@@ -326,7 +326,7 @@ write.csv(allSampleRawCounts,file = "..\\RawCounts.CSV")
 
 ![1612531569112-f0a9795f-f7d7-4c5f-8901-218c83be5fe1.png](./img/l9nebAoHw7GO7UOY/1612531569112-f0a9795f-f7d7-4c5f-8901-218c83be5fe1-405085.png)
 
-## **四. ID转换**
+## 四. ID转换
 
 [<u>参考文章</u>](https://mp.weixin.qq.com/s?src=11&timestamp=1581245491&ver=2148&signature=Tqc3mBFhZXrl1TIEi9TtROMKA1CsPCirp-pL3tVcX8M6MAkDqpaZ6Rc6rrF9jIZcte03mQma-kPdSNzJ7395zicreulip2VNHwojXk9fEJTC9kRvkI17bHLlWEY1jTnT&new=1)
 
@@ -421,7 +421,7 @@ get_map <- function(input) {
 
 ![1612531570885-dc2ad323-4fa3-49d7-855e-f8f2270e1f1c.png](./img/l9nebAoHw7GO7UOY/1612531570885-dc2ad323-4fa3-49d7-855e-f8f2270e1f1c-611567.png)
 
-## **五. 表达差异分析**
+## 五. 表达差异分析
 
 **DESeq2和EdgeR包**: 都可用于做基因差异表达分析，主要也是用于RNA-Seq数据，同样也可以处理类似的ChIP-Seq,shRNA以及质谱数据。这两个都属于R包，其相同点在于都是对count data数据进行处理，都是基于负二项分布模型。
 
