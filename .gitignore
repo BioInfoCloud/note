@@ -11,3 +11,7 @@ _nav_out.txt
 
 # Baidu Syncdisk 临时上传标记文件
 *.baiduyun.*
+
+# Python 缓存（hooks 目录下的钩子模块会生成）
+__pycache__/
+*.pyc
