@@ -291,6 +291,11 @@ plugins:
         - en
         - ja
   - tags # 给单篇文章添加标签 https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/?h=tags
+
+# [Redirects] 目录/文件由中文改名为英文后，为旧地址生成跳转页（映射见 hooks/redirects.json）
+hooks:
+  - hooks/redirect_site.py
+
 markdown_extensions:
   - pymdownx.arithmatex: # latex支持
       generic: true
