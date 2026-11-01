@@ -2,7 +2,7 @@
 
 微信公众号：生物信息云（ID：MedBioInfoCloud）
 
-地址：[www.bioinfocloud.com](www.bioinfocloud.com)【服务器到期】
+地址：[www.bioinfocloud.com](https://www.bioinfocloud.com)【服务器到期】
 
 备用地址：[https://bioinfocloud.github.io/note/](https://bioinfocloud.github.io/note/)
 

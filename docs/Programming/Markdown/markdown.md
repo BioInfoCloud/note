@@ -296,7 +296,7 @@ Content in the first column | Content in the second column
 这里的`图片链接`也可以是刚刚的相对路径，比如：
 
 ```
-![Markdown图标](./media/markdown_icon.png)
+
 ```
 
 但这样，你就需要在和你现在写的`markdown`的同一目录下，放一个`media`文件夹，里面有这张`markdown_icon.png`的图片。

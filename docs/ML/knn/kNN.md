@@ -873,7 +873,7 @@ pd.plotting.scatter_matrix(iris_dataframe, c=y_train, figsize=(15, 15), marker='
 
 
 
-<img src="../output_3_1.png" alt="png" style="zoom:80%;" />
+<img src="output_3_1.png" alt="png" style="zoom:80%;" />
     
 
 

@@ -121,8 +121,6 @@ NB：每个配体受体对和每个信号通路的推断细胞间通信网络分
 
 ![](https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202303131942639.png)
 
-![image-20230313194502451](C:/Users/chens/AppData/Roaming/Typora/typora-user-images/image-20230313194502451.png)
-
 ![](https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202303131952172.png)
 
 NB：在生成图时，请忽略注释，例如 “Note: The first link end is drawn out of sector ‘MIF’。如果基因名称重叠，您可以通过调整small.gap值来调整参数。
