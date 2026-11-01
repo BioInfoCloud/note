@@ -331,5 +331,7 @@ extra_javascript:
   # check https://squidfunk.github.io/mkdocs-material/reference/mathjax/?h=math for more information
   - assets/javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - assets/javascripts/progress.js # 阅读进度条（顶部极光渐变细条）
 extra_css:
-  - assets/stylesheets/extra.css # 站点整体视觉样式
+  - assets/stylesheets/extra.css # 站点整体视觉样式（清新浅色科技感）
+  - assets/stylesheets/premium.css # 进阶质感升级层（叠加在 extra.css 之上，统一覆盖全站页面）

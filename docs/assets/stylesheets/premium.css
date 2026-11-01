@@ -1,0 +1,110 @@
+/* ==========================================================================
+   生物信息云 · 进阶质感升级层（叠加在 extra.css 之上，统一覆盖全站页面）
+   设计目标：更有层次、更有"高级感"，而非朴素文档观感
+   - 阅读进度条 / Hero 极光 / 图片光晕悬浮 / 提示框渐变描边 / 表格吸顶
+   - 内容入场动效 / 页脚品牌化 / 标题渐变下划线 / 卡片悬浮 / 平滑滚动
+   ========================================================================== */
+
+/* 0. 阅读进度条（由 assets/javascripts/progress.js 注入元素） */
+.bic-progress {
+  position: fixed; top: 0; left: 0; height: 3px; width: 0;
+  z-index: 2000; pointer-events: none;
+  background: linear-gradient(90deg, var(--brand-cyan), var(--brand-blue) 55%, var(--brand-aqua));
+  box-shadow: 0 0 12px rgba(0, 184, 154, .6);
+  transition: width .12s ease-out;
+}
+
+/* 平滑滚动 + 焦点可见性（精致 & 可访问） */
+html { scroll-behavior: smooth; }
+:focus-visible { outline: 2px solid rgba(0, 184, 154, .6); outline-offset: 2px; border-radius: 4px; }
+
+/* 1. Hero 极光升级：流动渐变光晕 + 玻璃质感（仅首页，但代码复用于全站 hero 组件） */
+.hero::before {
+  content: ""; position: absolute; inset: -30% -10% auto -10%; height: 120%;
+  z-index: 0; pointer-events: none; opacity: .55;
+  background:
+    radial-gradient(36rem 22rem at 18% 10%, rgba(0, 184, 154, .28), transparent 60%),
+    radial-gradient(34rem 24rem at 86% 0%, rgba(28, 168, 232, .26), transparent 62%),
+    radial-gradient(26rem 18rem at 60% 90%, rgba(45, 212, 191, .22), transparent 60%);
+  filter: blur(8px);
+  animation: bic-aurora 16s ease-in-out infinite alternate;
+}
+@keyframes bic-aurora {
+  0%   { transform: translate3d(-2%, 0, 0) scale(1); }
+  100% { transform: translate3d(3%, 2%, 0) scale(1.08); }
+}
+.hero {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, .92) 0%, rgba(234, 250, 245, .85) 50%, rgba(230,246,251,.8) 100%),
+    radial-gradient(40rem 28rem at 12% -10%, rgba(0, 184, 154, .16), transparent 60%);
+  backdrop-filter: blur(2px);
+  box-shadow: var(--bic-shadow-sm), 0 30px 70px -40px rgba(0, 184, 154, .6);
+}
+
+/* 2. 图片：叠加光晕 + 悬浮轻微放大（覆盖默认） */
+.md-typeset img:not(.twemoji) {
+  box-shadow: var(--bic-shadow-sm), 0 0 0 1px rgba(255, 255, 255, .6) inset;
+}
+.md-typeset a > img:hover {
+  transform: scale(1.025);
+  box-shadow: 0 20px 46px -18px rgba(0, 184, 154, .55);
+}
+
+/* 3. 提示框：渐变描边加粗 + 悬浮抬升 + 顶部细高光 */
+.md-typeset .admonition, .md-typeset details {
+  border-left-width: 4px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.md-typeset .admonition:hover, .md-typeset details:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 1px var(--bic-border) inset, 0 20px 44px -26px rgba(16, 48, 46, .4);
+}
+.md-typeset .admonition > .admonition-title, .md-typeset details > summary {
+  position: relative;
+}
+.md-typeset .admonition > .admonition-title::after, .md-typeset details > summary::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px;
+  background: linear-gradient(90deg, var(--bic-border-strong), transparent);
+}
+
+/* 4. 表格：吸顶表头（长表阅读更舒适） */
+.md-typeset table:not([class]) thead th {
+  position: sticky; top: 0; z-index: 2;
+  box-shadow: 0 1px 0 var(--bic-border-strong);
+}
+
+/* 5. 标题：去掉整行下边框，改为短渐变下划线（更现代） */
+.md-typeset h2 { border-bottom: none; padding-bottom: .55rem; }
+.md-typeset h2::after {
+  content: ""; display: block; width: 2.6rem; height: 3px; margin-top: .4rem;
+  border-radius: 3px; background: linear-gradient(90deg, var(--brand-cyan), var(--brand-blue));
+}
+
+/* 6. 内容入场动效（轻微淡入上浮，提升"打开即高级"的观感） */
+@keyframes bic-rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.md-content__inner { animation: bic-rise .5s ease both; }
+.md-typeset .grid.cards > ul > li, .md-typeset .grid.cards > ol > li, .md-typeset .grid > .card,
+.roadmap__step, .features .feature { animation: bic-rise .5s ease both; }
+@media (prefers-reduced-motion: reduce) {
+  .md-content__inner, .md-typeset .grid.cards > ul > li, .md-typeset .grid.cards > ol > li,
+  .md-typeset .grid > .card, .roadmap__step, .features .feature, .hero::before { animation: none; }
+}
+
+/* 7. 页脚品牌化：深色渐变 + 社交图标成胶囊 */
+.md-footer { background: linear-gradient(135deg, #0b2824 0%, #07201c 100%); }
+.md-footer-meta { border-top: 1px solid rgba(255, 255, 255, .06); }
+.md-social__link {
+  width: 2rem; height: 2rem; border-radius: 999px;
+  background: rgba(255, 255, 255, .06);
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.md-social__link:hover { background: rgba(0, 184, 154, .18); }
+
+/* 8. 侧边栏激活态更明显 */
+.md-nav__item--active > .md-nav__link,
+.md-nav__link--active { box-shadow: inset 3px 0 0 var(--md-accent-fg-color); }
+
+/* 9. 正文首段轻微强调（仅文章页，排除首页 hero），让开篇更有呼吸感 */
+.md-content__inner:not(:has(.hero)) .md-typeset > p:first-of-type {
+  font-size: 0.82rem; line-height: 2; color: #2c4a48;
+}
