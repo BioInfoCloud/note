@@ -227,11 +227,47 @@ index 575b88e..1b60d22 100644
 
 ## git restore
 
-TODO
+`git restore` 是 Git 2.23 引入的命令，专门用来“撤销改动”，把 `git checkout -- <file>` 和 `git reset HEAD <file>` 这两件容易混淆的事情拆成了两个清晰的参数。
 
-## git brancn/switch
+**（1）撤销工作区的修改**（把文件恢复成最近一次 commit 的样子）：
 
-### 新建仓库
+```
+$ git status
+modified:   git_learn.md
+$ git restore git_learn.md
+$ git status
+nothing to commit, working tree clean
+```
+
+⚠️ 这一步会**直接丢弃**你还没提交的改动，且不可恢复，执行前请确认。
+
+**（2）把已 `git add` 的文件撤出暂存区**（文件内容不变，只是不再被跟踪为“待提交”）：
+
+```
+$ git add git_learn.md
+$ git restore --staged git_learn.md
+$ git status
+ Changes not staged for commit:
+   modified:   git_learn.md
+```
+
+**（3）两条一起用**：既撤出暂存区，又丢弃工作区改动，等于把这个文件彻底还原：
+
+```
+$ git restore --staged --worktree git_learn.md
+```
+
+| 想做的事 | 旧写法 | 新写法 |
+| --- | --- | --- |
+| 撤销工作区改动 | `git checkout -- <file>` | `git restore <file>` |
+| 撤出暂存区 | `git reset HEAD <file>` | `git restore --staged <file>` |
+| 两者都撤销 | `git checkout HEAD -- <file>` | `git restore -SW <file>` |
+
+> `git restore` 只管**文件**；想移动分支指针、撤销整次提交，用 `git reset`。
+
+## git branch/switch
+
+### 新建仓库并初始化
 
 ```
 $ cd ~/Desktop
@@ -305,4 +341,81 @@ Date:   Fri May 21 18:30:57 2021 +0800
 
 ## 向GitHub上的开源项目提交代码
 
-TODO
+给别人的仓库贡献代码，不能直接往人家仓库里推，标准流程是 **Fork → Clone → 新建分支 → 提交 → Push → Pull Request**。
+
+### （1）Fork 仓库
+
+在目标项目页面右上角点 **Fork**，GitHub 会在你自己的账号下复制一份完整仓库，比如 `https://github.com/<你的用户名>/<项目名>`。
+
+### （2）克隆自己那份
+
+```
+$ git clone git@github.com:<你的用户名>/<项目名>.git
+$ cd <项目名>
+```
+
+### （3）关联上游仓库，方便后续同步
+
+```
+$ git remote add upstream https://github.com/<原作者>/<项目名>.git
+$ git remote -v
+origin    git@github.com:<你的用户名>/<项目名>.git (fetch)
+origin    git@github.com:<你的用户名>/<项目名>.git (push)
+upstream  https://github.com/<原作者>/<项目名>.git (fetch)
+upstream  https://github.com/<原作者>/<项目名>.git (push)
+```
+
+### （4）从最新代码开一个分支
+
+不要直接在 `main` 上改，一个功能（或一个 bug 修复）对应一个分支：
+
+```
+$ git switch main
+$ git fetch upstream
+$ git merge upstream/main       # 或者 git reset --hard upstream/main
+$ git switch -c fix-typo-readme
+```
+
+### （5）改代码并提交
+
+```
+$ vim README.md
+$ git add README.md
+$ git commit -m "docs: fix typo in README"
+```
+
+提交信息的通行写法是 `<type>: <说明>`，常用 type 有 `feat`（新功能）、`fix`（修复）、`docs`（文档）、`refactor`（重构）、`test`（测试）、`chore`（杂项）。
+
+### （6）推到自己仓库
+
+```
+$ git push -u origin fix-typo-readme
+```
+
+### （7）发起 Pull Request
+
+回到自己仓库的 GitHub 页面，会出现黄色的 **Compare & pull request** 按钮；点进去写清“改了什么、为什么改”，选择正确的目标分支（通常是上游仓库的 `main`），提交即可。
+
+### （8）按评审意见修改
+
+评审让你改时，**不需要**关掉 PR 重新来一遍——只要在同一个分支上继续 commit 并 `git push`，PR 会自动更新。
+
+```
+$ vim README.md
+$ git add README.md
+$ git commit -m "docs: address review comments"
+$ git push
+```
+
+### （9）合并后清理
+
+PR 被合并之后，可以删掉本地和远程的功能分支：
+
+```
+$ git switch main
+$ git fetch upstream && git merge upstream/main
+$ git branch -d fix-typo-readme
+$ git push origin --delete fix-typo-readme
+```
+
+> 小提示：如果只是改错别字、补文档这类小改动，也可以在 GitHub 网页上直接编辑文件，网页会**自动帮你 Fork 并开分支**，然后一步跳到发起 PR，不需要碰命令行。

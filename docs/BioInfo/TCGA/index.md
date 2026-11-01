@@ -1,8 +1,8 @@
 ---
-title: TCGA-GEO
+title: TCGA 与 GEO 数据挖掘
 ---
 
-# TCGA-GEO
+# TCGA 与 GEO 数据挖掘
 
 ## 目录
 

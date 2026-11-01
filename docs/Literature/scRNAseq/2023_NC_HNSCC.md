@@ -1,8 +1,8 @@
 ---
-title: 2023_HNSCC
+title: 头颈癌单细胞转录组图谱（2023 Nat Commun）
 ---
 
-# 2023_HNSCC
+# 头颈癌单细胞转录组图谱（2023 Nat Commun）
 
 ```
 Choi, JH., Lee, BS., Jang, J.Y. et al. Single-cell transcriptome profiling of the stepwise progression of head and neck cancer. Nat Commun 14, 1055 (2023). https://doi.org/10.1038/s41467-023-36691-x

@@ -16,6 +16,33 @@ TABS = [
   ('资源', ['resources', 'WeChatOfficialAccount', 'ABOUT', 'package']),
 ]
 
+# 目录名 -> 导航里显示的中文分组名（目录已改为英文，但侧边栏要给中文）
+LABELS = {
+    'Programming/python': 'Python',
+    'Programming/python/Matplotlib_visualization': 'Matplotlib 可视化',
+    'Programming/vscode-python': 'VSCode 与 Python',
+    'BioInfo/scRNAseq': '单细胞（scRNA-seq）',
+    'BioInfo/RNAseq': '转录组（RNA-seq）',
+    'BioInfo/TCGA': 'TCGA 与 GEO',
+    'BioInfo/database': '数据库',
+    'BioInfo/drugAna': '药物分析',
+    'BioInfo/immune': '免疫分析',
+    'BioInfo/toolsandsoftware': '工具与软件',
+    'ML': '机器学习',
+    'ML/LOGISTIC_REGRESSION': '逻辑回归',
+    'ML/knn': 'kNN',
+    'ML/knn/knn_py': 'kNN 的 Python 实现',
+    'Literature/AI': 'AI 与大模型',
+    'Literature/Review': '文献精读',
+    'Literature/Ubiquitination': '泛素化',
+    'Literature/scRNAseq': '单细胞文献',
+    'resources': '站点与前端',
+    'WeChatOfficialAccount': '公众号',
+    'ABOUT': '关于本站',
+    'package': 'R 包文档',
+}
+
+
 def page_title(md_path):
     try:
         t = open(md_path, encoding='utf-8', errors='ignore').read()
@@ -45,7 +72,8 @@ def section_items(folder_rel):
         ep = os.path.join(folder, e)
         if os.path.isdir(ep):
             sub = section_items(os.path.join(folder_rel, e).replace('\\', '/'))
-            title = page_title(os.path.join(ep, 'index.md')) or e
+            title = page_title(os.path.join(ep, 'index.md')) or LABELS.get(
+                os.path.join(folder_rel, e).replace('\\', '/'), e)
             if sub:
                 items.append({title: sub})
         elif e.endswith('.md'):
@@ -75,7 +103,7 @@ for tab_name, folders in TABS:
             si = section_items(f)
             if not si:
                 continue
-            title = page_title(os.path.join(DOCS, f, 'index.md')) or f.split('/')[-1]
+            title = page_title(os.path.join(DOCS, f, 'index.md')) or LABELS.get(f, f.split('/')[-1])
             tab_items.append({title: si})
     nav_lines.append(f"  - {tab_name}:")
     nav_lines.append(fmt(tab_items, "    "))

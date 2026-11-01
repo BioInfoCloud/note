@@ -1,8 +1,8 @@
 ---
-title: cellChat
+title: CellChat：细胞间通讯分析
 ---
 
-# cellChat
+# CellChat：细胞间通讯分析
 
 ## 1.CellChat对象的数据输入、处理及初始化
 

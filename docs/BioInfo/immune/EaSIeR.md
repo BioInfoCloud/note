@@ -1,8 +1,8 @@
 ---
-title: EaSIeR
+title: EaSIeR：肿瘤免疫微环境评分
 ---
 
-# EaSIeR
+# EaSIeR：肿瘤免疫微环境评分
 
 ## 1.EaSIeR包介绍及安装
 

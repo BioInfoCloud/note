@@ -1,8 +1,8 @@
 ---
-title: Hisat2
+title: HISAT2 比对与索引构建
 ---
 
-# Hisat2
+# HISAT2 比对与索引构建
 
 ## Hisat2自定义索引文件
 

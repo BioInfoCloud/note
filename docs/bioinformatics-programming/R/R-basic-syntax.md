@@ -994,7 +994,7 @@ mydata$Category <- as.factor(mydata$Category,
                              levels=c('your ordered'), ordered=TRUE)
 ```
 
-## 3.数据之间的转换
+### 3.数据之间的转换
 ```plain
 geneName = c("TP53","LC3B","mTOR","PD1","CD274")
 geneExp = c(131,145,35,657,878)

@@ -1,6 +1,6 @@
 # 01-软件安装
 
-### 必备
+## 必备
 
 R [https://www.r-project.org/](https://www.r-project.org/)
 
@@ -10,7 +10,7 @@ Git [https://git-scm.com/](https://git-scm.com/)
 
 Gitee 或 Github [https://gitee.com/](https://gitee.com/) 或 [https://github.com/](https://github.com/)
 
-### 推荐
+## 推荐
 
 CRAN统计
 

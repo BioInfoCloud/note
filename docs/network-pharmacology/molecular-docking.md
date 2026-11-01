@@ -839,15 +839,15 @@ Selecting 处切换到残基。
 
 图 4.16 默认的蛋白质结构显示方案
 
-##### 1、VMD 中鼠标的使用
+### 1、VMD 中鼠标的使用
 
 把鼠标移到显示窗口里，按住左键，随意拖动，蛋白质就会在 3D 空间内任意旋转；按住鼠标右键拖动，蛋白质会在当前平面内 360 度旋转；前后滚动鼠标中键，可以将蛋白质放大或缩小。此外，鼠标还有更多的使用方法：主窗口上的 Mouse 菜单里可以切换鼠标模式。默认的鼠标模式是 Rotate Mode（旋转模式，R）。R 模式下，鼠标在显示窗口内为单箭头。操作即为上述三种。将鼠标模式改为 Translate Mode（移动模式，T）后，鼠标在显示窗口内变为十字箭头。T 模式下，按住鼠标左键拖动为移动结构；右键和中键都为放缩功能。此外，还有 Scale Mode（缩放模式，S）。S 模式下，鼠标在显示窗口内变为左右箭头，按住鼠标左键或右键后，左右移动，即可完成连续的缩放。这种连续的缩放，不同于滚动中键实现的缩放。在默认的情况下，所有旋转是围绕整个结构的中心点进行的。我们也可以自己指定旋转的中心。这需要把鼠标模式切换为 Center（中心模式，C）。C 模式下，鼠标在显示窗口内为十字。将十字放在想要作为旋转中心的原子上点一下，再按住鼠标左键旋转，就会以新定义的中心进行旋转。
 
-##### 2、恢复结构初始位置
+### 2、恢复结构初始位置
 
 主窗口中点 Display → Reset View。或者在显示窗口内单击鼠标左键以激活窗口后，点击“=”键。
 
-##### 3、改变蛋白质结构的外观
+### 3、改变蛋白质结构的外观
 
 有关外观的设置在主窗口中的 Graphic 菜单下的 Representation 窗口里（图 4.17）。一个 Representation（显示状态）由三个元素构成。第一个元素是用什么样式（Style）显示，当前使用的样式是以细线显示原子（Lines）。第二个元素是用什么颜色（Color）显示，当前使用的颜色是按原子名定义的不同颜色（Name）。最后一个元素是要显示什么内容（Selection），当前显示的内容是所有原子（all）。这三个元素分别在 Representation 窗口里的 Draw style 标签下的 Drawing Method 下拉条、Coloring Method 下拉条和 Selected Atoms 输入框里进行设置。
 
@@ -855,7 +855,7 @@ Selecting 处切换到残基。
 
 图 4.17 Representation 窗口
 
-##### 4、Drawing Method 下拉条（图 4.18）
+### 4、Drawing Method 下拉条（图 4.18）
 
 Lines 以细线显示原子。CPK 以不同大小的球来显示原子，原子间的连线是相应的化学键，比如碳与碳之间的共价键，硫与硫之间的二硫键等。NewCartoon 只显示蛋白质的碳骨架（backbone），并形象地展示出不同的二级结构。每一种 Drawing Method 都可以再进一步设置显示效果。比如对于 CPK，可以调整原子球的大小（Sphere Scale）、改变化学键的粗细（Bond Radius）、以及设置更高或更低的分辨率（Sphere/Bond Resolution）。
 
@@ -863,7 +863,7 @@ Lines 以细线显示原子。CPK 以不同大小的球来显示原子，原子�
 
 4.18 不同的几种 Drawing Method
 
-##### 5、Coloring Method 下拉条（图 4.19）
+### 5、Coloring Method 下拉条（图 4.19）
 
 Name 颜色方案是一种原子一种颜色，常见的比如碳原子青色、氧原子红色、氮原子蓝色、硫原子黄色。在 NewCartoon 显示样式下，只有碳骨架被显示出来，再配以 Name 颜色方案，整个结构都是青色的。Secondary Structure 颜色方案可以为不同的二级结构赋予不同的颜色，常见的比如α螺旋紫色、β折片黄色、转角青色、松散 coil 结构白色。颜色方案 Res Type 根据氨基酸类型的不同赋予不同的颜色，比如非极性氨基酸白色、极性带正电荷的氨基酸（碱性的氨基酸）蓝色、极性带负电荷的氨基酸（酸性的氨基酸）红色、极性不带电荷的氨基酸绿色。这种颜色方案适合在显示氨基酸侧链的 Drawing Method 下观看，比如 CPK 样式。颜色方案 ResName 为 20 种氨基酸设置了 20 种不同的颜色。
 
@@ -871,7 +871,7 @@ Name 颜色方案是一种原子一种颜色，常见的比如碳原子青色、
 
 4.19 不同 Drawing Method 和 Coloring Method 组合
 
-##### 6、Selected Atoms 输入框
+### 6、Selected Atoms 输入框
 
 输入框里输入需要显示的内容，比如，写“all”代表显示所有原子，也就是整个蛋白质、写“backbone”代表显示碳骨架。输入框里允许输入的关键词和语法在 Selections 标签下有详细定义。可以写 Singlewords 里面单个的单词，也可以写 Keyword 和 Value 组成的词组，还可以利用逻辑词“and/or/not”把多个单词和词组串成句子。举例：
 
@@ -883,7 +883,7 @@ Name 颜色方案是一种原子一种颜色，常见的比如碳原子青色、
 
 VMD 可以设置多个 representations（简称 rep），也就是将多个显示状态的显示效果叠加在一起（图 4.20）。
 
-##### 7、representations（简称 rep）
+### 7、representations（简称 rep）
 
 设置第一个 rep：当前处于编辑状态下的 rep 背景色为浅绿色。设置 Drawing Method 为 NewCartoon，Coloring Method 为 Secondary Structure，Selected Atoms 为“all”，回车（或点击右下角 Apply 按钮）。创建第二个 rep：点击 Create Rep。点击后，复制产生了和第一个一模一样的第二个 rep。浅绿色背景自动跳转到第二个 rep，即目前第二个 rep 处于可编辑状态。设置 Drawing Method 为 cpk，Coloring Method 为 colorid，并选择“1 red”（红色），Selected Atoms 为“resname PRO”，回车（或点击右下角 Apply 按钮）。设置两个 representations 后，蛋白质中的所有脯氨酸就以红色的原子球的形式叠加显示在以二级结构着色的碳骨架上了。
 
@@ -903,7 +903,7 @@ VMD 可以设置多个 representations（简称 rep），也就是将多个显�
 
 图 4.22 删除和隐藏 representation
 
-##### 8、保存与打开
+### 8、保存与打开
 
 当把蛋白质结构的显示效果调整到比较满意的状态后，可以保存当前所有的 representations（注意保存的是显示状态，而不是结构）：主窗口中点击 File→Save Visualization State→保存在桌面上，起名叫 mystate.vmd。接下来关闭 VMD 再重新打开。这次我们不需要 Load 蛋白质结构，分别设置三个 rep，我们只需要直接载入刚刚保存的 mystate.vmd ， 即可恢复刚刚的显示状态：主窗口中点击 File → Load Visualization State→找到并打开 mystate.vmd。这时，之前保存的显示状态就自动显示出来了（图 4.23）。
 
@@ -911,7 +911,7 @@ VMD 可以设置多个 representations（简称 rep），也就是将多个显�
 
 图 4.23 保存和载入显示状态
 
-##### 9、调换背景颜色（图 4.24）
+### 9、调换背景颜色（图 4.24）
 
 主窗口中点击 Graphics→Colors→弹出 Color Controls 颜色控制窗口→Categories 选 Display→Names 选 Background→Colors 选 8 white。
 
@@ -921,11 +921,11 @@ VMD 可以设置多个 representations（简称 rep），也就是将多个显�
 
 Color Controls 窗口里可以调整各种 VMD 默认的颜色方案。比如 Coloring Method 选 Name 的时候，默认的颜色方案是：氢原子白色，氧原子红色，碳原子青色等。这里，你可以根据需要把它们设置成其他颜色。
 
-##### 10、隐藏坐标轴
+### 10、隐藏坐标轴
 
 主窗口中点击 Display→Axes→off。
 
-##### 11、显示 Label
+### 11、显示 Label
 
 有时我们需要标记出某些氨基酸的序号或原子的名称（图 4.25）。主窗口中点击 Mouse→Label→Atom。把鼠标模式设置为 Label 模式，让它标记原子。此时，鼠标变为十字。接下来在显示窗口中，要标记哪个原子就在哪里点一下。点击后出现文本显示的氨基酸名字、氨基酸序号以及被点击的原子的名字。
 
@@ -933,7 +933,7 @@ Color Controls 窗口里可以调整各种 VMD 默认的颜色方案。比如 Co
 
 图 4.25 显示 Label
 
-##### 12、调整 Label
+### 12、调整 Label
 
 1）改变字体颜色（图 4.26）：主窗口中点击 Graphics→Colors→弹出 Color Controls 颜色控制窗口→Categories 选 Label→Names 选 Atoms→Colors 选 16 black。
 
@@ -953,7 +953,7 @@ Color Controls 窗口里可以调整各种 VMD 默认的颜色方案。比如 Co
 
 图 4.28 Label 窗口改变 Label 位置和内容
 
-##### 13、保存结构图
+### 13、保存结构图
 
 以刚刚 bpti.pdb 这个蛋白质结构文件为例，设置了三个 representations，添加并调整了 Label，得到了最终的蛋白质 3D 结构（图 4.29）。最后要做的就是保存结构图片。屏幕截图是较为方便快捷的方法，但是所得图片分辨率不高。如果想要高质量的图片，可以用主窗口下的 File → Render，弹出 File Render Controls 窗口。File Render Controls 窗口里可以选择多种图片导出方式。
 

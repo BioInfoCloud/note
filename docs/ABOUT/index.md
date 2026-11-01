@@ -1,8 +1,8 @@
 ---
-title: Index
+title: 关于本站
 ---
 
-# Index
+# 关于本站
 
 > 作者：DoubleHelix
 >

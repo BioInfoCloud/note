@@ -1,6 +1,6 @@
-## 机器学习的基本概念
+# 机器学习的基本概念
 
-### 一、机器学习方法流程
+## 一、机器学习方法流程
 
 以有监督学习方法为例：
 
@@ -18,7 +18,7 @@
 
 首先，有结果的输入数据（有结果的样本数据），基于这个数据建立一些新特征（特征工程）。特征有可能和输入的数据一样，那输入的数据属性就是特征，有时可能要做一些修整。通过特征进行模型训练得到既定的公式，然后通过评估之后进行部署，然后进行应用。
 
-### 二、输入空间与输出空间
+## 二、输入空间与输出空间
 
 输入空间（Input Space）:将输入的所有可能取值的集合称作输入空间。
 
@@ -39,7 +39,7 @@
 - 输入空间和输出空间可以是同一个空间，也可以是不同空间
 - 通常输出空间会比输入空间小
 
-### 三、特征空间
+## 三、特征空间
 
 特征（Feature ）:即属性。每个输入实例的各个组成部分（属性）称作原始特征，基于原始特征还可以扩展出更多的衍生特征。
 
@@ -72,7 +72,7 @@ PassengerId, Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
 - 需将将实例从输入空间映射到特征空间
 - 模型实际上是定义于特征空间之上的
 
-### 四、假设空间的定义
+## 四、假设空间的定义
 
 假设空间（Hypothesis Space）：由输入空间到输出空间的映射的集合，称作假设空间。
 
@@ -88,7 +88,7 @@ The hypothesis space,which defines the class of functions mapping the input spac
 
 假设空间指的是问题所有假设组成的空间，我们可以把学习过程看作是在假设空间中搜索的过程，搜索目标是寻找与训练集“匹配”的假设。--周志华《机器学习》
 
-### 五、举例
+## 五、举例
 
 举例：某商品的浏览、购买记录中，记录了性别、信用度及是否购买，基于数据建模。其中Gender 取值为（Female,Male），Credit 取值为（High, Mediun,Low） Buy的取值为（TRUE, FALSE）
 
@@ -128,7 +128,7 @@ The hypothesis space,which defines the class of functions mapping the input spac
 
 针对每一种可能的输入，都能找到一个映射，对应了输出空间中某个输出。总共可能出现的假设个数：2×2×2×2×2×2=2^6^通常还会加上一个特殊的全空假设，即2^6^+1。所以上表不属于假设空间。
 
-### 六、机器学习方法三要素
+## 六、机器学习方法三要素
 
 机器学习方法通常都是由模型、策略和算法三部分构成:方法=模型+策略+算法
 
@@ -138,7 +138,7 @@ The hypothesis space,which defines the class of functions mapping the input spac
 
 （3）算法:学习模型的具体的计算方法，通常是求解最优化问题。
 
-#### 1、模型
+### 1、模型
 
 模型:输入空间到输出空间的映射关系。学习过程即为从假设空间中搜索适合当前数据的假设。分析当前需要解决的问题，确定模型。
 
@@ -152,7 +152,7 @@ The hypothesis space,which defines the class of functions mapping the input spac
 
 发现异常数据 异常检测（Anomaly Detection）
 
-#### 2、策略
+### 2、策略
 
 策略:从假设空间众多的假设中选择到最优的模型的学习标准或规则。
 
@@ -176,7 +176,7 @@ The hypothesis space,which defines the class of functions mapping the input spac
 
 结构风险最小（SRM : Structural Risk Minimization)
 
-#### 3、损失函数：
+### 3、损失函数：
 
 损失函数（Loss Function）：用来衡量预测结果和真实结果之间的差距，其值越小，代表预测结果和真实结果越一致。通常是一个非负实值函数，通过各种方式缩小损失函数的过程被称作优化。损失函数记做L(Y,f(x))。
 

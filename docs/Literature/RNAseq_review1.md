@@ -1,3 +1,5 @@
+# 文献翻译：RNA-seq 全谱分析综述
+
 文献阅读与翻译 - Gaining comprehensive biological insight into the transcriptome by performing a broad-spectrum RNA-seq analysis (Nature Communications DOI: 10.1038/s41467-017-00050-4)——来自网络
 
 ## 摘要

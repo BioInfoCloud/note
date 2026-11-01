@@ -1,8 +1,8 @@
 ---
-title: Biopython
+title: Biopython 安装与简介
 ---
 
-# Biopython
+# Biopython 安装与简介
 
 ## 1.Biopython介绍
 

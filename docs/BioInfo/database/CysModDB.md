@@ -1,8 +1,10 @@
+# CysModDB：半胱氨酸修饰数据库
+
 > 文章来源：[https://mp.weixin.qq.com/s/iZ-qkVnpPf2KrA2HbDzqYA](https://mp.weixin.qq.com/s/iZ-qkVnpPf2KrA2HbDzqYA)
 >
 > 公众号：生物信息云
 
-# 1.背景知识
+## 1.背景知识
 
 半胱氨酸（Cys）上的硫醇基团可以经历多种翻译后修饰（PTM）， 作为分子开关维持氧化还原稳态并调节一系列生物 活性，包括改变酶促反应、蛋白质-蛋白质相互作用和蛋白质 稳定性。
 ![](https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202211211552593.png)

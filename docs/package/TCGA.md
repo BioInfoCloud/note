@@ -1,8 +1,8 @@
-## TCGA数据库数据挖掘相关函数
+# TCGA数据库数据挖掘相关函数
 
 TCGA数据库首页：[GDC Data Portal Homepage (cancer.gov)](https://portal.gdc.cancer.gov/)
 
-### 1.下载RNAseq数据
+## 1.下载RNAseq数据
 
 getTCGA_RNAseqData()返回一个list，包括count,tpm和fpkm 3个数据框。
 
@@ -10,7 +10,7 @@ getTCGA_RNAseqData()返回一个list，包括count,tpm和fpkm 3个数据框。
 STARdata <- getTCGA_RNAseqData("TCGA-LUAD",save = TRUE,folder = ".")
 ```
 
-### 2.下载蛋白组数据
+## 2.下载蛋白组数据
 
 getTCGA_ProteinExp()返回一个数据框。
 
@@ -18,7 +18,7 @@ getTCGA_ProteinExp()返回一个数据框。
 Proteome_data <- getTCGA_ProteinExp("TCGA-LUAD",save = TRUE,folder = ".")
 ```
 
-### 3.下载SNV（simple nucleotide variation）数据
+## 3.下载SNV（simple nucleotide variation）数据
 
 数据类型为：Masked Somatic Mutation。
 
@@ -26,7 +26,7 @@ Proteome_data <- getTCGA_ProteinExp("TCGA-LUAD",save = TRUE,folder = ".")
 snv.dat <- getTCGA_SNV_Masked_data("TCGA-LUAD",save = TRUE,folder = ".")
 ```
 
-### 4.下载miRNA数据
+## 4.下载miRNA数据
 
 参考文章：
 
@@ -36,19 +36,19 @@ snv.dat <- getTCGA_SNV_Masked_data("TCGA-LUAD",save = TRUE,folder = ".")
 
 [https://mp.weixin.qq.com/s/WxgMhwpMAJy_CKTqNdFj0g](https://mp.weixin.qq.com/s/WxgMhwpMAJy_CKTqNdFj0g)
 
-#### （1）Isoform Expression Quantification
+### （1）Isoform Expression Quantification
 
 ```R
 IsoformEQ <- getTCGA_miRNA_IsoformEQ("TCGA-LUAD",save = TRUE,folder = ".")
 ```
 
-#### （2）miRNA Expression Quantification
+### （2）miRNA Expression Quantification
 
 ```R
 miRNAEQ <- getTCGA_miRNAEQ("TCGA-LUAD",save = TRUE,folder = ".")
 ```
 
-### 5.下载甲基化数据
+## 5.下载甲基化数据
 
 getTCGA_MethylationData 下载Methylation Beta Value数据。
 
@@ -56,7 +56,7 @@ getTCGA_MethylationData 下载Methylation Beta Value数据。
 MetData <- getTCGA_MethylationData("TCGA-LUAD",save = TRUE,folder = ".")
 ```
 
-### 6. 下载CNV（Copy Number Variation）数据
+## 6. 下载CNV（Copy Number Variation）数据
 
 getTCGA_CNV.data()函数还在优化中：
 
@@ -68,7 +68,7 @@ cnv.gl <- getTCGA_CNV.data("TCGA-LUAD",save = FALSE,folder = ".",data.type = "Ge
 cnv.gls <- getTCGA_CNV.data("TCGA-LUAD",save = FALSE,folder = ".",data.type = "Gene Level Copy Number Scores")
 ```
 
-### 7. 下载临床数据
+## 7. 下载临床数据
 
 ```R
 cldat <- getTCGA_ClinicalData(project = "TCGA-LUAD",save = FALSE,folder = ".",trim = TRUE)
@@ -89,7 +89,7 @@ c("TCGA-READ","TCGA-COAD","TCGA-PAAD","TCGA-ESCA","TCGA-KIRP","TCGA-HNSC",
 cldat <- getTCGA_ClinicalData(project = "TCGA-LUAD",save = FALSE,folder = ".",trim = FALSE)
 ```
 
-### 8. 过滤表达数据
+## 8. 过滤表达数据
 
 filterGeneTypeExpr()根据某列里面是数据进行过滤，保留filter值的数据。该函数仅适用于getTCGA_RNAseqData获取的count,tpm和fpkm 3个数据框。
 
@@ -115,7 +115,7 @@ pc.expr <- filterGeneTypeExpr(expr = expr,
                             delcol = c(1:3))
 ```
 
-### 9.分割数据
+## 9.分割数据
 
 splitTCGAmatrix()，data的列应该是TCGA病人样本的barcode，参数sample的值为"Tumor"或"Normal"，指定sample ="Normal"时，当样本中没有正常样本返回NULL。
 
@@ -124,7 +124,7 @@ turexp <- splitTCGAmatrix(data = expr[,-c(1:3)],sample = "Tumor")
 norexp <- splitTCGAmatrix(data = expr[,-c(1:3)],sample = "Normal")
 ```
 
-### 10. 删除重复病人样本
+## 10. 删除重复病人样本
 
 delTCGA_dup_sample()函数可以将列为barcode的数据，去除有重复的数据，TCGA数据库的病人有的可能做了几个重复。可以只需要一个。有正常样本和肿瘤样本同时在一个表达矩阵中时，禁用，可以先用splitTCGAmatrix()函数分割正常和肿瘤样本的数据后使用。
 
@@ -132,7 +132,7 @@ delTCGA_dup_sample()函数可以将列为barcode的数据，去除有重复的�
 expr <- delTCGA_dup_sample(data = pc.expr,col_rename = TRUE)
 ```
 
-### 11. 数据打包下载
+## 11. 数据打包下载
 
 下载的数据是R对象：
 
@@ -146,7 +146,7 @@ Survival和Phenotype数据（fromUCSC）：[微信公众号生物信息云提供
 
 临床数据：[微信公众号生物信息云提供的链接](https://pan.baidu.com/s/1KDO2gx-lnejeuInVZSEPFQ?pwd=0k83)
 
-### 12 . 获取某个基因在泛癌中的表达数据
+## 12 . 获取某个基因在泛癌中的表达数据
 
 geneSymbol是要分析的基因名称的向量；dataType是tpm,fpkm和count中的一种；datafolder来自 getTCGA_RNAseqData()函数下载数据，并存放在某个文件夹中，或者从这里下载（RNAseq：[微信公众号生物信息云提供的链接](https://pan.baidu.com/s/1VWz8bIlgKaUKR0ncughBhg?pwd=e6wz )），但这里下载的数据没有fpkm；geneType参照函数filterGeneTypeExpr()中的fil_col，pattern正则表达式匹配datafolder中的数据文件；paired指定是否只获取配对样本的数据；nnorm表示至少包含几个正常样本；得到的数据进行了log2转换。还可以指定projects来选择特定的癌症类型，默认是All,表示获取所有癌症类型的数据，如果想获取其中的几种，其是一个向量，如c("TCGA-LUAD","TCGA-LUSC")
 
@@ -177,7 +177,7 @@ getTCGAgeneExpDat(datafolder,
 )
 ```
 
-### 13. 单基因在泛癌中表达的箱型图可视化
+## 13. 单基因在泛癌中表达的箱型图可视化
 
 data是由 getGeneExpData.fancancer得到的数据，gene是一个基因，字符串类型；paired表示数据是否是配对样本。
 
@@ -188,7 +188,7 @@ fig <- ggplotGenePancancerExp(data = df,gene= "ATG7",
 
 ![](https://raw.githubusercontent.com/BioInfoCloud/ImageGo/main/20240522131135.png)
 
-### 14. 匹配免疫细胞浸润数据与表达数据
+## 14. 匹配免疫细胞浸润数据与表达数据
 
 getInfiltDataOfTCGAsample 函数用于匹配TCGA数据库中的表达数据以及免疫细胞浸润数据，返回一个list（包括匹配后的2个数据框）。免疫数据是从[TIMER2](http://timer.cistrome.org/)数据库下载的数据。
 
@@ -208,7 +208,7 @@ getInfiltDataOfTCGAsample(expr,idtype = "patient",datatype = "tumor",TIMER2,meth
 
 **datatype**："tumor"或"normal"中的一个，这取决于expr数据的样本类型，默认为"tumor"，有时候我们拿到的expr包含正常样本和肿瘤样本，所以可通过该参数仅匹配肿瘤样本（尽管TIMER2下载的数据包括正常样本，但个人觉得没有太大意义），如果想要正常样本的数据可将该参数设置为"normal"。
 
-### 15. 融合生存数据与特征数据
+## 15. 融合生存数据与特征数据
 
 ```R
 se <- mergeSurExp(expr
@@ -246,7 +246,7 @@ se <- mergeSurExp(expr = STARdata[["tpm"]],
                   TCGA = TRUE)
 ```
 
-### 16.融合表达数据与临床数据
+## 16.融合表达数据与临床数据
 
 mergeClinExp函数与mergeSurExp类似，clinical参数同survival，不过，survivalFrome参数要么为NULL，要么是"UCSC2022"的生存数据（不是表型数据）。其他参数相同。**对于TCGA数据来说，mergeSurExp和mergeClinExp都会过滤掉正常样本**。
 
@@ -262,7 +262,7 @@ mergeClinExp(expr
 )
 ```
 
-### 17.基因在不同临床分期中的表达分析
+## 17.基因在不同临床分期中的表达分析
 
 ```R
 TCGA_Clin_Analysis(data,clin_feature,feature,title="",width = 5,height = 5, save = TRUE,folder = ".")
@@ -276,7 +276,7 @@ title：图片标题。
 
 width,height：图片的宽和高。
 
-### 3.基于组学数据的评分系统
+## 3.基于组学数据的评分系统
 
 scoringSys()函数用于各种算法的评分，目前支持的方法（参数method）有"ssgsea","gsva","zscore","plage"和"CRDscore"，CRDscore方法支持单细胞数据，需要指定study.type = 'scRNAseq'【参考：[PMID: 35436363](https://pubmed.ncbi.nlm.nih.gov/35436363/)】，study.type有两个值， 'scRNAseq'和'bulk_RNAseq'。"CRDscore"方法不适合小基因集的计算，小基因集容易报错："Non-enough-overlapping genes to calculate score"。其他方法，也不建议计算小基因集的评分。
 
@@ -295,7 +295,7 @@ score <- scoringSys(expr,
                     save = TRUE,folder = ".")
 ```
 
-### 4.WGCNA
+## 4.WGCNA
 
 WGCNA.ModulesPhenotype()函数用于一键式执行WGCNA，输入表型与模块相关性热图，表型特征与模块之间的hub gene。
 
@@ -319,7 +319,7 @@ WGCNA.ModulesPhenotype(expr
                        ,folder=".")
 ```
 
-### 4.基于基因集计算评分后执行WGCNA
+## 4.基于基因集计算评分后执行WGCNA
 
 WGCNA.ModulesScoresys()的参数参考WGCNA.ModulesPhenotype()和scoringSys()。
 
@@ -350,7 +350,7 @@ WGCNA.ModulesScoresys(expr = expr
 
 ## 五.预后模型构建相关函数
 
-### 1.特征选择
+## 1.特征选择
 
 featureSelect.baseSur()函数可以基于lasso回归，随机森林以及单因素COX回归进行特征选择。
 
@@ -368,7 +368,7 @@ data是一个数据框，列应该包括生存数据和特征，行为样本。�
 
 ![](https://raw.githubusercontent.com/BioInfoCloud/ImageGo/main/20240526115531.png)
 
-### 2.多因素COX回归模型
+## 2.多因素COX回归模型
 
 MultivariateCOX()函数用于一键式构建多因素COX回归模型。
 

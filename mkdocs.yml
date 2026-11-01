@@ -118,13 +118,13 @@ nav:
       - Markdown:
         - Programming/Markdown/grammars.md
         - Programming/Markdown/markdown.md
-      - python:
-        - Matplotlib_visualization:
+      - Python:
+        - Matplotlib 可视化:
           - Programming/python/Matplotlib_visualization/Matplotlib_visualization.md
         - Programming/python/links.md
         - Programming/python/numpy.md
         - Programming/python/pandas.md
-      - vscode-python:
+      - VSCode 与 Python:
         - Programming/vscode-python/vscode-python.md
     - 生信编程:
       - Linux:
@@ -161,7 +161,7 @@ nav:
         - omics-analysis/transcriptomics/transcriptome-analysis-workflow.md
         - omics-analysis/transcriptomics/transcriptomics-basics.md
       - omics-analysis/RNA-seq-background-knowledge.md
-    - scRNAseq:
+    - 单细胞（scRNA-seq）:
       - BioInfo/scRNAseq/CellChat.md
       - BioInfo/scRNAseq/GSE130001.md
       - BioInfo/scRNAseq/Scissor.md
@@ -170,7 +170,7 @@ nav:
       - BioInfo/scRNAseq/scMetabolism.md
       - BioInfo/scRNAseq/scRNASeq_UP.md
       - BioInfo/scRNAseq/scRNASeq_down.md
-    - RNAseq:
+    - 转录组（RNA-seq）:
       - BioInfo/RNAseq/hisat2.md
   - 数据库与数据挖掘:
     - 数据库挖掘:
@@ -205,19 +205,19 @@ nav:
         - database-mining/case-studies/tumor-prognosis-model.md
       - 芯片数据分析:
         - database-mining/microarray-analysis/microarray-data-analysis.md
-    - TCGA-GEO:
+    - TCGA 与 GEO:
       - BioInfo/TCGA/index.md
-    - database:
+    - 数据库:
       - BioInfo/database/CoMutDB.md
       - BioInfo/database/CysModDB.md
       - BioInfo/database/database.md
       - BioInfo/database/scList.md
-    - drugAna:
+    - 药物分析:
       - BioInfo/drugAna/ADMET.md
       - BioInfo/drugAna/cellminer.md
-    - immune:
+    - 免疫分析:
       - BioInfo/immune/EaSIeR.md
-    - toolsandsoftware:
+    - 工具与软件:
       - BioInfo/toolsandsoftware/tands.md
   - 机器学习与深度学习:
     - 机器学习:
@@ -227,14 +227,14 @@ nav:
     - 深度学习:
       - deep-learning/PyTorch-basics.md
       - deep-learning/PyTorch-environment-setup.md
-    - ML:
+    - 机器学习:
       - ML/01_review.md
       - ML/02_basis.md
-      - LOGISTIC_REGRESSION:
+      - 逻辑回归:
         - ML/LOGISTIC_REGRESSION/LOGISTIC_REGRESSION.md
-      - knn:
+      - kNN:
         - ML/knn/kNN.md
-        - knn_py:
+        - kNN 的 Python 实现:
           - ML/knn/knn_py/knn_py.md
   - 网络药理学:
     - network-pharmacology/PyMOL-tutorial.md
@@ -250,33 +250,33 @@ nav:
     - visualization/mult_volcano.md
     - visualization/visualizationList.md
   - 文献:
-    - AI:
+    - AI 与大模型:
       - Literature/AI/001_AI.md
     - Literature/RNAseq_review1.md
-    - Review:
+    - 文献精读:
       - Literature/Review/001_immunoediting.md
       - Literature/Review/002_DTIS.md
       - Literature/Review/003_2021_immunotherapy.md
       - Literature/Review/004_2021_ICB.md
       - Literature/Review/005_2022_DL_in_TP.md
       - Literature/Review/006_Nano.md
-    - Ubiquitination:
+    - 泛素化:
       - Literature/Ubiquitination/ubiq2020review.md
-    - scRNAseq:
+    - 单细胞文献:
       - Literature/scRNAseq/2023_NC_HNSCC.md
   - 资源:
-    - 资源:
+    - 站点与前端:
       - 前端开发:
         - resources/frontend/build-static-site-with-github-pages.md
         - resources/frontend/frontend-development.md
-    - WeChatOfficialAccount:
+    - 公众号:
       - WeChatOfficialAccount/HOME.md
       - WeChatOfficialAccount/articleIndex.md
-    - Index:
+    - 关于本站:
       - ABOUT/index.md
       - ABOUT/announcement.md
       - ABOUT/studentsGroup.md
-    - package:
+    - R 包文档:
       - package/BulkRNA-Seq.md
       - package/MedBioInfoCloud.md
       - package/TCGA.md

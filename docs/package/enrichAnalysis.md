@@ -1,6 +1,8 @@
-### 富集分析相关函数
+# enrichAnalysis 包：富集分析函数
 
-#### （1）enrichGO富集结果的可视化
+## 富集分析相关函数
+
+### （1）enrichGO富集结果的可视化
 
 GO_KEGG.enrichVisual_barplot函数用于绘制富集分析的柱状图：
 `enrichResult`：一个enrichResult对象，即clusterProfiler::enrichGO的返回结果；
@@ -33,7 +35,7 @@ GO_KEGG.enrichVisual_barplot(enrichResult,
                              width = 10)
 ```
 
-#### （2）exeGO_KEGG()一步完成GO和KEGG富集分析
+### （2）exeGO_KEGG()一步完成GO和KEGG富集分析
 
 | geneset         | a vector of entrez gene id.                                  |
 | --------------- | ------------------------------------------------------------ |
@@ -69,7 +71,7 @@ exeGO_KEGG(geneset,
            width = 10)
 ```
 
-#### （3）GSEA
+### （3）GSEA
 
 preRankedGeneList()用于准备排序的基因数据。data通常是差异表达分析的结果。rangeColName指定值的列名，根据该列从大到小排序，每一个值对应的名称由geneColName指定。返回一个排序好的向量。
 
@@ -77,7 +79,7 @@ preRankedGeneList()用于准备排序的基因数据。data通常是差异表达
 preRankedGeneList(data,geneColName = "symbol",rangeColName = "log2FC")
 ```
 
-##### GSEA.baseMSIGDB
+#### GSEA.baseMSIGDB
 
 基于MSIGDB数据库的背景基因集执行GSEA。data可以是差异表达分析好的结果，也可以是已经排序好的有名称的数值型向量。详细参数介绍查看帮助文档。
 
@@ -116,7 +118,7 @@ collection = "C5",
 subcollection = "GO:CC"
 ```
 
-##### GSEA.baseCustomGeneSet
+#### GSEA.baseCustomGeneSet
 
 如果自定义的背景基因集，使用GSEA.baseCustomGeneSet函数。
 
@@ -127,7 +129,7 @@ GSEA.baseCustomGeneSet (data,
                         rangeColName = NULL)
 ```
 
-##### exe.gseGO_GSEA
+#### exe.gseGO_GSEA
 
 该函数包含可视化结果，参数参考前面的函数。
 
@@ -159,7 +161,7 @@ exe.gseGO_GSEA(data,
                folder = "./")
 ```
 
-##### preVisEnrishResults
+#### preVisEnrishResults
 
 obj是富集分析的数据对象enrichResult。通常是clusterProfiler::enrichGO的返回结果。type是"GO"或"KEGG"种的一种。
 
@@ -167,7 +169,7 @@ obj是富集分析的数据对象enrichResult。通常是clusterProfiler::enrich
 preVisEnrishResults(obj,type,nTerm = 6,p.adjust = 0.05)
 ```
 
-##### enrichCirBarchar()
+#### enrichCirBarchar()
 
 Data frame with columns: group, term, count (output from preVisEnrishResults)。
 

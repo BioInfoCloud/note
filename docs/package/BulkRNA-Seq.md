@@ -1,6 +1,6 @@
-## Bulk RNA-Seq基础分析
+# Bulk RNA-Seq基础分析
 
-### 差异表达分析
+## 差异表达分析
 
 data为表达数据，行为基因名称，列为样本名称，group是一个数据框，只有一列为group的值，其值是二分类的字符串标签（如：Tumor，Normal），行名为样本名称，其顺序与data的列名一致。comparison是一个由group中的二分类标签值用-链接，如"Tumor-Normal"，表示Tumor组与Normal进行差异表达分析。method是DESeq2, edgeR和 limma中的一种，RNAseq数据建议使用DESeq2或edgeR，芯片数据使用limma。filter是否过滤低表达的基因，默认为FALSE。**注意：该函数值适合count数据**。
 
@@ -32,7 +32,7 @@ selectDEG(DEAR, cutFC = 1, pMethod = "FDR", cutP = 0.05)
 - `pMethod`：为字符类型，用于指定筛选差异基因时采用的统计检验指标，仅允许传入 "FDR"（错误发现率）、"pAdj"（校正后 P 值）或 "pValue"（原始 P 值）三者之一，默认值为 "FDR"，决定后续显著性判断的依据列；
 - `cutP`：为数值类型，用于设定统计显著性的筛选阈值，默认值为 0.05，实际筛选时会以 “`pMethod 指定列的值 < cutP`” 作为判断基因表达差异是否具有统计显著性的条件。
 
-### 2. 火山图可视化
+## 2. 火山图可视化
 
 plotDEGvolcanoFig函数用于差异表达分析的火山图可视化，该函数在进行绘制前，差异分析需要进行一些处理。
 

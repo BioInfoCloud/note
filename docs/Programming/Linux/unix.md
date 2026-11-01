@@ -1,8 +1,8 @@
 ---
-title: Unix and Linux
+title: Unix 与 Linux
 ---
 
-# Unix and Linux
+# Unix 与 Linux
 
 The design of Unix systems is based on “Unix Philosophy”
 

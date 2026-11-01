@@ -1,8 +1,8 @@
 ---
-title: scMetabolism
+title: scMetabolism：单细胞代谢活性量化
 ---
 
-# scMetabolism
+# scMetabolism：单细胞代谢活性量化
 
 参考：[GitHub - wu-yc/scMetabolism: Quantifying metabolism activity at the single-cell resolution](https://github.com/wu-yc/scMetabolism)
 

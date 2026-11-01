@@ -1,3 +1,5 @@
+# 单细胞分析常用数据库与工具清单
+
 ## 1. GEO
 
 - **数据库网址**：https://www.ncbi.nlm.nih.gov/geo/
@@ -273,44 +275,44 @@
 
 ------
 
-# 植物相关单细胞数据库
+## 植物相关单细胞数据库
 
-## 39. PCMDB
+### 39. PCMDB
 
 - **数据库网址**：https://www.tobaccodb.org/pcmdb/homePage
 - **数据库简介**：即 Plant Cell Marker Data Base（植物细胞 marker 数据库），收录拟南芥、水稻、玉米、大豆、番茄和烟草六种常见模式植物的 81,117 个人工精选细胞标记基因（含 3,119 个实验标记基因），涉及 22 种组织中的 263 种细胞类型。
 
 ------
 
-## 40. PlantPhoneDB
+### 40. PlantPhoneDB
 
 - **数据库网址**：https://jasonxu.shinyapps.io/PlantPhoneDB/
 - **数据库简介**：手工整理的植物细胞通讯配受体数据库，收录拟南芥、水稻、番茄、玉米和杨树五个物种的大量高可信度配受体对数据；可在 web 页面搜索指定配体或受体信息、浏览已有 scRNA-seq 数据集分析结果，也可下载全部配体对信息。
 
 ------
 
-## 41. scPlantDB
+### 41. scPlantDB
 
 - **数据库网址**：https://biobigdata.nju.edu.cn/scplantdb/home
 - **数据库简介**：植物细胞图谱和标记的综合数据库，收录 17 个植物物种的 67 个高质量数据集的单细胞转录组数据。
 
 ------
 
-## 42. Plant Single Cell Hub
+### 42. Plant Single Cell Hub
 
 - **数据库网址**：http://jinlab.hzau.edu.cn/PsctH/
 - **数据库简介**：由华中农业大学棉花遗传改良团队开发的植物单细胞综合数据库，旨在提供全面准确的不同植物不同组织各种细胞类型的细胞标记资源和分析流程。
 
 ------
 
-## 43. PlantscRNAdb
+### 43. PlantscRNAdb
 
 - **数据库网址**：http://ibi.zju.edu.cn/plantscrnadb/index.php
 - **数据库简介**：植物单细胞 RNA 分析数据库，新版 3.0 收录拟南芥、水稻、番茄、玉米、草莓、杨树、烟草、白菜、木薯、大豆、苜蓿等 15 种植物，包含 114770 个 Marker 基因。
 
 ------
 
-## 44. SpatialDB
+### 44. SpatialDB
 
 - **数据库网址**：https://www.spatialomics.org/SpatialDB/
 - **数据库简介**：专门整理已发表论文中空间转录组数据的公共数据库，目前包含 8 种空间转录组技术生成的 24 个数据集，数据涵盖人、小鼠、果蝇、线虫和斑马鱼组织，也包含植物相关空间转录组数据。

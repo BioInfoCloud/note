@@ -27,14 +27,14 @@ GST（谷胱甘肽巯基转移酶） ， 它的特性， 第一是能够把融�
 [http://pages.genemania.org/](http://pages.genemania.org/)
 
 ## 四.GeneMANIA分析蛋白质互作
-## 1 在线使用
+### 1 在线使用
 
 > 直接选择物种，输入基因列表即可
 >
 
 ![1564111543578-5b4d6ad3-1a1b-43c4-a3ae-4d1c0f4a527a.png](./img/protein-protein-interaction-analysis/1564111543578-5b4d6ad3-1a1b-43c4-a3ae-4d1c0f4a527a-455219.png)
 
-## 2 Cytoscope中使用GeneMANIA插件
+### 2 Cytoscope中使用GeneMANIA插件
 #### 2.1 安装插件
 
 安装java -> 安装Cytoscope -> 安装GeneMANIA插件（在线安装），也可以从jar文件手动安装
@@ -59,7 +59,7 @@ Apps -> GeneMANIA -> Local Search ...
 
 ![1564119822060-cc1f77e9-2505-483c-84d4-00c9a7e9c62a.png](./img/protein-protein-interaction-analysis/1564119822060-cc1f77e9-2505-483c-84d4-00c9a7e9c62a-051415.png)
 
-## 3 [命令行模式](http://pages.genemania.org/command-line-tools/)
+### 3 [命令行模式](http://pages.genemania.org/command-line-tools/)
 #### 3.1 脚本下载：[http://apps.cytoscape.org/media/genemania/releases/](http://apps.cytoscape.org/media/genemania/releases/)
 
 ![1564111133975-718db739-9b98-49de-a8c3-6f7e6e563b4c.png](./img/protein-protein-interaction-analysis/1564111133975-718db739-9b98-49de-a8c3-6f7e6e563b4c-845785.png)
