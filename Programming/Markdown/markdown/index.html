@@ -5065,7 +5065,7 @@ even if you don't know where it will take you.</p>
 <p>本质上来说，你获取一张网络上的图片，是在服务器（24h不关机的电脑）的文件系统里面获取了这张图片。但为了能保证一张图有一个唯一的标志，一般一张图都会有一个自己的链接。</p>
 <p>打开带图片的网站，右键图片，就可以看到<code>复制图片链接</code>的按钮从而获取图片的链接。</p>
 <p>这里的<code>图片链接</code>也可以是刚刚的相对路径，比如：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>![Markdown图标](./media/markdown_icon.png)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>
 </code></pre></div>
 <p>但这样，你就需要在和你现在写的<code>markdown</code>的同一目录下，放一个<code>media</code>文件夹，里面有这张<code>markdown_icon.png</code>的图片。</p>
 <p>有的时候，图片和代码相比起来，是个庞然大物（<code>1KB</code> vs <code>1MB</code>），这时我们不希望将图片加入到项目中（指不希望项目的体积很大，别人从<code>GitHub</code>上下载项目时花的时间过久），可是在项目说明中还需要加入图片进行说明，这时怎么办呢？最简单的，将图片压缩一下（<code>1MB-&gt;100KB</code>）扔进项目文件夹，这是最省心的…但要是图比较多，一般来说，我们会选择某些厂商的对象存储服务，将这些图片资源放到比如阿里云的服务器上，然后这个服务把图片的网络链接给你，你就可以在<code>markdown</code>中使用这个链接了。如果没有那么正式，那么这种服务叫做图床。比如我一直在用的<a href="https://www.superbed.cn">聚合图床</a>，你把图片丢进去，它帮你将图片转为一个链接。但是使用这种服务也有需要注意的地方，如果运营图床的工作室哪天跑路了，你放进去的图片可能就没了。</p>
