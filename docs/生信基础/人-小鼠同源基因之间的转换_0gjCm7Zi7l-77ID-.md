@@ -89,10 +89,10 @@ hsa2mus_protein[duplicated(hsa2mus_protein$HGNC.symbol),] %>% head()
 
 ![1631086807599-0101549c-351e-47eb-b7a4-ff35cf9b0fcd.png](./img/0gjCm7Zi7l-77ID-/1631086807599-0101549c-351e-47eb-b7a4-ff35cf9b0fcd-706997.png)
 
-<font style="color:rgb(0, 0, 0);">可以根据前面的得到的对应关系，进行下游的分析。比如GSEA分析。在MSigDB（Molecular Signatures Database）数据库的全部基因集的下载。</font>
+可以根据前面的得到的对应关系，进行下游的分析。比如GSEA分析。在MSigDB（Molecular Signatures Database）数据库的全部基因集的下载。
 
-+ <font style="color:rgb(1, 1, 1);">http://bioinf.wehi.edu.au/software/MSigDB/human_H_v5p2.rdata</font>
-+ <font style="color:rgb(1, 1, 1);">http://bioinf.wehi.edu.au/software/MSigDB/mouse_H_v5p2.rdata</font>
++ http://bioinf.wehi.edu.au/software/MSigDB/human_H_v5p2.rdata
++ http://bioinf.wehi.edu.au/software/MSigDB/mouse_H_v5p2.rdata
 
 加载这些数据集。将ID进行转换。
 
@@ -154,7 +154,5 @@ head(hsa2mus_diff)
 6     SLCO1A2    Slco1a1
 ```
 
-
-
-> 更新: 2021-09-08 15:46:28  
+> 更新: 2021-09-08 15:46:28
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/dy5rh4>

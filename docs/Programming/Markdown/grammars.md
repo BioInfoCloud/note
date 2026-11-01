@@ -208,10 +208,10 @@ markdown文本内的连续两个或多个回车会被替换为一个回车
 ### 设置字体/颜色
 
 ```
-<font face="宋体" color=blue size=5>蓝色的字～</font>
+蓝色的字～
 ```
 
-<font face="宋体" color=blue size=5>蓝色的字～</font>
+蓝色的字～
 
 #### 常用颜色
 
@@ -225,18 +225,18 @@ markdown文本内的连续两个或多个回车会被替换为一个回车
 
 最常用|其他
 -|-
-<font color=red>red</font>|<font color=greenyellow>greenyellow</font>
-<font color=orange>orange</font>|<font color=lightgreen>lightgreen</font>
-<font color=yellow>yellow</font>|<font color=lightblue>lightblue</font>
-<font color=green>green</font>|<font color=pink>pink</font>
-<font color=aqua>aqua</font>|<font color=gold>gold</font>
-<font color=blue>blue</font>|<font color=silver>silver</font>
-<font color=purple>purple</font>|<font color=brown>brown</font>
-||<font color=wheat>wheat</font>|
-||<font color=linen>linen</font>|
-||<font color=snow>snow</font>|
-||<font color=gray>gray</font>|
-||<font color=black>black</font>|
+red|greenyellow
+orange|lightgreen
+yellow|lightblue
+green|pink
+aqua|gold
+blue|silver
+purple|brown
+||wheat|
+||linen|
+||snow|
+||gray|
+||black|
 
 ### 锚点
 

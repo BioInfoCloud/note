@@ -5,17 +5,25 @@
 A survey of best practices for RNA-seq data analysis
 
 ### 摘要：
+
 **没有任何一个**RNA-seq分析流程可适用于所有的转录组分析。讨论RNA-seq分析流程主要步骤：实验设计，质控，比对，基因水平和转录组水平定量，可视化，基因差异表达，可变剪接，功能分析，融合基因检测，eQTL (expression quantification trait loci,表达数量性状位点)。展望转录组研究存在的问题。
 
 ### 背景：
+
 **研究材料基因组信息已知**，通过将RNA-seq获得的序列比对到基因组上获得转录信息；**研究材料无基因组信息**则从头拼接reads为contigs后将reads比对到转录组。**基因组注释已知**，基于注释基因组进行转录组分析或发挖掘新的转录组及其调控通路。其次研究者可以对感兴趣的mRNA亚型表达或microRNA水平或等位变异分析。在此分析过程中可以只进行RNA-seq分析也可以联合其他组学一起分析。
 
 不同的RNA-seq分析有不同的转录组定量，均一化以及差异表达分析，并且质控可确保结果的可重复性和可靠性。**图一**为Illumina sequencing实验设计、分析流程图。简单罗列一些数据及图例来说明这些分析中潜在的不足。最后讨论single cell RNA-seq（单细胞转录组）及测序长度比较（3代测序和2代测序）。
 
 ### 实验设计：
+
 文库类型、测序深度、重复，准确的实验操作以确保数据未被污染。
 
-首先：RNA提取中去除大量存在的rRNA， 通常占总RNA的90%，mRNA为1-2%。提取mRNA可选择用ployA选择性富集mRNA或删除rRNA。ployA通过RNA intergrity number （RIN，RNA完整度）来表示mRNA的比例，对于不能产生高质量和足够数量的材料则用删除rRNA法来获得mRNA（例如细菌mRNA无多聚A）。另一个问题是：是否产生strand-preserving libraries， strand-specific protocols 如dUTP法，通过在第二条cDNA合成时加入UTP，先于接头连接随后含有dUTP的链被降解。测序长度小于500bp，分单端测序（single end，SE）和双端测序（paired-end，PE）。读长较长的序列及双端序列更有利于注释信息较差的转录组分析。
+首先：RNA提取中去除大量存在的rRNA， 通常占总RNA的90%，mRNA为1-2%。
+提取mRNA可选择用ployA选择性富集mRNA或删除rRNA。
+ployA通过RNA intergrity number （RIN，RNA完整度）来表示mRNA的比例，对于不能产生高质量和足够数量的材料则用删除rRNA法来获得mRNA（例如细菌mRNA无多聚A）。
+另一个问题是：是否产生strand-preserving libraries， strand-specific protocols 如dUTP法，通过在第二条cDNA合成时加入UTP，先于接头连接随后含有dUTP的链被降解。
+测序长度小于500bp，分单端测序（single end，SE）和双端测序（paired-end，PE）。
+读长较长的序列及双端序列更有利于注释信息较差的转录组分析。
 
 其次：测序深度及文库大小。测序较深的到的转录组信息及转录本数量更加详细，但不是越深越好。5百万条比对序列对中岛高表达基因的量化分析足够，100万条序列足以分析低表达基因分析，单细胞转录组通常为1百万，高表达基因测序5万，脾组织只需2万。文库大小取决于目标转录组的复杂程度，测序深度有利于转录本的数量和鉴定，但同时增加了杂质信息和脱靶转录本。饱和曲线可以用来评估给定测序深度下转录组的覆盖度。
 
@@ -28,6 +36,7 @@ RNA-seq文库准备和测序过程中包扩：RNA大段，cDNA合成，接头，
 ![1612928520640-1244bf5f-1c89-4a71-86dc-58adb6d902e7.png](./img/JWtz9dk82uzSeyMp/1612928520640-1244bf5f-1c89-4a71-86dc-58adb6d902e7-070350.png)
 
 ### RNA-seq数据分析
+
 数据分析的主要步骤：指控，比对（有参考基因组及无参考基因组），获得基因及转录本表达矩阵，基因差异分析。也讨论可变剪接，转录本融合，小RNA表达，可视化工具。
 
 **1. 质控检测**
@@ -82,7 +91,14 @@ _**2.2 从头合成转录本重建**_
 
 **3. 转录本定量**
 
-RNA-seq分析核心为基因和转录本的定量分析，基于比对到转录本上的数量。最简单的定量方法是用HTSeq-count或featureCounts累积原始数量。基因水平定量使用GTF（genome transfer format ）文件，包含外显子和基因，通常丢弃很多序列。原始序列数量不能用于比较样本间的表达水平由于收到转录本厂素，总测序数以及测序偏好性的影响。RPKM是样本内均一化方法，用于去除长度和样本大小的影响（RPKM：reads per kilobases of exon model per millions reads）,FPKM(fragments per kilobase of exon model per million mapped read)与RPKs和TPM（transcripts per million）类似，都用于样本内归一化，FPKM可以与TPM相互转化。样本内和样本间的区分导致在文章中较为混乱。相同基因在样本之间的表达量比较时其长度不需要矫正，但同一个样本内对基因表达排序时时必须的由于较长的序列回累积更多的reads。样本之间Cufflinks得到基因长度显著不同不同忽略。
+RNA-seq分析核心为基因和转录本的定量分析，基于比对到转录本上的数量。
+最简单的定量方法是用HTSeq-count或featureCounts累积原始数量。
+基因水平定量使用GTF（genome transfer format ）文件，包含外显子和基因，通常丢弃很多序列。
+原始序列数量不能用于比较样本间的表达水平由于收到转录本厂素，总测序数以及测序偏好性的影响。
+RPKM是样本内均一化方法，用于去除长度和样本大小的影响（RPKM：reads per kilobases of exon model per millions reads）,FPKM(fragments per kilobase of exon model per million mapped read)与RPKs和TPM（transcripts per million）类似，都用于样本内归一化，FPKM可以与TPM相互转化。
+样本内和样本间的区分导致在文章中较为混乱。
+相同基因在样本之间的表达量比较时其长度不需要矫正，但同一个样本内对基因表达排序时时必须的由于较长的序列回累积更多的reads。
+样本之间Cufflinks得到基因长度显著不同不同忽略。
 
 转录水平表达计算基于相同的转录本共有多数序列来进行计算。TopHat用最大期望值来对转录本的丰富度进行计算。Cufflinks使用GTF信息来发现转录本或只从比对序列提供从头合成的转录本。从转录本比对量化表达包括SEM (RNA-Seqby Expectation Maximization)，eXpress，Sailfish，kallisto。转录本中容许多比对reads以及将序列偏好性矫正后样本内均一化值输出。RSEM使用最大期望值并返回TPM值。NURD为SE reads提供转录组表达评估，占内存低。
 
@@ -123,6 +139,7 @@ sRNA通常包含18-34碱基，有miRNA, siRNA（小干扰RNA），PIWI-交互RNA
 功能分析需要对研究的材料有可用及丰富的功能注释。Gene Ontology，Bioconductor，DAVID或Babelomics包含多数模式物种的注释数据。从头组装所得到的新转录本缺乏注释信息，编码蛋白注释可以基于序列相似性用旁系同源功能注释（SwissProt），以及保守蛋白结构域用Pfam和InterPro。一般有50-80%的转录本可以被注释。缺少编码蛋白的转录本为长非编码RNA（long non-coding RNA）,相似性注释可用于短非编码RNA，而对于长非编码RNA还没有相应的注释。
 
 ### 与其他数据类型相结合
+
 **1. 与DNA测序结合**
 
 RNA与DNA测序相结合可用来发现单碱基多态性（single nucleotide polymorphism, SNP）RNA-编辑，表达数量性状位点（expression quantitative trait loci，eQTL）。经典的eQTL研究中，同一类型的组织基因型和转录组测序数量大于50，然后检测基因型和表达水平的关系，用来解释复杂性状基因偏好性。大量的eQTL研究表明基因变异影响多数基因的表达
@@ -150,6 +167,7 @@ RNA-seq与转录元件（transcription factor，TF）染色质免疫沉降测序
 蛋白–蛋白, DNA–蛋白, miRNA–mRNA 互作网络来发现miRNA–基因调控模型。
 
 ### 展望
+
 目前转录组分析主要方面：少量的供试材料和长序列中更好的发现转录本
 
 **1. 单细胞转录组（single-cell RNA-seq）**
@@ -172,9 +190,5 @@ scRNA-seq比对在转录组参考基因组上不能发现新的基因，若研�
 
 来源：[https://www.jianshu.com/p/2055db183907](https://www.jianshu.com/p/2055db183907)
 
-
-
-
-
-> 更新: 2021-02-10 11:42:59  
+> 更新: 2021-02-10 11:42:59
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/rawux9>

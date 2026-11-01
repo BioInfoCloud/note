@@ -6,8 +6,6 @@
 
 备用地址：[https://bioinfocloud.github.io/note/](https://bioinfocloud.github.io/note/)
 
-
-
 ## 1. Matplotlib介绍
 
 Matplotlib是Python下的2D绘图库，也是最著名的Python绘图库，是Python中最常用的绘图库之一，可以用于创建静态、动态、交互式的图表。虽然Matlpotlib的代码库很庞大，但是可以通过简单的概念框架和重要的知识来理解掌握。Matplotlib图像可以分为如下4层结构。
@@ -19,9 +17,6 @@ Matplotlib是Python下的2D绘图库，也是最著名的Python绘图库，是Py
 
 为了方便快速绘图，Matplotlib通过pyplot模块提供了一套与Matlab类似的命令API，这些API对应图形的一个个图形元素（如坐标轴、曲线、文字等），并以此对该图形元素进行操作，而不影响其他部分。创建好画布后，只需调用pyplot模块所提供的函数，仅几行代码就可以实现添加、修改图形元素或在原有图形上绘制新图形。
 
-
-
-
 ```python
 import numpy as np
 import pandas as pd
@@ -29,7 +24,6 @@ import matplotlib.pyplot as plt ## 导入后就有了画板
 ```
 
 查看自己电脑上带的字体
-
 
 ```python
 from matplotlib.font_manager import FontManager
@@ -54,15 +48,12 @@ my_fonts = set(f.name for f in fm.ttflist)
     edgecolor：字符串，表示图形的边框颜色。可以是颜色名称的字符串，如"black"等，也可以是RGB元组，如(0, 0, 0)。默认值为"black"。
     frameon:是否显示边框。
 
-
 ```python
 # 创建了一个编号为1、大小为8x6英寸、分辨率为80像素/英寸、背景颜色为白色、边框颜色为黑色、边框线宽为0的空白图形
 fig = plt.figure(figsize=(8, 6), dpi=80)
 ```
 
-
     <Figure size 640x480 with 0 Axes>
-
 
 ### 2.2 添加子图
 
@@ -87,24 +78,19 @@ add_subplot()网格有两种定义方式：
 
 ![](https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202308211348980.png)
 
-
-
-
 ```python
-import matplotlib.pyplot as plt  
-  
-fig = plt.figure()  
-ax1 = fig.add_subplot(221)  # 创建一个2行2列的图形，并添加第一个子图  
-ax2 = fig.add_subplot(2, 2, 2)  # 创建第二个子图  
-ax3 = fig.add_subplot(2, 2, 3)  # 创建第三个子图  
+import matplotlib.pyplot as plt
+
+fig = plt.figure()
+ax1 = fig.add_subplot(221)  # 创建一个2行2列的图形，并添加第一个子图
+ax2 = fig.add_subplot(2, 2, 2)  # 创建第二个子图
+ax3 = fig.add_subplot(2, 2, 3)  # 创建第三个子图
 ax4 = fig.add_subplot(224)  # 创建第四个子图
 ```
 
-
-​    
+​
 ![png](output_7_0.png)
-​    
-
+​
 
 ### 2.3 plt.subplot函数创建坐标系
 
@@ -119,25 +105,18 @@ plt.subplot函数是Matplotlib库中用于创建子图的函数之一，它可�
     index：表示要创建的子图的索引号，从1开始。
     **kwargs：表示可选的关键字参数，例如projection、aspect等。
 
-
-
-
-
 ```python
-import matplotlib.pyplot as plt  
-  
-# 创建一个空图形  
-fig = plt.figure()  
-# 在图形上创建一个2行1列的子图，并返回该子图的轴坐标系对象  
-ax1 = plt.subplot(2, 1, 1)  
+import matplotlib.pyplot as plt
+
+# 创建一个空图形
+fig = plt.figure()
+# 在图形上创建一个2行1列的子图，并返回该子图的轴坐标系对象
+ax1 = plt.subplot(2, 1, 1)
 ```
 
-
-​    
+​
 ![png](output_9_0.png)
-​    
-
-
+​
 
 ```python
 x = list(range(6))
@@ -150,11 +129,9 @@ plt.show()
 
 ```
 
-
-​    
+​
 ![png](output_10_0.png)
-​    
-
+​
 
 ### 2.4 plt.subplots()函数创建坐标系
 
@@ -166,9 +143,6 @@ plt.subplots()函数是Matplotlib库中用于创建图形和坐标系的便捷�
 
     nrows：表示要创建的子图的行数。
     ncols：表示要创建的子图的列数。
-
-
-
 
 ```python
 x = list(range(6))
@@ -183,11 +157,9 @@ ax[1,1].plot(x,y)
 plt.show()
 ```
 
-
-​    
+​
 ![png](output_12_0.png)
-​    
-
+​
 
 ### 2.5 plt.subplot2grid函数建立坐标系
 
@@ -205,9 +177,7 @@ plt.subplot2grid函数是Matplotlib库中用于创建子图的函数之一，它
     rowspan：表示子图跨越的行数，默认为0，表示不跨越。
     fig：表示要在哪个图形上创建子图，默认为当前图形。
 
-
-​    
-
+​
 
 ```python
 import matplotlib.pyplot as plt
@@ -227,11 +197,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-
-​    
+​
 ![png](output_14_0.png)
-​    
-
+​
 
 plt.subplots()与plt.subplot()plt.subplot2grid()的不同之处在于plt.subplot()plt.subplot2grid()每次只返回一个坐标系。plt.subplots()每次可以返回多个左边系。
 
@@ -249,7 +217,6 @@ plt.ylabel(label, fontsize=None, **kwargs)：
 
     设置y轴的标签。同样，label是标签的文本字符串，fontsize是标签字体大小，**kwargs是可选的其他参数。
 
-
 ```python
 month = list(range(1,13))
 income = np.random.randint(5000, 10000, 12)
@@ -260,18 +227,11 @@ plt.xlabel("Month",fontsize = 20,color = "blue")
 plt.ylabel("Income",fontsize = 10,color = "red")
 ```
 
-
-
-
     Text(0, 0.5, 'Income')
 
-
-
-
-​    
+​
 ![png](output_18_1.png)
-​    
-
+​
 
 颜色标签
 
@@ -280,8 +240,6 @@ plt.ylabel("Income",fontsize = 10,color = "red")
 ### 3.2 设置坐标轴刻度值
 
 在matplotlib中，可以使用xticks()和yticks()函数来设置坐标轴的刻度值。
-
-
 
 ```python
 month = list(range(1,13))
@@ -295,79 +253,68 @@ plt.xticks(month,["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","N
 plt.show()
 ```
 
-
-​    
+​
 ![png](output_21_0.png)
-​    
-
+​
 
 ### 3.3 设置坐标轴刻度值范围
 
 在matplotlib中，可以使用xlim()和ylim()函数来设置坐标轴的刻度值范围。
 
-
-
 ```python
-import matplotlib.pyplot as plt  
-import numpy as np  
-  
-# 创建数据  
-x = np.linspace(0, 10, 100)  
-y = np.sin(x)  
-  
-# 绘制图形  
-plt.plot(x, y) 
+import matplotlib.pyplot as plt
+import numpy as np
 
-# 设置x轴和y轴的刻度范围  
-plt.xlim([0, 12])  
-plt.ylim([-1.5, 1.5])  
-  
-# 显示图形  
+# 创建数据
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+# 绘制图形
+plt.plot(x, y)
+
+# 设置x轴和y轴的刻度范围
+plt.xlim([0, 12])
+plt.ylim([-1.5, 1.5])
+
+# 显示图形
 plt.show()
 ```
 
-
-​    
+​
 ![png](output_23_0.png)
-​    
-
+​
 
 ## 4. 设置网格线
 
 在matplotlib中，可以使用grid函数来控制是否显示网格线。grid函数的参数'b'表示是否打开网格线，'b'为True或False，默认False。新版本的参数b已经被替换为visible。既然是线，那么可以设置线型、线宽、颜色和透明度等。还有一个'which'参数，为'major'或'both'或'minor_major'或'minor'，表示打开哪些类型的网格线。
 
-
-
 ```python
-# 创建数据  
-x = np.linspace(0, 10, 100)  
-y = np.sin(x)  
-  
-# 绘制图形  
-plt.plot(x, y) 
+# 创建数据
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
 
-# 设置x轴和y轴的刻度范围  
-plt.xlim([0, 12])  
-plt.ylim([-1.5, 1.5]) 
+# 绘制图形
+plt.plot(x, y)
+
+# 设置x轴和y轴的刻度范围
+plt.xlim([0, 12])
+plt.ylim([-1.5, 1.5])
 
 plt.grid(visible = True,linestyle = 'dashed',which='major',
          linewidth = 1,color = 'purple',alpha = 0.5)
-# 显示图形  
+# 显示图形
 plt.show()
 ```
 
-
-​    
+​
 ![png](output_25_0.png)
-​    
-
+​
 
 ## 5. 设置图例
 
 在matplotlib中，可以使用legend函数来设置图例。legend函数接受多个参数，用于定义图例的显示方式和位置等。
 
 ![](https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202308211936789.png)![](https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202308211937903.png)![](https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202308211937348.png)
-
 
 (1)使用loc参数
 
@@ -390,11 +337,10 @@ plt.show()
 (3)设置图例边框及背景
 
     plt.legend(loc='best',frameon=False) #去掉图例边框
-    
-    plt.legend(loc='best',edgecolor='blue') #设置图例边框颜色
-    
-    plt.legend(loc='best',facecolor='blue') #设置图例背景颜色,若无边框,参数无效
 
+    plt.legend(loc='best',edgecolor='blue') #设置图例边框颜色
+
+    plt.legend(loc='best',facecolor='blue') #设置图例背景颜色,若无边框,参数无效
 
 (4)设置图例标题
 
@@ -429,38 +375,33 @@ plt.show()
 主要是bbox_to_anchor的使用
 
     box = ax1.get_position()
-    
+
     ax1.set_position([box.x0, box.y0, box.width , box.height* 0.8])
-    
+
     ax1.legend(loc='center', bbox_to_anchor=(0.5, 1.2),ncol=3)
 
-
-
 ```python
-import matplotlib.pyplot as plt  
-  
-# 创建数据  
-x = [1, 2, 3, 4, 5]  
-y1 = [2, 4, 6, 8, 10]  
-y2 = [1, 3, 5, 7, 9]  
-  
-# 绘制图形  
-plt.plot(x, y1, label='y1')  
-plt.plot(x, y2, label='y2')  
-  
-# 设置图例  
-plt.legend(loc='upper left')  
-  
-# 显示图形  
+import matplotlib.pyplot as plt
+
+# 创建数据
+x = [1, 2, 3, 4, 5]
+y1 = [2, 4, 6, 8, 10]
+y2 = [1, 3, 5, 7, 9]
+
+# 绘制图形
+plt.plot(x, y1, label='y1')
+plt.plot(x, y2, label='y2')
+
+# 设置图例
+plt.legend(loc='upper left')
+
+# 显示图形
 plt.show()
 ```
 
-
-​    
+​
 ![png](output_28_0.png)
-​    
-
-
+​
 
 ```python
 import matplotlib.pyplot as plt
@@ -469,31 +410,24 @@ x = np.random.uniform(-1, 1, 4)
 y = np.random.uniform(-1, 1, 4)
 p1, = plt.plot([1,2,3])
 p2, = plt.plot([3,2,1])
-l1 = plt.legend([p2, p1], ["line 2", "line 1"], 
+l1 = plt.legend([p2, p1], ["line 2", "line 1"],
                 loc='upper left')
 p3 = plt.scatter(x[0:2], y[0:2],
                  marker = 'D', color='r')
-p4 = plt.scatter(x[2:], y[2:], 
+p4 = plt.scatter(x[2:], y[2:],
                  marker = 'D', color='g')
 # This removes l1 from the axes.
-plt.legend([p3, p4], ['label', 'label1'], 
+plt.legend([p3, p4], ['label', 'label1'],
            loc='lower right', scatterpoints=1)
 # Add l1 as a separate artist to the axes
 plt.gca().add_artist(l1)
 ```
 
-
-
-
     <matplotlib.legend.Legend at 0x2783f33f220>
 
-
-
-
-​    
+​
 ![png](output_29_1.png)
-​    
-
+​
 
 ## 6. 设置图表标题
 
@@ -502,7 +436,6 @@ plt.gca().add_artist(l1)
 plt.title()函数还支持一些可选的参数来自定义标题的样式。例如，可以设置标题的字体大小、字体样式、颜色等属性。
 
 以下是一个简单的示例：
-
 
 ```python
 month = list(range(1,13))
@@ -513,16 +446,14 @@ fig = plt.plot(month,income)
 plt.xlabel("Month",fontsize = 15,color = "blue")
 plt.ylabel("Income",fontsize = 15,color = "red")
 
-plt.title("Monthly income in 2023",fontsize=16, 
+plt.title("Monthly income in 2023",fontsize=16,
           fontweight='bold', color='red')
 plt.show()
 ```
 
-
-​    
+​
 ![png](output_31_0.png)
-​    
-
+​
 
 ## 7. 设置数据标签
 
@@ -537,9 +468,6 @@ plt.show()
     fontsize：文本的字体大小。
     bbox：文本标签的边框样式。
 
-
-
-
 ```python
 month = list(range(1,13))
 income = np.random.randint(5000, 10000, 12)
@@ -549,25 +477,21 @@ fig = plt.plot(month,income)
 plt.xlabel("Month",fontsize = 15,color = "blue")
 plt.ylabel("Income",fontsize = 15,color = "red")
 
-plt.title("Monthly income in 2023",fontsize=16, 
+plt.title("Monthly income in 2023",fontsize=16,
           fontweight='bold', color='red')
-# 添加数据标签  
-plt.text(2, income[1], 'Data label', fontsize=14)  
-  
-# 显示图形  
+# 添加数据标签
+plt.text(2, income[1], 'Data label', fontsize=14)
+
+# 显示图形
 plt.show()
 ```
 
-
-​    
+​
 ![png](output_33_0.png)
-​    
-
+​
 
 plt.text()函数只针对坐标轴的具体某一点（x，y），显示字符串s，如果要对整个图表显示数据标签，可以用for循环遍历
 
-
-
 ```python
 month = list(range(1,13))
 income = np.random.randint(5000, 10000, 12)
@@ -577,21 +501,19 @@ fig = plt.plot(month,income)
 plt.xlabel("Month",fontsize = 15,color = "blue")
 plt.ylabel("Income",fontsize = 15,color = "red")
 
-plt.title("Monthly income in 2023",fontsize=16, 
+plt.title("Monthly income in 2023",fontsize=16,
           fontweight='bold', color='red')
-# 添加数据标签  
+# 添加数据标签
 for i, j  in zip(month,income):
-    plt.text(i,j, j, fontsize=14)  
-  
-# 显示图形  
+    plt.text(i,j, j, fontsize=14)
+
+# 显示图形
 plt.show()
 ```
 
-
-​    
+​
 ![png](output_35_0.png)
-​    
-
+​
 
 ## 8. 设置数据表
 
@@ -612,7 +534,6 @@ plt.table()函数是matplotlib库中的一个方法，用于在图形中添加�
     loc: 单元格相对于子图的位置
     bbox:绘制表格的边界框
 
-
 ```python
 month = list(range(1,13))
 income_Li = np.random.randint(5000, 10000, 12)
@@ -623,51 +544,43 @@ fig2 = plt.plot(month,income_Mi,label= 'Mi')
 
 plt.ylabel("Income",fontsize = 15,color = "red")
 
-plt.title("Monthly income in 2023",fontsize=16, 
+plt.title("Monthly income in 2023",fontsize=16,
           fontweight='bold', color='red')
 
-plt.legend(loc='upper left')  
+plt.legend(loc='upper left')
 
 row = ["Li","Mi"]
-col = month 
+col = month
 data = [income_Li,income_Mi]
 plt.table(cellText = data,rowLabels = row,colLabels= col,loc = 'bottom')
 plt.xticks([])
-  
-# 显示图形  
+
+# 显示图形
 plt.show()
 ```
 
-
-​    
+​
 ![png](output_37_0.png)
-​    
-
+​
 
 ## 9. 绘图风格
 
 Matplotlib中，pyplot的style子模块里面定义了很多预设风格，方便进行风格转换。每一个预设的风格都储存在一个以.mplstyle为后缀的style文件中。读者可以在stylelib文件夹中查看，如下图所示。
 ![](https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202308212107502.png)
 
-
 使用这些预设风格非常简单，只需要调用相应的style函数即可。例如，要使用"dark_background"风格，只需在脚本中添加以下代码：
 
-
 ```python
-import matplotlib.pyplot as plt  
+import matplotlib.pyplot as plt
 plt.style.use('dark_background')
 ```
 
 想查看有什么风格，可以查看下面代码。
 
-
 ```python
-import matplotlib.pyplot as plt  
+import matplotlib.pyplot as plt
 plt.style.available
 ```
-
-
-
 
     ['Solarize_Light2',
      '_classic_test_patch',
@@ -698,11 +611,8 @@ plt.style.available
      'seaborn-v0_8-whitegrid',
      'tableau-colorblind10']
 
-
-
-
 ```python
-import matplotlib.pyplot as plt  
+import matplotlib.pyplot as plt
 plt.style.use('grayscale')
 
 month = list(range(1,13))
@@ -714,37 +624,32 @@ fig2 = plt.plot(month,income_Mi,label= 'Mi')
 
 plt.ylabel("Income",fontsize = 15,color = "red")
 plt.xlabel("Month",fontsize = 15,color = "red")
-plt.title("Monthly income in 2023",fontsize=16, 
+plt.title("Monthly income in 2023",fontsize=16,
           fontweight='bold', color='red')
 
-plt.legend(loc='upper left')  
-  
-# 显示图形 
+plt.legend(loc='upper left')
+
+# 显示图形
 plt.show()
 ```
 
-
-​    
+​
 ![png](output_43_0.png)
-​    
-
+​
 
 ## 10. 动态rc参数
 
 pyplot模块使用rc配置文件来自定义图形的各种默认属性，称之为rc配置或rc参数。通过修改rc参数可以修改默认的属性，包括窗体大小、每英寸的点数、线条宽度、颜色、样式、坐标轴、坐标和网络属性、文本、字体等。
 Matplotlib将默认参数配置保存在“matplotlibrc”文件中，通过修改配置文件，可修改图表的缺省样式。
 
-
-
 ```python
-import matplotlib  
+import matplotlib
 print(matplotlib.matplotlib_fname()) # 配置文件路径
 print(matplotlib.get_configdir()) # 字体缓存路径
 ```
 
     D:\Program Files\Python3.10\lib\site-packages\matplotlib\mpl-data\matplotlibrc
     C:\Users\chens\.matplotlib
-
 
 在Matplotlib中可以使用如下多个“matplotlibrc”配置文件，并且调用时按照该排序优先采用。
 
@@ -756,11 +661,9 @@ print(matplotlib.get_configdir()) # 字体缓存路径
 
 在Matplotlib库载入时会调用rc_params函数，并把得到的配置字典保存到rcParams变量中。通过修改字典的方式或用matplotlib.rc()函数修改rc参数。修改默认rc参数后，图形对应属性就会发生改变。此处将介绍常用的rc参数，包括线条、坐标轴、字体等。
 
-
-
 ```python
-import matplotlib.pyplot as plt  
-  
+import matplotlib.pyplot as plt
+
 plt.rcParams['lines.linewidth'] = 2
 ```
 
@@ -775,16 +678,14 @@ plt.rcParams['lines.linewidth'] = 2
     lines.marker: 可以更改线条上的点的形状，例如'o', 'D', 'h', '^'等。
     lines.markersize: 可以更改线条上的点的尺寸。
 
-
 ```python
-import matplotlib.pyplot as plt  
-  
-plt.rcParams['lines.linewidth'] = 2  
-plt.rcParams['lines.linestyle'] = '--'  
-plt.rcParams['lines.marker'] = 'o'  
+import matplotlib.pyplot as plt
+
+plt.rcParams['lines.linewidth'] = 2
+plt.rcParams['lines.linestyle'] = '--'
+plt.rcParams['lines.marker'] = 'o'
 plt.rcParams['lines.markersize'] = 10
 ```
-
 
 ```python
 plt.style.use('grayscale')
@@ -797,27 +698,24 @@ fig2 = plt.plot(month,income_Mi,label= 'Mi')
 
 plt.ylabel("Income",fontsize = 15,color = "red")
 plt.xlabel("Month",fontsize = 15,color = "red")
-plt.title("Monthly income in 2023",fontsize=16, 
+plt.title("Monthly income in 2023",fontsize=16,
           fontweight='bold', color='red')
 
-plt.legend(loc='upper left')  
-  
-# 显示图形 
+plt.legend(loc='upper left')
+
+# 显示图形
 plt.show()
 ```
 
-
-​    
+​
 ![png](output_50_0.png)
-​    
-
+​
 
 ### 10.2 坐标轴常用的rc参数
 
 在matplotlib中，用于坐标轴的常用rc参数有：
 
  ![](https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202308212153242.png)
-
 
 ```python
 x = np.linspace(0, 10, 1000)
@@ -830,11 +728,9 @@ plt.plot(x, np.sin(x))
 plt.show()
 ```
 
-
-​    
+​
 ![png](output_52_0.png)
-​    
-
+​
 
 ### 10.3 字体常用的rc参数
 
@@ -842,30 +738,26 @@ plt.show()
 
 axes.unicode_minus是一个用于控制是否在坐标轴上显示Unicode的减号字符（'-'）的参数。当设置为False时，使用普通的短横线代替。这在一些包含非英语字符的字体中可能会有问题。
 
-
 除字体与符号编码参数外，更多的字体常用rc参数名称、接收、取值如下表所示。
 ![](https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202308212157937.png)
 
 除了这些基本设置，还可以通过其他参数来调整字体的效果，比如font.weight（字体粗细）、font.style（字体风格，例如正常、倾斜、粗体等）、font.variant（字体变种，例如正常体和斜体）、font.stretch（字体伸缩度）、font.serif（正体字集）、font.sans-serif（无衬线体字集）、font.cursive（草体字集）、font.fantasy（装饰体字集）等。
 
-
 ```python
-import matplotlib.pyplot as plt  
+import matplotlib.pyplot as plt
 import matplotlib
-# 设置中文字体  
+# 设置中文字体
 plt.rcParams['font.sans-serif'] = 'SimHei'  # 指定中文字体
 plt.rcParams['axes.unicode_minus'] = False # 取消使用 unicode 的负号
-plt.rcParams['font.family'] = 'serif'  # 字体样式  
+plt.rcParams['font.family'] = 'serif'  # 字体样式
 plt.rcParams['font.size'] = 16  # 字体大小
 
 ```
-
 
 ```python
 # 如果plt.rcParams['font.sans-serif'] = 'SimHei' 设置后没有效果
 matplotlib.rc("font", family='SimHei')
 ```
-
 
 ```python
 month = list(range(1,13))
@@ -877,20 +769,18 @@ fig2 = plt.plot(month,income_Mi,label= 'Mi')
 
 plt.ylabel("收入金额（元）",fontsize = 15,color = "red")
 plt.xlabel("月份",fontsize = 15,color = "red")
-plt.title("2023年每月收入统计",fontsize=16, 
+plt.title("2023年每月收入统计",fontsize=16,
           fontweight='bold', color='red')
 
-plt.legend(loc='upper left')  
-  
-# 显示图形 
+plt.legend(loc='upper left')
+
+# 显示图形
 plt.show()
 ```
 
-
-​    
+​
 ![png](output_57_0.png)
-​    
-
+​
 
 ## 11. Matplotlib常用函数
 
@@ -910,128 +800,124 @@ imshow()：绘制图像。
 
 ### 11.1 plot()
 
-
 ```python
 help(matplotlib.pyplot.plot)
 ```
 
     Help on function plot in module matplotlib.pyplot:
-    
+
     plot(*args, scalex=True, scaley=True, data=None, **kwargs)
         Plot y versus x as lines and/or markers.
-        
+
         Call signatures::
-        
+
             plot([x], y, [fmt], *, data=None, **kwargs)
             plot([x], y, [fmt], [x2], y2, [fmt2], ..., **kwargs)
-        
+
         The coordinates of the points or line nodes are given by *x*, *y*.
-        
+
         The optional parameter *fmt* is a convenient way for defining basic
         formatting like color, marker and linestyle. It's a shortcut string
         notation described in the *Notes* section below.
-        
+
         >>> plot(x, y)        # plot x and y using default line style and color
         >>> plot(x, y, 'bo')  # plot x and y using blue circle markers
         >>> plot(y)           # plot y using x as index array 0..N-1
         >>> plot(y, 'r+')     # ditto, but with red plusses
-        
+
         You can use `.Line2D` properties as keyword arguments for more
         control on the appearance. Line properties and *fmt* can be mixed.
         The following two calls yield identical results:
-        
+
         >>> plot(x, y, 'go--', linewidth=2, markersize=12)
         >>> plot(x, y, color='green', marker='o', linestyle='dashed',
         ...      linewidth=2, markersize=12)
-        
+
         When conflicting with *fmt*, keyword arguments take precedence.
 
-
-​        
+​
         **Plotting labelled data**
-        
+
         There's a convenient way for plotting objects with labelled data (i.e.
         data that can be accessed by index ``obj['y']``). Instead of giving
         the data in *x* and *y*, you can provide the object in the *data*
         parameter and just give the labels for *x* and *y*::
-        
+
         >>> plot('xlabel', 'ylabel', data=obj)
-        
+
         All indexable objects are supported. This could e.g. be a `dict`, a
         `pandas.DataFrame` or a structured numpy array.
 
-
-​        
+​
         **Plotting multiple sets of data**
-        
+
         There are various ways to plot multiple sets of data.
-        
+
         - The most straight forward way is just to call `plot` multiple times.
           Example:
-        
+
           >>> plot(x1, y1, 'bo')
           >>> plot(x2, y2, 'go')
-        
+
         - If *x* and/or *y* are 2D arrays a separate data set will be drawn
           for every column. If both *x* and *y* are 2D, they must have the
           same shape. If only one of them is 2D with shape (N, m) the other
           must have length N and will be used for every data set m.
-        
+
           Example:
-        
+
           >>> x = [1, 2, 3]
           >>> y = np.array([[1, 2], [3, 4], [5, 6]])
           >>> plot(x, y)
-        
+
           is equivalent to:
-        
+
           >>> for col in range(y.shape[1]):
           ...     plot(x, y[:, col])
-        
+
         - The third way is to specify multiple sets of *[x]*, *y*, *[fmt]*
           groups::
-        
+
           >>> plot(x1, y1, 'g^', x2, y2, 'g-')
-        
+
           In this case, any additional keyword argument applies to all
           datasets. Also this syntax cannot be combined with the *data*
           parameter.
-        
+
         By default, each line is assigned a different style specified by a
         'style cycle'. The *fmt* and line property parameters are only
         necessary if you want explicit deviations from these defaults.
         Alternatively, you can also change the style cycle using
         :rc:`axes.prop_cycle`.
 
-
-​        
+​
         Parameters
         ----------
         x, y : array-like or scalar
             The horizontal / vertical coordinates of the data points.
             *x* values are optional and default to ``range(len(y))``.
-        
+
             Commonly, these parameters are 1D arrays.
-        
+
             They can also be scalars, or two-dimensional (in that case, the
             columns represent separate data sets).
-        
+
             These arguments cannot be passed as keywords.
-        
+
         fmt : str, optional
             A format string, e.g. 'ro' for red circles. See the *Notes*
             section for a full description of the format strings.
-        
+
             Format strings are just an abbreviation for quickly setting
             basic line properties. All of these and more can also be
             controlled by keyword arguments.
-        
+
             This argument cannot be passed as keyword.
-        
+
         data : indexable object, optional
             An object with labelled data. If given, provide the label names to
             plot in *x* and *y*.
-        
+
             .. note::
                 Technically there's a slight ambiguity in calls where the
                 second label is a valid *fmt*. ``plot('n', 'o', data=obj)``
@@ -1039,33 +925,33 @@ help(matplotlib.pyplot.plot)
                 the former interpretation is chosen, but a warning is issued.
                 You may suppress the warning by adding an empty format string
                 ``plot('n', 'o', '', data=obj)``.
-        
+
         Returns
         -------
         list of `.Line2D`
             A list of lines representing the plotted data.
-        
+
         Other Parameters
         ----------------
         scalex, scaley : bool, default: True
             These parameters determine if the view limits are adapted to the
             data limits. The values are passed on to
             `~.axes.Axes.autoscale_view`.
-        
+
         **kwargs : `.Line2D` properties, optional
             *kwargs* are used to specify properties like a line label (for
             auto legends), linewidth, antialiasing, marker face color.
             Example::
-        
+
             >>> plot([1, 2, 3], [1, 2, 3], 'go-', label='line 1', linewidth=2)
             >>> plot([1, 2, 3], [1, 4, 9], 'rs', label='line 2')
-        
+
             If you specify multiple lines with one plot call, the kwargs apply
             to all those lines. In case the label object is iterable, each
             element is used as labels for each set of data.
-        
+
             Here is a list of available `.Line2D` properties:
-        
+
             Properties:
             agg_filter: a filter function, which takes a (m, n, 3) float array and a dpi value, and returns a (m, n, 3) array and two offsets from the bottom left corner of the image
             alpha: scalar or None
@@ -1110,29 +996,29 @@ help(matplotlib.pyplot.plot)
             xdata: 1D array
             ydata: 1D array
             zorder: float
-        
+
         See Also
         --------
         scatter : XY scatter plot with markers of varying size and/or color (
             sometimes also called bubble chart).
-        
+
         Notes
         -----
         **Format Strings**
-        
+
         A format string consists of a part for color, marker and line::
-        
+
             fmt = '[marker][line][color]'
-        
+
         Each of them is optional. If not provided, the value from the style
         cycle is used. Exception: If ``line`` is given, but no ``marker``,
         the data will be a line without markers.
-        
+
         Other combinations such as ``[color][marker][line]`` are also
         supported, but note that their parsing may be ambiguous.
-        
+
         **Markers**
-        
+
         =============   ===============================
         character       description
         =============   ===============================
@@ -1162,9 +1048,9 @@ help(matplotlib.pyplot.plot)
         ``'|'``         vline marker
         ``'_'``         hline marker
         =============   ===============================
-        
+
         **Line Styles**
-        
+
         =============    ===============================
         character        description
         =============    ===============================
@@ -1173,19 +1059,19 @@ help(matplotlib.pyplot.plot)
         ``'-.'``         dash-dot line style
         ``':'``          dotted line style
         =============    ===============================
-        
+
         Example format strings::
-        
+
             'b'    # blue markers with default shape
             'or'   # red circles
             '-g'   # green solid line
             '--'   # dashed line with default color
             '^k:'  # black triangle_up markers connected by a dotted line
-        
+
         **Colors**
-        
+
         The supported color abbreviations are the single letter codes
-        
+
         =============    ===============================
         character        color
         =============    ===============================
@@ -1198,16 +1084,14 @@ help(matplotlib.pyplot.plot)
         ``'k'``          black
         ``'w'``          white
         =============    ===============================
-        
+
         and the ``'CN'`` colors that index into the default property cycle.
-        
+
         If the color is the only part of the format string, you can
         additionally use any  `matplotlib.colors` spec, e.g. full names
         (``'green'``) or hex strings (``'#008000'``).
 
-
-​    
-
+​
 
 ```python
 # 假设有三个分组，每个分组有 x 和 y 数据
@@ -1219,13 +1103,13 @@ group3_x = np.linspace(0, 10, 10)
 group3_y = np.sqrt(group3_x)
 plt.figure(figsize=(8, 6))
 # 绘制第一个分组的线型图，使用红色实线和圆圈标记
-plt.plot(group1_x, group1_y, color='red', 
+plt.plot(group1_x, group1_y, color='red',
          linestyle='-', marker='o', label='Group 1')
 # 绘制第二个分组的线型图，使用绿色虚线和三角形标记
-plt.plot(group2_x, group2_y, color='green', 
+plt.plot(group2_x, group2_y, color='green',
          linestyle='--', marker='^', label='Group 2')
 # 绘制第三个分组的线型图，使用蓝色点线和正方形标记
-plt.plot(group3_x, group3_y, color='blue', 
+plt.plot(group3_x, group3_y, color='blue',
          linestyle=':', marker='s', label='Group 3')
 # 添加标题和标签
 plt.title('Grouped Line Plot')
@@ -1238,45 +1122,39 @@ plt.show()
 
 ```
 
-
-​    
+​
 ![png](output_61_0.png)
-​    
-
+​
 
 ### 11.2 scatter()
 
-
 ```python
-import matplotlib.pyplot as plt  
-import numpy as np  
-  
-# 生成随机数据  
-x = np.random.rand(50)  
-y = np.random.rand(50)  
-  
-# 绘制散点图  
-plt.scatter(x, y, s=100, c='b', alpha=0.5)  
-  
-# 设置标题和坐标轴标签  
-plt.title('Scatter Plot')  
-plt.xlabel('X-axis')  
-plt.ylabel('Y-axis')  
-  
-# 显示图形  
+import matplotlib.pyplot as plt
+import numpy as np
+
+# 生成随机数据
+x = np.random.rand(50)
+y = np.random.rand(50)
+
+# 绘制散点图
+plt.scatter(x, y, s=100, c='b', alpha=0.5)
+
+# 设置标题和坐标轴标签
+plt.title('Scatter Plot')
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+
+# 显示图形
 plt.show()
 ```
 
-
-​    
+​
 ![png](output_63_0.png)
-​    
-
-
+​
 
 ```python
-import matplotlib.pyplot as plt  
-import numpy as np  
+import matplotlib.pyplot as plt
+import numpy as np
 # 假设有三个分组，每个分组有 x 和 y 数据
 group1_x = np.random.rand(10)
 group1_y = np.random.rand(10)
@@ -1302,14 +1180,11 @@ plt.legend()
 plt.show()
 ```
 
-
-​    
+​
 ![png](output_64_0.png)
-​    
-
+​
 
 ### 11.3 bar()
-
 
 ```python
 matplotlib.pyplot.bar(x, height, width=0.8, bottom=None, *, align='center', data=None, **kwargs)
@@ -1322,7 +1197,6 @@ matplotlib.pyplot.bar(x, height, width=0.8, bottom=None, *, align='center', data
     align: 条形的对齐方式，可以是 'center'（默认）、'edge' 等。
     data: 传入一个数据源，可以是 DataFrame 或其他数据结构。
     **kwargs: 其他关键字参数，可以传递给 matplotlib.patches.Patch。
-
 
 ```python
 # 假设有一些项目和对应的值
@@ -1343,12 +1217,9 @@ plt.show()
 
 ```
 
-
-​    
+​
 ![png](output_68_0.png)
-​    
-
-
+​
 
 ```python
 import matplotlib.pyplot as plt
@@ -1384,18 +1255,15 @@ plt.show()
 
 ```
 
-
-​    
+​
 ![png](output_69_0.png)
-​    
-
+​
 
 ### 10.4 hist()
 
-
 ```python
 matplotlib.pyplot.hist(x, bins=None, range=None, density=False, weights=None, cumulative=False, bottom=None,
-                       histtype='bar', align='mid', orientation='vertical', rwidth=None, 
+                       histtype='bar', align='mid', orientation='vertical', rwidth=None,
                        log=False, color=None, label=None, stacked=False, *, data=None, **kwargs)
 ```
 
@@ -1416,8 +1284,6 @@ matplotlib.pyplot.hist(x, bins=None, range=None, density=False, weights=None, cu
     stacked: 如果为 True，则绘制堆叠直方图。
     data: 传入一个数据源，可以是 DataFrame 或其他数据结构。
     **kwargs: 其他关键字参数，可以传递给 matplotlib.patches.Patch。
-
-
 
 ```python
 import matplotlib.pyplot as plt
@@ -1441,20 +1307,15 @@ plt.ylabel('Frequency')
 plt.show()
 ```
 
-
-​    
+​
 ![png](output_73_0.png)
-​    
-
+​
 
 ### 10.5 bie()
 
-
-
-
 ```python
-matplotlib.pyplot.pie(x, explode=None, labels=None, colors=None, autopct=None, pctdistance=0.6, shadow=False, labeldistance=1.1, 
-                      startangle=0, radius=1, counterclock=True, wedgeprops=None, textprops=None, center=(0, 0), 
+matplotlib.pyplot.pie(x, explode=None, labels=None, colors=None, autopct=None, pctdistance=0.6, shadow=False, labeldistance=1.1,
+                      startangle=0, radius=1, counterclock=True, wedgeprops=None, textprops=None, center=(0, 0),
                       frame=False, rotatelabels=False, *, normalize=True, data=None))
 ```
 
@@ -1477,7 +1338,6 @@ matplotlib.pyplot.pie(x, explode=None, labels=None, colors=None, autopct=None, p
     normalize: 是否将输入数据规范化为百分比。默认为 True。
     data: 传入一个数据源，可以是 DataFrame 或其他数据结构。
 
-
 ```python
 import matplotlib.pyplot as plt
 
@@ -1487,7 +1347,7 @@ values = [30, 20, 15, 35]
 
 # 绘制饼图
 plt.figure(figsize=(8, 8))
-wedges, texts, autotexts = plt.pie(values, labels=categories, autopct='%1.1f%%', 
+wedges, texts, autotexts = plt.pie(values, labels=categories, autopct='%1.1f%%',
                                    startangle=140, colors=['red', 'green', 'blue', 'purple'])
 
 # 添加标题
@@ -1498,21 +1358,18 @@ plt.show()
 
 ```
 
-
-​    
+​
 ![png](output_77_0.png)
-​    
-
+​
 
 ### 10.6 boxplot
 
-
 ```python
-matplotlib.pyplot.boxplot(x, notch=None, sym=None, vert=None, whis=None, positions=None, widths=None, 
-                          patch_artist=None, bootstrap=None, usermedians=None, conf_intervals=None, 
-                          meanline=None, showmeans=None, showcaps=None, showbox=None, showfliers=None, 
-                          boxprops=None, labels=None, flierprops=None, medianprops=None, meanprops=None, 
-                          capprops=None, whiskerprops=None, manage_ticks=True, autorange=False, 
+matplotlib.pyplot.boxplot(x, notch=None, sym=None, vert=None, whis=None, positions=None, widths=None,
+                          patch_artist=None, bootstrap=None, usermedians=None, conf_intervals=None,
+                          meanline=None, showmeans=None, showcaps=None, showbox=None, showfliers=None,
+                          boxprops=None, labels=None, flierprops=None, medianprops=None, meanprops=None,
+                          capprops=None, whiskerprops=None, manage_ticks=True, autorange=False,
                           zorder=None, capwidths=None, *, data=None)
 ```
 
@@ -1527,7 +1384,6 @@ matplotlib.pyplot.boxplot(x, notch=None, sym=None, vert=None, whis=None, positio
     bootstrap: 是否使用自助法来计算置信区间。默认为 None，表示不使用自助法。
 
 其他参数：用于设置图表的各种属性，如颜色、线型、标签等。
-
 
 ```python
 import matplotlib.pyplot as plt
@@ -1557,39 +1413,35 @@ plt.show()
 
 ```
 
-
-​    
+​
 ![png](output_81_0.png)
-​    
-
+​
 
  ## 12. 基于Matplotlib 的其他可视化库
-
 
  Matplotlib 是一个广泛用于绘制各种类型图表的 Python 库。除了 Matplotlib 本身，还有一些基于 Matplotlib 的扩展库，提供了更高级的功能和更方便的接口。以下是一些基于 Matplotlib 的扩展库：
 
     Seaborn： Seaborn 是一个基于 Matplotlib 的高级数据可视化库，提供了更美观的默认样式、统计图表和复杂的数据可视化功能。
-    
+
     Plotly： Plotly 是一个交互式可视化库，可以用于创建各种交互式图表，支持在线共享和部署。
-    
+
     Bokeh： Bokeh 是一个用于创建交互式数据可视化的库，支持在 Web 浏览器中展示图表，并提供丰富的交互功能。
-    
+
     Holoviews： Holoviews 是一个建立在 Matplotlib、Bokeh 和其他可视化后端之上的库，用于创建复杂、交互式和可视化丰富的数据可视化。
-    
+
     Basemap： Basemap 是一个 Matplotlib 扩展库，用于绘制地图和地理空间数据可视化，支持各种投影和地理特征。
-    
+
     Cartopy： Cartopy 是一个专注于地理空间数据可视化的库，提供地图绘制和投影等功能。
-    
+
     mplleaflet： mplleaflet 可以将 Matplotlib 图表转换为 Leaflet Web 地图，用于在 Web 页面上展示地理数据图表。
-    
+
     mplcursors： mplcursors 是一个库，为 Matplotlib 图表提供了鼠标悬停交互，可以显示数据点的信息。
-    
+
     mplfinance： mplfinance 是一个用于金融数据可视化的库，可以创建股票价格图表和金融时间序列图表。
-    
+
     Wordcloud： Wordcloud 是一个用于创建词云图的库，可以根据文本数据生成艺术性的词云图。
 
 以上列出的扩展库可以扩展 Matplotlib 的功能，使其更适用于特定领域的数据可视化需求。你可以根据自己的项目需求选择合适的扩展库。
-
 
  ### 12.1 seaborn
 
@@ -1611,7 +1463,6 @@ Seaborn 是一个基于 Matplotlib 的数据可视化库，它提供了一组高
 
 自定义能力： 尽管 Seaborn 提供了内置的样式和功能，但它也允许你进行高度定制，以满足特定需求。你可以控制颜色、样式、标签、刻度等各个方面。
 
-
 Seaborn 提供了许多绘图函数，用于绘制各种类型的统计图表。以下是一些常用的 Seaborn 绘图函数：
 
     seaborn.barplot： 绘制条形图，显示不同类别的值之间的关系。
@@ -1631,54 +1482,51 @@ Seaborn 提供了许多绘图函数，用于绘制各种类型的统计图表。
 
 #### （1）seaborn.heatmap
 
-
 seaborn.heatmap 函数用于绘制热图，用颜色表示数据矩阵中的值。以下是 seaborn.heatmap 函数的一些主要参数的详细介绍：
 
     data： 二维数组、DataFrame 或类似的数据结构，表示要绘制的数据矩阵。
-    
+
     cmap： 颜色映射，用于将数据值映射到颜色。例如，'viridis'、'YlGnBu'、'RdBu_r' 等。更多可用的颜色映射可在 Seaborn 文档中找到。
-    
+
     annot： 是否在热图上显示数值。默认为 False。设置为 True 时，会在每个热图单元格中显示对应的数值。
-    
+
     fmt： 数值显示格式字符串。例如，".2f" 表示显示两位小数。
-    
+
     linewidths： 单元格之间的线宽。
-    
+
     linecolor： 单元格之间的线颜色。
-    
+
     xticklabels、yticklabels： 设置 x 和 y 轴上的刻度标签。可以设置为布尔值、标签列表、标签值、DataFrame 列名等。
-    
+
     cbar： 是否显示颜色条。默认为 True。
-    
+
     cbar_kws： 颜色条参数的字典。
-    
+
     square： 控制单元格的宽度与高度是否相等。默认为 False。
-    
+
     ax： 要绘制热图的轴对象。如果为 None，则使用当前轴对象。
-    
+
     mask： 与数据矩阵形状相同的布尔数组，用于指示要掩盖的单元格。
-    
+
     center： 是否将数据相对于其均值居中。默认为 None。
-    
+
     robust： 是否使用数据的中位数和四分位数来计算颜色映射范围。默认为 False。
-    
+
     vmin、vmax： 颜色映射的数据值范围。
-    
+
     cbar_ax： 颜色条轴对象。
-    
+
     square： 是否将单元格的高度设置为等于宽度。
-    
+
     annot_kws： 字典，用于设置在单元格上显示数值时的文本属性。
-    
+
     mask： 布尔数组，用于掩盖数据矩阵中的特定单元格。
-    
+
     ax： 绘制热图的轴对象。如果为 None，则使用当前轴对象。
-    
+
     linewidths： 单元格之间的线宽。
-    
+
     linecolor： 单元格之间的线颜色。
-
-
 
 ```python
 import matplotlib.pyplot as plt
@@ -1706,12 +1554,9 @@ plt.show()
 
 ```
 
-
-​    
+​
 ![png](output_84_0.png)
-​    
-
-
+​
 
 ```python
 import seaborn as sns
@@ -1737,12 +1582,9 @@ plt.show()
 
 ```
 
-
-​    
+​
 ![png](output_85_0.png)
-​    
-
-
+​
 
 ```python
 import seaborn as sns
@@ -1764,14 +1606,11 @@ plt.show()
 
 ```
 
-
-​    
+​
 ![png](output_86_0.png)
-​    
-
+​
 
 #### （2）seaborn.barplot
-
 
 ```python
 import seaborn as sns
@@ -1811,16 +1650,10 @@ plt.show()
 
 ```
 
-    C:\Users\chens\AppData\Local\Temp\ipykernel_10476\532864970.py:12: FutureWarning: 
-    
+    C:\Users\chens\AppData\Local\Temp\ipykernel_10476\532864970.py:12: FutureWarning:
+
     The `ci` parameter is deprecated. Use `errorbar=None` for the same effect.
-    
+
       ax = sns.barplot(x="day", y="total_bill", data=tips, ci=None, palette="Set2")
 
-
-
-
 ![png](output_88_1.png)
-    
-
-

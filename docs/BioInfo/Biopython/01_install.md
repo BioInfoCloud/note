@@ -64,22 +64,22 @@ Biopython提供了`Bio.Sequence`对象，这些对象代表核苷酸，DNA和RNA
 安装成功
 
 ```
- \\   
- 
-     
-           
- 
-     
-           
-    
-   
+ \\
+
+
+
+
+
+
+
+
  \\
 ```
 
 ## 3.验证安装成功
 
 ```
-import Bio           
+import Bio
 print(Bio.__version__)
 ```
 

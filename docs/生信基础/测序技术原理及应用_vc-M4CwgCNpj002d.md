@@ -12,13 +12,29 @@ Sanger测序加快了对于微生物和单个基因研究的脚步，然而面�
 
 ![1612422458524-c0b0dd8f-c095-48ff-922d-60462d4c95fe.png](./img/vc-M4CwgCNpj002d/1612422458524-c0b0dd8f-c095-48ff-922d-60462d4c95fe-533872.png)
 
-Sanger测序是以这一突破性技术的发明者，Frederick Sanger博士的名字命名。在40多年前的上世纪70年代，Sanger博士发明了这一测序方法。他提出快速测定DNA序列的技术“双脱氧终止法”，也被称作“桑格法”的双脱氧核苷酸链终止法，因此与另外两名科学家共同获得了1980年诺贝尔化学奖。在Sanger测序期间，DNA聚合酶通过向生长链（延伸产物）中加入核苷酸来复制单链DNA模板。链延长发生在引物的3'端，通过与模板的碱基对互补来选择加入到扩增产物中的脱氧核苷酸。DNA聚合酶也可以掺入核苷酸碱基的类似物。由Sanger于1977年发明的DNA测序的双脱氧终止法通过引入2'，3'-双脱氧核苷酸作为底物终止DNA链进一步延伸，当双脱氧核苷酸加入到DNA链的3'末端时，DNA链的延长被选择性地终止于A，C，G或T。这是因为一旦引入双脱氧核苷酸，它比单脱氧核苷酸缺少一个3'-羟基，无法结合下一个组分，因此DNA链进一步的延伸被终止。
+Sanger测序是以这一突破性技术的发明者，Frederick Sanger博士的名字命名。
+在40多年前的上世纪70年代，Sanger博士发明了这一测序方法。
+他提出快速测定DNA序列的技术“双脱氧终止法”，也被称作“桑格法”的双脱氧核苷酸链终止法，因此与另外两名科学家共同获得了1980年诺贝尔化学奖。
+在Sanger测序期间，DNA聚合酶通过向生长链（延伸产物）中加入核苷酸来复制单链DNA模板。
+链延长发生在引物的3'端，通过与模板的碱基对互补来选择加入到扩增产物中的脱氧核苷酸。
+DNA聚合酶也可以掺入核苷酸碱基的类似物。
+由Sanger于1977年发明的DNA测序的双脱氧终止法通过引入2'，3'-双脱氧核苷酸作为底物终止DNA链进一步延伸，当双脱氧核苷酸加入到DNA链的3'末端时，DNA链的延长被选择性地终止于A，C，G或T。
+这是因为一旦引入双脱氧核苷酸，它比单脱氧核苷酸缺少一个3'-羟基，无法结合下一个组分，因此DNA链进一步的延伸被终止。
 
 ![1612423405511-a52a7f10-b8b0-4717-92c3-2779d2ce7762.png](./img/vc-M4CwgCNpj002d/1612423405511-a52a7f10-b8b0-4717-92c3-2779d2ce7762-895359.png)
 
 ![1612423818400-8cf64bfd-b60e-4f83-a378-274eaa79e024.png](./img/vc-M4CwgCNpj002d/1612423818400-8cf64bfd-b60e-4f83-a378-274eaa79e024-042274.png)
 
-首先是将一小段引物结合在目的区域附近。在存在四种核苷酸的条件下，聚合酶通过将与模板DNA链互补的核苷酸加在引物末端，使引物延伸。为找到DNA序列的具体组成，我们需要使这一反应在特定的位置终止，以便鉴定出这一DNA片段最末端的碱基。Sanger通过去除核糖核苷酸的一个氧原子实现了这一目标。这一核苷酸被称为双脱氧核苷酸。这就好像向齿轮中插入一把扳手。聚合酶将无法继续向这一DNA链中加入正常的核苷酸。延伸终止后，需要鉴定出末端的核苷酸。**<font style="color:#407600;">我们通过一种特殊的荧光染料来确定链末端的核苷酸种类，准确的说就是通过4种特殊的颜色来鉴定。</font>**Sanger测序生成各种不同长度的延伸产物，每个延伸产物的3’末端带有一个双脱氧核苷酸。
+首先是将一小段引物结合在目的区域附近。
+在存在四种核苷酸的条件下，聚合酶通过将与模板DNA链互补的核苷酸加在引物末端，使引物延伸。
+为找到DNA序列的具体组成，我们需要使这一反应在特定的位置终止，以便鉴定出这一DNA片段最末端的碱基。
+Sanger通过去除核糖核苷酸的一个氧原子实现了这一目标。
+这一核苷酸被称为双脱氧核苷酸。
+这就好像向齿轮中插入一把扳手。
+聚合酶将无法继续向这一DNA链中加入正常的核苷酸。
+延伸终止后，需要鉴定出末端的核苷酸。
+**我们通过一种特殊的荧光染料来确定链末端的核苷酸种类，准确的说就是通过4种特殊的颜色来鉴定。
+**Sanger测序生成各种不同长度的延伸产物，每个延伸产物的3’末端带有一个双脱氧核苷酸。
 
 荧光染料包括四种不同发射波长的染料标记的双脱氧核苷酸或染料标记的引物，因为每种染料在光激发下产生不同的荧光信号，可由扩增产物的荧光染料鉴定出3'末端双脱氧核苷酸为A，T，C或G。
 
@@ -30,7 +46,16 @@ Dye primer chemistry法：四个不同的测序引物各自用不同的荧光染
 
 ![1612422541137-97b2ed8d-17a3-4d42-a845-12c297206b81.png](./img/vc-M4CwgCNpj002d/1612422541137-97b2ed8d-17a3-4d42-a845-12c297206b81-909970.png)
 
-之后，通过毛细管电泳，简称CE（Capillary Electrophoresis，CE），分离延伸产物。DNA分子通过电流注入一根充满凝胶聚合物的长毛细管中。在CE电泳过程中，施加电场使带负电的DNA片段向正极迁移。DNA片段在介质中迁移速率和其分子量成反比。这一过程可以依据长度大小将延伸产物分离，分辨率可达到一个碱基的差异。当带有染料标记的DNA片段通过毛细管末端的小窗时，一束激光将染料激发。被激发的染料发射出特定波长的光并被光探测器检测到。之后，软件解读这一检测到的信号并将其翻译为一个碱基检出结果。测序反应在存在全部四种终止核苷酸的条件下进行时，最终将得到一组逐个碱基测定和分离的DNA片段。最后，您将得到一个通过不同颜色电泳图谱表示DNA序列的数据文件啦。
+之后，通过毛细管电泳，简称CE（Capillary Electrophoresis，CE），分离延伸产物。
+DNA分子通过电流注入一根充满凝胶聚合物的长毛细管中。
+在CE电泳过程中，施加电场使带负电的DNA片段向正极迁移。
+DNA片段在介质中迁移速率和其分子量成反比。
+这一过程可以依据长度大小将延伸产物分离，分辨率可达到一个碱基的差异。
+当带有染料标记的DNA片段通过毛细管末端的小窗时，一束激光将染料激发。
+被激发的染料发射出特定波长的光并被光探测器检测到。
+之后，软件解读这一检测到的信号并将其翻译为一个碱基检出结果。
+测序反应在存在全部四种终止核苷酸的条件下进行时，最终将得到一组逐个碱基测定和分离的DNA片段。
+最后，您将得到一个通过不同颜色电泳图谱表示DNA序列的数据文件啦。
 
 在BigDye terminators,，BigDye primers和BigDye Direct中，使用的荧光染料具有更窄的发射光谱和较少的荧光光谱重叠，可以产生较低的背景噪音。
 
@@ -39,8 +64,6 @@ Dye primer chemistry法：四个不同的测序引物各自用不同的荧光染
 每个染料在被激光激发时发出不同波长的光，因此可以在一次毛细管电泳中检测和区分四种颜色代表的四种碱基。
 
 ![1612422579243-2d65715b-4cf1-4a3e-85cb-4b9f3d141cb1.png](./img/vc-M4CwgCNpj002d/1612422579243-2d65715b-4cf1-4a3e-85cb-4b9f3d141cb1-687761.png)
-
-
 
 **二.illumina测序**
 
@@ -124,7 +147,7 @@ barcode一般位于文库片段的P7端，在P7和样品DNA片段之间，illumi
 
 * 开始Read3测序 然后加入Read3引物，反方向再测序一次，测序过程同Read1类似。如图中所示，蓝色链为Read3的引物及Read3序列。
 
-**<font style="color:#407600;">Read2与Read3的引物位置一般是重合的，碱基恰好互补，方向相反，见本文图一的d-c'与c-d'。</font>**
+**Read2与Read3的引物位置一般是重合的，碱基恰好互补，方向相反，见本文图一的d-c'与c-d'。**
 
 **6. illumina测序质量控制**
 
@@ -146,7 +169,7 @@ illumina测序的flowcell其实是一个非常精密的装置，它的每个lane
 
 而有些时候，一个DNA链有可能延长了2个碱基，而这种现象就叫做Prephasing。Prephasing是由于叠氮dNTP的叠氮基丢失所致。
 
-**<font style="color:#FF0000;">在测序时，从第12个循环开始，就要把Phasing和Prephasing的影响纳入考虑。</font>**
+**在测序时，从第12个循环开始，就要把Phasing和Prephasing的影响纳入考虑。**
 
 **Chastity 和 Pass filter**
 
@@ -174,7 +197,17 @@ illumina对每个read的质量都要做一个检验，这个检验就叫“pass 
 
 以Pacbio平台为代表的SMRT(Single-Molecule Real Time Sequencing,单分子实时测序)测序技术具有高通量、长读长的特点。
 
-基本原理：其中PacBio SMRT技术其实也应用了边合成边测序的思想，并以SMRT芯片为测序载体。基本原理是：DNA聚合酶和模板结合,4色荧光标记4种碱基（即是dNTP）,在碱基配对阶段,不同碱基的加入,会发出不同光,根据光的波长与峰值可判断进入的碱基类型。同时这个DNA聚合酶是实现超长读长的关键之一,读长主要跟酶的活性保持有关,它主要受激光对其造成的损伤所影响。PacBio SMRT技术的一个关键是怎样将反应信号与周围游离碱基的强大荧光背景区别出来。他们利用的是ZMW（零模波导孔）原理：如同微波炉壁上可看到的很多密集小孔。小孔直径有考究,如果直径大于微波波长,能量就会在衍射效应的作用下穿透面板而泄露出来，从而与周围小孔相互干扰。如果孔径小于波长,能量不会辐射到周围，而是保持直线状态（光衍射的原理）,从而可起保护作用。同理,在一个反应管(SMRTCell:单分子实时反应孔)中有许多这样的圆形纳米小孔, 即 ZMW(零模波导孔),外径 100多纳米,比检测激光波长小(数百纳米),激光从底部打上去后不能穿透小孔进入上方溶液区,能量被限制在一个小范围(体积20X 10-21 L)里,正好足够覆盖需要检测的部分,使得信号仅来自这个小反应区域,孔外过多游离核苷酸单体依然留在黑暗中,从而实现将背景降到最低。另外，可以通过检测相邻两个碱基之间的测序时间，来检测一些碱基修饰情况，既如果碱基存在修饰，则通过聚合酶时的速度会减慢，相邻两峰之间的距离增大，可以通过这个来之间检测甲基化等信息（图7）。SMRT技术的测序速度很快，每秒约10个dNTP。但是，同时其测序错误率比较高（这几乎是目前单分子测序技术的通病），达到15%,但好在它的出错是随机的，并不会像第二代测序技术那样存在测序错误的偏向，因而可以通过多次测序来进行有效的纠错。
+基本原理：其中PacBio SMRT技术其实也应用了边合成边测序的思想，并以SMRT芯片为测序载体。
+基本原理是：DNA聚合酶和模板结合,4色荧光标记4种碱基（即是dNTP）,在碱基配对阶段,不同碱基的加入,会发出不同光,根据光的波长与峰值可判断进入的碱基类型。
+同时这个DNA聚合酶是实现超长读长的关键之一,读长主要跟酶的活性保持有关,它主要受激光对其造成的损伤所影响。
+PacBio SMRT技术的一个关键是怎样将反应信号与周围游离碱基的强大荧光背景区别出来。
+他们利用的是ZMW（零模波导孔）原理：如同微波炉壁上可看到的很多密集小孔。
+小孔直径有考究,如果直径大于微波波长,能量就会在衍射效应的作用下穿透面板而泄露出来，从而与周围小孔相互干扰。
+如果孔径小于波长,能量不会辐射到周围，而是保持直线状态（光衍射的原理）,从而可起保护作用。
+同理,在一个反应管(SMRTCell:单分子实时反应孔)中有许多这样的圆形纳米小孔, 即 ZMW(零模波导孔),外径 100多纳米,比检测激光波长小(数百纳米),激光从底部打上去后不能穿透小孔进入上方溶液区,能量被限制在一个小范围(体积20X 10-21 L)里,正好足够覆盖需要检测的部分,使得信号仅来自这个小反应区域,孔外过多游离核苷酸单体依然留在黑暗中,从而实现将背景降到最低。
+另外，可以通过检测相邻两个碱基之间的测序时间，来检测一些碱基修饰情况，既如果碱基存在修饰，则通过聚合酶时的速度会减慢，相邻两峰之间的距离增大，可以通过这个来之间检测甲基化等信息（图7）。
+SMRT技术的测序速度很快，每秒约10个dNTP。
+但是，同时其测序错误率比较高（这几乎是目前单分子测序技术的通病），达到15%,但好在它的出错是随机的，并不会像第二代测序技术那样存在测序错误的偏向，因而可以通过多次测序来进行有效的纠错。
 
 ![1612422846450-15315338-14f5-4e70-bb10-8cd0c2a3e2fa.png](./img/vc-M4CwgCNpj002d/1612422846450-15315338-14f5-4e70-bb10-8cd0c2a3e2fa-336202.png)
 
@@ -192,23 +225,19 @@ illumina对每个read的质量都要做一个检验，这个检验就叫“pass 
 
 **参考资料：**
 
-<font style="color:#0052FF;">【1】</font>[<font style="color:#0052FF;">https://v.qq.com/x/page/k0191u4ipv1.html</font>](https://v.qq.com/x/page/k0191u4ipv1.html)
+【1】[https://v.qq.com/x/page/k0191u4ipv1.html](https://v.qq.com/x/page/k0191u4ipv1.html)
 
-<font style="color:#0052FF;">【2】</font>[<font style="color:#0052FF;">https://mp.weixin.qq.com/s/jWjKQweoLnUH_9NE9egS8A</font>](https://mp.weixin.qq.com/s/jWjKQweoLnUH_9NE9egS8A)
+【2】[https://mp.weixin.qq.com/s/jWjKQweoLnUH_9NE9egS8A](https://mp.weixin.qq.com/s/jWjKQweoLnUH_9NE9egS8A)
 
-<font style="color:#0052FF;">【3】</font>[<font style="color:#0052FF;">https://mp.weixin.qq.com/s/eeL5hziKzoe9gJCsl9xRmQ</font>](https://mp.weixin.qq.com/s/eeL5hziKzoe9gJCsl9xRmQ)
+【3】[https://mp.weixin.qq.com/s/eeL5hziKzoe9gJCsl9xRmQ](https://mp.weixin.qq.com/s/eeL5hziKzoe9gJCsl9xRmQ)
 
-<font style="color:#0052FF;">【4】</font>[<font style="color:#0052FF;">http://mp.weixin.qq.com/s/RAk_JogLhJ_lAg-iWLtf0A</font>](http://mp.weixin.qq.com/s/RAk_JogLhJ_lAg-iWLtf0A)
+【4】[http://mp.weixin.qq.com/s/RAk_JogLhJ_lAg-iWLtf0A](http://mp.weixin.qq.com/s/RAk_JogLhJ_lAg-iWLtf0A)
 
-<font style="color:#0052FF;">【5】</font>[<font style="color:#0052FF;">http://v.youku.com/v_show/id_XNjYyOTQ0ODcy.html</font>](http://v.youku.com/v_show/id_XNjYyOTQ0ODcy.html)
+【5】[http://v.youku.com/v_show/id_XNjYyOTQ0ODcy.html](http://v.youku.com/v_show/id_XNjYyOTQ0ODcy.html)
 
-<font style="color:#0052FF;">【6】</font>[<font style="color:#0052FF;">https://mp.weixin.qq.com/s/cxN9huvXgwIwn4ufj4LCpg</font>](https://mp.weixin.qq.com/s/cxN9huvXgwIwn4ufj4LCpg)
+【6】[https://mp.weixin.qq.com/s/cxN9huvXgwIwn4ufj4LCpg](https://mp.weixin.qq.com/s/cxN9huvXgwIwn4ufj4LCpg)
 
-<font style="color:#0052FF;">【7】</font>[<font style="color:#0052FF;">https://mp.weixin.qq.com/s/ISt0M8yN5-o_GWr8hyg3YQ</font>](https://mp.weixin.qq.com/s/ISt0M8yN5-o_GWr8hyg3YQ)
+【7】[https://mp.weixin.qq.com/s/ISt0M8yN5-o_GWr8hyg3YQ](https://mp.weixin.qq.com/s/ISt0M8yN5-o_GWr8hyg3YQ)
 
-
-
-
-
-> 更新: 2026-11-01 12:02:43  
+> 更新: 2026-11-01 12:02:43
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/fdkwby>

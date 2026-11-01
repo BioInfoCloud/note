@@ -4,59 +4,31 @@
 
 1. SRA数据库介绍
 
-
-
 (1) SRP开头的ID：PRJNA = SRP
-
-
 
 (2) PRJNA开头的ID：SAMN = SRS
 
-
-
 (3) SRX开头的ID
-
-
 
 (4) SRR开头的ID
 
-
-
 2. SRA数据的下载
-
-
 
 (1) 使用Aspera Connect 软件下载
 
-
-
 (2) 使用sratoolkit中的prefetch命令下载
-
-
 
 (3) 使用SRA Explorer下载
 
-
-
 (4) 使用wget直接下载
-
-
 
 (5) 使用SRAdbV2 R包下载
 
-
-
 (6) 批量创建链接，迅雷下载
-
-
 
 1. SRA数据库介绍
 
-
-
 NCBI - SRA（Sequence ReadArchive）数据库是NCBI用于存储二代测序的原始数据，包括 454，Illumina，SOLiD，IonTorrent等，这个数据库是可以免费无限制下载的。当然，也可以到EBI - ENA数据库直接下载fastq .gz文件。
-
-
 
 根据SRA数据产生的特点，将SRA数据分为四类，这四种分类有一个层次关系，SRA数据库用不同的前缀加以区分。
 
@@ -64,15 +36,9 @@ NCBI - SRA（Sequence ReadArchive）数据库是NCBI用于存储二代测序的�
 
 伴随数据库是project，层级是PRJNA → SAMN
 
-
-
 注：runs表示测序仪运行所产生的reads。一个Study可能包含多个Experiment，Experiments包含了Sample、DNA source、测序平台、数据处理等信息。一个Sample也可能对应多个Experiments。
 
-
-
 一般文章里面会给出数据地址，例如，根据文章的GSE号进入GEO数据库里面，就可以看到其对应的SRA数据库ID号。[https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE84498](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE84498)
-
-
 
 测试数据
 
@@ -88,49 +54,33 @@ NCBI - SRA（Sequence ReadArchive）数据库是NCBI用于存储二代测序的�
 
 [https://www.ebi.ac.uk/ena/browser/view/PRJNA398328?show=reads](https://www.ebi.ac.uk/ena/browser/view/PRJNA398328?show=reads)
 
-
-
 (1) SRP开头的ID：PRJNA = SRP
 
 文章如果提到其数据上传到了SRA数据库，那么就会给出SRP开头的ID。如：The sequencing data have been deposited in the NCBI Sequence Read Archive (SRA) database under the accession code SRP115453.
 
 ① 查看样本列表：[https://www.ncbi.nlm.nih.gov/sra?term=SRP115453](https://www.ncbi.nlm.nih.gov/sra?term=SRP115453)，可以看到该数据集共有182个数据。
 
-
-
 ② 查看该project有哪些数据：[https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP115453](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP115453)；数据共1.35 T，有点大。可以根据研究目的进行样本筛选，挑选样本后，点击"Accession List"键， 下载得到SRR List 储存在SRR_Acc_List.txt 文件中。点击Metadata即可下载测序数据的相应信息，存储在SraRunTable.txt文件中。
-
-
 
 (2) PRJNA开头的ID：SAMN = SRS
 
 PRJNA开头的ID等同于 SRP开头的ID。进入链接，可以看到发表的文章，以及涉及到的样本：[https://www.ncbi.nlm.nih.gov/bioproject/PRJNA398328](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA398328)；该项目一共182个样本。
 
-
-
 查看每个样本的情况：
 
 链接：[https://www.ncbi.nlm.nih.gov/sra?term=SAMN07504222](https://www.ncbi.nlm.nih.gov/sra?term=SAMN07504222)；可以看到每个样本对应1个测序数据。SAMN开头的ID等同于SRS开头的ID。
 
-
-
 当然，也有同一样本存在多种测序数据的情况，如：[https://www.ncbi.nlm.nih.gov/sra?term=SAMN05341212](https://www.ncbi.nlm.nih.gov/sra?term=SAMN05341212) ；该样本存在6个数据。
-
-
 
 (3) SRX开头的ID
 
 对于上例，每个样本6个数据的情况，还可以进入每个测序数据，如，[https://www.ncbi.nlm.nih.gov/sra/SRX1922019](https://www.ncbi.nlm.nih.gov/sra/SRX1922019)
-
-
 
 (4) SRR开头的ID
 
 最后是，查看测序数据本身的信息：
 
 [https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR5934050](https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR5934050)
-
-
 
 注：网页相应的位置均有链接可直接跳转到对应的数据页面。
 
@@ -166,8 +116,6 @@ EBI - ENA下载链接获取：[https://www.ebi.ac.uk/ena/browser/view/PRJNA39832
 
 fastq数据：ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR593/008/
 
-
-
 如：
 
 study_accession：PRJNA398328
@@ -202,8 +150,6 @@ sra
 
 例如：ftp://ftp.sra.ebi.ac.uk/vol1/srr/SRR593/008/SRR5933808
 
-
-
 4) 使用ascp命令下载
 
 Aspera用法如下：
@@ -220,14 +166,12 @@ ascp --help
 # -P 提供SSH port，端口一般是33001
 # export ASPERA_SCP_PASS=~/.aspera/connect/etc/asperaweb_id_dsa.openssh
 ascp -vQT -k1 -l 400m -P33001 -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh era-fasp@ftp.sra.ebi.ac.uk:vol1/srr/SRR593/008/SRR5933808 ./ &
- 
+
 ascp -vQT -k1 -l 400m -P33001 -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/SRR593/008/SRR5933808 ./ &
- 
+
 #era-fasp是aspera在ENA的用户名，fasp.sra.ebi.ac.uk是固定下载地址，需要记住。
 #数据默认存储在当前路径的SRR5933808目录下
 ```
-
-
 
 (2) 使用sratoolkit中的prefetch命令下载
 
@@ -251,20 +195,16 @@ vdb-config: Display and modify VDB configuration information
 
 vdb-decrypt: Decrypt non-SRA dbGaP data (“phenotype data”)
 
-
-
 1) 下载
-
-
 
 ```r
 wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.11.0/sratoolkit.2.11.0-ubuntu64.tar.gz
 tar xzvf sratoolkit.2.11.0-ubuntu64.tar.gz -C ~/softwares
- 
+
 # 如有su权限，可直接下载：
 su
 apt install sra-toolkit
- 
+
 # 也可使用conda安装
 conda install sra-tools
 ```
@@ -279,21 +219,15 @@ prefetch -h
 
 3) prefectch命令下载数据
 
-
-
 # prefetch下载的数据在home目录下的ncbi目录里。
 
 prefetch SRR5933808  &     #下载单个SRA文件
 
 prefetch --option-file SRR_Acc_List.txt  #下载多个SRA文件
 
- 
-
 默认下载的是sra格式数据，可以使用fastq-dump将sra转换为fastq了。
 
 fastq-dump --gzip --split-3 SRR5933808.sra
-
- 
 
 # 也可以直接使用fastq-dump下载数据，下载之后直接即使fastq格式。
 
@@ -307,8 +241,8 @@ fastq-dump --split-files SRR5933808 SRR5933808/
 
 ```r
 fastq-dump --split-files SRR5933808.sra
-fastq-dump --split-files SRR5933808 
-fastq-dump --gzip --split-3 SRR5933808 
+fastq-dump --split-files SRR5933808
+fastq-dump --gzip --split-3 SRR5933808
 # --split-spot: 将双端测序分为两份,但是都放在同一个文件中
 # --split-files: 将双端测序分为两份,放在不同的文件,但是对于一方有而一方没有的reads直接丢弃
 # --split-3: 将双端测序分为两份,放在不同的文件,但是对于一方有而一方没有的reads会单独放在一个文件夹里
@@ -317,13 +251,11 @@ fastq-dump --gzip --split-3 SRR5933808
 
 注：当不确定到底是单端还是双端的SRA文件,一律用--split-3。
 
-
-
 其他工具使用示例：
 
 ```r
 # ftp://ftp.ncbi.nlm.nih.gov/sra/data/smoke_test.sh
- 
+
 #!/bin/bash
 echo "Public data dump started SRR4065643"
 ./fastq-dump SRR4065643
@@ -334,7 +266,7 @@ rm -rf SRR4065643*
 ./prefetch --type any SRR4065643
 rm -rf SRR4065643*
 echo "Public data dump ended"
- 
+
 echo "Starting dbGaP with ngc"
 ./fastq-dump --ngc ~/prj_phs710EA_test.ngc  SRR1219879
 rm -rf SRR1219879*
@@ -353,14 +285,12 @@ echo "NGC test done"
 
 即使一个SRX包括超过一个数据集的时候（多个SRR），也会返回结果，例如：SRX1067547包含两个run。
 
-
-
 (4) 使用wget直接下载
 
 找到数据下载链接后直接使用如下命令下载sra或者fastq数据。
 
 ```r
-wget -c -t 0 -O SRR5933809  ftp.sra.ebi.ac.uk/vol1/srr/SRR593/009/SRR5933809 
+wget -c -t 0 -O SRR5933809  ftp.sra.ebi.ac.uk/vol1/srr/SRR593/009/SRR5933809
 wget -c -t 0 -O SRR5933809_1.fastq.gz ftp.sra.ebi.ac.uk/vol1/fastq/SRR593/009/SRR5933809/SRR5933809_1.fastq.gz &
 # -c -t 配合使用可以防止下载数据的过程中链接中断的问题，-O则可以指定下载路径和文件名。
 ```
@@ -369,15 +299,13 @@ wget -c -t 0 -O SRR5933809_1.fastq.gz ftp.sra.ebi.ac.uk/vol1/fastq/SRR593/009/SR
 
 可以使用SRAdbV2 R包获取SRA数据：[https://seandavi.github.io/SRAdbV2/articles/SRAdbv2.html](https://seandavi.github.io/SRAdbV2/articles/SRAdbv2.html)
 
-
-
 ```r
 BiocManager::install('seandavi/SRAdbV2')
 library(SRAdbV2)
- 
+
 # 使用SRAdbV2 首先需要创建一个 R6类-Omicidx
 oidx = Omicidx$new()
- 
+
 # 创建好Omicidx实例后，就可以使用oidx$search()来进行数据检索
 query=paste(
   paste0('sample_taxon_id:', 10116),
@@ -421,7 +349,5 @@ cat SRR_Acc_List.txt|while read a ;do t1=${a:0:6};t2=${a:9:9};echo "ftp://ftp.sr
 
 原文链接：[https://blog.csdn.net/u010608296/article/details/121878169](https://blog.csdn.net/u010608296/article/details/121878169)
 
-
-
-> 更新: 2022-04-15 12:36:38  
+> 更新: 2022-04-15 12:36:38
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/tzqgbb>

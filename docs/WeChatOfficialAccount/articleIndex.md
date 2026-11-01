@@ -1,11 +1,5 @@
 ## 一. R语言相关
 
-
-
-
-
-
-
 ## 二.单细胞
 
 [单细胞专题 | 1.单细胞测序（10×genomics技术）的原理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651277403&idx=1&sn=1deef9220392274b9eb7018e764f56a5&chksm=841eac26b3692530adc7a2d611ea00f4fb64eaeb32619cb78ed82553f47e713a1aa038b41f02&scene=21#wechat_redirect)

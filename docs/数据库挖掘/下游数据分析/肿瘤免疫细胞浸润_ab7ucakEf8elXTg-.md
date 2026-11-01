@@ -2,17 +2,11 @@
 
 ![1612608562315-ecdadfa0-f751-423f-9b56-211c6970c0cf.gif](./img/ab7ucakEf8elXTg-/1612608562315-ecdadfa0-f751-423f-9b56-211c6970c0cf-188515.gif)
 
-在公众号上有一篇付费文章【[肿瘤免疫细胞浸润与临床相关性分析 ](https://mp.weixin.qq.com/s/S7kg3jjVZ2ZZwK6qJZYXBQ)】就介绍了肿瘤免疫细胞浸润的计算，用的是CIBERSORT这个工具，这里我们利用<font style="color:#333333;">TIMER这个工具</font>[http://timer.cistrome.org/](http://timer.cistrome.org/)
-
-
-
-
-
-
+在公众号上有一篇付费文章【[肿瘤免疫细胞浸润与临床相关性分析 ](https://mp.weixin.qq.com/s/S7kg3jjVZ2ZZwK6qJZYXBQ)】就介绍了肿瘤免疫细胞浸润的计算，用的是CIBERSORT这个工具，这里我们利用TIMER这个工具[http://timer.cistrome.org/](http://timer.cistrome.org/)
 
 下面是付费文章【[肿瘤免疫细胞浸润与临床相关性分析 ](https://mp.weixin.qq.com/s/S7kg3jjVZ2ZZwK6qJZYXBQ)】的内容。
 
-<font style="color:#2F2F2F;">Profiles of immune infiltration in colorectal cancer and theirclinical significant: A gene expression- based study</font>
+Profiles of immune infiltration in colorectal cancer and theirclinical significant: A gene expression- based study
 
 ---
 
@@ -26,10 +20,12 @@ CIBERSORT，是由Binder G等开发的反卷积算法，可以基于标准化的
 
 ![1612608562319-23dbba1c-6a62-4f8a-9508-7b3e5612de0e.jpeg](./img/ab7ucakEf8elXTg-/1612608562319-23dbba1c-6a62-4f8a-9508-7b3e5612de0e-817069.jpeg)
 
-**下面我们就介绍****<font style="color:#FF0000;">肿瘤免疫浸润与临床相关性分析</font>**
+**下面我们就介绍****肿瘤免疫浸润与临床相关性分析**
 
 ## 一.表达数据准备
-首先，我们需要准备一个表达矩阵，这里我们的案例用TCGA-LUAD的表达数据，已经上传到百度网盘，你可以去下载，也可以自己准备。差异表达分析的文章中也有介绍了从TCGA数据库下载数据的视频教程：[一文就会TCGA数据库基因表达差异分析](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264493&idx=1&sn=2164cc4d202fc081551f8918c8cbd7a4&chksm=841ef190b36978866b9bd71a989960370614bf234453b3bd070a56fbe324deb4ecaea2305923&scene=21#wechat_redirect)。
+
+首先，我们需要准备一个表达矩阵，这里我们的案例用TCGA-LUAD的表达数据，已经上传到百度网盘，你可以去下载，也可以自己准备。
+差异表达分析的文章中也有介绍了从TCGA数据库下载数据的视频教程：[一文就会TCGA数据库基因表达差异分析](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264493&idx=1&sn=2164cc4d202fc081551f8918c8cbd7a4&chksm=841ef190b36978866b9bd71a989960370614bf234453b3bd070a56fbe324deb4ecaea2305923&scene=21#wechat_redirect)。
 
 ```plain
 options(stringsAsFactors = F)
@@ -69,9 +65,10 @@ expdata = data.frame(gene = rownames(expdata),expdata,check.names = F)
 write.table(expdata,file = "as.ImmueInputExp.txt",row.names = F,sep = "\t")
 ```
 
-上面代码中<font style="background-color:rgba(0, 0, 0, 0.03);">TCGA-COAD-Exp.txt</font>文件，没有去掉重复的基因，所以我们需要处理一下，也同时删除没有表达的基因。输出的<font style="color:#DD1144;background-color:rgba(0, 0, 0, 0.03);">as.Imm</font><font style="color:#DD1144;background-color:rgba(0, 0, 0, 0.03);">ueInputExp.txt</font>文件就作为计算免疫细胞浸润的比例文件，第一列是基因名称，其他列是样本名称。
+上面代码中TCGA-COAD-Exp.txt文件，没有去掉重复的基因，所以我们需要处理一下，也同时删除没有表达的基因。输出的as.ImmueInputExp.txt文件就作为计算免疫细胞浸润的比例文件，第一列是基因名称，其他列是样本名称。
 
 ## **二.免疫浸润计算**
+
 **登录网址，没有账号得先注册**
 
 [<u>https://cibersortx.stanford.edu/</u>](https://cibersortx.stanford.edu/)
@@ -121,7 +118,7 @@ getSampleInfo <- function(Barcode){
   for (id in Barcode) {
     ids <- str_split(id,'-',simplify = T)[4]
     ids <- as.numeric(substr(ids,1,1))
-    
+
     if(ids == 0){
       TumorBarcode <- c(TumorBarcode,id)
     }else if (ids == 1) {
@@ -193,8 +190,8 @@ Type=c(rep("Normal",length(normalBarcode)),rep("Tumor",length(tumorBarcode)))   
 names(Type)=colnames(heatmapdata)
 Type=as.data.frame(Type)
 pdf(paste0(outputPath,"heatmap.pdf"),height=8,width=50)
-pheatmap(heatmapdata, 
-         annotation=Type, 
+pheatmap(heatmapdata,
+         annotation=Type,
          color = colorRampPalette(c("green", "black", "red"))(50),
          cluster_cols =F,
          fontsize = 8,
@@ -243,7 +240,7 @@ plot(x,y,
      xlim=c(0,(ncol(vioplotdata)-1)*3),#xlim=c(0,63)这个与细胞个数(列数)有关
      #xlim=c(0,57)可以设置成列数-1，再×3
      ylim=c(min(vioplotdata),max(vioplotdata)+0.02),
-     
+
      main="",xlab="", ylab="Fraction",
      pch=21,
      col="white",
@@ -267,7 +264,10 @@ dev.off()
 ![1612608562563-97166283-438e-4565-aff7-bba104a545cb.jpeg](./img/ab7ucakEf8elXTg-/1612608562563-97166283-438e-4565-aff7-bba104a545cb-214364.jpeg)
 
 ## 四.免疫浸润与临床相关性分析
-得到免疫浸润结果后，就需要探讨免疫浸润与临床相关性，比如与肿瘤分期什么关系，我们演示的临床数据之前也上传到了[网盘](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264583&idx=1&sn=f94bf8d77402677ee67f5d6336088254&chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&scene=21#wechat_redirect)，具体看文章：[TCGA数据库33个Project的RNA-Seq转录组数据为你整理打包好了](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264583&idx=1&sn=f94bf8d77402677ee67f5d6336088254&chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&scene=21#wechat_redirect)。你也可以自己下载相应的TCGA-COAD临床数据，可参考文章：[一文解决TCGA数据库临床数据下载与整理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264504&idx=1&sn=634bd925786a3193977342634b03acc3&chksm=841ef185b369789346bfbfbc315b9976bd14b9e25ed365c26522469e1ee102212c4b005bfb86&scene=21#wechat_redirect)。这样演示的是TCGA-COAD的临床数据文件：<font style="color:#FF0000;">TCGA-COAD-clinical.tsv</font>
+
+得到免疫浸润结果后，就需要探讨免疫浸润与临床相关性，比如与肿瘤分期什么关系，我们演示的临床数据之前也上传到了[网盘](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264583&idx=1&sn=f94bf8d77402677ee67f5d6336088254&chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&scene=21#wechat_redirect)，具体看文章：[TCGA数据库33个Project的RNA-Seq转录组数据为你整理打包好了](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264583&idx=1&sn=f94bf8d77402677ee67f5d6336088254&chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&scene=21#wechat_redirect)。
+你也可以自己下载相应的TCGA-COAD临床数据，可参考文章：[一文解决TCGA数据库临床数据下载与整理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264504&idx=1&sn=634bd925786a3193977342634b03acc3&chksm=841ef185b369789346bfbfbc315b9976bd14b9e25ed365c26522469e1ee102212c4b005bfb86&scene=21#wechat_redirect)。
+这样演示的是TCGA-COAD的临床数据文件：TCGA-COAD-clinical.tsv
 
 **1.临床数据的处理**
 
@@ -379,16 +379,16 @@ for(gene in colnames(surImdata[,3:ncol(surImdata)])){
        compression="lzw",
        bg="white",
        res=600)
-  plot(fit, 
+  plot(fit,
        lwd=2,
        col=c("red","blue"),
        xlab="Time (year)",
        mark.time=T,
        ylab="Survival rate",
        main=paste(gene,"(p=", pValue ,")",sep="") )
-  legend("topright", 
-         c("High","Low"), 
-         lwd=2, 
+  legend("topright",
+         c("High","Low"),
+         lwd=2,
          col=c("red","blue"))
   dev.off()
 }
@@ -417,7 +417,7 @@ row.names(mergeImmuCorClin) = mergeImmuCorClin$Barcodes
 mergeImmuCorClin = mergeImmuCorClin[,-1]
 ```
 
-我们选择的临床数据有<font style="color:#DD1144;background-color:rgba(0, 0, 0, 0.03);">"S</font><font style="color:#DD1144;background-color:rgba(0, 0, 0, 0.03);">tage"</font><font style="background-color:rgba(0, 0, 0, 0.03);">,</font><font style="color:#DD1144;background-color:rgba(0, 0, 0, 0.03);">"T"</font><font style="background-color:rgba(0, 0, 0, 0.03);">,</font><font style="color:#DD1144;background-color:rgba(0, 0, 0, 0.03);">"N"</font><font style="background-color:rgba(0, 0, 0, 0.03);">,</font><font style="color:#DD1144;background-color:rgba(0, 0, 0, 0.03);">"M"</font>，我们下面就只选择<font style="color:#DD1144;background-color:rgba(0, 0, 0, 0.03);">S</font><font style="color:#DD1144;background-color:rgba(0, 0, 0, 0.03);">tage</font>作为分析，TNM分期也是一样的道理，其他临床指标的话，前面的提取临床数据的代码都要变的，不要学的太死。
+我们选择的临床数据有"Stage","T","N","M"，我们下面就只选择Stage作为分析，TNM分期也是一样的道理，其他临床指标的话，前面的提取临床数据的代码都要变的，不要学的太死。
 
 ```plain
 ####Stage
@@ -462,14 +462,14 @@ for(i in colnames(Simmuedata[,2:ncol(Simmuedata)])){
   }else{
     pval=round(pValue,3)
   }
-  
-  b = boxplot(expression ~ clin, data = Simmuedata1,outline = FALSE, plot=F) 
+
+  b = boxplot(expression ~ clin, data = Simmuedata1,outline = FALSE, plot=F)
   yMin=min(b$stats)
   yMax = max(b$stats/5+b$stats)
   ySeg = max(b$stats/10+b$stats)
   ySeg2 = max(b$stats/12+b$stats)
   n = ncol(b$stats)
-  
+
   tiffFile=paste0(i,".",clin,".tiff")
   outTiff=paste0(outputPath,"immueStageFig\\",tiffFile)
   tiff(file=outTiff,width = 25,height = 15,
@@ -483,15 +483,13 @@ for(i in colnames(Simmuedata[,2:ncol(Simmuedata)])){
   segments(n,ySeg, n,ySeg2)
   text((1+n)/2,ySeg,labels=paste0("p=",pval),cex=1.5,pos=3)
   dev.off()
-  
+
 }
 write.table(StageR,file=paste0(outputPath,"immueStageFig\\",clin,".xls"),
             sep="\t",row.names=F,quote=F)
 ```
 
 ![1612608562758-b3df994d-c937-4b45-8de9-3ce83c47a6dc.jpeg](./img/ab7ucakEf8elXTg-/1612608562758-b3df994d-c937-4b45-8de9-3ce83c47a6dc-942976.jpeg)
-
-
 
 下面是代码，和免疫浸润结果文件。
 
@@ -501,11 +499,9 @@ write.table(StageR,file=paste0(outputPath,"immueStageFig\\",clin,".xls"),
 
 提取码：**v9tx **
 
-如果失效，后台回复：**<font style="color:#FF0000;">TCGA-ImmuneInfiltration</font>**
+如果失效，后台回复：**TCGA-ImmuneInfiltration**
 
-**<font style="color:#FF0000;">温馨提示：代码是死的，人是活的，还有，代码禁止传播，想别人和你一起发文章，我也拦不住。</font>**
+**温馨提示：代码是死的，人是活的，还有，代码禁止传播，想别人和你一起发文章，我也拦不住。**
 
-
-
-> 更新: 2021-02-06 19:56:28  
+> 更新: 2021-02-06 19:56:28
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/anfqfn>

@@ -13,6 +13,7 @@ title: 面向开发的Markdown讲座
 **Lecture特色**：不仅仅讲`markdown`本身，会从`markdown`延伸出去，有一些扩展的内容
 
 ## 表达与说明的方式
+
 我们要给别人说明一样东西、一样事情的时候，往往需要至少一种的表达方式：比如用语言、用文字、用图片、视频、音乐等媒体；或者将它们结合起来，比如`PPT`。
 
 但其实一般来说，更方便的保留和传播的一种方式是文字。但如果只有文字，总是会让人觉得有些索然无味。这时，带格式的文字作为一种增强的表达方式出现了。大家最常用的可能就是`Microsoft Word`。你在`Word`中敲好文字，然后添加一些格式，比如加粗、斜体、居中、设置段落格式、艺术字和颜色调整；这样文字也变得有表现力了起来。
@@ -67,16 +68,19 @@ Hello, world!
 [CSDN｜Swift Markup Formatting Syntax](https://blog.csdn.net/qq_45379253/article/details/113253433)
 
 ### Markdown语法
+
 下面我们来介绍`markdown`文件到底怎么写：
 
 说“语法”什么的有点专业了。刚刚我们说到——`markdown`用一些特殊的字符（如`* # [] () …`）给纯文本带来格式，其实语法指的就是这些规则。那么下面我们就来学习如何用这些特殊符号来在纯文本中表达格式。
 
 #### 具体语法
+
 [GitHub Guides | Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 
 `markdown`有不少扩展的语法，我们主要学习它最基础的语法，和一些`GitHub`支持的语法，因为我们之后写`markdown`文件可能主要是用来写项目的`README.md`，而这些项目的代码仓库，我们很可能就在`GitHub`存放。
 
 ##### Headers 标题
+
 `1`～`6`个井号加一个空格再加上标题的名称
 
 ```
@@ -130,6 +134,7 @@ _You **can** combine them_
     * Item 2b
 
 ###### Ordered 有序列表
+
 这里可以缩进的哦，缩进会重新编号，或者变成小标题（如`1.1` `2.1.3`这样）
 
 ```
@@ -220,15 +225,15 @@ print(natural_numbers.capacity)
 ```
 As Tim Cook said:
 
-> Fearlessness means taking the frst step, 
+> Fearlessness means taking the frst step,
 > even if you don't know where it will take you.
 ```
 
 As Tim Cook said:
 
-> Fearlessness means taking the frst step, 
+> Fearlessness means taking the frst step,
 > even if you don't know where it will take you.
-> 
+>
 > ——Tim Cook's Commencement Address at Duke University, 2018
 
 我一般会用它来在文章开头写一下文档的更新日期和作者。
@@ -301,7 +306,11 @@ Content in the first column | Content in the second column
 
 但这样，你就需要在和你现在写的`markdown`的同一目录下，放一个`media`文件夹，里面有这张`markdown_icon.png`的图片。
 
-有的时候，图片和代码相比起来，是个庞然大物（`1KB` vs `1MB`），这时我们不希望将图片加入到项目中（指不希望项目的体积很大，别人从`GitHub`上下载项目时花的时间过久），可是在项目说明中还需要加入图片进行说明，这时怎么办呢？最简单的，将图片压缩一下（`1MB->100KB`）扔进项目文件夹，这是最省心的…但要是图比较多，一般来说，我们会选择某些厂商的对象存储服务，将这些图片资源放到比如阿里云的服务器上，然后这个服务把图片的网络链接给你，你就可以在`markdown`中使用这个链接了。如果没有那么正式，那么这种服务叫做图床。比如我一直在用的[聚合图床](https://www.superbed.cn)，你把图片丢进去，它帮你将图片转为一个链接。但是使用这种服务也有需要注意的地方，如果运营图床的工作室哪天跑路了，你放进去的图片可能就没了。
+有的时候，图片和代码相比起来，是个庞然大物（`1KB` vs `1MB`），这时我们不希望将图片加入到项目中（指不希望项目的体积很大，别人从`GitHub`上下载项目时花的时间过久），可是在项目说明中还需要加入图片进行说明，这时怎么办呢？
+最简单的，将图片压缩一下（`1MB->100KB`）扔进项目文件夹，这是最省心的…但要是图比较多，一般来说，我们会选择某些厂商的对象存储服务，将这些图片资源放到比如阿里云的服务器上，然后这个服务把图片的网络链接给你，你就可以在`markdown`中使用这个链接了。
+如果没有那么正式，那么这种服务叫做图床。
+比如我一直在用的[聚合图床](https://www.superbed.cn)，你把图片丢进去，它帮你将图片转为一个链接。
+但是使用这种服务也有需要注意的地方，如果运营图床的工作室哪天跑路了，你放进去的图片可能就没了。
 
 #### 添加目录
 

@@ -17,7 +17,7 @@ pbmc.stim, pbmc.ctrl是2给批次的单细胞数据。
 ```r
 library(Seurat)
 data("pbmc_stim")
-pbmc <- CreateSeuratObject(counts = cbind(pbmc.stim, pbmc.ctrl), 
+pbmc <- CreateSeuratObject(counts = cbind(pbmc.stim, pbmc.ctrl),
                            project = "PBMC", min.cells = 5)
 ```
 
@@ -35,7 +35,7 @@ pbmc <- pbmc %>%
   NormalizeData(verbose = FALSE)
 VariableFeatures(pbmc) <- split(row.names(pbmc@meta.data), pbmc@meta.data$batch) %>% lapply(function(cells_use) {
   pbmc[,cells_use] %>%
-    FindVariableFeatures(selection.method = "vst", nfeatures = 2000) %>% 
+    FindVariableFeatures(selection.method = "vst", nfeatures = 2000) %>%
     VariableFeatures()
 }) %>% unlist %>% unique
 ```
@@ -43,8 +43,8 @@ VariableFeatures(pbmc) <- split(row.names(pbmc@meta.data), pbmc@meta.data$batch)
 #### (4) PCA降维
 
 ```python
-pbmc <- pbmc %>% 
-  ScaleData(verbose = FALSE) %>% 
+pbmc <- pbmc %>%
+  ScaleData(verbose = FALSE) %>%
   RunPCA(features = VariableFeatures(pbmc), npcs = 20, verbose = FALSE)
 ```
 
@@ -66,8 +66,8 @@ plot_grid(p1,p2)
 bacth就是分组变量，相当于2个批次效应的单细胞数据分组信息`pbmc@meta.data$bacth`。
 
 ```python
-pbmc <- pbmc %>% 
-  RunHarmony("batch", plot_convergence = TRUE, 
+pbmc <- pbmc %>%
+  RunHarmony("batch", plot_convergence = TRUE,
              nclust = 50, max_iter = 10, early_stop = T)
 ```
 
@@ -133,9 +133,9 @@ harmony_embeddings[1:4, 1:4]
 
 ```r
 options(repr.plot.height = 5, repr.plot.width = 12)
-p1 <- DimPlot(object = pbmc, reduction = "harmony", pt.size = .1, 
+p1 <- DimPlot(object = pbmc, reduction = "harmony", pt.size = .1,
               group.by = "batch")
-p2 <- VlnPlot(object = pbmc, features = "harmony_1", 
+p2 <- VlnPlot(object = pbmc, features = "harmony_1",
               group.by = "batch", pt.size = .1)
 plot_grid(p1,p2)
 ```
@@ -207,11 +207,11 @@ exp.rawdata <- as.matrix(sce.big@assays$RNA@counts)
 
 ```r
 library(copykat)
-copykat.test <- copykat(rawmat=exp.rawdata, id.type="S", 
-                        ngene.chr=5, win.size=25, KS.cut=0.1, 
-                        sam.name="test", distance="euclidean", 
+copykat.test <- copykat(rawmat=exp.rawdata, id.type="S",
+                        ngene.chr=5, win.size=25, KS.cut=0.1,
+                        sam.name="test", distance="euclidean",
                         norm.cell.names="",
-                        output.seg="FLASE", plot.genes="TRUE", 
+                        output.seg="FLASE", plot.genes="TRUE",
                         genome="hg20",n.cores=1)
 ```
 
@@ -286,6 +286,5 @@ heatmap.3(t(tumor.mat),dendrogram="r", distfun = function(x) parallelDist::parDi
 
 <https://github.com/navinlabcode/copykat>
 
-
-> 更新: 2023-12-23 15:05:12  
+> 更新: 2023-12-23 15:05:12
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/snlx1hu2cnsir1dh>

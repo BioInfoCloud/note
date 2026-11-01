@@ -2,7 +2,6 @@
 
 ### （1）查看鸢尾花iris数据集
 
-
 ```python
 #对鸢尾花iris数据集进行调用，查看数据的各方面特征。
 from sklearn.datasets import load_iris
@@ -14,7 +13,7 @@ print("数据类型:\n",type(iris_dataset['data']))    #查看数据类型
 print("数据维度:\n",iris_dataset['data'].shape)    #查看数据的结构
 print("前五条数据:\n{}".format(iris_dataset['data'][:5]))  #查看前5条数据
 #查看分类信息
-print("标记名:\n",iris_dataset['target_names']) 
+print("标记名:\n",iris_dataset['target_names'])
 print("标记类型:\n",type(iris_dataset['target']))
 print("标记维度:\n",iris_dataset['target'].shape)
 print("标记值:\n",iris_dataset['target'])
@@ -50,11 +49,9 @@ print('数据集简介：\n',iris_dataset['DESCR'][:20] + "\n.......")  #数据�
      2 2]
     数据集简介：
      .. _iris_dataset:
-    
+
     I
     .......
-
-
 
 ```python
 #对iris数据集进行拆分，并查看拆分结果。
@@ -230,8 +227,6 @@ print("X_test shape: {}".format(X_test.shape))
     X_train shape: (112, 4)
     X_test shape: (38, 4)
 
-
-
 ```python
 # 使用scatter_matrix显示训练集与测试集。
 import pandas as pd
@@ -240,9 +235,6 @@ iris_dataframe = pd.DataFrame(X_train, columns=iris_dataset.feature_names)
 pd.plotting.scatter_matrix(iris_dataframe, c=y_train, figsize=(15, 15), marker='o', hist_kwds={'bins': 20}, s=60, alpha=.8)
 
 ```
-
-
-
 
     array([[<matplotlib.axes._subplots.AxesSubplot object at 0x0000020790084860>,
             <matplotlib.axes._subplots.AxesSubplot object at 0x00000207900A3E10>,
@@ -262,16 +254,11 @@ pd.plotting.scatter_matrix(iris_dataframe, c=y_train, figsize=(15, 15), marker='
             <matplotlib.axes._subplots.AxesSubplot object at 0x000002079030DA58>]],
           dtype=object)
 
-
-
-
-​    
+​
 ![png](output_3_1.png)
-​    
-
+​
 
 ### （2）使用KNN对鸢尾花iris数据集进行分类。
-
 
 ```python
 from sklearn import datasets
@@ -305,9 +292,7 @@ print('预测精确率：',knn.score(iris_test_X, iris_test_y))
     预测结果： [2 1 0 2 0 2 0 1 1 1 2 1 1 1 2 0 1 1 0 0 2 1 0 0 2 0 0 1 1 0]
     预测精确率： 0.9666666666666667
 
-
 ### （3）使用KNN方法实现手写数字识别。
-
 
 ```python
 #coding=utf-8
@@ -316,12 +301,12 @@ from os import listdir
 
 def loadDataSet():   #加载数据集
     #获取训练数据集
-    print("1.Loading trainSet...")    
-    trainFileList = listdir('HWdigits/trainSet') 
+    print("1.Loading trainSet...")
+    trainFileList = listdir('HWdigits/trainSet')
     trainNum = len(trainFileList)
 
-    trainX = np.zeros((trainNum, 32*32))    
-    trainY = []    
+    trainX = np.zeros((trainNum, 32*32))
+    trainY = []
     for i in range(trainNum):
         trainFile = trainFileList[i]
         #将训练数据集向量化
@@ -333,7 +318,7 @@ def loadDataSet():   #加载数据集
     testFileList = listdir('HWdigits/testSet')
     testNum = len(testFileList)
     testX = np.zeros((testNum, 32*32))
-    testY = []    
+    testY = []
     for i in range(testNum):
         testFile = testFileList[i]
         #将测试数据集向量化
@@ -349,26 +334,26 @@ def img2vector(filename,h,w):      # 将32*32的文本转化为向量
         for col in range(w):
             imgVector[0, row * 32 + col] = int(lineStr[col])
     return imgVector
-def myKNN(testDigit, trainX, trainY, k):  
-    numSamples = trainX.shape[0]  #shape[0]代表行，每行一个图片，得到样本个数    
-    #1.计算欧式距离    
+def myKNN(testDigit, trainX, trainY, k):
+    numSamples = trainX.shape[0]  #shape[0]代表行，每行一个图片，得到样本个数
+    #1.计算欧式距离
     diff=[]
-    for n in range(numSamples):        
+    for n in range(numSamples):
         diff.append(testDigit-trainX[n])  #每个个体差
     diff=np.array(diff)                 #转变为ndarray
     #对差求平方和，然后取和的平方根
-    squaredDiff = diff ** 2  
+    squaredDiff = diff ** 2
     squaredDist = np.sum(squaredDiff, axis = 1)
     distance = squaredDist ** 0.5
-    #2.按距离进行排序    
+    #2.按距离进行排序
     sortedDistIndices = np.argsort(distance)
-    classCount = {}                   #存放各类别的个体数量 
+    classCount = {}                   #存放各类别的个体数量
     for i in range(k):
         #3.按顺序读取标签
         voteLabel = trainY[sortedDistIndices[i]]
-        #4.计算该标签次数        
+        #4.计算该标签次数
         classCount[voteLabel] = classCount.get(voteLabel, 0) + 1
-    
+
     #5.查找出现次数最多的类别，作为分类结果
     maxCount = 0
     for key, value in classCount.items():
@@ -383,10 +368,10 @@ matchCount = 0
 print("3.Find the most frequent label in k-nearest...")
 print("4.Show the result...")
 for i in range(numTestSamples):
-    predict = myKNN(test_x[i], train_x, train_y, 3)    
+    predict = myKNN(test_x[i], train_x, train_y, 3)
     print("result is: %d, real answer is: %d" % (predict,test_y[i]))
     if predict == test_y[i]:
-        matchCount += 1        
+        matchCount += 1
 accuracy = float(matchCount) / numTestSamples
 # 5.输出结果
 print("5.Show the accuracy...")
@@ -936,7 +921,6 @@ print('  The classify accuracy is: %.2f%%' % (accuracy * 100))
 
 ## 二、使用KNN进行水果分类。
 
-
 ```python
 from sklearn import datasets
 from sklearn.neighbors import KNeighborsClassifier
@@ -980,9 +964,7 @@ print('预测精确率：',knn.score(fruit_test_X,fruit_test_y))
     预测结果： [3 3 4 1 3 2 1 3 1 4 2 1]
     预测精确率： 0.6666666666666666
 
-
 ## 三、绘制KNN分类器图
-
 
 ```python
 import numpy as np
@@ -997,22 +979,20 @@ irisTarget = iris.target
 clf = neighbors.KNeighborsClassifier(5) # K=5
 clf.fit(irisData, irisTarget)
 
-#绘制plot 
+#绘制plot
 ColorMp = ListedColormap(['#005500', '#00AA00', '#00FF00'])
 X_min, X_max = irisData[:, 0].min(), irisData[:, 0].max()
 Y_min, Y_max = irisData[:, 1].min(), irisData[:, 1].max()
 X, Y = np.meshgrid(np.arange(X_min, X_max, 1/50),np.arange(Y_min, Y_max,1/50))
 #预测
 label = clf.predict(np.c_[X.ravel(), Y.ravel()])
-label = label.reshape(X.shape) 
+label = label.reshape(X.shape)
 #绘图并显示
 plt.figure()
 plt.pcolormesh(X,Y,label,cmap=ColorMp)
 plt.show()
 ```
 
-
-​    
+​
 ![png](output_11_0.png)
-​    
-
+​

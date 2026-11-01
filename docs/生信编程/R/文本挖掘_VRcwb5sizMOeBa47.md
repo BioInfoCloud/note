@@ -1,6 +1,7 @@
 # 文本挖掘
 
 # 一.文本挖掘的一般过程
+
 参考:[http://www.sthda.com/english/wiki/text-mining-and-word-cloud-fundamentals-in-r-5-simple-steps-you-should-know](http://www.sthda.com/english/wiki/text-mining-and-word-cloud-fundamentals-in-r-5-simple-steps-you-should-know)
 
 电子书:[https://www.tidytextmining.com/](https://www.tidytextmining.com/)
@@ -15,7 +16,7 @@ Step 2 : Install and load the required packages
 # Install
 install.packages("tm")  # for text mining
 install.packages("SnowballC") # for text stemming
-install.packages("wordcloud") # word-cloud generator 
+install.packages("wordcloud") # word-cloud generator
 install.packages("RColorBrewer") # color palettes
 # Load
 library("tm")
@@ -40,8 +41,8 @@ VectorSource(x)函数：向量源将向量x的每个元素解释为一个文档�
 
 其他读入函数：
 
-+ **<font style="color:rgb(55, 55, 55);">read.csv() is</font>**<font style="color:rgb(55, 55, 55);"> </font><font style="color:rgb(55, 55, 55);">used for reading comma-separated value (csv) files, where a comma “,” is used a field separator</font>
-+ **<font style="color:rgb(55, 55, 55);">read.delim()</font>**<font style="color:rgb(55, 55, 55);"> is used for reading tab-separated values (.txt) files</font>
++ **read.csv() is** used for reading comma-separated value (csv) files, where a comma “,” is used a field separator
++ **read.delim()** is used for reading tab-separated values (.txt) files
 
 Inspect the content of the document
 
@@ -77,7 +78,7 @@ docs <- tm_map(docs, removeNumbers)
 docs <- tm_map(docs, removeWords, stopwords("english"))
 # Remove your own stop word
 # specify your stopwords as a character vector
-docs <- tm_map(docs, removeWords, c("blabla1", "blabla2")) 
+docs <- tm_map(docs, removeWords, c("blabla1", "blabla2"))
 # Remove punctuations
 docs <- tm_map(docs, removePunctuation)
 # Eliminate extra white spaces
@@ -107,7 +108,7 @@ Step 5 : Generate the Word cloud
 ```r
 set.seed(1234)
 wordcloud(words = d$word, freq = d$freq, min.freq = 1,
-          max.words=200, random.order=FALSE, rot.per=0.35, 
+          max.words=200, random.order=FALSE, rot.per=0.35,
           colors=brewer.pal(8, "Dark2"))
 ```
 
@@ -116,8 +117,8 @@ Step 6 :Word Association
 相关性是一种统计技术，它可以证明成对的变量是否以及多大程度上是相关的。这种技术可以有效地用于分析哪些单词与调查回答中最频繁出现的单词联系在一起，这有助于查看这些单词周围的上下文。
 
 ```r
-# Find associations 
-findAssocs(TextDoc_dtm, terms = c("good","work","health"), corlimit = 0.25)			
+# Find associations
+findAssocs(TextDoc_dtm, terms = c("good","work","health"), corlimit = 0.25)
 ```
 
 您可以修改上述脚本，以查找与出现至少50次或以上的单词相关的术语，而不必在脚本中硬编码这些术语。
@@ -267,13 +268,14 @@ findAssocs(dtm, terms = findFreqTerms(dtm, lowfreq = 10), corlimit = 0.25)
 
 ```r
 $cancer
-             cervical             apoptosis            colorectal            metastasis 
-                 0.56                  0.36                  0.36                  0.29 
-epithelialmesenchymal             functions                 liver 
-                 0.29                  0.29                  0.29 
+             cervical             apoptosis            colorectal            metastasis
+                 0.56                  0.36                  0.36                  0.29
+epithelialmesenchymal             functions                 liver
+                 0.29                  0.29                  0.29
 ```
 
 # 三. 作业二：TCGA计划官方文章
+
 TCGA计划官方文章在：[https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/publications](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/publications)
 
 ```r
@@ -399,6 +401,7 @@ wordcloud2(d,size = 0.6)
 ```
 
 # 四. 作业三：研究最热门的基因是什么
+
 在 NCBI的ftp里面关于人的一些基因信息， 在 ：ftp://ftp.ncbi.nlm.nih.gov//gene 下载即可！
 
 其中 gene2pubmed.gz 这个是NCBI的entrez ID号对应着该基因发表过的文章的ID号
@@ -426,8 +429,6 @@ wordcloud(words = tbs$symbol, freq = tbs$Freq, min.freq = 1,
           colors=brewer.pal(8, "Dark2"))
 ```
 
-
-
 下载NCBI的文献数据：
 
 原本是想通过包来提取的，结果会挂。
@@ -445,8 +446,6 @@ lapply(dlurl,function(u){
   download.file(au,destfile =file_destination)
 })
 ```
-
-
 
 [https://ftp.ncbi.nlm.nih.gov/pubmed](https://ftp.ncbi.nlm.nih.gov/pubmed)。baseline是已经整理好的。updatefiles用于每天更新的内容。这些文件存储的内容包括文章接受日期，修订日期，作者，摘要，杂志社等等，同时也包括被撤回的文章。可以下载后整理：
 
@@ -477,18 +476,12 @@ wget -i fileurl.txt
 
 直接爬虫，会被和谐哦
 
-
-
-
-
-
-
 用已有R包：
 
 ```r
 library(RISmed)
 ##限定下检索主题
-search_topic <- c('DNA methylation in plant') 
+search_topic <- c('DNA methylation in plant')
 search_query <- EUtilsSummary(search_topic,db="pubmed", retmax=10000,datetype='pdat', mindate=2000, maxdate=2018)
 ##查查看下检索内容
 summary(search_query)
@@ -523,13 +516,18 @@ ggplot(data=count, aes(x=Year, y=Counts,fill=Year)) +
 ```
 
 # 五. 作业四：研究的基因信息统计
-<font style="color:rgb(51, 51, 51);"></font><font style="color:rgb(51, 51, 51);">前面文章</font>[什么基因研究最多？？](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651276465&idx=1&sn=46b0f163152672dd1ae4ee9acfa554fb&chksm=841ea0ccb36929daa8696264983ce3b1aba9074c6be368cc662fd011dcbc31beea34d00d90d9&scene=21#wechat_redirect)<font style="color:rgb(51, 51, 51);">中下载的gene与pubmed的文献ID的文件，统计了研究基因与出版文献的对应关系。这里来探索一下你研究的基因，发表的文献，可以看看都发表在什么期刊，对题目进行文本挖掘，可以统计每年的发表文献数量等等。。。。</font>
 
-<font style="color:rgb(51, 51, 51);">下面是探索ADORA1这个基因的研究情况。</font>
+前面文章[什么基因研究最多？？](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651276465&idx=1&sn=46b0f163152672dd1ae4ee9acfa554fb&chksm=841ea0ccb36929daa8696264983ce3b1aba9074c6be368cc662fd011dcbc31beea34d00d90d9&scene=21#wechat_redirect)中下载的gene与pubmed的文献ID的文件，统计了研究基因与出版文献的对应关系。
+这里来探索一下你研究的基因，发表的文献，可以看看都发表在什么期刊，对题目进行文本挖掘，可以统计每年的发表文献数量等等。
+。
+。
+。
 
-<font style="color:rgb(51, 51, 51);">信息是通过网络爬虫的形式获取，中间可能会断，所以下面代码是爬取一个就写入一个到本地文件</font><font style="color:rgb(221, 17, 68);">ADORA1.txt</font><font style="color:rgb(51, 51, 51);">中，如果中断，可以修改一下代码，接着爬，但这还只是适用于数量小的情况。</font>
+下面是探索ADORA1这个基因的研究情况。
 
-<font style="color:rgb(51, 51, 51);">接着文章【</font>[什么基因研究最多？？](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651276465&idx=1&sn=46b0f163152672dd1ae4ee9acfa554fb&chksm=841ea0ccb36929daa8696264983ce3b1aba9074c6be368cc662fd011dcbc31beea34d00d90d9&scene=21#wechat_redirect)<font style="color:rgb(51, 51, 51);">】的g2p数据框。</font>
+信息是通过网络爬虫的形式获取，中间可能会断，所以下面代码是爬取一个就写入一个到本地文件ADORA1.txt中，如果中断，可以修改一下代码，接着爬，但这还只是适用于数量小的情况。
+
+接着文章【[什么基因研究最多？？](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651276465&idx=1&sn=46b0f163152672dd1ae4ee9acfa554fb&chksm=841ea0ccb36929daa8696264983ce3b1aba9074c6be368cc662fd011dcbc31beea34d00d90d9&scene=21#wechat_redirect)】的g2p数据框。
 
 ```r
 pid <- g2p$PubMed_ID[g2p$GeneID==tbs$gene_id[tbs$symbol=="ADORA1"]]
@@ -578,12 +576,12 @@ ggplot(staty,aes(x = Var1,y=Freq))+
 
 ![1633141992195-8ed64632-c962-4122-9351-9186c9f64484.png](./img/VRcwb5sizMOeBa47/1633141992195-8ed64632-c962-4122-9351-9186c9f64484-070086.png)
 
-<font style="color:rgb(51, 51, 51);">这里就可以看见基本的信息了。  
-</font><font style="color:rgb(51, 51, 51);">先看看每一年发表的文章。</font>
+这里就可以看见基本的信息了。
+先看看每一年发表的文章。
 
 ![1633142041498-9352568e-b268-4982-be2a-7341ae58b239.png](./img/VRcwb5sizMOeBa47/1633142041498-9352568e-b268-4982-be2a-7341ae58b239-541366.png)
 
-<font style="color:rgb(51, 51, 51);">有一个R包RISmed是可以用来探索pubmed数据库的数据的，像上面这种还是会挂。你可以尝试一下。下面代码，所以每一个循环设置了睡眠2s。</font>
+有一个R包RISmed是可以用来探索pubmed数据库的数据的，像上面这种还是会挂。你可以尝试一下。下面代码，所以每一个循环设置了睡眠2s。
 
 ```r
 library(RISmed)
@@ -603,7 +601,7 @@ ADORA1_pubmeddata <- do.call(rbind,linfo)
 save(ADORA1_pubmeddata,file= "data/NCBI/pubmeddata.Rdata")
 ```
 
-<font style="color:rgb(51, 51, 51);">下面就看看这些文章的词云图</font>
+下面就看看这些文章的词云图
 
 ```r
 library("tm")
@@ -645,12 +643,7 @@ wordcloud(words = d$word, freq = d$freq, min.freq = 1,
 
 ![1633141941365-76f6131d-cc2c-43db-8a66-b2587702e061.png](./img/VRcwb5sizMOeBa47/1633141941365-76f6131d-cc2c-43db-8a66-b2587702e061-783448.png)
 
-<font style="color:rgb(51, 51, 51);">上面2种方式，获取文献信息，对于文献个数多，总是会挂的，比较是基于网络请求的方法。在NCBI上，是有所有文献的信息数据的，可以直接下载，唯一的缺点就是数据量不小，而且是xml的文件，需要全部整理统计出来。下面是下载地址：  
-</font>
+上面2种方式，获取文献信息，对于文献个数多，总是会挂的，比较是基于网络请求的方法。在NCBI上，是有所有文献的信息数据的，可以直接下载，唯一的缺点就是数据量不小，而且是xml的文件，需要全部整理统计出来。下面是下载地址：
 
-
-
-
-
-> 更新: 2021-10-05 09:54:40  
+> 更新: 2021-10-05 09:54:40
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/tvfggw>

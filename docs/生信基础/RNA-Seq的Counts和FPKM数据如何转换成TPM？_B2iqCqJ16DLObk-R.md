@@ -1,6 +1,11 @@
 # RNA-Seq的Counts和FPKM数据如何转换成TPM？
 
-我们做转录组分析，得到的数据通常是raw counts 的数据，raw counts 的数据有很多R包进行归一化。在TCGA数据库中下载的RNA-Seq的数据就有2种形式，raw counts 和FPKM，**尽管有很多文章是直接利用FPKM进行分析的**，但是FPKM存在不准确性，通常我们会使用TPM。关于什么是FPKM？什么是TPM？我在前面的文章中就有介绍：[**<font style="color:#0052FF;">RNA-seq的counts,RPM, RPKM, FPK值到底有什么区别？</font>**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264575&idx=2&sn=69b45012dbfe61d7574446de00ec9a7b&chksm=841ef242b3697b54484a64f82bba4372a8fb2b4d411b1c1fc2bc68d12aa44756f96c3b8e48f5&scene=21#wechat_redirect)。这里再简单回归一下：
+我们做转录组分析，得到的数据通常是raw counts 的数据，raw counts 的数据有很多R包进行归一化。
+在TCGA数据库中下载的RNA-Seq的数据就有2种形式，raw counts 和FPKM，**尽管有很多文章是直接利用FPKM进行分析的**，但是FPKM存在不准确性，通常我们会使用TPM。
+关于什么是FPKM？
+什么是TPM？
+我在前面的文章中就有介绍：[**RNA-seq的counts,RPM, RPKM, FPK值到底有什么区别？**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264575&idx=2&sn=69b45012dbfe61d7574446de00ec9a7b&chksm=841ef242b3697b54484a64f82bba4372a8fb2b4d411b1c1fc2bc68d12aa44756f96c3b8e48f5&scene=21#wechat_redirect)。
+这里再简单回归一下：
 
 **count：**原始测序得到的count数就是比对到某个基因i上的总数目；不知道大家是否了解测序的简单过程？在测序分析过程中，我们首先是将测得的短reads比对到参考基因组上，然后通过软件来计算该片段上比对到reads的数量，也就是说呢，count是一个整数值。
 
@@ -10,11 +15,11 @@
 
 如果从原始的下机数据开始分析，那就根据自己需要进行转换，但通常我们大多数拿到的是raw counts数据，一般送测序，也会要求返回raw counts的数据，从数据库下载的数据我们通常也是选择raw counts数据或者FPKM的数据。那么我们如何将这些数据进行转换成TPM的数据呢？read count和FPKM结果都可以转成TPM，但是因为FPKM跟TPM的计算都考虑了基因长度，所以从FPKM转TPM最方便快捷。只需要按照下面公式就可以计算：
 
-具体可参考前面的文章：[**<font style="color:#0052FF;">RNA-seq的counts,RPM, RPKM, FPK值到底有什么区别？</font>**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264575&idx=2&sn=69b45012dbfe61d7574446de00ec9a7b&chksm=841ef242b3697b54484a64f82bba4372a8fb2b4d411b1c1fc2bc68d12aa44756f96c3b8e48f5&scene=21#wechat_redirect)，这里提供的是R代码。
+具体可参考前面的文章：[**RNA-seq的counts,RPM, RPKM, FPK值到底有什么区别？**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264575&idx=2&sn=69b45012dbfe61d7574446de00ec9a7b&chksm=841ef242b3697b54484a64f82bba4372a8fb2b4d411b1c1fc2bc68d12aa44756f96c3b8e48f5&scene=21#wechat_redirect)，这里提供的是R代码。
 
 首先我们得有FPKM的数据，这里我以之前TCGA数据库的数据为例。
 
-链接：[https://pan.baidu.com/s/1rsRPgcdB9tCK7oGRWQLxYw](https://pan.baidu.com/s/1rsRPgcdB9tCK7oGRWQLxYw)  提取码：molg 
+链接：[https://pan.baidu.com/s/1rsRPgcdB9tCK7oGRWQLxYw](https://pan.baidu.com/s/1rsRPgcdB9tCK7oGRWQLxYw)  提取码：molg
 
 ```r
 load("F:/TCGA/HTSeq-FPKM/Rdata/data/TCGA-COAD-Exp.Rdata")
@@ -38,23 +43,21 @@ FPKM2TPM <- function(fpkm){
 }
 ```
 
-<font style="color:#333333;">然后我们利用apply函数进行遍历，就可以转换啦。</font>
+然后我们利用apply函数进行遍历，就可以转换啦。
 
 ```r
 TPMs <- apply(exp,2,FPKM2TPM)
 ```
 
-<font style="color:#333333;">上面是FPKM转TPM，但是如果是count转TPM就比较麻烦一下，虽然我在文章【</font>[RNA-Seq的Counts和FPKM数据如何转换成TPM？](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272981&idx=1&sn=d5ef893cb6a61210ae765ae2cf0f93c4&scene=21#wechat_redirect)<font style="color:#333333;">】中有给出函数，但是，并每天给出里面一个参数的计算，那就基因长度的计算。这里，我们来看一下基因Length的计算方法。</font>
+上面是FPKM转TPM，但是如果是count转TPM就比较麻烦一下，虽然我在文章【[RNA-Seq的Counts和FPKM数据如何转换成TPM？](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272981&idx=1&sn=d5ef893cb6a61210ae765ae2cf0f93c4&scene=21#wechat_redirect)】中有给出函数，但是，并每天给出里面一个参数的计算，那就基因长度的计算。这里，我们来看一下基因Length的计算方法。
 
-<font style="color:#333333;">相信大家必然听说过可变剪切的概念，也正是因为可变剪切的存在，同一个基因会产生不同的转录本。在这里呢，又会产生两种不同的分析思路：</font>
+相信大家必然听说过可变剪切的概念，也正是因为可变剪切的存在，同一个基因会产生不同的转录本。在这里呢，又会产生两种不同的分析思路：
 
-<font style="color:#333333;">思路1:计算基因在染色体的起始和结束之差；</font>
+思路1:计算基因在染色体的起始和结束之差；
 
-<font style="color:#333333;">思路2：计算每个基因的最长转录本或所有外显子之和；</font>
+思路2：计算每个基因的最长转录本或所有外显子之和；
 
-<font style="color:#333333;">那么，又有一个问题产生了，如何去获取基因在染色体上的位置信息呢？对基因组测序或分析有些了解的小伙伴应该对这几个文件类型有所接触，想fasta文件是保存基因DNA或RNA的测序信息，gtf、gff以及gf3文件则都是保存基因注释的文件。我在</font>[各种基因ID装换](https://www.yuque.com/doublehelix/bioinfonotes/ey6aby)<font style="color:#333333;">的文章中就用到这个文件。不过这里用的是人的基因注释文件，如果你的是其他物种，需要下载相应物种的注释文件。</font>
-
-<font style="color:#333333;"></font>
+那么，又有一个问题产生了，如何去获取基因在染色体上的位置信息呢？对基因组测序或分析有些了解的小伙伴应该对这几个文件类型有所接触，想fasta文件是保存基因DNA或RNA的测序信息，gtf、gff以及gf3文件则都是保存基因注释的文件。我在[各种基因ID装换](https://www.yuque.com/doublehelix/bioinfonotes/ey6aby)的文章中就用到这个文件。不过这里用的是人的基因注释文件，如果你的是其他物种，需要下载相应物种的注释文件。
 
 我们读入gtf注释文件
 
@@ -71,7 +74,7 @@ exonic.gene.sizes <- lapply(exons.list.per.gene,
 #生成的geneID为ensemble编号
 eff_length <- do.call(rbind,lapply(exonic.gene.sizes, data.frame))
 eff_length <- data.frame(gene_id = rownames(eff_length),effLen = eff_length[,1])
-rownames(eff_length)<-eff_length$gene_id 
+rownames(eff_length)<-eff_length$gene_id
 rownames(eff_length) <- do.call(rbind,strsplit(as.character(eff_length$gene_id),'\\.'))[,1]
 head(eff_length)
 ```
@@ -138,9 +141,5 @@ tpms <- as.data.frame(apply(rt, 2, Counts2TPM, effLen = eff_length$effLen))
 tpms2 <- apply(fpkms,2,FPKM2TPM)
 ```
 
-
-
-
-
-> 更新: 2021-02-03 15:19:22  
+> 更新: 2021-02-03 15:19:22
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/codpdc>

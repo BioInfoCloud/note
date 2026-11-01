@@ -2,9 +2,9 @@
 
 ![1610773180962-4ccb3d56-40c5-408f-917f-4f55f067b7de.gif](./img/uiDhZC5sbsRnkS0W/1610773180962-4ccb3d56-40c5-408f-917f-4f55f067b7de-629554.gif)
 
-[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;"> | </font>**[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;"> | </font>**[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;"> | </font>**[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;">| </font>**[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**| **[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
-[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;"> | </font>**[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;"> | 服务器与</font>**[**Linux**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1410264757734817793&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | 服务器与**[**Linux**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1410264757734817793&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
 ---
 
@@ -14,12 +14,9 @@ NCBI Gene Expression Omnibus（GEO）作为各种高通量实验数据的公共�
 
 在GEO最基本的组织层面，有四种基本实体类型。前三个（样本，平台和系列）由用户提供; 第四，数据集由GEO工作人员根据用户提交的数据进行编译和策划。
 
-# 一.检索 
+# 一.检索
 
-
-检索界面，网址：[<font style="color:#3194D0;">http://www.ncbi.nlm.nih.gov/geo</font>](http://www.ncbi.nlm.nih.gov/geo)
-
-
+检索界面，网址：[http://www.ncbi.nlm.nih.gov/geo](http://www.ncbi.nlm.nih.gov/geo)
 
 ![1610773180966-58be52c0-3280-4693-9d4c-fdd9ab3c95c9.jpeg](./img/uiDhZC5sbsRnkS0W/1610773180966-58be52c0-3280-4693-9d4c-fdd9ab3c95c9-202716.jpeg)
 
@@ -34,28 +31,22 @@ NCBI Gene Expression Omnibus（GEO）作为各种高通量实验数据的公共�
 搜索结果可以通过7来设置每页显示个数，通过8选择排序方式，可以通过左侧的选项对搜索结果进行筛选。Entry type有四种:Datasets，Series，Samples，Platforms。分别对应的是，GEO Dataset (GDS) 数据集的ID号、GEO Series (GSE) 研究的ID号、GEO Sample (GSM) 样本ID号和GEO Platform (GPL) 芯片平台。
 
 ## 平台
+
 平台记录描述阵列上的元件列表（例如，cDNA，寡核苷酸探针组，ORF，抗体）或可在该实验中检测和定量的元件列表（例如，SAGE标签，肽）。每个平台记录都分配有唯一且稳定的GEO登录号（GPLxxx）。平台可以引用多个提交者提交的许多样本。
 
-
-
 ## 样品
+
 样品记录描述了处理单个样品的条件，它经历的操作以及从中得到的每个元素的丰度测量。每个样品记录都分配有唯一且稳定的GEO登录号（GSMxxx）。Sample实体必须仅引用一个Platform，可以包含在多个Series中。
 
-
-
 ## 系列
+
 系列记录定义了一组被认为是组的一部分的相关样本，样本如何相关，以及它们是否以及如何排序。A系列提供了整个实验的焦点和描述。系列记录还可能包含描述提取数据，摘要结论或分析的表格。每个系列记录都分配有唯一且稳定的GEO登记号（GSExxx）。
 
-
-
 ## 数据集
+
 GEO DataSet（GDSxxx）是GEO样本数据的精选集合。GDS记录代表了一系列具有生物学和统计学意义的GEO样本，构成了GEO数据显示和分析工具套件的基础。GDS中的样本指的是同一个平台，也就是说，它们共享一组共同的探测元素。假设GDS中每个样本的值测量值以等效方式计算，即背景处理和标准化等考虑因素在整个数据集中是一致的。通过GDS子集提供反映实验设计的信息。
 
-
-
 记住大小关系：一个GDS可以有多个GSM，一个GSM可以有多个GSE，至于GPL，一般不接触，我们通常接触的都是GSE系列（一个GSE里面有多个GSM）的数据。
-
-
 
 接下来的几个就好理解了，2是指物种类型，点击一下会弹出一个对话框，选择自己要的就可以对搜索结果进行筛选了，也可以直接点击9处进行筛选，一般不是人就是鼠，通常是选择人。
 
@@ -65,17 +56,11 @@ GEO DataSet（GDSxxx）是GEO样本数据的精选集合。GDS记录代表了一
 
 4是根据作者进行筛选，个人感觉一般用不到。5是属性名称，表示数据来自于组织还是特定的细胞类型。6是指初版日期。
 
-
-
 上面是通过关键词检索，只是为了让大家了解一下检索页面，通常在文章中我们会看到作者都是用GSE****号，我们知道GSE编号，我们也可以直接通过检索GSE编号获取信息，同时也可以通过GDS***,和GSM来检索。GSE编号检索比较常用。
-
-
 
 GDS编号检索结果页面，以GDS402为例
 
 ![1610773180993-ca39eb59-ce80-4e90-90d9-f7846d9a3be7.jpeg](./img/uiDhZC5sbsRnkS0W/1610773180993-ca39eb59-ce80-4e90-90d9-f7846d9a3be7-922219.jpeg)
-
-
 
 GSE编号检索结果页面
 
@@ -96,8 +81,6 @@ PLATFORM
 SAMPLE
 
 SERIES
-
-
 
 DATABASE代表GEO数据库的基本信息，PLATFORM代表该平台的基本信息，SAMPLE代表用该平台得到的样本信息，SERIES代表使用该平台得到的一组样本。
 
@@ -123,10 +106,6 @@ GSM编号检索页面
 
 在这个页面，我们可以看见样本在进行试验处理的详细描述，以及每个探针所检测的的信号值。
 
-
-
-
-
 除此以外，我们还可以通过GEO数据库的仓库浏览器就行特定的检索。
 
 在GEO数据库首页点击Repository Browser
@@ -149,21 +128,19 @@ GSM编号检索页面
 
 关于GEO数据库检索就介绍到这里，我们接下来就介绍GEO在线的分析工具。
 
-# 二.分析工具 
+# 二.分析工具
+
 我们再看看GDS号检索的结果页面
 
 ![1610773181042-b4d1a3e4-b6b0-438e-9f56-291fe7ecbafd.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181042-b4d1a3e4-b6b0-438e-9f56-291fe7ecbafd-216166.jpeg)
 
-
-
 ## 1.Find gene工具
+
 该工具用于直接查找该数据集中该基因的表达谱数据。
 
 我们以检索brca1基因为例
 
 ![1610773181177-7d4e05f2-b687-4fb0-ba32-f2e96be0ab4c.png](./img/uiDhZC5sbsRnkS0W/1610773181177-7d4e05f2-b687-4fb0-ba32-f2e96be0ab4c-392134.png)
-
-
 
 我们会跳到一个新的检索结果页面
 
@@ -189,16 +166,13 @@ Find genes that are up/down for this condition(s)可以根据选择的实验筛�
 
 ![1610773181160-abe9ac68-cc83-4d56-a3e8-c6b718302fc9.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181160-abe9ac68-cc83-4d56-a3e8-c6b718302fc9-534458.jpeg)
 
-
-
 ## 2.Compare 2 sets of samples工具
-
 
 ![1610773181057-0380bfb7-4cb1-4130-b577-e89393118e81.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181057-0380bfb7-4cb1-4130-b577-e89393118e81-977371.jpeg)
 
 ![1610773181037-0e29a148-d33b-4947-b428-269fe21e2fae.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181037-0e29a148-d33b-4947-b428-269fe21e2fae-286932.jpeg)
 
-我们点击Step2： <font style="color:#33CC11;">Select which Samples to put in Group A and Group B</font>会弹出一个窗口，让我们自己进行分组。我们可以看见A组合B组的GSM号是一样的，需要将他分在哪一组就在哪一组点击一下就行。背景变为深灰色就表示被选中，这里将GSM9920-GSM9925定位A组，其余定位B组。点击OK.
+我们点击Step2： Select which Samples to put in Group A and Group B会弹出一个窗口，让我们自己进行分组。我们可以看见A组合B组的GSM号是一样的，需要将他分在哪一组就在哪一组点击一下就行。背景变为深灰色就表示被选中，这里将GSM9920-GSM9925定位A组，其余定位B组。点击OK.
 
 ![1610773181061-50ba3299-f571-4f5d-89d6-b6865e654afd.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181061-50ba3299-f571-4f5d-89d6-b6865e654afd-758104.jpeg)
 
@@ -206,22 +180,17 @@ Find genes that are up/down for this condition(s)可以根据选择的实验筛�
 
 ![1610773181071-ed5a3cac-f882-4996-b84d-56dc699ddf47.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181071-ed5a3cac-f882-4996-b84d-56dc699ddf47-440935.jpeg)
 
-
-
 点击Query Group A vs. B我们就会获得5608个表达差异的基因。
 
 ![1610773181068-7e7defb9-d4bb-4ec6-9e2b-88206b5a3fc1.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181068-7e7defb9-d4bb-4ec6-9e2b-88206b5a3fc1-968197.jpeg)
 
-
-
 ## 3.Cluster heatmaps工具
+
 ![1610773181061-bc68b9db-a031-4e9b-9a83-1ee261250c99.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181061-bc68b9db-a031-4e9b-9a83-1ee261250c99-958647.jpeg)
 
 ![1610773181059-f521c4a7-6168-44ab-8ed0-110431832cd9.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181059-f521c4a7-6168-44ab-8ed0-110431832cd9-045433.jpeg)
 
 点击Display，或获取一个聚类的热图，鼠标放在热图上谁有一个红色的虚线框，可以通过上下拖动边框调整选择的区域大小。可以点击DOWNLOAD 下载数据。
-
-
 
 ![1610773181176-6e29afd8-afb3-46a7-a923-5249f0100eeb.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181176-6e29afd8-afb3-46a7-a923-5249f0100eeb-889257.jpeg)
 
@@ -232,8 +201,6 @@ Find genes that are up/down for this condition(s)可以根据选择的实验筛�
 点击Plot value可以看见探针在样本中的曲线图。
 
 ![1610773181106-db34785e-563b-499b-89f6-ffba422a0b6b.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181106-db34785e-563b-499b-89f6-ffba422a0b6b-563056.jpeg)
-
-
 
 此外Cluster heatmaps工具中还有一个Partitional (K-means/K-medians)的聚类。
 
@@ -253,14 +220,9 @@ Find genes that are up/down for this condition(s)可以根据选择的实验筛�
 
 ![1610773181244-ff18a941-36a8-4fb8-a5c9-8017904302cf.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181244-ff18a941-36a8-4fb8-a5c9-8017904302cf-458189.jpeg)
 
-
-
-
-
 ## 4.Experiment design and value distribution工具
+
 这个工具就是一些箱线图
-
-
 
 ![1610773181135-d8e27770-c2cb-4c71-9a54-1723cfed8b01.png](./img/uiDhZC5sbsRnkS0W/1610773181135-d8e27770-c2cb-4c71-9a54-1723cfed8b01-943711.png)
 
@@ -268,20 +230,13 @@ Find genes that are up/down for this condition(s)可以根据选择的实验筛�
 
 ![1610773181170-f77bcab3-df62-4f82-ad24-88fac7a4eb98.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181170-f77bcab3-df62-4f82-ad24-88fac7a4eb98-769228.jpeg)
 
-
-
 ## 5.GEO2R
+
 GEO2R是一个交互式web工具，它允许用户比较GEO系列中的两组或两组以上的样本，以便识别在不同实验条件下表达不同的基因。结果显示为按重要性排序的基因表。
-
-
 
 GEO2R使用Bioconductor项目中的GEOquery和limma R包对原始提交者提供的处理过的数据表执行比较。
 
-
-
 与GEO的其他数据集分析工具不同，GEO2R不依赖于精心设计的数据集，而是直接查询原始的系列矩阵数据文件。这使得及时分析更多的地理数据成为可能。然而，重要的是要认识到，无论数据类型和质量如何，这个工具几乎可以访问和分析任何GEO系列。
-
-
 
 在GSE检索结果页面就可以看到这个工具，这里以GSE49382为例，
 
@@ -291,19 +246,13 @@ GEO2R使用Bioconductor项目中的GEOquery和limma R包对原始提交者提供
 
 ![1610773181150-035ba3e8-031a-4cf6-a208-ad74be48d384.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181150-035ba3e8-031a-4cf6-a208-ad74be48d384-446378.jpeg)
 
-
-
 通过Define groups将样本进行分组,输入相应的组名，
 
 ![1610773181122-c8056737-4ce8-454a-a62a-96036f0a325c.png](./img/uiDhZC5sbsRnkS0W/1610773181122-c8056737-4ce8-454a-a62a-96036f0a325c-197417.png)
 
 点击组A，会弹出一个对话框，让你选择要归入A组的样本，点击相应的样本即可（按住Crtl多选），我这里随便点。
 
-
-
 ![1610773181137-dd368768-f836-4781-9a3e-daffb96d8e7e.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181137-dd368768-f836-4781-9a3e-daffb96d8e7e-720166.jpeg)
-
-
 
 点击Top250会显示前250个基因
 
@@ -311,81 +260,47 @@ GEO2R使用Bioconductor项目中的GEOquery和limma R包对原始提交者提供
 
 结果在浏览器中显示为按p值排列的前250个基因的表。p值最小的基因最显著。单击一行显示该基因的基因表达谱图。图中的每个红条表示从原始提交者提供的样例记录的value列中提取的表达式度量。
 
-
-
 使用Select columns特性修改表中包含哪些数据和注释列。有关数据列含义的信息在Summary statistics部分中提供。
 
-
-
 在Options选项卡中编辑测试参数，然后回到GEO2R选项卡并单击Recalculate来应用编辑。
-
-
 
 要查看超过前250个结果，或者如果想保存结果，可以使用save all results按钮下载完整的结果表。下载的文件以制表符分隔，适合在Excel等电子表格应用程序中打开。
 
 ![1610773181285-a0673523-b4fc-40ee-8f5d-c837174bf1f9.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181285-a0673523-b4fc-40ee-8f5d-c837174bf1f9-666607.jpeg)
 
-
-
 编辑options和features
 
 （1）Value distribution
-
-
 
 计算和查看所选示例值的分布。值是提交者提供的原始数据，在此基础上执行GEO2R计算。查看分布对于确定选择的样本是否适合进行比较非常重要。通常，以中间值为中心的值表示数据是标准化的和可交叉比较的。
 
 ![1610773181144-0a1764ff-c74f-419b-9737-8cfe7e122c00.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181144-0a1764ff-c74f-419b-9737-8cfe7e122c00-329771.jpeg)
 
-
-
 （2）Options
-
-
 
 ![1610773181138-cb31aab9-834c-4b83-be8d-fa149197a58b.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181138-cb31aab9-834c-4b83-be8d-fa149197a58b-548556.jpeg)
 
 Apply adjustment to the P-values
 
-
-
 Limma包提供了几个p值调整选项。这些调整，也称为多次测试纠正，试图纠正错误阳性结果的发生。默认选择Benjamini & Hochberg错误发现率方法，因为它是对微阵列数据最常用的调整，并在发现统计上重要的基因和限制假阳性之间提供了良好的平衡。
-
-
 
 Apply log transformation to the data
 
-
-
 GEO数据库接受各种数据值类型，包括logged和未logged的数据。Limma包需要使用logged数据为了解决这个问题，GEO2R有一个自动检测特性，它检查所选样本的值，并自动执行log2转换。可选择是否自动转换。
-
-
 
  Category of Platform annotation to display on results
 
-
-
 选择要在结果上显示的注释类别。基因注释来自于相应的平台记录。有两种注释类型:
-
-
 
 NCBI生成的注释可用于许多记录。这些注释是通过从平台中提取稳定的序列识别信息，定期查询Entrez基因和UniGene数据库，生成一致的、最新的注释而得到的。默认情况下选择基因符号和基因标题注释。NCBI生成的注释的其他类别包括GO术语和染色体位置信息。
 
-
-
 提交者提供的注释可用于所有记录。这些表示提交者提供的原始平台注释。请注意，提交者提供的注释在样式和内容上有很多多样性，而且自提交时起可能就没有更新过。
 
-
-
 （3）Profile graph
-
-
 
 通过从平台记录的ID列输入相应的标识符来查看特定的基因表达谱图。此功能不执行任何计算;它只是在样本间显示基因的表达值。要使此功能正常工作，不需要定义示例组。
 
 ![1610773181141-0ddca2cf-db69-4ede-95f6-cb13146afc53.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181141-0ddca2cf-db69-4ede-95f6-cb13146afc53-885391.jpeg)
-
-
 
 （4）R script
 
@@ -393,11 +308,7 @@ NCBI生成的注释可用于许多记录。这些注释是通过从平台中提�
 
 ![1610773181240-0ac125a3-8d52-47ad-b136-586907527201.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181240-0ac125a3-8d52-47ad-b136-586907527201-490721.jpeg)
 
-
-
 ![1610773181147-5f37632b-0ba1-4859-8158-099cb8daf004.jpeg](./img/uiDhZC5sbsRnkS0W/1610773181147-5f37632b-0ba1-4859-8158-099cb8daf004-256822.jpeg)
 
-
-
-> 更新: 2021-08-27 16:15:30  
+> 更新: 2021-08-27 16:15:30
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/ekymes>

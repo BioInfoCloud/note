@@ -2,9 +2,9 @@
 
 文章来源：<http://pymol.chenzhaoqiang.com/intro/startManual.html>
 
-# <font style="background-color:#FCFCFC;">入门教程</font>
+# 入门教程
 
-<font style="background-color:#FCFCFC;">主要讲述PyMOL中常见的图形界面（鼠标）操作</font>
+主要讲述PyMOL中常见的图形界面（鼠标）操作
 
 ## PyMOL软件界面介绍[](http://pymol.chenzhaoqiang.com/intro/startManual.html#pymol)
 
@@ -443,7 +443,7 @@ PyMOL中支持各种雾化处理，保证depth_cue是开启的。
 
 或者使用命令关闭。
 
-<font style="color:#333333;">set depth_cue, 0</font>
+set depth_cue, 0
 
 ## 设置不同的光照模式[](http://pymol.chenzhaoqiang.com/intro/startManual.html#id20)
 
@@ -511,19 +511,19 @@ PyMOL 和 PhotoShop 有点类似，PyMOL中的Object 类似于 PhotoShop中的�
 
 > 设置pse的版本号，建议版本为0.99， 这样PyMOL 和 PyMOL2都可以打开pse 文件
 
-<font style="color:#333333;">set export_pse_version,0.99</font>
+set export_pse_version,0.99
 
 ## 删除蛋白的一条链，然后保存为pdb[](http://pymol.chenzhaoqiang.com/intro/startManual.html#pdb)
 
-<font style="color:#333333;">step1. 切换到chain模式</font>
+step1. 切换到chain模式
 
-<font style="color:#333333;">step2. 点击需要需要删除的Chain就可以选中chain</font>
+step2. 点击需要需要删除的Chain就可以选中chain
 
-<font style="color:#333333;">step3. 对新产生的sele object进行删除。</font>
+step3. 对新产生的sele object进行删除。
 
-# <font style="background-color:#FCFCFC;">基础教程</font>[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#intro-basicmanual)
+# 基础教程[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#intro-basicmanual)
 
-<font style="background-color:#FCFCFC;">主要讲述PyMOL常见的命令操作。</font>
+主要讲述PyMOL常见的命令操作。
 
 注解
 
@@ -590,7 +590,7 @@ bg_color white
 
 设置surface的颜色为red
 
-<font style="color:#333333;">set surface_color,red</font>
+set surface_color,red
 
 注解
 
@@ -598,21 +598,21 @@ bg_color white
 
 体验下
 
-<font style="color:#333333;">set surface_color,red</font>
+set surface_color,red
 
-<font style="color:#333333;">color blue</font>
+color blue
 
-<font style="color:#333333;">unset surface_color</font>
+unset surface_color
 
 ## 绘制蛋白截面图clip[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#clip)
 
 需要ray后才能看到截面的效果。
 
-<font style="color:#333333;">as surface</font>
+as surface
 
-<font style="color:#333333;">clip near,-10</font>
+clip near,-10
 
-<font style="color:#333333;">ray</font>
+ray
 
 注解
 
@@ -622,9 +622,9 @@ bg_color white
 
 ## 设置截面的颜色[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id3)
 
-<font style="color:#333333;">set ray_interior_color, grey</font>
+set ray_interior_color, grey
 
-<font style="color:#333333;">set ray_interior_color, grey,obj01</font>
+set ray_interior_color, grey,obj01
 
 ## 开关单双键模式 valence[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#valence)
 
@@ -663,15 +663,15 @@ as stick
 
 1. 怎么像这样把相互作用的线调粗？
 
-<font style="color:#333333;">set dash_radius, 0.3</font>
+set dash_radius, 0.3
 
 2. 把虚线变成实线？
 
-<font style="color:#333333;">set dash_gap,0</font>
+set dash_gap,0
 
 3. 设置实线区域的长度
 
-<font style="color:#333333;">set dash_length, 0.8</font>
+set dash_length, 0.8
 
 ## 保存图片（png)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#png)
 
@@ -685,7 +685,7 @@ png filename.png 我建议使用该命令进行快捷保存图片
 
 ## 设置两个光源 two_sided_lighting[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#two-sided-lighting)
 
-<font style="color:#333333;">set two_sided_lighting,1</font>
+set two_sided_lighting,1
 
 当蛋白表面有破损的时候，ray的时候可能会出现黑洞现象，如下图所示。
 
@@ -779,23 +779,23 @@ as stick,resn arg
 
 ## 调整 mesh 粗细[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#mesh)
 
-<font style="color:#333333;">set mesh_radius,0.2</font>
+set mesh_radius,0.2
 
-<font style="color:#333333;">ray</font>
+ray
 
 ray 方可看到调整后的状态。
 
 ## 设置双键的显示形式 valence[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id10)
 
-<font style="color:#333333;">set valence, 0  #关闭双键显示</font>
+set valence, 0  #关闭双键显示
 
-<font style="color:#333333;">set valence, 1  #开启双键显示</font>
+set valence, 1  #开启双键显示
 
 ## 设置小球的大小 sphere_scale[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#sphere-scale)
 
 默认sphere_scale 是1，通过调整sphere_scale来调整 小球的大小
 
-<font style="color:#333333;">set sphere_scale,0.5</font>
+set sphere_scale,0.5
 
 ![1612063967419-8b129ec1-16f6-4004-a94e-3d3d461fd4bf.png](./img/kEQtHCNxT2NP4E3v/1612063967419-8b129ec1-16f6-4004-a94e-3d3d461fd4bf-727381.png)
 
@@ -849,25 +849,25 @@ pymol 中内置了10种cartoon 模式：
 
 开启 Fancy 模式
 
-<font style="color:#333333;">set cartoon_fancy_helices, 1</font>
+set cartoon_fancy_helices, 1
 
 开启 cylindrcal 模式
 
-<font style="color:#333333;">set cartoon_cylindrical_helices, 1</font>
+set cartoon_cylindrical_helices, 1
 
 设置圆柱的粗细：
 
-<font style="color:#333333;">set cartoon_helix_radius,0.9</font>
+set cartoon_helix_radius,0.9
 
-<font style="color:#333333;">set cartoon_helix_radius,2.5</font>
+set cartoon_helix_radius,2.5
 
 ![1612063966928-16c8ff21-e761-4426-ba62-9f8b23e5445a.png](./img/kEQtHCNxT2NP4E3v/1612063966928-16c8ff21-e761-4426-ba62-9f8b23e5445a-992528.png)
 
 启用默认 default 模式
 
-<font style="color:#333333;">set cartoon_fancy_helices, 0</font>
+set cartoon_fancy_helices, 0
 
-<font style="color:#333333;">set cartoon_cylindrical_helices, 0</font>
+set cartoon_cylindrical_helices, 0
 
 ![1612063967429-2fd0c391-c19c-4c26-b919-45460c48fb2b.png](./img/kEQtHCNxT2NP4E3v/1612063967429-2fd0c391-c19c-4c26-b919-45460c48fb2b-912898.png)
 
@@ -875,9 +875,9 @@ pymol 中内置了10种cartoon 模式：
 
 命令：
 
-<font style="color:#333333;">set cartoon_oval_length , 0.8 # default is 1.20</font>
+set cartoon_oval_length , 0.8 # default is 1.20
 
-<font style="color:#333333;">set cartoon_oval_width , 0.2  # default is 0.25</font>
+set cartoon_oval_width , 0.2  # default is 0.25
 
 示例：
 
@@ -905,27 +905,27 @@ color red,object name
 
 ## 查看蛋白中的二硫键[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id12)
 
-<font style="color:#333333;">show sticks, (cys/ca+cb+sg) and byres (cys/sg and bound_to cys/sg)</font>
+show sticks, (cys/ca+cb+sg) and byres (cys/sg and bound_to cys/sg)
 
 ## 显示蛋白的口袋的静电势表面[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id13)
 
-<font style="color:#333333;">step1. 显示整个蛋白蛋白的静电势表面；A->generate->vacuum electrostatic->potential</font>
+step1. 显示整个蛋白蛋白的静电势表面；A->generate->vacuum electrostatic->potential
 
-<font style="color:#333333;">step2  设置口袋的中心，一般以其中的配体作为中心；</font>
+step2  设置口袋的中心，一般以其中的配体作为中心；
 
-<font style="color:#333333;">set surface_carve_selection, ligand</font>
+set surface_carve_selection, ligand
 
-<font style="color:#333333;">step3  设置口袋的大小</font>
+step3  设置口袋的大小
 
-<font style="color:#333333;">set surface_carve_cutoff, 5</font>
+set surface_carve_cutoff, 5
 
-<font style="color:#333333;">step4 设置口袋的表面的透明度</font>
+step4 设置口袋的表面的透明度
 
-<font style="color:#333333;">set transparency,0.3, 1azm_e_chg</font>
+set transparency,0.3, 1azm_e_chg
 
-<font style="color:#333333;">step5 切换为溶剂可接触表面</font>
+step5 切换为溶剂可接触表面
 
-<font style="color:#333333;">set surface_solvent, 1</font>
+set surface_solvent, 1
 
 ## 删除配体分子5A以外的水分子[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#a)
 
@@ -944,15 +944,15 @@ super 会把两个object进行叠合，和align的区别主要是
 
 当两个蛋白的序列相似度较低的时候，使用super叠合的效果比align叠合的效果好。
 
-<font style="color:#333333;">super p1, p2</font>
+super p1, p2
 
 指定叠合部分
 
-<font style="color:#333333;">super p1 & alt A+'', p2 & alt B+''</font>
+super p1 & alt A+'', p2 & alt B+''
 
 实战
 
-<font style="color:#333333;">super obj03  & resi 2-191 & chain K, obj04  & resi 2-191 & chain C</font>
+super obj03  & resi 2-191 & chain K, obj04  & resi 2-191 & chain C
 
 ## 分组（group)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#group)
 
@@ -964,11 +964,11 @@ group efHand, close
 
 创建嵌套的组
 
-<font style="color:#333333;">group target,pdbid</font>
+group target,pdbid
 
-<font style="color:#333333;">group surf, *_e_*</font>
+group surf, *_e_*
 
-<font style="color:#333333;">group target,surf</font>
+group target,surf
 
 ## 排序object (order)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#object-order)
 
@@ -978,85 +978,85 @@ order object
 
 PyMOL 中内置超过<code>100种颜色 <[https://pymolwiki.org/index.php/Color_Values](https://pymolwiki.org/index.php/Color_Values)></code>\_，
 
-<font style="color:#333333;">aquamarine    0.5     1.0     1.0</font>
+aquamarine    0.5     1.0     1.0
 
-<font style="color:#333333;">      black   0.0     0.0     0.0</font>
+      black   0.0     0.0     0.0
 
-<font style="color:#333333;">      blue    0.0     0.0     1.0</font>
+      blue    0.0     0.0     1.0
 
-<font style="color:#333333;">      bluewhite       0.85    0.85    1.00</font>
+      bluewhite       0.85    0.85    1.00
 
-<font style="color:#333333;">      br0     0.1     0.1     1.0</font>
+      br0     0.1     0.1     1.0
 
-<font style="color:#333333;">      br1     0.2     0.1     0.9</font>
+      br1     0.2     0.1     0.9
 
-<font style="color:#333333;">      br2     0.3     0.1     0.8</font>
+      br2     0.3     0.1     0.8
 
-<font style="color:#333333;">      br3     0.4     0.1     0.7</font>
+      br3     0.4     0.1     0.7
 
-<font style="color:#333333;">      br4     0.5     0.1     0.6</font>
+      br4     0.5     0.1     0.6
 
-<font style="color:#333333;">      br5     0.6     0.1     0.5</font>
+      br5     0.6     0.1     0.5
 
-<font style="color:#333333;">      br6     0.7     0.1     0.4</font>
+      br6     0.7     0.1     0.4
 
-<font style="color:#333333;">      br7     0.8     0.1     0.3</font>
+      br7     0.8     0.1     0.3
 
-<font style="color:#333333;">      br8     0.9     0.1     0.2</font>
+      br8     0.9     0.1     0.2
 
-<font style="color:#333333;">      br9     1.0     0.1     0.1</font>
+      br9     1.0     0.1     0.1
 
-<font style="color:#333333;">      brightorange    1.0     0.7     0.2</font>
+      brightorange    1.0     0.7     0.2
 
-<font style="color:#333333;">      brown   0.65    0.32    0.17</font>
+      brown   0.65    0.32    0.17
 
-<font style="color:#333333;">      carbon  0.2     1.0     0.2</font>
+      carbon  0.2     1.0     0.2
 
-<font style="color:#333333;">      chartreuse      0.5     1.0     0.0</font>
+      chartreuse      0.5     1.0     0.0
 
-<font style="color:#333333;">      chocolate       0.555   0.222   0.111</font>
+      chocolate       0.555   0.222   0.111
 
-<font style="color:#333333;">      cyan    0.0     1.0     1.0</font>
+      cyan    0.0     1.0     1.0
 
-<font style="color:#333333;">      darksalmon      0.73    0.55    0.52</font>
+      darksalmon      0.73    0.55    0.52
 
-<font style="color:#333333;">      dash    1.0     1.0     0.0</font>
+      dash    1.0     1.0     0.0
 
-<font style="color:#333333;">      deepblue        0.25    0.25    0.65    deep</font>
+      deepblue        0.25    0.25    0.65    deep
 
-<font style="color:#333333;">      deepolive       0.6     0.6     0.1</font>
+      deepolive       0.6     0.6     0.1
 
-<font style="color:#333333;">      deeppurple      0.6     0.1     0.6</font>
+      deeppurple      0.6     0.1     0.6
 
-<font style="color:#333333;">      deepsalmon      1.0     0.5     0.5     duplicated?</font>
+      deepsalmon      1.0     0.5     0.5     duplicated?
 
-<font style="color:#333333;">      deepsalmon      1.00    0.42    0.42</font>
+      deepsalmon      1.00    0.42    0.42
 
-<font style="color:#333333;">      ... ...</font>
+      ... ...
 
-<font style="color:#333333;">violetpurple  0.55    0.25    0.60</font>
+violetpurple  0.55    0.25    0.60
 
-<font style="color:#333333;">warmpink      0.85    0.20    0.50</font>
+warmpink      0.85    0.20    0.50
 
-<font style="color:#333333;">wheat         0.99    0.82    0.65</font>
+wheat         0.99    0.82    0.65
 
-<font style="color:#333333;">white         1.0     1.0     1.0</font>
+white         1.0     1.0     1.0
 
-<font style="color:#333333;">yellow        1.0     1.0     0.0</font>
+yellow        1.0     1.0     0.0
 
-<font style="color:#333333;">yelloworange  1.0     0.87    0.37</font>
+yelloworange  1.0     0.87    0.37
 
 ## 设置二级结构的颜色[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#id15)
 
 PyMOL中内置了3种二级结构着色策略。
 
-<font style="color:#333333;">helix       sheet   loop</font>
+helix       sheet   loop
 
-<font style="color:#333333;">red         yellow  green   （策略1）</font>
+red         yellow  green   （策略1）
 
-<font style="color:#333333;">cyan        magenta         salmon （策略2）</font>
+cyan        magenta         salmon （策略2）
 
-<font style="color:#333333;">cyan        red     magenta     （策略3）</font>
+cyan        red     magenta     （策略3）
 
 除了上述内置的着色策略，我们还可以自定义二级结构的颜色。
 
@@ -1066,27 +1066,27 @@ PyMOL中内置了3种二级结构着色策略。
 
 方法二（推荐）：
 
-<font style="color:#333333;">color red, ss h</font>
+color red, ss h
 
-<font style="color:#333333;">color yellow, ss s</font>
+color yellow, ss s
 
-<font style="color:#333333;">color green, ss l+''</font>
+color green, ss l+''
 
 推荐一套配色策略，感觉比内置的好看一点。
 
-<font style="color:#333333;">PyMOL>color yellow,ss s</font>
+PyMOL>color yellow,ss s
 
-<font style="color:#333333;">PyMOL>color grey,ss l+''</font>
+PyMOL>color grey,ss l+''
 
-<font style="color:#333333;">PyMOL>color teal,ss h</font>
+PyMOL>color teal,ss h
 
 ## 设置颜色 (set xx_color)[](http://pymol.chenzhaoqiang.com/intro/basicManual.html#set-xx-color)
 
 set
 
-# <font style="background-color:#FCFCFC;">进阶教程</font>[](http://pymol.chenzhaoqiang.com/intro/mediaManual.html#intro-startmanual)
+# 进阶教程[](http://pymol.chenzhaoqiang.com/intro/mediaManual.html#intro-startmanual)
 
-<font style="background-color:#FCFCFC;">主要讲述如何用PyMOL 绘制精美图片的案例，以及制作动画。</font>
+主要讲述如何用PyMOL 绘制精美图片的案例，以及制作动画。
 
 注解
 
@@ -1108,7 +1108,7 @@ set
 
 安装方法2：
 
-\*\*>>> \*\*conda install <font style="color:#666666;">-</font>c menpo ffmpeg
+\*\*>>> \*\*conda install -c menpo ffmpeg
 
 ### 制作分子对接示例动画[](http://pymol.chenzhaoqiang.com/intro/mediaManual.html#id3)
 
@@ -1120,11 +1120,11 @@ set
 >
 > 3.2 通过命令导入小分子，并设置object的名字为lig
 
-load conf1name<font style="color:#666666;">.</font>mol2, lig
+load conf1name.mol2, lig
 
-load conf2name<font style="color:#666666;">.</font>mol2,lig
+load conf2name.mol2,lig
 
-<font style="color:#666666;">...</font> <font style="color:#666666;">...</font>
+... ...
 
 > 3.3 美化，调整角度，颜色，显示模式，动画速度等
 >
@@ -1142,29 +1142,29 @@ load conf2name<font style="color:#666666;">.</font>mol2,lig
 
 打开pymol,执行如下命令，就可以创建动画了
 
-load <font style="color:#208050;">1</font>ki2_rec<font style="color:#666666;">.</font>pdb,rec
+load 1ki2_rec.pdb,rec
 
-load ligconf01<font style="color:#666666;">.</font>mol2,lig
+load ligconf01.mol2,lig
 
-load ligconf02<font style="color:#666666;">.</font>mol2,lig
+load ligconf02.mol2,lig
 
-load ligconf03<font style="color:#666666;">.</font>mol2,lig
+load ligconf03.mol2,lig
 
-load ligconf04<font style="color:#666666;">.</font>mol2,lig
+load ligconf04.mol2,lig
 
-load ligconf05<font style="color:#666666;">.</font>mol2,lig
+load ligconf05.mol2,lig
 
-load ligconf06<font style="color:#666666;">.</font>mol2,lig
+load ligconf06.mol2,lig
 
-load ligconf07<font style="color:#666666;">.</font>mol2,lig
+load ligconf07.mol2,lig
 
-load ligconf08<font style="color:#666666;">.</font>mol2,lig
+load ligconf08.mol2,lig
 
-load ligconf09<font style="color:#666666;">.</font>mol2,lig
+load ligconf09.mol2,lig
 
-load ligconf10<font style="color:#666666;">.</font>mol2,lig
+load ligconf10.mol2,lig
 
-<font style="color:#007020;">set</font> movie_fps, <font style="color:#208050;">3</font>
+set movie_fps, 3
 
 mplay
 
@@ -1180,11 +1180,11 @@ mplay
 >
 > 首先我们在脑海中构建几个关键图像，
 
-<font style="color:#333333;">1. 蛋白是空的。</font>
+1. 蛋白是空的。
 
-<font style="color:#333333;">2. 在蛋白外部出现小分子</font>
+2. 在蛋白外部出现小分子
 
-<font style="color:#333333;">4. 小分子慢慢进入口袋</font>
+4. 小分子慢慢进入口袋
 
 帧和帧之间PYMOL会自动平滑过渡。 设置所有的帧的数目： mset 1 x300;
 
@@ -1198,9 +1198,9 @@ mplay 播放动画。
 
 注意： 这种方法不能改变蛋白的形态。
 
-# <font style="background-color:#FCFCFC;">高级教程</font>[](http://pymol.chenzhaoqiang.com/intro/advanceManual.html#intro-startmanual)
+# 高级教程[](http://pymol.chenzhaoqiang.com/intro/advanceManual.html#intro-startmanual)
 
-<font style="background-color:#FCFCFC;">主要讲述PyMOL中脚本的编写、命令的自定义、插件的编写。</font>
+主要讲述PyMOL中脚本的编写、命令的自定义、插件的编写。
 
 ## PyMOL脚本、命令、插件[](http://pymol.chenzhaoqiang.com/intro/advanceManual.html#pymol)
 
@@ -1238,12 +1238,12 @@ FocalBlur一共有5个参数：
 
 首先我们为命令起名字，要求是简洁高效，通过命令就能猜测到这个命令的功能。 这里我起的脚本名 dist_center。 核心是在python 脚本中定义这个函数，并cmd.extend拓展命令。 框架如下
 
-| 1 2 3 4 | **from** **pymol** **import** cmd **def** <font style="color:#06287E;">dist_center</font>(obj1<font style="color:#666666;">=</font><font style="color:#4070A0;">"obj01"</font>,obj2<font style="color:#666666;">=</font><font style="color:#4070A0;">"obj02"</font>,showflag<font style="color:#666666;">=</font><font style="color:#007020;">True</font>):     **pass** cmd<font style="color:#666666;">.</font>extend(<font style="color:#4070A0;">"dist_center"</font>, dist_center) |
+| 1 2 3 4 | **from** **pymol** **import** cmd **def** dist_center(obj1="obj01",obj2="obj02",showflag=True):     **pass** cmd.extend("dist_center", dist_center) |
 | --- | --- |
 
 完整代码(dist_center_2obj.py)如下：
 
-|  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 | *"""* *DESCRIPTION* *measure the distance between the centers of two objects* *the object usually is  benzene, pyridine and other cyclo object* *more information at: \_ [*http://pymol.chenzhaoqiang.com/intro/advanceManual.html*](http://pymol.chenzhaoqiang.com/intro/advanceManual.html)<br/> *AUTHOR* *Zhaoqiang Chen, 2017* *Please inform me if you use/improve/like/dislike/publish with this script.* *email: 744891290@qq.com* *"""* **from** **pymol** **import** cmd,math  **def** <font style="color:#06287E;">getcenterofatoms</font>(atoms):     *'''* \_    '''*     x<font style="color:#666666;">=</font><font style="color:#208050;">0</font>     y<font style="color:#666666;">=</font><font style="color:#208050;">0</font>     z<font style="color:#666666;">=</font><font style="color:#208050;">0</font>     **for** atm **in** atoms:         x<font style="color:#666666;">+=</font>atm<font style="color:#666666;">.</font>coord\[<font style="color:#208050;">0</font>]         y<font style="color:#666666;">+=</font>atm<font style="color:#666666;">.</font>coord\[<font style="color:#208050;">1</font>]         z<font style="color:#666666;">+=</font>atm<font style="color:#666666;">.</font>coord\[<font style="color:#208050;">2</font>]     numatm<font style="color:#666666;">=</font><font style="color:#007020;">float</font>(<font style="color:#007020;">len</font>(atoms))     x<font style="color:#666666;">=</font>x<font style="color:#666666;">/</font>numatm     y<font style="color:#666666;">=</font>y<font style="color:#666666;">/</font>numatm     z<font style="color:#666666;">=</font>z<font style="color:#666666;">/</font>numatm     **return** \[x,y,z] **def** <font style="color:#06287E;">getdist</font>(cen1,cen2):     *'''* \_    '''\_     dx<font style="color:#666666;">=</font>cen1\[<font style="color:#208050;">0</font>]<font style="color:#666666;">-</font>cen2\[<font style="color:#208050;">0</font>]     dy<font style="color:#666666;">=</font>cen1\[<font style="color:#208050;">1</font>]<font style="color:#666666;">-</font>cen2\[<font style="color:#208050;">1</font>]     dz<font style="color:#666666;">=</font>cen1\[<font style="color:#208050;">2</font>]<font style="color:#666666;">-</font>cen2\[<font style="color:#208050;">2</font>]     dist<font style="color:#666666;">=</font>dx<font style="color:#666666;">*</font>dx<font style="color:#666666;">+</font>dy<font style="color:#666666;">*</font>dy<font style="color:#666666;">+</font>dz<font style="color:#666666;">\*</font>dz     **return** math<font style="color:#666666;">.</font>sqrt(dist) **def** <font style="color:#06287E;">dist_center</font>(obj1<font style="color:#666666;">=</font><font style="color:#4070A0;">"obj01"</font>,obj2<font style="color:#666666;">=</font><font style="color:#4070A0;">"obj02"</font>,showflag<font style="color:#666666;">=</font><font style="color:#007020;">True</font>):     *'''* \_    usage1:\_ \_    dist_center obj01,obj02 \_ \_    usage2:\_ \_    dist_center obj01,obj02,1 \_ \_    usage3:\_ \_    dist_center obj01,obj02,0\_ \_    usage1 is equal to usage2!\_ \_    '''\_     obj1atoms<font style="color:#666666;">=</font>cmd<font style="color:#666666;">.</font>get_model(obj1)<font style="color:#666666;">.</font>atom     obj2atoms<font style="color:#666666;">=</font>cmd<font style="color:#666666;">.</font>get_model(obj2)<font style="color:#666666;">.</font>atom     obj1center<font style="color:#666666;">=</font>getcenterofatoms(obj1atoms)     obj2center<font style="color:#666666;">=</font>getcenterofatoms(obj2atoms)     dist <font style="color:#666666;">=</font> getdist(obj1center,obj2center)     **print**(<font style="color:#4070A0;">"distance: </font>*%.2f*<font style="color:#4070A0;">"</font><font style="color:#666666;">%</font>(dist ))     **if** showflag:         cmd<font style="color:#666666;">.</font>pseudoatom(<font style="color:#4070A0;">'cen1'</font>, pos<font style="color:#666666;">=</font>obj1center)         cmd<font style="color:#666666;">.</font>pseudoatom(<font style="color:#4070A0;">'cen2'</font>, pos<font style="color:#666666;">=</font>obj2center)         cmd<font style="color:#666666;">.</font>distance(<font style="color:#4070A0;">"dist"</font>,<font style="color:#4070A0;">"cen1"</font>,<font style="color:#4070A0;">"cen2"</font>)          cmd<font style="color:#666666;">.</font>extend(<font style="color:#4070A0;">"dist_center"</font>, dist_center) |
+|  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 | *"""* *DESCRIPTION* *measure the distance between the centers of two objects* *the object usually is  benzene, pyridine and other cyclo object* *more information at: \_ [*http://pymol.chenzhaoqiang.com/intro/advanceManual.html*](http://pymol.chenzhaoqiang.com/intro/advanceManual.html)<br/> *AUTHOR* *Zhaoqiang Chen, 2017* *Please inform me if you use/improve/like/dislike/publish with this script.* *email: 744891290@qq.com* *"""* **from** **pymol** **import** cmd,math  **def** getcenterofatoms(atoms):     *'''* \_    '''*     x=0     y=0     z=0     **for** atm **in** atoms:         x+=atm.coord\[0]         y+=atm.coord\[1]         z+=atm.coord\[2]     numatm=float(len(atoms))     x=x/numatm     y=y/numatm     z=z/numatm     **return** \[x,y,z] **def** getdist(cen1,cen2):     *'''* \_    '''\_     dx=cen1\[0]-cen2\[0]     dy=cen1\[1]-cen2\[1]     dz=cen1\[2]-cen2\[2]     dist=dx*dx+dy*dy+dz\*dz     **return** math.sqrt(dist) **def** dist_center(obj1="obj01",obj2="obj02",showflag=True):     *'''* \_    usage1:\_ \_    dist_center obj01,obj02 \_ \_    usage2:\_ \_    dist_center obj01,obj02,1 \_ \_    usage3:\_ \_    dist_center obj01,obj02,0\_ \_    usage1 is equal to usage2!\_ \_    '''\_     obj1atoms=cmd.get_model(obj1).atom     obj2atoms=cmd.get_model(obj2).atom     obj1center=getcenterofatoms(obj1atoms)     obj2center=getcenterofatoms(obj2atoms)     dist = getdist(obj1center,obj2center)     **print**("distance: *%.2f*"%(dist ))     **if** showflag:         cmd.pseudoatom('cen1', pos=obj1center)         cmd.pseudoatom('cen2', pos=obj2center)         cmd.distance("dist","cen1","cen2")          cmd.extend("dist_center", dist_center) |
 | --- | --- |
 
 演示如下：
@@ -1270,33 +1270,33 @@ PyMOL>select positive, (resn Lys and name NZ) or (resn arg and name NE+NH\*)
 
 PyMOL>distance saltbridge, (negative ), (positive ), 4.0, 0
 
-<font style="color:#333333;">PyMOL>select negative, (resn ASP+Glu and name OD\*+OE\*)</font>
+PyMOL>select negative, (resn ASP+Glu and name OD\*+OE\*)
 
-<font style="color:#333333;">PyMOL>select positive, (resn Lys and name NZ) or (resn arg and name NE+NH\*)</font>
+PyMOL>select positive, (resn Lys and name NZ) or (resn arg and name NE+NH\*)
 
-<font style="color:#333333;">PyMOL>distance saltbridge, (negative ), (positive ), 4.0, 0</font>
+PyMOL>distance saltbridge, (negative ), (positive ), 4.0, 0
 
 方法2 拓展成一个命令 saltbridge.py
 
 **from** **pymol** **import** cmd
 
-**def** <font style="color:#06287E;">show_saltbridge</font>(dist<font style="color:#666666;">=</font><font style="color:#208050;">4.0</font>):
+**def** show_saltbridge(dist=4.0):
 
-    cmd<font style="color:#666666;">.</font>select(<font style="color:#4070A0;">"negative"</font>,<font style="color:#4070A0;">"resn ASP+Glu and name OD\*+OE\*"</font>)
+    cmd.select("negative","resn ASP+Glu and name OD\*+OE\*")
 
-    cmd<font style="color:#666666;">.</font>select(<font style="color:#4070A0;">"positive"</font>,<font style="color:#4070A0;">"(resn Lys and name NZ) or (resn arg and name NE+NH\*)"</font>)
+    cmd.select("positive","(resn Lys and name NZ) or (resn arg and name NE+NH\*)")
 
-    cmd<font style="color:#666666;">.</font>distance(<font style="color:#4070A0;">"saltbridge"</font>,<font style="color:#4070A0;">"negative"</font>,<font style="color:#4070A0;">"positive"</font>,dist,<font style="color:#208050;">0</font>)
+    cmd.distance("saltbridge","negative","positive",dist,0)
 
-cmd<font style="color:#666666;">.</font>extend(<font style="color:#4070A0;">"show_saltbridge"</font>, show_saltbridge)
+cmd.extend("show_saltbridge", show_saltbridge)
 
 使用命令
 
-<font style="color:#333333;">PyMOL>run saltbridge.py</font>
+PyMOL>run saltbridge.py
 
-<font style="color:#333333;">PyMOL>show_saltbridge 3</font>
+PyMOL>show_saltbridge 3
 
-<font style="color:#333333;">PyMOL>show_saltbridge</font>
+PyMOL>show_saltbridge
 
 用法如图所示：
 
@@ -1310,9 +1310,9 @@ cmd<font style="color:#666666;">.</font>extend(<font style="color:#4070A0;">"sho
 
 在PyMOL 命令行，运行下述命令，就可以该蛋白添加盒子，并显示长宽高。
 
-<font style="color:#333333;">PyMOL>run addproteinBox.py</font>
+PyMOL>run addproteinBox.py
 
-<font style="color:#333333;">PyMOL>add_proteinbox 4hbk</font>
+PyMOL>add_proteinbox 4hbk
 
 ![1612064412670-1acc95cd-1f63-4b8a-be24-10a53d4954ad.png](./img/kEQtHCNxT2NP4E3v/1612064412670-1acc95cd-1f63-4b8a-be24-10a53d4954ad-407730.png)
 
@@ -1322,9 +1322,9 @@ VMD左下角默认会显示XYZ坐标，PyMOL也可以做到。 下载脚本(右�
 
 在PyMOL 命令行，运行下述命令，就可以添加XYZ坐标了。
 
-<font style="color:#333333;">PyMOL>run axes.py</font>
+PyMOL>run axes.py
 
-<font style="color:#333333;">PyMOL>axes</font>
+PyMOL>axes
 
 ![1612064412485-57f8e9f6-ce17-41d6-930f-e7ba01b516ec.png](./img/kEQtHCNxT2NP4E3v/1612064412485-57f8e9f6-ce17-41d6-930f-e7ba01b516ec-401721.png)
 
@@ -1334,15 +1334,15 @@ VMD左下角默认会显示XYZ坐标，PyMOL也可以做到。 下载脚本(右�
 
 > <code>[test.xyzrgb](http://pymol.chenzhaoqiang.com/_downloads/axes.py)</code>
 
-<font style="color:#333333;">x y z r g b</font>
+x y z r g b
 
 下载笔者编写的脚本 <code>[loadxyzrgb_sub.py](http://pymol.chenzhaoqiang.com/_downloads/loadxyzrgb_sub.py)</code>
 
 在 PyMOL 命令行，运行下述命令，就可以可视化坐标颜色文件了。
 
-<font style="color:#333333;">PyMOL>run loadxyzrgb_sub.py</font>
+PyMOL>run loadxyzrgb_sub.py
 
-<font style="color:#333333;">PyMOL>loadxyzrgb test.xyzrgb</font>
+PyMOL>loadxyzrgb test.xyzrgb
 
 ![1612064412714-5ecda3bf-3997-45dc-8937-a784b380575b.png](./img/kEQtHCNxT2NP4E3v/1612064412714-5ecda3bf-3997-45dc-8937-a784b380575b-304239.png)
 
@@ -1354,55 +1354,55 @@ VMD左下角默认会显示XYZ坐标，PyMOL也可以做到。 下载脚本(右�
 
 *# example 6SP6 KJK    A*
 
-**def** <font style="color:#06287E;">extractSiteByLig</font>(pdbid,ligid,radius<font style="color:#666666;">=</font><font style="color:#208050;">4</font>,chainid<font style="color:#666666;">=</font><font style="color:#007020;">None</font>):
+**def** extractSiteByLig(pdbid,ligid,radius=4,chainid=None):
 
     *'''*
 
 \_    '''\_
 
-    cmd<font style="color:#666666;">.</font>delete(<font style="color:#4070A0;">'all'</font>)
+    cmd.delete('all')
 
-    cmd<font style="color:#666666;">.</font>fetch(pdbid)
+    cmd.fetch(pdbid)
 
     **if** **not**  chainid:
 
-        cmd<font style="color:#666666;">.</font>select(<font style="color:#4070A0;">"ligall"</font>,<font style="color:#4070A0;">"resn </font>*%s*<font style="color:#4070A0;">"</font><font style="color:#666666;">%</font>ligid)
+        cmd.select("ligall","resn *%s*"%ligid)
 
-        atms_lig <font style="color:#666666;">=</font> cmd<font style="color:#666666;">.</font>get_model(<font style="color:#4070A0;">"ligall"</font>)<font style="color:#666666;">.</font>atom
+        atms_lig = cmd.get_model("ligall").atom
 
-        chains_lig <font style="color:#666666;">=</font> \[    atom<font style="color:#666666;">.</font>chain     **for** atom **in** atms_lig ]
+        chains_lig = \[    atom.chain     **for** atom **in** atms_lig ]
 
-        chains_lig <font style="color:#666666;">=</font> <font style="color:#007020;">list</font>(<font style="color:#007020;">set</font>(chains_lig))
+        chains_lig = list(set(chains_lig))
 
-        chainid <font style="color:#666666;">=</font> chains_lig\[<font style="color:#208050;">0</font>]
+        chainid = chains_lig\[0]
 
-    cmd<font style="color:#666666;">.</font>select(<font style="color:#4070A0;">"lig\_</font>*%s*<font style="color:#4070A0;">"</font><font style="color:#666666;">%</font>chainid,<font style="color:#4070A0;">" chain </font>*%s*<font style="color:#4070A0;"> and resn </font>*%s*<font style="color:#4070A0;"> "</font><font style="color:#666666;">%</font>(chainid,ligid))
+    cmd.select("lig\_*%s*"%chainid," chain *%s* and resn *%s* "%(chainid,ligid))
 
-    cmd<font style="color:#666666;">.</font>select(<font style="color:#4070A0;">"site"</font>,<font style="color:#4070A0;">"byres (lig\_</font>*%s*<font style="color:#4070A0;"> expand </font>*%s*<font style="color:#4070A0;">)"</font><font style="color:#666666;">%</font>(chainid,radius))
+    cmd.select("site","byres (lig\_*%s* expand *%s*)"%(chainid,radius))
 
-    cmd<font style="color:#666666;">.</font>create(<font style="color:#4070A0;">"pocket"</font>,<font style="color:#4070A0;">"site"</font>)
+    cmd.create("pocket","site")
 
-    cmd<font style="color:#666666;">.</font>disable(<font style="color:#4070A0;">"all"</font>)
+    cmd.disable("all")
 
-    cmd<font style="color:#666666;">.</font>enable(<font style="color:#4070A0;">"pocket"</font>)
+    cmd.enable("pocket")
 
-    cmd<font style="color:#666666;">.</font>do(<font style="color:#4070A0;">"as sticks,pocket"</font>)
+    cmd.do("as sticks,pocket")
 
-    util<font style="color:#666666;">.</font>cba(<font style="color:#208050;">144</font>,<font style="color:#4070A0;">"pocket"</font>)
+    util.cba(144,"pocket")
 
-    util<font style="color:#666666;">.</font>cba(<font style="color:#208050;">120</font>,<font style="color:#4070A0;">"pocket and resn </font>*%s*<font style="color:#4070A0;">"</font><font style="color:#666666;">%</font>ligid)
+    util.cba(120,"pocket and resn *%s*"%ligid)
 
-    newfile<font style="color:#666666;">=</font><font style="color:#4070A0;">"</font>*%s*<font style="color:#4070A0;">*</font>*%s\_<font style="color:#4070A0;">*</font>*%s\_<font style="color:#4070A0;">*</font>*%s\_<font style="color:#4070A0;">.pdb"</font><font style="color:#666666;">%</font>(pdbid,ligid,chainid,radius)
+    newfile="*%s***%s\_**%s\_**%s\_.pdb"%(pdbid,ligid,chainid,radius)
 
-    cmd<font style="color:#666666;">.</font>save(newfile,<font style="color:#4070A0;">"site"</font>)
+    cmd.save(newfile,"site")
 
 *# extractSiteByLig 6SP6, KJK*
 
-cmd<font style="color:#666666;">.</font>extend(<font style="color:#4070A0;">"extractSiteByLig"</font>,extractSiteByLig)
+cmd.extend("extractSiteByLig",extractSiteByLig)
 
-pdbid <font style="color:#666666;">=</font> <font style="color:#4070A0;">'6SP6'</font>
+pdbid = '6SP6'
 
-ligid <font style="color:#666666;">=</font> <font style="color:#4070A0;">'KJK'</font>
+ligid = 'KJK'
 
 extractSiteByLig(pdbid,ligid)
 
@@ -1410,6 +1410,5 @@ extractSiteByLig(pdbid,ligid)
 
 点击 File->Log File-> Open File 填写宏的名字 xxx.pml 然后操作PyMOL， 操作完成后点击 File->Log File-> close; 文本编辑器（如vscode）打开宏文件就可以查看里面的命令。
 
-
-> 更新: 2021-01-31 11:41:30  
+> 更新: 2021-01-31 11:41:30
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/zbzrds>

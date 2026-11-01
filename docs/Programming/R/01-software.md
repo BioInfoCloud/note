@@ -1,17 +1,22 @@
 
 ## 必备
+
 R [https://www.r-project.org/](https://www.r-project.org/)
 Rstudio [https://www.rstudio.com/products/rstudio/download/#download](https://www.rstudio.com/products/rstudio/download/#download)
 Git [https://git-scm.com/](https://git-scm.com/)
 Gitee 或 Github [https://gitee.com/](https://gitee.com/) 或 [https://github.com/](https://github.com/)
+
 ## 推荐
+
 CRAN统计
 METACRAN [https://www.r-pkg.org/](https://www.r-pkg.org/)
 几乎所有R包的源代码/文档在线查看
 [https://rdrr.io/](https://rdrr.io/)
 阅读英文网页
 沙拉查词 [https://saladict.crimx.com/download.html](https://saladict.crimx.com/download.html)
+
 # 01_开发环境
+
 开发环境，除了常规的R和Rstudio安装之外，还需要安装的一些东西
 
 [软件工具软件和工具R包开发](https://www.yuque.com/xiayonghe/dev_r_pack/mtr992)
@@ -35,15 +40,17 @@ METACRAN [https://www.r-pkg.org/](https://www.r-pkg.org/)
 [https://cran.r-project.org/bin/linux/](https://cran.r-project.org/bin/linux/)
 
 xcode-select --install
+
 # 02_开发工具包
+
 除了系统和软件，开发过程中还会用到一些用于开发包的包
 
 **必备**
-●devtools 
+●devtools
 安装上devtools后基本上其他会用到的也会被一同安上
 
 **建议使用**
-●依赖管理 
+●依赖管理
 Packrat [https://rstudio.github.io/packrat/](https://rstudio.github.io/packrat/)
 ●依赖分析
 pkgnet [https://uptake.github.io/pkgnet/](https://uptake.github.io/pkgnet/)
@@ -89,18 +96,18 @@ Package Submission [https://www.bioconductor.org/developers/package-submission/]
 guide developers [https://bioconductor.org/developers](https://bioconductor.org/developers/)
 
 **其他推荐**
-remotes 
+remotes
 [https://remotes.r-lib.org/articles/dependencies.html](https://remotes.r-lib.org/articles/dependencies.html)
 
-Mastering Software Development in R 
+Mastering Software Development in R
 [https://bookdown.org/rdpeng/RProgDA/building-r-packages.html](https://bookdown.org/rdpeng/RProgDA/building-r-packages.html)
 
-为新手准备的现代化 R 包开发流程 
+为新手准备的现代化 R 包开发流程
 [https://swsoyee.vercel.app/2021/02/writing-r-packages-a-modern-workflow-for-beginners](https://swsoyee.vercel.app/2021/02/writing-r-packages-a-modern-workflow-for-beginners/)
 
 rOpenSci Packages: Development, Maintenance, and Peer Review [https://devguide.ropensci.org/index.html](https://devguide.ropensci.org/index.html)
 
-R Packages 中文 
+R Packages 中文
 [https://r-packages-zh-cn.readthedocs.io/zh_CN/latest/](https://r-packages-zh-cn.readthedocs.io/zh_CN/latest/)
 
 Develop an R package for CRAN vs BioConductor

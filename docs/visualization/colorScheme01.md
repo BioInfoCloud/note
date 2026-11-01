@@ -19,9 +19,9 @@ color_set1 <- c("#F3AE63", "#93CBAE", "#73558B", "#E2BECB")
 
 ```
 # 第二张图片（14个颜色）
-color_set14 <- c("#D2EBC8", "#3C77AF", "#7DBFA7", "#AECDE1", 
-                 "#EE934E", "#D1352B", "#9B5B33", "#F5CFE4", 
-                 "#B383B9", "#8FA4AE", "#FCED82", "#F5D2A8", 
+color_set14 <- c("#D2EBC8", "#3C77AF", "#7DBFA7", "#AECDE1",
+                 "#EE934E", "#D1352B", "#9B5B33", "#F5CFE4",
+                 "#B383B9", "#8FA4AE", "#FCED82", "#F5D2A8",
                  "#BBDD78")
 ```
 
@@ -92,7 +92,7 @@ color_set2_3 <- c("#C6367A", "#B3B5B1")
 
 ```R
 # 第八张图片（8个颜色）
-color_set8 <- c("#57AB7E", "#46976D", "#4A92A4", "#95538B", 
+color_set8 <- c("#57AB7E", "#46976D", "#4A92A4", "#95538B",
                 "#8BAAACD", "#1A1919", "#8E9296", "#3F7689")
 ```
 
@@ -110,7 +110,7 @@ DOI：10.1016/j.cell.2020.03.048
 
 ```R
 # 第九张图片（7个颜色）
-color_set7_2 <- c("#DBC9B3", "#EED0E0", "#EBAEA9", "#CB95BB", 
+color_set7_2 <- c("#DBC9B3", "#EED0E0", "#EBAEA9", "#CB95BB",
                   "#EBCC96", "#AED0DF", "#CBE5DE")
 
 ```
@@ -123,9 +123,9 @@ color_set7_2 <- c("#DBC9B3", "#EED0E0", "#EBAEA9", "#CB95BB",
 
 ```R
 # 第十张图片（14个颜色）
-color_set14_2 <- c("#EFE2AA", "#95A6DA", "#83B4EF", "#BFA6C9", 
-                   "#DBC9B3", "#F5E0BA", "#8ECFF8", "#AED0DF", 
-                   "#7EC0C3", "#89B780", "#EED0E0", "#F5D8D0", 
+color_set14_2 <- c("#EFE2AA", "#95A6DA", "#83B4EF", "#BFA6C9",
+                   "#DBC9B3", "#F5E0BA", "#8ECFF8", "#AED0DF",
+                   "#7EC0C3", "#89B780", "#EED0E0", "#F5D8D0",
                    "#EBAEA9", "#CB95BB", "#AAD0AC")
 ```
 
@@ -173,9 +173,9 @@ color_set7 <- c("#C4452E", "#D4342C", "#D99943", "#1B3A8F", "#B0A568", "#3B3B7E"
 color_set1 <- c("#F3AE63", "#93CBAE", "#73558B", "#E2BECB")
 
 # 第二张图片（14个颜色）
-color_set14 <- c("#D2EBC8", "#3C77AF", "#7DBFA7", "#AECDE1", 
-                 "#EE934E", "#D1352B", "#9B5B33", "#F5CFE4", 
-                 "#B383B9", "#8FA4AE", "#FCED82", "#F5D2A8", 
+color_set14 <- c("#D2EBC8", "#3C77AF", "#7DBFA7", "#AECDE1",
+                 "#EE934E", "#D1352B", "#9B5B33", "#F5CFE4",
+                 "#B383B9", "#8FA4AE", "#FCED82", "#F5D2A8",
                  "#BBDD78")
 
 # 第三张图片（5个颜色）
@@ -194,17 +194,17 @@ color_set2_2 <- c("#E9E55A", "#88558D")
 color_set2_3 <- c("#C6367A", "#B3B5B1")
 
 # 第八张图片（8个颜色）
-color_set8 <- c("#57AB7E", "#46976D", "#4A92A4", "#95538B", 
+color_set8 <- c("#57AB7E", "#46976D", "#4A92A4", "#95538B",
                 "#8BAAACD", "#1A1919", "#8E9296", "#3F7689")
 
 # 第九张图片（7个颜色）
-color_set7_2 <- c("#DBC9B3", "#EED0E0", "#EBAEA9", "#CB95BB", 
+color_set7_2 <- c("#DBC9B3", "#EED0E0", "#EBAEA9", "#CB95BB",
                   "#EBCC96", "#AED0DF", "#CBE5DE")
 
 # 第十张图片（14个颜色）
-color_set14_2 <- c("#EFE2AA", "#95A6DA", "#83B4EF", "#BFA6C9", 
-                   "#DBC9B3", "#F5E0BA", "#8ECFF8", "#AED0DF", 
-                   "#7EC0C3", "#89B780", "#EED0E0", "#F5D8D0", 
+color_set14_2 <- c("#EFE2AA", "#95A6DA", "#83B4EF", "#BFA6C9",
+                   "#DBC9B3", "#F5E0BA", "#8ECFF8", "#AED0DF",
+                   "#7EC0C3", "#89B780", "#EED0E0", "#F5D8D0",
                    "#EBAEA9", "#CB95BB", "#AAD0AC")
 
 # 第十一张图片（4 个颜色）
@@ -216,4 +216,3 @@ color_set3 <- c("#3C234A", "#ECDC52", "#70BACC")
 # 第十三张图片（7 个颜色）
 color_set7 <- c("#C4452E", "#D4342C", "#D99943", "#1B3A8F", "#B0A568", "#3B3B7E", "#020001")
 ```
-

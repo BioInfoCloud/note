@@ -52,29 +52,29 @@ GDCquery(
 
 ```r
 > getGDCprojects()$project_id
- [1] "GENIE-MSK"             "TCGA-UCEC"             "TCGA-LGG"             
- [4] "TCGA-SARC"             "TCGA-PAAD"             "TCGA-ESCA"            
- [7] "TCGA-PRAD"             "GENIE-VICC"            "TCGA-LAML"            
-[10] "TCGA-KIRC"             "TCGA-PCPG"             "TCGA-HNSC"            
-[13] "GENIE-JHU"             "TCGA-OV"               "TCGA-GBM"             
-[16] "TCGA-UCS"              "TCGA-MESO"             "TCGA-TGCT"            
-[19] "TCGA-KICH"             "TCGA-READ"             "TCGA-UVM"             
-[22] "TCGA-THCA"             "OHSU-CNL"              "GENIE-DFCI"           
-[25] "GENIE-NKI"             "GENIE-GRCC"            "FM-AD"                
-[28] "GENIE-UHN"             "GENIE-MDA"             "TCGA-LIHC"            
-[31] "TCGA-THYM"             "TCGA-CHOL"             "TARGET-ALL-P1"        
-[34] "ORGANOID-PANCREATIC"   "TCGA-DLBC"             "TCGA-KIRP"            
-[37] "TCGA-BLCA"             "TARGET-ALL-P3"         "TARGET-CCSK"          
-[40] "TARGET-NBL"            "TARGET-AML"            "TARGET-ALL-P2"        
-[43] "NCICCR-DLBCL"          "CTSP-DLBCL1"           "TARGET-RT"            
-[46] "TARGET-OS"             "TCGA-BRCA"             "TCGA-COAD"            
-[49] "TCGA-CESC"             "TCGA-LUSC"             "TCGA-STAD"            
-[52] "TCGA-SKCM"             "TCGA-LUAD"             "TARGET-WT"            
-[55] "TCGA-ACC"              "BEATAML1.0-CRENOLANIB" "BEATAML1.0-COHORT"    
-[58] "VAREPOP-APOLLO"        "MMRF-COMMPASS"         "WCDT-MCRPC"           
-[61] "CGCI-HTMCP-CC"         "CMI-ASC"               "CMI-MPC"              
-[64] "CMI-MBC"               "CPTAC-2"               "CGCI-BLGSP"           
-[67] "CPTAC-3"               "HCMI-CMDC"  
+ [1] "GENIE-MSK"             "TCGA-UCEC"             "TCGA-LGG"
+ [4] "TCGA-SARC"             "TCGA-PAAD"             "TCGA-ESCA"
+ [7] "TCGA-PRAD"             "GENIE-VICC"            "TCGA-LAML"
+[10] "TCGA-KIRC"             "TCGA-PCPG"             "TCGA-HNSC"
+[13] "GENIE-JHU"             "TCGA-OV"               "TCGA-GBM"
+[16] "TCGA-UCS"              "TCGA-MESO"             "TCGA-TGCT"
+[19] "TCGA-KICH"             "TCGA-READ"             "TCGA-UVM"
+[22] "TCGA-THCA"             "OHSU-CNL"              "GENIE-DFCI"
+[25] "GENIE-NKI"             "GENIE-GRCC"            "FM-AD"
+[28] "GENIE-UHN"             "GENIE-MDA"             "TCGA-LIHC"
+[31] "TCGA-THYM"             "TCGA-CHOL"             "TARGET-ALL-P1"
+[34] "ORGANOID-PANCREATIC"   "TCGA-DLBC"             "TCGA-KIRP"
+[37] "TCGA-BLCA"             "TARGET-ALL-P3"         "TARGET-CCSK"
+[40] "TARGET-NBL"            "TARGET-AML"            "TARGET-ALL-P2"
+[43] "NCICCR-DLBCL"          "CTSP-DLBCL1"           "TARGET-RT"
+[46] "TARGET-OS"             "TCGA-BRCA"             "TCGA-COAD"
+[49] "TCGA-CESC"             "TCGA-LUSC"             "TCGA-STAD"
+[52] "TCGA-SKCM"             "TCGA-LUAD"             "TARGET-WT"
+[55] "TCGA-ACC"              "BEATAML1.0-CRENOLANIB" "BEATAML1.0-COHORT"
+[58] "VAREPOP-APOLLO"        "MMRF-COMMPASS"         "WCDT-MCRPC"
+[61] "CGCI-HTMCP-CC"         "CMI-ASC"               "CMI-MPC"
+[64] "CMI-MBC"               "CPTAC-2"               "CGCI-BLGSP"
+[67] "CPTAC-3"               "HCMI-CMDC"
 ```
 
 （2）data.category
@@ -122,7 +122,9 @@ data.type = "Copy Number Segment"
 
 （4）workflow.type
 
-该数据类型有很多种，根据`data.type`的不同而不同，不同的数据类型，有其对应的参数可供选择。比如`Gene Expression Quantification`的RNA-Seq数据类型下`workflow.type` 为<code>[STAR - Counts](https://portal.gdc.cancer.gov/repository?facetTab=files&filters=%7B%22op%22%3A%22and%22%2C%22content%22%3A%5B%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22files.analysis.workflow_type%22%2C%22value%22%3A%5B%22STAR%20-%20Counts%22%5D%7D%7D%2C%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22files.data_category%22%2C%22value%22%3A%5B%22transcriptome%20profiling%22%5D%7D%7D%2C%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22files.data_type%22%2C%22value%22%3A%5B%22Gene%20Expression%20Quantification%22%5D%7D%7D%2C%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22files.experimental_strategy%22%2C%22value%22%3A%5B%22RNA-Seq%22%5D%7D%7D%5D%7D)</code>。在原来老版本中有4种类型分别为：
+该数据类型有很多种，根据`data.type`的不同而不同，不同的数据类型，有其对应的参数可供选择。
+比如`Gene Expression Quantification`的RNA-Seq数据类型下`workflow.type` 为<code>[STAR - Counts](https://portal.gdc.cancer.gov/repository?facetTab=files&filters=%7B%22op%22%3A%22and%22%2C%22content%22%3A%5B%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22files.analysis.workflow_type%22%2C%22value%22%3A%5B%22STAR%20-%20Counts%22%5D%7D%7D%2C%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22files.data_category%22%2C%22value%22%3A%5B%22transcriptome%20profiling%22%5D%7D%7D%2C%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22files.data_type%22%2C%22value%22%3A%5B%22Gene%20Expression%20Quantification%22%5D%7D%7D%2C%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22files.experimental_strategy%22%2C%22value%22%3A%5B%22RNA-Seq%22%5D%7D%7D%5D%7D)</code>。
+在原来老版本中有4种类型分别为：
 
 * HTSeq - FPKM-UQ：FPKM上四分位数标准化值
 * HTSeq - FPKM：FPKM值/表达量值
@@ -393,7 +395,7 @@ TCGAprepare函数处理得到的RangedSummarizedExperiment对象
 
 ![1691997202327-62e17015-fef8-42b8-8dca-a335e614c782.png](./img/jQAygXEDqldV_W9B/1691997202327-62e17015-fef8-42b8-8dca-a335e614c782-783351.png)
 
-<font style="color:rgb(221, 17, 68);">"unstranded"是count数据。</font>比如我们这里提取TPM的数据。
+"unstranded"是count数据。比如我们这里提取TPM的数据。
 
 ```r
 expDataTPM <- TCGAanalyze_Preprocessing(object = expRda,
@@ -474,8 +476,8 @@ clini_follow_up <- GDCprepare_clinic(queryClin,clinical.info = "follow_up")
 **clinical.info**：Which information should be retrieved. Options Clinical: drug, admin, follow_up,radiation, patient, stage_event or new_tumor_event Options Biospecimen: protocol, admin, aliquot, analyte, bio_patient, sample, portion, slide.
 
 ```r
-allInfo_clindata <- GDCquery_clinic("TCGA-LUAD", 
-                                    type = "clinical", 
+allInfo_clindata <- GDCquery_clinic("TCGA-LUAD",
+                                    type = "clinical",
                                     save.csv = F)
 ```
 
@@ -533,6 +535,5 @@ GDCdownload(query_COAD_met)
 COAD_met <- GDCprepare(query_COAD_met)
 ```
 
-
-> 更新: 2023-08-15 10:23:56  
+> 更新: 2023-08-15 10:23:56
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/sy7vge>

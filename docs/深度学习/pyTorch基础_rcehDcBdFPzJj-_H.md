@@ -67,16 +67,16 @@ device：张量所在设备，GPU/CPU，是加速的关键。
 * pin_memory:是否存于锁页内存
 
 ```python
-import torch  
+import torch
 
-# 从Python列表创建张量  
-data = [1, 2, 3, 4]  
-tensor = torch.tensor(data)  
-print(tensor)    
-# 从NumPy数组创建张量  
-import numpy as np  
-data_np = np.array([1, 2, 3, 4])  
-tensor_np = torch.tensor(data_np)  
+# 从Python列表创建张量
+data = [1, 2, 3, 4]
+tensor = torch.tensor(data)
+print(tensor)
+# 从NumPy数组创建张量
+import numpy as np
+data_np = np.array([1, 2, 3, 4])
+tensor_np = torch.tensor(data_np)
 print(tensor_np)
 ```
 
@@ -105,7 +105,7 @@ print(t)
 
 ### 使用特定函数创建具有特定值的张量
 
-<font style="color:#E4495B;">torch.zeros(): 创建一个全为0的张量。</font>
+torch.zeros(): 创建一个全为0的张量。
 
 * size：张量的形状，如(3，3)、(3，224,224)
 * out：输出的张量，就是把torch.zeros()创建的张量赋值给out设置的变量。
@@ -130,28 +130,28 @@ torch.logspace(start,end, steps,base)：创建对数均分的1维张量。注意
 torch.eye()：创建单位对角矩阵。
 
 ```python
-# 创建一个形状为(2, 3)的全0张量  
-zeros_tensor = torch.zeros((2, 3))  
-print(zeros_tensor)  
-  
-# 创建一个形状为(2, 3)的全1张量  
-ones_tensor = torch.ones((2, 3))  
-print(ones_tensor)  
-  
-# 创建一个形状为(2, 3)的随机初始化张量  
-empty_tensor = torch.empty((2, 3))  
-print(empty_tensor)  
-  
-# 创建一个形状为(2, 3)的值为2的张量  
-full_tensor = torch.full((2, 3), 2)  
-print(full_tensor)  
-  
-# 创建一个形状为(2, 3)的标准正态分布张量  
-randn_tensor = torch.randn((2, 3))  
-print(randn_tensor)  
-  
-# 创建一个形状为(2, 3)的[0, 1)区间内的均匀分布张量  
-rand_tensor = torch.rand((2, 3))  
+# 创建一个形状为(2, 3)的全0张量
+zeros_tensor = torch.zeros((2, 3))
+print(zeros_tensor)
+
+# 创建一个形状为(2, 3)的全1张量
+ones_tensor = torch.ones((2, 3))
+print(ones_tensor)
+
+# 创建一个形状为(2, 3)的随机初始化张量
+empty_tensor = torch.empty((2, 3))
+print(empty_tensor)
+
+# 创建一个形状为(2, 3)的值为2的张量
+full_tensor = torch.full((2, 3), 2)
+print(full_tensor)
+
+# 创建一个形状为(2, 3)的标准正态分布张量
+randn_tensor = torch.randn((2, 3))
+print(randn_tensor)
+
+# 创建一个形状为(2, 3)的[0, 1)区间内的均匀分布张量
+rand_tensor = torch.rand((2, 3))
 print(rand_tensor)
 ```
 
@@ -190,9 +190,9 @@ torch.normal() 是 PyTorch 中的一个函数，用于生成满足正态（高�
 torch.bernoulli()：生成伯努利分布。
 
 ```python
-# 生成一个包含10个元素的张量，每个元素都独立地以0.3的概率取值为1  
-p = torch.tensor([0.3] * 10)  # 或者简单地 p = 0.3，PyTorch会广播这个标量值  
-samples = torch.bernoulli(p)  
+# 生成一个包含10个元素的张量，每个元素都独立地以0.3的概率取值为1
+p = torch.tensor([0.3] * 10)  # 或者简单地 p = 0.3，PyTorch会广播这个标量值
+samples = torch.bernoulli(p)
 samples
 ```
 
@@ -203,15 +203,14 @@ torch.arange(): 类似于Python的range()函数，但返回的是一个一维张
 torch.linspace(): 在指定的间隔内均匀创建数值，返回一维张量。
 
 ```python
-# 创建一个从0到9（不包括10）的一维张量，步长为1  
-arange_tensor = torch.arange(0, 10, 1)  
-print(arange_tensor)  
-  
-# 创建一个从0到1之间均匀分布的5个点的一维张量  
-linspace_tensor = torch.linspace(0, 1, 5)  
+# 创建一个从0到9（不包括10）的一维张量，步长为1
+arange_tensor = torch.arange(0, 10, 1)
+print(arange_tensor)
+
+# 创建一个从0到1之间均匀分布的5个点的一维张量
+linspace_tensor = torch.linspace(0, 1, 5)
 print(linspace_tensor)
 ```
 
-
-> 更新: 2024-06-03 21:42:24  
+> 更新: 2024-06-03 21:42:24
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/spfmyirdai7cst1z>

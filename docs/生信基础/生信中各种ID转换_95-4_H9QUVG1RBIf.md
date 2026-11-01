@@ -2,7 +2,7 @@
 
 ![1608895684520-00d6804b-c413-4734-88a8-f5c1f384db15.gif](./img/95-4_H9QUVG1RBIf/1608895684520-00d6804b-c413-4734-88a8-f5c1f384db15-692954.gif)
 
-我在文章[**<font style="color:#021EAA;">常用生物信息ID的介绍</font>**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265423&idx=2&sn=288f3c8acaad8670d35a031cd9794d58&chksm=841efdf2b36974e40e29d906fe4f3a46528ea5a84d17f656ad6119f612059489b9df1416c337&scene=21#wechat_redirect)中介绍了常见的ID，也提到一些常见的ID转换工具。
+我在文章[**常用生物信息ID的介绍**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265423&idx=2&sn=288f3c8acaad8670d35a031cd9794d58&chksm=841efdf2b36974e40e29d906fe4f3a46528ea5a84d17f656ad6119f612059489b9df1416c337&scene=21#wechat_redirect)中介绍了常见的ID，也提到一些常见的ID转换工具。
 
 1.Uniprot ID mapping 可以很方便地把 ID 转换为其他 ID 类型, 所包含的类型十分全面【[<u>https://www.uniprot.org/uploadlists/</u>](https://www.uniprot.org/uploadlists/)】
 
@@ -14,7 +14,7 @@
 
 5.biomart工具：[<u>http://www.biomart.org/</u>](http://www.biomart.org/)
 
-6.FunRich软件，在我之前的文章就有介绍，[<font style="color:#021EAA;">FunRich数据库：一个主要用于基因和蛋白质的功能富集以及相互作用网络分析的独立的软件工具</font>](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265340&idx=1&sn=5c3608661698d2332b992269a8721833&chksm=841efd41b3697457f96ace4eecc682cbbbe3fdf3955f0060d3aafcdff0a2d85c225d5ce3f784&scene=21#wechat_redirect)。
+6.FunRich软件，在我之前的文章就有介绍，[FunRich数据库：一个主要用于基因和蛋白质的功能富集以及相互作用网络分析的独立的软件工具](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265340&idx=1&sn=5c3608661698d2332b992269a8721833&chksm=841efd41b3697457f96ace4eecc682cbbbe3fdf3955f0060d3aafcdff0a2d85c225d5ce3f784&scene=21#wechat_redirect)。
 
 **还有org序列的R包**
 
@@ -110,31 +110,31 @@ org.Hs.egORGANISM函数就查看该包的物种信息。
 
 ```plain
 > org.Hs.egMAPCOUNTS
-         org.Hs.egACCNUM       org.Hs.egACCNUM2EG        org.Hs.egALIAS2EG 
-                   40183                   789529                   123135 
-            org.Hs.egCHR      org.Hs.egCHRLENGTHS          org.Hs.egCHRLOC 
-                   60951                      455                    28065 
-      org.Hs.egCHRLOCEND         org.Hs.egENSEMBL      org.Hs.egENSEMBL2EG 
-                   28065                    27161                    30292 
-    org.Hs.egENSEMBLPROT  org.Hs.egENSEMBLPROT2EG    org.Hs.egENSEMBLTRANS 
-                    7651                    25422                     8280 
-org.Hs.egENSEMBLTRANS2EG          org.Hs.egENZYME       org.Hs.egENZYME2EG 
-                   39379                     2230                      975 
-       org.Hs.egGENENAME              org.Hs.egGO       org.Hs.egGO2ALLEGS 
-                   61119                    20408                    22792 
-          org.Hs.egGO2EG             org.Hs.egMAP          org.Hs.egMAP2EG 
-                   17983                    57875                     2045 
-           org.Hs.egOMIM         org.Hs.egOMIM2EG            org.Hs.egPATH 
-                   15815                    21093                     5869 
-        org.Hs.egPATH2EG            org.Hs.egPFAM            org.Hs.egPMID 
-                     229                     5104                    37627 
-        org.Hs.egPMID2EG         org.Hs.egPROSITE          org.Hs.egREFSEQ 
-                  600981                     5104                    38868 
-      org.Hs.egREFSEQ2EG          org.Hs.egSYMBOL       org.Hs.egSYMBOL2EG 
-                  280529                    61119                    61050 
-         org.Hs.egUCSCKG         org.Hs.egUNIGENE      org.Hs.egUNIGENE2EG 
-                   25164                    26083                    29270 
-        org.Hs.egUNIPROT 
+         org.Hs.egACCNUM       org.Hs.egACCNUM2EG        org.Hs.egALIAS2EG
+                   40183                   789529                   123135
+            org.Hs.egCHR      org.Hs.egCHRLENGTHS          org.Hs.egCHRLOC
+                   60951                      455                    28065
+      org.Hs.egCHRLOCEND         org.Hs.egENSEMBL      org.Hs.egENSEMBL2EG
+                   28065                    27161                    30292
+    org.Hs.egENSEMBLPROT  org.Hs.egENSEMBLPROT2EG    org.Hs.egENSEMBLTRANS
+                    7651                    25422                     8280
+org.Hs.egENSEMBLTRANS2EG          org.Hs.egENZYME       org.Hs.egENZYME2EG
+                   39379                     2230                      975
+       org.Hs.egGENENAME              org.Hs.egGO       org.Hs.egGO2ALLEGS
+                   61119                    20408                    22792
+          org.Hs.egGO2EG             org.Hs.egMAP          org.Hs.egMAP2EG
+                   17983                    57875                     2045
+           org.Hs.egOMIM         org.Hs.egOMIM2EG            org.Hs.egPATH
+                   15815                    21093                     5869
+        org.Hs.egPATH2EG            org.Hs.egPFAM            org.Hs.egPMID
+                     229                     5104                    37627
+        org.Hs.egPMID2EG         org.Hs.egPROSITE          org.Hs.egREFSEQ
+                  600981                     5104                    38868
+      org.Hs.egREFSEQ2EG          org.Hs.egSYMBOL       org.Hs.egSYMBOL2EG
+                  280529                    61119                    61050
+         org.Hs.egUCSCKG         org.Hs.egUNIGENE      org.Hs.egUNIGENE2EG
+                   25164                    26083                    29270
+        org.Hs.egUNIPROT
                    19262
 ```
 
@@ -142,24 +142,24 @@ org.Hs.egENSEMBLTRANS2EG          org.Hs.egENZYME       org.Hs.egENZYME2EG
 
 ```plain
 > names(org.Hs.egMAPCOUNTS)
- [1] "org.Hs.egACCNUM"          "org.Hs.egACCNUM2EG"      
- [3] "org.Hs.egALIAS2EG"        "org.Hs.egCHR"            
- [5] "org.Hs.egCHRLENGTHS"      "org.Hs.egCHRLOC"         
- [7] "org.Hs.egCHRLOCEND"       "org.Hs.egENSEMBL"        
- [9] "org.Hs.egENSEMBL2EG"      "org.Hs.egENSEMBLPROT"    
-[11] "org.Hs.egENSEMBLPROT2EG"  "org.Hs.egENSEMBLTRANS"   
-[13] "org.Hs.egENSEMBLTRANS2EG" "org.Hs.egENZYME"         
-[15] "org.Hs.egENZYME2EG"       "org.Hs.egGENENAME"       
-[17] "org.Hs.egGO"              "org.Hs.egGO2ALLEGS"      
-[19] "org.Hs.egGO2EG"           "org.Hs.egMAP"            
-[21] "org.Hs.egMAP2EG"          "org.Hs.egOMIM"           
-[23] "org.Hs.egOMIM2EG"         "org.Hs.egPATH"           
-[25] "org.Hs.egPATH2EG"         "org.Hs.egPFAM"           
-[27] "org.Hs.egPMID"            "org.Hs.egPMID2EG"        
-[29] "org.Hs.egPROSITE"         "org.Hs.egREFSEQ"         
-[31] "org.Hs.egREFSEQ2EG"       "org.Hs.egSYMBOL"         
-[33] "org.Hs.egSYMBOL2EG"       "org.Hs.egUCSCKG"         
-[35] "org.Hs.egUNIGENE"         "org.Hs.egUNIGENE2EG"     
+ [1] "org.Hs.egACCNUM"          "org.Hs.egACCNUM2EG"
+ [3] "org.Hs.egALIAS2EG"        "org.Hs.egCHR"
+ [5] "org.Hs.egCHRLENGTHS"      "org.Hs.egCHRLOC"
+ [7] "org.Hs.egCHRLOCEND"       "org.Hs.egENSEMBL"
+ [9] "org.Hs.egENSEMBL2EG"      "org.Hs.egENSEMBLPROT"
+[11] "org.Hs.egENSEMBLPROT2EG"  "org.Hs.egENSEMBLTRANS"
+[13] "org.Hs.egENSEMBLTRANS2EG" "org.Hs.egENZYME"
+[15] "org.Hs.egENZYME2EG"       "org.Hs.egGENENAME"
+[17] "org.Hs.egGO"              "org.Hs.egGO2ALLEGS"
+[19] "org.Hs.egGO2EG"           "org.Hs.egMAP"
+[21] "org.Hs.egMAP2EG"          "org.Hs.egOMIM"
+[23] "org.Hs.egOMIM2EG"         "org.Hs.egPATH"
+[25] "org.Hs.egPATH2EG"         "org.Hs.egPFAM"
+[27] "org.Hs.egPMID"            "org.Hs.egPMID2EG"
+[29] "org.Hs.egPROSITE"         "org.Hs.egREFSEQ"
+[31] "org.Hs.egREFSEQ2EG"       "org.Hs.egSYMBOL"
+[33] "org.Hs.egSYMBOL2EG"       "org.Hs.egUCSCKG"
+[35] "org.Hs.egUNIGENE"         "org.Hs.egUNIGENE2EG"
 [37] "org.Hs.egUNIPROT"
 ```
 
@@ -259,7 +259,7 @@ GENENAME submap for Human (object of class "AnnDbBimap")
 
 ```plain
 > org.Hs.egSYMBOL[symbol]
-Error in .checkKeys(value, Lkeys(x), x@ifnotfound) : 
+Error in .checkKeys(value, Lkeys(x), x@ifnotfound) :
   value for "SSTR2" not found
 ```
 
@@ -304,7 +304,7 @@ OrgDb object:
 | KEGGSOURCEURL: ftp://ftp.genome.jp/pub/kegg/genomes
 | KEGGSOURCEDATE: 2011-Mar15
 | GPSOURCENAME: UCSC Genome Bioinformatics (Homo sapiens)
-| GPSOURCEURL: 
+| GPSOURCEURL:
 | GPSOURCEDATE: 2018-Oct2
 | ENSOURCEDATE: 2018-Oct05
 | ENSOURCENAME: Ensembl
@@ -327,11 +327,11 @@ keytypes ：哪些类型可以使用函数select或keys以及keytype参数，如
 ```plain
 > keytypes(org.Hs.eg.db)
  [1] "ACCNUM"       "ALIAS"        "ENSEMBL"      "ENSEMBLPROT"  "ENSEMBLTRANS"
- [6] "ENTREZID"     "ENZYME"       "EVIDENCE"     "EVIDENCEALL"  "GENENAME"    
-[11] "GO"           "GOALL"        "IPI"          "MAP"          "OMIM"        
-[16] "ONTOLOGY"     "ONTOLOGYALL"  "PATH"         "PFAM"         "PMID"        
-[21] "PROSITE"      "REFSEQ"       "SYMBOL"       "UCSCKG"       "UNIGENE"     
-[26] "UNIPROT"  
+ [6] "ENTREZID"     "ENZYME"       "EVIDENCE"     "EVIDENCEALL"  "GENENAME"
+[11] "GO"           "GOALL"        "IPI"          "MAP"          "OMIM"
+[16] "ONTOLOGY"     "ONTOLOGYALL"  "PATH"         "PFAM"         "PMID"
+[21] "PROSITE"      "REFSEQ"       "SYMBOL"       "UCSCKG"       "UNIGENE"
+[26] "UNIPROT"
 ```
 
 keys：返回AnnotationDb 中数据库的keys，通常是某个基因的ENSEMBL的编号，ENTREZID 的编号等，经常与select配合使用，通常情况下会返回数据库的关键词，如下所示：
@@ -344,7 +344,7 @@ keys：返回AnnotationDb 中数据库的keys，通常是某个基因的ENSEMBL�
 假设我们将Entrez ID 转换成SYMBOL：
 
 ```plain
-ens2ent <- select(org.Hs.eg.db,keys = EntrezID, 
+ens2ent <- select(org.Hs.eg.db,keys = EntrezID,
                   columns = 'SYMBOL', keytype = 'ENTREZID') # 见下图
 ```
 
@@ -367,7 +367,8 @@ ens2ent2<-select(org.Hs.eg.db, #.db是这个芯片数据对应的注释包，换
                 keytype="ENTREZID" )#函数里面的keytype与keys参数是对应的，keys是你输入的那些数据，keytype是指这些数据是属于什么类型的数据。
 ```
 
-我们再看看将ENSEMBL转换整SYMBOL，在[TCGA中的转录组数据](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264583&idx=1&sn=f94bf8d77402677ee67f5d6336088254&chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&scene=21#wechat_redirect)的行名通常是ENSEMBL，我们经常要转换成SYMBOL。我们就读入一个病人的RNASeq的counts数据。
+我们再看看将ENSEMBL转换整SYMBOL，在[TCGA中的转录组数据](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264583&idx=1&sn=f94bf8d77402677ee67f5d6336088254&chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&scene=21#wechat_redirect)的行名通常是ENSEMBL，我们经常要转换成SYMBOL。
+我们就读入一个病人的RNASeq的counts数据。
 
 ```plain
 counts <- read.table("TCGARNASeq.counts",header = F,sep = "\t")
@@ -381,7 +382,7 @@ Ensembl <- counts[,1]
 ```plain
 library(stringr)
 splitEnsembl <- function(Ensembl){
-  return(str_split(Ensembl[1],'[.]',simplify = T)[1]) 
+  return(str_split(Ensembl[1],'[.]',simplify = T)[1])
 }
 Ensembl <- sapply(Ensembl,splitEnsembl,simplify = T)
 head(Ensembl)
@@ -394,8 +395,8 @@ head(Ensembl)
 ```
 
 ```plain
-ens2sym <- select(org.Hs.eg.db, 
-                 keys=Ensembl,columns=c("SYMBOL","GENENAME"), 
+ens2sym <- select(org.Hs.eg.db,
+                 keys=Ensembl,columns=c("SYMBOL","GENENAME"),
                  keytype="ENSEMBL" )
 ```
 
@@ -504,7 +505,7 @@ get_IDinfo = function(input) {
 }
 #gtf文件路径，注意更改
 gtfpath <- "F:/MedBioInfoCloud/human.v33lift37.annotation.gtf"
-ens2symInfo <- get_IDinfo(gtfpath) 
+ens2symInfo <- get_IDinfo(gtfpath)
 ens2symInfo$Ensembl <- substr(ens2symInfo[,"Ensembl"],1,15)#去掉版本号
 ```
 
@@ -533,13 +534,11 @@ gtf注释文件下载：
 
 ![1608895684564-290b5b45-3d1a-4e3c-b21d-5e17de82f677.png](./img/95-4_H9QUVG1RBIf/1608895684564-290b5b45-3d1a-4e3c-b21d-5e17de82f677-999002.png)
 
-链接：[https://pan.baidu.com/s/15hx5-wElRjGfZrVcdyhLzw](https://pan.baidu.com/s/15hx5-wElRjGfZrVcdyhLzw) 
+链接：[https://pan.baidu.com/s/15hx5-wElRjGfZrVcdyhLzw](https://pan.baidu.com/s/15hx5-wElRjGfZrVcdyhLzw)
 
 提取码：23hr
 
-如果失效，后台回复：**<font style="color:#021EAA;">geneID转换</font>**
+如果失效，后台回复：**geneID转换**
 
-
-
-> 更新: 2021-02-03 16:21:12  
+> 更新: 2021-02-03 16:21:12
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/ey6aby>

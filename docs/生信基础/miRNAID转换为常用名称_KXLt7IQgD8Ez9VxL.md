@@ -1,11 +1,11 @@
 # miRNA ID 转换为常用名称
 
-# 
+#
 ![1615612397098-b5f27f54-47eb-474d-8ec2-96bc53c8f7c6.gif](./img/KXLt7IQgD8Ez9VxL/1615612397098-b5f27f54-47eb-474d-8ec2-96bc53c8f7c6-875035.gif)
 
-[**<font style="color:#0052FF;">TCGA</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;"> | </font>**[**<font style="color:#0052FF;">GEO</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;"> | </font>**[**<font style="color:#0052FF;">文献阅读</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;"> | </font>**[**<font style="color:#0052FF;">数据库</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[**<font style="color:#0052FF;"> </font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;">| </font>**[**<font style="color:#0052FF;">理论知识</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**| **[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
-[**<font style="color:#0052FF;">R语言</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;"> |</font>****<font style="color:#0052FF;"> </font>**[**<font style="color:#0052FF;">Bioconductor</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;"> | 服务器与</font>**[**<font style="color:#0052FF;">Linux</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1410264757734817793&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)** |**** **[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | 服务器与**[**Linux**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1410264757734817793&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
 ---
 
@@ -17,7 +17,8 @@
 
 ---
 
-在前面我有文章介绍过生信中各种ID转换【文章:[**<font style="color:#0052FF;">生信中各种ID转换</font>**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265466&idx=1&sn=021a10503d338e09abe07b578e734566&chksm=841efdc7b36974d13b7ad95e2272d293089d49adff9b74667bbeed78306328f0a42b0259c030&scene=21#wechat_redirect)】，我们可以通过各种基因注释包来转换各种基因ID，这里给大家介绍一下miRNA注释包：miRBaseVersions.db。这个包是基于miRbase数据库的。
+在前面我有文章介绍过生信中各种ID转换【文章:[**生信中各种ID转换**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265466&idx=1&sn=021a10503d338e09abe07b578e734566&chksm=841efdc7b36974d13b7ad95e2272d293089d49adff9b74667bbeed78306328f0a42b0259c030&scene=21#wechat_redirect)】，我们可以通过各种基因注释包来转换各种基因ID，这里给大家介绍一下miRNA注释包：miRBaseVersions.db。
+这个包是基于miRbase数据库的。
 
 由于数据库不断的增长和变化，miRNA的名称可能在不同的版本中有不同的名称，甚至不再被列为有效的miRNA。这个注释包作为一个存储库，可以用于快速查找成熟的miRNA名称。
 
@@ -62,9 +63,9 @@ select函数用于提取数据。作为输入值，该函数接受从其他三�
 例如，要提取关于成熟accession' MIMAT0000092 '的所有信息，我们可以运行以下命令:
 
 ```plain
-result <- select(miRBaseVersions.db, 
-                keys = "MIMAT0000092", 
-                keytype = "MIMAT", 
+result <- select(miRBaseVersions.db,
+                keys = "MIMAT0000092",
+                keytype = "MIMAT",
                 columns = "*")
 result;
 ```
@@ -74,9 +75,9 @@ result;
 我们可以看到，结果返回了不同miRBase版本中加入的所有miRNA名称。参数columns = "*"表示返回所有列。例如，如果我们只想提取' accession '， ' name '和' version '的字段，我们只需运行以下命令:
 
 ```plain
-result <- select(miRBaseVersions.db, 
-                keys = "MIMAT0000092", 
-                keytype = "MIMAT", 
+result <- select(miRBaseVersions.db,
+                keys = "MIMAT0000092",
+                keytype = "MIMAT",
                 columns = c("ACCESSION", "NAME", "VERSION"))
 result;
 ```
@@ -107,15 +108,7 @@ ftp://mirbase.org/pub/mirbase/CURRENT/
 
 ---
 
-
-
-<font style="color:#0052FF;">经    典    栏    目</font>
-
-
-
-
-
-
+经    典    栏    目
 
 | ![1615612397123-74e1598f-104c-4078-9e4c-2ff79baa096f.png](./img/KXLt7IQgD8Ez9VxL/1615612397123-74e1598f-104c-4078-9e4c-2ff79baa096f-917840.png) | ![1615612397239-af9f5668-9291-4a4f-8bb1-577be61d6040.png](./img/KXLt7IQgD8Ez9VxL/1615612397239-af9f5668-9291-4a4f-8bb1-577be61d6040-026602.png) |
 | --- | --- |
@@ -125,18 +118,7 @@ ftp://mirbase.org/pub/mirbase/CURRENT/
 | ![1615612397604-e1621675-8845-4b96-b2a3-0bdfac845750.png](./img/KXLt7IQgD8Ez9VxL/1615612397604-e1621675-8845-4b96-b2a3-0bdfac845750-563888.png) | ![1615612397669-c1f6fbef-b59d-49d6-acd6-441f088761e8.png](./img/KXLt7IQgD8Ez9VxL/1615612397669-c1f6fbef-b59d-49d6-acd6-441f088761e8-988557.png) |
 | ![1615612397603-1fecb1e8-dd71-4c35-a4ca-9599f68d4aa6.png](./img/KXLt7IQgD8Ez9VxL/1615612397603-1fecb1e8-dd71-4c35-a4ca-9599f68d4aa6-159645.png) | ![1615612397628-6ee91d3b-7edf-4099-a48b-579ba57499b2.png](./img/KXLt7IQgD8Ez9VxL/1615612397628-6ee91d3b-7edf-4099-a48b-579ba57499b2-947641.png) |
 
-
 ![1615612397710-3717bdf8-bb78-4b29-b70d-febe19e95baa.png](./img/KXLt7IQgD8Ez9VxL/1615612397710-3717bdf8-bb78-4b29-b70d-febe19e95baa-351973.png)
 
-
-
-
-
-
-
-
-
-
-
-> 更新: 2021-03-13 13:15:07  
+> 更新: 2021-03-13 13:15:07
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/swpdvf>

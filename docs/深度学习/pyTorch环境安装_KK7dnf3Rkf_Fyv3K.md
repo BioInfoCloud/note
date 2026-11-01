@@ -24,7 +24,7 @@
 
 ![1715314178023-9f7f32cd-def5-4dfb-ab52-acf0ae36dd8f.png](./img/KK7dnf3Rkf_Fyv3K/1715314178023-9f7f32cd-def5-4dfb-ab52-acf0ae36dd8f-379685.png)
 
-下载后点击安装程序，<font style="color:rgb(77, 77, 77);">弹出这个，临时抽取文件放置位置的，直接点击ok、随后进入系统兼容性的检查，就是看你是否下错安装包了。可以修改路径。</font>
+下载后点击安装程序，弹出这个，临时抽取文件放置位置的，直接点击ok、随后进入系统兼容性的检查，就是看你是否下错安装包了。可以修改路径。
 
 ![1715314956293-c69539d2-2090-4a5d-a1b3-3770753ccf0e.png](./img/KK7dnf3Rkf_Fyv3K/1715314956293-c69539d2-2090-4a5d-a1b3-3770753ccf0e-758498.png)
 
@@ -66,7 +66,7 @@ CUDA里面有个demo_suite文件夹中有些工具，让我们测试，我们一
 
 ![1715316093380-810593e2-2600-40b4-9aa2-be8c914aa838.png](./img/KK7dnf3Rkf_Fyv3K/1715316093380-810593e2-2600-40b4-9aa2-be8c914aa838-719743.png)
 
-<font style="color:rgb(77, 77, 77);">进入该文佳佳，输入</font><code><font style="color:rgb(77, 77, 77);">deviceQuery</font></code><font style="color:rgb(77, 77, 77);">，查询一下本机的gpu设备。</font>
+进入该文佳佳，输入<code>deviceQuery</code>，查询一下本机的gpu设备。
 
 ![1715316260305-93b47246-4f72-4151-9a96-a6595a5e0981.png](./img/KK7dnf3Rkf_Fyv3K/1715316260305-93b47246-4f72-4151-9a96-a6595a5e0981-417517.png)
 
@@ -97,6 +97,5 @@ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.o
 
 ![1715321217178-cea05dd3-787a-4c0b-9f01-2b75628de2a4.png](./img/KK7dnf3Rkf_Fyv3K/1715321217178-cea05dd3-787a-4c0b-9f01-2b75628de2a4-966999.png)
 
-
-> 更新: 2024-05-10 14:07:23  
+> 更新: 2024-05-10 14:07:23
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/cy0ntgkmg02pfsu6>

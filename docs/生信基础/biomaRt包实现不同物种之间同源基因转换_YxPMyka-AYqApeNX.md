@@ -2,13 +2,19 @@
 
 ![1608888587087-e2ea2dbe-b203-4b76-afa3-07276a400ae8.gif](./img/YxPMyka-AYqApeNX/1608888587087-e2ea2dbe-b203-4b76-afa3-07276a400ae8-430149.gif)
 
-[**<font style="color:#0052FF;">TCGA</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;"> | </font>**[**<font style="color:#0052FF;">GEO</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;"> | </font>**[**<font style="color:#0052FF;">文献阅读</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;"> | </font>**[**<font style="color:#0052FF;">数据库</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[**<font style="color:#0052FF;"> </font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;">| </font>**[**<font style="color:#0052FF;">理论知识</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**| **[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
-[**<font style="color:#0052FF;">R语言</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;"> |</font>****<font style="color:#0052FF;"> </font>**[**<font style="color:#0052FF;">Bioconductor</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;"> | 服务器与</font>**[**<font style="color:#0052FF;">Linux</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1410264757734817793&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)** |**** **[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | 服务器与**[**Linux**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1410264757734817793&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
 ---
 
-在之前，我介绍过生物学中常听见的各种ID名称【参考文章：[<font style="color:#0052FF;">常用生物信息 ID的介绍</font>](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265423&idx=2&sn=288f3c8acaad8670d35a031cd9794d58&chksm=841efdf2b36974e40e29d906fe4f3a46528ea5a84d17f656ad6119f612059489b9df1416c337&scene=21#wechat_redirect)】，然后介绍了这些ID名称之间的转换。【参考文章：[<font style="color:#0052FF;">生信中各种ID转换</font>](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265466&idx=1&sn=021a10503d338e09abe07b578e734566&chksm=841efdc7b36974d13b7ad95e2272d293089d49adff9b74667bbeed78306328f0a42b0259c030&scene=21#wechat_redirect)】，这些转换通常都是基于同一物种而言，但在基础医学研究中，很多实验模型都是在动物上完成的，比如小鼠。假如我们研究某药物的抗肿瘤效果，涉及到机制，最终都会往人上靠的，一般几个基因，数据库直接查一下就可以啦。但如果基因很多，人工查就不太现实，一般也是测序后的数据。所以在这里我给大家介绍一下，不同物种之间的同源基因名称转换，这种转换是基于物种间基因的同源性的。<font style="color:#FF0000;">同源基因是由一个共同祖先在不同物种中遗传的基因。虽然同源基因在序列上是相似的，但相似的序列不一定是同源的</font>。
+在之前，我介绍过生物学中常听见的各种ID名称【参考文章：[常用生物信息 ID的介绍](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265423&idx=2&sn=288f3c8acaad8670d35a031cd9794d58&chksm=841efdf2b36974e40e29d906fe4f3a46528ea5a84d17f656ad6119f612059489b9df1416c337&scene=21#wechat_redirect)】，然后介绍了这些ID名称之间的转换。
+【参考文章：[生信中各种ID转换](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265466&idx=1&sn=021a10503d338e09abe07b578e734566&chksm=841efdc7b36974d13b7ad95e2272d293089d49adff9b74667bbeed78306328f0a42b0259c030&scene=21#wechat_redirect)】，这些转换通常都是基于同一物种而言，但在基础医学研究中，很多实验模型都是在动物上完成的，比如小鼠。
+假如我们研究某药物的抗肿瘤效果，涉及到机制，最终都会往人上靠的，一般几个基因，数据库直接查一下就可以啦。
+但如果基因很多，人工查就不太现实，一般也是测序后的数据。
+所以在这里我给大家介绍一下，不同物种之间的同源基因名称转换，这种转换是基于物种间基因的同源性的。
+同源基因是由一个共同祖先在不同物种中遗传的基因。
+虽然同源基因在序列上是相似的，但相似的序列不一定是同源的。
 
 可能常见的转换是小鼠和人之间的转换，因为小鼠的基因和人的基因的同源性
 
@@ -27,7 +33,7 @@ BiocManager::install("biomaRt")
 library(biomaRt)
 ```
 
-使用<font style="color:#DD1144;background-color:rgba(0, 0, 0, 0.03);">biom</font><font style="color:#DD1144;background-color:rgba(0, 0, 0, 0.03);">aRt</font>包的第一步是选择要使用的BioMart 数据库和数据集。使用useMart函数可以连接到指定的BioMart 数据库和数据库中的数据集。要知道哪些BioMart 数据库是可用的，可以利用listMarts函数查看。
+使用biomaRt包的第一步是选择要使用的BioMart 数据库和数据集。使用useMart函数可以连接到指定的BioMart 数据库和数据库中的数据集。要知道哪些BioMart 数据库是可用的，可以利用listMarts函数查看。
 
 ```plain
 > listMarts()
@@ -95,7 +101,7 @@ mart <- useDataset("hsapiens_gene_ensembl", useMart("ensembl"))
 6                            marker_start
 ```
 
-那么我们怎进行同源基因转换呢？按照开始说的，**<font style="color:#FF0000;">使用BioMart 包的第一步是选择要使用的BioMart 数据库和数据集</font>**。使用useMart函数可以连接到指定的BioMart 数据库和数据库中的数据集。所以第一步是构建mart对象。
+那么我们怎进行同源基因转换呢？按照开始说的，**使用BioMart 包的第一步是选择要使用的BioMart 数据库和数据集**。使用useMart函数可以连接到指定的BioMart 数据库和数据库中的数据集。所以第一步是构建mart对象。
 
 ```plain
 human <- useMart('ensembl',dataset = "hsapiens_gene_ensembl")
@@ -178,7 +184,7 @@ hg_symbols<- getBM(attributes=c('ensembl_gene_id','hgnc_symbol',"chromosome_name
 
 这也达到的注释的目的。
 
-**<font style="color:#FF0000;">更多功能，参考官方文档。</font>**
+**更多功能，参考官方文档。**
 
 ---
 
@@ -190,7 +196,5 @@ hg_symbols<- getBM(attributes=c('ensembl_gene_id','hgnc_symbol',"chromosome_name
 
 ![1608888587131-861c6a16-5c10-49bf-b135-9c969ee7e39c.jpeg](./img/YxPMyka-AYqApeNX/1608888587131-861c6a16-5c10-49bf-b135-9c969ee7e39c-965618.jpeg)
 
-
-
-> 更新: 2021-09-08 14:08:03  
+> 更新: 2021-09-08 14:08:03
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/hrgb0z>

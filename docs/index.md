@@ -130,6 +130,7 @@ hide:
 
 <div class="roadmap" markdown>
 <div class="roadmap__step" markdown>
+
 ### 第一步 · R 语言基础 <small>2~3 周</small>
 
 熟悉 R 的语法、数据结构与常用函数，先把「能读懂、能改写」作为目标。
@@ -139,6 +140,7 @@ hide:
 </div>
 
 <div class="roadmap__step" markdown>
+
 ### 第二步 · 绘图思想 <small>3~5 天</small>
 
 快速了解 ggplot2 的图层语法，不需要精通，够用即可。
@@ -148,6 +150,7 @@ hide:
 </div>
 
 <div class="roadmap__step" markdown>
+
 ### 第三步 · 数据分析基础 <small>1~2 周</small>
 
 学会读入数据、整理数据、做基础统计与差异分析。
@@ -157,6 +160,7 @@ hide:
 </div>
 
 <div class="roadmap__step" markdown>
+
 ### 第四步 · 转录组与 TCGA <small>持续深入</small>
 
 理解测序原理与文件格式，再从 counts / FPKM / TPM 出发做差异表达与富集分析。
@@ -237,6 +241,7 @@ hide:
     - [教你如何预测参与调节差异基因的转录因子](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651275223&idx=1&sn=00c88ae70cfe9676e56d1b51abc6b175&scene=21#wechat_redirect)
 
 <div class="cta" markdown>
+
 ### 关注「生物信息云」
 
 公众号持续更新生信教程与实战笔记，欢迎在 B 站、GitHub 一起交流。

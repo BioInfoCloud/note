@@ -8,13 +8,23 @@
 
 美国Affymetrix公司是目前全球基因芯片行业的领头羊，以其专利的寡聚核苷酸原位光刻合成技术，年产各类寡聚核苷酸基因芯片达到几十万张，占据了表达谱基因芯片科研市场的一半以上，经过了将近十年的研究和开发，已经在国际上赢得了很高的盛誉，同时也成为为数极少的已经盈利的生物芯片公司。Affymetrix公司的基因芯片为寡核苷酸芯片（Oligo芯片），这种类型的芯片具有极高的特异性和灵敏度，重复性好，假阳性率非常低，是目前世界上最先进的基因芯片。Affymetrix所利用的原位光刻专利技术可使一张芯片上合成多达500,000 个寡核苷酸。该系统可以分析样品中DNA或者RNA序列的相对含量。
 
-Affymetrix公司率先开发的寡聚核苷酸原位光刻专利技术，是生产高密度寡核苷酸基因芯片的核心关键技术。采用的技术原理是在合成碱基单体的5＇羟基末端连上一个光敏保护基。首先使支持物羟基化，并用光敏保护基团将其保护起来。每次选取适当的蔽光膜(mask)使需要聚合的部位透光，其它部位不透光。这样，光通过蔽光膜照射到支持物上，受光部位的羟基脱保护而活化。因为合成所用的单体分子一端按传统固相合成方法活化，另一端受光敏保护基的保护，所以发生偶联的部位反应后仍旧带有光敏保护基团。因此，每次通过控制蔽光膜的图案(透光与不透光)决定哪些区域应被活化，以及所用单体的种类和反应次序就可以实现在待定位点合成大量预定序列寡聚体的目的。 使用多种蔽光膜能以更少的合成步骤生产出高密度的阵列，在合成循环中探针数目呈指数增长。某一含N个核苷酸的寡聚核苷酸，通过4×N个化学步骤能合成出4N个可能结构。例如：一段8个碱基的寡核苷酸有65，536种排列的可能，通过32个化学步骤，8个小时就能合成65，536个探针。其基本原理如图所示：
+Affymetrix公司率先开发的寡聚核苷酸原位光刻专利技术，是生产高密度寡核苷酸基因芯片的核心关键技术。
+采用的技术原理是在合成碱基单体的5＇羟基末端连上一个光敏保护基。
+首先使支持物羟基化，并用光敏保护基团将其保护起来。
+每次选取适当的蔽光膜(mask)使需要聚合的部位透光，其它部位不透光。
+这样，光通过蔽光膜照射到支持物上，受光部位的羟基脱保护而活化。
+因为合成所用的单体分子一端按传统固相合成方法活化，另一端受光敏保护基的保护，所以发生偶联的部位反应后仍旧带有光敏保护基团。
+因此，每次通过控制蔽光膜的图案(透光与不透光)决定哪些区域应被活化，以及所用单体的种类和反应次序就可以实现在待定位点合成大量预定序列寡聚体的目的。
+ 使用多种蔽光膜能以更少的合成步骤生产出高密度的阵列，在合成循环中探针数目呈指数增长。
+某一含N个核苷酸的寡聚核苷酸，通过4×N个化学步骤能合成出4N个可能结构。
+例如：一段8个碱基的寡核苷酸有65，536种排列的可能，通过32个化学步骤，8个小时就能合成65，536个探针。
+其基本原理如图所示：
 
 ![1629791811289-9dc9a6ed-748a-4dbe-ad51-5974ddb28335.png](./img/yFH22K8_RQMPkc70/1629791811289-9dc9a6ed-748a-4dbe-ad51-5974ddb28335-701432.png)
 
 视频讲解：<https://v.qq.com/x/page/j0173fqkgbb.html>
 
-<font style="color:rgb(43, 43, 43);">昂飞的表达谱芯片，分成传统的 </font>**<font style="color:rgb(53, 148, 247);">「In Vitro Transcription」</font>**<font style="color:rgb(43, 43, 43);"> 芯片，简称 IVT 芯片和新一代的 </font>**<font style="color:rgb(53, 148, 247);">「Whole Transcriptome」</font>**<font style="color:rgb(43, 43, 43);"> 芯片，简称 WT 芯片。</font>
+昂飞的表达谱芯片，分成传统的 **「In Vitro Transcription」** 芯片，简称 IVT 芯片和新一代的 **「Whole Transcriptome」** 芯片，简称 WT 芯片。
 
 IVT 芯片用 Oligo dT 引物和 T7 逆转录酶来得到 cDNA 链，所以，它得到的 cDNA 主要是靠近 mRNA 3'位末端的 cDNA。
 
@@ -40,7 +50,7 @@ illumina 方案的测序芯片称为「Infinium」（曾用名「Bead Array」�
 
 玻璃基片形状大小与普通载玻片相近，其作用主要是为了给测序微珠提供容器。
 
-基片内表面，通过光蚀刻的方法，做出许多排列整齐的微米级小孔，作为容纳测序微珠的空间。<font style="color:rgb(43, 43, 43);">两者大小恰好匹配，一个小孔正好能容纳一个微珠。</font>
+基片内表面，通过光蚀刻的方法，做出许多排列整齐的微米级小孔，作为容纳测序微珠的空间。两者大小恰好匹配，一个小孔正好能容纳一个微珠。
 
 ![1629795222311-9e6545a3-61b1-4c29-87fe-4de5efc5812e.png](./img/yFH22K8_RQMPkc70/1629795222311-9e6545a3-61b1-4c29-87fe-4de5efc5812e-652433.png)
 
@@ -82,13 +92,19 @@ Agilent芯片的基片是一个玻璃片。它的大小和一张标准的病理�
 
 ![1629813345659-9265f36d-f3b8-4e93-b0d2-a80e3f89cacc.png](./img/yFH22K8_RQMPkc70/1629813345659-9265f36d-f3b8-4e93-b0d2-a80e3f89cacc-545883.png)
 
-Agilent 表达谱芯片的检测原理也是基于 3’ IVT 原理。首先用 Oligo dT 引物和 T7 逆转录酶来得到第一链的 cDNA， 然后再转录或复制出第二链的 cDNA，得到双链 cDNA，这个双链cDNA 是带有 T7 启动子的。接下来， 如果是单色（或单通道）芯片杂交流程，我们只进行这张图的左边的蓝色部分，使用 T7 逆转录酶，以带有 A、 T、 U 碱基的核苷酸和标有 Cy5 荧光基团 CTP 为底物逆转录出 cRNA 来；如果是双色（或双通道）杂交流程，要加上图示的右半边红色的部分，即对于另一个样本（参照组 reference），就用标有 Cy3 荧光基团 CTP 做为底物之一。这样， Cy3（或 Cy5） 荧光基团就在体外逆转录过程当中，被带入到新合成的 cRNA链当中去了。 经纯化后，将这个制备好的 cRNA 与芯片探针进行杂交，在激光扫描仪下检测每个点的荧光强度，并计算出对应基因的 RNA 表达量来。不同于单色芯片以计算荧光强度作为表达值，双色芯片的表达值则计算的是实验组和参照组的比值。
+Agilent 表达谱芯片的检测原理也是基于 3’ IVT 原理。
+首先用 Oligo dT 引物和 T7 逆转录酶来得到第一链的 cDNA， 然后再转录或复制出第二链的 cDNA，得到双链 cDNA，这个双链cDNA 是带有 T7 启动子的。
+接下来， 如果是单色（或单通道）芯片杂交流程，我们只进行这张图的左边的蓝色部分，使用 T7 逆转录酶，以带有 A、 T、 U 碱基的核苷酸和标有 Cy5 荧光基团 CTP 为底物逆转录出 cRNA 来；
+如果是双色（或双通道）杂交流程，要加上图示的右半边红色的部分，即对于另一个样本（参照组 reference），就用标有 Cy3 荧光基团 CTP 做为底物之一。
+这样， Cy3（或 Cy5） 荧光基团就在体外逆转录过程当中，被带入到新合成的 cRNA链当中去了。
+ 经纯化后，将这个制备好的 cRNA 与芯片探针进行杂交，在激光扫描仪下检测每个点的荧光强度，并计算出对应基因的 RNA 表达量来。
+不同于单色芯片以计算荧光强度作为表达值，双色芯片的表达值则计算的是实验组和参照组的比值。
 
 视频连接：<https://v.qq.com/x/page/h0174dobvcb.html>
 
 参考：<https://mp.weixin.qq.com/s/8qUblDoNV3AobGdiwl8Aig>
 
-需要注意的是，对于双色芯片，我们称标记第二种颜色的样本为参照组（reference），它可以是对照组样本（如用同一个患者的癌旁组织作为癌的对照），也可以仅仅是一个基因表达的参考，如使用一种或几种肿瘤细胞系的 RNA 混合物作为参照组。 **<font style="color:#F5222D;">GEO 上使用 Agilent 双色芯片的数据集的表达谱，常常给出的是两种基因的表达强度比值，并取 log2；但也有些数据集虽然用的也是这款芯片，但只使用了单色单样本，这时候就直接和普通单色芯片一样分析即可</font>**。
+需要注意的是，对于双色芯片，我们称标记第二种颜色的样本为参照组（reference），它可以是对照组样本（如用同一个患者的癌旁组织作为癌的对照），也可以仅仅是一个基因表达的参考，如使用一种或几种肿瘤细胞系的 RNA 混合物作为参照组。 **GEO 上使用 Agilent 双色芯片的数据集的表达谱，常常给出的是两种基因的表达强度比值，并取 log2；但也有些数据集虽然用的也是这款芯片，但只使用了单色单样本，这时候就直接和普通单色芯片一样分析即可**。
 
 # 二. 芯片数据库
 
@@ -96,7 +112,12 @@ Agilent 表达谱芯片的检测原理也是基于 3’ IVT 原理。首先用 O
 
 ## 1. GEO数据库简介
 
-GEO，全称 Gene Expression Omnibus（基因表达综合数据库），是由美国国立生物技术信息中心NCBI创建并维护的基因表达数据库。它创建于2000年，收录并整理了全球范围内研究工作者上传的微阵列芯片、二代测序以及其他形式的高通量基因组数据，这些数据包括基于单通道和双通道微阵列的实验，检测mRNA，基因组DNA和蛋白质丰度，以及非阵列技术，如基因表达系列分析（SAGE），质谱蛋白质组学数据和高通量测序数据。也就是说只要是目前已经发表的论文，论文中涉及到的基因表达检测的数据都可以通过这个数据库中找到。关键是这个数据是免费的！随着芯片和测序技术的蓬勃发展和应用， 2000 年美国国立生物技术信息中心, NCBI 创建了 GEO 并维护至今。 2003 年到 2004 年 GEO 数据库逐渐开放供研究者获取和分析， 2001 年到 2006 年， GEO 数据上传的规则，也就是 MIAME（The MinimumInformation About a Microarray Experiment guidelines）逐渐形成并实行，并成为提交芯片数据的全球规范。
+GEO，全称 Gene Expression Omnibus（基因表达综合数据库），是由美国国立生物技术信息中心NCBI创建并维护的基因表达数据库。
+它创建于2000年，收录并整理了全球范围内研究工作者上传的微阵列芯片、二代测序以及其他形式的高通量基因组数据，这些数据包括基于单通道和双通道微阵列的实验，检测mRNA，基因组DNA和蛋白质丰度，以及非阵列技术，如基因表达系列分析（SAGE），质谱蛋白质组学数据和高通量测序数据。
+也就是说只要是目前已经发表的论文，论文中涉及到的基因表达检测的数据都可以通过这个数据库中找到。
+关键是这个数据是免费的！
+随着芯片和测序技术的蓬勃发展和应用， 2000 年美国国立生物技术信息中心, NCBI 创建了 GEO 并维护至今。
+ 2003 年到 2004 年 GEO 数据库逐渐开放供研究者获取和分析， 2001 年到 2006 年， GEO 数据上传的规则，也就是 MIAME（The MinimumInformation About a Microarray Experiment guidelines）逐渐形成并实行，并成为提交芯片数据的全球规范。
 
 GEO 数据库收录的数据类型有：
 
@@ -122,7 +143,7 @@ ArrayExpres数据库的主页链接（<https://www.ebi.ac.uk/arrayexpress/>）
 
 ## 1.检索
 
-检索界面，网址：[<font style="color:#3194D0;">http://www.ncbi.nlm.nih.gov/geo</font>](http://www.ncbi.nlm.nih.gov/geo)
+检索界面，网址：[http://www.ncbi.nlm.nih.gov/geo](http://www.ncbi.nlm.nih.gov/geo)
 
 ![1610773180966-58be52c0-3280-4693-9d4c-fdd9ab3c95c9.jpeg](./img/yFH22K8_RQMPkc70/1610773180966-58be52c0-3280-4693-9d4c-fdd9ab3c95c9-239693.jpeg)
 
@@ -278,7 +299,7 @@ Find genes that are up/down for this condition(s)可以根据选择的实验筛�
 
 ![1610773181037-0e29a148-d33b-4947-b428-269fe21e2fae.jpeg](./img/yFH22K8_RQMPkc70/1610773181037-0e29a148-d33b-4947-b428-269fe21e2fae-180671.jpeg)
 
-我们点击Step2： <font style="color:#33CC11;">Select which Samples to put in Group A and Group B</font>会弹出一个窗口，让我们自己进行分组。我们可以看见A组合B组的GSM号是一样的，需要将他分在哪一组就在哪一组点击一下就行。背景变为深灰色就表示被选中，这里将GSM9920-GSM9925定位A组，其余定位B组。点击OK.
+我们点击Step2： Select which Samples to put in Group A and Group B会弹出一个窗口，让我们自己进行分组。我们可以看见A组合B组的GSM号是一样的，需要将他分在哪一组就在哪一组点击一下就行。背景变为深灰色就表示被选中，这里将GSM9920-GSM9925定位A组，其余定位B组。点击OK.
 
 ![1610773181061-50ba3299-f571-4f5d-89d6-b6865e654afd.jpeg](./img/yFH22K8_RQMPkc70/1610773181061-50ba3299-f571-4f5d-89d6-b6865e654afd-870079.jpeg)
 
@@ -496,7 +517,8 @@ Illumina芯片数据分析的4个起点： ① Pixel-level,每个像素点对应
 
 ![1630119701339-1b6023a9-d14c-4e60-97a7-ca246f162e41.png](./img/yFH22K8_RQMPkc70/1630119701339-1b6023a9-d14c-4e60-97a7-ca246f162e41-464071.png)
 
-使用iScan/BeadScan扫描图像及处理图像信息时，因软件的具体版 本和设置参数不同，产生多种不同格式的原始数据文件。 ① `.txtfiles`,包含所有beads坐标数据和已减去背景值的光信号强度值 ② `.tiffiles`,扫描后得到的图像文件 ③ `.Iocs files`,包含所有beads的坐标信息 ④ `.idatfiles`,专有的二进制文件用于储存光信号强度数据，可供 BeadStudio/GenomeStudio读取进行后续分析 ⑤ `.xml files`,包含仪器的扫描参数设置和提取光强度值数据的具体方法信息 ⑥ `.bgx files`,包含探针注释信息 ⑦ `Metrics.txt`,包含扫描芯片的质量参数信息 ⑧ `.sdf files`,包含样本/芯片的具体构架、布局信息 ⑨ IBS (Illumina Bead Summary) files，`.csv`格式，summary-level 数据。
+使用iScan/BeadScan扫描图像及处理图像信息时，因软件的具体版 本和设置参数不同，产生多种不同格式的原始数据文件。
+ ① `.txtfiles`,包含所有beads坐标数据和已减去背景值的光信号强度值 ② `.tiffiles`,扫描后得到的图像文件 ③ `.Iocs files`,包含所有beads的坐标信息 ④ `.idatfiles`,专有的二进制文件用于储存光信号强度数据，可供 BeadStudio/GenomeStudio读取进行后续分析 ⑤ `.xml files`,包含仪器的扫描参数设置和提取光强度值数据的具体方法信息 ⑥ `.bgx files`,包含探针注释信息 ⑦ `Metrics.txt`,包含扫描芯片的质量参数信息 ⑧ `.sdf files`,包含样本/芯片的具体构架、布局信息 ⑨ IBS (Illumina Bead Summary) files，`.csv`格式，summary-level 数据。
 
 #### 1). limma包
 
@@ -603,7 +625,7 @@ getGEOSuppFiles("GSE5823", baseDir ="geodata", makeDirectory = T)  # 新建一�
 也可以获取数据地址URL后使用download.file函数下载，但这种下载方式比较慢，不推荐。
 
 ```r
-##获取下载链接 
+##获取下载链接
 data_url <- getGEOSuppFiles("GSE5823", fetch_files = F, makeDirectory = F)
 ##是一个数据框
 url <- as.character(data_url$url)
@@ -633,7 +655,7 @@ celFileNames <- list.files("geodata/GSE5823/GSE5823_RAW",pattern = ".CEL.gz$",fu
 sampleName <- str_split(celFileNames, pattern = "[.]", simplify = T)[,1]
 celFlieInfo <- data.frame(fileName = celFileNames,sampleName = sampleName)
 celFlieInfo <- merge(celFlieInfo,sampleInfo,by = "sampleName")
-celFlieInfo$cellType <- str_split(str_split(celFlieInfo$description, pattern = "\\s+", simplify = T)[,3], 
+celFlieInfo$cellType <- str_split(str_split(celFlieInfo$description, pattern = "\\s+", simplify = T)[,3],
                                  pattern = "_", simplify = T)[,1]
 celFlieInfo$group <- ifelse(grepl("control",celFlieInfo$description),"control","c-myc KD")
 write.table(x = celFlieInfo,
@@ -653,7 +675,7 @@ write.table(x = celFlieInfo,
 
 ```r
 library(affy)
-cel_files <- affy::list.celfiles("geodata/GSE5823/GSE5823_RAW", 
+cel_files <- affy::list.celfiles("geodata/GSE5823/GSE5823_RAW",
                                  full.name = T)
 ## affy包中有2个读取CEL文件的函数，推荐ReadAffy(),更灵活易用
 cel1 <- read.affybatch(filenames = cel_files)
@@ -750,7 +772,7 @@ GSE5823_targets <- pData(GSE5823_data) #就是前面Targets的信息，在phenoD
 
 ```r
 ###  查看数据----
-affy::pm(GSE5823_data)[1:5, 1:5]# perfect matches 
+affy::pm(GSE5823_data)[1:5, 1:5]# perfect matches
 affy::mm(GSE5823_data)[1:5, 1:5]# mismatches 这是一个背景数据，没有完全匹配的数据
 GSE5823_exp[1:5, 1:5]
 
@@ -763,17 +785,17 @@ GSE5823_exp["369707", 1:5]#定位到369707这一行，发现两者是一致的
 查看某一探针集的表达情况。
 
 ```r
-## 查看某个探针集的表达情况 
+## 查看某个探针集的表达情况
 library(tidyverse)#%>% 管道符就是tidyverse里的
 
-GSE5823_pm_1007 <- affy::pm(GSE5823_data, "1007_s_at") %>% 
-  as.data.frame() %>% 
-  rownames_to_column("probe_id") %>% 
+GSE5823_pm_1007 <- affy::pm(GSE5823_data, "1007_s_at") %>%
+  as.data.frame() %>%
+  rownames_to_column("probe_id") %>%
   pivot_longer(cols = starts_with("GSM"),
                names_to = "sampleName",
-               values_to = "pm_value") %>% 
-  left_join(GSE5823_targets %>% dplyr::select(sampleName, group), 
-            by = "sampleName") %>% 
+               values_to = "pm_value") %>%
+  left_join(GSE5823_targets %>% dplyr::select(sampleName, group),
+            by = "sampleName") %>%
   mutate(probe_id = factor(probe_id, levels = c(paste0("1007_s_at", 1:16))))
 
 ggplot(GSE5823_pm_1007, aes(x = probe_id, y = pm_value, col = group)) +
@@ -811,7 +833,7 @@ for (i in 1:20) {
 我们可以查看芯片的扫描时间。这个日期可作为一种重要的批次效应因素。
 
 ```r
-GSE5823_targets$batch <- GSE5823_data@protocolData@data$ScanDate %>% 
+GSE5823_targets$batch <- GSE5823_data@protocolData@data$ScanDate %>%
   str_sub(1, 8)#提取时间日期(年月日)，去掉具体详细的时间点。
 GSE5823_targets$batch
 table(GSE5823_targets$batch)
@@ -838,8 +860,8 @@ cols <- rainbow(nrow(GSE5823_targets))
 plotAffyRNAdeg(RNAdeg, cols = cols)
 legend("bottomright",
        ncol = 2,
-       legend = sampleNames(GSE5823_data), 
-       lty = 1, 
+       legend = sampleNames(GSE5823_data),
+       lty = 1,
        lwd = 2,
        cex = 0.8,
        box.lty=0,
@@ -870,7 +892,7 @@ library(RColorBrewer)
 display.brewer.all()
 col <- brewer.pal(4, "Set2")
 cols <- c(rep(col[1],4), rep(col[2],6),rep(col[3],4),rep(col[4],6))
-boxplot(GSE5823_data, las = 2, 
+boxplot(GSE5823_data, las = 2,
         col = cols )
 ```
 
@@ -909,30 +931,30 @@ PCA_new <- function(expr, ntop = 500, group, show_name = F){
   select <- order(rv, decreasing = TRUE)[seq_len(min(ntop, length(rv)))]
   pca <- prcomp(t(expr[select, ]))#最核心的代码
   percentVar <- pca$sdev^2/sum(pca$sdev^2)
-  d <- data.frame(PC1 = pca$x[, 1], 
-                  PC2 = pca$x[, 2], 
-                  group = group, 
+  d <- data.frame(PC1 = pca$x[, 1],
+                  PC2 = pca$x[, 2],
+                  group = group,
                   name = colnames(expr))
   attr(d, "percentVar") <- percentVar[1:2]
   if (show_name) {
-    ggplot(data = d, aes_string(x = "PC1", y = "PC2", color = "group")) + 
+    ggplot(data = d, aes_string(x = "PC1", y = "PC2", color = "group")) +
       geom_point(size = 2) +
-      xlab(paste0("PC1: ", round(percentVar[1] * 100), "% variance")) + 
+      xlab(paste0("PC1: ", round(percentVar[1] * 100), "% variance")) +
       ylab(paste0("PC2: ", round(percentVar[2] * 100), "% variance")) +
       geom_text_repel(aes(label = name),
                       size = 3,
                       segment.color = "black",
                       show.legend = FALSE )
   } else {
-    ggplot(data = d, aes_string(x = "PC1", y = "PC2",color = "group")) + 
+    ggplot(data = d, aes_string(x = "PC1", y = "PC2",color = "group")) +
       geom_point(size = 2) +
-      xlab(paste0("PC1: ", round(percentVar[1] * 100), "% variance")) + 
+      xlab(paste0("PC1: ", round(percentVar[1] * 100), "% variance")) +
       ylab(paste0("PC2: ", round(percentVar[2] * 100), "% variance"))
   }
 }
 
-PCA_new(log2(GSE5823_exp), 
-        nrow(GSE5823_exp), 
+PCA_new(log2(GSE5823_exp),
+        nrow(GSE5823_exp),
         group = GSE5823_targets$cellType,
         show_name = T)
 ```
@@ -944,7 +966,7 @@ PCA_new(log2(GSE5823_exp),
 ```r
 library(arrayQualityMetrics)
 dir.create("geodata/GSE5823/GSE5823_QC_raw")
-arrayQualityMetrics(GSE5823_data, 
+arrayQualityMetrics(GSE5823_data,
                     outdir = "geodata/GSE5823/GSE5823_QC_raw", #通过该文件夹下的index来看结果
                     force = TRUE,#如果本身有个文件夹的话就把文件夹刷新了
                     intgroup = "group",#GSE5823_data@phenoData@data[["group"]]
@@ -986,13 +1008,13 @@ boxplot(GSE5823_bgc, las = 2, col = cols)
 再做一个主成分分析看看。
 
 ```r
-PCA_new(log2(exprs(GSE5823_bgc)), 
-        nrow(GSE5823_bgc), 
+PCA_new(log2(exprs(GSE5823_bgc)),
+        nrow(GSE5823_bgc),
         group = GSE5823_targets$cellType,
         show_name = T)
 
-PCA_new(log2(exprs(GSE5823_bgc)), 
-        nrow(GSE5823_bgc), 
+PCA_new(log2(exprs(GSE5823_bgc)),
+        nrow(GSE5823_bgc),
         group = GSE5823_targets$group,
         show_name = T)
 ```
@@ -1020,11 +1042,11 @@ boxplot(GSE5823_rma, las = 2, col = cols)
 
 ![1630309393710-648413fc-5e8e-4bd9-bef3-ae44c664f38e.png](./img/yFH22K8_RQMPkc70/1630309393710-648413fc-5e8e-4bd9-bef3-ae44c664f38e-325851.png)
 
-**<font style="color:#F5222D;">这里需要注意，我这里的数据集里面有4个不同的实验设计，一起校正。我认为，真正分析的时候，将他们区分出来，分别校正，会好一些</font>**。
+**这里需要注意，我这里的数据集里面有4个不同的实验设计，一起校正。我认为，真正分析的时候，将他们区分出来，分别校正，会好一些**。
 
 ```r
 GSE5823_rma_BT474 <- affy::rma(GSE5823_data[,1:4])
-boxplot(GSE5823_rma_BT474, las = 2, 
+boxplot(GSE5823_rma_BT474, las = 2,
         col = rep(c("#66C2A5","#FC8D62"),2))
 ```
 
@@ -1033,8 +1055,8 @@ boxplot(GSE5823_rma_BT474, las = 2,
 芯片数据标准化之后看数据质量是否改善。
 
 ```r
-arrayQualityMetrics(GSE5823_rma, 
-                    outdir = "affymetrix/GSE5823/GSE5823_QC_rma", 
+arrayQualityMetrics(GSE5823_rma,
+                    outdir = "affymetrix/GSE5823/GSE5823_QC_rma",
                     force = TRUE,
                     intgroup = "group",
                     do.logtransform = TRUE)
@@ -1079,8 +1101,8 @@ head(GSE5823_expr_gcrma_BT474)[,1:4]
 同样标准化后可以再检测一下数据质量。
 
 ```r
-arrayQualityMetrics(GSE5823_gcrma, 
-                    outdir = "affymetrix/GSE5823/GSE5823_QC_gcrma", 
+arrayQualityMetrics(GSE5823_gcrma,
+                    outdir = "affymetrix/GSE5823/GSE5823_QC_gcrma",
                     force = TRUE,
                     intgroup = "group",
                     do.logtransform = TRUE)
@@ -1094,7 +1116,7 @@ celFileNames <- list.files("geodata/GSE5823/GSE5823_RAW",pattern = ".CEL.gz$",fu
 sampleName <- str_split(celFileNames, pattern = "[.]", simplify = T)[,1]
 celFlieInfo <- data.frame(fileName = celFileNames,sampleName = sampleName)
 celFlieInfo <- merge(celFlieInfo,sampleInfo,by = "sampleName")
-celFlieInfo$cellType <- str_split(str_split(celFlieInfo$description, pattern = "\\s+", simplify = T)[,3], 
+celFlieInfo$cellType <- str_split(str_split(celFlieInfo$description, pattern = "\\s+", simplify = T)[,3],
                                  pattern = "_", simplify = T)[,1]
 celFlieInfo$group <- ifelse(grepl("control",celFlieInfo$description),"control","c-myc KD")
 write.table(x = celFlieInfo,
@@ -1151,12 +1173,23 @@ GEO数据库中，Illumina芯片原始数据下载后解压，哪怕同一芯片
 library(GEOquery)
 ##下载芯片原始数据
 ifelse(!dir.exists("geodata"),dir.create("geodata"),message("文件夹已存在"))
-getGEOSuppFiles("GSE32873", baseDir ="geodata", makeDirectory = T) 
-getGEOSuppFiles("GSE140882", baseDir ="geodata", makeDirectory = T) 
-getGEOSuppFiles("GSE59183", baseDir ="geodata", makeDirectory = T) 
+getGEOSuppFiles("GSE32873", baseDir ="geodata", makeDirectory = T)
+getGEOSuppFiles("GSE140882", baseDir ="geodata", makeDirectory = T)
+getGEOSuppFiles("GSE59183", baseDir ="geodata", makeDirectory = T)
 ```
 
-下载后得到的原始数据文件GSE\*\*\*\_RAW.tar。我们解压到GSE\*\*\*\_RAW文件夹下。你需要查看一下里面有没有注释信息的文件，下面是3个不同的数据集，它们使用的是同一芯片。解压后会有相同的GPL文件。我们还可以看到，除了这2个文件，其他的GSM开头的就是样本数据文件，但他们个格式有所不同。前面说过Illumina芯片数据分析的4个起点： ① Pixel-level,每个像素点对应一个数据， tif/tiff 格式； ②  Bead-level,每个bead对应一个数据， 类似于affymetrix的单个probe数据， 具体数据包括txt/idat/Iocs/sdf/xml等多种格式； ③ Summary-level,每个bead type对应 —个数据，类似于affy的probe set数据， txt/CSV 格式； ④ 公共数据库存储的表达矩阵数据。这就看作者上传的是什么数据文件，通常都是 Bead-level的数据文件，所以会有txt/idat/Iocs/sdf/xml这样的数据格式文件，比如数据集GSE59183，而且该数据集还有tif格式的数据文件。但在GSE140882数据集中只有txt格式的Bead-level的数据。GSE32873数据集里面处理GPL文件外，就没有其他的，也就是说没有原始数据，所以该数据集你无法从原始数据开始分析，但作者提供了非标准化的表达矩阵文件。
+下载后得到的原始数据文件GSE\*\*\*\_RAW.tar。
+我们解压到GSE\*\*\*\_RAW文件夹下。
+你需要查看一下里面有没有注释信息的文件，下面是3个不同的数据集，它们使用的是同一芯片。
+解压后会有相同的GPL文件。
+我们还可以看到，除了这2个文件，其他的GSM开头的就是样本数据文件，但他们个格式有所不同。
+前面说过Illumina芯片数据分析的4个起点： ① Pixel-level,每个像素点对应一个数据， tif/tiff 格式；
+ ②  Bead-level,每个bead对应一个数据， 类似于affymetrix的单个probe数据， 具体数据包括txt/idat/Iocs/sdf/xml等多种格式；
+ ③ Summary-level,每个bead type对应 —个数据，类似于affy的probe set数据， txt/CSV 格式；
+ ④ 公共数据库存储的表达矩阵数据。
+这就看作者上传的是什么数据文件，通常都是 Bead-level的数据文件，所以会有txt/idat/Iocs/sdf/xml这样的数据格式文件，比如数据集GSE59183，而且该数据集还有tif格式的数据文件。
+但在GSE140882数据集中只有txt格式的Bead-level的数据。
+GSE32873数据集里面处理GPL文件外，就没有其他的，也就是说没有原始数据，所以该数据集你无法从原始数据开始分析，但作者提供了非标准化的表达矩阵文件。
 
 ![1630458879744-f128b553-35ee-47f3-9210-080d7ff388ee.png](./img/yFH22K8_RQMPkc70/1630458879744-f128b553-35ee-47f3-9210-080d7ff388ee-967990.png)
 
@@ -1173,8 +1206,8 @@ getGEOSuppFiles("GSE59183", baseDir ="geodata", makeDirectory = T)
 关于 Illumina芯片原始数据读入使用什么R包在前面有介绍。数据的读入我们首先介绍beadarray包的`readIllumina()`函数。下面介绍`readIllumina()`函数。
 
 ```r
-readIllumina(dir = ".", useImages = FALSE, 
-             illuminaAnnotation = NULL, sectionNames = NULL, metricsFile = "Metrics.txt", 
+readIllumina(dir = ".", useImages = FALSE,
+             illuminaAnnotation = NULL, sectionNames = NULL, metricsFile = "Metrics.txt",
              forceIScan = FALSE, dec = ".", sampleSheet="sampleSheet.csv",...)
 ```
 
@@ -1202,7 +1235,7 @@ slotNames(GSE140882_BLdata)
 str(GSE140882_BLdata)
 dim(GSE140882_BLdata)
 ## 保存数据
-save(GSE140882_BLdata, 
+save(GSE140882_BLdata,
      file = "geodata/GSE140882/GSE140882_beadlevel1.Rda")
 ```
 
@@ -1227,12 +1260,12 @@ dim函数查看数据维度，总共有27芯片，每个芯片有的Beads数也�
 
 ```r
 > dim(GSE140882_BLdata)
- nArrays  nBeads1  nBeads2  nBeads3  nBeads4  nBeads5  nBeads6  nBeads7  nBeads8  nBeads9 nBeads10 
-      27  1049985   979585  1032451   999011  1020257  1017478   987157   975496   976775   976596 
-nBeads11 nBeads12 nBeads13 nBeads14 nBeads15 nBeads16 nBeads17 nBeads18 nBeads19 nBeads20 nBeads21 
-  944583   953363  1029041  1043010  1095933  1040761  1086987  1097331  1093468  1117748  1112479 
-nBeads22 nBeads23 nBeads24 nBeads25 nBeads26 nBeads27 
- 1115702  1126377  1120570  1120508  1125320  1122439 
+ nArrays  nBeads1  nBeads2  nBeads3  nBeads4  nBeads5  nBeads6  nBeads7  nBeads8  nBeads9 nBeads10
+      27  1049985   979585  1032451   999011  1020257  1017478   987157   975496   976775   976596
+nBeads11 nBeads12 nBeads13 nBeads14 nBeads15 nBeads16 nBeads17 nBeads18 nBeads19 nBeads20 nBeads21
+  944583   953363  1029041  1043010  1095933  1040761  1086987  1097331  1093468  1117748  1112479
+nBeads22 nBeads23 nBeads24 nBeads25 nBeads26 nBeads27
+ 1115702  1126377  1120570  1120508  1125320  1122439
 ```
 
 接下来，读入GSE59183数据集，通过设置useImages参数来确认是否从TIF图像中读入数据。
@@ -1242,9 +1275,9 @@ nBeads22 nBeads23 nBeads24 nBeads25 nBeads26 nBeads27
 path2 = "geodata/GSE59183/GSE59183_RAW"
 ## 读取目录中的文件, bead-level
 library(beadarray)
-data_ntiff <- readIllumina(dir = path2, useImages = F, dec = ".", 
+data_ntiff <- readIllumina(dir = path2, useImages = F, dec = ".",
                            illuminaAnnotation = "Humanv4")
-data_tiff <- readIllumina(path2, useImages = T, dec = ".", 
+data_tiff <- readIllumina(path2, useImages = T, dec = ".",
                           illuminaAnnotation = "Humanv4")
 head(data_ntiff[[1]])
 head(data_tiff[[1]])
@@ -1253,7 +1286,16 @@ head(data_tiff[[1]])
 
 ![1630462718750-4a40813c-8bdc-442b-bca2-29683e96222a.png](./img/yFH22K8_RQMPkc70/1630462718750-4a40813c-8bdc-442b-bca2-29683e96222a-437782.png)
 
-我们发现，useImages参数是否设置为TRUE，他们的信号强度值(Grn)不一样。GrnF是图片的前景值，GrnB是图片的背景值。前面介绍useImage设置为TRUE，则使用文本文件中提供的珠子中心坐标从TIFF图像中提取强度。前景值是从图像的锐化版本计算出来的。背景值计算为围绕珠心的17x17像素正方形中5个最低像素的中值。所以useImages参数是否设置为TRUE，导致计算的背景值方法不一样，所以Grn的值有区别，但整体的分析的差异应该是不大的。我们的原始数据中大多是没有tif格式的图像文件的，这种你就不用纠结要不是设置为TRUE，如果有，其实设置与否都行，我没有去比较这2者之间最后的差异。但我认为是没有太大差异的（我们验证过）。还要说一下Grn的值其实就是前景值(GrnF)减去背景值(GrnB)。背景值计算的算法参考文献如下：
+我们发现，useImages参数是否设置为TRUE，他们的信号强度值(Grn)不一样。
+GrnF是图片的前景值，GrnB是图片的背景值。
+前面介绍useImage设置为TRUE，则使用文本文件中提供的珠子中心坐标从TIFF图像中提取强度。
+前景值是从图像的锐化版本计算出来的。
+背景值计算为围绕珠心的17x17像素正方形中5个最低像素的中值。
+所以useImages参数是否设置为TRUE，导致计算的背景值方法不一样，所以Grn的值有区别，但整体的分析的差异应该是不大的。
+我们的原始数据中大多是没有tif格式的图像文件的，这种你就不用纠结要不是设置为TRUE，如果有，其实设置与否都行，我没有去比较这2者之间最后的差异。
+但我认为是没有太大差异的（我们验证过）。
+还要说一下Grn的值其实就是前景值(GrnF)减去背景值(GrnB)。
+背景值计算的算法参考文献如下：
 
 * Kuhn K, Baker SC, Chudin E, Lieu MH, Oeser S, Bennett H, Rigault P, Barker D, McDaniel TK, Chee MS. A novel, high-performance random array platform for quantitative gene expression profiling. Genome Research. 2004;14(11):2347-2356
 * Smith ML, Dunning MJ, Tavare S, Lynch AG. Identification and correction of previously unreported spatial phenomena using raw Illumina BeadArray data. BMC Bioinformatics. 2010;11:208
@@ -1263,8 +1305,8 @@ head(data_tiff[[1]])
 首先我们需要读入tif文件。用readTIFF()函数读入，该函数一次只能读入一个文件。可以用lapply()函数遍历读入。
 
 ```r
-### read TIFF 
-tif_files_path <- list.files("geodata/GSE59183/GSE59183_RAW/", 
+### read TIFF
+tif_files_path <- list.files("geodata/GSE59183/GSE59183_RAW/",
                         pattern = "tif$", full.names = T)
 tif_data <- lapply(tif_files_path, function(p){readTIFF(p)})
 ```
@@ -1311,9 +1353,9 @@ Tif <- illuminaSharpen(tif_data[[1]])
 fg <- illuminaForeground(Tif, cbind(xcoords, ycoords))
 data <- insertBeadData(data, array = 1, what = "GrnF", fg)
 ##
-data <- backgroundCorrectSingleSection(data, array = 1, 
-                                       fg = "GrnF", 
-                                       bg = "GrnRB", 
+data <- backgroundCorrectSingleSection(data, array = 1,
+                                       fg = "GrnF",
+                                       bg = "GrnRB",
                                        newName = "GrnR")
 head(data[[1]])
 ```
@@ -1401,7 +1443,7 @@ dir.create("geodata/GSE108369/GSE108369_RAW_processed")
 for (i in 1:length(files)) {
   # read_tsv读入，dplyr::select选择第1列和第3到第6列
   tmp <- readr::read_tsv(files[i]) %>% dplyr::select(1,3:6)
-  
+
   # 改列名
   colnames(tmp) <- paste0(c("ProbeID", "AVG_SIGNAL","BEAD_STD",'Avg_NBEADS','DETECTION'),
                           "_", targets$sample_id[i])
@@ -1414,10 +1456,10 @@ for (i in 1:length(files)) {
 然后再读入重新命名列名的数据。
 
 ```r
-## 应用 lumi读取文件 
+## 应用 lumi读取文件
 library(lumi)
-GSE108369_lumi <- lumiR.batch(fileList = paste0("geodata/GSE108369/GSE108369_RAW_processed/", 
-                                                basename(files)), 
+GSE108369_lumi <- lumiR.batch(fileList = paste0("geodata/GSE108369/GSE108369_RAW_processed/",
+                                                basename(files)),
                               detectionTh = 0.01,
                               sampleInfoFile = targets)
 
@@ -1426,8 +1468,8 @@ GSE108369_expr_lumi <- exprs(GSE108369_lumi)
 dim(GSE108369_expr_lumi)
 sum(is.na(GSE108369_expr_lumi))#判断是否有缺失值，如果有的话就返回1，再计算总和就可以知道有几个缺失值
 
-## save data 
-save(GSE108369_lumi, GSE108369_expr_lumi, 
+## save data
+save(GSE108369_lumi, GSE108369_expr_lumi,
      file = "geodata/GSE108369/GSE108369_lumi.Rdata")
 ```
 
@@ -1449,7 +1491,7 @@ GSE42242_non_norm <- read.ilmn(files = "geodata/GSE42242/GSE42242_non-normalized
                                probeid = "ID_REF")
 head(GSE42242_non_norm$E)
 dim(GSE42242_non_norm$E)
-## save data 
+## save data
 save(GSE42242_non_norm, file = "geodata/GSE42242/GSE42242_non-normalized.Rdata")
 ```
 
@@ -1462,12 +1504,12 @@ colnames(preview) <- c("ID_REF",
                        "AllStar_control_1","Detection.Pval",
                        "AllStar_control_2","Detection.Pval",
                        "AllStar_control_3","Detection.Pval",
-                       "AllStar_UBE2C_1","Detection.Pval",          
-                       "AllStar_UBE2C_2","Detection.Pval",          
-                       "AllStar_UBE2C_3","Detection.Pval",          
-                       "AllStar_MELK_1" ,"Detection.Pval",           
-                       "AllStar_MELK_2" ,"Detection.Pval" ,          
-                       "AllStar_MELK_3" ,"Detection.Pval"  
+                       "AllStar_UBE2C_1","Detection.Pval",
+                       "AllStar_UBE2C_2","Detection.Pval",
+                       "AllStar_UBE2C_3","Detection.Pval",
+                       "AllStar_MELK_1" ,"Detection.Pval",
+                       "AllStar_MELK_2" ,"Detection.Pval" ,
+                       "AllStar_MELK_3" ,"Detection.Pval"
                        )
 write.table(preview,file = "geodata/GSE32873/GSE32873_non_normalized_new.txt",
             sep = "\t",row.names = F,quote = F)
@@ -1477,7 +1519,7 @@ GSE32873_non_norm <- read.ilmn(files = "geodata/GSE32873/GSE32873_non_normalized
                                probeid = "ID_REF")
 head(GSE32873_non_norm$E)
 dim(GSE32873_non_norm$E)
-## save data 
+## save data
 save(GSE42242_non_norm, file = "geodata/GSE32873/GSE32873_non-normalized.Rdata")
 ```
 
@@ -1495,13 +1537,13 @@ library(tidyverse)
 library(GEOquery)
 ##下载芯片原始数据
 ifelse(!dir.exists("geodata"),dir.create("geodata"),message("文件夹已存在"))
-getGEOSuppFiles("GSE140882", baseDir ="geodata", makeDirectory = T) 
+getGEOSuppFiles("GSE140882", baseDir ="geodata", makeDirectory = T)
 
 path <- "geodata/GSE140882/GSE140882_RAW/"
 GSE140882_BLdata <- readIllumina(dir = path)
 ## add annotation
 annotation(GSE140882_BLdata) <-  suggestAnnotation(GSE140882_BLdata)
-save(GSE140882_BLdata, 
+save(GSE140882_BLdata,
      file = "geodata/GSE140882/GSE140882_beadlevel1.Rda")
 ```
 
@@ -1533,6 +1575,5 @@ head(exp[,1:4])
 1294_at     799.786   839.787   592.434   593.632
 ```
 
-
-> 更新: 2023-08-06 19:28:27  
+> 更新: 2023-08-06 19:28:27
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/vvaql6>

@@ -20,9 +20,9 @@ subcell_sce是已经注释过的Seurat对象。
 
 ```
 load("sce.Rdata")
-countexp.Seurat<-sc.metabolism.Seurat(obj = subcell_sce, 
-                                      method = "AUCell", 
-                                      imputation = F, ncores = 2, 
+countexp.Seurat<-sc.metabolism.Seurat(obj = subcell_sce,
+                                      method = "AUCell",
+                                      imputation = F, ncores = 2,
                                       metabolism.type = "KEGG")
 ```
 
@@ -30,29 +30,29 @@ method有4种：VISION, AUCell, ssgsea和gsva。作者推荐VISION。
 
 ```
 MedBioInfoCloud: rownames(countexp.Seurat@assays[["METABOLISM"]][["score"]])[1:6]
-[1] "Glycolysis / Gluconeogenesis"            
-[2] "Citrate cycle (TCA cycle)"               
-[3] "Pentose phosphate pathway"               
+[1] "Glycolysis / Gluconeogenesis"
+[2] "Citrate cycle (TCA cycle)"
+[3] "Pentose phosphate pathway"
 [4] "Pentose and glucuronate interconversions"
-[5] "Fructose and mannose metabolism"         
+[5] "Fructose and mannose metabolism"
 [6] "Galactose metabolism"
 ```
 
 3.可视化
 
 ```
-DimPlot.metabolism(obj = countexp.Seurat, 
-                   pathway = "Pentose phosphate pathway", 
-                   dimention.reduction.type = "umap", 
+DimPlot.metabolism(obj = countexp.Seurat,
+                   pathway = "Pentose phosphate pathway",
+                   dimention.reduction.type = "umap",
                    dimention.reduction.run = F, size = 1)
 ```
 
 ![](https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202304071008895.png)
 
 ```
-DimPlot.metabolism(obj = countexp.Seurat, 
-                   pathway = "Citrate cycle (TCA cycle)", 
-                   dimention.reduction.type = "tsne", 
+DimPlot.metabolism(obj = countexp.Seurat,
+                   pathway = "Citrate cycle (TCA cycle)",
+                   dimention.reduction.type = "tsne",
                    dimention.reduction.run = F, size = 1)
 ```
 
@@ -60,7 +60,7 @@ DimPlot.metabolism(obj = countexp.Seurat,
 
 ```
 input.pathway<-rownames(countexp.Seurat@assays[["METABOLISM"]][["score"]])[1:6]
-DotPlot.metabolism(obj = countexp.Seurat, pathway = input.pathway, 
+DotPlot.metabolism(obj = countexp.Seurat, pathway = input.pathway,
                    phenotype = "seurat_clusters", norm = "y")
 ```
 

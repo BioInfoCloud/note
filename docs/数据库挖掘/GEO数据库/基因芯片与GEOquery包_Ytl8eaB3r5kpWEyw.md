@@ -1,9 +1,24 @@
 # 基因芯片与GEOquery包
 
-关于芯片数据分析，我们之前的文章：[基因芯片数据挖掘分析表达差异基因](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263385&idx=1&sn=63528ffd7901f36387cd4f484c99e188&chksm=841ef5e4b3697cf28e4590d3509be675bc5d44fe1a1cb6f54fe6ad5cc419139c8720a5fb299d&scene=21#wechat_redirect)中也介绍过芯片的基础知识，这里我们将使用R系统性的讲解芯片的数据分析。不想用R语言的可以阅读文章：[GEO数据库使用教程及在线数据分析工具](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263601&idx=1&sn=443d0dddebb12f21cfd976d50473856b&chksm=841ef60cb3697f1aecc6c310ee3a77e6182a728d5b6711a5cc8f49f0739feaba904f565ce176&scene=21#wechat_redirect)，因为NCBI的GEO数据库([<u>https://www.ncbi.nlm.nih.gov/geo/</u>](https://www.ncbi.nlm.nih.gov/geo/))，ArrayExpress数据库([<u>https://www.ebi.ac.uk/arrayexpress/</u>](https://www.ebi.ac.uk/arrayexpress/))，和TCGA数据库([<u>https://cancergenome.nih.gov/</u>](https://cancergenome.nih.gov/))等等，记录和储存着大量芯片相关的数据，其中GEO数据库是目前最大最全的数据库，可供科研人员查询和下载相关数据。我们还有TCGA数据库的使用教程：[TCGA数据库使用教程](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263330&idx=1&sn=ff440567bbacae48dd41fb3d1daa8751&chksm=841ef51fb3697c098f2c84276930d46884bcb51663f11f2c1c01d822427fed9c4a5c7fe0cf2c&scene=21#wechat_redirect)。可供初学者学习，我们之前也有TCGA数据挖掘的系列教程，读者可关注本公众号，通过菜单栏找到相应的课程学习，也可通过我们的网站查询（公众号后台有网址）。从本文开始，我们将系列性讲解基因芯片数据分析，下面简单对基因芯片的知识进行简单的概述，作为前面文章的一个补充。
+关于芯片数据分析，我们之前的文章：[基因芯片数据挖掘分析表达差异基因](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263385&idx=1&sn=63528ffd7901f36387cd4f484c99e188&chksm=841ef5e4b3697cf28e4590d3509be675bc5d44fe1a1cb6f54fe6ad5cc419139c8720a5fb299d&scene=21#wechat_redirect)中也介绍过芯片的基础知识，这里我们将使用R系统性的讲解芯片的数据分析。
+不想用R语言的可以阅读文章：[GEO数据库使用教程及在线数据分析工具](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263601&idx=1&sn=443d0dddebb12f21cfd976d50473856b&chksm=841ef60cb3697f1aecc6c310ee3a77e6182a728d5b6711a5cc8f49f0739feaba904f565ce176&scene=21#wechat_redirect)，因为NCBI的GEO数据库([<u>https://www.ncbi.nlm.nih.gov/geo/</u>](https://www.ncbi.nlm.nih.gov/geo/))，ArrayExpress数据库([<u>https://www.ebi.ac.uk/arrayexpress/</u>](https://www.ebi.ac.uk/arrayexpress/))，和TCGA数据库([<u>https://cancergenome.nih.gov/</u>](https://cancergenome.nih.gov/))等等，记录和储存着大量芯片相关的数据，其中GEO数据库是目前最大最全的数据库，可供科研人员查询和下载相关数据。
+我们还有TCGA数据库的使用教程：[TCGA数据库使用教程](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263330&idx=1&sn=ff440567bbacae48dd41fb3d1daa8751&chksm=841ef51fb3697c098f2c84276930d46884bcb51663f11f2c1c01d822427fed9c4a5c7fe0cf2c&scene=21#wechat_redirect)。
+可供初学者学习，我们之前也有TCGA数据挖掘的系列教程，读者可关注本公众号，通过菜单栏找到相应的课程学习，也可通过我们的网站查询（公众号后台有网址）。
+从本文开始，我们将系列性讲解基因芯片数据分析，下面简单对基因芯片的知识进行简单的概述，作为前面文章的一个补充。
 
 ## 基因芯片概述
-简单地讲，基因芯片就是一系列微小特征序列的（通常是DNA探针，也可能是蛋白质）的集合，它们可以被用于定性或者定量检查样品内特异分子的成份。比如说，基因芯片可以检测几十个gene marker在细胞样品中的表达量。现在最常见的是用于整个基因组的表达量分析。它的雏形来自于同位素杂交技术，又如Southern blots或者dot blots。在上世纪九十年代，2维的具有现代意义的基因芯片才在实验室里诞生。基因芯片自问世以来，已经有超过23年（至2014年）了。现在，世界上主流的芯片制造商有4家，分别是Affymetrix，Agilent，Nimblegen以及Illumina。下图为历年来提交至Gene Expression Omnibus数据库的主流芯片厂商的芯片数据统计分布图（数据截止日期为2014年3月1日）。从下图中可以看出，Affymetrix制造的基因芯片在2008年以前占据了市场的主流，在2008年，因为illumina BeadArray的推广，它的市场份额有较大的攀升，但是2年以后就下降至与Affymetrix公司类似的份额。而Agilent却在2010年以后成为芯片市场份额最大的一家。市场份额的变化有价格的因素，质量的因素，使用习惯的因素，也有受到第二代测序技术冲击的因素。
+
+简单地讲，基因芯片就是一系列微小特征序列的（通常是DNA探针，也可能是蛋白质）的集合，它们可以被用于定性或者定量检查样品内特异分子的成份。
+比如说，基因芯片可以检测几十个gene marker在细胞样品中的表达量。
+现在最常见的是用于整个基因组的表达量分析。
+它的雏形来自于同位素杂交技术，又如Southern blots或者dot blots。
+在上世纪九十年代，2维的具有现代意义的基因芯片才在实验室里诞生。
+基因芯片自问世以来，已经有超过23年（至2014年）了。
+现在，世界上主流的芯片制造商有4家，分别是Affymetrix，Agilent，Nimblegen以及Illumina。
+下图为历年来提交至Gene Expression Omnibus数据库的主流芯片厂商的芯片数据统计分布图（数据截止日期为2014年3月1日）。
+从下图中可以看出，Affymetrix制造的基因芯片在2008年以前占据了市场的主流，在2008年，因为illumina BeadArray的推广，它的市场份额有较大的攀升，但是2年以后就下降至与Affymetrix公司类似的份额。
+而Agilent却在2010年以后成为芯片市场份额最大的一家。
+市场份额的变化有价格的因素，质量的因素，使用习惯的因素，也有受到第二代测序技术冲击的因素。
 
 ![1612929683395-0ba54962-1a99-4e9b-8ff5-58c017ddac83.webp](./img/Ytl8eaB3r5kpWEyw/1612929683395-0ba54962-1a99-4e9b-8ff5-58c017ddac83-637789.webp)
 
@@ -11,19 +26,19 @@
 
 Affymetrix公司在基因芯片的高密度生产上做出了里程碑式的贡献，它们首创了在石英介质上原位合成oligo短序的工艺，这一工艺极大地提高了基因芯片探针的排布密度。那么oligonucleotide是在原位如何合成的呢？首先，合成位点被对UV光敏感 的化学物质保护起来，当受到UV光照的时候，合成位点被打开，这时候可以把A, C, G或者T碱基连接在合成位点上。而后再去掉光源，位点关闭，洗脱。之后再UV光照打开。如此反复，oligonucleotide的原位合成就完成了。
 
-<font style="color:#007AAA;">参考文献:</font><font style="color:#007AAA;">[PMID: 19822891]</font>
+参考文献:[PMID: 19822891]
 
 ![1612929683449-7b53daf1-0e48-49f1-aeab-0d9eaa363243.webp](./img/Ytl8eaB3r5kpWEyw/1612929683449-7b53daf1-0e48-49f1-aeab-0d9eaa363243-276526.webp)
 
 ![1612929861038-5a052d88-f277-4b76-ab16-136b66224352.gif](./img/Ytl8eaB3r5kpWEyw/1612929861038-5a052d88-f277-4b76-ab16-136b66224352-601537.gif)
 
-[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#021EAA;"> | </font>**[**<font style="color:#021EAA;">GEO</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#021EAA;"> | </font>**[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#021EAA;"> | </font>**[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#021EAA;">| </font>**[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**| **[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
-[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#021EAA;"> | </font>**[**<font style="color:#021EAA;">Bioconductor</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
 ---
 
-关于GEO数据库的基本认识和在线使用，可阅读文章：[**<font style="color:#021EAA;">GEO数据库使用教程及在线数据分析工具</font>**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263601&idx=1&sn=443d0dddebb12f21cfd976d50473856b&chksm=841ef60cb3697f1aecc6c310ee3a77e6182a728d5b6711a5cc8f49f0739feaba904f565ce176&scene=21#wechat_redirect)。本文介绍GEOquery这个包，官方教程地址：
+关于GEO数据库的基本认识和在线使用，可阅读文章：[**GEO数据库使用教程及在线数据分析工具**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263601&idx=1&sn=443d0dddebb12f21cfd976d50473856b&chksm=841ef60cb3697f1aecc6c310ee3a77e6182a728d5b6711a5cc8f49f0739feaba904f565ce176&scene=21#wechat_redirect)。本文介绍GEOquery这个包，官方教程地址：
 
 [<u>http://www.bioconductor.org/packages/release/bioc/vignettes/GEOquery/inst/doc/GEOquery.html</u>](http://www.bioconductor.org/packages/release/bioc/vignettes/GEOquery/inst/doc/GEOquery.html)
 
@@ -99,7 +114,7 @@ GEOquery数据结构实际上有两种形式。第一种，包括GDS、GPL和GSM
 
 **3.1 GDS、GSM和GPL类**
 
-这些类中的每一个都由元数据标头（几乎从SOFT格式标头中逐字获取）和GEODataTable组成。GEODataTable有两个简单的部分，一个Columns部分，它描述Table部分的列标题。**<font style="color:#021EAA;">show</font>**每个类都有一个方法。例如，使用上面的gsm：
+这些类中的每一个都由元数据标头（几乎从SOFT格式标头中逐字获取）和GEODataTable组成。GEODataTable有两个简单的部分，一个Columns部分，它描述Table部分的列标题。**show**每个类都有一个方法。例如，使用上面的gsm：
 
 ```plain
 > head(Meta(gsm))
@@ -139,7 +154,7 @@ $contact_department
 2    VALUE
 3 ABS_CALL
                                                                  Description
-1                                                                           
+1
 2                         MAS 5.0 Statistical Algorithm (mean scaled to 500)
 3 MAS 5.0 Absent, Marginal, Present call  with Alpha1 = 0.05, Alpha2 = 0.065
 ```
@@ -234,8 +249,8 @@ gse2553 <- getGEO('GSE2553',GSEMatrix=TRUE)
 > show(gse2553)
 $GSE2553_series_matrix.txt.gz
 ExpressionSet (storageMode: lockedEnvironment)
-assayData: 12600 features, 181 samples 
-  element names: exprs 
+assayData: 12600 features, 181 samples
+  element names: exprs
 protocolData: none
 phenoData
   sampleNames: GSM48681 GSM48682 ... GSM48861 (181 total)
@@ -246,8 +261,8 @@ featureData
   fvarLabels: ID PenAt ... Chimeric_Cluster_IDs (13 total)
   fvarMetadata: Column Description labelDescription
 experimentData: use 'experimentData(object)'
-  pubMedIds: 16230383 
-Annotation: GPL1977 
+  pubMedIds: 16230383
+Annotation: GPL1977
 ```
 
 ```plain
@@ -374,7 +389,7 @@ gsmlist = Filter(function(gsm) {Meta(gsm)$platform_id=='GPL96'},GSMList(gse))
 ```plain
 > Columns(gsmlist[[1]])[1:5,]
        Column                                                                Description
-1      ID_REF                                                                           
+1      ID_REF
 2       VALUE                         MAS 5.0 Statistical Algorithm (mean scaled to 500)
 3    ABS_CALL MAS 5.0 Absent, Marginal, Present call  with Alpha1 = 0.05, Alpha2 = 0.065
 NA       <NA>                                                                       <NA>
@@ -389,7 +404,7 @@ probesets <- Table(GPLList(gse)[[1]])$ID
 # make the data matrix from the VALUE columns from each GSM
 # being careful to match the order of the probesets in the platform
 # with those in the GSMs
-data.matrix <- do.call('cbind',lapply(gsmlist,function(x) 
+data.matrix <- do.call('cbind',lapply(gsmlist,function(x)
 {tab <- Table(x)
 mymatch <- match(probesets,tab$ID_REF)
 return(tab$VALUE[mymatch])
@@ -420,7 +435,7 @@ eset2 <- new('ExpressionSet',exprs=data.matrix,phenoData=pheno)
 eset2
 ```
 
-<font style="color:#AB1942;">注意，我们要做的match是确保值和平台信息的顺序相同。最后，制作ExpressionSet对象。</font>
+注意，我们要做的match是确保值和平台信息的顺序相同。最后，制作ExpressionSet对象。
 
 **5.从GEO获取原始数据**
 
@@ -432,7 +447,7 @@ a <- getGEOSuppFiles('GSM1137', fetch_files = FALSE)
 
 ---
 
-上面内容来自官方文档的教程，加上我个人的理解，后续我们在[**<font style="color:#0052FF;">GEO专辑</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)实战中进行应用。
+上面内容来自官方文档的教程，加上我个人的理解，后续我们在[**GEO专辑**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)实战中进行应用。
 
 原文地址：
 
@@ -448,7 +463,5 @@ a <- getGEOSuppFiles('GSM1137', fetch_files = FALSE)
 
 <u></u>
 
-
-
-> 更新: 2022-03-27 14:29:16  
+> 更新: 2022-03-27 14:29:16
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/it6bra>

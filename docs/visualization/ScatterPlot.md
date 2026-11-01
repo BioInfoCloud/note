@@ -57,7 +57,7 @@ ggplot(data = diabetes, aes(x = glucose, y = insulin)) + #数据映射
         panel.background = element_rect(fill = "transparent",colour = "black"),
         plot.background = element_blank(),
         plot.title = element_text(size=15, lineheight=.8,hjust=0.5, face="plain"),
-        legend.margin = margin(t = 0, r = 0, b = 0, l = 0, unit = "pt"))+ 
+        legend.margin = margin(t = 0, r = 0, b = 0, l = 0, unit = "pt"))+
   annotate('text', x= 250,y= 200,label = lable ,size = 4)
 
 ```
@@ -165,12 +165,12 @@ ggplot(data = data, aes(x = PC1, y = PC2))+
   labs(x = xlab, y = ylab)+
   geom_hline(yintercept = 0,lty="dashed",colour="grey60",linewidth=0.4)+
   geom_vline(xintercept = 0,lty="dashed",colour="grey60",linewidth=0.4)+
-  stat_ellipse(aes(fill=diabetesTib.class),type = "norm", 
+  stat_ellipse(aes(fill=diabetesTib.class),type = "norm",
                geom ="polygon",alpha=0.0,color=NA,show.legend = F)+
   #绘制射向“质心”发散的短线（spider segments）；
   geom_segment(aes(xend= PC1.centroid, yend= PC2.centroid, colour = diabetesTib.class),
                alpha=0.6,size = 0.5,show.legend = FALSE)+
-  geom_point(aes(fill = diabetesTib.class),colour="white",shape = 21, 
+  geom_point(aes(fill = diabetesTib.class),colour="white",shape = 21,
              size = 2,show.legend = T)+
   scale_fill_manual(values = c("#98d98e","#4d5aaf","#80aba9"),name="Group")+
   scale_colour_manual(values = c("#98d98e","#4d5aaf","#80aba9"),guide=F)+
@@ -179,7 +179,7 @@ ggplot(data = data, aes(x = PC1, y = PC2))+
   #curvature调整曲率；
   geom_curve(aes(xend= PC1.centroid, yend= PC2.centroid, colour = diabetesTib.class),
              angle=150,curvature = -0.5,show.legend = FALSE)+
-  geom_point(aes(fill = diabetesTib.class),colour="white",shape = 21, 
+  geom_point(aes(fill = diabetesTib.class),colour="white",shape = 21,
              size = 2.5,show.legend = FALSE)+
   geom_label(data = centroid, aes(label = Group.1, fill = Group.1),   ##添加质心标签
              size = 4,hjust=0.5, color="white",show.legend = FALSE)+
@@ -204,7 +204,7 @@ ggplot(data = data, aes(x = PC1, y = PC2))+
                type = "norm", geom ="polygon",
                alpha=0.0,color=NA,show.legend = F)+
   #绘制射向“质心”发散的短线（spider segments）；
-  geom_segment(aes(xend= PC1.centroid, yend= PC2.centroid, 
+  geom_segment(aes(xend= PC1.centroid, yend= PC2.centroid,
                    colour = diabetesTib.class),
                alpha=0.6,size = 0.5,show.legend = FALSE)+
   #
@@ -217,7 +217,7 @@ ggplot(data = data, aes(x = PC1, y = PC2))+
   #绘制射向“质心”发散的曲线（spider segments）；
   #angle参数的范围为[0,180],数值接近0，弯曲处偏向起点；接近180，弯曲处偏向终点；
   #curvature调整曲率；
-  geom_curve(aes(xend= PC1.centroid, yend= PC2.centroid, 
+  geom_curve(aes(xend= PC1.centroid, yend= PC2.centroid,
                  colour = diabetesTib.class),
              angle=150,curvature = -0.5,show.legend = FALSE)+
   geom_point(aes(fill = diabetesTib.class),
@@ -251,8 +251,8 @@ paried.data <- data.frame(
 )
 dat1_paried <- reshape2::dcast(paried.data, Type~Sample) #为了防止配对样本信息错乱，构造配对样本的数据集
 # 配对 t 检验，双侧检验
-p.value <- t.test(paried.data$exp[paried.data$Type == "Normal"], 
-                  paried.data$exp[paried.data$Type == "Tumor"], 
+p.value <- t.test(paried.data$exp[paried.data$Type == "Normal"],
+                  paried.data$exp[paried.data$Type == "Tumor"],
                   paired = TRUE, alternative = 'two.sided', conf.level = 0.95)
 pv <- p.value[["p.value"]]
 stasig <- ifelse(pv >= 0.001, paste0('p value = ', round(pv, 3)), "p value < 0.01")
@@ -260,9 +260,9 @@ stasig <- ifelse(pv >= 0.001, paste0('p value = ', round(pv, 3)), "p value < 0.0
 # 绘图
 ggplot(paried.data, aes(x = Type, y = exp,colour = Type)) +
   geom_point(size = 3) +  #绘制散点表示单个样本的基因表达信息
-  geom_line(aes(group = Sample), color = 'black', lwd = 0.05) +  
-  scale_colour_manual(values = c('#FE7280', '#AC88FF')) + 
-  theme_classic()+ 
+  geom_line(aes(group = Sample), color = 'black', lwd = 0.05) +
+  scale_colour_manual(values = c('#FE7280', '#AC88FF')) +
+  theme_classic()+
   labs(y= paste0("The expression of ***\nlog2(TPM + 1)"),title= "title")+
   theme(panel.background=element_rect(fill="white",colour="black",size=0.25),
         plot.title = element_text(hjust = 0.5),

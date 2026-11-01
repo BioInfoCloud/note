@@ -2,22 +2,21 @@
 
 ![1612611511381-11d24058-a477-4b35-8dda-c5f780802a3f.gif](./img/dpUWmcT1_p3J9Ew3/1612611511381-11d24058-a477-4b35-8dda-c5f780802a3f-088011.gif)
 
-[**<font style="color:#0052FF;">TCGA</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;"> | </font>**[**<font style="color:#0052FF;">GEO</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;"> | </font>**[**<font style="color:#0052FF;">文献阅读</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;"> | </font>**[**<font style="color:#0052FF;">数据库</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[**<font style="color:#0052FF;"> </font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;">| </font>**[**<font style="color:#0052FF;">理论知识</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**| **[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
-[**<font style="color:#0052FF;">R语言</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;"> |</font>****<font style="color:#0052FF;"> </font>**[**<font style="color:#0052FF;">Bioconductor</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;"> | 服务器与</font>**[**<font style="color:#0052FF;">Linux</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1410264757734817793&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)** |**** **[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | 服务器与**[**Linux**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1410264757734817793&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
 ---
 
 # 一.原理
-NMF(Non-negative matrix factorization，非负矩阵分解)，即对于任意给定的一个非负矩阵V，其能够寻找到一个非负矩阵W和一个非负矩阵H，满足条件V=W*H,从而将一个非负的矩阵分解为左右两个非负矩阵的乘积。其中，V矩阵中每一列代表一个观测(observation)，每一行代表一个特征(feature)，**<font style="color:#021EAA;">比如RNAseq的样本（列）和基因（行）的表达矩阵</font>**；W矩阵称为基矩阵，H矩阵称为系数矩阵或权重矩阵。这时用系数矩阵H代替原始矩阵，就可以实现对原始矩阵进行降维，得到数据特征的降维矩阵，从而减少存储空间。过程如下图所示：
+
+NMF(Non-negative matrix factorization，非负矩阵分解)，即对于任意给定的一个非负矩阵V，其能够寻找到一个非负矩阵W和一个非负矩阵H，满足条件V=W*H,从而将一个非负的矩阵分解为左右两个非负矩阵的乘积。其中，V矩阵中每一列代表一个观测(observation)，每一行代表一个特征(feature)，**比如RNAseq的样本（列）和基因（行）的表达矩阵**；W矩阵称为基矩阵，H矩阵称为系数矩阵或权重矩阵。这时用系数矩阵H代替原始矩阵，就可以实现对原始矩阵进行降维，得到数据特征的降维矩阵，从而减少存储空间。过程如下图所示：
 
 ![1612612103068-cf0b193a-e2bf-4205-b6de-d99b145a74c4.png](./img/dpUWmcT1_p3J9Ew3/1612612103068-cf0b193a-e2bf-4205-b6de-d99b145a74c4-063501.png)![1612612103053-7ffe530d-513e-47e9-95ad-72b1f35468cd.png](./img/dpUWmcT1_p3J9Ew3/1612612103053-7ffe530d-513e-47e9-95ad-72b1f35468cd-290463.png)
 
-
-
 ![1612612103158-102ecc9f-397c-4a60-a393-fb6a38f849bc.webp](./img/dpUWmcT1_p3J9Ew3/1612612103158-102ecc9f-397c-4a60-a393-fb6a38f849bc-336242.webp)
 
-**<font style="color:#FF4C41;">下面用数学语言对NMF进行描述，并直接给出求解NMF的迭代公式。</font>**
+**下面用数学语言对NMF进行描述，并直接给出求解NMF的迭代公式。**
 
 ![1612612103288-087e652a-3b93-4678-af35-546724b07945.png](./img/dpUWmcT1_p3J9Ew3/1612612103288-087e652a-3b93-4678-af35-546724b07945-051458.png)
 
@@ -27,11 +26,9 @@ NMF的本质是通过一个矩阵去求解两个为止矩阵。上图采用的�
 
 ![1612612103286-03da045d-a1db-4557-b9eb-217614bc3000.png](./img/dpUWmcT1_p3J9Ew3/1612612103286-03da045d-a1db-4557-b9eb-217614bc3000-333523.png)
 
-
-
 nmf更详尽的原理可以参考维基百科：**Non-negative matrix factorization。**
 
-NMF的计算机实现可以用python、Java和R，作为生信专业的我们，用python和R估计会多一些，**<font style="color:#021EAA;">我后面会介绍怎么用R实现NMF</font>**。
+NMF的计算机实现可以用python、Java和R，作为生信专业的我们，用python和R估计会多一些，**我后面会介绍怎么用R实现NMF**。
 
 本文参考文章:
 
@@ -40,15 +37,23 @@ NMF的计算机实现可以用python、Java和R，作为生信专业的我们，
 【2】[<u>https://blog.csdn.net/ctyqy2015301200079/article/details/86725427</u>](https://blog.csdn.net/ctyqy2015301200079/article/details/86725427)
 
 # 二.实战
-随着芯片和测序水平的发展，使得我们研究所有基因在整个基因组里的表达情况成为了可能。合理地利用和解释这些数据，能够帮助我们探索相关的生物过程和人类疾病的机制。目前已经有一些软件或方法，可以将具有相似表达模式的基因或者样本进行聚类，但是都有自身的限制。NMF包基于非负矩阵分解(non-negative matrix factorization，以下简称NMF)方法，提取基因表达矩阵内数据的生物相关系数，通过对基因和样本进行组织，抓住数据的内部结构特征，从而对样本进行分组，目前在疾病分型方面受到广泛应用。我前面已经介绍过了NMF的基本原理【[<font style="color:#021EAA;">NMF(非负矩阵分解)的算法原理</font>](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273259&idx=1&sn=87c9756cbc8ed78cb1a771e81cf1eec8&chksm=841edc56b369554051851c71c77a21c40936cb3c3608d2c55a869b7bdcad9c29ff82dbd12d45&scene=21#wechat_redirect)】，这里我介绍R语言实现NMF。下面是一篇今年刚发的一篇纯生信的分析文章，用的就是NMF这个方法来对肿瘤进行分型。影响因子为4.8。
+
+随着芯片和测序水平的发展，使得我们研究所有基因在整个基因组里的表达情况成为了可能。
+合理地利用和解释这些数据，能够帮助我们探索相关的生物过程和人类疾病的机制。
+目前已经有一些软件或方法，可以将具有相似表达模式的基因或者样本进行聚类，但是都有自身的限制。
+NMF包基于非负矩阵分解(non-negative matrix factorization，以下简称NMF)方法，提取基因表达矩阵内数据的生物相关系数，通过对基因和样本进行组织，抓住数据的内部结构特征，从而对样本进行分组，目前在疾病分型方面受到广泛应用。
+我前面已经介绍过了NMF的基本原理【[NMF(非负矩阵分解)的算法原理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273259&idx=1&sn=87c9756cbc8ed78cb1a771e81cf1eec8&chksm=841edc56b369554051851c71c77a21c40936cb3c3608d2c55a869b7bdcad9c29ff82dbd12d45&scene=21#wechat_redirect)】，这里我介绍R语言实现NMF。
+下面是一篇今年刚发的一篇纯生信的分析文章，用的就是NMF这个方法来对肿瘤进行分型。
+影响因子为4.8。
 
 ![1612611511386-0d98124a-34f3-4998-8516-201671831047.png](./img/dpUWmcT1_p3J9Ew3/1612611511386-0d98124a-34f3-4998-8516-201671831047-586022.png)
 
-文章大家自己去下载：<font style="color:#021EAA;">Development and Clinical Validation of a Novel 4-Gene Prognostic Signature Predicting Survival in Colorectal Cancer</font>。
+文章大家自己去下载：Development and Clinical Validation of a Novel 4-Gene Prognostic Signature Predicting Survival in Colorectal Cancer。
 
 这篇文章做的是结直肠癌。用了2个数据集，一个来自TCGA-COAD，一个GEO数据库：GSE39582，我们就以这篇文章来介绍NMF。
 
 ## 1.NMF包介绍
+
 首先得安装包NMF，这个包属于生物导体包，普通安装方法就行。
 
 ```plain
@@ -88,11 +93,12 @@ model：如果有已经构建好的模型，那就是直接把模型写在这里
 .options:可以设置是否保留每次的运算结果：keep.all=T。例：.options=list(keep.all=TRUE);
 
 ## 2.加载RNAseq数据
+
 下面是该文章的TCGA数据处理方式。
 
 ![1612611511377-ede11639-db1b-476d-9c99-688cbf3faea8.png](./img/dpUWmcT1_p3J9Ew3/1612611511377-ede11639-db1b-476d-9c99-688cbf3faea8-258002.png)
 
-TCGA-COAD的RNAseq数据和临床数据可以从UCSC下载，可参考文章【[<font style="color:#021EAA;">UCSC数据库下载TCGA数据需要注意的细节</font>](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273247&idx=1&sn=008928dbfc6c6976d53369cd20c26f87&chksm=841edc62b3695574739a6db6af267b279808c9ea82e9947a461da2e3bf02a8db215204cf65e9&scene=21#wechat_redirect)】，也可以直接从TCGA数据库下载，自己整理，我之前也把处理过的数据处理过【[<font style="color:#021EAA;">TCGA数据库33个Project的RNA-Seq转录组数据为你整理打包好了</font>](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264583&idx=1&sn=f94bf8d77402677ee67f5d6336088254&chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&scene=21#wechat_redirect)】。
+TCGA-COAD的RNAseq数据和临床数据可以从UCSC下载，可参考文章【[UCSC数据库下载TCGA数据需要注意的细节](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273247&idx=1&sn=008928dbfc6c6976d53369cd20c26f87&chksm=841edc62b3695574739a6db6af267b279808c9ea82e9947a461da2e3bf02a8db215204cf65e9&scene=21#wechat_redirect)】，也可以直接从TCGA数据库下载，自己整理，我之前也把处理过的数据处理过【[TCGA数据库33个Project的RNA-Seq转录组数据为你整理打包好了](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264583&idx=1&sn=f94bf8d77402677ee67f5d6336088254&chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&scene=21#wechat_redirect)】。
 
 ![1612611511382-a5494a8d-ad8a-43a0-8c3d-723ef216619e.png](./img/dpUWmcT1_p3J9Ew3/1612611511382-a5494a8d-ad8a-43a0-8c3d-723ef216619e-841045.png)
 
@@ -117,10 +123,13 @@ coad.fpkm <- coad.fpkm[,-c(1:2)]
 
 ![1612611511481-83eca692-829e-4578-987e-4651f345d7aa.png](./img/dpUWmcT1_p3J9Ew3/1612611511481-83eca692-829e-4578-987e-4651f345d7aa-217366.png)
 
-我这里用的是从UCSC下载的数据，从UCSC下载的数据需要自己注释。hsaEnsembl2Symbol这个数据框是我自己注释过的人Ensembl和Symbol之间的对应关系文件。自己注释，参考文章【[生信中各种ID转换](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265466&idx=1&sn=021a10503d338e09abe07b578e734566&chksm=841efdc7b36974d13b7ad95e2272d293089d49adff9b74667bbeed78306328f0a42b0259c030&scene=21#wechat_redirect)】。
+我这里用的是从UCSC下载的数据，从UCSC下载的数据需要自己注释。
+hsaEnsembl2Symbol这个数据框是我自己注释过的人Ensembl和Symbol之间的对应关系文件。
+自己注释，参考文章【[生信中各种ID转换](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265466&idx=1&sn=021a10503d338e09abe07b578e734566&chksm=841efdc7b36974d13b7ad95e2272d293089d49adff9b74667bbeed78306328f0a42b0259c030&scene=21#wechat_redirect)】。
 
 ## 3.读入临床数据
-这里的临床数据我是从UCSC下载的【[<font style="color:#021EAA;">UCSC数据库下载TCGA数据需要注意的细节</font>](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273247&idx=1&sn=008928dbfc6c6976d53369cd20c26f87&chksm=841edc62b3695574739a6db6af267b279808c9ea82e9947a461da2e3bf02a8db215204cf65e9&scene=21#wechat_redirect)】，你可以自己去下载，我也会上传到文章【[<font style="color:#021EAA;">TCGA数据库33个Project的RNA-Seq转录组数据为你整理打包好了</font>](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264583&idx=1&sn=f94bf8d77402677ee67f5d6336088254&chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&scene=21#wechat_redirect)】中对应的网盘中。
+
+这里的临床数据我是从UCSC下载的【[UCSC数据库下载TCGA数据需要注意的细节](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273247&idx=1&sn=008928dbfc6c6976d53369cd20c26f87&chksm=841edc62b3695574739a6db6af267b279808c9ea82e9947a461da2e3bf02a8db215204cf65e9&scene=21#wechat_redirect)】，你可以自己去下载，我也会上传到文章【[TCGA数据库33个Project的RNA-Seq转录组数据为你整理打包好了](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264583&idx=1&sn=f94bf8d77402677ee67f5d6336088254&chksm=841ef23ab3697b2c10ddf8477f41b99c2d801899e3c280f2b1ad6e34b7f6efae005ab4902013&scene=21#wechat_redirect)】中对应的网盘中。
 
 ```plain
 ###---------读入临床数据
@@ -131,6 +140,7 @@ coad.clin <- coad.clin[!duplicated(coad.clin$sample),]#去重
 ```
 
 ## 4.读入基因文件
+
 上面得到的数据是TCGA-COAD所有肿瘤所有基因的FPKM数据，这篇文章做的是能量代谢相关通路的基因，基因信息如下图，自己可以去Reactome数据库搜集。
 
 ![1612611511410-ed6ef278-fd5b-4a2d-9545-a59101873a12.png](./img/dpUWmcT1_p3J9Ew3/1612611511410-ed6ef278-fd5b-4a2d-9545-a59101873a12-447297.png)
@@ -151,6 +161,7 @@ protein <- read.csv(file = "enengy_protein.csv",header = T)
 ![1612611511395-3c9cdceb-6792-4932-8b10-4d9bd9507a59.png](./img/dpUWmcT1_p3J9Ew3/1612611511395-3c9cdceb-6792-4932-8b10-4d9bd9507a59-817839.png)
 
 ## 5.融合数据
+
 将数据与表达矩阵融合。其实也就是只要能量代谢相关基因的表达数据。
 
 ```plain
@@ -177,6 +188,7 @@ sum(is.na(enengyTurExp))##看看有没有空值
 540个基因、421个样本被纳入分析，文章中是371样本。怎么作者少了那么多，我也不知道。
 
 ## 6.NMF进行肿瘤分型
+
 这里我们可以看文章的处理方式。方法用的是brunet，迭代次数=50，ranks为2到10。
 
 ![1612611511395-fbfe1232-90e8-4b81-b01a-7ede5954c3ab.png](./img/dpUWmcT1_p3J9Ew3/1612611511395-fbfe1232-90e8-4b81-b01a-7ede5954c3ab-237718.png)
@@ -209,10 +221,10 @@ plot(estim.coad)
 ```plain
 #再次NMF,rank=4
 seed = 2020820
-nmf.rank4 <- nmf(coad.log2fpkm.enengy, 
-                 rank = 4, 
+nmf.rank4 <- nmf(coad.log2fpkm.enengy,
+                 rank = 4,
                  nrun=50,
-                 seed = seed, 
+                 seed = seed,
                  method = "brunet")
 ```
 
@@ -221,7 +233,7 @@ nmf.rank4 <- nmf(coad.log2fpkm.enengy,
 ```plain
 #设置颜色
 jco <- c("#2874C5","#EABF00","#C6524A","#868686")
-index <- extractFeatures(nmf.rank4,"max") 
+index <- extractFeatures(nmf.rank4,"max")
 sig.order <- unlist(index)
 NMF.Exp.rank4 <- coad.log2fpkm.enengy[sig.order,]
 NMF.Exp.rank4 <- na.omit(NMF.Exp.rank4) #sig.order有时候会有缺失值
@@ -240,11 +252,9 @@ consensusmap(nmf.rank4,
 
 文章中只给出了consensus matrix这个图（如下）。
 
-
-
 ![1612611511627-72f2e825-c68f-4e65-aad1-886459aa2322.png](./img/dpUWmcT1_p3J9Ew3/1612611511627-72f2e825-c68f-4e65-aad1-886459aa2322-601515.png)
 
-得到分群后，就可以进行下游分分析了，可以参考之前TCGA数据库的相关文章[**<font style="color:#0052FF;">【</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)[**<font style="color:#0052FF;">TCGA</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)**】****<font style="color:#0052FF;"> </font>**。
+得到分群后，就可以进行下游分分析了，可以参考之前TCGA数据库的相关文章[**【**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)**】**** **。
 
 全部代码：
 
@@ -302,7 +312,7 @@ nmf.input <- enengyTurExp
 ranks <- 2:10
 estim <- lapply(ranks, function(r){
   # nrun设置为50,文章也是50
-  fit <- nmf(nmf.input, r, nrun = 50, seed = 10, method = "brunet") 
+  fit <- nmf(nmf.input, r, nrun = 50, seed = 10, method = "brunet")
   list(fit = fit, consensus = consensus(fit), .opt = "vp",coph = cophcor(fit))
 })
 
@@ -311,8 +321,8 @@ sapply(estim, '[[', 'coph')
 if(!dir.exists("NMF")){dir.create("NMF")}
 png("NMF/Cophenetic coefficient for seleting optimal nmf rank.png")
 par(cex.axis=1.5)
-plot(ranks, sapply(estim, '[[', 'coph'), 
-     xlab="", ylab="", type="b", 
+plot(ranks, sapply(estim, '[[', 'coph'),
+     xlab="", ylab="", type="b",
      col="red", lwd=4,xaxt="n")
 axis(side = 1, at=1:10)
 title(xlab="number of clusters", ylab="Cophenetic coefficient", cex.lab=1.5)
@@ -321,11 +331,11 @@ dev.off()
 rank <- 4###根据图选择，4是最好的，文章也是4
 seed <- 2019620
 #rownames(nmf.input) <- gsub("Signature","Sig",rownames(nmf.input)) # 行名简化
-mut.nmf <- nmf(nmf.input, 
-               rank = rank, 
-               seed = seed, 
-               method = "lee") 
-index <- extractFeatures(mut.nmf,"max") 
+mut.nmf <- nmf(nmf.input,
+               rank = rank,
+               seed = seed,
+               method = "lee")
+index <- extractFeatures(mut.nmf,"max")
 sig.order <- unlist(index)
 
 
@@ -334,10 +344,10 @@ NMF.Exp <- na.omit(NMF.Exp) #有时候会有缺失值
 library(pheatmap)
 pheatmap(NMF.Exp,cluster_rows = T,cluster_cols = F)
 
-mut.nmf2 <- nmf(NMF.Exp, 
-                rank = rank, 
-                seed = seed, 
-                method = "lee") 
+mut.nmf2 <- nmf(NMF.Exp,
+                rank = rank,
+                seed = seed,
+                method = "lee")
 group <- predict(mut.nmf2) # 提出亚型
 table(group)
 
@@ -353,7 +363,7 @@ consensusmap(mut.nmf2,
              annColors = list(cluster=c("1"=jco[1],"2"=jco[2],"3"=jco[3],"4"=jco[4])))
 dev.off()
 
-png(file = "NMF/basismap.png" ) 
+png(file = "NMF/basismap.png" )
 # 从这张图可以比较清晰地看到各亚型中的驱动signature（深色），与下面的nmf heatmap对应
 
 basismap(mut.nmf2,
@@ -362,14 +372,14 @@ basismap(mut.nmf2,
          annColors=list(c("1"=jco[1],"2"=jco[2],"3"=jco[3],"4"=jco[4])))
 dev.off()
 
-aheatmap(as.matrix(NMF.Exp[,sample.order]), 
-         Rowv=NA, 
-         Colv=NA, 
+aheatmap(as.matrix(NMF.Exp[,sample.order]),
+         Rowv=NA,
+         Colv=NA,
          annCol = data.frame("cluster"=group[sample.order]),
          annColors = list(cluster=c("1"=jco[1],"2"=jco[2],"3"=jco[3],"4"=jco[4])),
          color=c("#EAF0FA","#6081C3","#3454A7"), # 例文的蓝色渐变
-         revC=TRUE, 
-         cexCol = 0.3, 
+         revC=TRUE,
+         cexCol = 0.3,
          cexRow = 0.3,
          filename = "NMF/NMF_heatmap.pdf")
 
@@ -535,9 +545,9 @@ boxplot(`dendritic score`~group,data = tsData,
 dev.off()
 
 pdf(file="box.pdf",width = 5.5,height =6)
-ggplot(tsData, aes(group, B_cell_score))+ 
+ggplot(tsData, aes(group, B_cell_score))+
   stat_summary(mapping=aes(fill = group),fun.y=mean, fun.args = list(mult=1),geom='bar',colour="black",width=.7) +
-  stat_summary(fun.data = mean_sdl, fun.args = list(mult=1),geom='errorbar', color='black',width=.2) +    
+  stat_summary(fun.data = mean_sdl, fun.args = list(mult=1),geom='errorbar', color='black',width=.2) +
   scale_fill_manual(values=c(brewer.pal(7,"Set2")[c(1,2,4,5)]))+
   ylim(0,max(tsData[,1]))+
   theme_classic()+
@@ -585,7 +595,7 @@ library(dplyr)
 #                                           levels = c("control","case")))
 #   dds <- DESeqDataSetFromMatrix(countData = Counts, colData = colData,
 #                                 design = ~ condition)
-#   
+#
 #   # 函数分析差异
 #   dds <- DESeq(dds)
 #   # 计算标准化因子
@@ -680,7 +690,7 @@ library(clusterProfiler)
 library(AnnotationDbi)
 library(org.Hs.eg.db)
 gene <- select(org.Hs.eg.db, #.db是这个芯片数据对应的注释包
-               keys=diffgene,columns="ENTREZID", 
+               keys=diffgene,columns="ENTREZID",
                keytype="SYMBOL" )
 #gene <- bitr(SYMBOL, fromType="SYMBOL", toType="ENTREZID", OrgDb="org.Hs.eg.db")
 ##GO分析
@@ -714,7 +724,7 @@ library(survival)
 library(survminer)
 library(ggpubr)
 library(ggplot2)
-library(RColorBrewer) 
+library(RColorBrewer)
 ##加载TPM数据
   load(TPM_FilePath[grep(proj,TPM_FilePath)])#expDataTPM
   ##正常组织样本
@@ -808,11 +818,5 @@ library(RColorBrewer)
 
 ```
 
-
-
-
-
-
-
-> 更新: 2021-08-22 10:35:20  
+> 更新: 2021-08-22 10:35:20
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/mui47c>

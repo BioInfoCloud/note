@@ -1,11 +1,13 @@
 
-
 ## 1.Shiny APP结构
-
 
 ## 2.UI
 
-Shiny 提供的 HTML 输入和输出。这使您能够捕获多种类型的数据并显示多种类型的 R 输出。在这里，我将主要坚持 Shiny 本身内置的输入和输出。 但是，有一个丰富而充满活力的扩展包社区，如[shinyWidgets](https://github.com/dreamRs/shinyWidgets)，[colorpicker](https://github.com/daattali/colourpicker)和[sorttable](https://rstudio.github.io/sortable/)。 您可以在 https://github.com/nanxstats/awesome-shiny-extensions 上找到由 [Nan Xiao](https://nanx.me/) 维护的其他软件包的全面、积极维护的列表。
+Shiny 提供的 HTML 输入和输出。
+这使您能够捕获多种类型的数据并显示多种类型的 R 输出。
+在这里，我将主要坚持 Shiny 本身内置的输入和输出。
+ 但是，有一个丰富而充满活力的扩展包社区，如[shinyWidgets](https://github.com/dreamRs/shinyWidgets)，[colorpicker](https://github.com/daattali/colourpicker)和[sorttable](https://rstudio.github.io/sortable/)。
+ 您可以在 https://github.com/nanxstats/awesome-shiny-extensions 上找到由 [Nan Xiao](https://nanx.me/) 维护的其他软件包的全面、积极维护的列表。
 
 像往常一样，我们将从加载shiny包开始：
 
@@ -69,7 +71,7 @@ ui <- fluidPage(
 )
 ```
 
-#### (5)选择有限 
+#### (5)选择有限
 
 有两种不同的方法允许用户从一组预先指定的选项中进行选择：selectInput() 和 radioButtons()。
 
@@ -131,7 +133,7 @@ ui <- fluidPage(
   actionButton("drink", "Drink me!", icon = icon("cocktail"))
 )
 #> This Font Awesome icon ('cocktail') does not exist:
-#> * if providing a custom `html_dependency` these `name` checks can 
+#> * if providing a custom `html_dependency` these `name` checks can
 #>   be deactivated with `verify_fa = FALSE`
 ```
 
@@ -169,11 +171,11 @@ ui <- fluidPage(
   verbatimTextOutput("code")
 )
 server <- function(input, output, session) {
-  output$text <- renderText({ 
-    "Hello friend!" 
+  output$text <- renderText({
+    "Hello friend!"
   })
-  output$code <- renderPrint({ 
-    summary(1:10) 
+  output$code <- renderPrint({
+    summary(1:10)
   })
 }
 ```
@@ -214,7 +216,6 @@ server <- function(input, output, session) {
 - tableOutput() 和 renderTable() 呈现静态数据表，同时显示所有数据。
 
 - dataTableOutput() 和 renderDataTable() 呈现一个动态表，显示固定数量的行以及用于更改哪些行可见的控件。
-
 
 tableOutput() 对于小型、固定的汇总（例如模型系数）最有用； 如果您想向用户公开完整的数据框，则 dataTableOutput() 是最合适的。 如果你想更好地控制 dataTableOutput() 的输出，我强烈推荐 Greg Lin 的 reactable 包。
 
@@ -294,7 +295,7 @@ ui <- fluidPage(
 
 ```R
 server <- function(input, output, session) {
-  input$count <- 10  
+  input$count <- 10
 }
 
 shinyApp(ui, server)
@@ -371,7 +372,7 @@ commands和recipes之间的这种区别是两种重要的编程风格之间的�
 
 使用命令式代码，您可以说“给我做个三明治”。 使用声明性代码，您可以说“每当我查看冰箱内部时，确保冰箱里有三明治”。 命令式代码是自信的； 声明性代码是被动攻击的。
 
-大多数时候，声明式编程会极大地解放你：你描述你的总体目标，然后软件会计算出如何在没有进一步干预的情况下实现这些目标。 不利的一面是，有时您确切地知道自己想要什么，但您无法弄清楚如何以声明式系统理解的方式来构建它。 
+大多数时候，声明式编程会极大地解放你：你描述你的总体目标，然后软件会计算出如何在没有进一步干预的情况下实现这些目标。 不利的一面是，有时您确切地知道自己想要什么，但您无法弄清楚如何以声明式系统理解的方式来构建它。
 
 #### (2) Laziness
 
@@ -439,7 +440,7 @@ server <- function(input, output, session) {
 
 响应式表达式很重要，因为它们为 Shiny 提供了更多信息，因此它可以在输入更改时减少重新计算，从而提高应用程序的效率，并且它们通过简化响应式图使人们更容易理解应用程序。 响应式表达式具有输入和输出两种风格：
 
-与输入一样，您可以在输出中使用反应式表达式的结果。 
+与输入一样，您可以在输出中使用反应式表达式的结果。
 
 与输出一样，反应式表达式依赖于输入并自动知道何时需要更新。
 
@@ -469,7 +470,7 @@ freqpoly <- function(x1, x2, binwidth = 0.1, xlim = c(-3, 3)) {
 
 t_test <- function(x1, x2) {
   test <- t.test(x1, x2)
-  
+
   # use sprintf() to format t.test() results compactly
   sprintf(
     "p value: %0.3f\n[%0.2f, %0.2f]",
@@ -501,13 +502,13 @@ cat(t_test(x1, x2))
 ```R
 ui <- fluidPage(
   fluidRow(
-    column(4, 
+    column(4,
       "Distribution 1",
       numericInput("n1", label = "n", value = 1000, min = 1),
       numericInput("mean1", label = "µ", value = 0, step = 0.1),
       numericInput("sd1", label = "σ", value = 0.5, min = 0.1, step = 0.1)
     ),
-    column(4, 
+    column(4,
       "Distribution 2",
       numericInput("n2", label = "n", value = 1000, min = 1),
       numericInput("mean2", label = "µ", value = 0, step = 0.1),
@@ -533,14 +534,14 @@ server <- function(input, output, session) {
   output$hist <- renderPlot({
     x1 <- rnorm(input$n1, input$mean1, input$sd1)
     x2 <- rnorm(input$n2, input$mean2, input$sd2)
-    
+
     freqpoly(x1, x2, binwidth = input$binwidth, xlim = input$range)
   }, res = 96)
 
   output$ttest <- renderText({
     x1 <- rnorm(input$n1, input$mean1, input$sd1)
     x2 <- rnorm(input$n2, input$mean2, input$sd2)
-    
+
     t_test(x1, x2)
   })
 }
@@ -630,18 +631,18 @@ server <- function(input, output, session) {
 ```R
 fluidPage(
   fluidRow(
-    column(4, 
+    column(4,
       ...
     ),
-    column(8, 
+    column(8,
       ...
     )
   ),
   fluidRow(
-    column(6, 
+    column(6,
       ...
     ),
-    column(6, 
+    column(6,
       ...
     )
   )
@@ -650,7 +651,7 @@ fluidPage(
 
 ![](https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202303030849375.png)
 
-每行由 12 列组成，column() 的第一个参数给出要占用的列数。 12 列布局为您提供了极大的灵活性，因为您可以轻松创建 2、3 或 4 列布局，或使用窄列来创建间隔符。 
+每行由 12 列组成，column() 的第一个参数给出要占用的列数。 12 列布局为您提供了极大的灵活性，因为您可以轻松创建 2、3 或 4 列布局，或使用窄列来创建间隔符。
 
 如果您想了解有关使用网格系统进行设计的更多信息，我强烈推荐有关该主题的经典文章：Josef Müller-Brockman 撰写的“[Grid systems in graphic design](https://www.amazon.com/dp/3721201450)”。
 
@@ -667,7 +668,7 @@ fluidPage(
 ```R
 ui <- fluidPage(
   tabsetPanel(
-    tabPanel("Import data", 
+    tabPanel("Import data",
       fileInput("file", "Data", buttonLabel = "Upload..."),
       textInput("delim", "Delimiter (leave blank to guess)", ""),
       numericInput("skip", "Rows to skip", 0, min = 0),
@@ -733,11 +734,11 @@ ui <- fluidPage(
 
 ```R
 ui <- navbarPage(
-  "Page title",   
+  "Page title",
   tabPanel("panel 1", "one"),
   tabPanel("panel 2", "two"),
   tabPanel("panel 3", "three"),
-  navbarMenu("subpanels", 
+  navbarMenu("subpanels",
     tabPanel("panel 4a", "four-a"),
     tabPanel("panel 4b", "four-b"),
     tabPanel("panel 4c", "four-c")
@@ -814,8 +815,8 @@ ui <- fluidPage(
 
 ```R
 theme <- bslib::bs_theme(
-  bg = "#0b3d91", 
-  fg = "white", 
+  bg = "#0b3d91",
+  fg = "white",
   base_font = "Source Sans Pro"
 )
 ```
@@ -837,7 +838,7 @@ ui <- fluidPage(
 
 server <- function(input, output, session) {
   thematic::thematic_shiny()
-  
+
   output$plot <- renderPlot({
     ggplot(mtcars, aes(wt, mpg)) +
       geom_point() +
@@ -848,7 +849,9 @@ server <- function(input, output, session) {
 
 ### 4.6 Under the hood
 
-Shiny 的设计使得作为 R 用户的你不需要了解 HTML 的细节。 但是，如果您了解一些 HTML 和 CSS，则可以进一步自定义 Shiny。 不幸的是，教授 HTML 和 CSS 超出了本书的范围，但是 MDN 的  [HTML](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) 和 [CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)基础教程是一个很好的起点。
+Shiny 的设计使得作为 R 用户的你不需要了解 HTML 的细节。
+ 但是，如果您了解一些 HTML 和 CSS，则可以进一步自定义 Shiny。
+ 不幸的是，教授 HTML 和 CSS 超出了本书的范围，但是 MDN 的  [HTML](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) 和 [CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)基础教程是一个很好的起点。
 
 最重要的是要知道所有输入、输出和布局函数背后并没有魔法：它们只是生成 HTML。 您可以通过直接在控制台中执行 UI 函数来查看该 HTML：
 
@@ -893,7 +896,7 @@ ui <- fluidPage(
   h1("This is a heading"),
   p("This is some text", class = "my-class"),
   tags$ul(
-    tags$li("First bullet"), 
+    tags$li("First bullet"),
     tags$li("Second bullet")
   )
 )
@@ -903,11 +906,11 @@ ui <- fluidPage(
 
 ```R
 tags$p(
-  "You made ", 
+  "You made ",
   tags$b("$", textOutput("amount", inline = TRUE)),
-  " in the last ", 
+  " in the last ",
   textOutput("days", inline = TRUE),
-  " days " 
+  " days "
 )
 ```
 
@@ -924,7 +927,7 @@ plotOutput() 最酷的事情之一是，它不仅可以作为显示绘图的输�
 
 绘图可以响应四种不同的 mouse事件：click、dblclick（双击）、hover（鼠标在同一位置停留片刻）和 brush（矩形选择工具）。 要将这些事件转换为 Shiny 输入，您需要为相应的 plotOutput() 参数提供一个字符串，例如 `plotOutput("plot", click = "plot_click")`。 这将创建一个 input$plot_click ，您可以使用它来处理鼠标在绘图上的点击。
 
-这是一个处理鼠标点击的非常简单的例子。 我们注册 plot_click 输入，然后用它来更新鼠标点击坐标的输出。 
+这是一个处理鼠标点击的非常简单的例子。 我们注册 plot_click 输入，然后用它来更新鼠标点击坐标的输出。
 
 ```R
 ui <- fluidPage(
@@ -965,7 +968,7 @@ server <- function(input, output, session) {
   output$plot <- renderPlot({
     plot(mtcars$wt, mtcars$mpg)
   }, res = 96)
-  
+
   output$data <- renderTable({
     nearPoints(mtcars, input$plot_click, xvar = "wt", yvar = "mpg")
   })
@@ -983,7 +986,7 @@ server <- function(input, output, session) {
   output$plot <- renderPlot({
     ggplot(mtcars, aes(wt, mpg)) + geom_point()
   }, res = 96)
-  
+
   output$data <- renderTable({
     req(input$plot_click)
     nearPoints(mtcars, input$plot_click)
@@ -1038,7 +1041,7 @@ server <- function(input, output, session) {
   output$plot <- renderPlot({
     ggplot(mtcars, aes(wt, mpg)) + geom_point()
   }, res = 96)
-  
+
   output$data <- renderTable({
     brushedPoints(mtcars, input$plot_brush)
   })
@@ -1091,13 +1094,13 @@ ui <- fluidPage(
 server <- function(input, output, session) {
   dist <- reactiveVal(rep(1, nrow(df)))
   observeEvent(input$plot_click,
-    dist(nearPoints(df, input$plot_click, allRows = TRUE, addDist = TRUE)$dist_)  
+    dist(nearPoints(df, input$plot_click, allRows = TRUE, addDist = TRUE)$dist_)
   )
-  
+
   output$plot <- renderPlot({
     df$dist <- dist()
-    ggplot(df, aes(x, y, size = dist)) + 
-      geom_point() + 
+    ggplot(df, aes(x, y, size = dist)) +
+      geom_point() +
       scale_size_area(limits = c(0, 1000), max_size = 10, guide = NULL)
   }, res = 96)
 }
@@ -1126,7 +1129,7 @@ server <- function(input, output, session) {
 
   output$plot <- renderPlot({
     mtcars$sel <- selected()
-    ggplot(mtcars, aes(wt, mpg)) + 
+    ggplot(mtcars, aes(wt, mpg)) +
       geom_point(aes(colour = sel)) +
       scale_colour_discrete(limits = c("TRUE", "FALSE"))
   }, res = 96)
@@ -1183,7 +1186,7 @@ server <- function(input, output, session) {
 
 ```R
 puppies <- tibble::tribble(
-  ~breed, ~ id, ~author, 
+  ~breed, ~ id, ~author,
   "corgi", "eoqnr8ikwFE","alvannee",
   "labrador", "KCdYn0xu2fU", "shaneguymon",
   "spaniel", "TzjMd7i5WQI", "_redo_"
@@ -1203,7 +1206,7 @@ server <- function(input, output, session) {
       height = 650
     )
   }, deleteFile = FALSE)
-  
+
   output$source <- renderUI({
     info <- puppies[puppies$id == input$id, , drop = FALSE]
     HTML(glue::glue("<p>

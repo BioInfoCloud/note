@@ -52,29 +52,29 @@ GDCquery(
 
 ```r
 > getGDCprojects()$project_id
- [1] "GENIE-MSK"             "TCGA-UCEC"             "TCGA-LGG"             
- [4] "TCGA-SARC"             "TCGA-PAAD"             "TCGA-ESCA"            
- [7] "TCGA-PRAD"             "GENIE-VICC"            "TCGA-LAML"            
-[10] "TCGA-KIRC"             "TCGA-PCPG"             "TCGA-HNSC"            
-[13] "GENIE-JHU"             "TCGA-OV"               "TCGA-GBM"             
-[16] "TCGA-UCS"              "TCGA-MESO"             "TCGA-TGCT"            
-[19] "TCGA-KICH"             "TCGA-READ"             "TCGA-UVM"             
-[22] "TCGA-THCA"             "OHSU-CNL"              "GENIE-DFCI"           
-[25] "GENIE-NKI"             "GENIE-GRCC"            "FM-AD"                
-[28] "GENIE-UHN"             "GENIE-MDA"             "TCGA-LIHC"            
-[31] "TCGA-THYM"             "TCGA-CHOL"             "TARGET-ALL-P1"        
-[34] "ORGANOID-PANCREATIC"   "TCGA-DLBC"             "TCGA-KIRP"            
-[37] "TCGA-BLCA"             "TARGET-ALL-P3"         "TARGET-CCSK"          
-[40] "TARGET-NBL"            "TARGET-AML"            "TARGET-ALL-P2"        
-[43] "NCICCR-DLBCL"          "CTSP-DLBCL1"           "TARGET-RT"            
-[46] "TARGET-OS"             "TCGA-BRCA"             "TCGA-COAD"            
-[49] "TCGA-CESC"             "TCGA-LUSC"             "TCGA-STAD"            
-[52] "TCGA-SKCM"             "TCGA-LUAD"             "TARGET-WT"            
-[55] "TCGA-ACC"              "BEATAML1.0-CRENOLANIB" "BEATAML1.0-COHORT"    
-[58] "VAREPOP-APOLLO"        "MMRF-COMMPASS"         "WCDT-MCRPC"           
-[61] "CGCI-HTMCP-CC"         "CMI-ASC"               "CMI-MPC"              
-[64] "CMI-MBC"               "CPTAC-2"               "CGCI-BLGSP"           
-[67] "CPTAC-3"               "HCMI-CMDC"  
+ [1] "GENIE-MSK"             "TCGA-UCEC"             "TCGA-LGG"
+ [4] "TCGA-SARC"             "TCGA-PAAD"             "TCGA-ESCA"
+ [7] "TCGA-PRAD"             "GENIE-VICC"            "TCGA-LAML"
+[10] "TCGA-KIRC"             "TCGA-PCPG"             "TCGA-HNSC"
+[13] "GENIE-JHU"             "TCGA-OV"               "TCGA-GBM"
+[16] "TCGA-UCS"              "TCGA-MESO"             "TCGA-TGCT"
+[19] "TCGA-KICH"             "TCGA-READ"             "TCGA-UVM"
+[22] "TCGA-THCA"             "OHSU-CNL"              "GENIE-DFCI"
+[25] "GENIE-NKI"             "GENIE-GRCC"            "FM-AD"
+[28] "GENIE-UHN"             "GENIE-MDA"             "TCGA-LIHC"
+[31] "TCGA-THYM"             "TCGA-CHOL"             "TARGET-ALL-P1"
+[34] "ORGANOID-PANCREATIC"   "TCGA-DLBC"             "TCGA-KIRP"
+[37] "TCGA-BLCA"             "TARGET-ALL-P3"         "TARGET-CCSK"
+[40] "TARGET-NBL"            "TARGET-AML"            "TARGET-ALL-P2"
+[43] "NCICCR-DLBCL"          "CTSP-DLBCL1"           "TARGET-RT"
+[46] "TARGET-OS"             "TCGA-BRCA"             "TCGA-COAD"
+[49] "TCGA-CESC"             "TCGA-LUSC"             "TCGA-STAD"
+[52] "TCGA-SKCM"             "TCGA-LUAD"             "TARGET-WT"
+[55] "TCGA-ACC"              "BEATAML1.0-CRENOLANIB" "BEATAML1.0-COHORT"
+[58] "VAREPOP-APOLLO"        "MMRF-COMMPASS"         "WCDT-MCRPC"
+[61] "CGCI-HTMCP-CC"         "CMI-ASC"               "CMI-MPC"
+[64] "CMI-MBC"               "CPTAC-2"               "CGCI-BLGSP"
+[67] "CPTAC-3"               "HCMI-CMDC"
 ```
 
 （2）data.category
@@ -439,9 +439,7 @@ expDataPrep <- TCGAanalyze_Preprocessing(object = coadRda,
                                          datatype = "HTSeq - Counts")
 ```
 
-<font style="color:rgb(46, 48, 51);">TCGAtumor_purity使用5种方法的5种估计作为阈值对TCGA样品进行过滤</font>
-
-<font style="color:rgb(46, 48, 51);"></font>
+TCGAtumor_purity使用5种方法的5种估计作为阈值对TCGA样品进行过滤
 
 ```r
 sampCases <- getResults(query_COAD_EXP,cols=c("cases"))
@@ -466,6 +464,5 @@ GDCdownload(query_COAD_met)
 COAD_met <- GDCprepare(query_COAD_met)
 ```
 
-
-> 更新: 2022-08-08 11:27:40  
+> 更新: 2022-08-08 11:27:40
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/lhc0ro>

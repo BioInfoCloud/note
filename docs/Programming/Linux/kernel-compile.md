@@ -39,7 +39,7 @@ make install
 make[1]: *** No rule to make target 'debian/canonical-certs.pem', needed by 'certs/x509_certificate_list'.  Stop.
 ```
 
-参考<https://askubuntu.com/questions/1329538/compiling-the-kernel-5-11-11> 
+参考<https://askubuntu.com/questions/1329538/compiling-the-kernel-5-11-11>
 
 ```
 scripts/config --disable SYSTEM_TRUSTED_KEYS

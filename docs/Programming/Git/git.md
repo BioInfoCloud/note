@@ -5,10 +5,11 @@ title: Git讲座
 # Git讲座
 
 > [Bilibili推荐视频教程](https://www.bilibili.com/video/BV1do4y1S7mr/?spm_id_from=333.999.0.0&vd_source=ad7486d1c0a79f7459d20781ce805fbc)
-> 
+>
 > [Git实例](./git-demos.md)
 
 ## 为什么要用Git
+
 〇 版本控制
 
 比如，你晚上写一篇论文，写好了存起来。结果第二天早上起来，你再拿出来一看，害，写的什么啊。早上修改了一大堆，改完了存起来。结果下午一想，害，早上我改什么啊！昨晚那个写的不是挺好的吗…但这时，你已经没有昨晚存的那一份文稿了，只能凭着记忆把论文再改回昨晚写完之后的样子……
@@ -233,7 +234,6 @@ git add <file>
 
 讨论：我到底应该什么时候commit？commit最重要的作用是，之后你可以通过某次commit版本号查看或者回到这次commit。一般来说，当你觉得改了一些东西的时候，都可以commit一下。也有不少人觉得应该每改一个文件add一次commit一次。都可以，这个看个人习惯。但是注意不要改了好多才commit，因为这样更改的记录就不是那么清晰了。
 
-
 ```sh
 git commit -m "<message>"
 ## 或
@@ -414,6 +414,7 @@ git branch --delete(-d) <branch> # 删除开发新功能的分支，因为开发
 #### 分支案例
 
 #### 注：设置默认分支为main
+
 [Stack Overflow | How can I create a Git repository with the default branch name other than master?](https://stackoverflow.com/questions/42871542/how-can-i-create-a-git-repository-with-the-default-branch-name-other-than-maste)
 
 ```sh
@@ -465,9 +466,9 @@ git branch --move(-m) master main
 ```shell
 ## push an existing repository from the command line:
 ## 在本地添加一个远程仓库，并且给这个远程仓库起名为`origin`。使用`git remote`命令查看本地仓库关联的远程仓库。
-git remote add origin https://github.com/Yang-Xijie/git_lecture.git 
+git remote add origin https://github.com/Yang-Xijie/git_lecture.git
 ## 将本地仓库的当前分支重命名为main（不本质）
-git branch -M main 
+git branch -M main
 ## 如果直接执行git push，会出现：fatal: The current branch main has no upstream branch. To push the current branch and set the remote as upstream, use `git push --set-upstream origin main`，这说明我们需要给当前的分支与一个远程的分支相对应。-u是--set-upstream的简写。
 git push -u origin main
 ```
@@ -704,19 +705,19 @@ git fetch -p --all
 #### 为什么要添加标签
 
 > 发布一个版本时，我们通常先在版本库中打一个标签（tag），这样，就唯一确定了打标签时刻的版本。将来无论什么时候，取某个标签的版本，就是把那个打标签的时刻的历史版本取出来。所以，标签也是版本库的一个快照。
-> 
+>
 > Git有commit，为什么还要引入tag？
-> 
+>
 > “请把上周一的那个版本打包发布，commit号是6a5819e...”
-> 
+>
 > 如果换一个办法：
-> 
+>
 > “请把上周一的那个版本打包发布，版本号是v1.2”
-> 
+>
 > “好的，按照tag v1.2查找commit就行！”
-> 
+>
 > 所以，tag就是一个让人容易记住的有意义的名字，它跟某个commit绑在一起。
-> 
+>
 > ——[廖雪峰Git教程-标签管理](https://www.liaoxuefeng.com/wiki/896043488029600/900788941487552)
 
 #### 在本地的commit上添加标签
@@ -732,6 +733,7 @@ git push --tags
 ### Git进阶 - 命令简写
 
 #### gitconfig
+
 `cat ~/.gitconfig`
 
 用vim编辑器打开`vim ~/.gitconfig`或`open ~/.gitignore`使用默认应用打开

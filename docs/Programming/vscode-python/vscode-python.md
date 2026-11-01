@@ -31,7 +31,7 @@ title: 在macOS上用VSCode配置Python环境的一种思路
 苹果的开发集成工具是`Xcode.app`，其中就带着`Command Line Tools`，安装了`Xcode`相当于安装了`Command Line Tools`，那么我们可以直接在`App Store`下载`Xcode`。不过你打开一看，12G！！太大了吧。
 `Command Line Tools`不过400MB多一点。如果你不从事苹果平台的软件开发，不需要使用`Xcode`，下载`Xcode`这么大的东西占电脑的存储空间，实在划不来。不过如果你已经安装了`Xcode`，那已经可以跳过这一步了。
 
-- - - 
+- - -
 
 第二种方法是什么呢？
 
@@ -44,6 +44,7 @@ title: 在macOS上用VSCode配置Python环境的一种思路
 你也可以使用命令`xcode-select --install`来安装，效果和下载安装包后安装一样。但我个人感觉这种方式网络不太好，可能会出现问题，还是推荐大家在官网登陆`Apple账号`下载命令行工具。
 
 ### 安装Homebrew
+
 工欲善其事，必先利其器。我们还需要安装`Homebrew`。`Homebrew`是什么呢？类比一下，我们安装有图形界面的软件，都是在`App Store`安装的。如果有应用发布了更新，`App Store`也会自动帮我们更新这些软件。`Homebrew`就好比命令行程序的应用商店，在`macOS`上，你需要什么命令行程序基本都可以通过`Homebrew`来安装；我们用`Homebrew`也可以查看哪些程序有了新的版本从而进行更新。用比较通俗的话来讲：`Homebrew`是`macOS`上最好用的包管理工具。
 
 那么如何安装呢？可以到[Homebrew官网](https://brew.sh)找到安装的命令下载安装。然而官网用的服务器在国外，国内访问非常慢。我在知乎找到了一位仁兄写的脚本，能够帮我们一键安装`Homebrew`——[知乎｜Homebrew国内如何自动安装（国内地址）--金牛肖马](https://zhuanlan.zhihu.com/p/111014448)。复制他写的`安装脚本`，之后选择国内的源就大功告成了！
@@ -183,7 +184,7 @@ alias pip='pip3'
 
 ```json
   ////// 调试Python代码（F5） //////
-  // Path to Python, you can use a custom version of Python 
+  // Path to Python, you can use a custom version of Python
   // by modifying this setting to include the full path.
   "python.pythonPath": "python3", // 直接用命令就好（因为zsh已经知道python3指的就是那个解释器）。你也可以更改为python3解释器的安装路径（但是我推荐你直接写python3）
 ```
@@ -209,7 +210,6 @@ alias pip='pip3'
   ]
 }
 ```
-
 
 `name`可以改，会在左侧显示。`type`、`request`不动。`program`就是你写的脚本的路径（按⌘I查看其他的可用的配置文件变量）。`console`也可以通过⌘I选取喜欢的终端（`integrated terminal`指`VS Code`下方的集成终端（推荐），`external terminal`指系统自带的终端，另一个貌似是只读的，不推荐）。按⌘I查看其他的选项。
 

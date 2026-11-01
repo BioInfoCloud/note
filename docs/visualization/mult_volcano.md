@@ -10,7 +10,7 @@ degr[1:4]
 
 ```R
 MedBioInfoCloud: degr[1:4]
-[1] "output/016_hot_cold_tumor/DEG/TCGA-ACC/DESeq2-filtered.csv" 
+[1] "output/016_hot_cold_tumor/DEG/TCGA-ACC/DESeq2-filtered.csv"
 [2] "output/016_hot_cold_tumor/DEG/TCGA-BLCA/DESeq2-filtered.csv"
 [3] "output/016_hot_cold_tumor/DEG/TCGA-BRCA/DESeq2-filtered.csv"
 [4] "output/016_hot_cold_tumor/DEG/TCGA-CESC/DESeq2-filtered.csv"
@@ -98,7 +98,7 @@ p <- ggplot()+
            fill = "#dcdcdc",alpha = 0.6)+
   geom_col(data = dfbar1,
            mapping = aes(x = x,y = y),
-           fill = "#dcdcdc",alpha = 0.6) 
+           fill = "#dcdcdc",alpha = 0.6)
 ```
 
 ![](https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202302212235793.png)
@@ -140,7 +140,7 @@ p3 = p2 + geom_tile(data = dfcol,
 添加文本和坐标标题：
 
 ```R
-p4 = p3 + 
+p4 = p3 +
   labs(x="Cancer",y="log2FC") + #添加坐标标题
   ##给注释框添加文本
   geom_text(data=dfcol,
@@ -195,7 +195,7 @@ ggplot()+
             fill = mycol,
             alpha = 0.6,
             show.legend = F)+
-  
+
   labs(x="Cancer",y="log2FC") + #添加坐标标题
   ##给注释框添加文本
   geom_text(data=dfcol,

@@ -2,17 +2,22 @@
 
 ![1612426369824-a7a1f7e0-c465-4292-955c-7abd1f1e2cc1.gif](./img/BxpfRoLwzi8BroJT/1612426369824-a7a1f7e0-c465-4292-955c-7abd1f1e2cc1-551328.gif)
 
-[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;"> | </font>**[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;"> | </font>**[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;"> | </font>**[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;">| </font>**[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**| **[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
-[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;"> |</font>****<font style="color:#0052FF;"> </font>**[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#0052FF;"> | 服务器与</font>**[**Linux**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1410264757734817793&__biz=MzA4NDAzODkzMA==#wechat_redirect)
-
----
-
-<font style="color:#494949;">前面我们介绍了各种测序技术的原理：</font>[**<font style="color:#0052FF;">illumina、Sanger、第三代和第四代测序技术原理</font>**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272832&idx=1&sn=7d208df1a65e3696c41c666ef78f5881&chksm=841ed2fdb3695bebedbbc733b0bca112421a91647d2038266d0a24b8ce46ee19503a801fdd2b&scene=21#wechat_redirect)<font style="color:#494949;">，我们测序得到的是带有质量值的碱基序列fastq格式，参考基因组是fasta格式。⽤⽐对⼯具把fastq格式的序列回帖到对应的fasta格式的参考基因组序列，就可以产⽣sam格式的⽐对⽂件。把sam格式的⽂本⽂件压缩成⼆进制bam⽂件可以节省空间。如果是记录某些位点或者区域碱基的变化，就是VCF⽂件格式。如果对参考基因组上⾯的各个区段标记它们的性质，⽐如哪些区域是外显⼦，内含⼦， UTR等等，这就是gtf/gff格式。如果只是为了单纯描述某个基因组区域，就是bed格式⽂件，记录染⾊体号以及起始终⽌坐标，正负链即可。</font>
+[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)** |**** **[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | 服务器与**[**Linux**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1410264757734817793&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
 ---
 
-<font style="color:#494949;">转录组分析流程：</font>
+前面我们介绍了各种测序技术的原理：[**illumina、Sanger、第三代和第四代测序技术原理**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651272832&idx=1&sn=7d208df1a65e3696c41c666ef78f5881&chksm=841ed2fdb3695bebedbbc733b0bca112421a91647d2038266d0a24b8ce46ee19503a801fdd2b&scene=21#wechat_redirect)，我们测序得到的是带有质量值的碱基序列fastq格式，参考基因组是fasta格式。
+⽤⽐对⼯具把fastq格式的序列回帖到对应的fasta格式的参考基因组序列，就可以产⽣sam格式的⽐对⽂件。
+把sam格式的⽂本⽂件压缩成⼆进制bam⽂件可以节省空间。
+如果是记录某些位点或者区域碱基的变化，就是VCF⽂件格式。
+如果对参考基因组上⾯的各个区段标记它们的性质，⽐如哪些区域是外显⼦，内含⼦， UTR等等，这就是gtf/gff格式。
+如果只是为了单纯描述某个基因组区域，就是bed格式⽂件，记录染⾊体号以及起始终⽌坐标，正负链即可。
+
+---
+
+转录组分析流程：
 
 [转录组分析 | fastqc进行质控与结果解读](https://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273374&idx=1&sn=dfac9e82a09fbb18cd8b2c8179afcad8&scene=21#wechat_redirect)
 
@@ -28,7 +33,8 @@
 
 ---
 
-# **<font style="color:#0052FF;">1.fastq文件</font>**
+# **1.fastq文件**
+
 FASTQ是基于文本的，保存生物序列（通常是核酸序列）和其测序质量信息的标准格式。其序列以及质量信息都是使用一个ASCII字符标示，最初由Sanger开发，目的是将FASTA序列与质量数据放到一起，目前已经成为高通量测序结果的事实标准。
 
 FASTQ文件中每个序列通常有四行：
@@ -51,15 +57,15 @@ FASTQ文件中每个序列通常有四行：
 + Illumina 1.5+，Phred quality score，但是0到2作为另外的标示；
 + Illumina 1.8+ ，Phred quality score。
 
-       ![1612426369837-ba4312e0-9a81-45ed-a9c2-79e1c4ef026b.png](./img/BxpfRoLwzi8BroJT/1612426369837-ba4312e0-9a81-45ed-a9c2-79e1c4ef026b-560845.png)       
+       ![1612426369837-ba4312e0-9a81-45ed-a9c2-79e1c4ef026b.png](./img/BxpfRoLwzi8BroJT/1612426369837-ba4312e0-9a81-45ed-a9c2-79e1c4ef026b-560845.png)
 
-**<font style="color:#7B0C00;">举个犊子，假设质量信息是5，这个5看成字符，不要看成数字，那么他对应的十进制数就是53，如果使用的是Sanger测序，那么质量评分采用的就是Phred+33的形式，那么Q = 53-33=20=-10lg(errorP)，所以errorP = 0.01。也就计算出错误率啦，就便于我们进行质控。每一个碱基都有一个质量评分，所以第2行和第4行的位数是相同的。</font>**
+**举个犊子，假设质量信息是5，这个5看成字符，不要看成数字，那么他对应的十进制数就是53，如果使用的是Sanger测序，那么质量评分采用的就是Phred+33的形式，那么Q = 53-33=20=-10lg(errorP)，所以errorP = 0.01。也就计算出错误率啦，就便于我们进行质控。每一个碱基都有一个质量评分，所以第2行和第4行的位数是相同的。**
 
-<font style="color:#333333;">   </font>![1612426369848-a316c7b4-d319-46d1-9003-1f4d9f8e9f9c.png](./img/BxpfRoLwzi8BroJT/1612426369848-a316c7b4-d319-46d1-9003-1f4d9f8e9f9c-275282.png)
+   ![1612426369848-a316c7b4-d319-46d1-9003-1f4d9f8e9f9c.png](./img/BxpfRoLwzi8BroJT/1612426369848-a316c7b4-d319-46d1-9003-1f4d9f8e9f9c-275282.png)
 
 **2.fasta文件**
 
-# 
+#
 FASTA格式是一种用于表示核苷酸序列或多肽序列的文本格式。其中碱基对或氨基酸用单个字母来表示，且允许在序列前添加序列名及注释。该格式已成为生物信息学领域的一项标准。
 
 FASTA文件各行记录信息如下：
@@ -70,13 +76,13 @@ FASTA文件各行记录信息如下：
 
 **核苷酸序列：**
 
-       ![1612426369919-6d35d224-31c4-44fd-9324-cba924332557.png](./img/BxpfRoLwzi8BroJT/1612426369919-6d35d224-31c4-44fd-9324-cba924332557-936604.png)       
+       ![1612426369919-6d35d224-31c4-44fd-9324-cba924332557.png](./img/BxpfRoLwzi8BroJT/1612426369919-6d35d224-31c4-44fd-9324-cba924332557-936604.png)
 
 **氨基酸序列：**
 
        ![1612426369859-0130f7ad-61d8-48ff-8344-41f0c4b332b6.png](./img/BxpfRoLwzi8BroJT/1612426369859-0130f7ad-61d8-48ff-8344-41f0c4b332b6-861282.png)       fasta格式还是比较常见的，比如我们在NCBI查看基因的的时候通常就有fasta格式genebank格式。下面就是fasta格式的案例：
 
-       ![1612426369936-ea4a2254-003e-4711-b2c3-3fa688a43e38.png](./img/BxpfRoLwzi8BroJT/1612426369936-ea4a2254-003e-4711-b2c3-3fa688a43e38-262882.png)<font style="color:#0052FF;"> </font>**<font style="color:#0052FF;">3.SAM/BAM</font>**
+       ![1612426369936-ea4a2254-003e-4711-b2c3-3fa688a43e38.png](./img/BxpfRoLwzi8BroJT/1612426369936-ea4a2254-003e-4711-b2c3-3fa688a43e38-262882.png) **3.SAM/BAM**
 
 当我们测序得到的fastq数据map【[转录组分析 | 使用Hisat2进行序列比对](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273450&idx=1&sn=efab631b255e12cf5ffd259dd53fb2b3&chksm=841edc97b3695581de924856b0e6901c67b87648f85bd491729eaa2ee0592271d84042b9eb76&token=108642787&lang=zh_CN&scene=21#wechat_redirect)】到基因组之后，会得到一个以sam或bam【[转录组分析 | 使用SAMtools将SAM文件转换为BAM文件、排序、建立索引](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651273488&idx=1&sn=f5ed53f20164b19720d31f0a2cfcd268&chksm=841edd6db369547bc04ae15a2a8a7661fefa1193cabbe05d7e2f9e2fa986211603537cf8fbd0&token=108642787&lang=zh_CN&scene=21#wechat_redirect)】为扩展名的文件。这里，SAM的全称是sequence alignment/map format。而BAM就是SAM的二进制文件，也就是压缩格式的sam文件。
 
@@ -92,6 +98,7 @@ SAM格式文件包括头部注释部分和比对结果部分，头部分为’�
 + @PG：使用的比对程序名。
 
 ## **（2）比对结果部分**
+
 例如这样的：
 
 ```plain
@@ -117,7 +124,7 @@ E00514:173:H3C3JCCXY:4:1124:12398:67234    337 Chr00   32904   0   150M    Chr09
     - 1024: 代表这个序列是PCR重复序列（#这个标签不常用）
     - 2048: 代表这个序列是补充的比对（#这个标签具体什么意思，没搞清楚，但是不常用。
 
-       ![1612426369903-e21d1466-62ed-46c2-b738-aa9ee9a64e4f.png](./img/BxpfRoLwzi8BroJT/1612426369903-e21d1466-62ed-46c2-b738-aa9ee9a64e4f-030472.png)       
+       ![1612426369903-e21d1466-62ed-46c2-b738-aa9ee9a64e4f.png](./img/BxpfRoLwzi8BroJT/1612426369903-e21d1466-62ed-46c2-b738-aa9ee9a64e4f-030472.png)
 
 具体还可以参考官网：[<u>https://www.samformat.info/sam-format-flag</u>](https://www.samformat.info/sam-format-flag)
 
@@ -140,8 +147,11 @@ E00514:173:H3C3JCCXY:4:1124:12398:67234    337 Chr00   32904   0   150M    Chr09
 
 由于sam格式的文件通常都非常大，所以为了节省存储空间而将sam转换为二进制格式以便于存储，也就是bam文件。sam/bam文件可以由特定的一些软件（比如samtools）来处理的，包括格式互转、排序、建立索引等操作。
 
-# **<font style="color:#0052FF;">4.GTF和GFF文件</font>**
-GTF全称是Gene transfer format，用于储存基因结构信息，总共有9列。关于gtf文件，我在文章：[**生信中各种ID转换**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265466&idx=1&sn=021a10503d338e09abe07b578e734566&chksm=841efdc7b36974d13b7ad95e2272d293089d49adff9b74667bbeed78306328f0a42b0259c030&scene=21#wechat_redirect)中就已经有所应用。我之前在[**<font style="color:#0052FF;">TCGA数据库差异分析</font>**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264898&idx=1&sn=f6287d98fe0b0fb48a96d2905ca0bb4f&chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&scene=21#wechat_redirect)的文章中，也是通过gtf文件进行ID转换的。
+# **4.GTF和GFF文件**
+
+GTF全称是Gene transfer format，用于储存基因结构信息，总共有9列。
+关于gtf文件，我在文章：[**生信中各种ID转换**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265466&idx=1&sn=021a10503d338e09abe07b578e734566&chksm=841efdc7b36974d13b7ad95e2272d293089d49adff9b74667bbeed78306328f0a42b0259c030&scene=21#wechat_redirect)中就已经有所应用。
+我之前在[**TCGA数据库差异分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264898&idx=1&sn=f6287d98fe0b0fb48a96d2905ca0bb4f&chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&scene=21#wechat_redirect)的文章中，也是通过gtf文件进行ID转换的。
 
 ![1612426369906-7804dcf6-81ae-456d-97d0-c4216190aea5.png](./img/BxpfRoLwzi8BroJT/1612426369906-7804dcf6-81ae-456d-97d0-c4216190aea5-436256.png)
 
@@ -169,7 +179,7 @@ NC_000010.11    BestRefSeq%2CGnomon    gene    35126830    35212958    .    +   
 
 ![1612426369958-26c3ca6b-a829-4819-9e73-bbaec4f17c8e.png](./img/BxpfRoLwzi8BroJT/1612426369958-26c3ca6b-a829-4819-9e73-bbaec4f17c8e-078024.png)
 
-**<font style="color:#0052FF;">5.BED文件</font>**
+**5.BED文件**
 
 BED文件每行至少包括chrom，chromStart，chromEnd三列必选;另外还可以添加额外的9列可选，这些列的顺序是固定的。
 
@@ -202,12 +212,12 @@ chr3    124792319       124792562       ENSG00000276626 RF00100 -chr1    9270081
 
 **BED文件与GFF文件的区别与联系：**
 
-+ 联系  
-➢染色体或Contig的ID或编号  
-➢ DNA的正负链信息  
++ 联系
+➢染色体或Contig的ID或编号
+➢ DNA的正负链信息
 ➢起始和终止位置数值
-+ 区别  
-➢ BED：起始坐标为0，结束坐标至少是1  
++ 区别
+➢ BED：起始坐标为0，结束坐标至少是1
 ➢ GFF：起始坐标为1，结束坐标至少是1
 
 **这里介绍一些处理bed文件的工具。**
@@ -218,29 +228,21 @@ chr3    124792319       124792562       ENSG00000276626 RF00100 -chr1    9270081
 
 参考资料：
 
-<font style="color:#0052FF;">【1】</font>[<font style="color:#0052FF;">https://mp.weixin.qq.com/s/32H3NkEDEL_m54gl-IAEPg</font>](https://mp.weixin.qq.com/s/32H3NkEDEL_m54gl-IAEPg)
+【1】[https://mp.weixin.qq.com/s/32H3NkEDEL_m54gl-IAEPg](https://mp.weixin.qq.com/s/32H3NkEDEL_m54gl-IAEPg)
 
-<font style="color:#0052FF;">【2】</font>[<font style="color:#0052FF;">https://mp.weixin.qq.com/s/TgkLIusOUqPqVZO-aiBdDw</font>](https://mp.weixin.qq.com/s/TgkLIusOUqPqVZO-aiBdDw)
+【2】[https://mp.weixin.qq.com/s/TgkLIusOUqPqVZO-aiBdDw](https://mp.weixin.qq.com/s/TgkLIusOUqPqVZO-aiBdDw)
 
-<font style="color:#0052FF;">【3】</font>[<font style="color:#0052FF;">https://mp.weixin.qq.com/s/rZ26i19hiS5ZOqIoqkL1Wg</font>](https://mp.weixin.qq.com/s/rZ26i19hiS5ZOqIoqkL1Wg)
+【3】[https://mp.weixin.qq.com/s/rZ26i19hiS5ZOqIoqkL1Wg](https://mp.weixin.qq.com/s/rZ26i19hiS5ZOqIoqkL1Wg)
 
-<font style="color:#0052FF;">【4】</font>[<font style="color:#0052FF;">https://mp.weixin.qq.com/s/2VBb6i9jklh-fSGRAkdENA</font>](https://mp.weixin.qq.com/s/2VBb6i9jklh-fSGRAkdENA)
+【4】[https://mp.weixin.qq.com/s/2VBb6i9jklh-fSGRAkdENA](https://mp.weixin.qq.com/s/2VBb6i9jklh-fSGRAkdENA)
 
-<font style="color:#0052FF;">【5】</font>[<font style="color:#0052FF;">https://mp.weixin.qq.com/s/Gon-xYF1Lg93PiirifwQxA</font>](https://mp.weixin.qq.com/s/Gon-xYF1Lg93PiirifwQxA)
+【5】[https://mp.weixin.qq.com/s/Gon-xYF1Lg93PiirifwQxA](https://mp.weixin.qq.com/s/Gon-xYF1Lg93PiirifwQxA)
 
-<font style="color:#0052FF;">【6】</font>[<font style="color:#0052FF;">https://mp.weixin.qq.com/s/UvF53mMHXcnhrYxOWO2WEw</font>](https://mp.weixin.qq.com/s/UvF53mMHXcnhrYxOWO2WEw)
+【6】[https://mp.weixin.qq.com/s/UvF53mMHXcnhrYxOWO2WEw](https://mp.weixin.qq.com/s/UvF53mMHXcnhrYxOWO2WEw)
 
-<font style="color:#0052FF;">【7】</font>[<font style="color:#0052FF;">https://mp.weixin.qq.com/s/r1flLc1l__HoM2aUYcIxcA</font>](https://mp.weixin.qq.com/s/r1flLc1l__HoM2aUYcIxcA)
+【7】[https://mp.weixin.qq.com/s/r1flLc1l__HoM2aUYcIxcA](https://mp.weixin.qq.com/s/r1flLc1l__HoM2aUYcIxcA)
 
 ![1612426369875-344c488f-ce91-4010-b56b-b9db38a1102b.jpeg](./img/BxpfRoLwzi8BroJT/1612426369875-344c488f-ce91-4010-b56b-b9db38a1102b-945538.jpeg)
 
-
-
-
-
-
-
-
-
-> 更新: 2021-02-04 16:18:06  
+> 更新: 2021-02-04 16:18:06
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/xx92kk>

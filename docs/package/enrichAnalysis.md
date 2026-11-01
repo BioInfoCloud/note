@@ -116,7 +116,7 @@ collection = "C5",
 subcollection = "GO:CC"
 ```
 
-##### GSEA.baseCustomGeneSet 
+##### GSEA.baseCustomGeneSet
 
 如果自定义的背景基因集，使用GSEA.baseCustomGeneSet函数。
 
@@ -124,7 +124,7 @@ subcollection = "GO:CC"
 GSEA.baseCustomGeneSet (data,
                         TERM2GENE,
                         geneColName = NULL,
-                        rangeColName = NULL) 
+                        rangeColName = NULL)
 ```
 
 ##### exe.gseGO_GSEA
@@ -167,14 +167,11 @@ obj是富集分析的数据对象enrichResult。通常是clusterProfiler::enrich
 preVisEnrishResults(obj,type,nTerm = 6,p.adjust = 0.05)
 ```
 
-
-
 ##### enrichCirBarchar()
 
 Data frame with columns: group, term, count (output from preVisEnrishResults)。
 
 ```R
-# 
+#
 preCirBarchartData(data)
 ```
-

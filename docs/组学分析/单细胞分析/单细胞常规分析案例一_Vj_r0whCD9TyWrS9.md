@@ -28,7 +28,7 @@ lapply(unique(samples),function(x){
   y = fs[grepl(x,fs)]
   folder = paste0("GSE130001_RAW/", x)
   dir.create(folder,recursive = T)#为每个样本创建子文件夹
-  
+
   #重命名文件，并移动到相应的子文件夹里,注意对应顺序
   file.rename(paste0("GSE130001_RAW/",y[1]),file.path(folder,"barcodes.tsv.gz"))
   file.rename(paste0("GSE130001_RAW/",y[2]),file.path(folder,"features.tsv.gz"))
@@ -59,8 +59,8 @@ sce.big
 
 ```r
 MedBioInfoCloud: sce.big
-An object of class Seurat 
-32738 features across 4133 samples within 1 assay 
+An object of class Seurat
+32738 features across 4133 samples within 1 assay
 Active assay: RNA (32738 features, 0 variable features)
 ```
 
@@ -79,19 +79,19 @@ VlnPlot(sce.all, features = c("nFeature_RNA", "nCount_RNA"), ncol = 2)
 selected_cell <- WhichCells(sce.all, expression = nFeature_RNA > 300)
 selected_features <- rownames(sce.all)[Matrix::rowSums(sce.all@assays$RNA@counts > 0 ) > 3]
 
-sce.all.filt <- subset(sce.all, 
-                       features = selected_features, 
+sce.all.filt <- subset(sce.all,
+                       features = selected_features,
                        cells = selected_cell)
-dim(sce.all) 
+dim(sce.all)
 dim(sce.all.filt)
 ```
 
 过滤后的基因和细胞数量
 
 ```r
-MedBioInfoCloud: dim(sce.all) 
+MedBioInfoCloud: dim(sce.all)
 [1] 32738  4133
-MedBioInfoCloud: dim(sce.all.filt) 
+MedBioInfoCloud: dim(sce.all.filt)
 [1] 18755  4132
 ```
 
@@ -145,14 +145,14 @@ VlnPlot(sce.all.filt, features = c("percent.mt","percent.ribo"), ncol = 2)
 过滤：
 
 ```r
-sce.all.filt1 <- subset(sce.all.filt, 
+sce.all.filt1 <- subset(sce.all.filt,
                    subset = percent.mt < 20)
 ```
 
 有些研究可能需要过滤红细胞基因，下面是匹配红细胞基因，可以按照上面基因核糖体基因比例方式计算。这里不计算了。
 
 ```r
-HB.genes <- c("HBA1","HBA2","HBB","HBD","HBE1","HBG1","HBG2","HBM","HBQ1","HBZ") # 
+HB.genes <- c("HBA1","HBA2","HBB","HBD","HBE1","HBG1","HBG2","HBM","HBQ1","HBZ") #
 HB.genes <- CaseMatch(HB.genes, rownames(sce.all.filt1))
 ```
 
@@ -185,13 +185,17 @@ sce <- NormalizeData(sce, normalization.method =  "LogNormalize",
 
 ## 7.查找高变基因
 
-指一些基因在细胞中表达的浮动比较大，这些往往是我们后续分群的时候需要关注的。FindVariableFeatures 函数有 3 种选择高表达变异基因的方法，可以通过 selection.method参数来选择，它们分别是：vst（默认值）， mean.var.plot (mvp) 和 dispersion (disp)。nfeatures 参数的默认值是 2000，可以改变。如果 selection.method 参数选择的是 mvp，就不需要人为规定高表达变异基因的数目，算法会自动选择合适的数目。建议使用完 FindVariableFeatures 函数后，用 VariableFeaturePlot 对这些高表达变异基因再做个可视化，看看使用默认值 2000 会不会有问题。
+指一些基因在细胞中表达的浮动比较大，这些往往是我们后续分群的时候需要关注的。
+FindVariableFeatures 函数有 3 种选择高表达变异基因的方法，可以通过 selection.method参数来选择，它们分别是：vst（默认值）， mean.var.plot (mvp) 和 dispersion (disp)。
+nfeatures 参数的默认值是 2000，可以改变。
+如果 selection.method 参数选择的是 mvp，就不需要人为规定高表达变异基因的数目，算法会自动选择合适的数目。
+建议使用完 FindVariableFeatures 函数后，用 VariableFeaturePlot 对这些高表达变异基因再做个可视化，看看使用默认值 2000 会不会有问题。
 
 ```r
 #前2000个高变feature RNA
 sce <- FindVariableFeatures(sce,
                             selection.method = "vst", nfeatures = 2000)
-sce_mvp <- FindVariableFeatures(object = sce, 
+sce_mvp <- FindVariableFeatures(object = sce,
                                 selection.method = "mvp", nfeatures = 2000)
 P1 <- VariableFeaturePlot(object = sce)
 P2 <- VariableFeaturePlot(object = sce_mvp)
@@ -226,8 +230,8 @@ sce <- ScaleData(object = sce, features = all.genes) # 对所有基因做归一�
 s.genes <- Seurat::cc.genes.updated.2019$s.genes
 g2m.genes <- Seurat::cc.genes.updated.2019$g2m.genes
 # CellCycleScoring将Seurat对象中每个细胞的分组信息设置为其所处的细胞周期阶段
-sce_Scale <- CellCycleScoring(sce, 
-                              s.features = s.genes, 
+sce_Scale <- CellCycleScoring(sce,
+                              s.features = s.genes,
                               g2m.features = g2m.genes, set.ident = TRUE)
 # 观察细胞周期基因的表达情况
 RidgePlot(sce_Scale, features = c("PCNA", "TOP2A", "MCM6", "MKI67"), ncol = 2)
@@ -235,11 +239,11 @@ RidgePlot(sce_Scale, features = c("PCNA", "TOP2A", "MCM6", "MKI67"), ncol = 2)
 
 ```r
 # 方法一
-sce_Scale <- ScaleData(sce_Scale, vars.to.regress = c("S.Score", "G2M.Score"), 
+sce_Scale <- ScaleData(sce_Scale, vars.to.regress = c("S.Score", "G2M.Score"),
           features = rownames(sce_Scale))
 # 方法二
 sce_Scale$CC.Difference <- sce_Scale$S.Score - sce_Scale$G2M.Score
-ScaleData(sce_Scale, vars.to.regress = "CC.Difference", 
+ScaleData(sce_Scale, vars.to.regress = "CC.Difference",
           features = rownames(sce_Scale))
 ```
 
@@ -309,7 +313,7 @@ tsne_pos <- Embeddings(sce,'tsne')
 dat <- cbind(tsne_pos,phe)
 head(dat)
 P9 <- ggplot(dat,aes(x=tSNE_1,y=tSNE_2,color=cluster))+
-  geom_point(size=0.95)+ 
+  geom_point(size=0.95)+
   stat_ellipse(data=dat,aes(x=tSNE_1,y=tSNE_2,fill=cluster,color = cluster),
                  geom = "polygon",alpha=0.2,level=0.9,type="t",
                  linetype =2,show.legend = F) + coord_fixed() +
@@ -353,5 +357,5 @@ for( i in unique(sce@meta.data$seurat_clusters) ){
 + [CNS图表复现16—inferCNV结果解读及利用](https://mp.weixin.qq.com/s?__biz=MzI1Njk4ODE0MQ==&mid=2247489430&idx=1&sn=4927b01a07638b14d8cf78b471ac8950&scene=21#wechat_redirect)
 + [**CNS图表复现17—inferCNV结果解读及利用之进阶**](https://mp.weixin.qq.com/s?__biz=MzI1Njk4ODE0MQ==&mid=2247489446&idx=1&sn=7e38ae02c7918d6c9af5c840946bc560&scene=21#wechat_redirect)
 
-> 更新: 2022-10-12 11:20:19  
+> 更新: 2022-10-12 11:20:19
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/ps3xkl>

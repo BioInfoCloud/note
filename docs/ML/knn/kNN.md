@@ -41,14 +41,14 @@ diabetesTib
 
 ```R
 MedBioInfoCloud: summary(diabetesTib)
-      class       glucose       insulin            sspg      
- Chemical:36   Min.   : 70   Min.   :  45.0   Min.   : 10.0  
- Normal  :76   1st Qu.: 90   1st Qu.: 352.0   1st Qu.:118.0  
- Overt   :33   Median : 97   Median : 403.0   Median :156.0  
-               Mean   :122   Mean   : 540.8   Mean   :186.1  
-               3rd Qu.:112   3rd Qu.: 558.0   3rd Qu.:221.0  
-               Max.   :353   Max.   :1568.0   Max.   :748.0  
-MedBioInfoCloud: 
+      class       glucose       insulin            sspg
+ Chemical:36   Min.   : 70   Min.   :  45.0   Min.   : 10.0
+ Normal  :76   1st Qu.: 90   1st Qu.: 352.0   1st Qu.:118.0
+ Overt   :33   Median : 97   Median : 403.0   Median :156.0
+               Mean   :122   Mean   : 540.8   Mean   :186.1
+               3rd Qu.:112   3rd Qu.: 558.0   3rd Qu.:221.0
+               Max.   :353   Max.   :1568.0   Max.   :748.0
+MedBioInfoCloud:
 MedBioInfoCloud: diabetesTib
 # A tibble: 145 x 4
    class  glucose insulin  sspg
@@ -65,7 +65,7 @@ MedBioInfoCloud: diabetesTib
 10 Normal      97     296   131
 # ... with 135 more rows
 # i Use `print(n = ...)` to see more rows
-MedBioInfoCloud: 
+MedBioInfoCloud:
 ```
 
 该数据集包含 145 个案例和 4 个变量。其中76例为正常，36例为化学糖尿病，33例为显性糖尿病。其他三个变量是葡萄糖耐量试验后血糖和胰岛素水平的连续测量和稳态血糖水平。
@@ -74,15 +74,15 @@ MedBioInfoCloud:
 
 ```R
 # PLOT THE RELATIONSHIPS IN THE DATA ----
-p1 <- ggplot(diabetesTib, aes(glucose, insulin, col = class)) + 
+p1 <- ggplot(diabetesTib, aes(glucose, insulin, col = class)) +
   geom_point()  +
   theme_bw()
 
-p2 <- ggplot(diabetesTib, aes(sspg, insulin, col = class)) + 
+p2 <- ggplot(diabetesTib, aes(sspg, insulin, col = class)) +
   geom_point() +
   theme_bw()
 
-p3 <- ggplot(diabetesTib, aes(sspg, glucose, col = class)) + 
+p3 <- ggplot(diabetesTib, aes(sspg, glucose, col = class)) +
   geom_point() +
   theme_bw()
 library(Rmisc)
@@ -133,10 +133,10 @@ makeClassifTask(
 
 - coordinates:(data.frame)空间数据集的坐标，将用于空间交叉验证重采样设置中数据的空间分区。坐标必须是数值。提供的data.fram需要具有与data相同的行数，并且至少包含两个维度。
 
-- 
+-
   positive:二进制分类的阳性类(否则忽略并设置为NA)。Default是目标属性的第一个因子级别。
 
-- 
+-
   fixup.data:是否应该进行一些基本的数据清理？目前，这意味着删除列的空因子级别。可能的选择是：“no”=不做。“warn”=做但要警告。“quiet”=做但保持沉默。默认值为“warn”。
 
 - check.data:逻辑值，是否应该在任务创建时首先检查数据的完整性?你应该有很好的理由关闭它(一个可能是速度)。默认为TRUE。
@@ -178,82 +178,82 @@ listLearners()$class
 ```
 
 ```R
-  [1] "classif.ada"                    "classif.adaboostm1"            
-  [3] "classif.bartMachine"            "classif.binomial"              
-  [5] "classif.boosting"               "classif.bst"                   
-  [7] "classif.C50"                    "classif.cforest"               
-  [9] "classif.clusterSVM"             "classif.ctree"                 
- [11] "classif.cvglmnet"               "classif.dbnDNN"                
- [13] "classif.dcSVM"                  "classif.earth"                 
- [15] "classif.evtree"                 "classif.fdausc.glm"            
- [17] "classif.fdausc.kernel"          "classif.fdausc.knn"            
- [19] "classif.fdausc.np"              "classif.FDboost"               
- [21] "classif.featureless"            "classif.fgam"                  
- [23] "classif.fnn"                    "classif.gamboost"              
- [25] "classif.gaterSVM"               "classif.gausspr"               
- [27] "classif.gbm"                    "classif.glmboost"              
- [29] "classif.glmnet"                 "classif.h2o.deeplearning"      
- [31] "classif.h2o.gbm"                "classif.h2o.glm"               
- [33] "classif.h2o.randomForest"       "classif.IBk"                   
- [35] "classif.J48"                    "classif.JRip"                  
- [37] "classif.kknn"                   "classif.knn"                   
- [39] "classif.ksvm"                   "classif.lda"                   
- [41] "classif.LiblineaRL1L2SVC"       "classif.LiblineaRL1LogReg"     
- [43] "classif.LiblineaRL2L1SVC"       "classif.LiblineaRL2LogReg"     
+  [1] "classif.ada"                    "classif.adaboostm1"
+  [3] "classif.bartMachine"            "classif.binomial"
+  [5] "classif.boosting"               "classif.bst"
+  [7] "classif.C50"                    "classif.cforest"
+  [9] "classif.clusterSVM"             "classif.ctree"
+ [11] "classif.cvglmnet"               "classif.dbnDNN"
+ [13] "classif.dcSVM"                  "classif.earth"
+ [15] "classif.evtree"                 "classif.fdausc.glm"
+ [17] "classif.fdausc.kernel"          "classif.fdausc.knn"
+ [19] "classif.fdausc.np"              "classif.FDboost"
+ [21] "classif.featureless"            "classif.fgam"
+ [23] "classif.fnn"                    "classif.gamboost"
+ [25] "classif.gaterSVM"               "classif.gausspr"
+ [27] "classif.gbm"                    "classif.glmboost"
+ [29] "classif.glmnet"                 "classif.h2o.deeplearning"
+ [31] "classif.h2o.gbm"                "classif.h2o.glm"
+ [33] "classif.h2o.randomForest"       "classif.IBk"
+ [35] "classif.J48"                    "classif.JRip"
+ [37] "classif.kknn"                   "classif.knn"
+ [39] "classif.ksvm"                   "classif.lda"
+ [41] "classif.LiblineaRL1L2SVC"       "classif.LiblineaRL1LogReg"
+ [43] "classif.LiblineaRL2L1SVC"       "classif.LiblineaRL2LogReg"
  [45] "classif.LiblineaRL2SVC"         "classif.LiblineaRMultiClassSVC"
- [47] "classif.logreg"                 "classif.lssvm"                 
- [49] "classif.lvq1"                   "classif.mda"                   
- [51] "classif.mlp"                    "classif.multinom"              
- [53] "classif.naiveBayes"             "classif.neuralnet"             
- [55] "classif.nnet"                   "classif.nnTrain"               
- [57] "classif.OneR"                   "classif.pamr"                  
- [59] "classif.PART"                   "classif.penalized"             
- [61] "classif.plr"                    "classif.plsdaCaret"            
- [63] "classif.probit"                 "classif.qda"                   
- [65] "classif.randomForest"           "classif.ranger"                
- [67] "classif.rda"                    "classif.rFerns"                
- [69] "classif.rotationForest"         "classif.rpart"                 
- [71] "classif.RRF"                    "classif.saeDNN"                
- [73] "classif.sda"                    "classif.sparseLDA"             
- [75] "classif.svm"                    "classif.xgboost"               
- [77] "cluster.cmeans"                 "cluster.Cobweb"                
- [79] "cluster.dbscan"                 "cluster.EM"                    
- [81] "cluster.FarthestFirst"          "cluster.kkmeans"               
- [83] "cluster.kmeans"                 "cluster.MiniBatchKmeans"       
- [85] "cluster.SimpleKMeans"           "cluster.XMeans"                
- [87] "multilabel.cforest"             "multilabel.rFerns"             
- [89] "regr.bartMachine"               "regr.bcart"                    
- [91] "regr.bgp"                       "regr.bgpllm"                   
- [93] "regr.blm"                       "regr.brnn"                     
- [95] "regr.bst"                       "regr.btgp"                     
- [97] "regr.btgpllm"                   "regr.btlm"                     
- [99] "regr.cforest"                   "regr.crs"                      
-[101] "regr.ctree"                     "regr.cubist"                   
-[103] "regr.cvglmnet"                  "regr.earth"                    
-[105] "regr.evtree"                    "regr.FDboost"                  
-[107] "regr.featureless"               "regr.fgam"                     
-[109] "regr.fnn"                       "regr.frbs"                     
-[111] "regr.gamboost"                  "regr.gausspr"                  
-[113] "regr.gbm"                       "regr.glm"                      
-[115] "regr.glmboost"                  "regr.glmnet"                   
-[117] "regr.GPfit"                     "regr.h2o.deeplearning"         
-[119] "regr.h2o.gbm"                   "regr.h2o.glm"                  
-[121] "regr.h2o.randomForest"          "regr.IBk"                      
-[123] "regr.kknn"                      "regr.km"                       
-[125] "regr.ksvm"                      "regr.laGP"                     
-[127] "regr.LiblineaRL2L1SVR"          "regr.LiblineaRL2L2SVR"         
-[129] "regr.lm"                        "regr.mars"                     
-[131] "regr.mob"                       "regr.nnet"                     
-[133] "regr.pcr"                       "regr.penalized"                
-[135] "regr.plsr"                      "regr.randomForest"             
-[137] "regr.ranger"                    "regr.rpart"                    
-[139] "regr.RRF"                       "regr.rsm"                      
-[141] "regr.rvm"                       "regr.svm"                      
-[143] "regr.xgboost"                   "surv.cforest"                  
-[145] "surv.coxph"                     "surv.cvglmnet"                 
-[147] "surv.gamboost"                  "surv.gbm"                      
-[149] "surv.glmboost"                  "surv.glmnet"                   
-[151] "surv.ranger"                    "surv.rpart"  
+ [47] "classif.logreg"                 "classif.lssvm"
+ [49] "classif.lvq1"                   "classif.mda"
+ [51] "classif.mlp"                    "classif.multinom"
+ [53] "classif.naiveBayes"             "classif.neuralnet"
+ [55] "classif.nnet"                   "classif.nnTrain"
+ [57] "classif.OneR"                   "classif.pamr"
+ [59] "classif.PART"                   "classif.penalized"
+ [61] "classif.plr"                    "classif.plsdaCaret"
+ [63] "classif.probit"                 "classif.qda"
+ [65] "classif.randomForest"           "classif.ranger"
+ [67] "classif.rda"                    "classif.rFerns"
+ [69] "classif.rotationForest"         "classif.rpart"
+ [71] "classif.RRF"                    "classif.saeDNN"
+ [73] "classif.sda"                    "classif.sparseLDA"
+ [75] "classif.svm"                    "classif.xgboost"
+ [77] "cluster.cmeans"                 "cluster.Cobweb"
+ [79] "cluster.dbscan"                 "cluster.EM"
+ [81] "cluster.FarthestFirst"          "cluster.kkmeans"
+ [83] "cluster.kmeans"                 "cluster.MiniBatchKmeans"
+ [85] "cluster.SimpleKMeans"           "cluster.XMeans"
+ [87] "multilabel.cforest"             "multilabel.rFerns"
+ [89] "regr.bartMachine"               "regr.bcart"
+ [91] "regr.bgp"                       "regr.bgpllm"
+ [93] "regr.blm"                       "regr.brnn"
+ [95] "regr.bst"                       "regr.btgp"
+ [97] "regr.btgpllm"                   "regr.btlm"
+ [99] "regr.cforest"                   "regr.crs"
+[101] "regr.ctree"                     "regr.cubist"
+[103] "regr.cvglmnet"                  "regr.earth"
+[105] "regr.evtree"                    "regr.FDboost"
+[107] "regr.featureless"               "regr.fgam"
+[109] "regr.fnn"                       "regr.frbs"
+[111] "regr.gamboost"                  "regr.gausspr"
+[113] "regr.gbm"                       "regr.glm"
+[115] "regr.glmboost"                  "regr.glmnet"
+[117] "regr.GPfit"                     "regr.h2o.deeplearning"
+[119] "regr.h2o.gbm"                   "regr.h2o.glm"
+[121] "regr.h2o.randomForest"          "regr.IBk"
+[123] "regr.kknn"                      "regr.km"
+[125] "regr.ksvm"                      "regr.laGP"
+[127] "regr.LiblineaRL2L1SVR"          "regr.LiblineaRL2L2SVR"
+[129] "regr.lm"                        "regr.mars"
+[131] "regr.mob"                       "regr.nnet"
+[133] "regr.pcr"                       "regr.penalized"
+[135] "regr.plsr"                      "regr.randomForest"
+[137] "regr.ranger"                    "regr.rpart"
+[139] "regr.RRF"                       "regr.rsm"
+[141] "regr.rvm"                       "regr.svm"
+[143] "regr.xgboost"                   "surv.cforest"
+[145] "surv.coxph"                     "surv.cvglmnet"
+[147] "surv.gamboost"                  "surv.gbm"
+[149] "surv.glmboost"                  "surv.glmnet"
+[151] "surv.ranger"                    "surv.rpart"
 ```
 
 可以按功能列出：
@@ -297,8 +297,8 @@ performance(knnPred, measures = list(mmce, acc))
 
 ```R
 MedBioInfoCloud: performance(knnPred, measures = list(mmce, acc))
-      mmce        acc 
-0.06206897 0.93793103 
+      mmce        acc
+0.06206897 0.93793103
 ```
 
 我们的模型正确分类了 93.8% 的案例！这是否意味着它将在未来患者中表现出良好的预测？事实是我们不知道。通过要求模型对你最初用于训练它的数据进行预测来评估模型性能，这几乎不会告诉你模型在对完全看不见的数据进行预测时将如何执行。因此，切勿以这种方式评估模型性能。在我们讨论原因之前，我想介绍一个重要的概念，称为偏差-方差权衡。
@@ -337,14 +337,14 @@ MedBioInfoCloud: performance(knnPred, measures = list(mmce, acc))
 
 ```R
 # PERFORMING HOLD-OUT CROSS-VALIDATION ----
-holdout <- makeResampleDesc(method = "Holdout", split = 2/3, 
+holdout <- makeResampleDesc(method = "Holdout", split = 2/3,
                             stratify = TRUE)
 ```
 
 定义好如何交叉验证我们的学习器之后，我们可以使用`resample()`函数进行交叉验证了。`resample()`函数提供了创建学习器和任务以及刚才定义的重采样方法。
 
 ```R
-holdoutCV <- resample(learner = knn, task = diabetesTask, 
+holdoutCV <- resample(learner = knn, task = diabetesTask,
                       resampling = holdout,
                       measures = list(mmce, acc))
 ```
@@ -353,7 +353,7 @@ resample()函数在运行时输出性能度量，这些度量可以通过从resa
 
 ```R
 MedBioInfoCloud: holdoutCV$aggr
-mmce.test.mean  acc.test.mean 
+mmce.test.mean  acc.test.mean
     0.06122449     0.93877551
 ```
 
@@ -383,10 +383,10 @@ calculateConfusionMatrix(holdoutCV$pred, relative = TRUE)
 
 ```R
 # PERFORMING REPEATED K-FOLD CROSS-VALIDATION ----
-kFold <- makeResampleDesc(method = "RepCV", folds = 10, reps = 50, 
+kFold <- makeResampleDesc(method = "RepCV", folds = 10, reps = 50,
                           stratify = TRUE)
 
-kFoldCV <- resample(learner = knn, task = diabetesTask, 
+kFoldCV <- resample(learner = knn, task = diabetesTask,
                     resampling = kFold, measures = list(mmce, acc))
 ```
 
@@ -394,8 +394,8 @@ kFoldCV <- resample(learner = knn, task = diabetesTask,
 
 ```R
 MedBioInfoCloud: kFoldCV$aggr
-mmce.test.mean  acc.test.mean 
-     0.1045667      0.8954333 
+mmce.test.mean  acc.test.mean
+     0.1045667      0.8954333
 ```
 
 我们通常只对平均性能度量感兴趣，但您可以通过运行 来访问每次迭代的性能度量。
@@ -420,11 +420,11 @@ calculateConfusionMatrix(kFoldCV$pred, relative = TRUE)
 MedBioInfoCloud: calculateConfusionMatrix(kFoldCV$pred, relative = TRUE)
 Relative confusion matrix (normalized by row/column):
           predicted
-true       Chemical  Normal    Overt     -err.-   
-  Chemical 0.81/0.79 0.09/0.04 0.09/0.11 0.19     
-  Normal   0.04/0.07 0.96/0.96 0.00/0.00 0.04     
-  Overt    0.16/0.14 0.00/0.00 0.84/0.89 0.16     
-  -err.-        0.21      0.04      0.11 0.10     
+true       Chemical  Normal    Overt     -err.-
+  Chemical 0.81/0.79 0.09/0.04 0.09/0.11 0.19
+  Normal   0.04/0.07 0.96/0.96 0.00/0.00 0.04
+  Overt    0.16/0.14 0.00/0.00 0.84/0.89 0.16
+  -err.-        0.21      0.04      0.11 0.10
 
 
 Absolute confusion matrix:
@@ -464,7 +464,7 @@ LOOCV$aggr
 
 ```R
 MedBioInfoCloud: LOOCV$aggr
-mmce.test.mean  acc.test.mean 
+mmce.test.mean  acc.test.mean
     0.07586207     0.92413793
 ```
 
@@ -478,11 +478,11 @@ calculateConfusionMatrix(LOOCV$pred, relative = TRUE)
 MedBioInfoCloud: calculateConfusionMatrix(LOOCV$pred, relative = TRUE)
 Relative confusion matrix (normalized by row/column):
           predicted
-true       Chemical  Normal    Overt     -err.-   
-  Chemical 0.92/0.80 0.08/0.04 0.00/0.00 0.08     
-  Normal   0.04/0.07 0.96/0.96 0.00/0.00 0.04     
-  Overt    0.15/0.12 0.00/0.00 0.85/1.00 0.15     
-  -err.-        0.20      0.04      0.00 0.08     
+true       Chemical  Normal    Overt     -err.-
+  Chemical 0.92/0.80 0.08/0.04 0.00/0.00 0.08
+  Normal   0.04/0.07 0.96/0.96 0.00/0.00 0.04
+  Overt    0.15/0.12 0.00/0.00 0.85/1.00 0.15
+  -err.-        0.20      0.04      0.00 0.08
 
 
 Absolute confusion matrix:
@@ -532,9 +532,9 @@ cvForTuning <- makeResampleDesc("RepCV", folds = 10, reps = 20)
 调用函数来执行调优：
 
 ```R
-tunedK <- tuneParams("classif.knn", task = diabetesTask, 
-                     resampling = cvForTuning, 
-                     par.set = knnParamSpace, 
+tunedK <- tuneParams("classif.knn", task = diabetesTask,
+                     resampling = cvForTuning,
+                     par.set = knnParamSpace,
                      control = gridSearch)
 ```
 
@@ -569,8 +569,6 @@ plotHyperParsEffect(knnTuningData, x = "k", y = "mmce.test.mean",
 
 ![](https://medbioinfocloud-1251590549.cos.ap-guangzhou.myqcloud.com/notepic202212162152446.png)
 
-
-
 现在使用最优的 *k*训练最终模型：
 
 ```R
@@ -604,9 +602,9 @@ inner <- makeResampleDesc("CV")
 
 outer <- makeResampleDesc("RepCV", folds = 10, reps = 5)
 
-knnWrapper <- makeTuneWrapper("classif.knn", resampling = inner, 
-                              par.set = knnParamSpace, 
-                              control = gridSearch) 
+knnWrapper <- makeTuneWrapper("classif.knn", resampling = inner,
+                              par.set = knnParamSpace,
+                              control = gridSearch)
 
 cvWithTuning <- resample(knnWrapper, diabetesTask, resampling = outer)
 ```
@@ -617,7 +615,7 @@ cvWithTuning <- resample(knnWrapper, diabetesTask, resampling = outer)
 
 ```R
 # USING THE MODEL TO MAKE PREDICTIONS ----
-newDiabetesPatients <- tibble(glucose = c(82, 108, 300), 
+newDiabetesPatients <- tibble(glucose = c(82, 108, 300),
                               insulin = c(361, 288, 1052),
                               sspg = c(200, 186, 135))
 
@@ -632,7 +630,6 @@ getPredictionResponse(newPatientsPred)
 
 ### 3.1 查看鸢尾花iris数据集
 
-
 ```python
 #对鸢尾花iris数据集进行调用，查看数据的各方面特征。
 from sklearn.datasets import load_iris
@@ -644,7 +641,7 @@ print("数据类型:\n",type(iris_dataset['data']))    #查看数据类型
 print("数据维度:\n",iris_dataset['data'].shape)    #查看数据的结构
 print("前五条数据:\n{}".format(iris_dataset['data'][:5]))  #查看前5条数据
 #查看分类信息
-print("标记名:\n",iris_dataset['target_names']) 
+print("标记名:\n",iris_dataset['target_names'])
 print("标记类型:\n",type(iris_dataset['target']))
 print("标记维度:\n",iris_dataset['target'].shape)
 print("标记值:\n",iris_dataset['target'])
@@ -680,11 +677,9 @@ print('数据集简介：\n',iris_dataset['DESCR'][:20] + "\n.......")  #数据�
      2 2]
     数据集简介：
      .. _iris_dataset:
-    
+
     I
     .......
-
-
 
 ```python
 #对iris数据集进行拆分，并查看拆分结果。
@@ -860,8 +855,6 @@ print("X_test shape: {}".format(X_test.shape))
     X_train shape: (112, 4)
     X_test shape: (38, 4)
 
-
-
 ```python
 # 使用scatter_matrix显示训练集与测试集。
 import pandas as pd
@@ -871,14 +864,9 @@ pd.plotting.scatter_matrix(iris_dataframe, c=y_train, figsize=(15, 15), marker='
 
 ```
 
-
-
 <img src="output_3_1.png" alt="png" style="zoom:80%;" />
-    
-
 
 ### 3.2 使用KNN对鸢尾花iris数据集进行分类。
-
 
 ```python
 from sklearn import datasets
@@ -912,9 +900,7 @@ print('预测精确率：',knn.score(iris_test_X, iris_test_y))
     预测结果： [2 1 0 2 0 2 0 1 1 1 2 1 1 1 2 0 1 1 0 0 2 1 0 0 2 0 0 1 1 0]
     预测精确率： 0.9666666666666667
 
-
 ### 3.3 使用KNN方法实现手写数字识别。
-
 
 ```python
 #coding=utf-8
@@ -923,12 +909,12 @@ from os import listdir
 
 def loadDataSet():   #加载数据集
     #获取训练数据集
-    print("1.Loading trainSet...")    
-    trainFileList = listdir('HWdigits/trainSet') 
+    print("1.Loading trainSet...")
+    trainFileList = listdir('HWdigits/trainSet')
     trainNum = len(trainFileList)
 
-    trainX = np.zeros((trainNum, 32*32))    
-    trainY = []    
+    trainX = np.zeros((trainNum, 32*32))
+    trainY = []
     for i in range(trainNum):
         trainFile = trainFileList[i]
         #将训练数据集向量化
@@ -940,7 +926,7 @@ def loadDataSet():   #加载数据集
     testFileList = listdir('HWdigits/testSet')
     testNum = len(testFileList)
     testX = np.zeros((testNum, 32*32))
-    testY = []    
+    testY = []
     for i in range(testNum):
         testFile = testFileList[i]
         #将测试数据集向量化
@@ -956,26 +942,26 @@ def img2vector(filename,h,w):      # 将32*32的文本转化为向量
         for col in range(w):
             imgVector[0, row * 32 + col] = int(lineStr[col])
     return imgVector
-def myKNN(testDigit, trainX, trainY, k):  
-    numSamples = trainX.shape[0]  #shape[0]代表行，每行一个图片，得到样本个数    
-    #1.计算欧式距离    
+def myKNN(testDigit, trainX, trainY, k):
+    numSamples = trainX.shape[0]  #shape[0]代表行，每行一个图片，得到样本个数
+    #1.计算欧式距离
     diff=[]
-    for n in range(numSamples):        
+    for n in range(numSamples):
         diff.append(testDigit-trainX[n])  #每个个体差
     diff=np.array(diff)                 #转变为ndarray
     #对差求平方和，然后取和的平方根
-    squaredDiff = diff ** 2  
+    squaredDiff = diff ** 2
     squaredDist = np.sum(squaredDiff, axis = 1)
     distance = squaredDist ** 0.5
-    #2.按距离进行排序    
+    #2.按距离进行排序
     sortedDistIndices = np.argsort(distance)
-    classCount = {}                   #存放各类别的个体数量 
+    classCount = {}                   #存放各类别的个体数量
     for i in range(k):
         #3.按顺序读取标签
         voteLabel = trainY[sortedDistIndices[i]]
-        #4.计算该标签次数        
+        #4.计算该标签次数
         classCount[voteLabel] = classCount.get(voteLabel, 0) + 1
-    
+
     #5.查找出现次数最多的类别，作为分类结果
     maxCount = 0
     for key, value in classCount.items():
@@ -990,10 +976,10 @@ matchCount = 0
 print("3.Find the most frequent label in k-nearest...")
 print("4.Show the result...")
 for i in range(numTestSamples):
-    predict = myKNN(test_x[i], train_x, train_y, 3)    
+    predict = myKNN(test_x[i], train_x, train_y, 3)
     print("result is: %d, real answer is: %d" % (predict,test_y[i]))
     if predict == test_y[i]:
-        matchCount += 1        
+        matchCount += 1
 accuracy = float(matchCount) / numTestSamples
 # 5.输出结果
 print("5.Show the accuracy...")
@@ -1540,6 +1526,3 @@ print('  The classify accuracy is: %.2f%%' % (accuracy * 100))
     5.Show the accuracy...
       The total number of errors is: 11
       The classify accuracy is: 97.93%
-
-
-

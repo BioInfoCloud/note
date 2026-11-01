@@ -10,7 +10,7 @@
 
 ![1612611038660-1458c689-7533-4b9f-8ea8-da82fe5d93cb.png](./img/3qPP8mceoYAzJIk2/1612611038660-1458c689-7533-4b9f-8ea8-da82fe5d93cb-443507.png)
 
-**提取码：****<font style="color:#FF0000;">x7he</font>**
+**提取码：****x7he**
 
 我按照上面文章思路，写了TCGA数据分析部分的代码，当然模拟的数据不是文章的肿瘤数据，数据是TCGA-STAD转录组和临床的数据，分析的基因是我随便找的基因，所以结果没有那么好，只是一个处理流程而已，根据自己研究方向订呗。
 
@@ -26,7 +26,7 @@
 
 ➢ 临床数据下载和整理（[参考文章](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264504&idx=1&sn=634bd925786a3193977342634b03acc3&chksm=841ef185b369789346bfbfbc315b9976bd14b9e25ed365c26522469e1ee102212c4b005bfb86&scene=21#wechat_redirect)）
 
-➢ 肿瘤分型subtype 
+➢ 肿瘤分型subtype
 
 主成分分析生存分析临床相关性
 
@@ -44,51 +44,49 @@
 
 下面是我模拟数据自动分析结果
 
-<font style="color:#FF0000;">差异基因表达谱热图</font>![1612611038540-45fbd3c7-2fcc-4202-bcbf-c96cdbd17e75.png](./img/3qPP8mceoYAzJIk2/1612611038540-45fbd3c7-2fcc-4202-bcbf-c96cdbd17e75-095647.png)
+差异基因表达谱热图![1612611038540-45fbd3c7-2fcc-4202-bcbf-c96cdbd17e75.png](./img/3qPP8mceoYAzJIk2/1612611038540-45fbd3c7-2fcc-4202-bcbf-c96cdbd17e75-095647.png)
 
-<font style="color:#FF0000;">肿瘤分型</font>
-
-
+肿瘤分型
 
 ![1612611038732-897ce676-b812-47e5-bfd1-5d300ad18525.png](./img/3qPP8mceoYAzJIk2/1612611038732-897ce676-b812-47e5-bfd1-5d300ad18525-597606.png)
 
-<font style="color:#FF0000;">相关性分析</font>
+相关性分析
 
 ![1612611038549-238394f3-79f3-45b6-bf19-dcf3cf93bc83.jpeg](./img/3qPP8mceoYAzJIk2/1612611038549-238394f3-79f3-45b6-bf19-dcf3cf93bc83-685503.jpeg)
 
-<font style="color:#FF0000;">主成分分析</font>
+主成分分析
 
 ![1612611038505-9e8fe9c6-382e-41e8-90b3-1a17ec55fda4.png](./img/3qPP8mceoYAzJIk2/1612611038505-9e8fe9c6-382e-41e8-90b3-1a17ec55fda4-183556.png)
 
-<font style="color:#FF0000;">肿瘤分型生存分析</font>
+肿瘤分型生存分析
 
 ![1612611038670-8633c0a7-07cf-465b-9471-5b19e9d4a621.png](./img/3qPP8mceoYAzJIk2/1612611038670-8633c0a7-07cf-465b-9471-5b19e9d4a621-924935.png)
 
-<font style="color:#FF0000;">分型与临床相关性热图</font>
+分型与临床相关性热图
 
 ![1612611038544-883d7ae6-76f3-4539-a33f-89181bb842b6.png](./img/3qPP8mceoYAzJIk2/1612611038544-883d7ae6-76f3-4539-a33f-89181bb842b6-199751.png)
 
-<font style="color:#FF0000;">单因素COX分析</font>
+单因素COX分析
 
 ![1612611038527-ff21ebee-ca34-484c-bf0a-5836eb798fd1.jpeg](./img/3qPP8mceoYAzJIk2/1612611038527-ff21ebee-ca34-484c-bf0a-5836eb798fd1-288518.jpeg)
 
-<font style="color:#FF0000;">lasso回归</font>
+lasso回归
 
 ![1612611038666-513c852c-983e-4300-8d26-9125c78ce710.png](./img/3qPP8mceoYAzJIk2/1612611038666-513c852c-983e-4300-8d26-9125c78ce710-995496.png)
 
-<font style="color:#FF0000;">风险生存曲线</font>
+风险生存曲线
 
 ![1612611038510-a9c3985c-8122-4762-b011-477f36a14eb3.png](./img/3qPP8mceoYAzJIk2/1612611038510-a9c3985c-8122-4762-b011-477f36a14eb3-364319.png)
 
-<font style="color:#FF0000;">ROC曲线</font>
+ROC曲线
 
 ![1612611038530-e7c97c6a-0e2e-4676-9997-28846d84607b.png](./img/3qPP8mceoYAzJIk2/1612611038530-e7c97c6a-0e2e-4676-9997-28846d84607b-167712.png)
 
-<font style="color:#FF0000;">风险与临床相关性热图</font>
+风险与临床相关性热图
 
 ![1612611038555-e1c28a2c-6f7b-40db-88ee-70b0584c3178.png](./img/3qPP8mceoYAzJIk2/1612611038555-e1c28a2c-6f7b-40db-88ee-70b0584c3178-004317.png)
 
-<font style="color:#FF0000;">独立预后分析</font>
+独立预后分析
 
 ![1612611038577-e82b554c-bf47-4ded-8ea8-b1711422b19f.png](./img/3qPP8mceoYAzJIk2/1612611038577-e82b554c-bf47-4ded-8ea8-b1711422b19f-181879.png)
 
@@ -96,19 +94,13 @@
 
 下面是我跑的时候录下的视频，17分钟就跑完了整个流程
 
+**付费提示：**
 
+下面只提供R代码，**有疑虑，就此打住**，我用的都是入门级别的函数，懂点R语法，就能看懂，大部分有注释，如果您付费，请尽量选择安卓手机付费，苹果付费要被老美收30%的税费，钱我也收不到。
 
-
-
-
-
-**<font style="color:#FF0000;">付费提示：</font>**
-
-下面只提供R代码，**<font style="color:#FF0000;">有疑虑，就此打住</font>**<font style="color:#FF0000;">，</font>我用的都是入门级别的函数，懂点R语法，就能看懂，大部分有注释，如果您付费，请尽量选择安卓手机付费，苹果付费要被老美收30%的税费，钱我也收不到。
-
-
-
-初次学习，请使用TCGA-STAD转录组和临床的数据进行学习，我也不提供百度网盘下载了，百度网盘下载的速度，非会员太慢，自己去TCGA下载吧，至于基因注释的gtf文件，文章：[一文就会TCGA数据库基因表达差异分析](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264493&idx=1&sn=2164cc4d202fc081551f8918c8cbd7a4&chksm=841ef190b36978866b9bd71a989960370614bf234453b3bd070a56fbe324deb4ecaea2305923&scene=21#wechat_redirect)：有地址，临床数据下载整理我们也发过文章：[一文解决TCGA数据库临床数据下载与整理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264504&idx=1&sn=634bd925786a3193977342634b03acc3&chksm=841ef185b369789346bfbfbc315b9976bd14b9e25ed365c26522469e1ee102212c4b005bfb86&scene=21#wechat_redirect)，下面代码直接读取TCGA的临床数据的tsv格式文件。至于gene文件，你可以选择300左右的基因进行学习。也可以用下面我模拟的基因学习。
+初次学习，请使用TCGA-STAD转录组和临床的数据进行学习，我也不提供百度网盘下载了，百度网盘下载的速度，非会员太慢，自己去TCGA下载吧，至于基因注释的gtf文件，文章：[一文就会TCGA数据库基因表达差异分析](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264493&idx=1&sn=2164cc4d202fc081551f8918c8cbd7a4&chksm=841ef190b36978866b9bd71a989960370614bf234453b3bd070a56fbe324deb4ecaea2305923&scene=21#wechat_redirect)：有地址，临床数据下载整理我们也发过文章：[一文解决TCGA数据库临床数据下载与整理](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264504&idx=1&sn=634bd925786a3193977342634b03acc3&chksm=841ef185b369789346bfbfbc315b9976bd14b9e25ed365c26522469e1ee102212c4b005bfb86&scene=21#wechat_redirect)，下面代码直接读取TCGA的临床数据的tsv格式文件。
+至于gene文件，你可以选择300左右的基因进行学习。
+也可以用下面我模拟的基因学习。
 
 ![1612611038785-0bdd4a5b-9f3c-4f2b-8fa9-138c8feb471b.png](./img/3qPP8mceoYAzJIk2/1612611038785-0bdd4a5b-9f3c-4f2b-8fa9-138c8feb471b-929962.png)
 
@@ -182,7 +174,7 @@ inputGeneAllSampleExpMatrixFN <- "102-inputGeneAllSampleExpMatrix.txt" #所有�
 inputGeneOnlyTumorExpMatrixFN <- "102-inputGeneOnlyTumorExpMatrix.txt" #肿瘤样本输入基因的表达矩阵文件
 ###差异分析结果文件
 inputGeneDiffExpResultFN <- "102-inputGeneDiffExpResult.txt" #输入基因的差异表达分析结果
-sigDiffGeneExpResultFN <- "102-sigDiffGeneExpResult.txt"# pValue < 0.05 & logFC > 1 的基因的差异表达分析结果 
+sigDiffGeneExpResultFN <- "102-sigDiffGeneExpResult.txt"# pValue < 0.05 & logFC > 1 的基因的差异表达分析结果
 ###差异分析后相关基因的表达矩阵文件
 sigDiffGeneExpMatrixFN <- "102-sigDiffGeneExpMatrix.txt" # 显著差异的基因(pValue < 0.05 & logFC > 1)的表达矩阵(所有样本)
 sigDiffGeneTumorExpMatrixFN <- "102-sigDiffGeneTumorExpMatrix.txt"# 显著差异的基因(pValue < 0.05 & logFC > 1)的表达矩阵
@@ -192,7 +184,7 @@ diffgeneViolinPlotFN <- "diffgeneViolinPlot.pdf"
 diffgeneVolcanoPlotFN <- "diffgeneVolcanoPlot.pdf"
 ####相关性分析
 corHeatFigFN <- "corHeatFig.pdf"
-# 肿瘤分型结果文件 
+# 肿瘤分型结果文件
 ClousterFN <- "Clouster.txt"
 # PCA结果文件
 PCAResultFN <- "PCAResult.txt"
@@ -208,7 +200,7 @@ processingJsonFiles <- function(jsonFile){
     file_name <- metadata_json_File[[i]][["file_name"]]
     json_File_Info <- rbind(json_File_Info,data.frame(filesName = file_name,TCGA_Barcode = TCGA_Barcode))
   }
-  
+
   rownames(json_File_Info) <- json_File_Info[,1]
   json_File_Info <-json_File_Info[-1]
   return(json_File_Info)
@@ -295,7 +287,7 @@ setwd("..\\")
 jsonFileInfo <- processingJsonFiles(jsonFile = jsonFilePath)
 write.table(jsonFileInfo,file = paste(outputPath[1],JsonFileInfoFM,sep = ""))
 ​
-EnsemblTOGene <- get_map(gtfFilesPath) 
+EnsemblTOGene <- get_map(gtfFilesPath)
 gtf_Ensembl_ID <- substr(EnsemblTOGene[,1],1,15)
 EnsemblTOGene <- data.frame(gtf_Ensembl_ID,EnsemblTOGene[,2])
 colnames(EnsemblTOGene) <- c("Ensembl_ID","gene_id")
@@ -316,7 +308,7 @@ for(txtFile in FileNames){
   # 根据BarcodeFilesPath文件中文件名称与barcode对应关系，命名列名
   patientsID <- jsonFileInfo[paste(txtFile,".gz",sep = ""),"TCGA_Barcode"]
   colnames(OneSampleExp) <- c("Ensembl_ID",patientsID)
-  
+
   if (dim(geneExpMatrix)[1]== 0){
     geneExpMatrix <- OneSampleExp
   }else {geneExpMatrix<- merge(geneExpMatrix,OneSampleExp,by = "Ensembl_ID")}
@@ -403,14 +395,14 @@ for(i in row.names(inputGeneAllSampleExpMatrix)){
   wilcoxTest <- wilcox.test(expression ~ grade, data=rt)
   conGeneMeans <- mean(inputGeneAllSampleExpMatrix[i,1:conNum])
   treatGeneMeans <- mean(inputGeneAllSampleExpMatrix[i,(conNum+1):ncol(inputGeneAllSampleExpMatrix)])
-  logFC <- log2(treatGeneMeans)-log2(conGeneMeans)  
+  logFC <- log2(treatGeneMeans)-log2(conGeneMeans)
   pvalue <- wilcoxTest$p.value
   conMed <- median(inputGeneAllSampleExpMatrix[i,1:conNum])
   treatMed <- median(inputGeneAllSampleExpMatrix[i,(conNum+1):ncol(inputGeneAllSampleExpMatrix)])
   diffMed <- treatMed-conMed
   exp <- data.frame(gene=i,conMean=conGeneMeans,treatMean=treatGeneMeans,logFC=logFC,pValue=pvalue)
   if (length(inputGeneDiffExpResult) == 0){
-    inputGeneDiffExpResult <- exp 
+    inputGeneDiffExpResult <- exp
   }else {inputGeneDiffExpResult <- rbind(inputGeneDiffExpResult,exp)}
 }
 #输出所有基因的差异表达情况
@@ -446,8 +438,8 @@ names(Type)=colnames(diffGeneExpHeatMapData)
 Type=as.data.frame(Type)
 ​
 pdf(paste(outputPath[2],diffgeneHeatMapFN,sep = ""),height=10,width=20)
-pheatmap(diffGeneExpHeatMapData, 
-         annotation=Type, 
+pheatmap(diffGeneExpHeatMapData,
+         annotation=Type,
          color = colorRampPalette(c("green", "white", "red"))(50),
          cluster_cols =F,
          show_colnames = F,
@@ -505,7 +497,7 @@ write.table(cluster,file=paste(outputPath[4],ClousterFN,sep = ""),
 ##############主成分分析#############
 #install.packages("ggplot2")
 #pca analysis
-library(limma) 
+library(limma)
 ### PCA分析
 pcaData <- t(as.matrix(onlyTumorExpMatrix))
 pcaData.class <- rownames(pcaData)
@@ -602,16 +594,16 @@ fit <- survfit(Surv(SurvivalTime, VitalStatus) ~ group, data = Surdata)
 summary(fit)# 查看5年生存率
 ​
 pdf(file=paste(outputPath[7],"ClousterSurCurve.pdf",sep = ""),width = 5.5,height =5)
-plot(fit, 
+plot(fit,
      lwd=2,
      col=rainbow(clusterNum),
      xlab="Time (Year)",
      mark.time=T,
      ylab="Survival rate",
      main=paste("Survival curve (p=", pValue ,")",sep=""))
-legend("topright", 
-       paste0("Group",1:clusterNum), 
-       lwd=2, 
+legend("topright",
+       paste0("Group",1:clusterNum),
+       lwd=2,
        col=rainbow(clusterNum))
 dev.off()
 ##############################108
@@ -666,7 +658,7 @@ rt <- newTable[,-c(1:4)]
 ExpMatrix <- sigDiffGeneTumorExpMatrix[,rownames(rt)] #sigDiffGeneTumorExpMatrix来自102
 ​
 pdf(paste(outputPath[8],"ClousterWithClinCor.pdf",sep = ""),height=6,width=10)
-pheatmap(ExpMatrix, annotation = rt, 
+pheatmap(ExpMatrix, annotation = rt,
          color = colorRampPalette(c("green", "white", "red"))(50),
          cluster_cols =F,
          fontsize=8,
@@ -730,15 +722,15 @@ hrLow <- sprintf("%.3f",HR[,"HR.95L"])
 hrHigh <- sprintf("%.3f",HR[,"HR.95H"])
 pVal <- data[,"pvalue"]
 pVal <- ifelse(pVal<0.001, "<0.001", sprintf("%.3f", pVal))
-tabletext <- 
+tabletext <-
   list(c(NA, rownames(HR)),
        append("pvalue", pVal),
-       append("Hazard ratio",paste0(hr,"(",hrLow,"-",hrHigh,")")) )         
+       append("Hazard ratio",paste0(hr,"(",hrLow,"-",hrHigh,")")) )
 pdf(file=paste(outputPath[9],"forest.pdf",sep = ""),
-    width = 8,             
-    height = 10,           
+    width = 8,
+    height = 10,
 )
-forestplot(tabletext, 
+forestplot(tabletext,
            rbind(rep(NA, 3), HR),
            col=clrs,
            graphwidth=unit(50, "mm"),
@@ -751,7 +743,7 @@ dev.off()
 options(stringsAsFactors = F)
 ##############################################################
 #install.packages("glmnet")
-library("glmnet") # 
+library("glmnet") #
 library("survival")
 inputGene <-coxResult[which(coxResult$pvalue < 0.05),]$Gene
 lassoData <- coxData[,c("Barcodes","SurvivalTime","VitalStatus",inputGene)]
@@ -759,7 +751,7 @@ row.names(lassoData) <-lassoData$Barcodes
 ​
 rt <- lassoData[,-1]
 # x <- as.matrix(rt[,-c(1,2)]) # 这样转换后不能用于后面的分析，不是数字矩阵
-x <- data.matrix(rt[,c(3:ncol(rt))])# 
+x <- data.matrix(rt[,c(3:ncol(rt))])#
 y <- data.matrix(Surv(rt$SurvivalTime,rt$VitalStatus))
 #################################################
 fit <- glmnet(x, y,family = "cox" ,maxit = 5000)# 原来是family = "cox"
@@ -801,14 +793,14 @@ pValue <- format(pValue, scientific = TRUE)
 fit <- survfit(Surv(SurvivalTime, VitalStatus) ~ risk, data = rt)
 summary(fit)    #查看五年生存率
 pdf(file=paste0(outputPath[11],"RiskSurvival.pdf"),width=5.5,height=5)
-plot(fit, 
+plot(fit,
      lwd=2,
      col=c("red","blue"),
      xlab="Time (year)",
      ylab="Survival rate",
      main=paste("Survival curve (p=", pValue ,")",sep=""),
      mark.time=T)
-legend("topright", 
+legend("topright",
        c("high risk", "low risk"),
        lwd=2,
        col=c("red","blue"))
@@ -821,9 +813,9 @@ rt <- read.table(paste0(outputPath[10],"lassoRisk.txt"),header=T,sep="\t",
                  check.names=F,row.names=1)    #读取lasso回归风险文件
 pdf(file=paste0(outputPath[12],"ROC.pdf"),width=6,height=6)
 par(oma=c(0.5,1,0,1),font.lab=1.5,font.axis=1.5)
-roc <- survivalROC(Stime=rt$SurvivalTime, status=rt$VitalStatus, marker = rt$riskScore, 
+roc <- survivalROC(Stime=rt$SurvivalTime, status=rt$VitalStatus, marker = rt$riskScore,
                    predict.time =5, method="KM")
-plot(roc$FP, roc$TP, type="l", xlim=c(0,1), ylim=c(0,1),col='red', 
+plot(roc$FP, roc$TP, type="l", xlim=c(0,1), ylim=c(0,1),col='red',
      xlab="False positive rate", ylab="True positive rate",
      main=paste("ROC curve (", "AUC = ",round(roc$AUC,3),")"),
      lwd = 2, cex.main=1.3, cex.lab=1.2, cex.axis=1.2, font=1.2)
@@ -889,7 +881,7 @@ Exp <- Exp[,rownames(Type)]
 outpdf <- paste0(outputPath[13],"heatmap.pdf")
 library(pheatmap)
 pdf(outpdf,height=3,width=10)
-pheatmap(Exp, annotation=Type, 
+pheatmap(Exp, annotation=Type,
          color = colorRampPalette(c("green", "white", "red"))(50),
          cluster_cols =F,
          fontsize=7.5,
@@ -903,7 +895,7 @@ options(stringsAsFactors = F)
 ​
 #读取lasso回归风险文件,lassoRisk.txt文件中 生存时间已经除了365
 lassoRisk <- read.table(paste0(outputPath[10],"lassoRisk.txt"),header=T,sep="\t",
-                        check.names=F)    #读取lasso回归风险文件  
+                        check.names=F)    #读取lasso回归风险文件
 clinicalLassoRisk <- lassoRisk[,c("Barcodes","riskScore")]
 ​
 #读取临床表型数据文件
@@ -970,7 +962,7 @@ hrLow=sprintf("%.3f",HR[,"HR.95L"])
 hrHigh=sprintf("%.3f",HR[,"HR.95H"])
 pVal=data[,"pvalue"]
 pVal=ifelse(pVal<0.001, "<0.001", sprintf("%.3f", pVal))
-tabletext <- 
+tabletext <-
   list(c(NA, rownames(HR)),
        append("pvalue", pVal),
        append("Hazard ratio",paste0(hr,"(",hrLow,"-",hrHigh,")")) ) #定义图片文字
@@ -978,7 +970,7 @@ pdf(file=paste0(outputPath[14],"singleFactorForestFig.pdf"),
     width = 6,             #图片的宽度
     height = 4,            #图片的高度
 )
-forestplot(tabletext, 
+forestplot(tabletext,
            rbind(rep(NA, 3), HR),
            col=clrs,
            graphwidth=unit(50, "mm"),
@@ -1016,7 +1008,7 @@ hrLow <- sprintf("%.3f",HR[,"HR.95L"])
 hrHigh <- sprintf("%.3f",HR[,"HR.95H"])
 pVal <- data[,"pvalue"]
 pVal <- ifelse(pVal<0.001, "<0.001", sprintf("%.3f", pVal))
-tabletext <- 
+tabletext <-
   list(c(NA, rownames(HR)),
        append("pvalue", pVal),
        append("Hazard ratio",paste0(hr,"(",hrLow,"-",hrHigh,")")) )  #定义图片文字
@@ -1024,7 +1016,7 @@ pdf(file=paste0(outputPath[14],"multiCoxforest.pdf"),
     width = 6,             #图片的宽度
     height = 4,            #图片的高度
 )
-forestplot(tabletext, 
+forestplot(tabletext,
            rbind(rep(NA, 3), HR),
            col=clrs,
            graphwidth=unit(50, "mm"),
@@ -1036,9 +1028,5 @@ forestplot(tabletext,
 dev.off()
 ```
 
-
-
-
-
-> 更新: 2021-02-06 19:32:34  
+> 更新: 2021-02-06 19:32:34
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/fqzv8t>

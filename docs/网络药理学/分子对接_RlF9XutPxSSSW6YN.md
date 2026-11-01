@@ -42,107 +42,136 @@ mgltools的下载：下载页面底部有个ADT，新页面点击AutoDockTools�
 
 关于蛋白质结构的PDB文件，做分子对接，估计大家都知道PDB这个蛋白质数据库啦。这里简单的介绍一下。
 
-蛋白质的三级结构是指整条多肽链的三维空间结构，也就是包括碳骨架和侧链在内的所有原子的空间排列。第一个蛋白质的三维空间结构于 1958 年用 X-射线衍射法（X-ray Crystallography）测定。这种方法目前仍然是获取蛋白质三级结构的主要方法。PDB 数据库中绝大多数蛋白质结构都是用这种方法测定的。另一个测定蛋白质三维空间结构的方法是核磁共振法（Nuclear Magnetic Resonance, NMR）。无法结晶的蛋白质，可以利用核磁共振法在液体环境中进行结构测定。但是核磁共振法只能用于质量小于 70 千道尔顿的分子，大约对应 200 个氨基酸的长度。除此之外，还有一些不太常用的方法也可以测定分子的三维空间结构，比如冷冻电子显微镜技术（Cyro-Electron Microscopy）。无论用什么方法测定的空间结构，都要提交到 PDB 数据库。所以我们获取蛋白质三级结构最直接的办法就是去PDB 搜索（<http://www.rcsb.org/>）。
+蛋白质的三级结构是指整条多肽链的三维空间结构，也就是包括碳骨架和侧链在内的所有原子的空间排列。
+第一个蛋白质的三维空间结构于 1958 年用 X-射线衍射法（X-ray Crystallography）测定。
+这种方法目前仍然是获取蛋白质三级结构的主要方法。
+PDB 数据库中绝大多数蛋白质结构都是用这种方法测定的。
+另一个测定蛋白质三维空间结构的方法是核磁共振法（Nuclear Magnetic Resonance, NMR）。
+无法结晶的蛋白质，可以利用核磁共振法在液体环境中进行结构测定。
+但是核磁共振法只能用于质量小于 70 千道尔顿的分子，大约对应 200 个氨基酸的长度。
+除此之外，还有一些不太常用的方法也可以测定分子的三维空间结构，比如冷冻电子显微镜技术（Cyro-Electron Microscopy）。
+无论用什么方法测定的空间结构，都要提交到 PDB 数据库。
+所以我们获取蛋白质三级结构最直接的办法就是去PDB 搜索（<http://www.rcsb.org/>）。
 
 ![1611833310137-732bc09b-6dce-4c72-8c3b-98ae2df361ae.png](./img/RlF9XutPxSSSW6YN/1611833310137-732bc09b-6dce-4c72-8c3b-98ae2df361ae-671795.png)
 
-<font style="color:black;">从</font><font style="color:black;">PDB</font><font style="color:black;">首页的搜索条里，可以通过搜索</font><font style="color:black;">PDB ID</font><font style="color:black;">、分子名称、作者姓名等关键词来查找蛋白质三级结构。此外，利用高级搜索工具，可以通过序列相似性搜索获得与输入序列在序列水平上相似的蛋白质的三级结构</font><font style="color:black;">。搜索方法选</font><font style="color:black;"> BLAST</font><font style="color:black;">，输入序列，点击</font><font style="color:black;">“Result Count”</font><font style="color:black;">。这里不详细介绍，因为我们做分子对接，通常蛋白名称是已知的。</font>**<font style="color:#F5222D;">我们重点介绍怎么选择合适的蛋白结构文件</font>**<font style="color:black;">。</font>
+从PDB首页的搜索条里，可以通过搜索PDB ID、分子名称、作者姓名等关键词来查找蛋白质三级结构。此外，利用高级搜索工具，可以通过序列相似性搜索获得与输入序列在序列水平上相似的蛋白质的三级结构。搜索方法选 BLAST，输入序列，点击“Result Count”。这里不详细介绍，因为我们做分子对接，通常蛋白名称是已知的。**我们重点介绍怎么选择合适的蛋白结构文件**。
 
 ![1611833461093-9a22641c-db35-4d42-939d-579da1a83367.png](./img/RlF9XutPxSSSW6YN/1611833461093-9a22641c-db35-4d42-939d-579da1a83367-800424.png)
 
-<font style="color:black;">比如我们搜索PI3K这个蛋白，结果是有很多的。可以看到有393个结构信息。</font>
+比如我们搜索PI3K这个蛋白，结果是有很多的。可以看到有393个结构信息。
 
 ![1611833917623-b77c5286-d302-444c-a719-dad8fb69a8ab.png](./img/RlF9XutPxSSSW6YN/1611833917623-b77c5286-d302-444c-a719-dad8fb69a8ab-409533.png)
 
-<font style="color:black;">首先我们可以通过左边的栏进行筛选，比如物种信息，我们选择人。当然，结果的显示排序可通过结果上面的选项卡进行选择不同的排序方式。我们筛选合适的蛋白结构，常用Score这个选项。</font>
+首先我们可以通过左边的栏进行筛选，比如物种信息，我们选择人。当然，结果的显示排序可通过结果上面的选项卡进行选择不同的排序方式。我们筛选合适的蛋白结构，常用Score这个选项。
 
 ![1611834166125-80607368-7e46-4db5-9c48-ac98d4911bd8.png](./img/RlF9XutPxSSSW6YN/1611834166125-80607368-7e46-4db5-9c48-ac98d4911bd8-761914.png)
 
-<font style="color:black;">我们</font><font style="color:black;">选择分辨率较好的在前。这里的0.9Å，</font>**<font style="color:#F5222D;">Å是光波长度和分子直径的常用计量单位，值越小，分辨率越高，结构越准确。页面往下拉，可以看见这个值越来越大，我们优先选择值小的</font>**<font style="color:black;">。我们可以从页面里面看见一下基本信息，比如方法，物种以及被解析的时间等。这里5GJI这个结构获取的方法就是X-RAY。</font>
+我们选择分辨率较好的在前。这里的0.9Å，**Å是光波长度和分子直径的常用计量单位，值越小，分辨率越高，结构越准确。页面往下拉，可以看见这个值越来越大，我们优先选择值小的**。我们可以从页面里面看见一下基本信息，比如方法，物种以及被解析的时间等。这里5GJI这个结构获取的方法就是X-RAY。
 
 ![1611834356470-b56e0bdc-a458-4ce4-8693-7d76666d2d0f.png](./img/RlF9XutPxSSSW6YN/1611834356470-b56e0bdc-a458-4ce4-8693-7d76666d2d0f-208200.png)
 
-<font style="color:black;">我们点击这个蛋白，进入后可以看见详细的信息。</font>
+我们点击这个蛋白，进入后可以看见详细的信息。
 
 ![1611834683964-ca4e619e-61c3-480a-8503-b3ef15fd2ae2.png](./img/RlF9XutPxSSSW6YN/1611834683964-ca4e619e-61c3-480a-8503-b3ef15fd2ae2-118954.png)
 
-<font style="color:black;">然后我们还要看这个蛋白的描述是不是我们想要的蛋白，从这里面感觉看起来比较费劲。这里我们借助</font>uniprot这个数据库来选择是比较方便的。这里简单介绍一下这个数据库，可能有的同学是第一次知道。**<font style="color:#FF0000;">翻了多年前的笔记，粘贴在下面。</font>**
+然后我们还要看这个蛋白的描述是不是我们想要的蛋白，从这里面感觉看起来比较费劲。这里我们借助uniprot这个数据库来选择是比较方便的。这里简单介绍一下这个数据库，可能有的同学是第一次知道。**翻了多年前的笔记，粘贴在下面。**
 
 **UniProt 数据库有三个层次。**
 
-<font style="color:red;">第一层叫</font><font style="color:red;"> UniParc</font><font style="color:black;">，收录了所有</font><font style="color:black;"> UniProt </font><font style="color:black;">数据库子库中的蛋白质序列，量大，粗糙。</font>
+第一层叫 UniParc，收录了所有 UniProt 数据库子库中的蛋白质序列，量大，粗糙。
 
-<font style="color:red;">第二层是</font><font style="color:red;"> UniRef</font><font style="color:black;">，他归纳了</font><font style="color:black;"> UniProt </font><font style="color:black;">几个主要数据库并且是将重复序列去除后的数据库。</font>
+第二层是 UniRef，他归纳了 UniProt 几个主要数据库并且是将重复序列去除后的数据库。
 
-<font style="color:red;">第三层是</font><font style="color:red;"> UniProtKB</font><font style="color:black;">，他有详细注释并与其他数据库有链接，分为</font><font style="color:black;"> UniProtKB </font><font style="color:black;">下的</font><font style="color:black;"> Swiss-Prot</font><font style="color:black;">和</font><font style="color:black;"> UniProtKB </font><font style="color:black;">下的</font><font style="color:black;"> TrEMBL </font><font style="color:black;">数据库。</font>
+第三层是 UniProtKB，他有详细注释并与其他数据库有链接，分为 UniProtKB 下的 Swiss-Prot和 UniProtKB 下的 TrEMBL 数据库。
 
-<font style="color:black;">关系稍有点复杂，但实际上我们最常用的就是</font><font style="color:black;"> UniProtKB</font><font style="color:black;">下的</font><font style="color:black;"> Swiss-Prot 数据库。 </font>
+关系稍有点复杂，但实际上我们最常用的就是 UniProtKB下的 Swiss-Prot 数据库。
 
-<font style="color:black;">从</font><font style="color:black;"> UniProt </font><font style="color:black;">数据库查看一条蛋白质序列（</font>[<font style="color:blue;">http://www.uniprot.org/</font>](http://www.uniprot.org/)<font style="color:black;">）。在</font><font style="color:black;">UniProt</font><font style="color:black;">数据库的首页上有一个关于</font><font style="color:black;"> UniProtKB </font><font style="color:black;">数据库的统计表。可以看到，</font><font style="color:black;">TrEMBL </font><font style="color:black;">数据库里存储的序列数量远远大于</font><font style="color:black;"> Swiss-Prot </font><font style="color:black;">中的。统计表里清楚的写着：</font><font style="color:black;">TrEMBL </font><font style="color:black;">是自动注释的，没有经过检查，而</font><font style="color:black;"> Swiss-Prot </font><font style="color:black;">是人工注释的，并且经过检查。</font>
+从 UniProt 数据库查看一条蛋白质序列（[http://www.uniprot.org/](http://www.uniprot.org/)）。在UniProt数据库的首页上有一个关于 UniProtKB 数据库的统计表。可以看到，TrEMBL 数据库里存储的序列数量远远大于 Swiss-Prot 中的。统计表里清楚的写着：TrEMBL 是自动注释的，没有经过检查，而 Swiss-Prot 是人工注释的，并且经过检查。
 
 ![1604969277464-c1d9e0ab-8590-49b5-b8dd-29154a9a3d61.png](./img/RlF9XutPxSSSW6YN/1604969277464-c1d9e0ab-8590-49b5-b8dd-29154a9a3d61-350370.png)
 
-<font style="color:black;">UniProt </font><font style="color:black;">数据库的首页上也有一个搜索条，选择</font><font style="color:black;">UniprotKB </font><font style="color:black;">数据库，然后输入</font><font style="color:black;">“human dutpase”</font><font style="color:black;">，第一条就是我们要的。</font><font style="color:black;">Entry </font><font style="color:black;">这一列是蛋白质序列在</font><font style="color:black;"> UniProtKB </font><font style="color:black;">数据库中的检索号，</font><font style="color:black;">Entry_Name </font><font style="color:black;">是检索名，检索号与检索名平行运行，都是一条序列在数据库中的唯一标识，两者作用相同，只是写法不同。从检索名可以更直观的知道是哪个物种的什么蛋白质。从加星文档图标（</font><font style="color:black;">Entry_Name</font><font style="color:black;">后一列）我们可以获知序列是被人工检查过的还是没有。也就是说，有加星文档图标的是 Swiss-Prot 中的数据，没有的是 TrEMBL 里的。后面这几列，依次是蛋白质的名字，编码这一蛋白质的基因的名字，所属物种以及序列长度。点击第一条序列的检索号，打开这条数据库记录。</font>
+UniProt 数据库的首页上也有一个搜索条，选择UniprotKB 数据库，然后输入“human dutpase”，第一条就是我们要的。
+Entry 这一列是蛋白质序列在 UniProtKB 数据库中的检索号，Entry_Name 是检索名，检索号与检索名平行运行，都是一条序列在数据库中的唯一标识，两者作用相同，只是写法不同。
+从检索名可以更直观的知道是哪个物种的什么蛋白质。
+从加星文档图标（Entry_Name后一列）我们可以获知序列是被人工检查过的还是没有。
+也就是说，有加星文档图标的是 Swiss-Prot 中的数据，没有的是 TrEMBL 里的。
+后面这几列，依次是蛋白质的名字，编码这一蛋白质的基因的名字，所属物种以及序列长度。
+点击第一条序列的检索号，打开这条数据库记录。
 
 ![1604969277802-9b0ce776-fad3-4109-aeb2-a71160d85b5c.png](./img/RlF9XutPxSSSW6YN/1604969277802-9b0ce776-fad3-4109-aeb2-a71160d85b5c-521528.png)
 
-<font style="color:black;">UniProtKB </font><font style="color:black;">中的数据库记录分成几个部分，左侧是注释标签，点击其中某一个标签可以直接跳转到该部分注释。上方是工具标签，可以用于和其他序列进行比较，格式转换，存储等。工具标签下方是这条蛋白质序列的基本信息，蛋白质的名字，基因的名字，所属物种，以及状态。这里有加星文档图标，是被人工检查过的，应该属于</font><font style="color:black;"> Swiss-Prot </font><font style="color:black;">数据库。注释打分</font><font style="color:black;"> 5 </font><font style="color:black;">星，说明注释得很全面，并且这些注释在蛋白质水平上有实验依据。</font>
+UniProtKB 中的数据库记录分成几个部分，左侧是注释标签，点击其中某一个标签可以直接跳转到该部分注释。上方是工具标签，可以用于和其他序列进行比较，格式转换，存储等。工具标签下方是这条蛋白质序列的基本信息，蛋白质的名字，基因的名字，所属物种，以及状态。这里有加星文档图标，是被人工检查过的，应该属于 Swiss-Prot 数据库。注释打分 5 星，说明注释得很全面，并且这些注释在蛋白质水平上有实验依据。
 
-**<font style="color:black;">Function</font>\*\*\*\*<font style="color:black;">：</font>**<font style="color:black;">功能这部分注释很详细的说明了这个蛋白质的功能。从这里可以得知</font><font style="color:black;">dUTPase </font><font style="color:black;">是一种在核酸代谢过程中的酶、它的催化反应方程式、它的辅助因子、它参与的代谢途径等。每条注释信息都提供出处来源，让你有据可查。</font>
+**Function\*\*\*\*：**功能这部分注释很详细的说明了这个蛋白质的功能。从这里可以得知dUTPase 是一种在核酸代谢过程中的酶、它的催化反应方程式、它的辅助因子、它参与的代谢途径等。每条注释信息都提供出处来源，让你有据可查。
 
-**<font style="color:black;">Names & Taxomomy</font>****<font style="color:black;">：</font>****<font style="color:black;"> </font>**<font style="color:black;">给出了蛋白质的各种名字，包括全称、缩写以及别名。还列出了所属物种以及该物种的分类学谱系等。</font>
+**Names & Taxomomy****：**** **给出了蛋白质的各种名字，包括全称、缩写以及别名。还列出了所属物种以及该物种的分类学谱系等。
 
-**<font style="color:black;">Subcellular location</font>\*\*\*\*<font style="color:black;">：</font>**<font style="color:black;">提供蛋白质亚细胞定位（</font><font style="color:black;">subcellular localization</font><font style="color:black;">）的信息。目前，研究亚细胞定位的数据来源基本都是Swiss-Prot 数据库。</font>
+**Subcellular location\*\*\*\*：**提供蛋白质亚细胞定位（subcellular localization）的信息。目前，研究亚细胞定位的数据来源基本都是Swiss-Prot 数据库。
 
 ![1604969277991-fba61c58-4d91-4657-adf5-ce268b4f6368.png](./img/RlF9XutPxSSSW6YN/1604969277991-fba61c58-4d91-4657-adf5-ce268b4f6368-003644.png)
 
-**<font style="color:black;">Pathology & Biotechnology</font>\*\*\*\*<font style="color:black;">：</font>**<font style="color:black;">提供蛋白质突变或缺失导致的疾病及表型信息。</font>
+**Pathology & Biotechnology\*\*\*\*：**提供蛋白质突变或缺失导致的疾病及表型信息。
 
-**<font style="color:black;">PTM/Processing</font>\*\*\*\*<font style="color:black;">：</font>**<font style="color:black;">提供蛋白质翻译后修饰或翻译后加工的相关信息。</font>
+**PTM/Processing\*\*\*\*：**提供蛋白质翻译后修饰或翻译后加工的相关信息。
 
-**<font style="color:black;">Expression</font>\*\*\*\*<font style="color:black;">：</font>**<font style="color:black;">提供了基因在</font><font style="color:black;"> mRNA </font><font style="color:black;">水平上的表达信息，或者在细胞中蛋白质水平上的表达信息，或者在不同器官组织中的表达信息。</font>
+**Expression\*\*\*\*：**提供了基因在 mRNA 水平上的表达信息，或者在细胞中蛋白质水平上的表达信息，或者在不同器官组织中的表达信息。
 
-**<font style="color:black;">Interaction</font>\*\*\*\*<font style="color:black;">：</font>**<font style="color:black;">提供了蛋白质之间相互作用的信息。包括</font><font style="color:black;"> UniProtKB </font><font style="color:black;">中直接与这个蛋白质有两两相互作用的蛋白质序列的链接，以及这个蛋白质在各种蛋白质相互作用数据库或蛋白质网络数据库中涉及的数据库记录链接。</font>
+**Interaction\*\*\*\*：**提供了蛋白质之间相互作用的信息。包括 UniProtKB 中直接与这个蛋白质有两两相互作用的蛋白质序列的链接，以及这个蛋白质在各种蛋白质相互作用数据库或蛋白质网络数据库中涉及的数据库记录链接。
 
-**<font style="color:black;">Structure</font>\*\*\*\*<font style="color:black;">：</font>**<font style="color:black;">提供蛋白质二级结构和三级结构信息。只有那些已通过实验方法测定三级结构并且已提交到蛋白质结构数据库</font><font style="color:black;"> PDB </font><font style="color:black;">的蛋白质才有结构注释。二级结构以图形拓扑的形式呈现。三级结构列出了该蛋白质在蛋白质结构数据库</font><font style="color:black;"> PDB </font><font style="color:black;">中涉及的数据库记录链接。这些结构经常只对应蛋白质的部分序列。</font>
+**Structure\*\*\*\*：**提供蛋白质二级结构和三级结构信息。只有那些已通过实验方法测定三级结构并且已提交到蛋白质结构数据库 PDB 的蛋白质才有结构注释。二级结构以图形拓扑的形式呈现。三级结构列出了该蛋白质在蛋白质结构数据库 PDB 中涉及的数据库记录链接。这些结构经常只对应蛋白质的部分序列。
 
-**<font style="color:black;">Family & Domains</font>\*\*\*\*<font style="color:black;">：</font>**<font style="color:black;">提供蛋白质家族及结构域信息。</font>
+**Family & Domains\*\*\*\*：**提供蛋白质家族及结构域信息。
 
-**<font style="color:black;">Sequence</font>\*\*\*\*<font style="color:black;">：</font>**<font style="color:black;">提供蛋白质氨基酸序列信息。含有多个异构体的蛋白质会显示多条序列。</font>
+**Sequence\*\*\*\*：**提供蛋白质氨基酸序列信息。含有多个异构体的蛋白质会显示多条序列。
 
-**<font style="color:black;">Cross-references</font>\*\*\*\*<font style="color:black;">：</font>**<font style="color:black;">列出了所有通往其他含有该蛋白质信息的数据库的链接。</font>
+**Cross-references\*\*\*\*：**列出了所有通往其他含有该蛋白质信息的数据库的链接。
 
-**<font style="color:black;">Publications</font>\*\*\*\*<font style="color:black;">：</font>**<font style="color:black;">列出了有关这个蛋白质已发表的所有文献的信息。</font>
+**Publications\*\*\*\*：**列出了有关这个蛋白质已发表的所有文献的信息。
 
-**<font style="color:black;">Entry information</font>\*\*\*\*<font style="color:black;">：</font>**<font style="color:black;">提供有关这条数据库记录的录入信息，外加一个免责声明。</font>
+**Entry information\*\*\*\*：**提供有关这条数据库记录的录入信息，外加一个免责声明。
 
-**<font style="color:black;">Miscellaneous</font>**<font style="color:black;">：杂项，包含任何无法归入前几项的内容。</font>
+**Miscellaneous**：杂项，包含任何无法归入前几项的内容。
 
-**<font style="color:black;">Similar Proteins</font>**<font style="color:black;">：在</font><font style="color:black;"> UniRef </font><font style="color:black;">数据库里找到与该蛋白质在序列水平上相似的其他蛋白质，并按相似度高低分组。</font>
+**Similar Proteins**：在 UniRef 数据库里找到与该蛋白质在序列水平上相似的其他蛋白质，并按相似度高低分组。
 
-\*\*<font style="color:#F5222D;">好了我们接着前面的介绍。</font>\*\*我们在uniprot的搜索框中输入关键词，左侧选择相应的物种。
+\*\*好了我们接着前面的介绍。\*\*我们在uniprot的搜索框中输入关键词，左侧选择相应的物种。
 
 ![1611835245076-06b700bc-4455-4114-8df2-9161251b13ed.png](./img/RlF9XutPxSSSW6YN/1611835245076-06b700bc-4455-4114-8df2-9161251b13ed-555219.png)
 
-新页面下直接选择Structure。左边就是显示结果，有一个列表给我们快速查看相关参数。可以根据这些参数选择合适的结构，注意positions这一栏，我们首先选择resolution小的，但结构不是我们要的，就不行，resolution这一栏只是该结构只是该蛋白的序列区段，比如这里1-143这一段氨基酸序列是不在该结构中的。我们需要根据一些文献知识，了解一般配体所在的部位即相关活性位点。有没有已知的结合区域来参考选择，我个人认为，如果不知道，越长的越好。有的还是多条肽链的复合物，如果是二聚体的，后面对接可以删除一个。总之，**<font style="color:#F5222D;">需要先了解这些所解析的晶体结构是否已经包含了拟对接分子的潜在结合位点，已知的配体和我们要对接的分子结构相似度。越相似越好，还需注意晶体结构中蛋白序列是否为野生型、是否含有PTM、是否存在有可能引起构象变化的特殊有机溶剂和别构效应分子等。</font>\*\*\*\*<font style="color:#F5222D;">如果系列晶体结构的性质都类似，选择分辨率最高的。</font>**
+新页面下直接选择Structure。
+左边就是显示结果，有一个列表给我们快速查看相关参数。
+可以根据这些参数选择合适的结构，注意positions这一栏，我们首先选择resolution小的，但结构不是我们要的，就不行，resolution这一栏只是该结构只是该蛋白的序列区段，比如这里1-143这一段氨基酸序列是不在该结构中的。
+我们需要根据一些文献知识，了解一般配体所在的部位即相关活性位点。
+有没有已知的结合区域来参考选择，我个人认为，如果不知道，越长的越好。
+有的还是多条肽链的复合物，如果是二聚体的，后面对接可以删除一个。
+总之，**需要先了解这些所解析的晶体结构是否已经包含了拟对接分子的潜在结合位点，已知的配体和我们要对接的分子结构相似度。
+越相似越好，还需注意晶体结构中蛋白序列是否为野生型、是否含有PTM、是否存在有可能引起构象变化的特殊有机溶剂和别构效应分子等。
+\*\*\*\*如果系列晶体结构的性质都类似，选择分辨率最高的。
+**
 
 ![1611835781199-683f15b3-6231-475b-950d-9ae7db772def.png](./img/RlF9XutPxSSSW6YN/1611835781199-683f15b3-6231-475b-950d-9ae7db772def-439614.png)
 
-点击链接栏中的PDB，就可以直接进入该结构的PDB页面了，然后点击下载文件就可以直接下载PDB格式的蛋白结构文件。下载的PDB文件可以用pymol或者VMD观察结构。能够实现蛋白质三维结构可视化的软件非常多。比专业级的PyMOL（<https://pymol.org/2/>）。这个软件已经被世界上著名的生物医药软件公司“薛定谔公司（Schrödinger）”收购。这种专业级的可视化软件不仅能够做出非常漂亮的图片，它还有强大的插件支持各种各样的蛋白质结构分析，这款软件需要购买，如果你发表的文章里提到某些内容是使用PyMOL制作的，而文章中所有作者和作者单位都没有PyMOL的购买记录的话，你可能会面临薛定谔公司的追责。
+点击链接栏中的PDB，就可以直接进入该结构的PDB页面了，然后点击下载文件就可以直接下载PDB格式的蛋白结构文件。
+下载的PDB文件可以用pymol或者VMD观察结构。
+能够实现蛋白质三维结构可视化的软件非常多。
+比专业级的PyMOL（<https://pymol.org/2/>）。
+这个软件已经被世界上著名的生物医药软件公司“薛定谔公司（Schrödinger）”收购。
+这种专业级的可视化软件不仅能够做出非常漂亮的图片，它还有强大的插件支持各种各样的蛋白质结构分析，这款软件需要购买，如果你发表的文章里提到某些内容是使用PyMOL制作的，而文章中所有作者和作者单位都没有PyMOL的购买记录的话，你可能会面临薛定谔公司的追责。
 
 下面给大家介绍一个功能同样强大的免费蛋白质三维结构可视化软件，VMD（<http://www.ks.uiuc.edu/Research/vmd>）。VMD由伊利诺伊大学研发。下载 VMD 需要先注册获得一个账户，之后就可以根据你的操作系统和机器配置选择合适的版本下载了。当然，如前所述，注册和下载对于非商业用途的用户都是免费的。VMD 的安装也极其简单。不需要预装任何语言环境，完全图形化安装过程，绝对可以轻松搞定。
 
 ![1611837336863-2f5325ac-50f1-4e3c-9d46-46f82253006a.png](./img/RlF9XutPxSSSW6YN/1611837336863-2f5325ac-50f1-4e3c-9d46-46f82253006a-386183.png)
 
-最后，这些都是在蛋白结构已知的蛋白分子对接，如果我们要对接的蛋白，没有晶体结构，在PDB中是检索不到的，在<font style="color:black;">UniProt 中的</font>Structure<font style="color:black;">是不会显示的。比如DRAM1这个蛋白，是没有结构的，所以在</font><font style="color:black;">UniProt 中的</font>Structure是灰色。
+最后，这些都是在蛋白结构已知的蛋白分子对接，如果我们要对接的蛋白，没有晶体结构，在PDB中是检索不到的，在UniProt 中的Structure是不会显示的。比如DRAM1这个蛋白，是没有结构的，所以在UniProt 中的Structure是灰色。
 
 ![1611838389721-60afa3b3-24c7-4755-a638-8074534e7b86.png](./img/RlF9XutPxSSSW6YN/1611838389721-60afa3b3-24c7-4755-a638-8074534e7b86-084027.png)
 
-如果没有结构，我们又要对接，那就只能是自己通过软件预测了。蛋白质结构预测的方法有从头计算法，同源建模法，穿线法和综合法。常用的是同源建模法，SWISS-MODEL（<u><font style="color:#1890FF;">www.swissmodel.expasy.org</font></u>）就是一款用同源建模法预测蛋白质三级结构的全自动软件，这里不详细介绍了，预测的模型还要涉及模型好坏的评价，后续有时间，介绍蛋白质三级结构的预测。
+如果没有结构，我们又要对接，那就只能是自己通过软件预测了。蛋白质结构预测的方法有从头计算法，同源建模法，穿线法和综合法。常用的是同源建模法，SWISS-MODEL（<u>www.swissmodel.expasy.org</u>）就是一款用同源建模法预测蛋白质三级结构的全自动软件，这里不详细介绍了，预测的模型还要涉及模型好坏的评价，后续有时间，介绍蛋白质三级结构的预测。
 
 # 三. 配体分子文件格式转换
 
-<font style="color:black;">我们知道，分子文件的格式很多，比如mol，sdf等，但AutoDock这个软件不识别sdf这样的格式文件，而我们通常下载的文件就是sdf这个格式的文件。我们需要转换成mol2或者PDB格式的文件，才能被</font><font style="color:black;">AutoDock这个软件所读入。当然，有一些分子我们是可以从一些数据库中直接下载mol2格式文件的。比如一些中药成分小分子，我们可以从TCMSP这个数据库下载(</font><https://tcmspw.com/>)，比如:<font style="color:#333333;">quercetin</font>
+我们知道，分子文件的格式很多，比如mol，sdf等，但AutoDock这个软件不识别sdf这样的格式文件，而我们通常下载的文件就是sdf这个格式的文件。我们需要转换成mol2或者PDB格式的文件，才能被AutoDock这个软件所读入。当然，有一些分子我们是可以从一些数据库中直接下载mol2格式文件的。比如一些中药成分小分子，我们可以从TCMSP这个数据库下载(<https://tcmspw.com/>)，比如:quercetin
 
 ![1611840289434-a56f3f71-645e-4ac9-9a6a-3033c2cad3bf.png](./img/RlF9XutPxSSSW6YN/1611840289434-a56f3f71-645e-4ac9-9a6a-3033c2cad3bf-369297.png)
 
@@ -176,7 +205,7 @@ mgltools的下载：下载页面底部有个ADT，新页面点击AutoDockTools�
 
 ![1611891878493-70af58d7-3d0b-443b-ad68-a950af41069d.png](./img/RlF9XutPxSSSW6YN/1611891878493-70af58d7-3d0b-443b-ad68-a950af41069d-861800.png)
 
-或者通过File里面选择get PDB...，弹出窗口输入信息后点击下载。**<font style="color:#F5222D;">下图中是1e8y，当时输错啦</font>**。
+或者通过File里面选择get PDB...，弹出窗口输入信息后点击下载。**下图中是1e8y，当时输错啦**。
 
 ![1611890919715-17ffc000-db75-4787-9177-6bae0081584c.png](./img/RlF9XutPxSSSW6YN/1611890919715-17ffc000-db75-4787-9177-6bae0081584c-543661.png)
 
@@ -192,7 +221,7 @@ mgltools的下载：下载页面底部有个ADT，新页面点击AutoDockTools�
 
 ![1611897926321-db22317a-3ba2-42aa-a6e9-57c8be332966.png](./img/RlF9XutPxSSSW6YN/1611897926321-db22317a-3ba2-42aa-a6e9-57c8be332966-630402.png)
 
-如果我们去掉的组分比较多，比如有多条链，去掉了其中的一些链，<font style="color:#222222;">把不需要的水分子，离子，溶剂分子去掉，只保留对对接需要的部分，</font>对剩下的结构我们需要进行一个修复。这里需要一个网页工具，地址：<https://swift.cmbi.umcn.nl/servers/html/model.html.> 做法是找到网页最下面的Prepare PDB file for docking programs，点进去，输入一个PDB ID或者上传自己的蛋白结构文件，然后点击send，稍等一下可以直接下载处理过的蛋白结构文件。
+如果我们去掉的组分比较多，比如有多条链，去掉了其中的一些链，把不需要的水分子，离子，溶剂分子去掉，只保留对对接需要的部分，对剩下的结构我们需要进行一个修复。这里需要一个网页工具，地址：<https://swift.cmbi.umcn.nl/servers/html/model.html.> 做法是找到网页最下面的Prepare PDB file for docking programs，点进去，输入一个PDB ID或者上传自己的蛋白结构文件，然后点击send，稍等一下可以直接下载处理过的蛋白结构文件。
 
 ![1611899550703-0a88a813-d1b2-40c8-9d05-3c9fdbabc05e.png](./img/RlF9XutPxSSSW6YN/1611899550703-0a88a813-d1b2-40c8-9d05-3c9fdbabc05e-231650.png)
 
@@ -216,7 +245,7 @@ mgltools的下载：下载页面底部有个ADT，新页面点击AutoDockTools�
 
 ![1611899994775-8719cf2c-c85b-49b2-bc9f-90c184985bfc.png](./img/RlF9XutPxSSSW6YN/1611899994775-8719cf2c-c85b-49b2-bc9f-90c184985bfc-459957.png)
 
-接下来就是加氢，因为从pdb数据库中下载蛋白质晶体结构是没有氢原子的（除了很少分辨率小于1A的蛋白质有H），这是一个技术问题。所以我们需要把氢原子加上，这一步是必须的。**<font style="color:#F5222D;">官方解释也是：在选择一个分子作为配体或受体之前，必须把所有的氢都加到这个分子上</font>**。**<font style="color:#F5222D;">注意是全氢</font>**。按照下面操作加氢。
+接下来就是加氢，因为从pdb数据库中下载蛋白质晶体结构是没有氢原子的（除了很少分辨率小于1A的蛋白质有H），这是一个技术问题。所以我们需要把氢原子加上，这一步是必须的。**官方解释也是：在选择一个分子作为配体或受体之前，必须把所有的氢都加到这个分子上**。**注意是全氢**。按照下面操作加氢。
 
 ![1611903586847-f0de83e1-f7a8-4178-937a-306b505c6f74.png](./img/RlF9XutPxSSSW6YN/1611903586847-f0de83e1-f7a8-4178-937a-306b505c6f74-719583.png)
 
@@ -230,7 +259,7 @@ mgltools的下载：下载页面底部有个ADT，新页面点击AutoDockTools�
 
 ![1611904189024-223ff955-c9dd-42c6-b503-32748b199269.png](./img/RlF9XutPxSSSW6YN/1611904189024-223ff955-c9dd-42c6-b503-32748b199269-664816.png)
 
-上面这一步操作方式选择大分子会自动执行以下一系列初始化步骤，ADT检查分子是否带有电荷。如果没有，它会给每个原子加上Gasteiger电荷。**<font style="color:#F5222D;">记住，所有的氢必须先加到大分子上</font>**，然后才被选中。如果分子已经带电荷，
+上面这一步操作方式选择大分子会自动执行以下一系列初始化步骤，ADT检查分子是否带有电荷。如果没有，它会给每个原子加上Gasteiger电荷。**记住，所有的氢必须先加到大分子上**，然后才被选中。如果分子已经带电荷，
 
 ADT会问你是否想保留输入电荷而不是增加Gasteiger电荷。还有，该步骤，ADT会合并非极性氢，如果你不需要，需要手动设置。下面是官方文档的解释。
 
@@ -254,7 +283,7 @@ ADT会问你是否想保留输入电荷而不是增加Gasteiger电荷。还有�
 
 ![1611906035697-2de917c5-0437-42ac-9cd3-9e598130bfab.png](./img/RlF9XutPxSSSW6YN/1611906035697-2de917c5-0437-42ac-9cd3-9e598130bfab-781086.png)
 
-前面提到\*\*<font style="color:#F5222D;">在选择一个分子作为配体或受体之前，必须把所有的氢都加到这个分子上。这里也所以这里我们打开小分子文件，这一步弹出的窗口你默认就行，</font>****<font style="color:#1D39C4;">如果你读入的PDB格式的文件，那么在方法处选择的是</font>****<font style="color:#1D39C4;">noBondOrder ，默认也是noBondOrder</font>\*\*。
+前面提到\*\*在选择一个分子作为配体或受体之前，必须把所有的氢都加到这个分子上。这里也所以这里我们打开小分子文件，这一步弹出的窗口你默认就行，****如果你读入的PDB格式的文件，那么在方法处选择的是****noBondOrder ，默认也是noBondOrder\*\*。
 
 ![1611906238819-5d28ab54-3831-470c-93c0-51c1140b61db.png](./img/RlF9XutPxSSSW6YN/1611906238819-5d28ab54-3831-470c-93c0-51c1140b61db-442824.png)
 
@@ -276,11 +305,15 @@ ADT会问你是否想保留输入电荷而不是增加Gasteiger电荷。还有�
 
 ![1611907830407-d94fe6a4-e1ab-45be-a130-92d5cb1ddc47.png](./img/RlF9XutPxSSSW6YN/1611907830407-d94fe6a4-e1ab-45be-a130-92d5cb1ddc47-785862.png)
 
-但其实这一步没有必要，**<font style="color:#F5222D;">而且会出错</font>**，因为我们前面通过Ligand里面设置的时候，软件已经自动给我们自动处理好了。就是下图中的弹出框，比如融合了5个非极性氢。
+但其实这一步没有必要，**而且会出错**，因为我们前面通过Ligand里面设置的时候，软件已经自动给我们自动处理好了。就是下图中的弹出框，比如融合了5个非极性氢。
 
 ![1611906874635-49b1dabb-4a82-4ca3-9370-18746c4bc051.png](./img/RlF9XutPxSSSW6YN/1611906874635-49b1dabb-4a82-4ca3-9370-18746c4bc051-005573.png)
 
-但是，有时候，我们不手动添加电荷，按照上面的操作，有的小分子也会报错，怎么解决？官方的描述是这样的：If each ligand atom already has a ‘partial charge’ those charges are used. If not or if each of the charges is zero, ADT computes Gasteiger charges for the entire ligand. For this calculation to work correctly, the molecule must already have hydrogen atoms added, including both polar and non-polar ones, prior to this step【翻译：如果每个配体原子已经带有“部分电荷”，这些电荷就会被使用。如果不是，或者每个电荷都为零，ADT计算整个配体的Gasteiger电荷。为了使计算正确进行，在此步骤之前，分子必须已经添加了氢原子，包括极性的和非极性的。】，我么只需要记住，如果出错，那就是每个电荷都为零的情况，我们在选择作为配体之前需要计算Gasteiger电荷，具体怎么计算看下图，按照下图操作后在设置为配体。
+但是，有时候，我们不手动添加电荷，按照上面的操作，有的小分子也会报错，怎么解决？
+官方的描述是这样的：If each ligand atom already has a ‘partial charge’ those charges are used. If not or if each of the charges is zero, ADT computes Gasteiger charges for the entire ligand. For this calculation to work correctly, the molecule must already have hydrogen atoms added, including both polar and non-polar ones, prior to this step【翻译：如果每个配体原子已经带有“部分电荷”，这些电荷就会被使用。
+如果不是，或者每个电荷都为零，ADT计算整个配体的Gasteiger电荷。
+为了使计算正确进行，在此步骤之前，分子必须已经添加了氢原子，包括极性的和非极性的。
+】，我么只需要记住，如果出错，那就是每个电荷都为零的情况，我们在选择作为配体之前需要计算Gasteiger电荷，具体怎么计算看下图，按照下图操作后在设置为配体。
 
 ![1611909370367-04613b64-9a11-406c-91a6-f3466739d33f.png](./img/RlF9XutPxSSSW6YN/1611909370367-04613b64-9a11-406c-91a6-f3466739d33f-538306.png)
 
@@ -288,7 +321,7 @@ ADT会问你是否想保留输入电荷而不是增加Gasteiger电荷。还有�
 
 # 六. 对接操作与对接结果解读
 
-首先导入受体蛋白，这一步，ADT会问你是否想保留输入电荷，**<font style="color:#F5222D;">对于蛋白受体，无论什么情况下，我们是不需要手动计算Gasteiger电荷的，下面操作后会自己更正</font>**。
+首先导入受体蛋白，这一步，ADT会问你是否想保留输入电荷，**对于蛋白受体，无论什么情况下，我们是不需要手动计算Gasteiger电荷的，下面操作后会自己更正**。
 
 ![1611918269623-443daa94-ae46-4864-a325-79c41c4a422b.png](./img/RlF9XutPxSSSW6YN/1611918269623-443daa94-ae46-4864-a325-79c41c4a422b-125571.png)
 
@@ -344,7 +377,7 @@ ADT会问你是否想保留输入电荷而不是增加Gasteiger电荷。还有�
 
 ![1611981887348-919c2da7-f80f-4af1-9056-eea4f66506fd.png](./img/RlF9XutPxSSSW6YN/1611981887348-919c2da7-f80f-4af1-9056-eea4f66506fd-224054.png)
 
-\*\*<font style="color:#F5222D;">重要提醒！！！</font>\*\*这里不要关闭这个窗口，因为程序一直在运行，这个过程你在工作目录下生成一些map格式的文件。
+\*\*重要提醒！！！\*\*这里不要关闭这个窗口，因为程序一直在运行，这个过程你在工作目录下生成一些map格式的文件。
 
 ![1611982039597-6aef7202-1bc7-436e-970a-433fb567a6f9.png](./img/RlF9XutPxSSSW6YN/1611982039597-6aef7202-1bc7-436e-970a-433fb567a6f9-329824.png)
 
@@ -438,7 +471,7 @@ ADT会问你是否想保留输入电荷而不是增加Gasteiger电荷。还有�
 
 我们这里命名为result.pdbqt。后续可以转换为pdb格式，用如pymol等其他软件进行可视化美化。
 
-\*\*<font style="color:#F5222D;">最后，我们的对接结果怎么才算可靠？？</font>\*\*上面一直说的结合能的单位是kcal/mol，kj/mol是标准单位，1KCal等于4.184KJ。 kj/mol是焓的单位。 因为焓是一个状态函数，所以某物质所含的能量是随摩尔质量的改变而改变的，物质的量的单位是mol，能量的单位是J，所以焓的单位就是J/mol或者kJ/mol。如果结合能小于-1.2kcal/mol或者小于-5kj/mol，那么我们认为对接结果是可行的，可以选择最低的。
+\*\*最后，我们的对接结果怎么才算可靠？？\*\*上面一直说的结合能的单位是kcal/mol，kj/mol是标准单位，1KCal等于4.184KJ。 kj/mol是焓的单位。 因为焓是一个状态函数，所以某物质所含的能量是随摩尔质量的改变而改变的，物质的量的单位是mol，能量的单位是J，所以焓的单位就是J/mol或者kJ/mol。如果结合能小于-1.2kcal/mol或者小于-5kj/mol，那么我们认为对接结果是可行的，可以选择最低的。
 
 到这里，对接就算结束了，后面是结果的可视化美化，如果有报错的情况，你可以阅读官方手册。
 
@@ -450,7 +483,7 @@ ADT会问你是否想保留输入电荷而不是增加Gasteiger电荷。还有�
 
 有些同学可能第一次做对接，由于蛋白或者的受体不同，中途可能会产生一些错误，导致后面无法进行，一直停留在原地，这里，我简单介绍一下，可能的出现的错误，但不一定覆盖到你所遇到的问题。
 
-首先就是准备受体的时候，加氢的问题，其实在前文已经有过介绍，**<font style="color:#F5222D;">在选择一个分子作为配体或受体之前，必须把所有的氢都加到这个分子上，而且</font>\*\*\*\*<font style="color:#F5222D;">是全氢。</font>\*\*\*\*如果你操作是用我选择的蛋白或者受体，前面可能你没有发现一个问题，那就小分子配体，我们下载的sdf文件和mol2文件，其中的sdf文件**在PubChem数据库下载的，在3D Conformer处左侧有一些选项勾选，比如是否显示氢键，我当时是勾选的。
+首先就是准备受体的时候，加氢的问题，其实在前文已经有过介绍，**在选择一个分子作为配体或受体之前，必须把所有的氢都加到这个分子上，而且\*\*\*\*是全氢。\*\*\*\*如果你操作是用我选择的蛋白或者受体，前面可能你没有发现一个问题，那就小分子配体，我们下载的sdf文件和mol2文件，其中的sdf文件**在PubChem数据库下载的，在3D Conformer处左侧有一些选项勾选，比如是否显示氢键，我当时是勾选的。
 
 ![1611841011209-bb9a7ddf-0318-4a77-a0ac-0ce0c6a0e510.png](./img/RlF9XutPxSSSW6YN/1611841011209-bb9a7ddf-0318-4a77-a0ac-0ce0c6a0e510-573810.png)
 
@@ -460,7 +493,7 @@ ADT会问你是否想保留输入电荷而不是增加Gasteiger电荷。还有�
 
 当然，这一步没有什么影响。
 
-还有就是我们是否计算Gasteiger电荷，这在前面也有所提到，对于小分子配体，我们是不自己去计算的，除非出错，这在前面有解释，但\*\*<font style="color:#F5222D;">对于蛋白配体呢？？是否也需要计算</font>\*\*\*\*<font style="color:#F5222D;">Gasteiger电荷？？</font>\*\*这里是不需要呢，我们在去水加氢后选为受体是，软件是自动添加，所以，对于蛋白质来说，无论是否报错，均不能计算Gasteiger电荷这一步操作，这会改变真正的对接结果。
+还有就是我们是否计算Gasteiger电荷，这在前面也有所提到，对于小分子配体，我们是不自己去计算的，除非出错，这在前面有解释，但\*\*对于蛋白配体呢？？是否也需要计算\*\*\*\*Gasteiger电荷？？\*\*这里是不需要呢，我们在去水加氢后选为受体是，软件是自动添加，所以，对于蛋白质来说，无论是否报错，均不能计算Gasteiger电荷这一步操作，这会改变真正的对接结果。
 
 ![1612068665712-b1c2f4ae-cbab-4d11-baa1-268778c191aa.png](./img/RlF9XutPxSSSW6YN/1612068665712-b1c2f4ae-cbab-4d11-baa1-268778c191aa-366590.png)
 
@@ -490,15 +523,15 @@ AD4_parameters.dat这个文件就是离子参数配置文件，不懂的话先�
 
 ![1612070652093-1c59a2e2-ea8b-4948-8c79-b081f20c9861.png](./img/RlF9XutPxSSSW6YN/1612070652093-1c59a2e2-ea8b-4948-8c79-b081f20c9861-325459.png)
 
-我们继续用前面的配体往下对接。再输出gpf文件的时候，然后Grid后，没有产生相应的map文件，而且会运行不会结束，反正我等了好久，就是不会结束。**<font style="color:#F5222D;">那么我们这么解决了？</font>**
+我们继续用前面的配体往下对接。再输出gpf文件的时候，然后Grid后，没有产生相应的map文件，而且会运行不会结束，反正我等了好久，就是不会结束。**那么我们这么解决了？**
 
-**<font style="color:#F5222D;">首先，我们可以查看官方文档</font>**
+**首先，我们可以查看官方文档**
 
 <http://autodock.scripps.edu/faqs-help/faq/how-do-i-add-new-atom-types-to-autodock-4>
 
 ![1612072621907-5e471967-d65e-4b4c-b94c-d2af7b10f0c0.png](./img/RlF9XutPxSSSW6YN/1612072621907-5e471967-d65e-4b4c-b94c-d2af7b10f0c0-589660.png)
 
-**<font style="color:#F5222D;">还有就是Google，你可以在</font>**<https://www.researchgate.net/>搜索你可能遇到的问题。类似的问题有很多人会遇到的。下面就有一些类似的问题。
+**还有就是Google，你可以在**<https://www.researchgate.net/>搜索你可能遇到的问题。类似的问题有很多人会遇到的。下面就有一些类似的问题。
 
 <https://www.researchgate.net/post/How-to-add-Cobalt-atomic-parameter-in-autodock-42>
 
@@ -659,7 +692,7 @@ atom_par Fm 3.29 0.012 12.000 -0.00110 0.0 0.0 0 -1 -1 4 # Non H-bonding
 
 <http://autodock.scripps.edu/faqs-help>
 
-这里会有各种问题的解决方法。**<font style="color:#F5222D;">如果对接是你可以的主要内容，那么你需要掌握的不止这些</font>**。
+这里会有各种问题的解决方法。**如果对接是你可以的主要内容，那么你需要掌握的不止这些**。
 
 ![1612075212535-a98c997a-8b3e-496c-9c39-bff467dfe497.png](./img/RlF9XutPxSSSW6YN/1612075212535-a98c997a-8b3e-496c-9c39-bff467dfe497-719882.png)
 
@@ -675,71 +708,71 @@ atom_par Fm 3.29 0.012 12.000 -0.00110 0.0 0.0 0 -1 -1 4 # Non H-bonding
 
 ![1612061513517-c739256a-3ffe-4b95-93a4-c08ef1fbb259.png](./img/RlF9XutPxSSSW6YN/1612061513517-c739256a-3ffe-4b95-93a4-c08ef1fbb259-325449.png)
 
-或者通过命令`cd F:\AutoDock`来实现，这与window的dos命令行和Linux系统的cd(<font style="color:#333333;">Change Directory)</font>命令一样。
+或者通过命令`cd F:\AutoDock`来实现，这与window的dos命令行和Linux系统的cd(Change Directory)命令一样。
 
 ![1612062377228-2e8519a1-af18-4fec-8c4a-b6b575740adc.png](./img/RlF9XutPxSSSW6YN/1612062377228-2e8519a1-af18-4fec-8c4a-b6b575740adc-294279.png)
 
 导入刚才下载的复合物PDB文件（1e8y.pdb）。
 
-\*\*<font style="color:#F5222D;">注意：</font>\*\*有两种方法导入文件，一种是鼠标点击菜单栏File -> Open…，另一种是通过命令行。通过`load`命令加载：`load 1e8y.pdb`，因为这样可以同时把工作目录设置好，方便后续保存文件。
+\*\*注意：\*\*有两种方法导入文件，一种是鼠标点击菜单栏File -> Open…，另一种是通过命令行。通过`load`命令加载：`load 1e8y.pdb`，因为这样可以同时把工作目录设置好，方便后续保存文件。
 
 假设我们的工作目录为`F:\AutoDock`。注意：路径中不要有中文和空格，这是导致很多计算类软件（尤其是免费软件）出现问题的原因。
 
-如果是<font style="background-color:#FCFCFC;">从PDB网站上下载蛋白，如 </font>1e8y<font style="background-color:#FCFCFC;">.pdb, 也可以直接通过PyMOL 下载蛋白，点击菜单栏中的 File->Get PDB，或者通过fetch 命令下载，这在前面有介绍。</font>
+如果是从PDB网站上下载蛋白，如 1e8y.pdb, 也可以直接通过PyMOL 下载蛋白，点击菜单栏中的 File->Get PDB，或者通过fetch 命令下载，这在前面有介绍。
 
 ## 2.对象属性操作介绍
 
-<font style="background-color:#FCFCFC;">加载到蛋白后。</font>
+加载到蛋白后。
 
 ![1612062941485-5e2eaa76-7867-4d20-a78b-c09f8e512be0.png](./img/RlF9XutPxSSSW6YN/1612062941485-5e2eaa76-7867-4d20-a78b-c09f8e512be0-591007.png)
 
-* <font style="background-color:#FCFCFC;">1个是all, all 不是真实的object,它代表了所有的object</font>
-* <font style="background-color:#FCFCFC;">1个是</font><font style="background-color:#FCFCFC;">1e8y</font><font style="background-color:#FCFCFC;"> ，</font><font style="background-color:#FCFCFC;">1e8y</font><font style="background-color:#FCFCFC;">就是我们刚刚载入的蛋白</font>
+* 1个是all, all 不是真实的object,它代表了所有的object
+* 1个是1e8y ，1e8y就是我们刚刚载入的蛋白
 
-<font style="background-color:#FCFCFC;">每个object 都有对应的A S H L C操作：</font>
+每个object 都有对应的A S H L C操作：
 
 A：代表Action ，主要包含了对object的常用操作的集合，如 复制、删除object,对object加氢，展示Object等，
 
-<font style="background-color:#FCFCFC;">S：代表Show ，将object 渲染成cartoon 、line、stick lines sphere surface mesh dots ribbon 等模式 </font>
+S：代表Show ，将object 渲染成cartoon 、line、stick lines sphere surface mesh dots ribbon 等模式
 
-<font style="background-color:#FCFCFC;">H：Hide 根据object的状态或者描述进行相应的掩藏 </font>
+H：Hide 根据object的状态或者描述进行相应的掩藏
 
-<font style="background-color:#FCFCFC;">L：Label 显示object中残基、原子等名称或者属性 </font>
+L：Label 显示object中残基、原子等名称或者属性
 
-<font style="background-color:#FCFCFC;">C：Color 对Object 进行着色</font>
+C：Color 对Object 进行着色
 
 知道这些含有，里面的内容多试试几次就知道怎么回事啦。比如下面2种操作。
 
-* <font style="background-color:#FCFCFC;">点击 A->preset->simple 显示蛋白的简单形式</font>
+* 点击 A->preset->simple 显示蛋白的简单形式
 
 ![1612063409303-229e0df4-0ccf-4bdf-b5ec-e6a9b8338b36.png](./img/RlF9XutPxSSSW6YN/1612063409303-229e0df4-0ccf-4bdf-b5ec-e6a9b8338b36-917272.png)
 
-* <font style="background-color:#FCFCFC;">点击 A->preset->ball and stick 显示球棍模型</font>
+* 点击 A->preset->ball and stick 显示球棍模型
 
 ![1612063467705-19c1ca05-c5e8-430f-80e0-e27233b321d3.png](./img/RlF9XutPxSSSW6YN/1612063467705-19c1ca05-c5e8-430f-80e0-e27233b321d3-970496.png)
 
 再如下面的一些操作介绍；
 
-<font style="background-color:#FCFCFC;">L->residue 在α碳原子上标记其残基名字和编号 （常用）</font>
+L->residue 在α碳原子上标记其残基名字和编号 （常用）
 
-<font style="background-color:#FCFCFC;">L->residue name 在所有原子上标记残基名字 （不常用）</font>
+L->residue name 在所有原子上标记残基名字 （不常用）
 
-<font style="background-color:#FCFCFC;">L->clear 删除该对象上所有的Label</font>
+L->clear 删除该对象上所有的Label
 
-<font style="background-color:#FCFCFC;">L->element symbol 显示对象上所有原子的元素名字</font>
+L->element symbol 显示对象上所有原子的元素名字
 
-<font style="background-color:#FCFCFC;">L->vdw radius 产看原子的范德华半径</font>
+L->vdw radius 产看原子的范德华半径
 
 ## 3.可视化窗口操作
 
-* <font style="background-color:#FCFCFC;">平移，按住鼠标中键不放，然后上下左右移动，进行体会，蛋白会随着鼠标而移动</font>
-* <font style="background-color:#FCFCFC;">旋转，按住鼠标左键不放，然后上下左右移动鼠标，蛋白会进行旋转</font>
-* <font style="background-color:#FCFCFC;">缩放，按住鼠标右键不放，然后上下移动，蛋白会进行缩放</font>
-* <font style="background-color:#FCFCFC;">切割 滚动鼠标中键， 建议将蛋白渲染成surface模式，然后滚动鼠标中键</font>
+* 平移，按住鼠标中键不放，然后上下左右移动，进行体会，蛋白会随着鼠标而移动
+* 旋转，按住鼠标左键不放，然后上下左右移动鼠标，蛋白会进行旋转
+* 缩放，按住鼠标右键不放，然后上下移动，蛋白会进行缩放
+* 切割 滚动鼠标中键， 建议将蛋白渲染成surface模式，然后滚动鼠标中键
 
 多的不介绍了，B站有很多视频教程，这里我给大家找到了一个文本教程。<http://pymol.chenzhaoqiang.com/> ，对作者的贡献表示感谢。
 
-**<font style="color:#F5222D;">下面我们就简单处理一下我们前面对接的结果</font>**
+**下面我们就简单处理一下我们前面对接的结果**
 
 ## 4.对接结果简单处理演示
 
@@ -815,134 +848,136 @@ Selecting 处切换到残基。
 
 # 九. 蛋白三级结构可视化软件VMD
 
-<font style="color:black;">这一部分来自多年前我在学习山东大学在MOOC网上的生物信息学课程的笔记，对此表示感谢。</font>
+这一部分来自多年前我在学习山东大学在MOOC网上的生物信息学课程的笔记，对此表示感谢。
 
-<font style="color:black;">能够实现蛋白质三维结构可视化的软件非常多。比专业级的</font><font style="color:black;">PyMOL</font><font style="color:black;">（</font><https://pymol.org/2/><font style="color:black;">）。这个软件已经被世界上著名的生物医药软件公司</font><font style="color:black;">“</font><font style="color:black;">薛定谔公司（</font><font style="color:black;">Schrödinger</font><font style="color:black;">）</font><font style="color:black;">”</font><font style="color:black;">收购。这种专业级的可视化软件不仅能够做出非常漂亮的图片，它还有强大的插件支持各种各样的蛋白质结构分析，这款软件需要购买，如果你发表的文章里提到某些内容是使用</font><font style="color:black;">PyMOL</font><font style="color:black;">制作的，而文章中所有作者和作者单位都没有</font><font style="color:black;">PyMOL</font><font style="color:black;">的购买记录的话，你可能会面临薛定谔公司的追责。</font>
+能够实现蛋白质三维结构可视化的软件非常多。比专业级的PyMOL（<https://pymol.org/2/>）。这个软件已经被世界上著名的生物医药软件公司“薛定谔公司（Schrödinger）”收购。这种专业级的可视化软件不仅能够做出非常漂亮的图片，它还有强大的插件支持各种各样的蛋白质结构分析，这款软件需要购买，如果你发表的文章里提到某些内容是使用PyMOL制作的，而文章中所有作者和作者单位都没有PyMOL的购买记录的话，你可能会面临薛定谔公司的追责。
 
-<font style="color:black;">下面给大家介绍一个功能同样强大的免费蛋白质三维结构可视化软件，</font><font style="color:black;">VMD</font><font style="color:black;">（</font><http://www.ks.uiuc.edu/Research/vmd><font style="color:black;">）。</font><font style="color:black;">VMD</font><font style="color:black;">由伊利诺伊大学研发。下载</font><font style="color:black;"> VMD </font><font style="color:black;">需要先注册获得一个账户，之后就可以根据你的操作系统和机器配置选择合适的版本下载了。当然，如前所述，注册和下载对于非商业用途的用户都是免费的。</font><font style="color:black;">VMD </font><font style="color:black;">的安装也极其简单。不需要预装任何语言环境，完全图形化安装过程，绝对可以轻松搞定。</font>
+下面给大家介绍一个功能同样强大的免费蛋白质三维结构可视化软件，VMD（<http://www.ks.uiuc.edu/Research/vmd>）。VMD由伊利诺伊大学研发。下载 VMD 需要先注册获得一个账户，之后就可以根据你的操作系统和机器配置选择合适的版本下载了。当然，如前所述，注册和下载对于非商业用途的用户都是免费的。VMD 的安装也极其简单。不需要预装任何语言环境，完全图形化安装过程，绝对可以轻松搞定。
 
-<font style="color:black;">对于</font><font style="color:black;"> Windows </font><font style="color:black;">用户，</font><font style="color:black;">VMD </font><font style="color:black;">默认安装在</font><font style="color:black;"> C</font> <font style="color:black;">:\Program Files(x86)\University of Illinois\VMD </font><font style="color:black;">文件夹下。打开</font><font style="color:black;"> VMD</font><font style="color:black;">。</font><font style="color:black;">VMD</font><font style="color:black;">打开后，会弹出三个窗口：</font><font style="color:black;">VMD Main</font><font style="color:black;">（主窗口），</font><font style="color:black;">VMD Display</font><font style="color:black;">（显示窗口），和命令窗口。</font>
+对于 Windows 用户，VMD 默认安装在 C :\Program Files(x86)\University of Illinois\VMD 文件夹下。打开 VMD。VMD打开后，会弹出三个窗口：VMD Main（主窗口），VMD Display（显示窗口），和命令窗口。
 
 ![1604969312088-add16c19-b4bd-4c2c-8874-2cebf8527366.png](./img/RlF9XutPxSSSW6YN/1604969312088-add16c19-b4bd-4c2c-8874-2cebf8527366-055871.png)
 
-<font style="color:black;">图</font><font style="color:black;">4.14 VMD </font><font style="color:black;">主窗口、显示窗口和命令窗口</font>
+图4.14 VMD 主窗口、显示窗口和命令窗口
 
-<font style="color:black;">打开一个蛋白质结构（图</font><font style="color:black;">4.15</font><font style="color:black;">）：主窗口中点</font><font style="color:black;"> </font><font style="color:black;">File</font><font style="color:black;">\</font><font style="color:black;">New Molecule</font><font style="color:black;">，</font><font style="color:black;">弹出新窗口</font><font style="color:black;">Molecule File Browser</font><font style="color:black;">（文件读取窗口）</font><font style="color:black;">，</font><font style="color:black;">文件读取窗口中点</font><font style="color:black;"> </font><font style="color:black;">Browse</font><font style="color:black;">，</font><font style="color:black;">自动打开</font><font style="color:black;"> </font><font style="color:black;">VMD</font><font style="color:black;">安装目录</font><font style="color:black;">，</font><font style="color:black;">进入</font><font style="color:black;">proteins</font><font style="color:black;">文件夹</font><font style="color:black;"></font><font style="color:black;">选择</font><font style="color:black;">VMD</font><font style="color:black;">自带的演示结构</font><font style="color:black;">bpti.pdb</font><font style="color:black;">，</font><font style="color:black;">文件读取窗口中点</font><font style="color:black;"> </font><font style="color:black;">Load</font><font style="color:black;">，</font><font style="color:black;">显示窗口出现蛋白质结构。</font>
+打开一个蛋白质结构（图4.15）：主窗口中点 File\New Molecule，弹出新窗口Molecule File Browser（文件读取窗口），文件读取窗口中点 Browse，自动打开 VMD安装目录，进入proteins文件夹选择VMD自带的演示结构bpti.pdb，文件读取窗口中点 Load，显示窗口出现蛋白质结构。
 
 ![1604969312294-9aaebee4-1506-4697-8eaf-b7993fc33657.png](./img/RlF9XutPxSSSW6YN/1604969312294-9aaebee4-1506-4697-8eaf-b7993fc33657-117611.png)
 
-<font style="color:black;">图</font><font style="color:black;">4.15  </font><font style="color:black;">打开一个蛋白质结构</font>
+图4.15  打开一个蛋白质结构
 
-<font style="color:black;">默认的蛋白质结构显示方案（图</font><font style="color:black;">4.16</font><font style="color:black;">）：把显示窗口拖大后可以看到，</font><font style="color:black;">VMD </font><font style="color:black;">读取了</font><font style="color:black;"> PDB</font><font style="color:black;">文件中的原子坐标，把每一个原子以细线的形式展示在</font><font style="color:black;"> 3D </font><font style="color:black;">空间中。不同的原子应的细线颜色不同。碳原子是青色的，氮原子是蓝色的，氧原子是红色的，氢原</font><font style="color:black;">子是白色的，还有少量黄色的硫原子。</font>
+默认的蛋白质结构显示方案（图4.16）：把显示窗口拖大后可以看到，VMD 读取了 PDB文件中的原子坐标，把每一个原子以细线的形式展示在 3D 空间中。不同的原子应的细线颜色不同。碳原子是青色的，氮原子是蓝色的，氧原子是红色的，氢原子是白色的，还有少量黄色的硫原子。
 
 ![1604969312435-739aa4a7-867e-48d9-91a0-b1809b6a3f32.png](./img/RlF9XutPxSSSW6YN/1604969312435-739aa4a7-867e-48d9-91a0-b1809b6a3f32-375392.png)
 
-<font style="color:black;">图</font><font style="color:black;">4.16  </font><font style="color:black;">默认的蛋白质结构显示方案</font>
+图4.16  默认的蛋白质结构显示方案
 
-**<font style="color:black;">1</font>****<font style="color:black;">、</font>****<font style="color:black;">VMD </font>\*\*\*\*<font style="color:black;">中鼠标的使用：</font>**<font style="color:black;">把鼠标移到显示窗口里，按住左键，随意拖动，蛋白质就会在</font><font style="color:black;"> 3D </font><font style="color:black;">空间内任意旋转；按住鼠标右键拖动，蛋白质会在当前平面内</font><font style="color:black;"> 360 </font><font style="color:black;">度旋转；前后滚动鼠标中键，可以将蛋白质放大或缩小。此外，鼠标还有更多的使用方法：主窗口上的</font><font style="color:black;"> Mouse </font><font style="color:black;">菜单里可以切换鼠标模式。默认的鼠标模式是</font><font style="color:black;"> Rotate Mode</font><font style="color:black;">（旋转模式，</font><font style="color:black;">R</font><font style="color:black;">）。</font><font style="color:black;">R</font><font style="color:black;">模式下，鼠标在显示窗口内为单箭头。操作即为上述三种。将鼠标模式改为</font><font style="color:black;"> Translate Mode</font><font style="color:black;">（移动模式，</font><font style="color:black;">T</font><font style="color:black;">）后，鼠标在显示窗口内变为十字箭头</font><font style="color:black;"> </font><font style="color:black;">。</font><font style="color:black;">T</font><font style="color:black;">模式下，按住鼠标左键拖动为移动结构；右键和中键都为放缩功能。此外，还有</font><font style="color:black;">Scale Mode</font><font style="color:black;">（缩放模式，</font><font style="color:black;">S</font><font style="color:black;">）。</font><font style="color:black;">S</font><font style="color:black;">模式下，鼠标在显示窗口内变为左右箭头，按住鼠标左键或右键后，左右移动，即可完成连续的缩放。这种连续的缩放，不同于滚动中键实现的缩放。在默认的情况下，所有旋转是围绕整个结构的中心点进行的。我们也可以自己指定旋转的中心。这需要把鼠标模式切换为</font><font style="color:black;"> Center</font><font style="color:black;">（中心模式，</font><font style="color:black;">C</font><font style="color:black;">）。</font><font style="color:black;">C</font><font style="color:black;">模式下，鼠标在显示窗口内为十字。将十字放在想要作为旋转中心的原子上点一下，再按住鼠标左键旋转，就会以新定义的中心进行旋转。</font>
+**1****、****VMD \*\*\*\*中鼠标的使用：**把鼠标移到显示窗口里，按住左键，随意拖动，蛋白质就会在 3D 空间内任意旋转；按住鼠标右键拖动，蛋白质会在当前平面内 360 度旋转；前后滚动鼠标中键，可以将蛋白质放大或缩小。此外，鼠标还有更多的使用方法：主窗口上的 Mouse 菜单里可以切换鼠标模式。默认的鼠标模式是 Rotate Mode（旋转模式，R）。R模式下，鼠标在显示窗口内为单箭头。操作即为上述三种。将鼠标模式改为 Translate Mode（移动模式，T）后，鼠标在显示窗口内变为十字箭头 。T模式下，按住鼠标左键拖动为移动结构；右键和中键都为放缩功能。此外，还有Scale Mode（缩放模式，S）。S模式下，鼠标在显示窗口内变为左右箭头，按住鼠标左键或右键后，左右移动，即可完成连续的缩放。这种连续的缩放，不同于滚动中键实现的缩放。在默认的情况下，所有旋转是围绕整个结构的中心点进行的。我们也可以自己指定旋转的中心。这需要把鼠标模式切换为 Center（中心模式，C）。C模式下，鼠标在显示窗口内为十字。将十字放在想要作为旋转中心的原子上点一下，再按住鼠标左键旋转，就会以新定义的中心进行旋转。
 
-**<font style="color:black;">2</font>\*\*\*\*<font style="color:black;">、恢复结构初始位置：</font>**<font style="color:black;">主窗口中点</font><font style="color:black;">Display\Reset View</font><font style="color:black;">。或者在显示窗口内单击鼠标左键以激活窗口后，点击“</font><font style="color:black;">=”</font><font style="color:black;">键。</font>
+**2\*\*\*\*、恢复结构初始位置：**主窗口中点Display\Reset View。或者在显示窗口内单击鼠标左键以激活窗口后，点击“=”键。
 
-**<font style="color:black;">3</font>\*\*\*\*<font style="color:black;">、改变蛋白质结构的外观：</font>**<font style="color:black;">有关外观的设置在主窗口中的</font><font style="color:black;"> Graphic </font><font style="color:black;">菜单下的</font><font style="color:black;"> Representation </font><font style="color:black;">窗口里（图</font><font style="color:black;">4.17</font><font style="color:black;">）。一个</font><font style="color:black;"> Representation</font><font style="color:black;">（显示状态）由三个元素构成。第一个元素是用什么样式（</font><font style="color:black;">Style</font><font style="color:black;">）显示，当前使用的样式是以细线显示原子（</font><font style="color:black;">Lines</font><font style="color:black;">）。第二个元素是用什么颜色（</font><font style="color:black;">Color</font><font style="color:black;">）显示，当前使用的颜色是按原子名定义的不同颜色（</font><font style="color:black;">Name</font><font style="color:black;">）。最后一个元素是要显示什么内容（</font><font style="color:black;">Selection</font><font style="color:black;">），当前显示的内容是所有原子（</font><font style="color:black;">all</font><font style="color:black;">）。这三个元素分别在</font><font style="color:black;"> Representation</font><font style="color:black;">窗口里的</font><font style="color:black;"> Draw style </font><font style="color:black;">标签下的</font><font style="color:black;"> Drawing Method </font><font style="color:black;">下拉条、</font><font style="color:black;">Coloring Method </font><font style="color:black;">下拉条和</font><font style="color:black;">Selected Atoms </font><font style="color:black;">输入框里进行设置。</font>
+**3\*\*\*\*、改变蛋白质结构的外观：**有关外观的设置在主窗口中的 Graphic 菜单下的 Representation 窗口里（图4.17）。一个 Representation（显示状态）由三个元素构成。第一个元素是用什么样式（Style）显示，当前使用的样式是以细线显示原子（Lines）。第二个元素是用什么颜色（Color）显示，当前使用的颜色是按原子名定义的不同颜色（Name）。最后一个元素是要显示什么内容（Selection），当前显示的内容是所有原子（all）。这三个元素分别在 Representation窗口里的 Draw style 标签下的 Drawing Method 下拉条、Coloring Method 下拉条和Selected Atoms 输入框里进行设置。
 
 ![1604969312891-611e9f53-f189-41f3-b6bf-ef2c4679ce29.png](./img/RlF9XutPxSSSW6YN/1604969312891-611e9f53-f189-41f3-b6bf-ef2c4679ce29-417286.png)
 
-<font style="color:black;">图</font><font style="color:black;">4.17 </font><font style="color:black;">Representation </font><font style="color:black;">窗口</font>
+图4.17 Representation 窗口
 
-**<font style="color:black;">4</font>****<font style="color:black;">、</font>****<font style="color:black;">Drawing Method </font>****<font style="color:black;">下拉条（图</font>****<font style="color:black;">4.18</font>\*\*\*\*<font style="color:black;">）：</font>**<font style="color:black;">Lines </font><font style="color:black;">以细线显示原子。</font><font style="color:black;">CPK </font><font style="color:black;">以不同大小的球来显示原子，原子间的连线是相应的化学键，比如碳与碳之间的共价键，硫与硫之间的二硫键等。</font><font style="color:black;">NewCartoon </font><font style="color:black;">只显示蛋白质的碳骨架（</font><font style="color:black;">backbone</font><font style="color:black;">），并形象的展示出不同的二级结构。每一种</font><font style="color:black;"> </font><font style="color:black;">Drawing Method </font><font style="color:black;">都可以再进一步设置显示效果。比如对于</font><font style="color:black;"> CPK</font><font style="color:black;">，可以调整原子球的大小（</font><font style="color:black;">Sphere Scale</font><font style="color:black;">）、改变化学键的粗细（</font><font style="color:black;">Bond Radius</font><font style="color:black;">）、以及设置更高或更低的分辨率（</font><font style="color:black;">Sphere/Bond Resolution</font><font style="color:black;">）。</font>
+**4****、****Drawing Method ****下拉条（图****4.18\*\*\*\*）：**Lines 以细线显示原子。CPK 以不同大小的球来显示原子，原子间的连线是相应的化学键，比如碳与碳之间的共价键，硫与硫之间的二硫键等。NewCartoon 只显示蛋白质的碳骨架（backbone），并形象的展示出不同的二级结构。每一种 Drawing Method 都可以再进一步设置显示效果。比如对于 CPK，可以调整原子球的大小（Sphere Scale）、改变化学键的粗细（Bond Radius）、以及设置更高或更低的分辨率（Sphere/Bond Resolution）。
 
 ![1604969313037-1a5426e2-1586-4eb1-9508-ae3b10b601c3.png](./img/RlF9XutPxSSSW6YN/1604969313037-1a5426e2-1586-4eb1-9508-ae3b10b601c3-393527.png)
 
-<font style="color:black;">4.18  </font><font style="color:black;">不同的几种</font><font style="color:black;">Drawing Method</font>
+4.18  不同的几种Drawing Method
 
-**<font style="color:black;">5</font>****<font style="color:black;">、</font>****<font style="color:black;">Coloring Method </font>****<font style="color:black;">下拉条（图</font>****<font style="color:black;">4.19</font>\*\*\*\*<font style="color:black;">）：</font>**<font style="color:black;">Name </font><font style="color:black;">颜色方案是一种原子一种颜色，常见的比如碳原子青色、氧原子红色、氮原子蓝色、硫原子黄色。在</font><font style="color:black;"> </font><font style="color:black;">NewCartoon </font><font style="color:black;">显示样式下，只有碳骨架被现实出来，再配以</font><font style="color:black;"> </font><font style="color:black;">Name </font><font style="color:black;">颜色方案，整个结构都是青色的。</font><font style="color:black;">Secondary Structure </font><font style="color:black;">颜色方案可以为不同的二级结构赋予不同的颜色，常见的比如</font><font style="color:black;">α</font><font style="color:black;">螺旋紫色、</font><font style="color:black;">β</font><font style="color:black;">折片黄色、转角青色、松散</font><font style="color:black;"> coil </font><font style="color:black;">结构白色。颜色方案</font><font style="color:black;"> </font><font style="color:black;">Res Type </font><font style="color:black;">根据氨基酸类型的不同赋予不同的颜色，比如非极性氨基酸白色、极性带正电荷的氨基酸（碱性的氨基酸）蓝色、极性带负电荷的氨基酸（酸性的氨基酸）红色、极性不带电荷的氨基酸绿色。这种颜色方案适合在显示氨基酸侧链的</font><font style="color:black;"> </font><font style="color:black;">Drawing Method </font><font style="color:black;">下观看，比如</font><font style="color:black;"> </font><font style="color:black;">CPK </font><font style="color:black;">样式。颜色方案</font><font style="color:black;"> </font><font style="color:black;">ResName </font><font style="color:black;">为</font><font style="color:black;">20 </font><font style="color:black;">种氨基酸设置了</font><font style="color:black;"> 20 </font><font style="color:black;">种不同的颜色。</font>
+**5****、****Coloring Method ****下拉条（图****4.19\*\*\*\*）：**Name 颜色方案是一种原子一种颜色，常见的比如碳原子青色、氧原子红色、氮原子蓝色、硫原子黄色。在 NewCartoon 显示样式下，只有碳骨架被现实出来，再配以 Name 颜色方案，整个结构都是青色的。Secondary Structure 颜色方案可以为不同的二级结构赋予不同的颜色，常见的比如α螺旋紫色、β折片黄色、转角青色、松散 coil 结构白色。颜色方案 Res Type 根据氨基酸类型的不同赋予不同的颜色，比如非极性氨基酸白色、极性带正电荷的氨基酸（碱性的氨基酸）蓝色、极性带负电荷的氨基酸（酸性的氨基酸）红色、极性不带电荷的氨基酸绿色。这种颜色方案适合在显示氨基酸侧链的 Drawing Method 下观看，比如 CPK 样式。颜色方案 ResName 为20 种氨基酸设置了 20 种不同的颜色。
 
 ![1604969313314-c266f453-0ca0-416f-9fca-79cb26dc1cb1.png](./img/RlF9XutPxSSSW6YN/1604969313314-c266f453-0ca0-416f-9fca-79cb26dc1cb1-340940.png)
 
-<font style="color:black;">4.19  </font><font style="color:black;">不同</font><font style="color:black;"> </font><font style="color:black;">Drawing Method </font><font style="color:black;">和</font><font style="color:black;"> </font><font style="color:black;">Coloring Method </font><font style="color:black;">组合</font>
+4.19  不同 Drawing Method 和 Coloring Method 组合
 
-**<font style="color:black;">6</font>****<font style="color:black;">、</font>****<font style="color:black;">Selected Atoms </font>\*\*\*\*<font style="color:black;">输入框：</font>**<font style="color:black;">输入框里输入需要显示的内容，比如，写</font><font style="color:black;">“</font><font style="color:black;">all</font><font style="color:black;">”</font><font style="color:black;">代表显示所有原子，也就是整个蛋白质、写</font><font style="color:black;">“</font><font style="color:black;">backbone</font><font style="color:black;">”</font><font style="color:black;">代表显示碳骨架。输入框里允许输入的关键词和语法在</font><font style="color:black;"> </font><font style="color:black;">Selections </font><font style="color:black;">标签下有详细定义。可以写</font><font style="color:black;"> </font><font style="color:black;">Singlewords </font><font style="color:black;">里面单个的单词，也可以写</font><font style="color:black;"> </font><font style="color:black;">Keyword</font><font style="color:black;">和</font><font style="color:black;"> </font><font style="color:black;">Value </font><font style="color:black;">组成的词组，还可以利用逻辑词</font><font style="color:black;">“</font><font style="color:black;">and/or/not</font><font style="color:black;">”</font><font style="color:black;">把多个单词和词组串成句子。举例：</font>
+**6****、****Selected Atoms \*\*\*\*输入框：**输入框里输入需要显示的内容，比如，写“all”代表显示所有原子，也就是整个蛋白质、写“backbone”代表显示碳骨架。输入框里允许输入的关键词和语法在 Selections 标签下有详细定义。可以写 Singlewords 里面单个的单词，也可以写 Keyword和 Value 组成的词组，还可以利用逻辑词“and/or/not”把多个单词和词组串成句子。举例：
 
-<font style="color:black;">（</font><font style="color:black;">1</font><font style="color:black;">）点击</font><font style="color:black;"> </font><font style="color:black;">Reset </font><font style="color:black;">清空输入框里的内容</font><font style="color:black;">→</font><font style="color:black;">Keyword </font><font style="color:black;">里双击</font><font style="color:black;"> </font><font style="color:black;">ResName</font><font style="color:black;">→</font><font style="color:black;">Value </font><font style="color:black;">里双击</font><font style="color:black;"> </font><font style="color:black;">ALA</font><font style="color:black;">（输入框里出现</font><font style="color:black;">“</font><font style="color:black;">ResName ALA</font><font style="color:black;">”</font><font style="color:black;">）</font><font style="color:black;"> </font><font style="color:black;">→</font><font style="color:black;">点击</font><font style="color:black;"> </font><font style="color:black;">Apply</font><font style="color:black;">。显示名字为</font><font style="color:black;"> Alanine </font><font style="color:black;">的氨基酸上的原子，即显示所有丙氨酸。配合</font><font style="color:black;"> </font><font style="color:black;">Drawing Method </font><font style="color:black;">设置为</font><font style="color:black;"> </font><font style="color:black;">CPK</font><font style="color:black;">，</font><font style="color:black;">Coloring Method </font><font style="color:black;">设置为</font><font style="color:black;"> </font><font style="color:black;">ResName</font><font style="color:black;">。</font>
+（1）点击 Reset 清空输入框里的内容→Keyword 里双击 ResName→Value 里双击 ALA（输入框里出现“ResName ALA”） →点击 Apply。显示名字为 Alanine 的氨基酸上的原子，即显示所有丙氨酸。配合 Drawing Method 设置为 CPK，Coloring Method 设置为 ResName。
 
-<font style="color:black;">（</font><font style="color:black;">2</font><font style="color:black;">）点击</font><font style="color:black;"> </font><font style="color:black;">Reset </font><font style="color:black;">清空输入框里的内容</font><font style="color:black;">→</font><font style="color:black;">Keyword </font><font style="color:black;">里双击</font><font style="color:black;"> </font><font style="color:black;">Resid</font><font style="color:black;">→</font><font style="color:black;">Value </font><font style="color:black;">里双击</font><font style="color:black;">1</font><font style="color:black;">→</font><font style="color:black;">点击</font><font style="color:black;">Apply</font><font style="color:black;">。显示第一个氨基酸。利用这个</font><font style="color:black;"> </font><font style="color:black;">Keyword </font><font style="color:black;">和</font><font style="color:black;"> </font><font style="color:black;">Value </font><font style="color:black;">组合可以根据残基的编号选择某个或某一段氨基酸，比如，想要显示第</font><font style="color:black;">1</font><font style="color:black;">到第</font><font style="color:black;">10</font><font style="color:black;">个氨基酸，可以直接在输入框里输入</font><font style="color:black;">“</font><font style="color:black;">resid 1 to 10</font><font style="color:black;">”</font><font style="color:black;">，回车。此时显示的就是前</font><font style="color:black;">10</font><font style="color:black;">个氨基酸。</font>
+（2）点击 Reset 清空输入框里的内容→Keyword 里双击 Resid→Value 里双击1→点击Apply。显示第一个氨基酸。利用这个 Keyword 和 Value 组合可以根据残基的编号选择某个或某一段氨基酸，比如，想要显示第1到第10个氨基酸，可以直接在输入框里输入“resid 1 to 10”，回车。此时显示的就是前10个氨基酸。
 
-<font style="color:black;">（</font><font style="color:black;">3</font><font style="color:black;">）</font><font style="color:black;">Draw style </font><font style="color:black;">标签下，</font><font style="color:black;">Drawing Method </font><font style="color:black;">设置为</font><font style="color:black;">NewCartoon</font><font style="color:black;">，</font><font style="color:black;">Coloring Method </font><font style="color:black;">设置为</font><font style="color:black;"> </font><font style="color:black;">Secondary Structure</font><font style="color:black;">→</font><font style="color:black;">Selections </font><font style="color:black;">标签下，点击</font><font style="color:black;"> </font><font style="color:black;">Reset </font><font style="color:black;">清空输入框里的内容</font><font style="color:black;">→</font><font style="color:black;">Singlewords </font><font style="color:black;">里面双击</font><font style="color:black;"> </font><font style="color:black;">alpha_helix</font><font style="color:black;">→</font><font style="color:black;">点击</font><font style="color:black;">“</font><font style="color:black;">or</font><font style="color:black;">”</font><font style="color:black;"> </font><font style="color:black;">→</font><font style="color:black;"> </font><font style="color:black;">Singlewords </font><font style="color:black;">里面双击</font><font style="color:black;"> </font><font style="color:black;">beta_sheet</font><font style="color:black;">（输入框里出现</font><font style="color:black;">“</font><font style="color:black;">alpha_helix or beta_sheet</font><font style="color:black;">”</font><font style="color:black;">）</font><font style="color:black;"> </font><font style="color:black;">→</font><font style="color:black;">点击</font><font style="color:black;"> </font><font style="color:black;">Apply</font><font style="color:black;">。通过逻辑词显示出所有的</font><font style="color:black;">α helix </font><font style="color:black;">和</font><font style="color:black;">β sheet</font><font style="color:black;">。</font>
+（3）Draw style 标签下，Drawing Method 设置为NewCartoon，Coloring Method 设置为 Secondary Structure→Selections 标签下，点击 Reset 清空输入框里的内容→Singlewords 里面双击 alpha_helix→点击“or” → Singlewords 里面双击 beta_sheet（输入框里出现“alpha_helix or beta_sheet”） →点击 Apply。通过逻辑词显示出所有的α helix 和β sheet。
 
-<font style="color:black;">VMD </font><font style="color:black;">可以设置多个</font><font style="color:black;">representations</font><font style="color:black;">（简称</font><font style="color:black;"> </font><font style="color:black;">rep</font><font style="color:black;">），也就是将多个显示状态的试试效果叠加在一起（图</font><font style="color:black;">4.20</font><font style="color:black;">）。</font>
+VMD 可以设置多个representations（简称 rep），也就是将多个显示状态的试试效果叠加在一起（图4.20）。
 
-**<font style="color:black;">7</font>****<font style="color:black;">、</font>****<font style="color:black;">representations</font>****<font style="color:black;">（简称</font>****<font style="color:black;"> </font>****<font style="color:black;">rep</font>****<font style="color:black;">）：</font>**<font style="color:black;">设置第一个</font><font style="color:black;"> </font><font style="color:black;">rep</font><font style="color:black;">：当前处于编辑状态下的</font><font style="color:black;"> </font><font style="color:black;">rep </font><font style="color:black;">背景色为浅绿色。设置</font><font style="color:black;"> </font><font style="color:black;">Drawing Method</font><font style="color:black;">为</font><font style="color:black;"> </font><font style="color:black;">NewCartoon</font><font style="color:black;">，</font><font style="color:black;">Coloring Method </font><font style="color:black;">为</font><font style="color:black;"> </font><font style="color:black;">Secondary Structure</font><font style="color:black;">，</font><font style="color:black;">Selected Atoms</font><font style="color:black;">为</font><font style="color:black;">“</font><font style="color:black;">all</font><font style="color:black;">”</font><font style="color:black;">，回车（或点击右下角</font><font style="color:black;"> </font><font style="color:black;">Apply </font><font style="color:black;">按钮）。创建第二个</font><font style="color:black;"> </font><font style="color:black;">rep</font><font style="color:black;">：点击</font><font style="color:black;"> </font><font style="color:black;">Create Rep</font><font style="color:black;">。点击后，复制产生了和第一个一摸一样的第二个</font><font style="color:black;"> </font><font style="color:black;">rep</font><font style="color:black;">。浅绿色背景自动跳转到第二个</font><font style="color:black;"> </font><font style="color:black;">rep</font><font style="color:black;">，即目前第二个</font><font style="color:black;"> </font><font style="color:black;">rep </font><font style="color:black;">处于可编辑状态。设置</font><font style="color:black;">Drawing Method </font><font style="color:black;">为</font><font style="color:black;"> </font><font style="color:black;">cpk</font><font style="color:black;">，</font><font style="color:black;">Coloring Method </font><font style="color:black;">为</font><font style="color:black;"> </font><font style="color:black;">colorid</font><font style="color:black;">，并选择选</font><font style="color:black;">“</font><font style="color:black;">1 red</font><font style="color:black;">”</font><font style="color:black;">（红色），</font><font style="color:black;">Selected Atoms </font><font style="color:black;">为</font><font style="color:black;">“</font><font style="color:black;">resname PRO</font><font style="color:black;">”</font><font style="color:black;">，回车（或点击右下角</font><font style="color:black;"> </font><font style="color:black;">Apply </font><font style="color:black;">按钮）。设置两个</font><font style="color:black;"> </font><font style="color:black;">representations </font><font style="color:black;">后，蛋白质中的所有脯氨酸就以红色的原子球的形式叠加显示在以二级结构着色的碳骨架上了。</font>
+**7****、****representations****（简称**** ****rep****）：**设置第一个 rep：当前处于编辑状态下的 rep 背景色为浅绿色。设置 Drawing Method为 NewCartoon，Coloring Method 为 Secondary Structure，Selected Atoms为“all”，回车（或点击右下角 Apply 按钮）。创建第二个 rep：点击 Create Rep。点击后，复制产生了和第一个一摸一样的第二个 rep。浅绿色背景自动跳转到第二个 rep，即目前第二个 rep 处于可编辑状态。设置Drawing Method 为 cpk，Coloring Method 为 colorid，并选择选“1 red”（红色），Selected Atoms 为“resname PRO”，回车（或点击右下角 Apply 按钮）。设置两个 representations 后，蛋白质中的所有脯氨酸就以红色的原子球的形式叠加显示在以二级结构着色的碳骨架上了。
 
 ![1604969313470-df6f82ee-0e5f-4817-9eb8-76804acd8cf7.png](./img/RlF9XutPxSSSW6YN/1604969313470-df6f82ee-0e5f-4817-9eb8-76804acd8cf7-656555.png)
 
-<font style="color:black;">图</font><font style="color:black;">4.20 </font><font style="color:black;">设置两个</font><font style="color:black;"> </font><font style="color:black;">representations</font>
+图4.20 设置两个 representations
 
-<font style="color:black;">创建第三个</font><font style="color:black;">rep</font><font style="color:black;">：点击</font><font style="color:black;"> </font><font style="color:black;">Create Rep</font><font style="color:black;">。设置</font><font style="color:black;"> </font><font style="color:black;">Drawing Method </font><font style="color:black;">为</font><font style="color:black;"> </font><font style="color:black;">Surface</font><font style="color:black;">，</font><font style="color:black;">Coloring Method </font><font style="color:black;">为</font><font style="color:black;"> </font><font style="color:black;">colorid</font><font style="color:black;">，并选择选</font><font style="color:black;">“</font><font style="color:black;">8 white</font><font style="color:black;">”</font><font style="color:black;">（白色），</font><font style="color:black;">Selected Atoms </font><font style="color:black;">为</font><font style="color:black;">“</font><font style="color:black;">all</font><font style="color:black;">”</font><font style="color:black;">，回车（或点击右下角</font><font style="color:black;"> </font><font style="color:black;">Apply </font><font style="color:black;">按钮）。此时，可以看到填满肉的蛋白质，也就是蛋白质的外表面。继续设置</font><font style="color:black;"> </font><font style="color:black;">Coloring Method </font><font style="color:black;">右侧的</font><font style="color:black;"> </font><font style="color:black;">Material</font><font style="color:black;">（材质）为</font><font style="color:black;"> </font><font style="color:black;">Transparent</font><font style="color:black;">（透明材质）。如果显卡支持，可以打开</font><font style="color:black;"> </font><font style="color:black;">GLSL </font><font style="color:black;">显示模式：主窗口中点</font><font style="color:black;"> </font><font style="color:black;">Display</font><font style="color:black;"></font><font style="color:black;">Rendermode</font><font style="color:black;"></font><font style="color:black;">选中</font><font style="color:black;"> </font><font style="color:black;">GLSL</font><font style="color:black;">。</font><font style="color:black;">GLSL </font><font style="color:black;">打开后的</font><font style="color:black;"> </font><font style="color:black;">Transparent Surface </font><font style="color:black;">变得更加柔美了（图</font><font style="color:black;">4.21</font><font style="color:black;">）。</font>
+创建第三个rep：点击 Create Rep。
+设置 Drawing Method 为 Surface，Coloring Method 为 colorid，并选择选“8 white”（白色），Selected Atoms 为“all”，回车（或点击右下角 Apply 按钮）。
+此时，可以看到填满肉的蛋白质，也就是蛋白质的外表面。
+继续设置 Coloring Method 右侧的 Material（材质）为 Transparent（透明材质）。
+如果显卡支持，可以打开 GLSL 显示模式：主窗口中点 DisplayRendermode选中 GLSL。
+GLSL 打开后的 Transparent Surface 变得更加柔美了（图4.21）。
 
 ![1604969313659-c0bb66c3-3f90-455b-bcb3-8a5afb47b05e.png](./img/RlF9XutPxSSSW6YN/1604969313659-c0bb66c3-3f90-455b-bcb3-8a5afb47b05e-744365.png)
 
-<font style="color:black;">图</font><font style="color:black;">4.21  </font><font style="color:black;">设置三个</font><font style="color:black;"> </font><font style="color:black;">representations </font><font style="color:black;">及</font><font style="color:black;"> </font><font style="color:black;">GLSL </font><font style="color:black;">显示模式</font>
+图4.21  设置三个 representations 及 GLSL 显示模式
 
-<font style="color:black;">如果要删除某一个</font><font style="color:black;">rep</font><font style="color:black;">，比如删除第二个</font><font style="color:black;">rep</font><font style="color:black;">，需要先选中它（选中后背景色变为浅绿色），再点击</font><font style="color:black;"> </font><font style="color:black;">Delete Rep</font><font style="color:black;">，就删掉了。或者你可以双击某一个</font><font style="color:black;"> </font><font style="color:black;">rep</font><font style="color:black;">，比如双击第三个</font><font style="color:black;">rep</font><font style="color:black;">，将其暂时隐藏，等需要的时候再双击它取消隐藏（图</font><font style="color:black;">4.22</font><font style="color:black;">）。</font>
+如果要删除某一个rep，比如删除第二个rep，需要先选中它（选中后背景色变为浅绿色），再点击 Delete Rep，就删掉了。或者你可以双击某一个 rep，比如双击第三个rep，将其暂时隐藏，等需要的时候再双击它取消隐藏（图4.22）。
 
 ![1604969314050-15715d93-2c45-4743-981c-fdbadd15d7b1.png](./img/RlF9XutPxSSSW6YN/1604969314050-15715d93-2c45-4743-981c-fdbadd15d7b1-042208.png)
 
-<font style="color:black;">图</font><font style="color:black;">4.22  </font><font style="color:black;">删除和隐藏</font><font style="color:black;"> </font><font style="color:black;">representation</font>
+图4.22  删除和隐藏 representation
 
-**<font style="color:black;">8</font>\*\*\*\*<font style="color:black;">、保存与打开：</font>**<font style="color:black;">当把蛋白质结构的显示效果调整到比较满意的状态后，可以保存当前所有的</font><font style="color:black;">representations</font><font style="color:black;">（注意保存的是显示状态，而不是结构）：主窗口中点击</font><font style="color:black;"> </font><font style="color:black;">File</font><font style="color:black;">→</font><font style="color:black;">Save Visualization State</font><font style="color:black;">→</font><font style="color:black;">保存在桌面上，起名叫</font><font style="color:black;"> </font><font style="color:black;">mystate.vmd</font><font style="color:black;">。接下来关闭</font><font style="color:black;"> </font><font style="color:black;">VMD </font><font style="color:black;">再重新打开。这次我们不需要</font><font style="color:black;"> </font><font style="color:black;">Load </font><font style="color:black;">蛋白质结构，分别设置三个</font><font style="color:black;"> </font><font style="color:black;">rep</font><font style="color:black;">，我们只需要直接载入刚刚保存的</font><font style="color:black;">mystate.vmd </font><font style="color:black;">，</font><font style="color:black;"> </font><font style="color:black;">即可恢复刚刚的显示状态：主窗口中点击</font><font style="color:black;">File</font><font style="color:black;">→</font><font style="color:black;"> </font><font style="color:black;">LoadVisualization State</font><font style="color:black;">→</font><font style="color:black;">找到并打开</font><font style="color:black;">mystate.vmd</font><font style="color:black;">。这时，之前保存的显示状态就自动显示出来了（图</font><font style="color:black;">4.23</font><font style="color:black;">）。</font>
+**8\*\*\*\*、保存与打开：**当把蛋白质结构的显示效果调整到比较满意的状态后，可以保存当前所有的representations（注意保存的是显示状态，而不是结构）：主窗口中点击 File→Save Visualization State→保存在桌面上，起名叫 mystate.vmd。接下来关闭 VMD 再重新打开。这次我们不需要 Load 蛋白质结构，分别设置三个 rep，我们只需要直接载入刚刚保存的mystate.vmd ， 即可恢复刚刚的显示状态：主窗口中点击File→ LoadVisualization State→找到并打开mystate.vmd。这时，之前保存的显示状态就自动显示出来了（图4.23）。
 
 ![1604969314214-1ce023a8-ee88-4235-8df2-7cf426b2f85c.png](./img/RlF9XutPxSSSW6YN/1604969314214-1ce023a8-ee88-4235-8df2-7cf426b2f85c-145247.png)
 
-<font style="color:black;">图</font><font style="color:black;">4.23 </font><font style="color:black;">保存和载入显示状态</font>
+图4.23 保存和载入显示状态
 
-**<font style="color:black;">9</font>****<font style="color:black;">、调换背景颜色（图</font>****<font style="color:black;">4.24</font>\*\*\*\*<font style="color:black;">）：</font>**<font style="color:black;">主窗口中点击</font><font style="color:black;"> </font><font style="color:black;">Graphics</font><font style="color:black;">→</font><font style="color:black;">Colors</font><font style="color:black;">→</font><font style="color:black;">弹出</font><font style="color:black;"> </font><font style="color:black;">Color Controls</font><font style="color:black;">颜色控制窗口</font><font style="color:black;">→</font><font style="color:black;">Categories</font><font style="color:black;">选</font><font style="color:black;">Display</font><font style="color:black;">→</font><font style="color:black;">Names </font><font style="color:black;">选</font><font style="color:black;"> </font><font style="color:black;">Background</font><font style="color:black;">→</font><font style="color:black;">Colors</font><font style="color:black;">选</font><font style="color:black;">8 white</font><font style="color:black;">。</font>
+**9****、调换背景颜色（图****4.24\*\*\*\*）：**主窗口中点击 Graphics→Colors→弹出 Color Controls颜色控制窗口→Categories选Display→Names 选 Background→Colors选8 white。
 
 ![1604969314596-572126d2-cf9d-4971-8dcf-c1a130143d28.png](./img/RlF9XutPxSSSW6YN/1604969314596-572126d2-cf9d-4971-8dcf-c1a130143d28-941132.png)
 
-<font style="color:black;">图</font><font style="color:black;">4.24  </font><font style="color:black;">Color Controls </font><font style="color:black;">窗口调换颜色方案</font>
+图4.24  Color Controls 窗口调换颜色方案
 
-<font style="color:black;">Color Controls </font><font style="color:black;">窗口里可以调整各种</font><font style="color:black;">VMD </font><font style="color:black;">默认的颜色方案。比如</font><font style="color:black;">Coloring Method</font><font style="color:black;">选</font><font style="color:black;">Name</font><font style="color:black;">的时候，默认的颜色方案是：氢原子白色，氧原子红色，碳原子青色等。这里，你可以根据需要把它们设置成其他颜色。</font>
+Color Controls 窗口里可以调整各种VMD 默认的颜色方案。比如Coloring Method选Name的时候，默认的颜色方案是：氢原子白色，氧原子红色，碳原子青色等。这里，你可以根据需要把它们设置成其他颜色。
 
-**<font style="color:black;">10</font>\*\*\*\*<font style="color:black;">、隐藏坐标轴：</font>**<font style="color:black;">主窗口中点击</font><font style="color:black;"> D</font><font style="color:black;">isplay</font><font style="color:black;">→</font><font style="color:black;">Axes</font><font style="color:black;">→</font><font style="color:black;">off</font><font style="color:black;">。</font>
+**10\*\*\*\*、隐藏坐标轴：**主窗口中点击 Display→Axes→off。
 
-**<font style="color:black;">11</font>****<font style="color:black;">、</font>****<font style="color:black;">显示</font>****<font style="color:black;">Lable</font>****<font style="color:black;">：</font>**<font style="color:black;">有时我们需要标记出某些氨基酸的序号或原子的名称（图</font><font style="color:black;">4.25</font><font style="color:black;">）。主窗口中点击</font><font style="color:black;"> </font><font style="color:black;">Mouse</font><font style="color:black;">→</font><font style="color:black;">Lable</font><font style="color:black;">→</font><font style="color:black;">Atom</font><font style="color:black;">。把鼠标模式设置为</font><font style="color:black;">Lable</font><font style="color:black;">模式，让它标记原子。此时，鼠标变为十字。接下来在显示窗口中，要标记哪个原子就在哪里点一下。点击后出现文本显示的氨基酸名字、氨基酸序号以及被点击的原子的名字。</font>
+**11****、****显示****Lable****：**有时我们需要标记出某些氨基酸的序号或原子的名称（图4.25）。主窗口中点击 Mouse→Lable→Atom。把鼠标模式设置为Lable模式，让它标记原子。此时，鼠标变为十字。接下来在显示窗口中，要标记哪个原子就在哪里点一下。点击后出现文本显示的氨基酸名字、氨基酸序号以及被点击的原子的名字。
 
 ![1604969314768-1c451f10-76ba-41ae-8422-dacea8649172.png](./img/RlF9XutPxSSSW6YN/1604969314768-1c451f10-76ba-41ae-8422-dacea8649172-460779.png)
 
-<font style="color:black;">图</font><font style="color:black;">4.25 </font><font style="color:black;">显示</font><font style="color:black;">Lable</font>
+图4.25 显示Lable
 
-**<font style="color:black;">12</font>****<font style="color:black;">、调整</font>****<font style="color:black;"> Lable</font>\*\*\*\*<font style="color:black;">：</font>**
+**12****、调整**** Lable\*\*\*\*：**
 
-<font style="color:black;">1</font><font style="color:black;">）改变字体颜色（图</font><font style="color:black;">4.26</font><font style="color:black;">）：主窗口中点击</font><font style="color:black;"> </font><font style="color:black;">Graphics</font><font style="color:black;">→</font><font style="color:black;">Colors</font><font style="color:black;">→</font><font style="color:black;">弹出</font><font style="color:black;"> </font><font style="color:black;">Color Controls</font><font style="color:black;">颜色控制窗口</font><font style="color:black;">→</font><font style="color:black;">Categories </font><font style="color:black;">选</font><font style="color:black;"> </font><font style="color:black;">Lable</font><font style="color:black;">→</font><font style="color:black;">Names </font><font style="color:black;">选</font><font style="color:black;"> </font><font style="color:black;">Atoms</font><font style="color:black;">→</font><font style="color:black;">Colors</font><font style="color:black;">选</font><font style="color:black;">16 black</font><font style="color:black;">。</font>
+1）改变字体颜色（图4.26）：主窗口中点击 Graphics→Colors→弹出 Color Controls颜色控制窗口→Categories 选 Lable→Names 选 Atoms→Colors选16 black。
 
 ![1604969315105-9c16c70a-1ae8-4300-89c1-ec58bb1e77c0.png](./img/RlF9XutPxSSSW6YN/1604969315105-9c16c70a-1ae8-4300-89c1-ec58bb1e77c0-573730.png)
 
-<font style="color:black;">图</font><font style="color:black;">4.26 Color Controls </font><font style="color:black;">窗口改变</font><font style="color:black;"> </font><font style="color:black;">Lable </font><font style="color:black;">字体颜色</font>
+图4.26 Color Controls 窗口改变 Lable 字体颜色
 
-<font style="color:black;">2</font><font style="color:black;">）改变字体大小</font><font style="color:black;">/</font><font style="color:black;">粗细（图</font><font style="color:black;">4.27</font><font style="color:black;">）：主窗口中点击</font><font style="color:black;">Graphics</font><font style="color:black;">→</font><font style="color:black;">Lables</font><font style="color:black;">→</font><font style="color:black;">弹出</font><font style="color:black;"> </font><font style="color:black;">Lable </font><font style="color:black;">窗口</font><font style="color:black;">→</font><font style="color:black;">Global Properties </font><font style="color:black;">标签下设置</font><font style="color:black;"> </font><font style="color:black;">Text Size </font><font style="color:black;">改变字体大小，</font><font style="color:black;">Thickness </font><font style="color:black;">改变粗细。</font>
+2）改变字体大小/粗细（图4.27）：主窗口中点击Graphics→Lables→弹出 Lable 窗口→Global Properties 标签下设置 Text Size 改变字体大小，Thickness 改变粗细。
 
-<font style="color:black;">3</font><font style="color:black;">）改变显示位置和内容（图</font><font style="color:black;">4.28</font><font style="color:black;">）：主窗口中点击</font><font style="color:black;"> </font><font style="color:black;">Graphics</font><font style="color:black;">→</font><font style="color:black;">Lables</font><font style="color:black;">→</font><font style="color:black;">弹出</font><font style="color:black;"> </font><font style="color:black;">Lable </font><font style="color:black;">窗口</font><font style="color:black;">→</font><font style="color:black;">Properties </font><font style="color:black;">标签下</font><font style="color:black;"></font><font style="color:black;">选中要调整的</font><font style="color:black;"> </font><font style="color:black;">Lable</font><font style="color:black;">→</font><font style="color:black;">按住鼠标左键在</font><font style="color:black;"> </font><font style="color:black;">Offset </font><font style="color:black;">坐标系内移动来改变</font><font style="color:black;"> </font><font style="color:black;">Lable </font><font style="color:black;">的位置</font><font style="color:black;"></font><font style="color:black;">写入</font><font style="color:black;"> </font><font style="color:black;">Format </font><font style="color:black;">来改变</font><font style="color:black;"> </font><font style="color:black;">Lable </font><font style="color:black;">的内容。默认</font><font style="color:black;"> </font><font style="color:black;">Format </font><font style="color:black;">为：</font><font style="color:black;">%R</font><font style="color:black;">（氨基酸名字）</font><font style="color:black;">%d</font><font style="color:black;">（氨基酸序号）</font><font style="color:black;">:%a</font><font style="color:black;">（原子名字）。比如，只想显示氨基酸名字和编号，删掉</font><font style="color:black;">“</font><font style="color:black;">:%a</font><font style="color:black;">”</font><font style="color:black;">这部分代表原子信息的代码即可。</font>
-
-<font style="color:black;"> </font>
+3）改变显示位置和内容（图4.28）：主窗口中点击 Graphics→Lables→弹出 Lable 窗口→Properties 标签下选中要调整的 Lable→按住鼠标左键在 Offset 坐标系内移动来改变 Lable 的位置写入 Format 来改变 Lable 的内容。默认 Format 为：%R（氨基酸名字）%d（氨基酸序号）:%a（原子名字）。比如，只想显示氨基酸名字和编号，删掉“:%a”这部分代表原子信息的代码即可。
 
 ![1604969315279-1be91064-a69b-40ab-95af-c361941e420f.png](./img/RlF9XutPxSSSW6YN/1604969315279-1be91064-a69b-40ab-95af-c361941e420f-319041.png)
 
-<font style="color:black;">图</font><font style="color:black;">4.27  Lable </font><font style="color:black;">窗口改变</font><font style="color:black;"> </font><font style="color:black;">Lable </font><font style="color:black;">字体大小</font><font style="color:black;">/</font><font style="color:black;">粗细</font>
+图4.27  Lable 窗口改变 Lable 字体大小/粗细
 
 ![1604969315666-ee2aa9b8-d06e-4453-b796-b9afd5c3d389.png](./img/RlF9XutPxSSSW6YN/1604969315666-ee2aa9b8-d06e-4453-b796-b9afd5c3d389-734780.png)
 
-<font style="color:black;">图</font><font style="color:black;">4.28  Lable </font><font style="color:black;">窗口改变</font><font style="color:black;"> </font><font style="color:black;">Lable </font><font style="color:black;">位置和内容</font>
+图4.28  Lable 窗口改变 Lable 位置和内容
 
-**<font style="color:black;">13</font>\*\*\*\*<font style="color:black;">、保存结构图：</font>**
+**13\*\*\*\*、保存结构图：**
 
-<font style="color:black;">以刚刚</font><font style="color:black;">bpti.pdb </font><font style="color:black;">这个蛋白质结构文件为例，设置了三个</font><font style="color:black;"> representations</font><font style="color:black;">，添加并调整了</font><font style="color:black;">Lable</font><font style="color:black;">，得到了最终的蛋白质</font><font style="color:black;">3D </font><font style="color:black;">结构（图</font><font style="color:black;">4.29</font><font style="color:black;">）。最后要做的就是保存结构图片。屏幕截图是较为方便快捷的方法，但是所得图片分辨率不高。如果想要高质量的图片，可以用主窗口下的</font><font style="color:black;">File</font><font style="color:black;"></font><font style="color:black;">Render</font><font style="color:black;"></font><font style="color:black;">弹出</font><font style="color:black;"> File Render Controls </font><font style="color:black;">窗口。</font><font style="color:black;">File Render Controls </font><font style="color:black;">窗口里可以选择多种图片导出方式。</font>
+以刚刚bpti.pdb 这个蛋白质结构文件为例，设置了三个 representations，添加并调整了Lable，得到了最终的蛋白质3D 结构（图4.29）。最后要做的就是保存结构图片。屏幕截图是较为方便快捷的方法，但是所得图片分辨率不高。如果想要高质量的图片，可以用主窗口下的FileRender弹出 File Render Controls 窗口。File Render Controls 窗口里可以选择多种图片导出方式。
 
 ![1604969316147-50e3d28c-0632-442f-99f1-7c15ee93d674.png](./img/RlF9XutPxSSSW6YN/1604969316147-50e3d28c-0632-442f-99f1-7c15ee93d674-086415.png)
 
-<font style="color:black;">图</font><font style="color:black;">4.29  bpti.pdb </font><font style="color:black;">的最终结构图片</font>
+图4.29  bpti.pdb 的最终结构图片
 
 <https://novopro.cn/tools/molstar.html>
 
-
-> 更新: 2021-01-31 18:46:13  
+> 更新: 2021-01-31 18:46:13
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/xz134k>

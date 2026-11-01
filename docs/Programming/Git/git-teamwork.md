@@ -26,13 +26,11 @@ git clone <eesast.url> --origin eesast <project_new_name>
 
 ### 进入clone后的仓库
 
-
 ```shell
 cd <project>
 ```
 
 ### 添加自己的远程仓库
-
 
 ```shell
 git remote add yxj <yxj.url>

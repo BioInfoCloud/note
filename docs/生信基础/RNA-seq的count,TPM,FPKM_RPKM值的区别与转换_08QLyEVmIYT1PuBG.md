@@ -11,16 +11,16 @@ RNA-seq的counts值，RPKM, FPKM, TPM 的异同
 基因长度：同一条件下，不同的基因长度产生不对等的read读数，基因越长，该基因的read读数越高。
 
 # **1.Count值**
+
 对给定的基因组参考区域，计算比对上的read数，又称为raw count（RC）。在RNAseq数据中，raw reads count一般是指mapped到基因外显子区域的reads数目。
 
 ![1702200828593-670569e4-1a85-47d8-a634-a394082fdac2.png](./img/08QLyEVmIYT1PuBG/1702200828593-670569e4-1a85-47d8-a634-a394082fdac2-485177.png)
 
+# 2.RPKM/FPKM
 
-
-# 2.RPKM/FPKM 
 FPKM(Fragment Per Kilobase of transcript, per Million mapped reads）：每千碱基片段每百万映射读取的 reads 数)，是针对双端测序的一个normalization方法。通常来讲，当paired reads同时匹配到一个位置，记为fragment(注：即便是双端测序，RPKM也不完全是FPKM的2倍)。
 
-![1702200952554-98b7f09a-b8ef-4a5b-8f52-8883d204d129.png](./img/08QLyEVmIYT1PuBG/1702200952554-98b7f09a-b8ef-4a5b-8f52-8883d204d129-468776.png)    
+![1702200952554-98b7f09a-b8ef-4a5b-8f52-8883d204d129.png](./img/08QLyEVmIYT1PuBG/1702200952554-98b7f09a-b8ef-4a5b-8f52-8883d204d129-468776.png)
 
 **RPKM: Reads Per Kilobase of exon model per Million mapped reads (每千个碱基的转录每百万映射读取的reads)**
 
@@ -33,13 +33,16 @@ FPKM(Fragment Per Kilobase of transcript, per Million mapped reads）：每千�
 **RPKM与FPKM的区别**：RPKM值适用于单末端RNA-seq实验数据，FPKM适用于双末端RNA-seq测序数据。
 
 # **3.TPM (Transcript per million)**
+
 TPM（Transcripts Per Million） 是一种常用的基因表达量归一化方法，它将基因的表达量调整为每百万条转录本的数量。TPM 值考虑了基因的长度和测序深度，通过将每个基因的 Counts 值除以其长度，并进行适当的归一化，将基因的表达量转换为每百万转录本数，以便进行样本间的比较和分析。TPM 值消除了样本间测序深度的差异和基因长度的影响。
 
- ![1702201133439-8661f5aa-caab-4420-adb7-53589546960b.png](./img/08QLyEVmIYT1PuBG/1702201133439-8661f5aa-caab-4420-adb7-53589546960b-225671.png)            
+ ![1702201133439-8661f5aa-caab-4420-adb7-53589546960b.png](./img/08QLyEVmIYT1PuBG/1702201133439-8661f5aa-caab-4420-adb7-53589546960b-225671.png)
 
 TPM的计算方法也同RPKM/FPKM类似，首先使用式2计算每个基因的表达值，去除基因长度的影响。随后计算每个基因的表达量的百分比，最后再乘以10^6，TPM可以看作是RPKM/FPKM值的百分比。
 
-直接说事情，我有一个基因A，它在这个样本的转录组数据中被测序而且mapping到基因组了 5000个的reads，而这个基因A长度是10K，我们总测序文库是50M，所以这个基因A的RPKM值是 5000除以10，再除以50，为10. 就是把基因的reads数量根据基因长度和样本测序文库来normalization 。那么它的TPM值是多少呢？这个时候这些信息已经不够了，需要知道该样本其它基因的RPKM值是多少，加上该样本有3个基因，另外两个基因的RPKM值是5和35，那么我们的基因A的RPKM值为10需要换算成TPM值就是 1,000,000 *10/(5+10+35)=200,000，看起来是不是有点大呀，其实主要是因为我们假设的基因太少了，一般个体里面都有两万多个基因的，总和会大大的增加，这样TPM值跟RPKM值差别不会这么恐怖的。
+直接说事情，我有一个基因A，它在这个样本的转录组数据中被测序而且mapping到基因组了 5000个的reads，而这个基因A长度是10K，我们总测序文库是50M，所以这个基因A的RPKM值是 5000除以10，再除以50，为10. 就是把基因的reads数量根据基因长度和样本测序文库来normalization 。
+那么它的TPM值是多少呢？
+这个时候这些信息已经不够了，需要知道该样本其它基因的RPKM值是多少，加上该样本有3个基因，另外两个基因的RPKM值是5和35，那么我们的基因A的RPKM值为10需要换算成TPM值就是 1,000,000 *10/(5+10+35)=200,000，看起来是不是有点大呀，其实主要是因为我们假设的基因太少了，一般个体里面都有两万多个基因的，总和会大大的增加，这样TPM值跟RPKM值差别不会这么恐怖的。
 
 相当于重新标准化的文库，保证每个样本中所有TPM的总和是相同的。
 
@@ -48,11 +51,13 @@ TPM的计算方法也同RPKM/FPKM类似，首先使用式2计算每个基因的�
 TPM的使用范围与RPKM/FPKM相同。
 
 # 4.三者之间的比较
+
 raw count作为原始的read计数矩阵是一个绝对值，而绝对值的特点是规模不同（基因长度、测序深度），不可以比较。进行这些基因标准化方法的目的是将count矩阵转变为相对值，去除技术偏差的影响，使后续的差异分析具有统计学的意义。
 
            ![1612327456384-40358485-b080-42bf-8484-207f44081d88.png](./img/08QLyEVmIYT1PuBG/1612327456384-40358485-b080-42bf-8484-207f44081d88-381946.png)
 
 # 5.数据之间的转换
+
 这里以一个案例来讲解，因为涉及到基因的长度，所以需要有每个基因的长度信息。对于有参考基因组的物种来说，可以从参考基因组的gtf文件中获取。
 
 ```r
@@ -68,7 +73,7 @@ exonic.gene.sizes <- lapply(exons.list.per.gene,
 #生成的geneID为ensemble编号
 eff_length <- do.call(rbind,lapply(exonic.gene.sizes, data.frame))
 eff_length <- data.frame(gene_id = rownames(eff_length),effLen = eff_length[,1])
-rownames(eff_length)<-eff_length$gene_id 
+rownames(eff_length)<-eff_length$gene_id
 rownames(eff_length) <- do.call(rbind,strsplit(as.character(eff_length$gene_id),'\\.'))[,1]
 head(eff_length)
 ```
@@ -78,8 +83,6 @@ head(eff_length)
 注意：这里指的基因长度指的是外显子，不包括内含子。
 
 上面得到的基因id是ensemble编号，需要进行ID转换。参考文章：生信中各种ID转换。
-
-
 
 这里我重点介绍这些数据的转换，我直接使用我已经处理好的人的基因的长度信息：
 
@@ -121,6 +124,7 @@ effLen = hsaGeneInfo$gene_length
 ![1702203112684-fae6a5a5-89dd-45c6-8da0-e26b72bb7196.png](./img/08QLyEVmIYT1PuBG/1702203112684-fae6a5a5-89dd-45c6-8da0-e26b72bb7196-038461.png)
 
 # （1）count转FPKM
+
 这里需要根据FPKM的公式定义一个函数：
 
 ```r
@@ -140,6 +144,7 @@ fpkms <- apply(count, 2, Counts2FPKM, effLen = effLen)
 ![1702203209824-db47bb8a-39f9-4f61-9ad2-6661575b1ecd.png](./img/08QLyEVmIYT1PuBG/1702203209824-db47bb8a-39f9-4f61-9ad2-6661575b1ecd-652471.png)
 
 # （2）count转TPM
+
 这里需要根据TPM的公式定义一个函数：
 
 ```r
@@ -181,7 +186,5 @@ head(trans_tpm3)[,1:2]
 
 整体来说，差别不是很大。
 
-
-
-> 更新: 2023-12-10 19:50:05  
+> 更新: 2023-12-10 19:50:05
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/gpiwl9>

@@ -2,15 +2,14 @@
 
 ![1610771743388-033b9e4f-52c6-4688-a1eb-aaca3764d63d.gif](./img/jdLPLhH72todZWSZ/1610771743388-033b9e4f-52c6-4688-a1eb-aaca3764d63d-480502.gif)
 
-[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#021EAA;"> | </font>**[**<font style="color:#021EAA;">GEO</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#021EAA;"> | </font>**[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#021EAA;"> | </font>**[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#021EAA;">| </font>**[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**TCGA**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338047035672526848&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**GEO**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1385753371944239106&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**文献阅读**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338481272770953216&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**数据库**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)[** **](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338487030963142656&__biz=MzA4NDAzODkzMA==#wechat_redirect)**| **[**理论知识**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1338473418617946113&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
-[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)**<font style="color:#021EAA;"> | </font>**[**<font style="color:#021EAA;">Bioconductor</font>**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)
+[**R语言**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337050529440104449&__biz=MzA4NDAzODkzMA==#wechat_redirect)** | **[**Bioconductor**](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1369789283514761218&__biz=MzA4NDAzODkzMA==#wechat_redirect)
 
 ---
 
-
-
-关于GEO数据库认识和在线使用教程，参考文章:[**G****EO数据库使用教程及在线数据分析工具**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263601&idx=1&sn=443d0dddebb12f21cfd976d50473856b&chksm=841ef60cb3697f1aecc6c310ee3a77e6182a728d5b6711a5cc8f49f0739feaba904f565ce176&scene=21#wechat_redirect)。关于GEO数据库的R包：[**<font style="color:#021EAA;">Bioconductor：GEOquery包</font>**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651266556&idx=1&sn=05fe660c9241f3a850584d73b5e8e665&chksm=841ef981b36970976f4310b412f53823afeda1e9a5be5c49c8213525db9cd0b852a96daba4cc&scene=21#wechat_redirect)**，**我们前面已经介绍，当然是官方案例，我们这里实战一下。
+关于GEO数据库认识和在线使用教程，参考文章:[**G****EO数据库使用教程及在线数据分析工具**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651263601&idx=1&sn=443d0dddebb12f21cfd976d50473856b&chksm=841ef60cb3697f1aecc6c310ee3a77e6182a728d5b6711a5cc8f49f0739feaba904f565ce176&scene=21#wechat_redirect)。
+关于GEO数据库的R包：[**Bioconductor：GEOquery包**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651266556&idx=1&sn=05fe660c9241f3a850584d73b5e8e665&chksm=841ef981b36970976f4310b412f53823afeda1e9a5be5c49c8213525db9cd0b852a96daba4cc&scene=21#wechat_redirect)**，**我们前面已经介绍，当然是官方案例，我们这里实战一下。
 
 大家可以先通过网页搜索GSE152509数据集，对该数据集有一个基本的认识：
 
@@ -76,8 +75,8 @@ gse1 <- gset1[[1]]##ExpressionSet
 ```plain
 > gse1
 ExpressionSet (storageMode: lockedEnvironment)
-assayData: 60901 features, 4 samples 
-  element names: exprs 
+assayData: 60901 features, 4 samples
+  element names: exprs
 protocolData: none
 phenoData
   sampleNames: GSM4616755 GSM4616756 GSM4616757 GSM4616758
@@ -121,7 +120,7 @@ assayData 中就一个表达数据，我们可以提取出来。
 9        7.6        7.7       11.5        5.6
 ```
 
-<font style="color:#0E9CE5;background-color:rgba(0, 0, 0, 0.03);">phenoData</font>中是表型数据。
+phenoData中是表型数据。
 
 ![1610771743541-c9bc65d3-d9d7-4fa3-8996-20a6491c435d.png](./img/jdLPLhH72todZWSZ/1610771743541-c9bc65d3-d9d7-4fa3-8996-20a6491c435d-508060.png)
 
@@ -168,16 +167,16 @@ metdata<-pData(gse1)
 
 ```plain
 > colnames(metdata)##phenodata信息很多，但用得上的很少
- [1] "title"                   "geo_accession"           "status"                 
- [4] "submission_date"         "last_update_date"        "type"                   
- [7] "channel_count"           "source_name_ch1"         "organism_ch1"           
-[10] "characteristics_ch1"     "molecule_ch1"            "extract_protocol_ch1"   
-[13] "label_ch1"               "label_protocol_ch1"      "taxid_ch1"              
-[16] "hyb_protocol"            "scan_protocol"           "data_processing"        
-[19] "platform_id"             "contact_name"            "contact_email"          
-[22] "contact_laboratory"      "contact_department"      "contact_institute"      
-[25] "contact_address"         "contact_city"            "contact_state"          
-[28] "contact_zip/postal_code" "contact_country"         "supplementary_file"     
+ [1] "title"                   "geo_accession"           "status"
+ [4] "submission_date"         "last_update_date"        "type"
+ [7] "channel_count"           "source_name_ch1"         "organism_ch1"
+[10] "characteristics_ch1"     "molecule_ch1"            "extract_protocol_ch1"
+[13] "label_ch1"               "label_protocol_ch1"      "taxid_ch1"
+[16] "hyb_protocol"            "scan_protocol"           "data_processing"
+[19] "platform_id"             "contact_name"            "contact_email"
+[22] "contact_laboratory"      "contact_department"      "contact_institute"
+[25] "contact_address"         "contact_city"            "contact_state"
+[28] "contact_zip/postal_code" "contact_country"         "supplementary_file"
 [31] "data_row_count"          "cell line:ch1"
 ```
 
@@ -241,7 +240,7 @@ exp2 <- exprs(gset2[[1]])
 fd2 <- gset2[["GSE7765-GPL96_series_matrix.txt.gz"]]@featureData@data
 ```
 
-其实这个就是探针的注释信息。<font style="color:#DD1144;background-color:rgba(0, 0, 0, 0.03);">GSE7765</font>获取的数据集中有2个数据对象。
+其实这个就是探针的注释信息。GSE7765获取的数据集中有2个数据对象。
 
 ![1610771743440-6e3eb52f-05b5-4f90-b6d1-791122c74023.png](./img/jdLPLhH72todZWSZ/1610771743440-6e3eb52f-05b5-4f90-b6d1-791122c74023-307136.png)
 
@@ -346,7 +345,7 @@ rownames(eset) <- eset[,"Gene symbol"]
 
 ```plain
 library(limma)
-eset <- eset[,-c(1:3)] 
+eset <- eset[,-c(1:3)]
 eset <- avereps(eset)
 ```
 
@@ -359,7 +358,7 @@ eset <- avereps(eset)
 
 ```plain
 > head(eset)
-       GSM188013     GSM188014     GSM188016     GSM188018     GSM188020     GSM188022    
+       GSM188013     GSM188014     GSM188016     GSM188018     GSM188020     GSM188022
 RFC2   "3.61440e+03" "3.56322e+03" " 2604.65000" "1.94571e+03" "3.37129e+03" "3.40666e+03"
 HSPA6  "1.03267e+03" "1.16415e+03" "  510.69200" "5.06120e+03" "4.52166e+02" "4.00477e+02"
 PAX8   "5.91780e+03" "6.82667e+03" " 4562.44000" "5.87013e+03" "3.86948e+03" "3.68044e+03"
@@ -387,7 +386,17 @@ PTPN21   135.289   100.369   353.498   229.589   230.143   340.561
 
 好了，我们接着说，为什么要进行log2转换。
 
-GEO中的Series Matrix File(s)通常是经过了标准化和对数转换的数据。但不全是。在实际应用的时候需要根据情况判断一下。对于芯片数据，可能作者将.cel的文件处理成未标准化的数据直接上传。一般来说，在判断counts是否需要重新标准化以及是否需要log2时，可以根据数值大小粗略估计。如果表达量的数值在50以内，通常是经过log2转化后的。如果数字在几百几千，则是未经转化的。因为2的几十次方已经非常巨大，如果2的几百次方，则不符合实际情况。我们上面的矩阵，我们肉眼就能看到数值都是个位数字，最大上千，这就是没有经过log处理过的，所以我们需要处理。前面处理的时候为什么+1？就是避免有0的值，取不了log值，所以加1再取log值，这对整体影响不大，这是个中学数学问题。
+GEO中的Series Matrix File(s)通常是经过了标准化和对数转换的数据。
+但不全是。
+在实际应用的时候需要根据情况判断一下。
+对于芯片数据，可能作者将.cel的文件处理成未标准化的数据直接上传。
+一般来说，在判断counts是否需要重新标准化以及是否需要log2时，可以根据数值大小粗略估计。
+如果表达量的数值在50以内，通常是经过log2转化后的。
+如果数字在几百几千，则是未经转化的。
+因为2的几十次方已经非常巨大，如果2的几百次方，则不符合实际情况。
+我们上面的矩阵，我们肉眼就能看到数值都是个位数字，最大上千，这就是没有经过log处理过的，所以我们需要处理。
+前面处理的时候为什么+1？
+就是避免有0的值，取不了log值，所以加1再取log值，这对整体影响不大，这是个中学数学问题。
 
 ```plain
 eset <- log2(eset +1)
@@ -408,9 +417,8 @@ PTPN21  7.090525  6.663473  8.469634  7.849180  7.852642  8.415999
 
 ![1610771743390-d38f7c67-ff03-4db4-ad99-84d3313ae4ad.png](./img/jdLPLhH72todZWSZ/1610771743390-d38f7c67-ff03-4db4-ad99-84d3313ae4ad-498947.png)
 
-
-
-好了，我们提取数据后，就可以进行后续的分析了，比如[**差异分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264898&idx=1&sn=f6287d98fe0b0fb48a96d2905ca0bb4f&chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&scene=21#wechat_redirect)、[**表达谱热图绘制**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264534&idx=1&sn=6d5ef1279972e730878d65742e56c855&chksm=841ef26bb3697b7d426e76b16fbe0365aa6ad5da7f86ca7d14dcb72ca47ada25ffba021d9ba8&scene=21#wechat_redirect)了。但差异分析是不是还要分组，所以我们还得知道每个GSM是那一组，比如对照和实验组。
+好了，我们提取数据后，就可以进行后续的分析了，比如[**差异分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264898&idx=1&sn=f6287d98fe0b0fb48a96d2905ca0bb4f&chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&scene=21#wechat_redirect)、[**表达谱热图绘制**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264534&idx=1&sn=6d5ef1279972e730878d65742e56c855&chksm=841ef26bb3697b7d426e76b16fbe0365aa6ad5da7f86ca7d14dcb72ca47ada25ffba021d9ba8&scene=21#wechat_redirect)了。
+但差异分析是不是还要分组，所以我们还得知道每个GSM是那一组，比如对照和实验组。
 
 我们提取表型数据。
 
@@ -429,9 +437,12 @@ GSM188020   DMSO treated MCF7 breast cancer cells [HG-U133A] Exp 3     GSM188020
 GSM188022 Dioxin treated MCF7 breast cancer cells [HG-U133A] Exp 3     GSM188022
 ```
 
-可以看的出来，DMSO处理组就是对照，Dioxin处理组就是实验组。就可以设计分组，进行差异分析了。如果我们获得的数据是原始的Counts数，可以利用[**edgeR包和DESeq2包进行差异分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264898&idx=1&sn=f6287d98fe0b0fb48a96d2905ca0bb4f&chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&scene=21#wechat_redirect)，可以参考我在TCGA数据库差异分析的文章，在哪里，我也说过，尽管那是TCGA数据库的教程，但仅仅是提取表达数据的方法不同，只要获取了表达矩阵，后面的分析都一样。下面是之前的文章：
+可以看的出来，DMSO处理组就是对照，Dioxin处理组就是实验组。
+就可以设计分组，进行差异分析了。
+如果我们获得的数据是原始的Counts数，可以利用[**edgeR包和DESeq2包进行差异分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264898&idx=1&sn=f6287d98fe0b0fb48a96d2905ca0bb4f&chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&scene=21#wechat_redirect)，可以参考我在TCGA数据库差异分析的文章，在哪里，我也说过，尽管那是TCGA数据库的教程，但仅仅是提取表达数据的方法不同，只要获取了表达矩阵，后面的分析都一样。
+下面是之前的文章：
 
-[**<font style="color:#021EAA;">一文就会TCGA数据库基因表达差异分析</font>**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264898&idx=1&sn=f6287d98fe0b0fb48a96d2905ca0bb4f&chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&scene=21#wechat_redirect)
+[**一文就会TCGA数据库基因表达差异分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651264898&idx=1&sn=f6287d98fe0b0fb48a96d2905ca0bb4f&chksm=841ef3ffb3697ae9505b6e795a1fe842b2dd32b82f6b5ed4c3e68569c0459bff57319c08e0e2&scene=21#wechat_redirect)
 
 我们这里介绍limma包进行差异表达分析。
 
@@ -466,8 +477,8 @@ attr(,"contrasts")$`factor(group_list)`
 ```plain
 ## 拟合模型
 fit <- lmFit(eset,design)
-fit2 <- contrasts.fit(fit, contrast.matrix) 
-fit2 <- eBayes(fit2) 
+fit2 <- contrasts.fit(fit, contrast.matrix)
+fit2 <- eBayes(fit2)
 DiffEG<-topTable(fit2, coef=1, n=Inf) %>% na.omit()
 ```
 
@@ -484,25 +495,21 @@ SLC7A5   2.470333 13.628775  7.188611 4.173250e-04 0.8704705 -4.117409
 
 完成差异分析，我们就可以利用火山图进行可视化了，得到的基因还可以进行下一步的分析，比如富集分析。相关文章：
 
-[**<font style="color:#021EAA;">FunRich数据库：一个主要用于基因和蛋白质的功能富集以及相互作用网络分析的独立的软件工具</font>**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265340&idx=1&sn=5c3608661698d2332b992269a8721833&chksm=841efd41b3697457f96ace4eecc682cbbbe3fdf3955f0060d3aafcdff0a2d85c225d5ce3f784&scene=21#wechat_redirect)
+[**FunRich数据库：一个主要用于基因和蛋白质的功能富集以及相互作用网络分析的独立的软件工具**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265340&idx=1&sn=5c3608661698d2332b992269a8721833&chksm=841efd41b3697457f96ace4eecc682cbbbe3fdf3955f0060d3aafcdff0a2d85c225d5ce3f784&scene=21#wechat_redirect)
 
-[**<font style="color:#021EAA;">为什么选择GSEA分析？和KEGG和GO分析有什么区别？</font>**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265618&idx=1&sn=3c5365ed2c437d3b7b034431ab4ac934&chksm=841efe2fb3697739ca349e9570aecdb0f4b0b5291c6dad8efcaca4777b631819e2951cdc5840&scene=21#wechat_redirect)
+[**为什么选择GSEA分析？和KEGG和GO分析有什么区别？**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651265618&idx=1&sn=3c5365ed2c437d3b7b034431ab4ac934&chksm=841efe2fb3697739ca349e9570aecdb0f4b0b5291c6dad8efcaca4777b631819e2951cdc5840&scene=21#wechat_redirect)
 
-[**<font style="color:#021EAA;">clusterProfiler包进行KEGG,GO,GSEA富集分析</font>**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651266484&idx=1&sn=b3fdeca6d8df8b6f4b2baae83b5dcd3c&chksm=841ef9c9b36970df3602f567018f10ccd037fa9742ed3b4020315914043a57432f1d9ae8de8a&scene=21#wechat_redirect)
+[**clusterProfiler包进行KEGG,GO,GSEA富集分析**](http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&mid=2651266484&idx=1&sn=b3fdeca6d8df8b6f4b2baae83b5dcd3c&chksm=841ef9c9b36970df3602f567018f10ccd037fa9742ed3b4020315914043a57432f1d9ae8de8a&scene=21#wechat_redirect)
 
 ---
 
-**<font style="color:#FF2941;">付费提示：</font>**设置付费仅仅是为了避免被复制，感觉对你有用就当是赞赏了，也当是对我的鼓励。
-
-
+**付费提示：**设置付费仅仅是为了避免被复制，感觉对你有用就当是赞赏了，也当是对我的鼓励。
 
 ![1610771743400-f236501a-c4b5-42b2-94f1-986eb42d53a1.png](./img/jdLPLhH72todZWSZ/1610771743400-f236501a-c4b5-42b2-94f1-986eb42d53a1-823061.png)
 
 提取码：yhkn
 
-如果码失效，后台回复：**<font style="color:#AB1942;">GEOquery-limma</font>**
+如果码失效，后台回复：**GEOquery-limma**
 
-
-
-> 更新: 2021-01-16 12:57:57  
+> 更新: 2021-01-16 12:57:57
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/uwgxsp>

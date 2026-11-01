@@ -58,7 +58,7 @@ CentOS可以去官网下载最新版本：https://www.centos.org/download/
 
 点击登录后，这里先点击立即登录。
 
-![img](https://qqadapt.qpic.cn/txdocdl/1004417556/B43DC2756EE494DFD0BB701B37A87961/0)       
+![img](https://qqadapt.qpic.cn/txdocdl/1004417556/B43DC2756EE494DFD0BB701B37A87961/0)
 
 同样，选择密码登录。
 
@@ -72,7 +72,13 @@ CentOS可以去官网下载最新版本：https://www.centos.org/download/
 
 # **一.登录服务器的软件——MobXterm**
 
-在实际开发或者计算的时候可以使用一些第三方的工具对远程的服务器进行控制。目前常用的Linux远程登录工具有：putty、xshell、secureCRT等等。**我推荐使用MobXterm。**secureCRT其实也是一款很强大的终端工具，但是，它毕竟是收费软件。Putty非常小巧，而且免费，因此也有不少人使用，但Putty真的不好用，不支持标签，开多个会话的话就需要开多个窗口，窗口切换也很不方便。当然还有其它终端工具，比如XShell，XShell6是一款高效专业的实用型免费SSH客户端。XShell5简单强悍，支持标签式的环境，动态端口转发，自定义键的映射关系，用户定义的按钮，VB脚本，显示2字节字符和国际语言支持UNICODE的终端。
+在实际开发或者计算的时候可以使用一些第三方的工具对远程的服务器进行控制。
+目前常用的Linux远程登录工具有：putty、xshell、secureCRT等等。
+**我推荐使用MobXterm。
+**secureCRT其实也是一款很强大的终端工具，但是，它毕竟是收费软件。
+Putty非常小巧，而且免费，因此也有不少人使用，但Putty真的不好用，不支持标签，开多个会话的话就需要开多个窗口，窗口切换也很不方便。
+当然还有其它终端工具，比如XShell，XShell6是一款高效专业的实用型免费SSH客户端。
+XShell5简单强悍，支持标签式的环境，动态端口转发，自定义键的映射关系，用户定义的按钮，VB脚本，显示2字节字符和国际语言支持UNICODE的终端。
 
 **MobaXterm——一款集万千于一身的全能型终端神器**，先说说这款神器的优点：
 
@@ -167,7 +173,7 @@ linux的文件系统是采用级层式的树状目录结构，在此结构中最
 - /bin, /sbin, /usr/bin, /usr/sbin: 这是系统预设的执行文件的放置目录，比如 ls 就是在/bin/ls 目录下的。值得提出的是，/bin, /usr/bin 是给系统用户使用的指令（除root外的通用户），而/sbin, /usr/sbin 则是给root使用的指令。
 - /var： 这是一个非常重要的目录，系统上跑了很多程序，那么每个程序都会有相应的日志产生，而这些日志就被记录到这个目录下，具体在/var/log 目录下，另外mail的预设放置也是在这里。
 
-参考：https://www.runoob.com/linux/linux-install.html 
+参考：https://www.runoob.com/linux/linux-install.html
 
 # **二.基本命令**
 
@@ -187,15 +193,9 @@ linux的文件系统是采用级层式的树状目录结构，在此结构中最
 
 例如：在root用户的家目录中输入：
 
-
-
 ```
 ls /
 ```
-
-
-
-
 
 则会看到以下的效果：
 
@@ -203,29 +203,17 @@ ls /
 
 我们查看一下etc目录下有什么文件。
 
-
-
 ```
  ls /etc/
 ```
-
-
-
-
 
 ![img](https://docimg5.docs.qq.com/image/Fk6hO5i7uXnh-t1LhL5T8w?w=1485&h=641)
 
 我们带参数使用， ls -l 表示以列表的形式列出指定路径下的文件夹和文件的名字例如：使用 ls –l /etc 的命令列出 /etc 目录中的文件夹和文件信息。
 
-
-
 ```
  ls -l /etc
 ```
-
-
-
-
 
 ![img](https://docimg8.docs.qq.com/image/jgg55uK21QDXZeaPP7QEyw?w=793&h=304)
 
@@ -255,15 +243,9 @@ ls -la [路径]，表示以列表的形式列出指定路径下的文件夹和�
 
 语法：
 
-
-
 ```
 #cd 需要切换到的路径
 ```
-
-
-
-
 
 路径可以是相对路径，也可以是绝对路径。
 
@@ -273,15 +255,9 @@ ls -la [路径]，表示以列表的形式列出指定路径下的文件夹和�
 
 先输入：
 
-
-
 ```
 cd etc
 ```
-
-
-
-
 
 ![img](https://docimg10.docs.qq.com/image/3XohefpRxaqpu24Kc3wTMg?w=606&h=79)
 
@@ -289,15 +265,9 @@ cd etc
 
 相对路径的写法：
 
-
-
 ```
 cd ../etc
 ```
-
-
-
-
 
 ![img](https://docimg4.docs.qq.com/image/MmiwetKt3sSSKrLdY8tOSQ?w=554&h=115)
 
@@ -305,27 +275,15 @@ cd ../etc
 
 绝对路径就是从根目录“/”开始写，如果从当前路径（/etc）,我们要切换到/root目录下，命令如下：
 
-
-
 ```
  cd /root/
 ```
 
-
-
-
-
 回到家目录最快的命令是：
-
-
 
 ```
  cd ~
 ```
-
-
-
-
 
 用 “~” 表示，就不需要输入完整路径。
 
@@ -345,7 +303,7 @@ Man表示Manual（手册），在使用Linux的时候因为其中的命令语法
 
 ### **(1) Ctrl + C 和Ctrl + Z**
 
-Ctrl + C 和Ctrl + Z 在Linux中不是复制和撤销，都是中断命令，但是他们的作用却不一样。Ctrl + C 是强制中断程序的执行，进程已经终止。 Ctrl + Z 的是将任务中止（暂停的意思），但是此任务并没有结束，他仍然在进程中他只是维持挂起的状态，用户可以使用fg/bg操作继续前台或后台的任务，fg命令重新启动前台被中断的任务，bg命令把被中断的任务放在后台执行。关于Ctrl + Z先不需要了解太多，知道有这么一个东西就行，后续介绍，这里**知道Ctrl + C就行，就是有时候有些命令一直执行，需要终止，你就直接按Ctrl + C就行啦**。    
+Ctrl + C 和Ctrl + Z 在Linux中不是复制和撤销，都是中断命令，但是他们的作用却不一样。Ctrl + C 是强制中断程序的执行，进程已经终止。 Ctrl + Z 的是将任务中止（暂停的意思），但是此任务并没有结束，他仍然在进程中他只是维持挂起的状态，用户可以使用fg/bg操作继续前台或后台的任务，fg命令重新启动前台被中断的任务，bg命令把被中断的任务放在后台执行。关于Ctrl + Z先不需要了解太多，知道有这么一个东西就行，后续介绍，这里**知道Ctrl + C就行，就是有时候有些命令一直执行，需要终止，你就直接按Ctrl + C就行啦**。
 
 ### **(2) ctrl+e**
 
@@ -409,15 +367,9 @@ Ctrl + C 和Ctrl + Z 在Linux中不是复制和撤销，都是中断命令，但
 
 命令：
 
-
-
 ```
 mv -i /data/bioinfo.txt /root/bioinfo.txt
 ```
-
-
-
-
 
 经过移动操作之后，原先目录下的bioinfo.txt就应不存在了。我们知道/root/目录下就有这个文件，加参数i，就会询问我们是否覆盖，输入y表示覆盖。
 
@@ -457,15 +409,9 @@ mv -i /data/bioinfo.txt /root/bioinfo.txt
 
 例如：在“/”目录下存在一个bioinfo.txt，现在需要对其进行重命名，将名称改为bioinfonotes.txt。命令如下：
 
-
-
 ```
 mv /root/bioinfo.txt /root/bioinfonotes.txt
 ```
-
-
-
-
 
 ![img](https://docimg9.docs.qq.com/image/rY4gMt2_EX5l0Nk-Mo8e4Q?w=683&h=192)
 
@@ -489,15 +435,9 @@ mv /root/bioinfo.txt /root/bioinfonotes.txt
 
 创建文件夹 BioInfoFiles
 
-
-
 ```
 mkdir BioInfoFiles
 ```
-
-
-
-
 
 ## **2.复制**
 
@@ -523,15 +463,9 @@ mkdir BioInfoFiles
 
 例如：将/data/目录下的RNASeqData目录，移动到当前目录的BioInfoFiles文件夹下（/root/BioInfoFiles）。
 
-
-
 ```
 mv /data/RNASeqData /root/BioInfoFiles
 ```
-
-
-
-
 
 ![img](https://docimg5.docs.qq.com/image/JnUeEqK0D8RrFq-5G1o6zA?w=635&h=207)
 
@@ -543,16 +477,10 @@ mv /data/RNASeqData /root/BioInfoFiles
 
 例如：删除当前目录（/root/）中的RNASeqData目录。
 
-
-
 ```
 [root@VM-0-2-centos ~]# rm -rf RNASeqData/
 [root@VM-0-2-centos ~]#
 ```
-
-
-
-
 
 ## **5.重命名**
 
@@ -562,15 +490,9 @@ mv /data/RNASeqData /root/BioInfoFiles
 
 ​	  例如：将当前目录下的BioInfoFiles目录重命名，新的名字叫做BioInfoData。
 
-
-
 ```
 mv BioInfoFiles BioInfoData
 ```
-
-
-
-
 
 ![img](https://docimg3.docs.qq.com/image/n4OfOmU8r1Oa56V80hJsug?w=580&h=127)
 
@@ -582,15 +504,9 @@ Vim是Linux下一款编辑器软件，它的地位等同于windows下的notepad�
 
 先将/etc/passwd复制一份，复制到当前的用户工作目录（/root），后期的vim操作都会在这个工作目录下进行修改。
 
-
-
 ```
 #cp /etc/passwd ./passwd
 ```
-
-
-
-
 
 ![img](https://docimg4.docs.qq.com/image/g7H5Gxl1HEUVESuv22zkbQ?w=638&h=269)
 
@@ -600,15 +516,9 @@ Vim是Linux下一款编辑器软件，它的地位等同于windows下的notepad�
 
 例如：打开当前目录下的passwd，则命令可以写成
 
-
-
 ```
 #vim ./passwd
 ```
-
-
-
-
 
 回车后就打开文件了。
 
@@ -620,29 +530,17 @@ Vim是Linux下一款编辑器软件，它的地位等同于windows下的notepad�
 
 命令：
 
-
-
 ```
 #vim +6 ./passwd
 ```
-
-
-
-
 
 提示：vim默认是不显示行号的，我的会显示，是因为我修改过配制文件，如果你的不显示，想在当前文件中显示出行号可以输入:set nu，然后按下回车就可以显示出行号，如下：
 
 第三种方式：#vim +/字符串 需要打开的文件（打开文件，之后高亮显示/后的字符串）
 
-
-
 ```
 vim +/login ./passwd
 ```
-
-
-
-
 
 例如：使用vim打开当前目录下的passwd文件，并且高亮显示“login”
 
@@ -668,41 +566,23 @@ vim +/login ./passwd
 
 ## **1.末行模式**
 
-保存语法： 
-
-
+保存语法：
 
 ```
 :w	（write）
 ```
 
-
-
-
-
 另存语法：
-
-
 
 ```
 :w 文件的路径
 ```
 
-
-
-
-
 退出语法：
-
-
 
 ```
 :q（quit）
 ```
-
-
-
-
 
 输入:wq，回车保存退出。
 
@@ -710,15 +590,9 @@ vim +/login ./passwd
 
 查找语法（末行模式下）：
 
-
-
 ```
 /字符串
 ```
-
-
-
-
 
 对于查找的结果，同样会和打开文件的第三种方式一样，进行高亮显示，可以使用N和n进行上一个和下一个结果的切换。
 
@@ -730,27 +604,15 @@ vim +/login ./passwd
 
 第一种情况，语法：
 
-
-
 ```
 :s/需要替换的字符串/替换成的字符串（表示替换当前光标所在的行的第一处符合条件的字符串）
 ```
 
-
-
-
-
 如果当前行没有要替换的内容，会有提示，比如光标在第一行，想查找login体会为logout。
-
-
 
 ```
 ：s/login/logout
 ```
-
-
-
-
 
 就会出现这样的提示：Pattern not found: login
 
@@ -760,41 +622,23 @@ vim +/login ./passwd
 
 第二种情况，语法：
 
-
-
 ```
 :s/需要替换的字符串/替换成的字符串/g	（替换光标所在行全部符合条件的地方，g表示global）
 ```
 
-
-
-
-
 例如：
-
-
 
 ```
 s/bin/BioInfoNotes/g
 ```
 
-
-
-
-
 ![img](https://docimg8.docs.qq.com/image/UyUpnLPGzJn2lRiCRCklbw?w=1019&h=861)
 
 第三种情况，语法：
 
-
-
 ```
 :%s/需要替换的字符串/替换成的字符串	（表示替换当前文档中每一行第一个符合条件的地方）
 ```
-
-
-
-
 
 例如：%s/bin/BioInfoNotes
 
@@ -802,27 +646,15 @@ s/bin/BioInfoNotes/g
 
 第四种情况，语法：
 
-
-
 ```
 :%s/需要替换的字符串/替换成的字符串/g	（替换整个文档中全部符合条件的地方）
 ```
 
-
-
-
-
 例如：
-
-
 
 ```
 %s/BioInfoNotes/bin/g
 ```
-
-
-
-
 
 ## **2.命令模式**
 
@@ -864,15 +696,9 @@ s/bin/BioInfoNotes/g
 
 修改vim的配置文件进行配置。Vim的配置文件在当前用户的家目录中（如果没有的话自己创建，文件名字叫做.vimrc）。然后在.vimrc文件中，进入编辑模式，然后输入set nu，输入完毕之后退出保存 。
 
-
-
 ```
  vim .vimrc
 ```
-
-
-
-
 
 ## **2.别名机制**
 
@@ -882,15 +708,9 @@ s/bin/BioInfoNotes/g
 
 ![img](https://docimg7.docs.qq.com/image/1c2L1qkXJADVko-3AfM2mg?w=640&h=463)
 
-
-
 ```
 vim .bashrc
 ```
-
-
-
-
 
 ![img](https://docimg2.docs.qq.com/image/i0gbjhXZVPZnwLJ3OzMc6Q?w=513&h=254)
 
@@ -948,15 +768,9 @@ vim .bashrc
 
 通过打开/etc/passwd文件可以查看到新增的用户。
 
-
-
 ```
 vim /etc/passwd
 ```
-
-
-
-
 
 ![img](https://docimg10.docs.qq.com/image/iMj4YMnLxqDeQgU8tVc5xw?w=1053&h=576)
 
@@ -1004,15 +818,9 @@ vim /etc/passwd
 
 例如：将yunsen用户的用户名，修改成BioInfoNotes。
 
-
-
 ```
 usermod -l BioInfoNotes yunsen
 ```
-
-
-
-
 
 ![img](https://docimg4.docs.qq.com/image/ZRcT161OqNH8K2OFUtfo3Q?w=630&h=87)
 
@@ -1042,15 +850,9 @@ usermod -l BioInfoNotes yunsen
 
 用户组添加完成之后也不会有任何的提示，此时我们可以查看用户组的管理文件，文件名叫做group，位置位于/etc/group。
 
-
-
 ```
  vim /etc/group
 ```
-
-
-
-
 
 ![img](https://docimg8.docs.qq.com/image/Ej-27rwMulOarHJ4W-Kkfg?w=693&h=227)
 
@@ -1080,15 +882,9 @@ group文件中每个颜色所表达的含义:
 
 例如：给创建好的用户组bioinfogroup进行重命名，新的名字叫BioInfoGroup。
 
-
-
 ```
 groupmod -n BioInfoGroup bioinfogroup
 ```
-
-
-
-
 
 ![img](https://docimg7.docs.qq.com/image/OLJn4EPA75FdPvY_YGlr3A?w=621&h=60)
 
@@ -1106,13 +902,9 @@ groupmod -n BioInfoGroup bioinfogroup
 
 注意：如果这个用户组中存在用户的话，则该用户组是无法直接删除的，如果需要删除的话，则可以先将组内的成员删除掉或者移动到别的组，然后才可以删除当前的用户组。
 
-
-
 ------
 
 **特别说明：**在Linux中只有超级管理员权限才能对用户和用户组进行设置，其他的用户一律没有权限设置。
-
-
 
 ------
 
@@ -1166,8 +958,6 @@ groupmod -n BioInfoGroup bioinfogroup
 
 我首先创建一个RNASeq-Counts.txt文件，
 
-
-
 ```
 [root@VM-0-2-centos ~]# touch RNASeq-Counts.txt
 [root@VM-0-2-centos ~]# ls -l
@@ -1178,27 +968,15 @@ drwxr-xr-x 3 root root 4096 Oct 27 20:41 BioInfoData
 -rw-r--r-- 1 root root    0 Nov  5 20:12 RNASeq-Counts.txt
 ```
 
-
-
-
-
 RNASeq-Counts.txt文件对于组合其他用户没有w权限，尝试设置一下。
-
-
 
 ```
 [root@VM-0-2-centos ~]# chmod g+w o+w RNASeq-Counts.txt
 chmod: cannot access ‘o+w’: No such file or directory
-[root@VM-0-2-centos ~]# 
+[root@VM-0-2-centos ~]#
 ```
 
-
-
-
-
 o+w没有发生改变，是因为我没有在中间加","号。换个文件改一下。
-
-
 
 ```
 [root@VM-0-2-centos ~]# chmod g+w,o+w RNASeq-Counts.txt
@@ -1208,16 +986,10 @@ drwxr-xr-x 3 root root 4096 Oct 27 20:41 BioInfoData
 -rw-r--r-- 1 root root    0 Oct 27 20:25 bioinfonotes.txt
 -rw-r--r-- 1 root root 1371 Oct 31 13:32 passwd
 -rw-rw-rw- 1 root root    0 Nov  5 20:12 RNASeq-Counts.txt
-[root@VM-0-2-centos ~]# 
+[root@VM-0-2-centos ~]#
 ```
 
-
-
-
-
 切换到普通用户[yunsen]，在普通用户家目录下创建RNASeq-Counts.txt 文件。
-
-
 
 ```
 [root@VM-0-2-centos ~]# su yunsen
@@ -1227,10 +999,6 @@ drwxr-xr-x 3 root root 4096 Oct 27 20:41 BioInfoData
 total 0
 -rw-rw-r-- 1 yunsen yunsen 0 Nov  5 20:21 RNASeq-Counts.txt
 ```
-
-
-
-
 
 ![img](https://docimg10.docs.qq.com/image/sWxpvf_8fTZJ3Q02dbqCvg?w=675&h=171)
 
@@ -1294,20 +1062,12 @@ chown：更改文件属主，也可以同时更改文件属组
 
 语法：
 
-
-
 ```
 chown [-R] 属主名 文件名
 chown [-R] 属主名：属组名 文件名
 ```
 
-
-
-
-
 ![img](https://docimg2.docs.qq.com/image/cpy0XvFfA3x4ndgY4FfKIg?w=789&h=334)
-
-
 
 ------
 
@@ -1317,7 +1077,18 @@ chown [-R] 属主名：属组名 文件名
 
 # **一.Linux的文件系统**
 
-文件系统就是操作系统（比如windows）管理和存储文件的软件机构。文件系统指文件存在的物理空间。通俗地说，没有文件系统，系统就不知道该怎么读取硬盘。文件系统的种类有很多，每一种文件系统的结构，逻辑，存取速度，灵活性，安全性，大小，等等都不一样。文件系统可以被使用在磁带，移动硬盘，闪存等地方。在Linux系统中，每个分区都是一个文件系统，都有自己的目录层次结构。Linux的最重要特征之一就是支持多种文件系统，这样它更加灵活，并可以和许多其它种操作系统共存。Virtual File System（虚拟文件系统）使得Linux可以支持多个不同的文件系统。由于系统已将Linux文件系统的所有细节进行了转换，所以Linux核心的其它部分及系统中运行的程序将看到统一的文件系统。Linux的虚拟文件系统允许用户同时能透明地安装许多不同的文件系统。虚拟文件系统是为Linux用户提供快速且高效的文件访问服务而设计的。总之，文件系统的类别有很多，也很复杂，又想弄明白文件系统的原理，需要学习的东西有很多，这里我只介绍Linux中几种文件系统格式。
+文件系统就是操作系统（比如windows）管理和存储文件的软件机构。
+文件系统指文件存在的物理空间。
+通俗地说，没有文件系统，系统就不知道该怎么读取硬盘。
+文件系统的种类有很多，每一种文件系统的结构，逻辑，存取速度，灵活性，安全性，大小，等等都不一样。
+文件系统可以被使用在磁带，移动硬盘，闪存等地方。
+在Linux系统中，每个分区都是一个文件系统，都有自己的目录层次结构。
+Linux的最重要特征之一就是支持多种文件系统，这样它更加灵活，并可以和许多其它种操作系统共存。
+Virtual File System（虚拟文件系统）使得Linux可以支持多个不同的文件系统。
+由于系统已将Linux文件系统的所有细节进行了转换，所以Linux核心的其它部分及系统中运行的程序将看到统一的文件系统。
+Linux的虚拟文件系统允许用户同时能透明地安装许多不同的文件系统。
+虚拟文件系统是为Linux用户提供快速且高效的文件访问服务而设计的。
+总之，文件系统的类别有很多，也很复杂，又想弄明白文件系统的原理，需要学习的东西有很多，这里我只介绍Linux中几种文件系统格式。
 
 随着Linux的不断发展，它所支持的文件格式系统也在迅速扩充。特别是Linux 2.4内核正式推出后，出现了大量新的文件系统，其中包括日志文件系统ext3、ReiserFS、XFSJFS和其它文件系统。Linux系统核心可以支持十多种文件系统类型：JFS、 ReiserFS、ext、ext2、ext3、ISO9660、XFS、Minx、MSDOS、UMSDOS、VFAT、NTFS、HPFS、NFS、 SMB、SysV、PROC等。
 
@@ -1333,29 +1104,74 @@ ext是第一个专门为开发的Linux的文件系统类型，叫做扩展文件
 
 ## **2.ext2**
 
-ext2是为解决ext文件系统的缺陷而设计的可扩展的、高性能的文件系统，它又被称为二级扩展文件系统。ext2是1993年发布的，设计者是Rey Card。它是Linux文件系统类型中使用最多的格式，并且在速度和CPU利用率上较为突出，是GNU/Linux系统中标准的文件系统。它存取文件的性能极好，对于中、小型的文件更显示出优势，这主要得益于其簇快取层的优良设计。ext2可以支持256字节的长文件名，其单一文件大小和文件系统本身的容量上限与文件系统本身的簇大小有关。在常见的Intel x86兼容处理器的系统中，簇最大为4KB，单一文件大小上限为2048GB, 而文件系统的容量上限为6384GB。尽管Linux可以支持种类繁多的文件系统，但是2000年以前几乎所有的Linux发行版都使用ext2作为默认的文件系统。　
+ext2是为解决ext文件系统的缺陷而设计的可扩展的、高性能的文件系统，它又被称为二级扩展文件系统。
+ext2是1993年发布的，设计者是Rey Card。
+它是Linux文件系统类型中使用最多的格式，并且在速度和CPU利用率上较为突出，是GNU/Linux系统中标准的文件系统。
+它存取文件的性能极好，对于中、小型的文件更显示出优势，这主要得益于其簇快取层的优良设计。
+ext2可以支持256字节的长文件名，其单一文件大小和文件系统本身的容量上限与文件系统本身的簇大小有关。
+在常见的Intel x86兼容处理器的系统中，簇最大为4KB，单一文件大小上限为2048GB, 而文件系统的容量上限为6384GB。
+尽管Linux可以支持种类繁多的文件系统，但是2000年以前几乎所有的Linux发行版都使用ext2作为默认的文件系统。
 
-ext2也有一些问题。由于它的设计者主要考虑的是文件系统性能方面的问题，而在写入文件内容的同时，并没有写入文件的meta- data（和文件有关的信息，例如权限、所有者及创建和访问时间）。换句话说，Linux先写入文件的内容，然后等到有空的时候才写入文件的meta- data。如果出现写入文件内容之后，但在写入文件的meta-data之前系统突然断电，就可能造成文件系统就会处于不一致的状态。在一个有大量文件操作的系统中，出现这种情况会导致很严重的后果。另外，由于目前Linux的 2.4内核所能使用的单一分割区最大只有2048GB，尽管文件系统的容量上限为6384G，但是实际上能使用的文件系统容量最多也只有2048GB。
+ext2也有一些问题。
+由于它的设计者主要考虑的是文件系统性能方面的问题，而在写入文件内容的同时，并没有写入文件的meta- data（和文件有关的信息，例如权限、所有者及创建和访问时间）。
+换句话说，Linux先写入文件的内容，然后等到有空的时候才写入文件的meta- data。
+如果出现写入文件内容之后，但在写入文件的meta-data之前系统突然断电，就可能造成文件系统就会处于不一致的状态。
+在一个有大量文件操作的系统中，出现这种情况会导致很严重的后果。
+另外，由于目前Linux的 2.4内核所能使用的单一分割区最大只有2048GB，尽管文件系统的容量上限为6384G，但是实际上能使用的文件系统容量最多也只有2048GB。
 
 ## **3.ext3**
 
 在讲解ext3、JFS、XFS、ReiserFS日志格式文件系统之前，先介绍一些日志式文件系统基础。
 
-日志式文件系统起源于Oracle、Sybase等大型数据库。由于数据库操作往往是由多个相关的、相互依赖的子操作组成，任何一个子操作的失败都意味着整个操作的无效性，对数据库数据的任何修改都要恢复到操作以前的状态。Linux日志式文件系统就是由此发展而来的。日志文件系统通过增加一个叫做日志的、新的数据结构来解决这个“fsck”问题。这个日志是位于磁盘上的结构。在对元数据做任何改变以前，文件系统驱动程序会向日志中写入一个条目，这个条目描述了它将要做些什么，所以日志文件具有可伸缩性和健壮性。在分区中保存日志记录文件好处是：文件系统写操作首先是对记录文件进行操作，若整个写操作由于某种原因(如系统掉电)而中断，则在下次系统启动时就会读日志记录文件的内容，恢复到没有完成的写操作，这个过程一般只需要两三分钟时间。
+日志式文件系统起源于Oracle、Sybase等大型数据库。
+由于数据库操作往往是由多个相关的、相互依赖的子操作组成，任何一个子操作的失败都意味着整个操作的无效性，对数据库数据的任何修改都要恢复到操作以前的状态。
+Linux日志式文件系统就是由此发展而来的。
+日志文件系统通过增加一个叫做日志的、新的数据结构来解决这个“fsck”问题。
+这个日志是位于磁盘上的结构。
+在对元数据做任何改变以前，文件系统驱动程序会向日志中写入一个条目，这个条目描述了它将要做些什么，所以日志文件具有可伸缩性和健壮性。
+在分区中保存日志记录文件好处是：文件系统写操作首先是对记录文件进行操作，若整个写操作由于某种原因(如系统掉电)而中断，则在下次系统启动时就会读日志记录文件的内容，恢复到没有完成的写操作，这个过程一般只需要两三分钟时间。
 
-ext3是由开放资源社区开发的日志文件系统，早期主要开发人员是Stephen Tweedie。ext3被设计成是ext2的升级版本，尽可能方便用户从ext2向ext3迁移。ext3在ext2的基础上加入了记录元数据的日志功能，努力保持向前和向后的兼容性，也就是在保有目前ext2的格式之下再加上日志功能。和ext2相比，ext3提供了更佳的安全性，这就是数据日志和元数据日志之间的不同。ext3是一种日志式文件系统，日志式文件系统的优越性在于由于文件系统都有快取层参与运作，如不使用时必须将文件系统卸下，以便将快取层的资料写回磁盘中。因此，每当系统要关机时，必须将其所有的文件系统全部卸下后才能进行关机。如果在文件系统尚未卸下前就关机 (如停电)，那么重开机后就会造成文件系统的资料不一致，故这时必须做文件系统的重整工作，将不一致与错误的地方修复。然而，这个过程是相当耗时的，特别是容量大的文件系统不能百分之百保证所有的资料都不会流失，特别在大型的服务器上可能会出现问题。除了与ext2兼容之外，ext3还通过共享ext2的元数据格式继承了ext2的其它优点。比如，ext3用户可以使用一个稳固的fsck工具。由于ext3基于ext2的代码，所以它的磁盘格式和ext2 的相同，这意味着一个干净卸装的ext3文件系统可以作为ext2文件系统毫无问题地重新挂装。如果现在使用的是ext2文件系统，并且对数据安全性要求很高，这里建议考虑升级使用ext3。
+ext3是由开放资源社区开发的日志文件系统，早期主要开发人员是Stephen Tweedie。
+ext3被设计成是ext2的升级版本，尽可能方便用户从ext2向ext3迁移。
+ext3在ext2的基础上加入了记录元数据的日志功能，努力保持向前和向后的兼容性，也就是在保有目前ext2的格式之下再加上日志功能。
+和ext2相比，ext3提供了更佳的安全性，这就是数据日志和元数据日志之间的不同。
+ext3是一种日志式文件系统，日志式文件系统的优越性在于由于文件系统都有快取层参与运作，如不使用时必须将文件系统卸下，以便将快取层的资料写回磁盘中。
+因此，每当系统要关机时，必须将其所有的文件系统全部卸下后才能进行关机。
+如果在文件系统尚未卸下前就关机 (如停电)，那么重开机后就会造成文件系统的资料不一致，故这时必须做文件系统的重整工作，将不一致与错误的地方修复。
+然而，这个过程是相当耗时的，特别是容量大的文件系统不能百分之百保证所有的资料都不会流失，特别在大型的服务器上可能会出现问题。
+除了与ext2兼容之外，ext3还通过共享ext2的元数据格式继承了ext2的其它优点。
+比如，ext3用户可以使用一个稳固的fsck工具。
+由于ext3基于ext2的代码，所以它的磁盘格式和ext2 的相同，这意味着一个干净卸装的ext3文件系统可以作为ext2文件系统毫无问题地重新挂装。
+如果现在使用的是ext2文件系统，并且对数据安全性要求很高，这里建议考虑升级使用ext3。
 
-ext3最大的缺点是，它没有现代文件系统所具有的、能提高文件数据处理速度和解压的高性能。此外，使用ext3文件系统要注意硬盘限额问题，在这个问题解决之前,不推荐在重要的企业应用上采用ext3＋Disk Quota（磁盘配额）。  
+ext3最大的缺点是，它没有现代文件系统所具有的、能提高文件数据处理速度和解压的高性能。此外，使用ext3文件系统要注意硬盘限额问题，在这个问题解决之前,不推荐在重要的企业应用上采用ext3＋Disk Quota（磁盘配额）。
 
-## **4.JFS** 
+## **4.JFS**
 
-JFS是一种提供日志的字节级文件系统。该文件系统主要是为满足服务器（从单处理器系统到高级多处理器和群集系统）的高吞吐量和可靠性需求而设计、开发的。JFS文件系统是为面向事务的高性能系统而开发的。在IBM的AIX系统上，JFS已经过较长时间的测试，结果表明它是可靠、快速和容易使用的。 2000年2月，IBM宣布在一个开放资源许可证下移植Linux版本的JFS文件系统。JFS也是一个有大量用户安装使用的企业级文件系统，具有可伸缩性和健壮性。与非日志文件系统相比，它的突出优点是快速重启能力，JFS能够在几秒或几分钟内就把文件系统恢复到一致状态。虽然JFS主要是为满足服务器（从单处理器系统到高级多处理器和群集系统）的高吞吐量和可靠性需求而设计的，但还可以用于想得到高性能和可靠性的客户机配置，因为在系统崩溃时JFS能提供快速文件系统重启时间，所以它是因特网文件服务器的关键技术。使用数据库日志处理技术，JFS能在几秒或几分钟之内把文件系统恢复到一致状态。而在非日志文件系统中，文件恢复可能花费几小时或几天。
+JFS是一种提供日志的字节级文件系统。
+该文件系统主要是为满足服务器（从单处理器系统到高级多处理器和群集系统）的高吞吐量和可靠性需求而设计、开发的。
+JFS文件系统是为面向事务的高性能系统而开发的。
+在IBM的AIX系统上，JFS已经过较长时间的测试，结果表明它是可靠、快速和容易使用的。
+ 2000年2月，IBM宣布在一个开放资源许可证下移植Linux版本的JFS文件系统。
+JFS也是一个有大量用户安装使用的企业级文件系统，具有可伸缩性和健壮性。
+与非日志文件系统相比，它的突出优点是快速重启能力，JFS能够在几秒或几分钟内就把文件系统恢复到一致状态。
+虽然JFS主要是为满足服务器（从单处理器系统到高级多处理器和群集系统）的高吞吐量和可靠性需求而设计的，但还可以用于想得到高性能和可靠性的客户机配置，因为在系统崩溃时JFS能提供快速文件系统重启时间，所以它是因特网文件服务器的关键技术。
+使用数据库日志处理技术，JFS能在几秒或几分钟之内把文件系统恢复到一致状态。
+而在非日志文件系统中，文件恢复可能花费几小时或几天。
 
 JFS的缺点是，使用JFS日志文件系统性能上会有一定损失，系统资源占用的比率也偏高，因为当它保存一个日志时，系统需要写许多数据。
 
 ## **5.ReiserFS**
 
-ReiserFS的第一次公开亮相是在1997年7月23日，Hans Reiser把他的基于平衡树结构的ReiserFS文件系统在网上公布。ReiserFS 3.6.x（作为Linux 2.4一部分的版本）是由Hans Reiser和他的Namesys开发组共同开发设计的。SuSE Linux也对它的发展起了重大的帮助。Hans和他的组员们相信最好的文件系统是能够有助于创建独立的共享环境或命名空间的文件系统，应用程序可以在其中更直接、有效和有力地相互作用。为了实现这一目标，文件系统就应该满足使用者对性能和功能方面的需要。那样使用者就能够继续直接地使用文件系统，而不必建造运行在文件系统之上（如数据库之类）的特殊目的层。ReiserFS 使用了特殊的、优化的平衡树（每个文件系统一个）来组织所有的文件系统数据，这为其自身提供了非常不错的性能改进，也能够减轻文件系统设计上的人为约束。另一个使用平衡树的好处就是，ReiserFS 能够像其它大多数的下一代文件系统一样，根据需要动态地分配索引节，而不必在文件系统创建时建立固定的索引节。这有助于文件系统更灵活地适应面临的各种存储需要，同时提供附加的空间有效率。
+ReiserFS的第一次公开亮相是在1997年7月23日，Hans Reiser把他的基于平衡树结构的ReiserFS文件系统在网上公布。
+ReiserFS 3.6.x（作为Linux 2.4一部分的版本）是由Hans Reiser和他的Namesys开发组共同开发设计的。
+SuSE Linux也对它的发展起了重大的帮助。
+Hans和他的组员们相信最好的文件系统是能够有助于创建独立的共享环境或命名空间的文件系统，应用程序可以在其中更直接、有效和有力地相互作用。
+为了实现这一目标，文件系统就应该满足使用者对性能和功能方面的需要。
+那样使用者就能够继续直接地使用文件系统，而不必建造运行在文件系统之上（如数据库之类）的特殊目的层。
+ReiserFS 使用了特殊的、优化的平衡树（每个文件系统一个）来组织所有的文件系统数据，这为其自身提供了非常不错的性能改进，也能够减轻文件系统设计上的人为约束。
+另一个使用平衡树的好处就是，ReiserFS 能够像其它大多数的下一代文件系统一样，根据需要动态地分配索引节，而不必在文件系统创建时建立固定的索引节。
+这有助于文件系统更灵活地适应面临的各种存储需要，同时提供附加的空间有效率。
 
 ReiserFS被看作是一个更加激进和现代的文件系统。传统的Unix文件系统是按磁盘块来进行空间分配的，对于目录和文件等的查找使用了简单的线性查找。这些设计在当时是合适的，但随着磁盘容量的增大和应用需求的增加，传统文件系统在存储效率、速度和功能上已显得落后。在 ReiserFS的下一个版本-Reiser 4，将提供了对事务的支持。ReiserFS突出的地方还在于其设计上着眼于实现一些未来的插件程序，这些插件程序可以提供访问控制列表、超级链接，以及一些其它非常不错的功能。在http://www.namesys.com/v4/v4.html中，有Reiser 4的介绍和性能测试。
 
@@ -1363,7 +1179,13 @@ ReiserFS一个最受批评的缺点是，每升级一个版本都将要将磁盘
 
 ## **6.XFS**
 
-XFS是一种非常优秀的日志文件系统，它是由SGI于20世纪90年代初开发的。XFS推出后被业界称为先进的、最具可升级性的文件系统技术。它是一个全 64位、快速、稳固的日志文件系统，多年用于SGI的IRIX操作系统。当SGI决定支持Linux社区时，它将关键的基本架构技术授权于Linux，以开放资源形式发布了他们自己拥有的XFS的源代码，并开始进行移植。此项工作进展得很快，目前已进入beta版阶段。作为一个64位文件系统，XFS可以支持超大数量的文件（9000×1GB），可在大型2D和3D数据方面提供显著的性能。XFS有能力预测其它文件系统薄弱环节，同时提供了在不妨碍性能的情况下增强可靠性和快速的事故恢复。
+XFS是一种非常优秀的日志文件系统，它是由SGI于20世纪90年代初开发的。
+XFS推出后被业界称为先进的、最具可升级性的文件系统技术。
+它是一个全 64位、快速、稳固的日志文件系统，多年用于SGI的IRIX操作系统。
+当SGI决定支持Linux社区时，它将关键的基本架构技术授权于Linux，以开放资源形式发布了他们自己拥有的XFS的源代码，并开始进行移植。
+此项工作进展得很快，目前已进入beta版阶段。
+作为一个64位文件系统，XFS可以支持超大数量的文件（9000×1GB），可在大型2D和3D数据方面提供显著的性能。
+XFS有能力预测其它文件系统薄弱环节，同时提供了在不妨碍性能的情况下增强可靠性和快速的事故恢复。
 
 XFS可为Linux和开放资源社区带来如下新特性：
 
@@ -1377,7 +1199,7 @@ XFS可为Linux和开放资源社区带来如下新特性：
 
 第4个扩展文件系统，是下一代的日志文件系统，它与上一代文件系统ext3是向后兼容的。ext4 在性能、伸缩性和可靠性方面进行了大量改，支持 1 EB 的文件系统。ext4 是由 Theodore Tso（ext3 的维护者）领导的开发团队实现的，并引入到 2.6.19 内核中。Ubuntu9.04开始支持Ext4文件系统。
 
-参考：https://www.cnblogs.com/luoahong/p/6242058.html 
+参考：https://www.cnblogs.com/luoahong/p/6242058.html
 
 # **二.文件解压缩相关命令**
 
@@ -1429,7 +1251,7 @@ XFS可为Linux和开放资源社区带来如下新特性：
 
 Linux常见的压缩命令就是gzip、bzip2以及最新的xz，至于compress已经不流行了。为了支持windows常见的zip，其实Linux也早就有zip命令了。gzip是由GNU计划所开发出来的压缩命令，该命令支持已经替换了compress。后台GNU又开发出了bzip2及xz这几个压缩比更好的压缩命令。不过，这些命令通常仅能针对一个文件来压缩与解压缩，如此一来，每次压缩与解压缩都要一大堆文件，岂不烦人？此时，这个所谓的【打包软件,tar】就显得很重要。
 
-这个tar可以将很多文件打包成一个文件，甚至是目录也可以这么玩。不过，单纯的tar功能仅仅是打包而已，即将很多文件结合为一个文件，事实上，它并没有提供压缩的功能，后台，GNU计划中，将整个tar与压缩的功能结合在一起，如此一来，提供用户更方便且更强大的压缩与打包功能，下面我们就来谈一谈这些在Linux下面基本的压缩命令。案列文件我上传人的基因组注释文件，下载地址:https://www.gencodegenes.org/human/ 
+这个tar可以将很多文件打包成一个文件，甚至是目录也可以这么玩。不过，单纯的tar功能仅仅是打包而已，即将很多文件结合为一个文件，事实上，它并没有提供压缩的功能，后台，GNU计划中，将整个tar与压缩的功能结合在一起，如此一来，提供用户更方便且更强大的压缩与打包功能，下面我们就来谈一谈这些在Linux下面基本的压缩命令。案列文件我上传人的基因组注释文件，下载地址:https://www.gencodegenes.org/human/
 
 ![img](https://docimg3.docs.qq.com/image/9rT-21GT7iOTN6JXSqZz9g?w=1898&h=848)
 
@@ -1455,15 +1277,9 @@ gzip [-cdtvn] 文件名
 
 然后我们利用gzip来压缩这个文件，命令如下：
 
-
-
 ```
-gzip -v /root/BioInfoData/gencode.v35lift37.annotation.gtf/gencode.v35lift37.annotation.gtf 
+gzip -v /root/BioInfoData/gencode.v35lift37.annotation.gtf/gencode.v35lift37.annotation.gtf
 ```
-
-
-
-
 
 ![img](https://docimg6.docs.qq.com/image/566Ydcqv4MNDId3Th3Z18w?w=1895&h=72)
 
@@ -1475,29 +1291,17 @@ gzip -v /root/BioInfoData/gencode.v35lift37.annotation.gtf/gencode.v35lift37.ann
 
 相反，我们可以通过-d参数解压压缩文件。
 
-
-
 ```
 gzip -d /root/BioInfoData/gencode.v35lift37.annotation.gtf/gencode.v35lift37.annotation.gtf.gz
 ```
-
-
-
-
 
 ![img](https://docimg3.docs.qq.com/image/OoMqwMYQdb7xPkdbTJImow?w=1315&h=125)
 
 同样，解压后原始的压缩文件也将被删除。如果想保留原始文件，我们可以通过-c参数与>的使用解决这个问题。-c参数是将压缩的数据输出到屏幕上，>将原本输出到屏幕上的数据转成输出到文件。
 
-
-
 ```
 gzip -c /root/BioInfoData/gencode.v35lift37.annotation.gtf/gencode.v35lift37.annotation.gtf.gz > /root/BioInfoData/human.v33.annotation.gtf.gz/gencode.v35lift37.annotation.gtf
 ```
-
-
-
-
 
 ### **（2）bzip2**
 
@@ -1538,29 +1342,17 @@ xz [-cdtlkn] 文件名
 
 我们继续压缩文件。
 
-
-
 ```
-xz -k /root/BioInfoData/gencode.v35lift37.annotation.gtf/gencode.v35lift37.annotation.gtf 
+xz -k /root/BioInfoData/gencode.v35lift37.annotation.gtf/gencode.v35lift37.annotation.gtf
 ```
-
-
-
-
 
 可以看见，xz压缩比又比bzip2好，但时间同样长。
 
 这三个压缩命令，参数都差不多，所以会一个就会3个。我们可以查看压缩前后的信息。
 
-
-
 ```
  xz -l /root/BioInfoData/gencode.v35lift37.annotation.gtf/gencode.v35lift37.annotation.gtf.xz
 ```
-
-
-
-
 
 ## **3.打包命令——tar**
 
@@ -1590,30 +1382,18 @@ tar的选项与参数特别多，我们只讲几个常用的选项，更多选�
 
 将/root/BioInfoData/gencode.v35lift37.annotation.gtf文件夹下的所以文件复制到新创建的temp目录中。
 
-
-
 ```
 mkdir temp
 cp /root/BioInfoData/gencode.v35lift37.annotation.gtf/* ./temp
 ```
 
-
-
-
-
 ![img](https://docimg7.docs.qq.com/image/cDkGhJVAAiFa5uwUFBMGtA?w=965&h=148)
 
 如果文件大可以考虑删除一些大文件。
 
-
-
 ```
 time tar -zpcv -f ./temp.tar.gz ./temp
 ```
-
-
-
-
 
 ![img](https://docimg9.docs.qq.com/image/iSdoQjvJODeAHCG9T8Xt-g?w=829&h=399)
 
@@ -1661,31 +1441,19 @@ tail 命令查看文件尾部， -n 选项可以指定查看后几行。
 
 more的功能是将文件从第一行开始，根据输出窗口的大小，适当的输出文件内容。当一页无法全部输出时，可以用“回车键”向下翻行，或者使用“空格键”向下翻页。退出查看页面，请按“q”键。
 
-
-
 ```
 more /root/BioInfoData/gencode.v35lift37.annotation.gtf/gencode.v35lift37.annotation.gtf
 ```
-
-
-
-
 
 ![img](https://docimg6.docs.qq.com/image/8EL8N3hvjNaDx8vAumFwzw?w=1901&h=716)
 
 less的功能和more相似，但是使用more无法向前翻页，只能向后翻。less可以使用【pageup】和【pagedown】键进行前翻页和后翻页，这样看起来更方便。less 命令用来查阅文档，功能更为强大。
 
-
-
 ```
 less /root/BioInfoData/gencode.v35lift37.annotation.gtf/gencode.v35lift37.annotation.gtf
 ```
 
-
-
-
-
-参考：https://www.cnblogs.com/machangwei-8/p/9570550.html 
+参考：https://www.cnblogs.com/machangwei-8/p/9570550.html
 
 ## **4.paste命令**
 
@@ -1704,30 +1472,18 @@ paste [-s][-d <间隔字符>][--help][--version][文件...]
 
 首先确保两个文件行数相同。paste指令会把每个文件以列对列的方式，一列列地加以合并将每个指定文件里的每一行整合到对应一行里写到标准输出，之间用制表符分隔。如果没有指定文件，或指定文件为"-"，程序将从标准输入读取数据。 paste 连接文件时，除非指定 -d 选项，否则默认用 空格 或 tab键 分隔文本。
 
-
-
 ```
 # touch exp1
 # touch exp2
 ```
 
-
-
-
-
 创建2个文件，exp1和exp2，并自己输入类似的数据。
 
 ![img](https://docimg6.docs.qq.com/image/xIeY_i2OTVUYw1rJP7GwNQ?w=569&h=260)
 
-
-
 ```
 paste ./temp/info1.txt ./temp/info2.txt
 ```
-
-
-
-
 
 ![img](https://docimg9.docs.qq.com/image/n8P6J5UjuFRWP2cMM16iKg?w=713&h=145)
 
@@ -1737,15 +1493,9 @@ cut是一个选取命令，就是将一段数据经过分析，取出我们想�
 
 其语法格式为：
 
-
-
 ```
 cut  [-bn] [file] 或 cut [-c] [file]  或  cut [-df] [file]
 ```
-
-
-
-
 
 主要参数
 
@@ -1771,7 +1521,7 @@ cut命令主要是接受三个定位方法：
 
 ![img](https://qqadapt.qpic.cn/txdocpic/0/ed91908b9cc17326fdebd50f8a687a5c/0?_type=png&w=1005&h=122)
 
-参考：https://blog.csdn.net/zsf8701/article/details/7718680 
+参考：https://blog.csdn.net/zsf8701/article/details/7718680
 
 # **二.文本处理的2大神器**
 
@@ -1781,7 +1531,7 @@ cut命令主要是接受三个定位方法：
 
 grep：一种强大的文本搜索工具，能使用正则表达式匹配模式搜索文本，并把匹配的行打印出来。正则表达式是对字符串操作的一种逻辑公式，就是用事先定义好的一些特定字符、及这些特定字符的组合，组成一个“规则字符串”，这个“规则字符串”用来表达对字符串的一种过滤逻辑。grep 处理速度非常之快，尽量使用这个命令处理文本。**不了解正则表达式，需要去补充一下知识**。
 
-知道正则表达式以后，我们就更加容易掌握grep，语法格式如下： 
+知道正则表达式以后，我们就更加容易掌握grep，语法格式如下：
 
 grep [options] pattern file
 
@@ -1823,7 +1573,7 @@ grep [options] pattern file
 -   -V 或 --version : 显示版本信息。
 -   -w 或 --word-regexp : 只显示全字符合的列。
 -   -x --line-regexp : 只显示全列符合的列。
--   -y : 此参数的效果和指定"-i"参数相同。 
+-   -y : 此参数的效果和指定"-i"参数相同。
 
 继续用上面的文件演示。在info1.txt文件中查找Bio
 
@@ -1833,15 +1583,9 @@ grep [options] pattern file
 
 查看一下gtf文件内容的前6行：
 
-
-
 ```
 head -6 ./temp/gencode.v35lift37.annotation.gtf
 ```
-
-
-
-
 
 ![img](https://docimg7.docs.qq.com/image/Jh1xJr1SvJAp9u1lxuACxA?w=1896&h=219)
 
@@ -1849,41 +1593,23 @@ head -6 ./temp/gencode.v35lift37.annotation.gtf
 
 我们上面搜索的gene，把含有gene字母的字符串也搜索出来啦,比如：gene_id，假如我们只希望出现gene_id这个单词的结果，那就加上-w参数.
 
-
-
 ```
 grep -wc gene_id ./temp/gencode.v35lift37.annotation.gtf
 ```
-
-
-
-
 
 ![img](https://docimg7.docs.qq.com/image/T3evTpD9QiOn_85GnmCRyA?w=1901&h=390)
 
 可以看到gene就是唯一的精确匹配结果。载加上-c这个参数，返回匹配的结果行数。
 
-
-
 ```
 grep -wc gene_id ./temp/gencode.v35lift37.annotation.gtf
 ```
 
-
-
-
-
 查找匹配结果反选：
-
-
 
 ```
 grep -v gene_id ./temp/gencode.v35lift37.annotation.gtf
 ```
-
-
-
-
 
 ![img](https://docimg6.docs.qq.com/image/vNDhh3JIWodARWmk-EbUzg?w=1491&h=167)
 
@@ -1928,83 +1654,47 @@ cat 文件名 | sed 选项 '动作'
 
 删除第4行的内容
 
-
-
 ```
 sed "4d" ./temp/info1.txt
 ```
-
-
-
-
 
 ![img](https://docimg2.docs.qq.com/image/xE1AakW7_FxMtYGaHC35Gg?w=691&h=348)
 
 删除第2-4行的内容
 
-
-
 ```
 sed '2,4d' ./temp/info1.txt
 ```
 
-
-
-
-
 删除第3行到最后一行的内容
-
-
 
 ```
 sed '3,$d' ./temp/info1.txt
 ```
 
-
-
-
-
 ![img](https://docimg4.docs.qq.com/image/pusLkLSe-prPSc-ED8CeUQ?w=586&h=147)
 
 在第2行后新增内容
-
-
 
 ```
 sed '2a YunSen' ./temp/info1.txt
 ```
 
-
-
-
-
 ![img](https://docimg10.docs.qq.com/image/HPrpARcUUAIzwbYbojXlDw?w=655&h=170)
 
 在第3行前插入内容
-
-
 
 ```
  sed '3i YunSen' ./temp/info1.txt
 ```
 
-
-
-
-
 ![img](https://docimg4.docs.qq.com/image/HdUj41dIiPwJ61xTE4v47Q?w=641&h=171)
 
 把第3行的内容替换为Student
 
-
-
 ```
 sed '3c Student' ./temp/info1.txt
 ```
-
-
-
-
 
 ![img](https://docimg10.docs.qq.com/image/C_sy38HmCZMLz4hqkld6Hg?w=652&h=259)
 
@@ -2012,27 +1702,15 @@ sed '3c Student' ./temp/info1.txt
 
 搜索含有Med的行
 
-
-
 ```
 sed -n '/Bio/p' ./temp/info1.txt
 ```
 
-
-
-
-
 搜索并删除指定内容
-
-
 
 ```
 sed '/root/d' ./temp/info1.txt
 ```
-
-
-
-
 
 ![img](https://docimg9.docs.qq.com/image/wVtJ4O5AdRpS-KwRHCAk9w?w=636&h=177)
 
@@ -2040,43 +1718,25 @@ sed '/root/d' ./temp/info1.txt
 
 默认只替换每行中模式首次匹配的内容
 
-
-
 ```
 sed 's/yunsen/'YunSen'/' ./temp/info1.txt
 ```
-
-
-
-
 
 ![img](https://docimg7.docs.qq.com/image/0GNqDzVQFCTkYCtUjiUNEA?w=730&h=152)
 
 g标记可以使sed执行全局替换
 
-
-
 ```
 sed 's/o/'O'/g' ./temp/info1.txt
 ```
-
-
-
-
 
 ![img](https://docimg8.docs.qq.com/image/tT8tQtzlKPVu-7tNSsE2IA?w=643&h=144)
 
 g标记可以使sed替换第N次即以后出现的匹配
 
-
-
 ```
 sed 's/o/O/2g' ./temp/info1.txt
 ```
-
-
-
-
 
 ![img](https://docimg1.docs.qq.com/image/hjfadFRjUB5Gzs79zcw_4w?w=634&h=150)
 
@@ -2084,49 +1744,29 @@ sed 's/o/O/2g' ./temp/info1.txt
 
 直接删除文件内容
 
-
-
 ```
 sed -i '3d' ./temp/info1.txt
 ```
 
-
-
-
-
 直接替换文件内容
-
-
 
 ```
 sed -i 's/yunsen/YunSen/g' ./temp/info1.txt
 ```
 
-
-
-
-
 （6）在sed中使用正则表达式
 
 搜索并删除空行
-
-
 
 ```
 sed '/^$/d' ./temp/info1.txt
 ```
 
-
-
-
-
-参考文章：https://www.cnblogs.com/lfjn/p/11455970.html 
-
-
+参考文章：https://www.cnblogs.com/lfjn/p/11455970.html
 
 ------
 
-除了上面2 个工具外，还有一个awk工具，awk是一个强大的文本分析工具，相对于grep的查找，sed的编辑，awk在其对数据分析并生成报告时，显得尤为强大。简单来说awk就是把文件逐行的读入，以空格为默认分隔符将每行切片，切开的部分再进行各种分析处理。这个工具后面再介绍。 
+除了上面2 个工具外，还有一个awk工具，awk是一个强大的文本分析工具，相对于grep的查找，sed的编辑，awk在其对数据分析并生成报告时，显得尤为强大。简单来说awk就是把文件逐行的读入，以空格为默认分隔符将每行切片，切开的部分再进行各种分析处理。这个工具后面再介绍。
 
 # **第十章：****Linux的运行模式与网卡设置**
 
@@ -2150,15 +1790,9 @@ Linux属于多用户、多任务的操作系统；
 
 打开inittab文件：
 
-
-
 ```
 vim /etc/inittab
 ```
-
-
-
-
 
 ![img](https://qqadapt.qpic.cn/txdocpic/0/74e3c16eceb8c30521f998fec82dd4b1/0?_type=png&w=992&h=351)
 
@@ -2214,15 +1848,9 @@ Linux系统有7个运行级别(runlevel)：
 
 它主要完成的工作有：激活交换分区，检查磁盘，加载硬件模块以及其它一些需要优先执行任务。
 
-
-
 ```
 l5:5:wait:/etc/rc.d/rc 5
 ```
-
-
-
-
 
 这一行表示以5为参数运行/etc/rc.d/rc，/etc/rc.d/rc是一个Shell脚本，它接受5作为参数，去执行/etc/rc.d/rc5.d/目录下的所有的rc启动脚本，/etc/rc.d/rc5.d/目录中的这些启动脚本实际上都是一些连接文件，而不是真正的rc启动脚本，真正的rc启动脚本实际上都是放在/etc/rc.d/init.d/目录下。而这些rc启动脚本有着类似的用法，它们一般能接受start、stop、restart、status等参数。
 
@@ -2392,17 +2020,9 @@ Linux预设提供了六个命令窗口终端机让我们来登录。
 
 也可以通过下面命令查看
 
-
-
 ```
 fdisk -l
 ```
-
-
-
-
-
-
 
 ![img](https://qqadapt.qpic.cn/txdocpic/0/7243e70fb692c69a9ae425ff1db0d4b9/0?_type=png&w=876&h=425)
 
@@ -2414,17 +2034,9 @@ mkfs -t <文件系统格式> /dev/vdb
 
 这里的文件系统格式，就是我前面介绍的系统格式，不同文件系统支持的分区大小不同，根据实际需求合理选择文件系统。不是很了解，就用ext4。ext4 在性能、伸缩性和可靠性方面进行了大量改，支持 1 EB 的文件系统。
 
-
-
-
-
 ```
 mkfs -t ext4 /dev/vdb
 ```
-
-
-
-
 
 输入上面命令后，出现下面这样的信息，表示没有错误。
 
@@ -2440,33 +2052,17 @@ mkdir /data
 
 语法：mount [参数] 设备的名称 挂载点/挂载位置。
 
-
-
 ```
 mount /dev/vdb /data
 ```
-
-
-
-
-
-
 
 ![img](https://qqadapt.qpic.cn/txdocpic/0/ac6b77c3db1eab609d1e9f820c4df926/0?_type=png&w=831&h=75)
 
 这样我们就挂载好硬盘了，可以通过下面命令查看挂载情况。
 
-
-
 ```
 df -TH
 ```
-
-
-
-
-
-
 
 ![img](https://qqadapt.qpic.cn/txdocpic/0/f9918f2f24c271b12092b751331e1a83/0?_type=png&w=891&h=237)
 
@@ -2512,7 +2108,7 @@ Avail： 还可以使用的容量
 
 Use%： 已用百分比
 
-Mounted on： 挂载点　
+Mounted on： 挂载点
 
 du 的英文原义为 disk usage，含义为显示磁盘空间的使用情况，用于查看当前目录的总大小。
 
@@ -2590,17 +2186,9 @@ umount [-fn] 装置文件名或挂载点
 
 硬盘的分区也是以fdisk命令来操作的，执行以下命令，进入 fdisk 分区工具，开始对新增数据盘执行分区操作。以我购买的云硬盘/dev/vdb为例：
 
-
-
 ```
 fdisk /dev/vdb
 ```
-
-
-
-
-
-
 
 ![img](https://qqadapt.qpic.cn/txdocpic/0/4582f24afd008a5bc26b9dc96588aa6a/0?_type=png&w=842&h=237)
 
@@ -2730,21 +2318,21 @@ linux分区不同于windows，linux下硬盘设备名为（IDE硬盘为hdx（x�
 
 一个硬盘主分区至少有1个，最多4个，扩展分区可以没有，最多1个。且主分区+扩展分区总共不能超过4个。逻辑分区可以有若干个。
 
-在windows下激活的主分区是硬盘的启动分区，他是独立的，也是硬盘的第一个分区，正常分的话就是C区。 在linux下主分区和逻辑分区都可以用来放系统，引导os开机，grub会兼容windows系统开机启动。分出主分区后，其余的部分可以分成扩展分区，一般是剩下的部分全部分成扩展分区，也可以不全分，那剩的部分就浪费了。但扩展分区是不能直接用的，他是以逻辑分区的方式来使用的，所以说扩展分区可分成若干逻辑分区。他们的关系是包含的关系，所有的逻辑分区都是扩展分区的一部分。在linux中第一块硬盘分区为hda分区，主分区编号为hda1-4，逻辑分区从5开始。硬盘的容量=主分区的容量+扩展分区的容量，扩展分区的容量=各个逻辑分区的容量之和，主分区也可成为“引导分区”，会被操作系统和主板认定为这个硬盘的第一个分区。所以C盘永远都是排在所有磁盘分区的第一的位置上。MBR（主引导记录）的分区表（主分区表）只能存放4个分区，如果要分更多的分区的话就要一个扩展分区表（EBR），扩展分区表放在一个系统ID为0x05的主分区上，这个主分区就是扩展分区，扩展分区能可以分若干个分区，每个分区都是个逻辑分区。
+在windows下激活的主分区是硬盘的启动分区，他是独立的，也是硬盘的第一个分区，正常分的话就是C区。
+ 在linux下主分区和逻辑分区都可以用来放系统，引导os开机，grub会兼容windows系统开机启动。
+分出主分区后，其余的部分可以分成扩展分区，一般是剩下的部分全部分成扩展分区，也可以不全分，那剩的部分就浪费了。
+但扩展分区是不能直接用的，他是以逻辑分区的方式来使用的，所以说扩展分区可分成若干逻辑分区。
+他们的关系是包含的关系，所有的逻辑分区都是扩展分区的一部分。
+在linux中第一块硬盘分区为hda分区，主分区编号为hda1-4，逻辑分区从5开始。
+硬盘的容量=主分区的容量+扩展分区的容量，扩展分区的容量=各个逻辑分区的容量之和，主分区也可成为“引导分区”，会被操作系统和主板认定为这个硬盘的第一个分区。
+所以C盘永远都是排在所有磁盘分区的第一的位置上。
+MBR（主引导记录）的分区表（主分区表）只能存放4个分区，如果要分更多的分区的话就要一个扩展分区表（EBR），扩展分区表放在一个系统ID为0x05的主分区上，这个主分区就是扩展分区，扩展分区能可以分若干个分区，每个分区都是个逻辑分区。
 
 关于硬盘的扩展分区创建，和主分区差不多。我们前面输入下面命令时。
-
-
 
 ```
 fdisk /dev/vdb
 ```
-
-
-
-
-
-
 
 ![img](https://qqadapt.qpic.cn/txdocpic/0/4582f24afd008a5bc26b9dc96588aa6a/0?_type=png&w=842&h=237)
 
@@ -2816,14 +2404,8 @@ fdisk /dev/vdb
 
 查找文件：whereis命令或者locate命令，比find命令快速。locate查找的是/var/lib/mlocate里面的数据，需要updatedb更新。
 
-
-
 ```
 [root@VM-0-2-centos ~]# cd /lib/modules/$(uname -r)/kernel
 ```
-
-
-
-
 
 ![img](https://docimg1.docs.qq.com/image/OoxOe-UDkzL1HiHnkRvYaQ?w=900&h=421)

@@ -1,13 +1,14 @@
 # TCGA数据库介绍
 
 # 一.TCGA基本介绍
+
 肿瘤基因组图谱（TCGA）计划是由美国National Cancer Institute（NCI）和National Human Genome Research Institute（NHGRI）于2006年联合启动的项目，研究的癌症类型从最开始的多形性成胶质细胞瘤（GBM）到现在为止共有39种，涉及29种癌症器官，1万多个肿瘤样本，27万多份文件，当然其项目也将于2017年接近尾声。
 
-网址：[<font style="color:#0052FF;">https://portal.gdc.cancer.gov/</font>](https://portal.gdc.cancer.gov/)
+网址：[https://portal.gdc.cancer.gov/](https://portal.gdc.cancer.gov/)
 
 对于肿瘤研究者来说，TCGA数据库就是一个资源宝库，里面有很多有价值的信息可以挖掘，关于TCGA数据挖掘的工具很多，包括在线工具和R包。这里我们主要是通过R语言进行挖掘，所以需要有一点R语言基础。
 
-关于利用R包下载，我主要用过TCGAbiolinks和GDCRNATools，**<font style="color:#F5222D;">但是这2个包有些函数现在好像有些问题</font>**，所以这部分你自己关注，这里主要是自己下载后从头整理，只需要关注官网在线下载部分。
+关于利用R包下载，我主要用过TCGAbiolinks和GDCRNATools，**但是这2个包有些函数现在好像有些问题**，所以这部分你自己关注，这里主要是自己下载后从头整理，只需要关注官网在线下载部分。
 
 ```r
 缩写	英文名称	中文名称
@@ -58,27 +59,23 @@ WT	High-Risk Wilms Tumor	高危肾母细胞瘤
 
 ![1612442035098-9552404f-4140-4c20-8fe9-c5c67ad92c1e.png](./img/SbEzbzG88mN4YZ7b/1612442035098-9552404f-4140-4c20-8fe9-c5c67ad92c1e-178913.png)
 
-| <br/><font style="color:#333333;">Label</font> | <br/><font style="color:#333333;">Identifier for</font> | <br/><font style="color:#333333;">解释</font> |
+| <br/>Label | <br/>Identifier for | <br/>解释 |
 | :--- | :--- | :--- |
-| <br/><font style="color:#333333;">Project</font> | <br/><font style="color:#333333;">Project name</font> | <br/><font style="color:#333333;">来自哪个项目: 如TCGA、TARGET等等</font> |
-| <br/><font style="color:#333333;">TSS</font> | <br/><font style="color:#333333;">Tissue source site</font> | <br/><font style="color:#333333;">样品来自哪个组织机构：01 代表International Genomics Consortium, 更多见：</font>[<u>TSS</u>](https://www.omicsclass.com/article/1079) |
-| <br/><font style="color:#333333;">Participant</font> | <br/><font style="color:#333333;">Study participant</font> | <br/><font style="color:#333333;">样品唯一编号(可以理解为一个病人唯一编号）</font> |
-| <br/><font style="color:#333333;">Sample</font> | <br/><font style="color:#333333;">Sample type</font> | <br/><font style="color:#333333;">样品来自人体组织类型，如：01代表Primary Solid Tumor， 更多见：</font>[<u>SampleType</u>](https://www.omicsclass.com/article/1080) |
-| <br/><font style="color:#333333;">Vial</font> | <br/><font style="color:#333333;">Order of sample in a sequence of samples</font> | <br/><font style="color:#333333;">一份样品被分割成好几份，表示第几份，通常是A-Z编号</font> |
-| <br/><font style="color:#333333;">Portion</font> | <br/><font style="color:#333333;">Order of portion in a sequence of 100-120 mg sample portions</font> | <br/><font style="color:#333333;">每份样品再分割成不同的小样品：01-99等等编号，代表第几份</font> |
-| <br/><font style="color:#333333;">Analyte</font> | <br/><font style="color:#333333;">Molecular type of analyte for analysis</font> | <br/><font style="color:#333333;">实验数据来源分子类型，如R代表 RNA，D代表DNA等等，更多见：</font>[<u>Portion / Analyte Codes</u>](https://gdc.cancer.gov/resources-tcga-users/tcga-code-tables/portion-analyte-codes) |
-| <br/><font style="color:#333333;">Plate</font> | <br/><font style="color:#333333;">Order of plate in a sequence of 96-well plates</font> | <br/><font style="color:#333333;">96孔序列中板的顺序，4个数字组成</font> |
-| <br/><font style="color:#333333;">Center</font> | <br/><font style="color:#333333;">Sequencing or characterization center that will receive the aliquot for analysis</font> | <br/><font style="color:#333333;">数据由哪个机构分析：如 01代表The Broad Institute GCC,更多见：</font>[<u>Center</u>](https://www.omicsclass.com/article/1081) |
-
+| <br/>Project | <br/>Project name | <br/>来自哪个项目: 如TCGA、TARGET等等 |
+| <br/>TSS | <br/>Tissue source site | <br/>样品来自哪个组织机构：01 代表International Genomics Consortium, 更多见：[<u>TSS</u>](https://www.omicsclass.com/article/1079) |
+| <br/>Participant | <br/>Study participant | <br/>样品唯一编号(可以理解为一个病人唯一编号） |
+| <br/>Sample | <br/>Sample type | <br/>样品来自人体组织类型，如：01代表Primary Solid Tumor， 更多见：[<u>SampleType</u>](https://www.omicsclass.com/article/1080) |
+| <br/>Vial | <br/>Order of sample in a sequence of samples | <br/>一份样品被分割成好几份，表示第几份，通常是A-Z编号 |
+| <br/>Portion | <br/>Order of portion in a sequence of 100-120 mg sample portions | <br/>每份样品再分割成不同的小样品：01-99等等编号，代表第几份 |
+| <br/>Analyte | <br/>Molecular type of analyte for analysis | <br/>实验数据来源分子类型，如R代表 RNA，D代表DNA等等，更多见：[<u>Portion / Analyte Codes</u>](https://gdc.cancer.gov/resources-tcga-users/tcga-code-tables/portion-analyte-codes) |
+| <br/>Plate | <br/>Order of plate in a sequence of 96-well plates | <br/>96孔序列中板的顺序，4个数字组成 |
+| <br/>Center | <br/>Sequencing or characterization center that will receive the aliquot for analysis | <br/>数据由哪个机构分析：如 01代表The Broad Institute GCC,更多见：[<u>Center</u>](https://www.omicsclass.com/article/1081) |
 
 # 二.分析TCGA的在线工具
+
 1.Oncomine：[https://www.oncomine.org/resource/main.html](https://www.oncomine.org/resource/main.html)
 
 2.GEPIA：[http://gepia.cancer-pku.cn/](http://gepia.cancer-pku.cn/)
 
-
-
-
-
-> 更新: 2021-02-04 20:48:55  
+> 更新: 2021-02-04 20:48:55
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/uehobs>

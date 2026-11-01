@@ -1,8 +1,9 @@
 # scanpy
 
-官网：[https://scanpy.readthedocs.io/en/latest/](https://scanpy.readthedocs.io/en/latest/) 
+官网：[https://scanpy.readthedocs.io/en/latest/](https://scanpy.readthedocs.io/en/latest/)
 
 ## 1.安装
+
 conda安装
 
 ```shell
@@ -18,6 +19,7 @@ pip install scanpy
 ```
 
 ## 2.AnnData对象
+
 在scanpy中，我们最常见的数据结构是AnnData，它是一个用于存储数据的对象，其数据结构可以描述如下：
 
 ![1703048569381-a5761fb9-1961-4195-94e1-716148c29ce9.png](./img/dFTJgk5Yb3drDOHQ/1703048569381-a5761fb9-1961-4195-94e1-716148c29ce9-353698.png)
@@ -187,6 +189,7 @@ adata.obs.head() # 查看前5行的数据
 
 ## 3.使用教程
 ### 3.1 案例数据
+
 下载
 
 ```python
@@ -210,6 +213,7 @@ tar -xzf pbmc3k_filtered_gene_bc_matrices.tar.gz
 ![1702991033408-c470d537-dc7e-4e8a-8ff8-e5d02e111876.png](./img/dFTJgk5Yb3drDOHQ/1702991033408-c470d537-dc7e-4e8a-8ff8-e5d02e111876-868366.png)
 
 ### 3.2 读入数据
+
 方式一
 
 ```python
@@ -227,8 +231,6 @@ adata
 ```
 
 这行代码是用于确保AnnData对象adata的变量名称（var_names）唯一的方法。在单细胞基因表达数据中，变量通常指基因，每个基因都有一个唯一的名称。但是，有些数据文件中可能存在重复的基因名称，或者读取多个数据文件后变量名称可能存在重复。这可能会导致后续的数据分析出现错误或不准确。因此，可以使用adata.var_names_make_unique()方法，对变量名称进行去重。该方法将自动在变量名称后面添加一个数字，使得所有变量名称都是唯一的。这样做可以避免后续数据分析中的命名冲突问题。
-
-
 
 方式二：
 
@@ -253,6 +255,7 @@ sc.pl.highest_expr_genes(adata, n_top=20, )
 ![1702991440968-a7302232-c79f-473e-b02e-db9c247ff310.png](./img/dFTJgk5Yb3drDOHQ/1702991440968-a7302232-c79f-473e-b02e-db9c247ff310-419451.png)
 
 ### 3.3 数据过滤
+
 细胞：空的液滴过滤，每个细胞中至少有200个基因表达。
 
 基因：低表达基因过滤，每个基因至少在三个细胞中表达。
@@ -341,6 +344,7 @@ sc.pp.scale(adata, max_value=10)
 ```
 
 ### 3.4 主成分分析
+
 通过主成分分析(PCA)对数据进行降维，揭示数据的主要变化轴，对数据进行降噪处理。
 
 ```python
@@ -364,6 +368,7 @@ sc.pl.pca_variance_ratio(adata, log=True)
 ![1703127001458-a86fa2d1-bbc3-46e1-9b18-ac108ce546e4.png](./img/dFTJgk5Yb3drDOHQ/1703127001458-a86fa2d1-bbc3-46e1-9b18-ac108ce546e4-462439.png)
 
 ### 3.4 计算邻域图（Computing the neighborhood graph）
+
 计算邻域图是单细胞分析中的一种常见方法，用于确定细胞之间的相似性和相关性。在邻域图中，每个细胞都被表示为一个节点，而连接两个节点的边表示这两个细胞之间的相似性或相关性。边的权重通常基于细胞之间的基因表达相似性或其他指标。
 
 通过计算邻域图，可以识别细胞群体中的亚群，并了解不同亚群之间的相互作用和关系。此外，邻域图还可以用于进一步的分析，如聚类分析、网络分析等，以深入了解细胞群体的结构和功能。
@@ -373,6 +378,7 @@ sc.pp.neighbors(adata, n_neighbors=10, n_pcs=40)
 ```
 
 ### 3.5 嵌入邻域图（Embedding the neighborhood graph）
+
 在单细胞分析中，嵌入邻域图（Embedding the neighborhood graph）是指将邻域图中的节点和边信息转化为一个低维的空间表示，以便进行可视化和进一步的分析。
 
 邻域图是一种网络结构，用于描述细胞之间的关系。然而，这种结构很难直接用于可视化和直观的理解。因此，将邻域图嵌入到一个低维的空间中，可以将细胞之间的复杂关系转化为易于理解的几何形状，从而方便我们进行可视化、聚类分析、模式识别等后续工作。
@@ -396,6 +402,7 @@ sc.pl.umap(adata, color=['CST3', 'NKG7', 'PPBP'], use_raw=False)
 ![1703127878168-5fac6da9-969d-4d7c-bdb7-2b12c94cb809.png](./img/dFTJgk5Yb3drDOHQ/1703127878168-5fac6da9-969d-4d7c-bdb7-2b12c94cb809-275356.png)
 
 ### 3.6 域图进行聚类（Clustering the neighborhood graph）
+
 在单细胞分析中，对邻域图进行聚类（Clustering the neighborhood graph）是指利用聚类算法对邻域图中的细胞进行分组，以识别不同的细胞亚群。
 
 在单细胞分析中，常用的聚类方法包括K-means聚类、层次聚类、DBSCAN聚类等。这些方法可以根据细胞的相似性和相关性，将邻域图中的细胞分成不同的组或簇。通过对这些簇进行分析，可以揭示细胞群体的结构和功能特征，进一步了解细胞之间的相互作用和分化过程。与Seurat和许多其他框架一样，我们推荐Traag等人(2018)的Leiden图聚类方法(community detection based on optimizing modularity)。注意，Leiden聚类直接对单元的邻域图进行聚类，我们已经在前一节中计算过了。
@@ -408,6 +415,7 @@ sc.pl.umap(adata, color=['leiden', 'CST3', 'NKG7'])
 ![1703128292924-993eeb0c-f7e4-4ad4-94e3-487ad68729d1.png](./img/dFTJgk5Yb3drDOHQ/1703128292924-993eeb0c-f7e4-4ad4-94e3-487ad68729d1-940310.png)
 
 ### 3.7 寻找标记基因（Finding marker genes）
+
 让我们为每个集群中高度差异的基因计算一个排名。为此，默认情况下，如果AnnData已经初始化，将使用其.raw属性。最简单和最快的方法是t检验。
 
 ```python
@@ -525,9 +533,5 @@ sc.pl.stacked_violin(adata, marker_genes, groupby='leiden', rotation=90);
 
 ![1703149045441-b2bb6310-5485-44f1-9e70-7b7c6dcb355a.png](./img/dFTJgk5Yb3drDOHQ/1703149045441-b2bb6310-5485-44f1-9e70-7b7c6dcb355a-448212.png)
 
-
-
-
-
-> 更新: 2023-12-21 17:05:12  
+> 更新: 2023-12-21 17:05:12
 > 原文: <https://www.yuque.com/doublehelix/bioinfonotes/ggw2kbv370p3q59n>
