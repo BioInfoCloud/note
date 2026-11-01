@@ -20,9 +20,12 @@ print("Clean docs copied to", TMP)
 with open(os.path.join(ROOT, "mkdocs.yml"), encoding="utf-8") as f:
     cfg = f.read()
 # 插入 docs_dir 指向干净副本（绝对路径，正斜杠）；
-# site_dir 指向仓库外的时间戳新目录：mkdocs 的 “Cleaning site directory”
-# 不会一次删除上千个文件，从而绕过安全批量删除拦截。
-SITE = r"C:\tmp\bic_site_" + __import__("time").strftime("%Y%m%d_%H%M%S")
+# site_dir 固定为仓库外的目录，并统一用 --dirty 构建：
+# mkdocs 默认会 “Cleaning site directory”（一次删除上千文件，会被批量删除拦截打断），
+# --dirty 跳过清理，因此既不触发拦截，也不会像时间戳目录那样不断堆积。
+# 注意：--dirty 不会删除已下线页面残留的 html；若 docs 里删/改了文件名，
+# 请先手动把 C:\tmp\bic_site 整个目录挪走或删掉，再做一次全量构建。
+SITE = r"C:\tmp\bic_site"
 cfg = (
     "docs_dir: " + TMP.replace("\\", "/") + "\n"
     + "site_dir: " + SITE.replace("\\", "/") + "\n"
@@ -33,7 +36,7 @@ with open(CFG, "w", encoding="utf-8") as f:
 print("Wrote temp config", CFG)
 
 mode = sys.argv[1] if len(sys.argv) > 1 else "build"
-cmd = [sys.executable, "-m", "mkdocs", mode, "-f", CFG]
+cmd = [sys.executable, "-m", "mkdocs", mode, "-f", CFG, "--dirty"]
 if mode == "gh-deploy":
     cmd.append("--force")
 print("Running:", " ".join(cmd))
