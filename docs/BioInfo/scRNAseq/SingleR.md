@@ -140,7 +140,7 @@ marker基因表达热图
 
 ### 1.加载Seurat对象数据
 
-[使用上次分析保存的数据](../GSE130001/)：[https://mp.weixin.qq.com/s/YUcPWEZ8UvwgaqL4qrLHPA](https://mp.weixin.qq.com/s/YUcPWEZ8UvwgaqL4qrLHPA)
+使用上次分析保存的数据：[https://mp.weixin.qq.com/s/YUcPWEZ8UvwgaqL4qrLHPA](https://mp.weixin.qq.com/s/YUcPWEZ8UvwgaqL4qrLHPA)
 
 ### 2.加载参考数据
 

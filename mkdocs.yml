@@ -302,6 +302,7 @@ markdown_extensions:
       generic: true
   - attr_list # 给图片后面添加{width="300"}设置大小
   - admonition # 提示框
+  - footnotes # 脚注([^1] 语法)，避免被误判为失效链接
   - md_in_html # 在 HTML 块中使用 Markdown
   - toc:
       permalink: true # 固定标题位置为当前位置

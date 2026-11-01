@@ -4,7 +4,7 @@
 
 微信：MedBioInfoCloud
 
-版权所有[@DoubleHelix](undefined/doublehelix) 【微信公众号：生物信息云】
+版权所有 @DoubleHelix 【微信公众号：生物信息云】
 
 # 第一章	Python的相关软件安装
 
