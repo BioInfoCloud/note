@@ -9163,8 +9163,8 @@
 <p><strong>代码包括了：</strong></p>
 <p>➢ 数据下载</p>
 <p>➢ 数据整理</p>
-<p>➢ ****(比如m6A)相关基因表达</p>
-<p>➢ ****(比如m6A)差异分析（<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264493&amp;idx=1&amp;sn=2164cc4d202fc081551f8918c8cbd7a4&amp;chksm=841ef190b36978866b9bd71a989960370614bf234453b3bd070a56fbe324deb4ecaea2305923&amp;scene=21#wechat_redirect">参考文章</a>）</p>
+<p>➢ （比如 m6A）相关基因表达</p>
+<p>➢ （比如 m6A）差异分析（<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264493&amp;idx=1&amp;sn=2164cc4d202fc081551f8918c8cbd7a4&amp;chksm=841ef190b36978866b9bd71a989960370614bf234453b3bd070a56fbe324deb4ecaea2305923&amp;scene=21#wechat_redirect">参考文章</a>）</p>
 <p>➢ 临床数据下载和整理（<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264504&amp;idx=1&amp;sn=634bd925786a3193977342634b03acc3&amp;chksm=841ef185b369789346bfbfbc315b9976bd14b9e25ed365c26522469e1ee102212c4b005bfb86&amp;scene=21#wechat_redirect">参考文章</a>）</p>
 <p>➢ 肿瘤分型subtype</p>
 <p>主成分分析生存分析临床相关性</p>
@@ -9204,7 +9204,7 @@
 <p>下面只提供R代码，<strong>有疑虑，就此打住</strong>，我用的都是入门级别的函数，懂点R语法，就能看懂，大部分有注释，如果您付费，请尽量选择安卓手机付费，苹果付费要被老美收30%的税费，钱我也收不到。</p>
 <p>初次学习，请使用TCGA-STAD转录组和临床的数据进行学习，我也不提供百度网盘下载了，百度网盘下载的速度，非会员太慢，自己去TCGA下载吧，至于基因注释的gtf文件，文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264493&amp;idx=1&amp;sn=2164cc4d202fc081551f8918c8cbd7a4&amp;chksm=841ef190b36978866b9bd71a989960370614bf234453b3bd070a56fbe324deb4ecaea2305923&amp;scene=21#wechat_redirect">一文就会TCGA数据库基因表达差异分析</a>：有地址，临床数据下载整理我们也发过文章：<a href="http://mp.weixin.qq.com/s?__biz=MzA4NDAzODkzMA==&amp;mid=2651264504&amp;idx=1&amp;sn=634bd925786a3193977342634b03acc3&amp;chksm=841ef185b369789346bfbfbc315b9976bd14b9e25ed365c26522469e1ee102212c4b005bfb86&amp;scene=21#wechat_redirect">一文解决TCGA数据库临床数据下载与整理</a>，下面代码直接读取TCGA的临床数据的tsv格式文件。至于gene文件，你可以选择300左右的基因进行学习。也可以用下面我模拟的基因学习。</p>
 <p><img alt="1612611038785-0bdd4a5b-9f3c-4f2b-8fa9-138c8feb471b.png" src="../img/tumor-prognosis-model/1612611038785-0bdd4a5b-9f3c-4f2b-8fa9-138c8feb471b-929962.png" /></p>
-<p>提取码：**2opw **</p>
+<p>提取码：<strong>2opw</strong></p>
 <p><strong>代码出错的可能原因：</strong></p>
 <p>1.输入数据文件路径不对；</p>
 <p>2.分析的基因太少，最后得到的重要基因为0，所以后面的分析会出错。</p>
@@ -9218,10 +9218,10 @@
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>jsonFilePath &lt;- ".\\01-RawData\\FPKM-2020-03-09.json"# 转录组数据对应的json文件
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>gtfFilesPath &lt;- ".\\02-inputFiles\\human.v33lift37.annotation.gtf"#基因注释文件
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>geneFilesPath &lt;- ".\\02-inputFiles\\Genes.txt" #要分析的基因，比如m6A RNA甲基化相关基因
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>​
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a># 临床数据文件地址：TCGA下载的临床数据
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>ClinicalDataPath &lt;- ".\\01-RawData\\Clinical2020-03-09\\TSV\\clinical.tsv"
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>​
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>#############################上面代码地址注意修改
 <a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>setwd(".\\")
 <a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>dir.create("03-AnalysisResult")
@@ -9317,7 +9317,7 @@
 <a id="__codelineno-0-105" name="__codelineno-0-105" href="#__codelineno-0-105"></a>                              stringsAsFactors = FALSE)
 <a id="__codelineno-0-106" name="__codelineno-0-106" href="#__codelineno-0-106"></a>  return(EnsemblTOGene)
 <a id="__codelineno-0-107" name="__codelineno-0-107" href="#__codelineno-0-107"></a>}
-<a id="__codelineno-0-108" name="__codelineno-0-108" href="#__codelineno-0-108"></a>​
+<a id="__codelineno-0-108" name="__codelineno-0-108" href="#__codelineno-0-108"></a>
 <a id="__codelineno-0-109" name="__codelineno-0-109" href="#__codelineno-0-109"></a>############一个函数，给一个Barcode向量，区分正常组织和肿瘤组织
 <a id="__codelineno-0-110" name="__codelineno-0-110" href="#__codelineno-0-110"></a>getSampleInfo &lt;- function(Barcode){
 <a id="__codelineno-0-111" name="__codelineno-0-111" href="#__codelineno-0-111"></a>  TumorBarcode &lt;-c()
@@ -9338,7 +9338,7 @@
 <a id="__codelineno-0-126" name="__codelineno-0-126" href="#__codelineno-0-126"></a>              sampleNum = sampleNum ,sampleList = sampleList))
 <a id="__codelineno-0-127" name="__codelineno-0-127" href="#__codelineno-0-127"></a>}
 <a id="__codelineno-0-128" name="__codelineno-0-128" href="#__codelineno-0-128"></a>############ 上面函数返回一个重新排序的Barcode列表
-<a id="__codelineno-0-129" name="__codelineno-0-129" href="#__codelineno-0-129"></a>​
+<a id="__codelineno-0-129" name="__codelineno-0-129" href="#__codelineno-0-129"></a>
 <a id="__codelineno-0-130" name="__codelineno-0-130" href="#__codelineno-0-130"></a>############获取生存时间，clindataM应为读入的tsv文件
 <a id="__codelineno-0-131" name="__codelineno-0-131" href="#__codelineno-0-131"></a>getSurData &lt;- function(clindataM){
 <a id="__codelineno-0-132" name="__codelineno-0-132" href="#__codelineno-0-132"></a>  submitter_id &lt;- c()
@@ -9376,10 +9376,10 @@
 <a id="__codelineno-0-164" name="__codelineno-0-164" href="#__codelineno-0-164"></a>library(R.utils)
 <a id="__codelineno-0-165" name="__codelineno-0-165" href="#__codelineno-0-165"></a>sapply(Files, gunzip) # 解压函数gunzip需要安装R.utils包
 <a id="__codelineno-0-166" name="__codelineno-0-166" href="#__codelineno-0-166"></a>setwd("..\\")
-<a id="__codelineno-0-167" name="__codelineno-0-167" href="#__codelineno-0-167"></a>​
+<a id="__codelineno-0-167" name="__codelineno-0-167" href="#__codelineno-0-167"></a>
 <a id="__codelineno-0-168" name="__codelineno-0-168" href="#__codelineno-0-168"></a>jsonFileInfo &lt;- processingJsonFiles(jsonFile = jsonFilePath)
 <a id="__codelineno-0-169" name="__codelineno-0-169" href="#__codelineno-0-169"></a>write.table(jsonFileInfo,file = paste(outputPath[1],JsonFileInfoFM,sep = ""))
-<a id="__codelineno-0-170" name="__codelineno-0-170" href="#__codelineno-0-170"></a>​
+<a id="__codelineno-0-170" name="__codelineno-0-170" href="#__codelineno-0-170"></a>
 <a id="__codelineno-0-171" name="__codelineno-0-171" href="#__codelineno-0-171"></a>EnsemblTOGene &lt;- get_map(gtfFilesPath)
 <a id="__codelineno-0-172" name="__codelineno-0-172" href="#__codelineno-0-172"></a>gtf_Ensembl_ID &lt;- substr(EnsemblTOGene[,1],1,15)
 <a id="__codelineno-0-173" name="__codelineno-0-173" href="#__codelineno-0-173"></a>EnsemblTOGene &lt;- data.frame(gtf_Ensembl_ID,EnsemblTOGene[,2])
@@ -9409,7 +9409,7 @@
 <a id="__codelineno-0-197" name="__codelineno-0-197" href="#__codelineno-0-197"></a>}
 <a id="__codelineno-0-198" name="__codelineno-0-198" href="#__codelineno-0-198"></a>setwd("..\\") # 读完数据后返回工作目录
 <a id="__codelineno-0-199" name="__codelineno-0-199" href="#__codelineno-0-199"></a>print(paste("读取文件完毕,共读入",num,"个文件",sep = ""))
-<a id="__codelineno-0-200" name="__codelineno-0-200" href="#__codelineno-0-200"></a>​
+<a id="__codelineno-0-200" name="__codelineno-0-200" href="#__codelineno-0-200"></a>
 <a id="__codelineno-0-201" name="__codelineno-0-201" href="#__codelineno-0-201"></a>library(stringr)
 <a id="__codelineno-0-202" name="__codelineno-0-202" href="#__codelineno-0-202"></a>ids &lt;- c(str_split(geneExpMatrix$Ensembl_ID,'[.]',simplify = T)[,1])
 <a id="__codelineno-0-203" name="__codelineno-0-203" href="#__codelineno-0-203"></a># rownames(geneExpMatrix) &lt;- geneExpMatrix$Ensembl_ID
@@ -9419,7 +9419,7 @@
 <a id="__codelineno-0-207" name="__codelineno-0-207" href="#__codelineno-0-207"></a>print("开始数据整理排序")
 <a id="__codelineno-0-208" name="__codelineno-0-208" href="#__codelineno-0-208"></a>BarcodeSort &lt;- getSampleInfo(Barcode)$BarcodeSort
 <a id="__codelineno-0-209" name="__codelineno-0-209" href="#__codelineno-0-209"></a>geneExpMatrix &lt;- geneExpMatrix[,c("Ensembl_ID","gene_id",BarcodeSort)]
-<a id="__codelineno-0-210" name="__codelineno-0-210" href="#__codelineno-0-210"></a>​
+<a id="__codelineno-0-210" name="__codelineno-0-210" href="#__codelineno-0-210"></a>
 <a id="__codelineno-0-211" name="__codelineno-0-211" href="#__codelineno-0-211"></a>library(limma)
 <a id="__codelineno-0-212" name="__codelineno-0-212" href="#__codelineno-0-212"></a>geneNames&lt;- geneExpMatrix[,"gene_id"]
 <a id="__codelineno-0-213" name="__codelineno-0-213" href="#__codelineno-0-213"></a>completeExpMatrix &lt;- geneExpMatrix[,-c(1,2)]
@@ -9430,24 +9430,24 @@
 <a id="__codelineno-0-218" name="__codelineno-0-218" href="#__codelineno-0-218"></a>completeExpMatrix &lt;-t(completeExpMatrix)
 <a id="__codelineno-0-219" name="__codelineno-0-219" href="#__codelineno-0-219"></a># 从数据集中删除零方差列，可以使用相同的apply 表达式，设置方差不等于零。completeExpMatrix &lt;- completeExpMatrix[,which(apply(completeExpMatrix, 2, var)!=0)]
 <a id="__codelineno-0-220" name="__codelineno-0-220" href="#__codelineno-0-220"></a>completeExpMatrix &lt;- t(completeExpMatrix)
-<a id="__codelineno-0-221" name="__codelineno-0-221" href="#__codelineno-0-221"></a>​
+<a id="__codelineno-0-221" name="__codelineno-0-221" href="#__codelineno-0-221"></a>
 <a id="__codelineno-0-222" name="__codelineno-0-222" href="#__codelineno-0-222"></a>#保存文件
 <a id="__codelineno-0-223" name="__codelineno-0-223" href="#__codelineno-0-223"></a>write.table(completeExpMatrix,file = paste(outputPath[1],completeExpMatrixFN,sep = ""),
 <a id="__codelineno-0-224" name="__codelineno-0-224" href="#__codelineno-0-224"></a>            sep = "\t",row.names = T)
-<a id="__codelineno-0-225" name="__codelineno-0-225" href="#__codelineno-0-225"></a>​
+<a id="__codelineno-0-225" name="__codelineno-0-225" href="#__codelineno-0-225"></a>
 <a id="__codelineno-0-226" name="__codelineno-0-226" href="#__codelineno-0-226"></a># 删除正常样本后的表达矩阵
 <a id="__codelineno-0-227" name="__codelineno-0-227" href="#__codelineno-0-227"></a>SampleInfo &lt;- getSampleInfo(colnames(completeExpMatrix))
 <a id="__codelineno-0-228" name="__codelineno-0-228" href="#__codelineno-0-228"></a>conNum &lt;- SampleInfo[["sampleNum"]][["NormalBarcode"]]#control组样品数目
 <a id="__codelineno-0-229" name="__codelineno-0-229" href="#__codelineno-0-229"></a>treatNum &lt;- SampleInfo[["sampleNum"]][["TumorBarcode"]]#tumor组样品数目
-<a id="__codelineno-0-230" name="__codelineno-0-230" href="#__codelineno-0-230"></a>​
+<a id="__codelineno-0-230" name="__codelineno-0-230" href="#__codelineno-0-230"></a>
 <a id="__codelineno-0-231" name="__codelineno-0-231" href="#__codelineno-0-231"></a>SampleList &lt;- SampleInfo[["sampleList"]]
 <a id="__codelineno-0-232" name="__codelineno-0-232" href="#__codelineno-0-232"></a>TumorSampleBarcode &lt;- SampleList[which(SampleList$Type == "Tumor"),"ID"]
 <a id="__codelineno-0-233" name="__codelineno-0-233" href="#__codelineno-0-233"></a>onlyTumorExpMatrix &lt;- completeExpMatrix[,TumorSampleBarcode]
-<a id="__codelineno-0-234" name="__codelineno-0-234" href="#__codelineno-0-234"></a>​
+<a id="__codelineno-0-234" name="__codelineno-0-234" href="#__codelineno-0-234"></a>
 <a id="__codelineno-0-235" name="__codelineno-0-235" href="#__codelineno-0-235"></a>onlyTumorExpMatrix &lt;-t(onlyTumorExpMatrix)
 <a id="__codelineno-0-236" name="__codelineno-0-236" href="#__codelineno-0-236"></a># 从数据集中删除零方差列，可以使用相同的apply 表达式，设置方差不等于零。onlyTumorExpMatrix &lt;- onlyTumorExpMatrix[,which(apply(onlyTumorExpMatrix, 2, var)!=0)]
 <a id="__codelineno-0-237" name="__codelineno-0-237" href="#__codelineno-0-237"></a>onlyTumorExpMatrix &lt;- t(onlyTumorExpMatrix)
-<a id="__codelineno-0-238" name="__codelineno-0-238" href="#__codelineno-0-238"></a>​
+<a id="__codelineno-0-238" name="__codelineno-0-238" href="#__codelineno-0-238"></a>
 <a id="__codelineno-0-239" name="__codelineno-0-239" href="#__codelineno-0-239"></a>write.table(onlyTumorExpMatrix,file = paste(outputPath[1],onlyTumorExpMatrixFN,sep = ""),
 <a id="__codelineno-0-240" name="__codelineno-0-240" href="#__codelineno-0-240"></a>            sep = "\t",row.names = T)
 <a id="__codelineno-0-241" name="__codelineno-0-241" href="#__codelineno-0-241"></a>######################################
@@ -9460,22 +9460,22 @@
 <a id="__codelineno-0-248" name="__codelineno-0-248" href="#__codelineno-0-248"></a>yesgene &lt;-intersect(gene[,1],as.vector(row.names(completeExpMatrix)))
 <a id="__codelineno-0-249" name="__codelineno-0-249" href="#__codelineno-0-249"></a># 表达矩阵中没有的基因
 <a id="__codelineno-0-250" name="__codelineno-0-250" href="#__codelineno-0-250"></a>nogene &lt;- setdiff(gene[,1],yesgene)
-<a id="__codelineno-0-251" name="__codelineno-0-251" href="#__codelineno-0-251"></a>​
+<a id="__codelineno-0-251" name="__codelineno-0-251" href="#__codelineno-0-251"></a>
 <a id="__codelineno-0-252" name="__codelineno-0-252" href="#__codelineno-0-252"></a>writeLines(c(paste("总共输入了",length(gene[,1]),"基因：",sep=""),
 <a id="__codelineno-0-253" name="__codelineno-0-253" href="#__codelineno-0-253"></a>             paste("在表达矩阵中有的基因个数：",length(yesgene),sep=""),
 <a id="__codelineno-0-254" name="__codelineno-0-254" href="#__codelineno-0-254"></a>             yesgene,paste("在表达矩阵中没有的基因个数：",length(nogene),sep=""),nogene),
 <a id="__codelineno-0-255" name="__codelineno-0-255" href="#__codelineno-0-255"></a>           con=paste(outputPath[2],"filespec.txt",sep = ""),sep="\n")
-<a id="__codelineno-0-256" name="__codelineno-0-256" href="#__codelineno-0-256"></a>​
+<a id="__codelineno-0-256" name="__codelineno-0-256" href="#__codelineno-0-256"></a>
 <a id="__codelineno-0-257" name="__codelineno-0-257" href="#__codelineno-0-257"></a>inputGeneAllSampleExpMatrix &lt;- as.matrix(completeExpMatrix[yesgene,])
 <a id="__codelineno-0-258" name="__codelineno-0-258" href="#__codelineno-0-258"></a>write.table(inputGeneAllSampleExpMatrix,
 <a id="__codelineno-0-259" name="__codelineno-0-259" href="#__codelineno-0-259"></a>            file=paste(outputPath[2],inputGeneAllSampleExpMatrixFN,sep = ""),
 <a id="__codelineno-0-260" name="__codelineno-0-260" href="#__codelineno-0-260"></a>            sep="\t",row.names=T,quote=F)
 <a id="__codelineno-0-261" name="__codelineno-0-261" href="#__codelineno-0-261"></a>inputGeneOnlyTumorExpMatrix &lt;- inputGeneAllSampleExpMatrix[,TumorSampleBarcode]
-<a id="__codelineno-0-262" name="__codelineno-0-262" href="#__codelineno-0-262"></a>​
+<a id="__codelineno-0-262" name="__codelineno-0-262" href="#__codelineno-0-262"></a>
 <a id="__codelineno-0-263" name="__codelineno-0-263" href="#__codelineno-0-263"></a>write.table(inputGeneOnlyTumorExpMatrix,
 <a id="__codelineno-0-264" name="__codelineno-0-264" href="#__codelineno-0-264"></a>            file=paste(outputPath[2],inputGeneOnlyTumorExpMatrixFN,sep = ""),
 <a id="__codelineno-0-265" name="__codelineno-0-265" href="#__codelineno-0-265"></a>            sep="\t",row.names=T,quote=F)
-<a id="__codelineno-0-266" name="__codelineno-0-266" href="#__codelineno-0-266"></a>​
+<a id="__codelineno-0-266" name="__codelineno-0-266" href="#__codelineno-0-266"></a>
 <a id="__codelineno-0-267" name="__codelineno-0-267" href="#__codelineno-0-267"></a>#差异分析
 <a id="__codelineno-0-268" name="__codelineno-0-268" href="#__codelineno-0-268"></a>library("limma")
 <a id="__codelineno-0-269" name="__codelineno-0-269" href="#__codelineno-0-269"></a>grade &lt;- c(rep(1,conNum),rep(2,treatNum))
@@ -9507,19 +9507,19 @@
 <a id="__codelineno-0-295" name="__codelineno-0-295" href="#__codelineno-0-295"></a>write.table(sigDiffGeneExpResult,
 <a id="__codelineno-0-296" name="__codelineno-0-296" href="#__codelineno-0-296"></a>            file=paste(outputPath[2],sigDiffGeneExpResultFN,sep = ""),
 <a id="__codelineno-0-297" name="__codelineno-0-297" href="#__codelineno-0-297"></a>            sep="\t",row.names=F,quote=F)
-<a id="__codelineno-0-298" name="__codelineno-0-298" href="#__codelineno-0-298"></a>​
+<a id="__codelineno-0-298" name="__codelineno-0-298" href="#__codelineno-0-298"></a>
 <a id="__codelineno-0-299" name="__codelineno-0-299" href="#__codelineno-0-299"></a>###差异分析后相关基因的表达矩阵文件
 <a id="__codelineno-0-300" name="__codelineno-0-300" href="#__codelineno-0-300"></a>sigDiffGeneExpMatrix &lt;- completeExpMatrix[sigDiffGeneExpResult$gene,]
 <a id="__codelineno-0-301" name="__codelineno-0-301" href="#__codelineno-0-301"></a>write.table(sigDiffGeneExpMatrix,
 <a id="__codelineno-0-302" name="__codelineno-0-302" href="#__codelineno-0-302"></a>            file=paste(outputPath[2],sigDiffGeneExpMatrixFN,sep = ""),
 <a id="__codelineno-0-303" name="__codelineno-0-303" href="#__codelineno-0-303"></a>            sep="\t",row.names=F,quote=F)
-<a id="__codelineno-0-304" name="__codelineno-0-304" href="#__codelineno-0-304"></a>​
+<a id="__codelineno-0-304" name="__codelineno-0-304" href="#__codelineno-0-304"></a>
 <a id="__codelineno-0-305" name="__codelineno-0-305" href="#__codelineno-0-305"></a>sigDiffGeneTumorExpMatrix &lt;- completeExpMatrix[sigDiffGeneExpResult$gene,TumorSampleBarcode]
 <a id="__codelineno-0-306" name="__codelineno-0-306" href="#__codelineno-0-306"></a>write.table(sigDiffGeneTumorExpMatrix,
 <a id="__codelineno-0-307" name="__codelineno-0-307" href="#__codelineno-0-307"></a>            file=paste(outputPath[2],sigDiffGeneTumorExpMatrixFN,sep = ""),
 <a id="__codelineno-0-308" name="__codelineno-0-308" href="#__codelineno-0-308"></a>            sep="\t",row.names=F,quote=F)
 <a id="__codelineno-0-309" name="__codelineno-0-309" href="#__codelineno-0-309"></a>###############
-<a id="__codelineno-0-310" name="__codelineno-0-310" href="#__codelineno-0-310"></a>​
+<a id="__codelineno-0-310" name="__codelineno-0-310" href="#__codelineno-0-310"></a>
 <a id="__codelineno-0-311" name="__codelineno-0-311" href="#__codelineno-0-311"></a>#####热图的绘制
 <a id="__codelineno-0-312" name="__codelineno-0-312" href="#__codelineno-0-312"></a>#install.packages("pheatmap")
 <a id="__codelineno-0-313" name="__codelineno-0-313" href="#__codelineno-0-313"></a>diffGeneExpHeatMapData=log2(sigDiffGeneExpMatrix+1)
@@ -9527,7 +9527,7 @@
 <a id="__codelineno-0-315" name="__codelineno-0-315" href="#__codelineno-0-315"></a>Type=c(rep("N",conNum),rep("T",treatNum))
 <a id="__codelineno-0-316" name="__codelineno-0-316" href="#__codelineno-0-316"></a>names(Type)=colnames(diffGeneExpHeatMapData)
 <a id="__codelineno-0-317" name="__codelineno-0-317" href="#__codelineno-0-317"></a>Type=as.data.frame(Type)
-<a id="__codelineno-0-318" name="__codelineno-0-318" href="#__codelineno-0-318"></a>​
+<a id="__codelineno-0-318" name="__codelineno-0-318" href="#__codelineno-0-318"></a>
 <a id="__codelineno-0-319" name="__codelineno-0-319" href="#__codelineno-0-319"></a>pdf(paste(outputPath[2],diffgeneHeatMapFN,sep = ""),height=10,width=20)
 <a id="__codelineno-0-320" name="__codelineno-0-320" href="#__codelineno-0-320"></a>pheatmap(diffGeneExpHeatMapData,
 <a id="__codelineno-0-321" name="__codelineno-0-321" href="#__codelineno-0-321"></a>         annotation=Type,
@@ -9559,10 +9559,10 @@
 <a id="__codelineno-0-347" name="__codelineno-0-347" href="#__codelineno-0-347"></a>)
 <a id="__codelineno-0-348" name="__codelineno-0-348" href="#__codelineno-0-348"></a>dev.off()
 <a id="__codelineno-0-349" name="__codelineno-0-349" href="#__codelineno-0-349"></a>########################104
-<a id="__codelineno-0-350" name="__codelineno-0-350" href="#__codelineno-0-350"></a>​
+<a id="__codelineno-0-350" name="__codelineno-0-350" href="#__codelineno-0-350"></a>
 <a id="__codelineno-0-351" name="__codelineno-0-351" href="#__codelineno-0-351"></a>#######################肿瘤分型######################
 <a id="__codelineno-0-352" name="__codelineno-0-352" href="#__codelineno-0-352"></a>library(limma)
-<a id="__codelineno-0-353" name="__codelineno-0-353" href="#__codelineno-0-353"></a>​
+<a id="__codelineno-0-353" name="__codelineno-0-353" href="#__codelineno-0-353"></a>
 <a id="__codelineno-0-354" name="__codelineno-0-354" href="#__codelineno-0-354"></a>#聚类
 <a id="__codelineno-0-355" name="__codelineno-0-355" href="#__codelineno-0-355"></a>maxK=9
 <a id="__codelineno-0-356" name="__codelineno-0-356" href="#__codelineno-0-356"></a>library(ConsensusClusterPlus)
@@ -9576,15 +9576,15 @@
 <a id="__codelineno-0-364" name="__codelineno-0-364" href="#__codelineno-0-364"></a>                                distance="euclidean",
 <a id="__codelineno-0-365" name="__codelineno-0-365" href="#__codelineno-0-365"></a>                                seed=123456,
 <a id="__codelineno-0-366" name="__codelineno-0-366" href="#__codelineno-0-366"></a>                                plot="png")
-<a id="__codelineno-0-367" name="__codelineno-0-367" href="#__codelineno-0-367"></a>​
+<a id="__codelineno-0-367" name="__codelineno-0-367" href="#__codelineno-0-367"></a>
 <a id="__codelineno-0-368" name="__codelineno-0-368" href="#__codelineno-0-368"></a>#输出结果
 <a id="__codelineno-0-369" name="__codelineno-0-369" href="#__codelineno-0-369"></a>clusterNum &lt;- 2                  #分几类，根据判断标准判断
 <a id="__codelineno-0-370" name="__codelineno-0-370" href="#__codelineno-0-370"></a>cluster &lt;- results[[clusterNum]][["consensusClass"]]
 <a id="__codelineno-0-371" name="__codelineno-0-371" href="#__codelineno-0-371"></a>write.table(cluster,file=paste(outputPath[4],ClousterFN,sep = ""),
 <a id="__codelineno-0-372" name="__codelineno-0-372" href="#__codelineno-0-372"></a>            sep="\t",quote=F,col.names=F)
-<a id="__codelineno-0-373" name="__codelineno-0-373" href="#__codelineno-0-373"></a>​
+<a id="__codelineno-0-373" name="__codelineno-0-373" href="#__codelineno-0-373"></a>
 <a id="__codelineno-0-374" name="__codelineno-0-374" href="#__codelineno-0-374"></a>###################################105
-<a id="__codelineno-0-375" name="__codelineno-0-375" href="#__codelineno-0-375"></a>​
+<a id="__codelineno-0-375" name="__codelineno-0-375" href="#__codelineno-0-375"></a>
 <a id="__codelineno-0-376" name="__codelineno-0-376" href="#__codelineno-0-376"></a>##############主成分分析#############
 <a id="__codelineno-0-377" name="__codelineno-0-377" href="#__codelineno-0-377"></a>#install.packages("ggplot2")
 <a id="__codelineno-0-378" name="__codelineno-0-378" href="#__codelineno-0-378"></a>#pca analysis
@@ -9595,14 +9595,14 @@
 <a id="__codelineno-0-383" name="__codelineno-0-383" href="#__codelineno-0-383"></a>pcaData.pca &lt;- prcomp(pcaData, scale. = TRUE)                                  #PCA分析
 <a id="__codelineno-0-384" name="__codelineno-0-384" href="#__codelineno-0-384"></a>write.table(predict(pcaData.pca),file=paste(outputPath[5],PCAResultFN,sep = "")
 <a id="__codelineno-0-385" name="__codelineno-0-385" href="#__codelineno-0-385"></a>            ,quote=F,sep="\t")        #输出新表
-<a id="__codelineno-0-386" name="__codelineno-0-386" href="#__codelineno-0-386"></a>​
+<a id="__codelineno-0-386" name="__codelineno-0-386" href="#__codelineno-0-386"></a>
 <a id="__codelineno-0-387" name="__codelineno-0-387" href="#__codelineno-0-387"></a>#可视化
 <a id="__codelineno-0-388" name="__codelineno-0-388" href="#__codelineno-0-388"></a>library(ggplot2)
 <a id="__codelineno-0-389" name="__codelineno-0-389" href="#__codelineno-0-389"></a>clusterInfo &lt;- as.data.frame(cluster)
 <a id="__codelineno-0-390" name="__codelineno-0-390" href="#__codelineno-0-390"></a>group &lt;- paste0("cluster",as.vector(clusterInfo[,1]))
 <a id="__codelineno-0-391" name="__codelineno-0-391" href="#__codelineno-0-391"></a>pcaPredict &lt;- predict(pcaData.pca)
 <a id="__codelineno-0-392" name="__codelineno-0-392" href="#__codelineno-0-392"></a>PCA &lt;- data.frame(PCA1 = pcaPredict[,1], PCA2 = pcaPredict[,2],group=group)
-<a id="__codelineno-0-393" name="__codelineno-0-393" href="#__codelineno-0-393"></a>​
+<a id="__codelineno-0-393" name="__codelineno-0-393" href="#__codelineno-0-393"></a>
 <a id="__codelineno-0-394" name="__codelineno-0-394" href="#__codelineno-0-394"></a>pdf(file=paste(outputPath[5],CloustePCAFigFN,sep = ""),height=10,width=13)#保存输入出文件
 <a id="__codelineno-0-395" name="__codelineno-0-395" href="#__codelineno-0-395"></a>ggplot(data = PCA, aes(PCA1, PCA2)) + geom_point(aes(color = group)) +
 <a id="__codelineno-0-396" name="__codelineno-0-396" href="#__codelineno-0-396"></a>  theme_bw()+
@@ -9610,11 +9610,11 @@
 <a id="__codelineno-0-398" name="__codelineno-0-398" href="#__codelineno-0-398"></a>  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 <a id="__codelineno-0-399" name="__codelineno-0-399" href="#__codelineno-0-399"></a>dev.off()
 <a id="__codelineno-0-400" name="__codelineno-0-400" href="#__codelineno-0-400"></a>###################################106
-<a id="__codelineno-0-401" name="__codelineno-0-401" href="#__codelineno-0-401"></a>​
+<a id="__codelineno-0-401" name="__codelineno-0-401" href="#__codelineno-0-401"></a>
 <a id="__codelineno-0-402" name="__codelineno-0-402" href="#__codelineno-0-402"></a>options(stringsAsFactors = F)
 <a id="__codelineno-0-403" name="__codelineno-0-403" href="#__codelineno-0-403"></a>ClinicalData &lt;- read.table(ClinicalDataPath,sep = "\t",header = T)
 <a id="__codelineno-0-404" name="__codelineno-0-404" href="#__codelineno-0-404"></a>ClinicalData &lt;- ClinicalData[!duplicated(ClinicalData$submitter_id),]
-<a id="__codelineno-0-405" name="__codelineno-0-405" href="#__codelineno-0-405"></a>​
+<a id="__codelineno-0-405" name="__codelineno-0-405" href="#__codelineno-0-405"></a>
 <a id="__codelineno-0-406" name="__codelineno-0-406" href="#__codelineno-0-406"></a>pClinData &lt;- ClinicalData[,c("submitter_id",
 <a id="__codelineno-0-407" name="__codelineno-0-407" href="#__codelineno-0-407"></a>                             "gender",
 <a id="__codelineno-0-408" name="__codelineno-0-408" href="#__codelineno-0-408"></a>                             "days_to_death",
@@ -9624,7 +9624,7 @@
 <a id="__codelineno-0-412" name="__codelineno-0-412" href="#__codelineno-0-412"></a>                             "ajcc_pathologic_t",
 <a id="__codelineno-0-413" name="__codelineno-0-413" href="#__codelineno-0-413"></a>                             "ajcc_pathologic_n",
 <a id="__codelineno-0-414" name="__codelineno-0-414" href="#__codelineno-0-414"></a>                             "ajcc_pathologic_m")]
-<a id="__codelineno-0-415" name="__codelineno-0-415" href="#__codelineno-0-415"></a>​
+<a id="__codelineno-0-415" name="__codelineno-0-415" href="#__codelineno-0-415"></a>
 <a id="__codelineno-0-416" name="__codelineno-0-416" href="#__codelineno-0-416"></a>surData &lt;- getSurData(ClinicalData)
 <a id="__codelineno-0-417" name="__codelineno-0-417" href="#__codelineno-0-417"></a>clindata &lt;- merge(surData,pClinData,by = "submitter_id")
 <a id="__codelineno-0-418" name="__codelineno-0-418" href="#__codelineno-0-418"></a>clindata$ajcc_pathologic_stage &lt;- gsub("[A-D].*","",c(pClinData$ajcc_pathologic_stage))
@@ -9636,7 +9636,7 @@
 <a id="__codelineno-0-424" name="__codelineno-0-424" href="#__codelineno-0-424"></a>                        "ajcc_pathologic_t",
 <a id="__codelineno-0-425" name="__codelineno-0-425" href="#__codelineno-0-425"></a>                        "ajcc_pathologic_n",
 <a id="__codelineno-0-426" name="__codelineno-0-426" href="#__codelineno-0-426"></a>                        "ajcc_pathologic_m")]
-<a id="__codelineno-0-427" name="__codelineno-0-427" href="#__codelineno-0-427"></a>​
+<a id="__codelineno-0-427" name="__codelineno-0-427" href="#__codelineno-0-427"></a>
 <a id="__codelineno-0-428" name="__codelineno-0-428" href="#__codelineno-0-428"></a>colnames(clindata) &lt;- c("Barcode","SurvivalTime","VitalStatus","Stage","T","N","M")
 <a id="__codelineno-0-429" name="__codelineno-0-429" href="#__codelineno-0-429"></a>write.table(clindata,file=paste(outputPath[6],"clindata.txt",sep = ""),sep="\t",row.names=F,quote=F)
 <a id="__codelineno-0-430" name="__codelineno-0-430" href="#__codelineno-0-430"></a>#########
@@ -9649,13 +9649,13 @@
 <a id="__codelineno-0-437" name="__codelineno-0-437" href="#__codelineno-0-437"></a>}
 <a id="__codelineno-0-438" name="__codelineno-0-438" href="#__codelineno-0-438"></a>ultiClindata &lt;- data.frame(Barcodes=patientsID,clindata)
 <a id="__codelineno-0-439" name="__codelineno-0-439" href="#__codelineno-0-439"></a>ultiClindata &lt;- ultiClindata[which(!is.na(ultiClindata$Barcodes)),]
-<a id="__codelineno-0-440" name="__codelineno-0-440" href="#__codelineno-0-440"></a>​
+<a id="__codelineno-0-440" name="__codelineno-0-440" href="#__codelineno-0-440"></a>
 <a id="__codelineno-0-441" name="__codelineno-0-441" href="#__codelineno-0-441"></a>write.csv(ultiClindata,
 <a id="__codelineno-0-442" name="__codelineno-0-442" href="#__codelineno-0-442"></a>          file=paste(outputPath[6],ultiClinDataFN,sep = ""),
 <a id="__codelineno-0-443" name="__codelineno-0-443" href="#__codelineno-0-443"></a>          row.names=F,quote=F)
 <a id="__codelineno-0-444" name="__codelineno-0-444" href="#__codelineno-0-444"></a>##########
 <a id="__codelineno-0-445" name="__codelineno-0-445" href="#__codelineno-0-445"></a>options(stringsAsFactors = F)
-<a id="__codelineno-0-446" name="__codelineno-0-446" href="#__codelineno-0-446"></a>​
+<a id="__codelineno-0-446" name="__codelineno-0-446" href="#__codelineno-0-446"></a>
 <a id="__codelineno-0-447" name="__codelineno-0-447" href="#__codelineno-0-447"></a>clusterNum = clusterNum #聚类分为几类，可以更改
 <a id="__codelineno-0-448" name="__codelineno-0-448" href="#__codelineno-0-448"></a>SurD &lt;- ultiClindata# read.csv(paste(outputPath[6],ultiClinDataFN,sep = ""),header = T)
 <a id="__codelineno-0-449" name="__codelineno-0-449" href="#__codelineno-0-449"></a>SurD &lt;- SurD[which(SurD$SurvivalTime != "--"),]
@@ -9672,7 +9672,7 @@
 <a id="__codelineno-0-460" name="__codelineno-0-460" href="#__codelineno-0-460"></a>#install.packages("survival")
 <a id="__codelineno-0-461" name="__codelineno-0-461" href="#__codelineno-0-461"></a>library(survival)
 <a id="__codelineno-0-462" name="__codelineno-0-462" href="#__codelineno-0-462"></a>diff &lt;- survdiff(Surv(SurvivalTime, VitalStatus) ~ group,data = Surdata)
-<a id="__codelineno-0-463" name="__codelineno-0-463" href="#__codelineno-0-463"></a>​
+<a id="__codelineno-0-463" name="__codelineno-0-463" href="#__codelineno-0-463"></a>
 <a id="__codelineno-0-464" name="__codelineno-0-464" href="#__codelineno-0-464"></a>pValue &lt;- 1-pchisq(diff$chisq,df=clusterNum-1)# df为自由度n-1
 <a id="__codelineno-0-465" name="__codelineno-0-465" href="#__codelineno-0-465"></a>if(pValue&lt;0.001){
 <a id="__codelineno-0-466" name="__codelineno-0-466" href="#__codelineno-0-466"></a>  pValue &lt;- signif(pValue,4)
@@ -9680,10 +9680,10 @@
 <a id="__codelineno-0-468" name="__codelineno-0-468" href="#__codelineno-0-468"></a>}else{
 <a id="__codelineno-0-469" name="__codelineno-0-469" href="#__codelineno-0-469"></a>  pValue &lt;- round(pValue,3)
 <a id="__codelineno-0-470" name="__codelineno-0-470" href="#__codelineno-0-470"></a>}
-<a id="__codelineno-0-471" name="__codelineno-0-471" href="#__codelineno-0-471"></a>​
+<a id="__codelineno-0-471" name="__codelineno-0-471" href="#__codelineno-0-471"></a>
 <a id="__codelineno-0-472" name="__codelineno-0-472" href="#__codelineno-0-472"></a>fit &lt;- survfit(Surv(SurvivalTime, VitalStatus) ~ group, data = Surdata)
 <a id="__codelineno-0-473" name="__codelineno-0-473" href="#__codelineno-0-473"></a>summary(fit)# 查看5年生存率
-<a id="__codelineno-0-474" name="__codelineno-0-474" href="#__codelineno-0-474"></a>​
+<a id="__codelineno-0-474" name="__codelineno-0-474" href="#__codelineno-0-474"></a>
 <a id="__codelineno-0-475" name="__codelineno-0-475" href="#__codelineno-0-475"></a>pdf(file=paste(outputPath[7],"ClousterSurCurve.pdf",sep = ""),width = 5.5,height =5)
 <a id="__codelineno-0-476" name="__codelineno-0-476" href="#__codelineno-0-476"></a>plot(fit,
 <a id="__codelineno-0-477" name="__codelineno-0-477" href="#__codelineno-0-477"></a>     lwd=2,
@@ -9699,23 +9699,23 @@
 <a id="__codelineno-0-487" name="__codelineno-0-487" href="#__codelineno-0-487"></a>dev.off()
 <a id="__codelineno-0-488" name="__codelineno-0-488" href="#__codelineno-0-488"></a>##############################108
 <a id="__codelineno-0-489" name="__codelineno-0-489" href="#__codelineno-0-489"></a>options(stringsAsFactors = F)
-<a id="__codelineno-0-490" name="__codelineno-0-490" href="#__codelineno-0-490"></a>​
+<a id="__codelineno-0-490" name="__codelineno-0-490" href="#__codelineno-0-490"></a>
 <a id="__codelineno-0-491" name="__codelineno-0-491" href="#__codelineno-0-491"></a>SurD &lt;- ultiClindata# read.csv(paste(outputPath[6],ultiClinDataFN,sep = ""),header = T)
 <a id="__codelineno-0-492" name="__codelineno-0-492" href="#__codelineno-0-492"></a>SurD &lt;- SurD[which(SurD$Stage != "--"),]
 <a id="__codelineno-0-493" name="__codelineno-0-493" href="#__codelineno-0-493"></a>SurD &lt;- SurD[which(SurD$T != "--"),]
 <a id="__codelineno-0-494" name="__codelineno-0-494" href="#__codelineno-0-494"></a>SurD &lt;- SurD[which(SurD$N != "--"),]
 <a id="__codelineno-0-495" name="__codelineno-0-495" href="#__codelineno-0-495"></a>SurD &lt;- SurD[which(SurD$N != "NX"),]
 <a id="__codelineno-0-496" name="__codelineno-0-496" href="#__codelineno-0-496"></a>SurD &lt;- SurD[which(SurD$M != "--"),]
-<a id="__codelineno-0-497" name="__codelineno-0-497" href="#__codelineno-0-497"></a>​
+<a id="__codelineno-0-497" name="__codelineno-0-497" href="#__codelineno-0-497"></a>
 <a id="__codelineno-0-498" name="__codelineno-0-498" href="#__codelineno-0-498"></a>if(length(grep("MX",SurD$M)) &lt; nrow(SurD)/10){
 <a id="__codelineno-0-499" name="__codelineno-0-499" href="#__codelineno-0-499"></a>  SurD &lt;- SurD[which(SurD$M != "MX"),]
 <a id="__codelineno-0-500" name="__codelineno-0-500" href="#__codelineno-0-500"></a>}
-<a id="__codelineno-0-501" name="__codelineno-0-501" href="#__codelineno-0-501"></a>​
+<a id="__codelineno-0-501" name="__codelineno-0-501" href="#__codelineno-0-501"></a>
 <a id="__codelineno-0-502" name="__codelineno-0-502" href="#__codelineno-0-502"></a>rownames(SurD) &lt;- SurD$Barcodes
 <a id="__codelineno-0-503" name="__codelineno-0-503" href="#__codelineno-0-503"></a>classification &lt;- as.data.frame(cluster)
 <a id="__codelineno-0-504" name="__codelineno-0-504" href="#__codelineno-0-504"></a>classification &lt;- classification[SurD$Barcodes,]
 <a id="__codelineno-0-505" name="__codelineno-0-505" href="#__codelineno-0-505"></a>classification &lt;- paste0("Cluster",as.vector(classification))
-<a id="__codelineno-0-506" name="__codelineno-0-506" href="#__codelineno-0-506"></a>​
+<a id="__codelineno-0-506" name="__codelineno-0-506" href="#__codelineno-0-506"></a>
 <a id="__codelineno-0-507" name="__codelineno-0-507" href="#__codelineno-0-507"></a>SurD$Group &lt;- classification
 <a id="__codelineno-0-508" name="__codelineno-0-508" href="#__codelineno-0-508"></a>### 临床相关性检验：分型与临床症状的相关性检验
 <a id="__codelineno-0-509" name="__codelineno-0-509" href="#__codelineno-0-509"></a>trainFlag &lt;- SurD[SurD[,"Group"]=="Cluster1",]
@@ -9739,7 +9739,7 @@
 <a id="__codelineno-0-527" name="__codelineno-0-527" href="#__codelineno-0-527"></a>  print(paste(colnames(newTable)[i],pvalue,sep=" "))
 <a id="__codelineno-0-528" name="__codelineno-0-528" href="#__codelineno-0-528"></a>}
 <a id="__codelineno-0-529" name="__codelineno-0-529" href="#__codelineno-0-529"></a>colnames(newTable) &lt;- c(newLabels,"Group")
-<a id="__codelineno-0-530" name="__codelineno-0-530" href="#__codelineno-0-530"></a>​
+<a id="__codelineno-0-530" name="__codelineno-0-530" href="#__codelineno-0-530"></a>
 <a id="__codelineno-0-531" name="__codelineno-0-531" href="#__codelineno-0-531"></a>######################################################
 <a id="__codelineno-0-532" name="__codelineno-0-532" href="#__codelineno-0-532"></a>#install.packages("pheatmap")
 <a id="__codelineno-0-533" name="__codelineno-0-533" href="#__codelineno-0-533"></a>library(pheatmap)
@@ -9747,7 +9747,7 @@
 <a id="__codelineno-0-535" name="__codelineno-0-535" href="#__codelineno-0-535"></a>row.names(newTable) &lt;- newTable[,"Barcodes"]
 <a id="__codelineno-0-536" name="__codelineno-0-536" href="#__codelineno-0-536"></a>rt &lt;- newTable[,-c(1:4)]
 <a id="__codelineno-0-537" name="__codelineno-0-537" href="#__codelineno-0-537"></a>ExpMatrix &lt;- sigDiffGeneTumorExpMatrix[,rownames(rt)] #sigDiffGeneTumorExpMatrix来自102
-<a id="__codelineno-0-538" name="__codelineno-0-538" href="#__codelineno-0-538"></a>​
+<a id="__codelineno-0-538" name="__codelineno-0-538" href="#__codelineno-0-538"></a>
 <a id="__codelineno-0-539" name="__codelineno-0-539" href="#__codelineno-0-539"></a>pdf(paste(outputPath[8],"ClousterWithClinCor.pdf",sep = ""),height=6,width=10)
 <a id="__codelineno-0-540" name="__codelineno-0-540" href="#__codelineno-0-540"></a>pheatmap(ExpMatrix, annotation = rt,
 <a id="__codelineno-0-541" name="__codelineno-0-541" href="#__codelineno-0-541"></a>         color = colorRampPalette(c("green", "white", "red"))(50),
@@ -9770,22 +9770,22 @@
 <a id="__codelineno-0-558" name="__codelineno-0-558" href="#__codelineno-0-558"></a>coxSurdata &lt;- as.data.frame(coxSurdata)
 <a id="__codelineno-0-559" name="__codelineno-0-559" href="#__codelineno-0-559"></a>coxSurdata$SurvivalTime &lt;- coxSurdata$SurvivalTime/365
 <a id="__codelineno-0-560" name="__codelineno-0-560" href="#__codelineno-0-560"></a>coxSurdata &lt;- data.frame(Barcodes=rownames(coxSurdata),coxSurdata)
-<a id="__codelineno-0-561" name="__codelineno-0-561" href="#__codelineno-0-561"></a>​
+<a id="__codelineno-0-561" name="__codelineno-0-561" href="#__codelineno-0-561"></a>
 <a id="__codelineno-0-562" name="__codelineno-0-562" href="#__codelineno-0-562"></a>coxExp &lt;- sigDiffGeneTumorExpMatrix[,rownames(coxSurdata)]
 <a id="__codelineno-0-563" name="__codelineno-0-563" href="#__codelineno-0-563"></a>#sigDiffGeneTumorExpMatrix来自102
 <a id="__codelineno-0-564" name="__codelineno-0-564" href="#__codelineno-0-564"></a>coxExp &lt;-t(coxExp)
 <a id="__codelineno-0-565" name="__codelineno-0-565" href="#__codelineno-0-565"></a>coxData &lt;- data.frame(Barcodes = rownames(coxExp),coxExp)
 <a id="__codelineno-0-566" name="__codelineno-0-566" href="#__codelineno-0-566"></a>coxData &lt;- merge(coxSurdata,coxData,by = "Barcodes")
-<a id="__codelineno-0-567" name="__codelineno-0-567" href="#__codelineno-0-567"></a>​
+<a id="__codelineno-0-567" name="__codelineno-0-567" href="#__codelineno-0-567"></a>
 <a id="__codelineno-0-568" name="__codelineno-0-568" href="#__codelineno-0-568"></a>####开始单因素COX分析
 <a id="__codelineno-0-569" name="__codelineno-0-569" href="#__codelineno-0-569"></a>#install.packages('survival')
 <a id="__codelineno-0-570" name="__codelineno-0-570" href="#__codelineno-0-570"></a>#install.packages('forestplot')
-<a id="__codelineno-0-571" name="__codelineno-0-571" href="#__codelineno-0-571"></a>​
+<a id="__codelineno-0-571" name="__codelineno-0-571" href="#__codelineno-0-571"></a>
 <a id="__codelineno-0-572" name="__codelineno-0-572" href="#__codelineno-0-572"></a>library(survival)
 <a id="__codelineno-0-573" name="__codelineno-0-573" href="#__codelineno-0-573"></a>library(forestplot)
 <a id="__codelineno-0-574" name="__codelineno-0-574" href="#__codelineno-0-574"></a>options(forestplot_new_page = FALSE) # 在pdf文件中生成图形就在第一页，不声明会在第二页
 <a id="__codelineno-0-575" name="__codelineno-0-575" href="#__codelineno-0-575"></a>clrs &lt;- fpColors(box="green",line="darkblue", summary="royalblue")   #定义森林图颜色
-<a id="__codelineno-0-576" name="__codelineno-0-576" href="#__codelineno-0-576"></a>​
+<a id="__codelineno-0-576" name="__codelineno-0-576" href="#__codelineno-0-576"></a>
 <a id="__codelineno-0-577" name="__codelineno-0-577" href="#__codelineno-0-577"></a>rt &lt;- coxData[,-1]
 <a id="__codelineno-0-578" name="__codelineno-0-578" href="#__codelineno-0-578"></a>coxResult &lt;- data.frame()
 <a id="__codelineno-0-579" name="__codelineno-0-579" href="#__codelineno-0-579"></a>for(i in colnames(rt[,3:ncol(rt)])){
@@ -9800,7 +9800,7 @@
 <a id="__codelineno-0-588" name="__codelineno-0-588" href="#__codelineno-0-588"></a>                           pvalue=coxSummary$coefficients[,"Pr(&gt;|z|)"])
 <a id="__codelineno-0-589" name="__codelineno-0-589" href="#__codelineno-0-589"></a>  )
 <a id="__codelineno-0-590" name="__codelineno-0-590" href="#__codelineno-0-590"></a>}
-<a id="__codelineno-0-591" name="__codelineno-0-591" href="#__codelineno-0-591"></a>​
+<a id="__codelineno-0-591" name="__codelineno-0-591" href="#__codelineno-0-591"></a>
 <a id="__codelineno-0-592" name="__codelineno-0-592" href="#__codelineno-0-592"></a>write.table(coxResult,file =paste(outputPath[9],"coxResult.txt",sep = ""),sep = "\t")
 <a id="__codelineno-0-593" name="__codelineno-0-593" href="#__codelineno-0-593"></a>write.table(coxResult,file=paste(outputPath[9],"coxResult.xls",sep = ""),sep="\t",row.names=F,quote=F)
 <a id="__codelineno-0-594" name="__codelineno-0-594" href="#__codelineno-0-594"></a>#绘制森林图
@@ -9839,7 +9839,7 @@
 <a id="__codelineno-0-627" name="__codelineno-0-627" href="#__codelineno-0-627"></a>inputGene &lt;-coxResult[which(coxResult$pvalue &lt; 0.05),]$Gene
 <a id="__codelineno-0-628" name="__codelineno-0-628" href="#__codelineno-0-628"></a>lassoData &lt;- coxData[,c("Barcodes","SurvivalTime","VitalStatus",inputGene)]
 <a id="__codelineno-0-629" name="__codelineno-0-629" href="#__codelineno-0-629"></a>row.names(lassoData) &lt;-lassoData$Barcodes
-<a id="__codelineno-0-630" name="__codelineno-0-630" href="#__codelineno-0-630"></a>​
+<a id="__codelineno-0-630" name="__codelineno-0-630" href="#__codelineno-0-630"></a>
 <a id="__codelineno-0-631" name="__codelineno-0-631" href="#__codelineno-0-631"></a>rt &lt;- lassoData[,-1]
 <a id="__codelineno-0-632" name="__codelineno-0-632" href="#__codelineno-0-632"></a># x &lt;- as.matrix(rt[,-c(1,2)]) # 这样转换后不能用于后面的分析，不是数字矩阵
 <a id="__codelineno-0-633" name="__codelineno-0-633" href="#__codelineno-0-633"></a>x &lt;- data.matrix(rt[,c(3:ncol(rt))])#
@@ -9854,14 +9854,14 @@
 <a id="__codelineno-0-642" name="__codelineno-0-642" href="#__codelineno-0-642"></a>plot(cvfit)
 <a id="__codelineno-0-643" name="__codelineno-0-643" href="#__codelineno-0-643"></a>abline(v=log(c(cvfit$lambda.min,cvfit$lambda.1se)),lty="dashed")
 <a id="__codelineno-0-644" name="__codelineno-0-644" href="#__codelineno-0-644"></a>dev.off()
-<a id="__codelineno-0-645" name="__codelineno-0-645" href="#__codelineno-0-645"></a>​
+<a id="__codelineno-0-645" name="__codelineno-0-645" href="#__codelineno-0-645"></a>
 <a id="__codelineno-0-646" name="__codelineno-0-646" href="#__codelineno-0-646"></a>coef &lt;- coef(fit, s = cvfit$lambda.min)
 <a id="__codelineno-0-647" name="__codelineno-0-647" href="#__codelineno-0-647"></a>index &lt;- which(coef != 0)
 <a id="__codelineno-0-648" name="__codelineno-0-648" href="#__codelineno-0-648"></a>actCoef &lt;- coef[index]
 <a id="__codelineno-0-649" name="__codelineno-0-649" href="#__codelineno-0-649"></a>lassoGene &lt;- row.names(coef)[index]# lassoGene=row.names(coef)[index]
 <a id="__codelineno-0-650" name="__codelineno-0-650" href="#__codelineno-0-650"></a>geneCoef &lt;- cbind(Gene=lassoGene,Coef=actCoef)
 <a id="__codelineno-0-651" name="__codelineno-0-651" href="#__codelineno-0-651"></a>write.table(geneCoef,file=paste0(outputPath[10],"geneCoef.txt"),sep="\t",quote=F,row.names=F)
-<a id="__codelineno-0-652" name="__codelineno-0-652" href="#__codelineno-0-652"></a>​
+<a id="__codelineno-0-652" name="__codelineno-0-652" href="#__codelineno-0-652"></a>
 <a id="__codelineno-0-653" name="__codelineno-0-653" href="#__codelineno-0-653"></a>riskScore &lt;- predict(cvfit, newx = x, s = "lambda.min",type="response")
 <a id="__codelineno-0-654" name="__codelineno-0-654" href="#__codelineno-0-654"></a>outCol &lt;- c("SurvivalTime","VitalStatus",lassoGene)
 <a id="__codelineno-0-655" name="__codelineno-0-655" href="#__codelineno-0-655"></a>risk &lt;- as.vector(ifelse(riskScore&gt;median(riskScore),"high","low"))
@@ -9880,7 +9880,7 @@
 <a id="__codelineno-0-668" name="__codelineno-0-668" href="#__codelineno-0-668"></a>pValue &lt;- round(pValue,3)
 <a id="__codelineno-0-669" name="__codelineno-0-669" href="#__codelineno-0-669"></a>pValue &lt;- signif(pValue,4)
 <a id="__codelineno-0-670" name="__codelineno-0-670" href="#__codelineno-0-670"></a>pValue &lt;- format(pValue, scientific = TRUE)
-<a id="__codelineno-0-671" name="__codelineno-0-671" href="#__codelineno-0-671"></a>​
+<a id="__codelineno-0-671" name="__codelineno-0-671" href="#__codelineno-0-671"></a>
 <a id="__codelineno-0-672" name="__codelineno-0-672" href="#__codelineno-0-672"></a>fit &lt;- survfit(Surv(SurvivalTime, VitalStatus) ~ risk, data = rt)
 <a id="__codelineno-0-673" name="__codelineno-0-673" href="#__codelineno-0-673"></a>summary(fit)    #查看五年生存率
 <a id="__codelineno-0-674" name="__codelineno-0-674" href="#__codelineno-0-674"></a>pdf(file=paste0(outputPath[11],"RiskSurvival.pdf"),width=5.5,height=5)
@@ -9927,7 +9927,7 @@
 <a id="__codelineno-0-715" name="__codelineno-0-715" href="#__codelineno-0-715"></a>SurD &lt;- SurD[which(SurD$N != "--"),]
 <a id="__codelineno-0-716" name="__codelineno-0-716" href="#__codelineno-0-716"></a>SurD &lt;- SurD[which(SurD$N != "NX"),]
 <a id="__codelineno-0-717" name="__codelineno-0-717" href="#__codelineno-0-717"></a>SurD &lt;- SurD[which(SurD$M != "--"),]
-<a id="__codelineno-0-718" name="__codelineno-0-718" href="#__codelineno-0-718"></a>​
+<a id="__codelineno-0-718" name="__codelineno-0-718" href="#__codelineno-0-718"></a>
 <a id="__codelineno-0-719" name="__codelineno-0-719" href="#__codelineno-0-719"></a>if(length(grep("MX",SurD$M)) &lt; nrow(SurD)/10){
 <a id="__codelineno-0-720" name="__codelineno-0-720" href="#__codelineno-0-720"></a>  SurD &lt;- SurD[which(SurD$M != "MX"),]
 <a id="__codelineno-0-721" name="__codelineno-0-721" href="#__codelineno-0-721"></a>}
@@ -9983,12 +9983,12 @@
 <a id="__codelineno-0-771" name="__codelineno-0-771" href="#__codelineno-0-771"></a>dev.off()
 <a id="__codelineno-0-772" name="__codelineno-0-772" href="#__codelineno-0-772"></a>options(stringsAsFactors = F)
 <a id="__codelineno-0-773" name="__codelineno-0-773" href="#__codelineno-0-773"></a>##############################################################
-<a id="__codelineno-0-774" name="__codelineno-0-774" href="#__codelineno-0-774"></a>​
+<a id="__codelineno-0-774" name="__codelineno-0-774" href="#__codelineno-0-774"></a>
 <a id="__codelineno-0-775" name="__codelineno-0-775" href="#__codelineno-0-775"></a>#读取lasso回归风险文件,lassoRisk.txt文件中 生存时间已经除了365
 <a id="__codelineno-0-776" name="__codelineno-0-776" href="#__codelineno-0-776"></a>lassoRisk &lt;- read.table(paste0(outputPath[10],"lassoRisk.txt"),header=T,sep="\t",
 <a id="__codelineno-0-777" name="__codelineno-0-777" href="#__codelineno-0-777"></a>                        check.names=F)    #读取lasso回归风险文件
 <a id="__codelineno-0-778" name="__codelineno-0-778" href="#__codelineno-0-778"></a>clinicalLassoRisk &lt;- lassoRisk[,c("Barcodes","riskScore")]
-<a id="__codelineno-0-779" name="__codelineno-0-779" href="#__codelineno-0-779"></a>​
+<a id="__codelineno-0-779" name="__codelineno-0-779" href="#__codelineno-0-779"></a>
 <a id="__codelineno-0-780" name="__codelineno-0-780" href="#__codelineno-0-780"></a>#读取临床表型数据文件
 <a id="__codelineno-0-781" name="__codelineno-0-781" href="#__codelineno-0-781"></a>SurD &lt;- ultiClindata# read.csv(paste(outputPath[6],ultiClinDataFN,sep = ""),header = T)
 <a id="__codelineno-0-782" name="__codelineno-0-782" href="#__codelineno-0-782"></a>SurD &lt;- SurD[which(SurD$SurvivalTime != "--"),]
@@ -10001,13 +10001,13 @@
 <a id="__codelineno-0-789" name="__codelineno-0-789" href="#__codelineno-0-789"></a>TNMdata &lt;- ultiClindata[,c("Barcodes","Stage","T","N","M")]
 <a id="__codelineno-0-790" name="__codelineno-0-790" href="#__codelineno-0-790"></a>clinIndeP &lt;- merge(Surdata,TNMdata,by = "Barcodes")
 <a id="__codelineno-0-791" name="__codelineno-0-791" href="#__codelineno-0-791"></a>IndeProgData &lt;- merge(clinIndeP,clinicalLassoRisk,by = "Barcodes")
-<a id="__codelineno-0-792" name="__codelineno-0-792" href="#__codelineno-0-792"></a>​
+<a id="__codelineno-0-792" name="__codelineno-0-792" href="#__codelineno-0-792"></a>
 <a id="__codelineno-0-793" name="__codelineno-0-793" href="#__codelineno-0-793"></a>IndeProgData &lt;- IndeProgData[which(IndeProgData$Stage != "--"),]
 <a id="__codelineno-0-794" name="__codelineno-0-794" href="#__codelineno-0-794"></a>IndeProgData &lt;- IndeProgData[which(IndeProgData$T != "--"),]
 <a id="__codelineno-0-795" name="__codelineno-0-795" href="#__codelineno-0-795"></a>IndeProgData &lt;- IndeProgData[which(IndeProgData$N != "--"),]
 <a id="__codelineno-0-796" name="__codelineno-0-796" href="#__codelineno-0-796"></a>IndeProgData &lt;- IndeProgData[which(IndeProgData$N != "NX"),]
 <a id="__codelineno-0-797" name="__codelineno-0-797" href="#__codelineno-0-797"></a>IndeProgData &lt;- IndeProgData[which(IndeProgData$M != "--"),]
-<a id="__codelineno-0-798" name="__codelineno-0-798" href="#__codelineno-0-798"></a>​
+<a id="__codelineno-0-798" name="__codelineno-0-798" href="#__codelineno-0-798"></a>
 <a id="__codelineno-0-799" name="__codelineno-0-799" href="#__codelineno-0-799"></a>if(length(grep("MX",IndeProgData$M)) &lt; nrow(IndeProgData)/10){
 <a id="__codelineno-0-800" name="__codelineno-0-800" href="#__codelineno-0-800"></a>  IndeProgData &lt;- IndeProgData[which(IndeProgData$M != "MX"),]
 <a id="__codelineno-0-801" name="__codelineno-0-801" href="#__codelineno-0-801"></a>}

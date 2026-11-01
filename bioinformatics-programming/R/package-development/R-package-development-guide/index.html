@@ -3609,10 +3609,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5use_data" class="md-nav__link">
+  <a href="#5-use_data" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5****.Use_data()
+        5. use_data()
       
     </span>
   </a>
@@ -9580,10 +9580,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5use_data" class="md-nav__link">
+  <a href="#5-use_data" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5****.Use_data()
+        5. use_data()
       
     </span>
   </a>
@@ -9803,13 +9803,13 @@
 <p>name：可以使用没有扩展名的名称，也可以使用NULL来根据脚本编辑器中当前打开的文件创建成对的文件。如果R文件是打开的，use_test()将创建/打开相应的测试文件;如果测试文件打开，use_r()将创建/打开相应的R文件。</p>
 <h3 id="4use_rmarkdown_template">4.use_rmarkdown_template()<a class="headerlink" href="#4use_rmarkdown_template" title="Permanent link">&para;</a></h3>
 <p>use_rmarkdown_template(   template_name ="Template Name",   template_dir =NULL,   template_description ="A description of the template",   template_create_dir =FALSE)</p>
-<h3 id="5use_data">5****.Use_data()<a class="headerlink" href="#5use_data" title="Permanent link">&para;</a></h3>
+<h3 id="5-use_data">5. use_data()<a class="headerlink" href="#5-use_data" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nf">use_data</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span><span class="w">   </span><span class="n">internal</span><span class="w"> </span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span><span class="w">   </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span><span class="w">   </span><span class="n">compress</span><span class="w"> </span><span class="o">=</span><span class="s">"bzip2"</span><span class="p">,</span><span class="w">   </span><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="m">2</span><span class="p">)</span>
 </code></pre></div>
 <p>参数：</p>
 <p>internal ：如果为FALSE，则将每个对象保存在data/目录中自己的.rda文件中。这些数据文件绕过通常的导出机制，在加载包时可用(如果LazyData不为TRUE，则通过data()可以使用)。如果为TRUE，则将所有对象存储在单个R/sysdata中.rda文件。此文件中的对象遵循通常的导出规则。请注意，这意味着如果您使用通用 exportPattern() 规则导出所有对象，除了以 .</p>
 <p>overwrite : 默认情况下，use_data()不会覆盖现有文件。如果您真的想这样做，请将此设置为TRUE。</p>
-<p>**compress : **选择save()使用的压缩类型。应该是"gzip"， "bzip2"，或"xz"之一。</p>
+<p><strong>compress :</strong>选择save()使用的压缩类型。应该是"gzip"， "bzip2"，或"xz"之一。</p>
 <p>version : 要使用的序列化格式版本。默认的2是从R 1.4.0到3.5.3。版本3从R 3.6.0开始成为默认版本，只能由R版本3.5.0及更高版本读取。</p>
 <p>use_data_raw(name = "DATASET", open = rlang::is_interactive())</p>
 <p>name : 要准备包含在包中的数据集的名称。</p>

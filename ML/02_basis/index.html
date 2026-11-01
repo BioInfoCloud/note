@@ -9576,9 +9576,11 @@
 <li>0-1损失函数（0-1LF）：</li>
 </ul>
 <p>预测值和实际值精确相等则“没有损失”为0，否则意味着“完全损失”，为1预测值和实际值精确相等有些过于严格，可以采用两者的差小于某个國值的方式。</p>
-<p>​       1,Y≠f(X)</p>
+<div class="highlight"><pre><span></span><code>   1,Y≠f(X)
+</code></pre></div>
 <p>L(Y,f(X))=  0,Y=f(X)</p>
-<p>​        1,|Y-f(X)|&gt;=T</p>
+<div class="highlight"><pre><span></span><code>    1,|Y-f(X)|&gt;=T
+</code></pre></div>
 <p>L(Y,f(X))= 0,|Y=f(X)|&lt;T</p>
 <p>对于相同的预测结果，两个损失函数严格程度不同。设T=0.5，则有：</p>
 <table>

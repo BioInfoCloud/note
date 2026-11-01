@@ -9576,7 +9576,7 @@
 <a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>surImdata = data.matrix(surImdata) %&gt;% as.data.frame()
 <a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>surImdata$SurvivalTime=surImdata$SurvivalTime/365  #如果以月为单位，除以30；以年为单位，除以365
 <a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>outSurImResults=data.frame()
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>​
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
 <a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>for(gene in colnames(surImdata[,3:ncol(surImdata)])){
 <a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>  a=surImdata[,gene]&lt;=median(surImdata[,gene])
 <a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>  diff=survdiff(Surv(SurvivalTime, VitalStatus) ~a,data = surImdata)
@@ -9697,7 +9697,7 @@
 <p>下面是代码，和免疫浸润结果文件。</p>
 <p><img alt="1612608562588-251ca6b6-386e-46a7-af1f-4e183e52c44a.png" src="../img/tumor-immune-cell-infiltration/1612608562588-251ca6b6-386e-46a7-af1f-4e183e52c44a-351474.png" /></p>
 <p>链接：<a href="https://pan.baidu.com/s/1uEhnIA4sCFr8RKX_LpkcSA">https://pan.baidu.com/s/1uEhnIA4sCFr8RKX_LpkcSA</a> </p>
-<p>提取码：**v9tx **</p>
+<p>提取码：<strong>v9tx</strong></p>
 <p>如果失效，后台回复：<strong>TCGA-ImmuneInfiltration</strong></p>
 <p><strong>温馨提示：代码是死的，人是活的，还有，代码禁止传播，想别人和你一起发文章，我也拦不住。</strong></p>
 <blockquote>

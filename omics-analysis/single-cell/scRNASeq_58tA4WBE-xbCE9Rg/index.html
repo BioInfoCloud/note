@@ -9978,7 +9978,7 @@
 <p><img alt="1650771729833-6b41bcc5-2c8b-4a1a-b71d-e27fce41d3e8.png" src="../img/58tA4WBE-xbCE9Rg/1650771729833-6b41bcc5-2c8b-4a1a-b71d-e27fce41d3e8-913382.png" /></p>
 <p>查看输入：<code>tree -L 2 tiny-bcl/</code></p>
 <p><img alt="1650771780183-f6cd462a-01a0-4bf4-a038-e09668ac87cf.png" src="../img/58tA4WBE-xbCE9Rg/1650771780183-f6cd462a-01a0-4bf4-a038-e09668ac87cf-999179.png" /></p>
-<p>运行时间根据系统资源的不同而不同，但是它不应该占用多于几分钟的时间。现在转到 fastq _ path 目录。</p>
+<p>运行时间根据系统资源的不同而不同，但是它不应该占用多于几分钟的时间。现在转到 fastq_path 目录。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>tiny-bcl/outs/fastq_path/
 </code></pre></div>
 <p><img alt="1650783084023-c1a2348f-3a16-4f78-a524-c544cca94c29.png" src="../img/58tA4WBE-xbCE9Rg/1650783084023-c1a2348f-3a16-4f78-a524-c544cca94c29-684183.png" /></p>
@@ -10075,7 +10075,7 @@ SraRunTable.txt： SRA文件描述。\
 <a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>pbmc_1k_v3_fastqs/pbmc_1k_v3_S1_L002_R2_001.fastq.gz
 <a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>pbmc_1k_v3_fastqs/pbmc_1k_v3_S1_L001_I1_001.fastq.gz
 </code></pre></div>
-<p>现在你有了一个包含两组 FASTQ 文件的目录，可以看到它们是根据 bcl2fastq 变数命名原则命名的: Sample_S1_L00X_R1_001.fastq.gz。这些文件的名称表明它们都来自同一个名为 pbmc _ 1k _ v3的样本，并且这个库在两个lanes上运行，Lane 1: L001 和 lane 2: L002.。</p>
+<p>现在你有了一个包含两组 FASTQ 文件的目录，可以看到它们是根据 bcl2fastq 变数命名原则命名的: Sample_S1_L00X_R1_001.fastq.gz。这些文件的名称表明它们都来自同一个名为 pbmc_1k_v3的样本，并且这个库在两个lanes上运行，Lane 1: L001 和 lane 2: L002.。</p>
 <p>一旦你有了 FASTQ 文件和参考转录组，你就可以运行<code>cellranger count</code>了。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>cellranger<span class="w"> </span>count<span class="w"> </span>--id<span class="o">=</span>run_count_1kpbmcs<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>--fastqs<span class="o">=</span><span class="w"> </span>/mnt/f/Linux/run_cellranger_count/pbmc_1k_v3_fastqs<span class="w"> </span><span class="se">\</span>
