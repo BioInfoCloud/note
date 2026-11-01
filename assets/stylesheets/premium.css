@@ -22,13 +22,17 @@
 html { scroll-behavior: smooth; }
 :focus-visible { outline: 2px solid rgba(0, 184, 154, .6); outline-offset: 2px; border-radius: 4px; }
 
-/* 1. 页面背景：更明显的极光氛围（克制，不抢内容） */
+/* 1. 页面背景：更明显的极光氛围（克制，不抢内容）
+   关键：isolation 让 .md-main 形成独立层叠上下文，背景光球(z-index:-1)才能
+   落在「页面底色之上、正文之下」而可见——否则会被漏到根层藏到底色下。 */
 .md-main {
+  position: relative;
+  isolation: isolate;
   background-color: #f4f9f8;
   background-image:
-    radial-gradient(48rem 30rem at -6% -4%, rgba(0, 184, 154, .10), transparent 60%),
-    radial-gradient(48rem 30rem at 106% -4%, rgba(28, 168, 232, .09), transparent 60%),
-    radial-gradient(40rem 26rem at 50% 120%, rgba(45, 212, 191, .07), transparent 60%);
+    radial-gradient(48rem 30rem at -6% -4%, rgba(0, 184, 154, .14), transparent 60%),
+    radial-gradient(48rem 30rem at 106% -4%, rgba(28, 168, 232, .12), transparent 60%),
+    radial-gradient(40rem 26rem at 50% 120%, rgba(45, 212, 191, .10), transparent 60%);
 }
 
 /* 2. HERO 重新设计——更大气、更有品牌感 */
@@ -68,7 +72,13 @@ html { scroll-behavior: smooth; }
   margin: 0 0 .7rem; font-size: clamp(2.6rem, 6vw, 3.8rem); font-weight: 800; line-height: 1.1;
   letter-spacing: .01em; color: #0b2824;
 }
-.md-typeset .hero__title span { background: linear-gradient(100deg, #00b89a 8%, #1ca8e8 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.md-typeset .hero__title span {
+  background: linear-gradient(100deg, #00b89a 0%, #1ca8e8 50%, #00b89a 100%);
+  background-size: 220% auto;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: bic-shimmer 4.5s linear infinite;
+}
+@keyframes bic-shimmer { to { background-position: 220% center; } }
 .md-typeset .hero__lead { margin: 0 0 1.7rem; max-width: 36rem; font-size: .82rem; line-height: 1.9; color: #3c5856; }
 .md-typeset .hero__actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 1.5rem; }
 .md-typeset .hero__btn {
@@ -228,24 +238,23 @@ html { scroll-behavior: smooth; }
 .roadmap { margin: 1rem auto 1.6rem; }
 .cta { margin: 1.8rem auto 0; padding: 1.2rem 1.4rem; }
 
-/* 17. 背景动态元素：漂浮的渐变光球（克制、不抢内容，置于内容之下） */
-.md-main { position: relative; }
+/* 17. 背景动态元素：漂浮的渐变光球（已用 isolation 置于内容之下、页面底色之上，清晰可见） */
 .md-main::before, .md-main::after {
   content: ""; position: absolute; z-index: -1; pointer-events: none;
-  border-radius: 50%; filter: blur(50px); opacity: .5; will-change: transform;
+  border-radius: 50%; filter: blur(46px); opacity: .62; will-change: transform;
 }
 .md-main::before {
-  width: 38vw; height: 38vw; top: -8vw; left: -6vw;
-  background: radial-gradient(circle at 50% 50%, rgba(0, 184, 154, .30), transparent 70%);
-  animation: bic-bg-float-a 26s ease-in-out infinite alternate;
+  width: 36vw; height: 36vw; top: 5vh; left: 1vw;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 184, 154, .48), transparent 66%);
+  animation: bic-bg-float-a 22s ease-in-out infinite alternate;
 }
 .md-main::after {
-  width: 34vw; height: 34vw; bottom: -10vw; right: -5vw;
-  background: radial-gradient(circle at 50% 50%, rgba(28, 168, 232, .26), transparent 70%);
-  animation: bic-bg-float-b 32s ease-in-out infinite alternate;
+  width: 32vw; height: 32vw; bottom: 9vh; right: 3vw;
+  background: radial-gradient(circle at 50% 50%, rgba(28, 168, 232, .44), transparent 66%);
+  animation: bic-bg-float-b 28s ease-in-out infinite alternate;
 }
-@keyframes bic-bg-float-a { from { transform: translate(0, 0) scale(1); } to { transform: translate(3vw, 4vw) scale(1.08); } }
-@keyframes bic-bg-float-b { from { transform: translate(0, 0) scale(1); } to { transform: translate(-3vw, -3vw) scale(1.1); } }
+@keyframes bic-bg-float-a { from { transform: translate(0, 0) scale(1); } to { transform: translate(4vw, 5vh) scale(1.12); } }
+@keyframes bic-bg-float-b { from { transform: translate(0, 0) scale(1); } to { transform: translate(-4vw, -4vh) scale(1.15); } }
 
 /* 18. 菜单栏动效：激活/悬浮态流动渐变下划线 + 悬浮轻抬升 */
 .md-tabs__link { transition: opacity .25s ease, transform .25s ease, color .25s ease; }
