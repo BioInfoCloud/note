@@ -1170,7 +1170,7 @@ Claude Code 在运行时会按用途调用不同角色，因此这里需要为�
 | 资源 | 网址 |
 | --- | --- |
 | Node.js | <https://nodejs.org/zh-cn> |
-| WorkBuddy | <https://www.workbuddy.cn/events/invite?inviteCode=yw5sxcpw2r> |
+| WorkBuddy | <https://www.workbuddy.cn/events/invite?inviteCode=7n7ut28ckxm> |
 | OpenCode | <https://opencode.ai/zh> |
 | DeepSeek Harness | <https://www.deepseek.com/harness/> |
 | CC Switch | <https://ccswitch.asia/zh> |
