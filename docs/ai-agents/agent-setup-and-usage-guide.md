@@ -589,11 +589,11 @@ npm -v
 
 #### 10.1 下载与安装
 
-注册地址：<https://www.workbuddy.cn/events/invite?inviteCode=yw5sxcpw2r>
+注册地址：<https://www.workbuddy.cn/events/invite?inviteCode=7n7ut28ckxm>
 
 也可以扫码注册：
 
-![](https://raw.githubusercontent.com/BioInfoCloud/ImageGo/main/figure20260921150822695.png)
+![](https://raw.githubusercontent.com/BioInfoCloud/ImageGo/main/markdownf662454d-b1c9-4420-81d7-317277fac2b0.png)
 
 这款软件采用图形界面，安装即可使用，无需命令行操作，对新手最友好。新用户注册赠送 2000 积分，目前每日签到可获得 100 积分。
 
